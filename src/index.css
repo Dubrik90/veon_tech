@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800;900&display=swap");
+
+:root {
+    /* Typography */
+    --family: "Mulish", sans-serif;
+    --fs-sm: 14px;
+    --fs-md: 20px;
+    --fw-regular: 400;
+    --fw-medium: 600;
+    --fw-bold: 700;
+    --fw-extra-bold: 800;
+    --fw-black: 900;
+
+    /* Other */
+    --radii: 0.5rem;
+}
+
+body[data-theme="dark"] {
+    --colors-text-dark: #dbe8d3;
+    --colors-text-light: #dbe8d3;
+    --colors-text-wight: #dbe8d3;
+    --colors-text-green: #5db447;
+
+    --colors-bg: #535461;
+    --colors-bg-green: #5db447;
+    --colors-bg-card: #f5f5f5;
+
+    /*--colors-ui-base: hsl(209, 23%, 22%);*/
+
+    --shadow: rgba(245, 245, 245, 0.2) 0 0 8px;
+}
+
+body[data-theme="light"] {
+    --colors-text-dark: #000;
+    --colors-text-light: #606060;
+    --colors-text-green: #5db447;
+    --colors-text-wight: #fff;
+
+    --colors-bg: #ffffff;
+    --colors-bg-green: #5db447;
+    --colors-bg-card: #f5f5f5;
+
+    /*--colors-ui-base: hsl(0, 0%, 100%);*/
+
+    /*--shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;*/
+}
+
+body {
+    margin: 0;
+    font-family: var(--family);
+    color: var(--colors-text-dark);
+    font-weight: var(--fw-regular);
+    background-color: var(--colors-bg);
+    font-size: var(--fs-md);
+}
+
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
