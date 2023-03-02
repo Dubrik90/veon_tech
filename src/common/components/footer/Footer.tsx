@@ -1,7 +1,7 @@
 import React from 'react';
 import {
-    About, BottomLogo,
-    Contacts, Copyright,
+    About,
+    BottomLogo,
     FooterBottom,
     FooterContent,
     FooterIcons,
@@ -45,20 +45,19 @@ export const Footer = () => {
                             <p>ООО "Веон-консалт"</p>
                             <p>УНП 193082231</p>
                         </About>
-                        <Contacts>
+                        <About>
                             <a href="tel:+79955775163">+7(995)577-51-63</a>
                             <p>sales@veon-tech.ru</p>
                             <p>220068, г. Минск, ул. Орловская, 40а, офис 40-1</p>
                             <p>С понедельника по пятницу</p>
-                        </Contacts>
-                        <Copyright>
+                        </About>
+                        <About>
                             <p>Copyright © 2022 Veon-Tech Ltd</p>
                             <p>All Rights Reserved.</p>
-                        </Copyright>
+                        </About>
                         <BottomLogo>
                             <img src={logoBottom} alt="logoBottom"/>
                         </BottomLogo>
-
                     </FooterBottom>
                 </FooterContent>
 

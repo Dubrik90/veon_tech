@@ -1,17 +1,11 @@
 import styled from 'styled-components';
 
-import instagram from './assets/insta.png'
-
 export const FooterWrapper = styled.footer`
   background-color: #3D5F47;
-  //overflow-x: hidden;
-  z-index: -1;
 `
 export const FooterContent = styled.div`
   display: flex;
   flex-direction: column;
-  
-
 `
 
 export const FooterTop = styled.div`
@@ -60,6 +54,11 @@ export const ImgBlock = styled.div`
   height: 66px;
   border-radius: 50%;
   background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s;
+  :hover {
+    opacity: 0.5;
+  }
   @media (max-width: 456px) {
     width: 54px;
     height: 54px;
@@ -86,28 +85,7 @@ export const FooterBottom = styled.div`
     flex-direction: column;
     row-gap: 70px;
   }
-
-  //div {
-  //  display: flex;
-  //  flex-direction: column;
-  //  row-gap: 20px;
-  //  @media (max-width: 1076px) {
-  //    align-self: flex-start;
-  //    column-gap: 15px;
-  //  }
-  //  @media (max-width: 768.98px) {
-  //   // row-gap: 30px;
-  //  }
-  //}
-  //
-  //img {
-  //  border-radius: 50%;
-  //  border: 2px solid #FFFFFF;
-  //  background-color: rgba(249 247 247 / 20%);
-  //  @media (max-width: 1024.98px) {
-  //    display: none;
-  //  }
-  //}
+ 
 `
 export const About = styled.div`
   display: flex;
@@ -115,19 +93,7 @@ export const About = styled.div`
   row-gap: 20px;
   align-self: flex-start;
 `
-export const Contacts = styled.div`
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
-  align-self: center;
-  
-`
-export const Copyright = styled.div`
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
-  align-self: flex-end;
-`
+
 export const BottomLogo = styled.div`
 
 `
