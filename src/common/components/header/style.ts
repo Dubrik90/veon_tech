@@ -6,6 +6,10 @@ export const HeaderWrapper = styled.header`
   min-height: 90px;
   margin-bottom: 50px;
   box-shadow: 0 10px 10px rgba(10, 91, 8, 0.31);
+
+  @media (max-width: 768px) {
+    margin-bottom: 25px;
+  }
 `
 export const HeaderContent = styled.div`
   display: flex;
@@ -30,7 +34,7 @@ type PropsImageType = {
 
 export const HeaderLogo = styled.div<PropsImageType>`
   width: 315px;
-  height: 80px;
+  height: 90px;
   transition: all 0.3s;
   overflow: hidden;
   flex: 1 1 auto;
@@ -39,17 +43,15 @@ export const HeaderLogo = styled.div<PropsImageType>`
 
    @media (max-width: 768px) {
     width: 250px;
-    height: 70px;
+     height: 80px;
   }
 
   img {
-    max-width: 315px;
     object-fit: contain;
     cursor: pointer;
-      @media (max-width: 768px) {
-    width: 250px;
-  }
-    
+    @media (max-width: 450px) {
+      width: 250px;
+    }
   }
 `
 

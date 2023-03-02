@@ -2,7 +2,7 @@ import React, {MouseEvent} from 'react';
 import {techData} from "./data";
 import {TechnologiesItem} from "./technologiesItem/TechnologiesItem";
 import {ButtomTab, Tabs, TechnologiesItemBlock, TechnologiesTitle, TechnologiesWrapper} from './style';
-import {Container} from '../../style/Container';
+import {Container} from '../../../common/style/Container';
 
 type TechType = 'frontend' | 'developmentSoftware' | 'dataBase' | 'CMS'
 

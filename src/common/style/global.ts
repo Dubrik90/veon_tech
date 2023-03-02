@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 
 export default createGlobalStyle`
 html {
-    width: 100vw;
+    width: 100%;
     overflow-x: hidden;
   }
   * {

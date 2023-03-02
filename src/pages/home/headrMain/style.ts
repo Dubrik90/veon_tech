@@ -1,14 +1,17 @@
 import styled from 'styled-components';
 
-export const HeadrMainWrapper = styled.div`
-  padding: 120px 0px 214px 150px;
+export const HeaderMainWrapper = styled.div`
+
+`
+export const HeaderMainContent = styled.div`
+
   display: flex;
   flex-direction: column;
-
+  padding: 120px 0 220px 100px;
   @media (max-width: 768px) {
-    padding: 58px 0px 66px 0px;
+    padding: 35px 0 66px 0;
   }
-
+    
 `
 export const Title = styled.h1`
   order: 1;
@@ -34,11 +37,9 @@ export const Title = styled.h1`
     font-size: 43px;
   }
   @media (max-width: 470px) {
-    font-size: 33px;
+    font-size: 32px;
   }
-  @media (max-width: 376px) {
-    font-size: 29px;
-  }
+
 `
 export const SubTitle = styled.p`
   order: 2;

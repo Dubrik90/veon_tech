@@ -1,5 +1,5 @@
 import {Container} from '../../../common/style/Container';
-import {Arrow} from '../assets';
+import {Arrow} from './assets';
 import {devData} from '../data';
 import {CurrentDev} from './currentDev/CurrentDev';
 import {ButtonArrow, CurrentDevWrapper, SubTitle} from './currentDev/style';

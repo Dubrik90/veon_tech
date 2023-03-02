@@ -9,6 +9,11 @@ export const TechnologiesItemWrapper = styled.div`
   border-radius: 17px;
     gap:30px;
   background-color: var(--colors-bg-card) ;
+  @media (max-width: 768px) {
+    min-width: 125px;
+    height: 133px;
+    padding: 15px;
+  }
 
 div{ 
     padding-top: 10px;

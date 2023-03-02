@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 
-import Moon from "./assets/moon.svg";
-import Sun from "./assets/sun.svg";
+import Moon from "../../../pages/home/portfolio/assets/moon.svg";
+import Sun from "../../../pages/home/portfolio/assets/sun.svg";
 import {SwitchWrapper} from "./style";
 import {ThemeType} from "../../types/types";
 

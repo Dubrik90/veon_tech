@@ -2,7 +2,7 @@ import React from 'react';
 import {DevDataType} from '../../data';
 import {ButtonArrow, CardImage, CurrentDevWrapper, SubTitle, Title} from './style';
 
-import {Arrow} from '../../assets'
+import {Arrow} from '../assets'
 
 type CurrentDevType = {
     card: DevDataType

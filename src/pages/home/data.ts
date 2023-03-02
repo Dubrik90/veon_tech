@@ -1,15 +1,14 @@
-import React from 'react';
 
-import Img01 from './assets/01.svg';
-import Img02 from './assets/02.svg';
-import Img03 from './assets/03.svg';
-import Img04 from './assets/04.svg';
-import Img05 from './assets/05.svg';
+import Img01 from './descriptionWeb/assets/01.svg';
+import Img02 from './descriptionWeb/assets/02.svg';
+import Img03 from './descriptionWeb/assets/03.svg';
+import Img04 from './descriptionWeb/assets/04.svg';
+import Img05 from './descriptionWeb/assets/05.svg';
 
 export type DevDataType = {
     header: string
     desc: string
-    img: any
+    img: string
 }
 
 export const devData: DevDataType[] = [
