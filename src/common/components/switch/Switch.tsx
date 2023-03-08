@@ -10,6 +10,7 @@ type SwitchProps = {
     onClick: () => void
 }
 export const Switch: FC<SwitchProps> = ({theme, onClick}) => {
+
     return (
         <SwitchWrapper theme={theme} onClick={onClick}>
             <img src={Moon} alt=""/>

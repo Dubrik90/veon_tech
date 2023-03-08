@@ -8,11 +8,9 @@ import {
     CardImageMobile,
     Cards,
     CardsMobile,
-    CurrentDevMobile,
     DescriptionWebBlock,
     DescriptionWebContent,
     DescriptionWebWrapper,
-    SubTitleMobile,
     Title,
     TitleMobile
 } from './style';

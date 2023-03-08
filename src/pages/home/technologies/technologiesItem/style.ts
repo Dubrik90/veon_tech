@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 export const TechnologiesItemWrapper = styled.div`
 
-  min-width: 160px;
-  height: 155px;
-  padding: 30px;
+  width: 140px;
+  height: 145px;
+  padding: 25px;
   margin: 15px;
   border-radius: 17px;
     gap:30px;

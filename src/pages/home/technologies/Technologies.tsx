@@ -1,13 +1,19 @@
-import React, {MouseEvent} from 'react';
+import React, {MouseEvent, useEffect, useRef} from 'react';
 import {techData} from "./data";
 import {TechnologiesItem} from "./technologiesItem/TechnologiesItem";
 import {ButtomTab, Tabs, TechnologiesItemBlock, TechnologiesTitle, TechnologiesWrapper} from './style';
 import {Container} from '../../../common/style/Container';
+import gsap from "gsap";
+import {ScrollTrigger} from 'gsap/ScrollTrigger';
+import {SwiperTehnologies} from "../../../common/components/swiperTehnologies";
+gsap.registerPlugin(ScrollTrigger)
+
 
 type TechType = 'frontend' | 'developmentSoftware' | 'dataBase' | 'CMS'
 
 
 export const Technologies = () => {
+
 
     const [tech, setTech] = React.useState<TechType>('frontend')
     const [active, setActive] = React.useState('frontend')
@@ -36,6 +42,7 @@ export const Technologies = () => {
                 <TechnologiesItemBlock>
                     {data.map((t, index) => <TechnologiesItem tech={t} key={index}/>)}
                 </TechnologiesItemBlock>
+                <SwiperTehnologies data={data}/>
             </Container>
         </TechnologiesWrapper>
     );

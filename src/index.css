@@ -42,6 +42,9 @@ body[data-theme="light"] {
 
     /*--shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;*/
 }
+html {
+    overflow-x: hidden;
+}
 
 body {
     margin: 0;
@@ -50,6 +53,7 @@ body {
     font-weight: var(--fw-regular);
     background-color: var(--colors-bg);
     font-size: var(--fs-md);
+    transition: all 0.3s;
 }
 
 #root {

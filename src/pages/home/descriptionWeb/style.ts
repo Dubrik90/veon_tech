@@ -29,8 +29,10 @@ export const AboutText = styled.p`
 
 `
 export const DescriptionWebBlock = styled.div`
-
-  flex: 0 1 40%;
+  flex: 1 0 33%;
+  @media (max-width: 1448px) {
+    flex: 1 0 40%;
+  }
 
   ${AboutText} {
     &:not(:last-child) {
@@ -64,7 +66,12 @@ export const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
-  flex: 0 0 60%;
+
+  @media (max-width: 1844px) {
+    justify-content: center;
+  }
+  
+  
   @media (max-width: 1256px) {
     justify-content: space-evenly;
   }
@@ -78,10 +85,7 @@ export const CardsMobile = styled.div`
   @media (max-width: 768px) {
     display: block;
     align-self: center;
-
   }
-
-
 `
 export const CurrentDevMobile = styled.div`
 

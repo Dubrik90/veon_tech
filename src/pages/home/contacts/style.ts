@@ -1,12 +1,13 @@
 import styled from 'styled-components';
+
 export const ContactsWrapper = styled.div`
-    position: relative;
-    padding: 386px 0;
-  
+  position: relative;
+  padding: 386px 0;
+
   @media (max-width: 888px) {
     padding: 0;
   }
-  
+
 `
 export const ContactsBlock = styled.div`
   position: relative;
@@ -15,10 +16,10 @@ export const ContactsBlock = styled.div`
   margin: 0 auto;
   background: var(--colors-bg);
   overflow: hidden;
-  border-radius: 43px ;
+  border-radius: 43px;
   @media (max-width: 888px) {
     padding: 0 15px;
-    
+
     border-radius: 0 ;
   }
 
@@ -32,7 +33,7 @@ export const ContactsForm = styled.form`
   column-gap: 30px;
   row-gap: 28px;
   justify-content: space-between;
-  
+
   @media (max-width: 888px) {
     flex-direction: column;
     row-gap: 20px;
@@ -42,7 +43,10 @@ export const ContactsForm = styled.form`
   @media (max-width: 888px) {
     padding: 23px 10px;
   }
-  
+  @media (max-width: 425px) {
+    padding: 18px 10px;
+  }
+
 `
 export const Input = styled.input`
   border: 1px solid var(--colors-text-light);
@@ -50,30 +54,74 @@ export const Input = styled.input`
   background: var(--colors-bg);
   padding: 20px 0 15px 15px;
   color: var(--colors-text-light);
-  max-width:242px;
+  max-width: 242px;
+
   ::placeholder {
     color: var(--colors-text-light);
   }
+
   @media (max-width: 888px) {
     max-width: 100%;
     padding: 23px 15px;
   }
- 
 `
+
+
+export const InputName = styled(Input)`
+
+`
+export const InputEmail = styled(Input)`
+  @media (max-width: 425px) {
+    display: none;
+  }
+`
+export const Placeholder = styled.div`
+  display: flex;
+  font-size: 12px;
+  line-height: 163%;
+  color: #747474;
+  align-items: center;
+  column-gap: 10px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+`
+
+export const InputPhone = styled(Input)`
+  border: none;
+  position: absolute;
+  width: 100%;
+  height: 65px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &:focus ~ ${Placeholder} {
+    display: none;
+  }
+
+`
+
+
 export const Textarea = styled.textarea`
+  font-family: 'Mulish';
   border: 1px solid var(--colors-text-light);
   background: var(--colors-bg);
   border-radius: 7px;
   width: 100%;
   height: 174px;
   padding: 15px 15px;
+
   ::placeholder {
     color: var(--colors-text-light);
   }
+
   color: var(--colors-text-light);
   font-size: 20px;
   @media (max-width: 888px) {
-    height: 100px;
+    height: 95px;
   }
 `
 export const SubText = styled.p`
@@ -85,7 +133,7 @@ export const SubText = styled.p`
     line-height: 163%;
     color: var(--colors-text-light);
     margin-top: -15px;
-    
+
     a {
       font-weight: 400;
       font-size: 13px;
@@ -100,7 +148,7 @@ export const SubText = styled.p`
 export const ButtonForm = styled.button`
   background: #5DB447;
   border-radius: 70px;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 24px;
   line-height: 30px;
   color: #E9FCE5;
@@ -113,6 +161,12 @@ export const ButtonForm = styled.button`
     line-height: 25px;
     padding: 20px 20px;
   }
+  @media (max-width: 425px) {
+    width: auto;
+    align-self: flex-start;
+    padding: 20px 46px;
+  }
+
 `
 
 export const Title = styled.p`
@@ -123,8 +177,8 @@ export const Title = styled.p`
   line-height: 43px;
   color: #FFFFFF;
   background: #5DB447;
- 
-  padding: 20px ;
+
+  padding: 20px;
   text-align: center;
   @media (max-width: 888px) {
     margin: 0 -15px;
@@ -150,10 +204,11 @@ export const SubTitle = styled.p`
     span {
       color: #5DB447;
     }
+
     @media (max-width: 888px) {
       font-size: 17px;
     }
-    
+
   }
 `
 export const Background = styled.div`
@@ -173,4 +228,26 @@ export const ImgBg = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+`
+export const Label = styled.label`
+  display: inline-block;
+  width: 100%;
+  height: 71px;
+  border: 1px solid var(--colors-text-light);
+  border-radius: 7px;
+  background: var(--colors-bg);
+  padding: 20px 0 15px 15px;
+  color: var(--colors-text-light);
+  position: relative;
+  overflow: hidden;
+
+
+`
+
+
+export const Region = styled.span`
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 163%;
+  color: var(--colors-text-dark);
 `

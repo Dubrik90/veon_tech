@@ -6,12 +6,15 @@ import LogoLight from './assets/logoLight.svg';
 import LogoDark from './assets/logoDark.svg';
 import {Menu} from "../menu";
 import {ThemeType} from "../../types/types";
+import {useBodyScrollLock} from "../../hook";
 
 export const Header = () => {
+    const [isBodyLocked, setBodyLocked] = useBodyScrollLock();
     const [theme, setTheme] = useState<ThemeType>('light');
     const [isOpenBurger, setIsOpenBurger] = useState<boolean>(false);
 
     const onClickBurger = () => {
+        setBodyLocked()
         setIsOpenBurger(!isOpenBurger)
     }
     const toggleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light');

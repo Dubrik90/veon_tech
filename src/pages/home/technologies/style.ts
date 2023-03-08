@@ -47,7 +47,7 @@ export const Tabs = styled.div`
 
 `
 export const ButtomTab = styled.button`
-  font-weight: var(--fw-medium);
+  font-weight: var(--fw-regular);
   font-size: 20px;
   line-height: 25px;
   position: relative;
@@ -90,10 +90,7 @@ export const TechnologiesItemBlock = styled.div`
   padding: 50px 0;
   width: 100%;
   @media (max-width: 768px) {
-    flex-wrap: nowrap;
-    overflow: auto;
-    width: auto;
-    padding: 0 20px;
+    display: none;
   }
 `
 export const ImgWrap = styled.div`

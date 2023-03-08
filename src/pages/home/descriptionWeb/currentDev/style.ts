@@ -2,14 +2,29 @@ import styled from 'styled-components';
 
 export const CurrentDevWrapper = styled.div`
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #FFFDFD;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
   flex: 0 0 349px;
+  
   padding: 35px 38px 11px 28px;
+  @media (max-width: 1844px) {
+    flex: 1 0 349px;
+    :last-child {
+      flex: 0 0 50%;
+    }
+  }
+  @media (max-width: 1366px) {
+    :last-child {
+      flex: 1 0 349px;
+    }
+  }
+  
+  
   @media (max-width: 406px) {
+    
     padding: 35px 10px 11px 18px;
   }
 `

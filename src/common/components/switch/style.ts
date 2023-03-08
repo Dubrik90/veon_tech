@@ -21,7 +21,7 @@ export const SwitchWrapper = styled.div<SwitchWrapperProps>`
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: ${({theme}) => theme === 'light' ? '4px' : '35px'};
+    left: ${({theme}) => theme === 'light' ? '35px' : '4px'};
     width: 25px;
     height: 25px;
     border-radius: 100px;

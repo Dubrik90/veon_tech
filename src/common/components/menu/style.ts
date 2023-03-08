@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const NavigateMenu = styled.nav`
 display: flex;
 column-gap: 50px;
+  z-index: 5;
   li {
     font-weight: var(--fw-medium);
     line-height: 25px;
@@ -26,7 +27,7 @@ export const MenuList = styled.ul<PropsMenu>`
   @media (max-width: 1469px) {
     column-gap: 20px;
   }
-  @media (max-width: 1060px) {
+  @media (max-width: 1092px) {
     left: ${({isOpenBurger}) => isOpenBurger ? '0' : '-100%'};
     flex-direction: column;
     align-items: center;

@@ -8,20 +8,21 @@ import {
     Input,
     Title,
     Textarea,
-    ButtonForm, SubText, SubTitle
+    ButtonForm, SubText, SubTitle, InputEmail, InputName
 } from "./style";
 import Bg from './assets/bg.png'
 
 export const Contacts = () => {
+
     return (
         <ContactsWrapper>
             <ContactsBlock>
                 <Title>ОСТАЛИСЬ ВОПРОСЫ? - ПИШИТЕ</Title>
                 <SubTitle>Мы рады увидеть <span>Вашу</span>  заявку!</SubTitle>
                 <ContactsForm>
-                    <Input type="text" placeholder='Имя'/>
-                    <Input type="email" placeholder='E-mail'/>
-                    <Input type="phone" placeholder='Телефон'/>
+                    <InputName type="text" placeholder='Имя'/>
+                    <InputEmail type="email" placeholder='E-mail'/>
+                    <Input type="phone" placeholder={window.innerWidth >= 426 ? 'Телефон': 'BY  +375(ХХ) ХХХ-ХХ-ХХ'}/>
                     <Textarea placeholder='Комментарий'/>
                     <SubText>
                         Нажимая на кнопку «Отправить», вы даете свое согласие на обработку персональных данных в

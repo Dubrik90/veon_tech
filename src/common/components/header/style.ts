@@ -40,6 +40,7 @@ export const HeaderLogo = styled.div<PropsImageType>`
   flex: 1 1 auto;
   position: relative;
   z-index: 10;
+  margin-left: -20px;
 
    @media (max-width: 768px) {
     width: 250px;

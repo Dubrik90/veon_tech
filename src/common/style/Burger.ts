@@ -8,7 +8,7 @@ export const Burger = styled.button<PropsBurger>`
   display: none;
 }
 
-@media (max-width: 1060px) {
+@media (max-width: 1092px) {
   display: block;
   position: relative;
   width: 40px;

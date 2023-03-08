@@ -11,7 +11,7 @@ export const HeaderMainContent = styled.div`
   @media (max-width: 768px) {
     padding: 35px 0 66px 0;
   }
-    
+
 `
 export const Title = styled.h1`
   order: 1;
@@ -27,18 +27,53 @@ export const Title = styled.h1`
 
   @media (max-width: 768px) {
     order: 2;
+    text-indent: 224px;
+    font-size: 75px;
+    line-height: 73px;
+    letter-spacing: 3.1px;
   }
-  @media (max-width: 680px) {
-    font-size: 50px;
-    line-height: 63px;
+  @media (max-width: 690px) {
+    font-size: 66px;
+    line-height: 65px;
+
+  }
+  @media (max-width: 640px) {
+    font-size: 61px;
+    line-height: 61px;
+    text-indent: 182px;
+  }
+  @media (max-width: 570px) {
+    font-size: 54px;
+    line-height: 54px;
+    text-indent: 158px;
+  }
+  @media (max-width: 510px) {
+    font-size: 47px;
+    line-height: 49px;
+    text-indent: 137px
+  };
+  @media (max-width: 450px) {
+    font-size: 40px;
+    line-height: 49px;
+    text-indent: 110px;
+  };
+  @media (max-width: 386px) {
+    font-size: 33px;
+    line-height: 33px;
     text-indent: 100px;
-  }
-  @media (max-width: 680px) {
-    font-size: 43px;
-  }
-  @media (max-width: 470px) {
-    font-size: 32px;
-  }
+  };
+  @media (max-width: 340px) {
+    font-size: 30px;
+    line-height: 33px;
+    text-indent: 100px;
+  };
+  
+  
+  @media (max-width: 320px) {
+    font-size: 29px;
+    line-height: 33px;
+    text-indent: 100px;
+  };
 
 `
 export const SubTitle = styled.p`
