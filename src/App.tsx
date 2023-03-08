@@ -8,6 +8,7 @@ import {Header} from './common/components/header';
 import {ScrollToTop} from './common/components/scrollToTop';
 import {Footer} from './common/components/footer';
 import {Work} from './pages/work';
+import {GetInTorch} from "./common/components/getInTorch/GetInTorch";
 
 function App() {
     return (

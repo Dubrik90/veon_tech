@@ -14,6 +14,8 @@ import {
     Title,
     TitleMobile
 } from './style';
+import {GetInTorch} from "../../../common/components/getInTorch/GetInTorch";
+import React from "react";
 
 
 export const DescriptionWeb = () => {
@@ -62,7 +64,7 @@ export const DescriptionWeb = () => {
                             </ButtonArrow>
                         </CurrentDevWrapper>
                     </CardsMobile>
-
+                    <GetInTorch/>
                 </DescriptionWebContent>
             </Container>
         </DescriptionWebWrapper>
