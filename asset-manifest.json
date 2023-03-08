@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/veon_tech/static/css/main.c63b25ec.css",
-    "main.js": "/veon_tech/static/js/main.279984e8.js",
+    "main.css": "/veon_tech/static/css/main.397fa3fc.css",
+    "main.js": "/veon_tech/static/js/main.d86c5a07.js",
     "static/js/787.5fb054ca.chunk.js": "/veon_tech/static/js/787.5fb054ca.chunk.js",
     "static/media/bg.png": "/veon_tech/static/media/bg.c6622d4d92ee12672763.png",
     "static/media/logoLight.svg": "/veon_tech/static/media/logoLight.210c8e42e39ddc1b39b050125538f6de.svg",
@@ -50,16 +50,18 @@
     "index.html": "/veon_tech/index.html",
     "static/media/arrowNext.svg": "/veon_tech/static/media/arrowNext.5be1146f572368120b45fb1d7e25ca99.svg",
     "static/media/arrowPrev.svg": "/veon_tech/static/media/arrowPrev.6cda8e0bfa5b9e243dc124d65408fef9.svg",
+    "static/media/Arrow.svg": "/veon_tech/static/media/Arrow.606be97968130e4b38a0cdfba48ee4aa.svg",
     "static/media/arrow.svg": "/veon_tech/static/media/arrow.fb3f91ec24e77c3bb7f72173ce55a135.svg",
     "static/media/magento.svg": "/veon_tech/static/media/magento.0937555253fc0d35b8f3fb0d8587b5bb.svg",
     "static/media/npm.svg": "/veon_tech/static/media/npm.3105854e2a9d8a2e5167e7fac4f54901.svg",
     "static/media/vuejs.svg": "/veon_tech/static/media/vuejs.a9ef3938d4960ac238e9c64d78783931.svg",
-    "main.c63b25ec.css.map": "/veon_tech/static/css/main.c63b25ec.css.map",
-    "main.279984e8.js.map": "/veon_tech/static/js/main.279984e8.js.map",
+    "static/media/clouse.svg": "/veon_tech/static/media/clouse.ead45b3446449e3aa177abdf217656d7.svg",
+    "main.397fa3fc.css.map": "/veon_tech/static/css/main.397fa3fc.css.map",
+    "main.d86c5a07.js.map": "/veon_tech/static/js/main.d86c5a07.js.map",
     "787.5fb054ca.chunk.js.map": "/veon_tech/static/js/787.5fb054ca.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c63b25ec.css",
-    "static/js/main.279984e8.js"
+    "static/css/main.397fa3fc.css",
+    "static/js/main.d86c5a07.js"
   ]
 }
