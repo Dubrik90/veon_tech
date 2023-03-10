@@ -39,12 +39,32 @@ export const Title = styled.h3`
   }
 `
 export const Works = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 95px;
+  display: grid;
+  grid-template-areas:  'img1 img2 img3''img4 img4 img5';
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 90px;
   row-gap: 64px;
-  align-items: center;
-  justify-content: center;
+  @media (max-width: 1254px) {
+    column-gap: 50px;
+    row-gap: 50px;
+  }
+  @media (max-width: 984px) {
+    column-gap: 20px;
+    row-gap: 30px;
+  }
+  @media (max-width: 768px) {
+    display: flex;
+     flex-wrap: wrap;
+     column-gap: 95px;
+     row-gap: 64px;
+     align-items: center;
+     justify-content: center;
+  }
   
+  
+
+
+  
+
 
 `

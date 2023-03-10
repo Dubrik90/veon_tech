@@ -28,7 +28,8 @@ export const Tabs = styled.div`
   justify-content: center;
   column-gap: 40px;
   padding-bottom: 10px;
-  border-bottom: 2px solid #D9D9D9;
+  position: relative;
+  
   @media (max-width: 768px) {
     border: none;
     display: grid;
@@ -59,14 +60,15 @@ export const ButtomTab = styled.button`
     transition: all 0.4s;
     content: '';
     position: absolute;
-    height: 2px;
-    width: 100%;
-    bottom: -12px;
-    left: 0;
+    height: 3px;
+    width: 110%;
+    bottom: -8px;
     background-color: #6EEC4E;
     z-index: 50;
     opacity: 0;
     visibility: hidden;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   &.active {

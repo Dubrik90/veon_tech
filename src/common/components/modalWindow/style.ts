@@ -17,7 +17,7 @@ export const ModalWindowWrapper = styled.div<ModalWindowWrapperProps>`
   overflow-y: hidden;
   background: rgba(54, 54, 54, 0.3);
   backdrop-filter: blur(5px);
-  z-index: 100;
+  z-index: 100000;
   transition: all 0.3s;
   opacity: ${({openModal}) => openModal ? '1' : '0'};
   scale: ${({openModal}) => openModal ? '1' : '0'};

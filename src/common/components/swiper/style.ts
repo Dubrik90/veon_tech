@@ -8,13 +8,17 @@ display: none;
    display: flex;
     align-items: center;
     column-gap: 15px;
+  
 
  .swiper {
-  max-width: 300px;
+  max-width: 415px;
   height: 100%;
   border-radius: 15px;
+   @media (max-width: 540px) {
+     max-width: 300px;
+   }
+   
   @media (max-width: 400px) {
-
     max-width: 240px;
   }
 

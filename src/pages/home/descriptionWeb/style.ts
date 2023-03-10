@@ -21,6 +21,9 @@ export const AboutText = styled.p`
   line-height: 25px;
   color: var(--colors-text-light);
   @media (max-width: 760px) {
+    
+  }
+  @media (max-width: 760px) {
     font-size: 14px;
     span {
       color: #79E35E;
@@ -29,7 +32,7 @@ export const AboutText = styled.p`
 
 `
 export const DescriptionWebBlock = styled.div`
-  flex: 1 0 33%;
+  flex: 1 0 45%;
   @media (max-width: 1448px) {
     flex: 1 0 40%;
   }
@@ -63,8 +66,9 @@ export const Title = styled.h2`
 `
 
 export const Cards = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 32px;
 
   @media (max-width: 1844px) {

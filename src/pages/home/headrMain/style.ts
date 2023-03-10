@@ -4,12 +4,11 @@ export const HeaderMainWrapper = styled.div`
 
 `
 export const HeaderMainContent = styled.div`
-
   display: flex;
   flex-direction: column;
-  padding: 120px 0 220px 100px;
+  padding: 200px 0 220px 100px;
   @media (max-width: 768px) {
-    padding: 35px 0 66px 0;
+    padding: 130px 0 66px 0;
   }
 
 `
@@ -24,6 +23,10 @@ export const Title = styled.h1`
   span {
     color: var(--colors-text-dark);
   }
+  @media (max-width: 1048px) {
+    font-size: 52px;
+  }
+
 
   @media (max-width: 768px) {
     order: 2;
@@ -35,7 +38,6 @@ export const Title = styled.h1`
   @media (max-width: 690px) {
     font-size: 66px;
     line-height: 65px;
-
   }
   @media (max-width: 640px) {
     font-size: 61px;

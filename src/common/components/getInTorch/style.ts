@@ -5,19 +5,17 @@ export const GetInTorchWrapper = styled.div`
   align-items: center;
   justify-content: flex-end;
   flex-wrap: wrap;
-  
-  position: absolute;
-  right: 95px;
+  position: fixed;
+  right: 90px;
   bottom: 20px;
   z-index: 1111111;
+  transition: all 0.3s;
   width: 330px;
   border-radius: 14px;
   background-color: #6EEC4E;
   padding: 10px 10px 10px 60px;
-  
-  @media (max-width: 768px) {
-    bottom: -50px;
-  }
+
+
   @media (max-width: 435px) {
     right: 15px;
     width: 300px;
@@ -29,7 +27,8 @@ export const Button = styled.button`
   justify-content: flex-start;
   flex-wrap: wrap;
   position: relative;
-  &:before{
+  
+  &:before {
     content: '';
     position: absolute;
     width: 50px;
@@ -42,10 +41,10 @@ export const Button = styled.button`
     background-repeat: no-repeat;
     background-size: contain;
   }
-  
+
 `
 export const Title = styled.p`
-  color:white;
+  color: white;
   font-weight: 800;
   font-size: 18px;
   @media (max-width: 450px) {
@@ -53,6 +52,6 @@ export const Title = styled.p`
   }
 `
 export const SubTitle = styled.p`
-  color:white;
+  color: white;
   font-size: 10px;
 `

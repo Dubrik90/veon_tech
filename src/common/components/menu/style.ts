@@ -25,7 +25,10 @@ export const MenuList = styled.ul<PropsMenu>`
   column-gap: 52px;
   flex-wrap: wrap;
   @media (max-width: 1469px) {
-    column-gap: 20px;
+    column-gap: 30px;
+  }
+  @media (max-width: 1115px) {
+    column-gap: 25px;
   }
   @media (max-width: 1092px) {
     left: ${({isOpenBurger}) => isOpenBurger ? '0' : '-100%'};
@@ -91,7 +94,7 @@ export const MenuSubItem = styled.li`
 
 `
 export const MenuItem = styled.li`
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -119,7 +122,7 @@ export const MenuItem = styled.li`
     background: #6EEC4E;
     position: absolute;
     top: 8px;
-    left: 0;
+    left: 4px;
     border-radius: 100%;
     opacity: 0;
     visibility: hidden;

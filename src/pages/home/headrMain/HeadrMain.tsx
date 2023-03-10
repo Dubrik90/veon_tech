@@ -16,8 +16,8 @@ export const HeadrMain = () => {
     }
 
     useEffect(() => {
-        const el = headerAnimate.current
-        gsap.fromTo(el, {translateX: 1000}, {translateX: 0, duration: 2.5})
+       // const el = headerAnimate.current
+       // gsap.fromTo(el, {translateX: 1000}, {translateX: 0, duration: 2.5})
     }, [])
 
     return (

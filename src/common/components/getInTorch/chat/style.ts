@@ -9,9 +9,9 @@ export const ChatWrapper = styled.div<ChatWrapperProps>`
   z-index: ${({view}) => view ? '123456789' : '2345678902'};
   transition: 0.3s;
 
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  right: 95px;
+  right: 40px;
   
   @media (max-width: 450px) {
     right: 0;

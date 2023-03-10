@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import './index.css';
 import {HashRouter, Route, Routes} from 'react-router-dom';
 import {ROUTS} from './common/constans/routs';
@@ -9,12 +9,16 @@ import {ScrollToTop} from './common/components/scrollToTop';
 import {Footer} from './common/components/footer';
 import {Work} from './pages/work';
 import {GetInTorch} from "./common/components/getInTorch/GetInTorch";
+import {GoUp} from "./common/components/goUp";
 
 function App() {
+
     return (
         <HashRouter>
             <ScrollToTop/>
             <Header/>
+            <GetInTorch />
+            <GoUp/>
             <MainWrapper>
                 <Routes>
                     <Route path={ROUTS.HOME} element={<Home/>}/>

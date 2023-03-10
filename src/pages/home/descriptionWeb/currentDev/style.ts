@@ -53,7 +53,7 @@ export const SubTitle = styled.p`
 export const ButtonArrow = styled.button`
   align-self: flex-start;
   font-weight: var(--fw-extra-bold);
-  font-size: 12px;
+  font-size: 13px;
   line-height: 129.5%;
   color: #000000;
 

@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 export const ContactsWrapper = styled.div`
   position: relative;
-  padding: 386px 0;
+  padding: 120px 0;
 
-  @media (max-width: 888px) {
+  @media (max-width: 768px) {
     padding: 0;
   }
 
@@ -12,36 +12,36 @@ export const ContactsWrapper = styled.div`
 export const ContactsBlock = styled.div`
   position: relative;
   z-index: 50;
-  max-width: 910px;
+  max-width: 650px;
   margin: 0 auto;
   background: var(--colors-bg);
   overflow: hidden;
   border-radius: 43px;
-  @media (max-width: 888px) {
+  @media (max-width: 768px) {
     padding: 0 15px;
-
     border-radius: 0 ;
+    max-width: 100%;
   }
 
 `
 export const ContactsForm = styled.form`
   position: relative;
   z-index: 50;
-  padding: 32px 49px 26px 49px;
+  padding: 32px 20px 26px 20px;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 30px;
-  row-gap: 28px;
+  column-gap: 10px;
+  row-gap: 20px;
   justify-content: space-between;
 
-  @media (max-width: 888px) {
+  @media (max-width: 768px) {
     flex-direction: column;
     row-gap: 20px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
   }
-  @media (max-width: 888px) {
-    padding: 23px 10px;
+  @media (max-width: 768px) {
+    padding: 23px 15px;
   }
   @media (max-width: 425px) {
     padding: 18px 10px;
@@ -52,17 +52,18 @@ export const Input = styled.input`
   border: 1px solid var(--colors-text-light);
   border-radius: 7px;
   background: var(--colors-bg);
-  padding: 20px 0 15px 15px;
+  padding: 10px;
   color: var(--colors-text-light);
-  max-width: 242px;
+  max-width: 196px;
 
   ::placeholder {
     color: var(--colors-text-light);
+    font-size: 14px;
   }
 
-  @media (max-width: 888px) {
+  @media (max-width: 768px) {
     max-width: 100%;
-    padding: 23px 15px;
+    padding: 10px;
   }
 `
 
@@ -111,22 +112,21 @@ export const Textarea = styled.textarea`
   background: var(--colors-bg);
   border-radius: 7px;
   width: 100%;
-  height: 174px;
+  height: 144px;
   padding: 15px 15px;
-
   ::placeholder {
     color: var(--colors-text-light);
   }
 
   color: var(--colors-text-light);
-  font-size: 20px;
+  font-size: 14px;
   @media (max-width: 888px) {
     height: 95px;
   }
 `
 export const SubText = styled.p`
   display: none;
-  @media (max-width: 888px) {
+  @media (max-width: 768px) {
     display: block;
     font-weight: 400;
     font-size: 13px;
@@ -149,17 +149,17 @@ export const ButtonForm = styled.button`
   background: #5DB447;
   border-radius: 70px;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 30px;
   color: #E9FCE5;
   text-transform: uppercase;
-  padding: 15px 20px;
+  padding: 12px 20px;
   align-self: stretch;
   width: 100%;
-  @media (max-width: 888px) {
-    font-size: 20px;
+  @media (max-width: 768px) {
+    font-size: 16px;
     line-height: 25px;
-    padding: 20px 20px;
+    padding: 12px 20px;
   }
   @media (max-width: 425px) {
     width: auto;
@@ -173,14 +173,14 @@ export const Title = styled.p`
   position: relative;
   z-index: 50;
   font-weight: var(--fw-extra-bold);
-  font-size: 34px;
+  font-size: 28px;
   line-height: 43px;
   color: #FFFFFF;
   background: #5DB447;
 
   padding: 20px;
   text-align: center;
-  @media (max-width: 888px) {
+  @media (max-width: 768px) {
     margin: 0 -15px;
   }
   @media (max-width: 636px) {
@@ -191,7 +191,7 @@ export const Title = styled.p`
 `
 export const SubTitle = styled.p`
   display: none;
-  @media (max-width: 888px) {
+  @media (max-width: 768px) {
     position: relative;
     z-index: 50;
     display: block;
@@ -205,7 +205,7 @@ export const SubTitle = styled.p`
       color: #5DB447;
     }
 
-    @media (max-width: 888px) {
+    @media (max-width: 768px) {
       font-size: 17px;
     }
 
@@ -217,7 +217,7 @@ export const Background = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  @media (max-width: 888px) {
+  @media (max-width: 768px) {
     display: none;
   }
 `

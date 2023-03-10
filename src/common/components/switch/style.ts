@@ -12,9 +12,10 @@ export const SwitchWrapper = styled.div<SwitchWrapperProps>`
   display: flex;
   column-gap: 10px;
   cursor: pointer;
+  z-index: 9999;
 
   img {
-    max-width: 22px;
+    max-width: 20px;
   }
   
   span {

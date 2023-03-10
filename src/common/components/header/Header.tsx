@@ -1,12 +1,14 @@
 import React, {useEffect, useState} from "react";
 import {Container} from "../../style/Container";
-import {HeaderContent, HeaderLogo, HeaderWrapper} from "./style"
+import {HeaderContent, HeaderLogo, HeaderWrapper, ImgWrap} from "./style"
 import {Burger} from "../../style/Burger";
 import LogoLight from './assets/logoLight.svg';
 import LogoDark from './assets/logoDark.svg';
 import {Menu} from "../menu";
 import {ThemeType} from "../../types/types";
 import {useBodyScrollLock} from "../../hook";
+import {Link} from "react-router-dom";
+import {ROUTS} from "../../constans/routs";
 
 export const Header = () => {
     const [isBodyLocked, setBodyLocked] = useBodyScrollLock();
@@ -27,10 +29,9 @@ export const Header = () => {
         <HeaderWrapper>
             <Container>
                 <HeaderContent>
-                    <HeaderLogo>
-                        <img src={theme === 'light' ? LogoLight : LogoDark}
-                             alt="Logo"/>
-                    </HeaderLogo>
+                    <Link to={ROUTS.HOME}>
+                        <ImgWrap img={theme === 'light' ? LogoLight : LogoDark}  />
+                    </Link>
                     <Menu isOpenBurger={isOpenBurger} theme={theme} onClick={toggleTheme}/>
                     <Burger isOpenBurger={isOpenBurger} onClick={onClickBurger}></Burger>
                 </HeaderContent>

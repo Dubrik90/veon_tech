@@ -64,7 +64,7 @@ export const DescriptionWeb = () => {
                             </ButtonArrow>
                         </CurrentDevWrapper>
                     </CardsMobile>
-                    <GetInTorch/>
+
                 </DescriptionWebContent>
             </Container>
         </DescriptionWebWrapper>

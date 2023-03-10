@@ -8,12 +8,13 @@ import {Company} from './company';
 import {Reviews} from './reviews';
 import {Contacts} from "./contacts";
 import {Layer} from "./layer";
+
 import {GetInTorch} from "../../common/components/getInTorch/GetInTorch";
 
 export const Home = () => {
 
     return (
-        <HomeWrapper>
+        <>
             <HeadrMain/>
             <DescriptionWeb/>
             <Technologies/>
@@ -22,7 +23,7 @@ export const Home = () => {
             <Layer/>
             <Reviews/>
             <Contacts/>
-        </HomeWrapper>
+        </>
 
     )
 }
