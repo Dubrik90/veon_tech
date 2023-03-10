@@ -58,7 +58,7 @@ export const SubMenu = styled.ul`
   position: absolute;
   left: 0;
   top: 100%;
-  z-index: 5;
+  z-index: 50;
   background: var(--colors-bg);
   box-shadow: 0 7px 10px rgba(0, 0, 0, 0.25);
   padding: 15px;
