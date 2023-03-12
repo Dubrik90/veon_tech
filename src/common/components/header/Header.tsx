@@ -19,7 +19,13 @@ export const Header = () => {
         setBodyLocked()
         setIsOpenBurger(!isOpenBurger)
     }
-    const toggleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light');
+    const toggleTheme = () => {
+        setTheme(theme === 'light' ? 'dark' : 'light');
+
+        if (isOpenBurger) {
+            onClickBurger()
+        }
+    }
 
     useEffect(() => {
         document.body.setAttribute('data-theme', theme);
@@ -30,9 +36,13 @@ export const Header = () => {
             <Container>
                 <HeaderContent>
                     <Link to={ROUTS.HOME}>
-                        <ImgWrap img={theme === 'light' ? LogoLight : LogoDark}  />
+                        <ImgWrap img={theme === 'light' ? LogoLight : LogoDark}/>
                     </Link>
-                    <Menu isOpenBurger={isOpenBurger} theme={theme} onClick={toggleTheme}/>
+                    <Menu isOpenBurger={isOpenBurger}
+                          theme={theme}
+                          onClick={toggleTheme}
+                          onClickBurger={onClickBurger}
+                    />
                     <Burger isOpenBurger={isOpenBurger} onClick={onClickBurger}></Burger>
                 </HeaderContent>
             </Container>

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {fontSize} from "../../../common/style/mixin";
 
 export const HeaderMainWrapper = styled.div`
 
@@ -15,10 +16,11 @@ export const HeaderMainContent = styled.div`
 export const Title = styled.h1`
   order: 1;
   font-weight: var(--fw-black);
-  font-size: 58px;
+  //font-size: 58px;
   line-height: 73px;
   color: var(--colors-text-green);
   margin-bottom: 87px;
+  ${fontSize(58)}
 
   span {
     color: var(--colors-text-dark);
@@ -31,42 +33,35 @@ export const Title = styled.h1`
   @media (max-width: 768px) {
     order: 2;
     text-indent: 224px;
-    font-size: 75px;
-    line-height: 73px;
+    ${fontSize(84)}
+    line-height: 1.2;
     letter-spacing: 3.1px;
   }
   @media (max-width: 690px) {
     font-size: 66px;
-    line-height: 65px;
   }
   @media (max-width: 640px) {
     font-size: 61px;
-    line-height: 61px;
     text-indent: 182px;
   }
   @media (max-width: 570px) {
     font-size: 54px;
-    line-height: 54px;
     text-indent: 158px;
   }
   @media (max-width: 510px) {
     font-size: 47px;
-    line-height: 49px;
     text-indent: 137px
   };
   @media (max-width: 450px) {
     font-size: 40px;
-    line-height: 49px;
     text-indent: 110px;
   };
   @media (max-width: 386px) {
     font-size: 33px;
-    line-height: 33px;
     text-indent: 100px;
   };
   @media (max-width: 340px) {
     font-size: 30px;
-    line-height: 33px;
     text-indent: 100px;
   };
   
@@ -99,13 +94,15 @@ export const Button = styled.button`
   background: var(--colors-bg-green);
   border-radius: 8px;
   font-weight: var(--fw-extra-bold);
-  font-size: 16px;
+  ${fontSize(18)}
+  //font-size: 16px;
   line-height: 20px;
   color: var(--colors-text-wight);
   padding: 12px 18px;
   display: flex;
   justify-content: center;
   transition: all 0.3s;
+  font-family: var(--family) ;
 
 
   :hover {
@@ -113,11 +110,11 @@ export const Button = styled.button`
   }
 
   @media (max-width: 680px) {
-    padding: 38px 50px;
+    padding: 30px 50px;
     align-self: stretch;
   }
   @media (max-width: 400px) {
-    padding: 38px 11px;
+    padding: 30px 11px;
     align-self: stretch;
   }
 

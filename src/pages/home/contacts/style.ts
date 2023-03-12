@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+
 export const ContactsWrapper = styled.div`
   position: relative;
   padding: 120px 0;
@@ -37,8 +38,9 @@ export const ContactsForm = styled.form`
   @media (max-width: 768px) {
     flex-direction: column;
     row-gap: 20px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
+    margin-bottom: 20px
   }
   @media (max-width: 768px) {
     padding: 23px 15px;
@@ -135,14 +137,13 @@ export const SubText = styled.p`
     margin-top: -15px;
 
     a {
-      font-weight: 400;
+      //font-weight: 400;
       font-size: 13px;
       line-height: 163%;
       color: #18698B;
       text-decoration: underline;
     }
   }
-
 `
 
 export const ButtonForm = styled.button`
@@ -156,6 +157,10 @@ export const ButtonForm = styled.button`
   padding: 12px 20px;
   align-self: stretch;
   width: 100%;
+  transition: all 0.3s;
+  :hover {
+    background: #3D5F47;
+  }
   @media (max-width: 768px) {
     font-size: 16px;
     line-height: 25px;
