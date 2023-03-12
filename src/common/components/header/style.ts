@@ -28,31 +28,29 @@ export const ImgWrap = styled.div<ImgWrapProps>`
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: cover;
-  max-width: 260px;
+  width: 260px;
   height: 65px;
   @media (max-width: 400px) {
     max-width: 212px;
     height: 60px;
   }
- 
 `;
 export const HeaderContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   column-gap: 70px;
-  
-  a{
+
+  a {
     transition: all 0.3s;
     overflow: hidden;
-    flex: 1 0 260px;
     position: relative;
-   // z-index: 10;
+    z-index: 10;
     @media (max-width: 400px) {
       flex: 1 0 212px;
     }
   }
-  
+
   @media (max-width: 1300px) {
     column-gap: 20px;
   }
@@ -70,18 +68,18 @@ type PropsImageType = {
 }
 
 export const HeaderLogo = styled.div<PropsImageType>`
- // width: 315px;
- // height: 90px;
- // transition: all 0.3s;
- // overflow: hidden;
- // flex: 1 1 auto;
- // position: relative;
- // z-index: 10;
+  // width: 315px;
+  // height: 90px;
+  // transition: all 0.3s;
+  // overflow: hidden;
+  // flex: 1 1 auto;
+  // position: relative;
+  // z-index: 10;
   //margin-left: -20px;
 
-   @media (max-width: 768px) {
+  @media (max-width: 768px) {
     width: 250px;
-     height: 80px;
+    height: 80px;
   }
 
   img {
@@ -92,7 +90,6 @@ export const HeaderLogo = styled.div<PropsImageType>`
     }
   }
 `
-
 
 
 export const DiamondWrapper = styled.div`

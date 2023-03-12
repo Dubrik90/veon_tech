@@ -8,19 +8,15 @@ import {ScrollTrigger} from 'gsap/ScrollTrigger';
 import {SwiperTehnologies} from "../../../common/components/swiperTehnologies";
 gsap.registerPlugin(ScrollTrigger)
 
-
 type TechType = 'frontend' | 'developmentSoftware' | 'dataBase' | 'CMS'
 
-
 export const Technologies = () => {
-
 
     const [tech, setTech] = React.useState<TechType>('frontend')
     const [active, setActive] = React.useState('frontend')
     const data = techData[tech]
 
     const activeCorrectFilter = (event: MouseEvent<HTMLButtonElement>) => {
-
         setActive(event.currentTarget.id);
         setTech(event.currentTarget.id as TechType)
     };

@@ -88,6 +88,7 @@ export const CardsMobile = styled.div`
   display: none;
   @media (max-width: 768px) {
     display: block;
+    width: 100%;
     align-self: center;
   }
 `
@@ -104,7 +105,10 @@ export const CardImageMobile = styled.div`
   img {
     width: 55px;
     height: 55px;
-
+    transition: all 0.3s;
+  }
+  img.activeCard {
+    transform: translateY(-10px);
   }
 
   @media (max-width: 406px) {

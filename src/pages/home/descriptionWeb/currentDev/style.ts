@@ -8,8 +8,17 @@ export const CurrentDevWrapper = styled.div`
   flex-direction: column;
   row-gap: 20px;
   flex: 0 0 349px;
-  
   padding: 35px 38px 11px 28px;
+  min-height: 215px;
+  
+  a {
+   // clip-path: polygon(0 100%, 99% 100%, 100% 100%, 0% 100%);
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    flex-grow: 1;
+  }
+  
   @media (max-width: 1844px) {
     flex: 1 0 349px;
     :last-child {
@@ -21,10 +30,7 @@ export const CurrentDevWrapper = styled.div`
       flex: 1 0 349px;
     }
   }
-  
-  
   @media (max-width: 406px) {
-    
     padding: 35px 10px 11px 18px;
   }
 `
@@ -49,6 +55,7 @@ export const SubTitle = styled.p`
   font-size: 15px;
   line-height: 129.5%;
   color: #000000;
+  flex: 1 1 auto;
 `
 export const ButtonArrow = styled.button`
   align-self: flex-start;

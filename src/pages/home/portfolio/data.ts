@@ -10,26 +10,31 @@ export const portfolioData: DevDataType[] = [
     {
         header: 'Creative business card',
         desc: 'UX, UI, Graphic Design',
-        img: Img01
+        img: Img01,
+        link: ''
     },
     {
         header: 'Creative business card',
         desc: 'UX, UI, Graphic Design',
-        img: Img02
+        img: Img02,
+        link: ''
     },
     {
         header: 'Creative business card',
         desc: 'UX, UI, Graphic Design',
-        img: Img03
+        img: Img03,
+        link: ''
     },
     {
         header: 'Creative business card',
         desc: 'UX, UI, Graphic Design',
-        img: Img04
+        img: Img04,
+        link: ''
     },
     {
         header: 'Creative business card',
         desc: 'UX, UI, Graphic Design',
-        img: Img05
+        img: Img05,
+        link: ''
     },
 ]

@@ -9,27 +9,32 @@ export type DevDataType = {
     header: string
     desc: string
     img: string
+    link: string
 }
 
 export const devData: DevDataType[] = [
     {
         header: 'Разработка сайтов',
         desc: 'Мы не просто создаем веб-сайты, мы создаем веб-сайты, которые ПРОДАЮТ',
-        img: Img01
+        img: Img01,
+        link: ''
     },
     {
         header: 'Поддержка сайтов',
-        desc: 'Мы не просто создаем веб-сайты, мы создаем веб-сайты, которые ПРОДАЮТ',
-        img: Img02
+        desc: 'Vы создаем веб-сайты, которые ПРОДАЮТ',
+        img: Img02,
+        link: ''
     },
     {
         header: 'Разработка ПО',
         desc: 'Создаем сайты с нуля и на CMS любой сложности',
-        img: Img03
+        img: Img03,
+        link: ''
     },
     {
         header: 'UX/UI дизайн',
         desc: 'Создаем уникальный дизайн и разрабатываем фирменный стиль.',
-        img: Img04
+        img: Img04,
+        link: ''
     },
 ]

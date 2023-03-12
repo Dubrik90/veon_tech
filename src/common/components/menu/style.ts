@@ -73,6 +73,7 @@ export const SubMenu = styled.ul`
     color: var(--colors-text-dark);
     position: relative;
     padding-left: 30px;
+    display: inline-flex;
 
     :before {
       content: '';

@@ -29,12 +29,15 @@ export const WorkDeskWrapper = styled.div`
 `
 export const WorkDeskImage = styled.div`
   margin-bottom: 5px;
+  overflow: hidden;
+  border-radius: 10px;
+  
     img {
-      max-width: 100%;
+      width: 100%;
       height: 100%;
       transition: scale 0.3s;
       :hover {
-        scale: 1.05;
+        scale: 1.1;
       }
     }
 `

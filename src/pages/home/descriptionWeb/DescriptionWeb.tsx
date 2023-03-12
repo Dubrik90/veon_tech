@@ -1,6 +1,6 @@
 import {Container} from '../../../common/style/Container';
 import {Arrow} from './assets';
-import {devData} from '../data';
+import {devData, DevDataType} from '../data';
 import {CurrentDev} from './currentDev/CurrentDev';
 import {ButtonArrow, CurrentDevWrapper, SubTitle} from './currentDev/style';
 import {
@@ -14,11 +14,31 @@ import {
     Title,
     TitleMobile
 } from './style';
-import {GetInTorch} from "../../../common/components/getInTorch/GetInTorch";
-import React from "react";
+import React, {useEffect, useRef, useState} from "react";
+import {Link} from "react-router-dom";
+import gsap from "gsap";
 
 
 export const DescriptionWeb = () => {
+    const elAnimate = useRef(null)
+    const [cardIndex, setCardIndex] = useState<number>(0)
+    const activeCard: DevDataType = devData[cardIndex]
+
+    //
+    // useEffect(() => {
+    //     const el = elAnimate.current
+    //     let tl = gsap.timeline({defaults: {ease: "power4.inOut", duration: 2}})
+    //     tl.to('.link', { 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity: 1, y: 0, duration: 2.2, scrollTrigger: {
+    //             trigger: el
+    //         }})
+    //
+    // }, [cardIndex])
+
+
+    const onClickActiveCardHandler = (index: number) => {
+        setCardIndex(index)
+    }
+
 
     return (
         <DescriptionWebWrapper>
@@ -54,17 +74,22 @@ export const DescriptionWeb = () => {
                     <CardsMobile>
                         <CurrentDevWrapper>
                             <CardImageMobile>
-                                {devData.map((el, index) => <img key={index} src={el.img} alt="img"/>)}
+                                {devData.map((el, index) => <img
+                                    className={index === cardIndex ? 'activeCard' : ''}
+                                    onClick={() => onClickActiveCardHandler(index)}
+                                    key={index}
+                                    src={el.img} alt="img"/>)}
                             </CardImageMobile>
-                            <TitleMobile>Разработка сайтов</TitleMobile>
-                            <SubTitle>Мы не просто создаем веб-сайты, мы создаем веб-сайты, которые ПРОДАЮТ</SubTitle>
-                            <ButtonArrow>
-                                Узнать подробнее
-                                <Arrow/>
-                            </ButtonArrow>
+                            <Link to={activeCard.link} ref={elAnimate} className='link'>
+                                <TitleMobile>{activeCard.header}</TitleMobile>
+                                <SubTitle>{activeCard.desc}</SubTitle>
+                                <ButtonArrow>
+                                    Узнать подробнее
+                                    <Arrow/>
+                                </ButtonArrow>
+                            </Link>
                         </CurrentDevWrapper>
                     </CardsMobile>
-
                 </DescriptionWebContent>
             </Container>
         </DescriptionWebWrapper>
