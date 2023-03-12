@@ -16,15 +16,15 @@ export const TechnologiesItem: React.FC<TechnologiesItemType> = ({tech}) => {
 
     useEffect(() => {
         const el = elAnimate.current
-        gsap.fromTo(el, {scale: 0}, {scale: 1, duration: 1, scrollTrigger: {
-                trigger: el
+        gsap.fromTo(el, {scale: 0}, {scale: 1, duration: .5, stagger: 0.1, scrollTrigger: {
+                trigger: el,
             }})
     }, [img])
 
     return (
-            <TechnologiesItemWrapper ref={elAnimate}>
-                <ImgWrap style={img}></ImgWrap>
-                <div>{title}</div>
+            <TechnologiesItemWrapper >
+                <ImgWrap ref={elAnimate} style={img}></ImgWrap>
+                <div ref={elAnimate}>{title}</div>
             </TechnologiesItemWrapper>
     );
 };

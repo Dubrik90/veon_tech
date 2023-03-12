@@ -1,12 +1,16 @@
 import styled from "styled-components";
 
-export const GetInTorchWrapper = styled.div`
+type GetInTorchWrapperProps = {
+    view: boolean
+}
+export const GetInTorchWrapper = styled.div<GetInTorchWrapperProps>`
+  opacity: ${({view}) => view ? '0' : '1'};
   display: flex;
   align-items: center;
   justify-content: flex-end;
   flex-wrap: wrap;
   position: fixed;
-  right: 90px;
+  right: 0;
   bottom: 20px;
   z-index: 1111111;
   transition: all 0.3s;
@@ -14,6 +18,7 @@ export const GetInTorchWrapper = styled.div`
   border-radius: 14px;
   background-color: #6EEC4E;
   padding: 10px 10px 10px 60px;
+  
 
 
   @media (max-width: 435px) {

@@ -47,7 +47,7 @@ export const HeaderContent = styled.div`
     overflow: hidden;
     flex: 1 0 260px;
     position: relative;
-    z-index: 10;
+   // z-index: 10;
     @media (max-width: 400px) {
       flex: 1 0 212px;
     }

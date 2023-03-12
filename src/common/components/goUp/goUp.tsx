@@ -14,6 +14,7 @@ export const GoUp = () => {
             behavior: 'smooth',
         });
         gsap.fromTo(el, {translateX: 0}, {translateX: 0})
+        gsap.fromTo('.torch', {translateX: 0}, {translateX: 0})
     }, [up]);
 
 
@@ -23,7 +24,16 @@ export const GoUp = () => {
             duration: 3,
             scrollTrigger: {
                 trigger: "#thirdCircle",
-              //  markers: true,
+                start: "top center",
+                end: "bottom 80px",
+                scrub: true
+            }
+        });
+        gsap.to(".torch", {
+            x: -80,
+            duration: 3,
+            scrollTrigger: {
+                trigger: "#thirdCircle",
                 start: "top center",
                 end: "bottom 80px",
                 scrub: true
