@@ -34,6 +34,7 @@ export const GoUp = () => {
             duration: 3,
             scrollTrigger: {
                 trigger: "#thirdCircle",
+
                 start: "top center",
                 end: "bottom 80px",
                 scrub: true

@@ -34,6 +34,20 @@ export const DescriptionWeb = () => {
     //
     // }, [cardIndex])
 
+    useEffect(() => {
+        const el = elAnimate.current
+        gsap.fromTo(el, {'clip-path': 'polygon(0 0, 0 0, 0 99%, 0 100%)', opacity: 0, visibility: 'hidden'}, {
+            'clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+            opacity: 1,
+            visibility: 'visible',
+            delay: 0.5,
+            duration: 1,
+            scrollTrigger: {
+                trigger: el
+            }
+        })
+    }, [cardIndex])
+
 
     const onClickActiveCardHandler = (index: number) => {
         setCardIndex(index)

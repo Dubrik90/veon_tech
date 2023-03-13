@@ -10,9 +10,12 @@ export const CurrentDevWrapper = styled.div`
   flex: 0 0 349px;
   padding: 35px 38px 11px 28px;
   min-height: 215px;
+ // transition: all 0.3s;
   
   a {
-   // clip-path: polygon(0 100%, 99% 100%, 100% 100%, 0% 100%);
+    //transition: all 0.3s;
+    opacity: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     display: flex;
     flex-direction: column;
     row-gap: 15px;
