@@ -91,6 +91,10 @@ export const TechnologiesItemBlock = styled.div`
   flex-wrap: wrap;
   padding: 50px 0;
   width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  scale: 0;
+  
   @media (max-width: 768px) {
     display: none;
   }

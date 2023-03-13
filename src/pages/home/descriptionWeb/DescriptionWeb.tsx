@@ -39,11 +39,13 @@ export const DescriptionWeb = () => {
         gsap.fromTo(el, {'clip-path': 'polygon(0 0, 0 0, 0 99%, 0 100%)', opacity: 0, visibility: 'hidden'}, {
             'clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
             opacity: 1,
+            ease: "power4.out",
             visibility: 'visible',
             delay: 0.5,
-            duration: 1,
+            duration: 0.5,
             scrollTrigger: {
-                trigger: el
+                trigger: el,
+               // start: "top top",
             }
         })
     }, [cardIndex])

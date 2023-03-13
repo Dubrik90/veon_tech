@@ -21,11 +21,23 @@ export const Technologies = () => {
         setTech(event.currentTarget.id as TechType)
     };
 
+    const elAnimate = useRef(null)
+
+    useEffect(() => {
+
+        const el = elAnimate.current
+        gsap.to(el,  {opacity: 1, scale: 1, visibility: 'visible', duration: 1,
+            scrollTrigger: {
+                trigger: el,
+                start: 'top 90%',
+            }})
+    }, [active])
+
     return (
         <TechnologiesWrapper>
             <Container>
                 <TechnologiesTitle>Технологии, с которыми мы работаем</TechnologiesTitle>
-                <Tabs>
+                <Tabs >
                     <ButtomTab className={active === 'frontend' ? 'active' : ''} id={'frontend'}
                                onClick={activeCorrectFilter}>Front-end разработка</ButtomTab>
                     <ButtomTab className={active === 'developmentSoftware' ? 'active' : ''} id={'developmentSoftware'}
@@ -35,7 +47,7 @@ export const Technologies = () => {
                     <ButtomTab className={active === 'CMS' ? 'active' : ''} id={'CMS'}
                                onClick={activeCorrectFilter}>CMS</ButtomTab>
                 </Tabs>
-                <TechnologiesItemBlock>
+                <TechnologiesItemBlock ref={elAnimate}>
                     {data.map((t, index) => <TechnologiesItem tech={t} key={index}/>)}
                 </TechnologiesItemBlock>
                 <SwiperTehnologies data={data}/>
