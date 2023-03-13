@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/veon_tech/static/css/main.fbb0eada.css",
-    "main.js": "/veon_tech/static/js/main.c8555600.js",
+    "main.css": "/veon_tech/static/css/main.4ae4ea69.css",
+    "main.js": "/veon_tech/static/js/main.b0f31132.js",
     "static/js/787.5fb054ca.chunk.js": "/veon_tech/static/js/787.5fb054ca.chunk.js",
     "static/media/bg.png": "/veon_tech/static/media/bg.c6622d4d92ee12672763.png",
     "static/media/logoLight.svg": "/veon_tech/static/media/logoLight.210c8e42e39ddc1b39b050125538f6de.svg",
@@ -10,6 +10,7 @@
     "static/media/WooCommerce.png": "/veon_tech/static/media/WooCommerce.58877db9732fe100381c.png",
     "static/media/05.png": "/veon_tech/static/media/05.36ea123a135fb511d58f.png",
     "static/media/01.png": "/veon_tech/static/media/01.d71bedc05fc88522ac0e.png",
+    "static/media/managerImg.jpg": "/veon_tech/static/media/managerImg.0151e8d26e03ebb0a2ad.jpg",
     "static/media/02.png": "/veon_tech/static/media/02.0b18e11d17cfc48bd17e.png",
     "static/media/bigcommerce.png": "/veon_tech/static/media/bigcommerce.a08d4d89d9be9ac617e9.png",
     "static/media/03.png": "/veon_tech/static/media/03.66edcd94b9dd948c8453.png",
@@ -55,12 +56,12 @@
     "static/media/npm.svg": "/veon_tech/static/media/npm.3105854e2a9d8a2e5167e7fac4f54901.svg",
     "static/media/vuejs.svg": "/veon_tech/static/media/vuejs.a9ef3938d4960ac238e9c64d78783931.svg",
     "static/media/clouse.svg": "/veon_tech/static/media/clouse.ead45b3446449e3aa177abdf217656d7.svg",
-    "main.fbb0eada.css.map": "/veon_tech/static/css/main.fbb0eada.css.map",
-    "main.c8555600.js.map": "/veon_tech/static/js/main.c8555600.js.map",
+    "main.4ae4ea69.css.map": "/veon_tech/static/css/main.4ae4ea69.css.map",
+    "main.b0f31132.js.map": "/veon_tech/static/js/main.b0f31132.js.map",
     "787.5fb054ca.chunk.js.map": "/veon_tech/static/js/787.5fb054ca.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fbb0eada.css",
-    "static/js/main.c8555600.js"
+    "static/css/main.4ae4ea69.css",
+    "static/js/main.b0f31132.js"
   ]
 }
