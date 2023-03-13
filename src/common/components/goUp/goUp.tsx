@@ -20,7 +20,7 @@ export const GoUp = () => {
 
     useEffect(() => {
         gsap.to("#thirdCircle", {
-            x: -80,
+            x: -70,
             duration: 3,
             scrollTrigger: {
                 trigger: "#thirdCircle",
@@ -30,7 +30,7 @@ export const GoUp = () => {
             }
         });
         gsap.to(".torch", {
-            x: -80,
+            x: -70,
             duration: 3,
             scrollTrigger: {
                 trigger: "#thirdCircle",

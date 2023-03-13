@@ -164,14 +164,12 @@ export const ButtonForm = styled.button`
   @media (max-width: 768px) {
     font-size: 16px;
     line-height: 25px;
-    padding: 12px 20px;
+    padding: 10px 15px;
   }
   @media (max-width: 425px) {
-    width: auto;
-    align-self: flex-start;
-    padding: 20px 46px;
+    //width: auto;
+    //align-self: flex-start;
   }
-
 `
 
 export const Title = styled.p`

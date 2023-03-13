@@ -95,7 +95,6 @@ export const Button = styled.button`
   border-radius: 8px;
   font-weight: var(--fw-extra-bold);
   ${fontSize(18)}
-  //font-size: 16px;
   line-height: 20px;
   color: var(--colors-text-wight);
   padding: 12px 18px;
@@ -103,7 +102,6 @@ export const Button = styled.button`
   justify-content: center;
   transition: all 0.3s;
   font-family: var(--family) ;
-
 
   :hover {
     background: #3D5F47;

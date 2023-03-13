@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const GoUpWrapper = styled.div`
-  min-width: 55px;
-  min-height: 55px;
+  min-width: 50px;
+  min-height: 50px;
   border-radius: 50%;
   background-color: #5db447;
   position: fixed;
@@ -13,12 +13,12 @@ export const GoUpWrapper = styled.div`
   transition: all 0.3s;
   cursor: pointer;
   @media (max-width: 1100px) {
-    display: none;
+   // display: none;
   }
 
   &:after {
     content: "";
-    border: solid white;
+    border: solid var(--colors-text-wight);
     border-width: 0 3px 3px 0;
     display: inline-block;
     transform: rotate(-135deg);
@@ -28,12 +28,11 @@ export const GoUpWrapper = styled.div`
     position: absolute;
     width: 10px;
     height: 10px;
-    top: 22px;
-    left: 19px;
-    
+    top: 20px;
+    left: 17px;
   }
   &:hover {
-    background-color: #121f0d;
+    background: var(--colors-bg-green);
   }
 `
 
