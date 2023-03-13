@@ -1,16 +1,18 @@
 import styled from "styled-components";
+import {fontSize} from "../../style/mixin";
 
 export const NavigateMenu = styled.nav`
-display: flex;
-column-gap: 50px;
+  display: flex;
+  column-gap: 50px;
   z-index: 5;
+
   li {
     font-weight: var(--fw-medium);
-    line-height: 25px;
+    line-height: 1.3;
     color: var(--colors-text-dark);
-    @media (max-width: 858px) {
-      font-size: 18px;
-    }
+    //@media (max-width: 858px) {
+    //  font-size: 18px;
+    //}
   }
 
   @media (max-width: 768px) {
@@ -24,6 +26,9 @@ export const MenuList = styled.ul<PropsMenu>`
   display: flex;
   column-gap: 52px;
   flex-wrap: wrap;
+  .about-link {
+    display: none;
+  }
   @media (max-width: 1469px) {
     column-gap: 30px;
   }
@@ -44,6 +49,14 @@ export const MenuList = styled.ul<PropsMenu>`
     background-color: var(--colors-bg);
     width: 100%;
     transition: left 0.3s;
+    
+    .about-sub-menu {
+      display: none;
+    }
+
+    .about-link {
+      display: block;
+    }
   }
 `
 
@@ -103,39 +116,44 @@ export const MenuItem = styled.li`
   padding: 5px 0 5px 10px;
   position: relative;
   cursor: pointer;
+  text-transform: uppercase;
   @media (max-width: 1320px) {
     font-size: var(--fs-sm);
   }
-  
-  
+  @media (max-width: 1092px) {
+    ${fontSize(25)};
+  }
+
+
   svg {
     transition: all 0.3s;
     margin-left: 10px;
+
     rect {
       fill: var(--colors-text-dark);
     }
   }
-  
+
   :before {
     content: '';
     width: 2px;
     height: 20px;
     background: #6EEC4E;
     position: absolute;
-    top: 8px;
+    top: 4px;
     left: 4px;
     border-radius: 100%;
     opacity: 0;
     visibility: hidden;
     transition: 0.3s;
-
   }
-  
+
   :hover {
     :before {
       opacity: 1;
       visibility: visible;
     }
+
     svg {
       transform: rotate(-180deg);
     }

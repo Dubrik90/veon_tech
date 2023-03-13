@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {fontSize} from "../../style/mixin";
 
 type ModalWindowWrapperProps = {
     openModal: boolean
@@ -37,6 +38,11 @@ export const RegisterWrapper = styled.div`
     right: 10px;
     cursor: pointer;
   }
+  @media (max-width: 425px) {
+    width: 100%;
+    padding: 15px 20px;
+  }
+  
 
 `
 export const Title = styled.p`
@@ -92,7 +98,6 @@ export const CustomInput = styled.input`
 
   &:focus {
     color: var(--dark);
-    border-bottom: 1px solid #252626;
     outline: none;
   }
 
@@ -110,13 +115,22 @@ export const Errors = styled.div`
   z-index: 90000;
   font-size: 14px;
 `
-export const SubText = styled.button`
-  font-weight: 600;
-  font-size: 9px;
+export const SubText = styled.div`
+  font-weight: var(--fw-medium);
+  ${fontSize(9)}
   line-height: 129.5%;
-  color: #000000;
   text-align: left;
   margin-bottom: 18px;
+  display: block;
+  color: var(--colors-text-light);
+
+  a {
+    ${fontSize(9)}
+    line-height: 163%;
+    color: var(--color-link);
+    text-decoration: underline;
+    
+  }
 `
 
 export const Button = styled.button`

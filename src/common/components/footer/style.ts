@@ -12,7 +12,7 @@ export const FooterTop = styled.div`
   display: flex;
   column-gap: 20px;
   justify-content: space-between;
-  border-bottom: 2px solid #D9D9D9;
+ // border-bottom: 2px solid #D9D9D9;
   padding-bottom: 20px;
   min-height: 200px;
 

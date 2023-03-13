@@ -42,10 +42,10 @@ html {
     text-decoration-line: none;
     transition: all 0.3s;
   }
-  a:link,
-  a:visited {
-    text-decoration: none;
-  }
+  //a:link,
+  //a:visited {
+  //  text-decoration: none;
+  //}
   a:hover {
     text-decoration: none;
   }

@@ -10,10 +10,16 @@ export const SwiperTehnologiesWrapper = styled.div`
     column-gap: 15px;
 
     .swiper {
+      .swiper-wrapper {
+        margin-bottom: 10px;
+      }
     
       .swiper-slide {
         background-position: center;
         background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         .swiper-slide img {
 
@@ -24,8 +30,12 @@ export const SwiperTehnologiesWrapper = styled.div`
 
         }
       }
+      
+      .swiper-scrollbar.swiper-scrollbar-horizontal {
+        opacity: 1!important;
+      }
     }
-
+    
 
   }
 

@@ -45,6 +45,7 @@ export const DescriptionWeb = () => {
             duration: 0.5,
             scrollTrigger: {
                 trigger: el,
+                start: 'top 90%',
                // start: "top top",
             }
         })

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, {useRef} from 'react';
 import {EffectFade, FreeMode, Navigation, Pagination} from 'swiper';
 import {Swiper, SwiperSlide} from 'swiper/react';
 
@@ -6,10 +6,9 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 
 
-
 import {portfolioData} from "../../../pages/home/portfolio/data";
 import {SwiperWrapper} from "./style";
-import { ArrowNext, ArrowPrev } from './assets';
+import {ArrowNext, ArrowPrev} from './assets';
 
 
 type SwiperSliderPropsType = {
@@ -23,19 +22,21 @@ export const SliderSwiper = () => {
             <Swiper
                 loop={true}
                 navigation={{
-                    nextEl: '.prev',
-                    prevEl: '.next',
+                    nextEl: '.next',
+                    prevEl: '.prev',
+                }}
+                pagination={{
+                    clickable: true,
                 }}
                 effect="fade"
-                pagination={false}
                 modules={[FreeMode, Navigation, EffectFade, Pagination]}
             >
                 {portfolioData.map((el, index) => (
-                        <SwiperSlide key={index}>
-                            <img src={el.img} alt='img'/>
-                        </SwiperSlide>
+                    <SwiperSlide key={index}>
+                        <img src={el.img} alt='img'/>
+                    </SwiperSlide>
                 ))}
-            </Swiper >
+            </Swiper>
             <ArrowNext className="next"/>
         </SwiperWrapper>
     );

@@ -4,9 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/scrollbar";
 
-
-
-import { Scrollbar } from "swiper";
+import {FreeMode, Scrollbar} from "swiper";
 import {TechnologiesItem} from "../../../pages/home/technologies/technologiesItem/TechnologiesItem";
 import {SwiperTehnologiesWrapper} from "./style";
 
@@ -17,29 +15,25 @@ export const SwiperTehnologies: FC<SwiperTehnologiesPropsType> = ({data}) => {
     return (
         <SwiperTehnologiesWrapper>
             <Swiper
-                loop={true}
                 scrollbar={{
                     hide: true,
                 }}
-                modules={[Scrollbar]}
+                modules={[Scrollbar, FreeMode]}
                 slidesPerView={3}
                 spaceBetween={5}
+                freeMode={true}
                 className="mySwiper"
                 breakpoints={{
                     320: {
-                        slidesPerView: 1.5,
+                        slidesPerView: 2,
                     },
-                    370: {
-                        slidesPerView: 2.5,
+                    390: {
+                        slidesPerView: 3,
                     },
-                    570: {
-                        slidesPerView: 3.5,
-                    },
+
                     640: {
                         slidesPerView: 4,
                     },
-
-
                 }}
             >
                 {data.map((el:any, index: number) => (

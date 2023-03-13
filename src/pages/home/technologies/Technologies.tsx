@@ -31,7 +31,7 @@ export const Technologies = () => {
                 trigger: el,
                 start: 'top 90%',
             }})
-    }, [active])
+    }, [])
 
     return (
         <TechnologiesWrapper>

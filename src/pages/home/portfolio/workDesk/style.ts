@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {fontSize} from "../../../../common/style/mixin";
 
 export const WorkDeskWrapper = styled.div`
   
@@ -55,14 +56,15 @@ export const Title = styled.p`
 `
 export const SubTitle = styled.p`
   font-weight: var(--fw-extra-bold);
-  font-size: 24px;
+  ${fontSize(20)}
   line-height: 1.1;
   color: var(--colors-text-green);
+
   @media (max-width: 1254px) {
-    font-size: 20px;
+    ${fontSize(18)}
   }
   @media (max-width: 830px) {
-    font-size: 18px;
+    ${fontSize(16)}
   }
 `
 

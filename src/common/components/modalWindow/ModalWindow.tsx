@@ -12,6 +12,8 @@ import {
 } from "./style";
 import {useFormik} from "formik";
 import {Clouse} from "./assets";
+import {Link} from "react-router-dom";
+import {ROUTS} from "../../constans/routs";
 
 type FormikErrorType = {
     name?: string,
@@ -32,15 +34,12 @@ export const ModalWindow: FC<ModalWindowPropsType> = ({openModal}) => {
 
         validate: (values) => {
             const errors: FormikErrorType = {}
-
             if (!values.name) {
                 errors.name = 'Поле не может быть пустым'
             }
-
             if (!values.phone) {
                 errors.phone = 'укажите ваш телефон'
             }
-
             return errors
         },
         onSubmit: values => {
@@ -75,7 +74,7 @@ export const ModalWindow: FC<ModalWindowPropsType> = ({openModal}) => {
                     </InputBlock>
                     <SubText>
                         Нажимая на кнопку «Отправить», вы даете свое согласие на обработку персональных данных в
-                        соответствии с целями указанными в Политике обработки персональных данных
+                        соответствии с целями указанными в <Link to={ROUTS.WORK_IN_VEON}>Политике обработки персональных данных</Link>
                     </SubText>
                     <Button type='submit'>Отправить</Button>
                 </FormWrapper>

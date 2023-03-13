@@ -57,9 +57,6 @@ export const Footer = () => {
                             <p>Copyright © 2022 Veon-Tech Ltd</p>
                             <p>All Rights Reserved.</p>
                         </Corporation>
-                        {/*<BottomLogo>*/}
-                        {/*    <ImgWrapBottom img={logoBottom}/>*/}
-                        {/*</BottomLogo>*/}
                     </FooterBottom>
                 </FooterContent>
             </Container>

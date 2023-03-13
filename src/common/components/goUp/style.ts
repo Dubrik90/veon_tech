@@ -9,7 +9,7 @@ export const GoUpWrapper = styled.div`
   right: -60px;
   bottom: 20px;
   opacity: 1;
-  z-index: 10;
+  z-index: 100;
   transition: all 0.3s;
   cursor: pointer;
   @media (max-width: 1100px) {

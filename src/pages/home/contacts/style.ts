@@ -140,7 +140,7 @@ export const SubText = styled.p`
       //font-weight: 400;
       font-size: 13px;
       line-height: 163%;
-      color: #18698B;
+      color: var(--color-link);
       text-decoration: underline;
     }
   }

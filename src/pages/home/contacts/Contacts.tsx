@@ -11,6 +11,8 @@ import {
     ButtonForm, SubText, SubTitle, InputEmail, InputName
 } from "./style";
 import Bg from './assets/bg.png'
+import {Link} from "react-router-dom";
+import {ROUTS} from "../../../common/constans/routs";
 
 export const Contacts = () => {
 
@@ -26,7 +28,7 @@ export const Contacts = () => {
                     <Textarea placeholder='Комментарий'/>
                     <SubText>
                         Нажимая на кнопку «Отправить», вы даете свое согласие на обработку персональных данных в
-                        соответствии с целями указанными в <a href="#">Политике обработки персональных данных</a>
+                        соответствии с целями указанными в <Link to={ROUTS.WORK_IN_VEON}>Политике обработки персональных данных</Link>
                     </SubText>
                     <ButtonForm type={"button"}>ОТПРАВИТЬ</ButtonForm>
                 </ContactsForm>

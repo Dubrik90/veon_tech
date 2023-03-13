@@ -21,6 +21,7 @@ export const TechnologiesItem: React.FC<TechnologiesItemType> = ({tech}) => {
         const el = elAnimate.current
         gsap.fromTo(el, {scale: 0, visibility: 'hidden'}, {scale: 1, visibility: 'visible', duration: 1, scrollTrigger: {
                 trigger: el,
+                start: 'top 90%',
             }})
     }, [img])
 

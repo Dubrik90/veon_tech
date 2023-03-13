@@ -15,16 +15,20 @@ export const Header = () => {
     const [theme, setTheme] = useState<ThemeType>('light');
     const [isOpenBurger, setIsOpenBurger] = useState<boolean>(false);
 
-    const onClickBurger = () => {
+    const onClickOpenBurger = () => {
         setBodyLocked()
         setIsOpenBurger(!isOpenBurger)
     }
+
+    const onClickCloseBurger = () => {
+        if (isOpenBurger) {
+            setBodyLocked()
+        }
+        setIsOpenBurger(false)
+    }
+
     const toggleTheme = () => {
         setTheme(theme === 'light' ? 'dark' : 'light');
-
-        if (isOpenBurger) {
-            onClickBurger()
-        }
     }
 
     useEffect(() => {
@@ -41,9 +45,9 @@ export const Header = () => {
                     <Menu isOpenBurger={isOpenBurger}
                           theme={theme}
                           onClick={toggleTheme}
-                          onClickBurger={onClickBurger}
+                          onClickCloseBurger={onClickCloseBurger}
                     />
-                    <Burger isOpenBurger={isOpenBurger} onClick={onClickBurger}></Burger>
+                    <Burger isOpenBurger={isOpenBurger} onClick={onClickOpenBurger}></Burger>
                 </HeaderContent>
             </Container>
         </HeaderWrapper>

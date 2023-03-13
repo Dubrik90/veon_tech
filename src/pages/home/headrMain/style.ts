@@ -7,7 +7,7 @@ export const HeaderMainWrapper = styled.div`
 export const HeaderMainContent = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 200px 0 220px 100px;
+  padding: 200px 0 220px 50px;
   @media (max-width: 768px) {
     padding: 130px 0 66px 0;
   }

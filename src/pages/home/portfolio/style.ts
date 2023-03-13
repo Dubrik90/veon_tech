@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const PortfolioWrapper = styled.div`
   background: #3D5F47;
-  padding: 50px 0 78px 100px;
+  padding: 50px 0 78px 0;
 
   @media (max-width: 1450px) {
     padding: 50px 0;

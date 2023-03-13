@@ -10,6 +10,7 @@ import {Footer} from './common/components/footer';
 import {Work} from './pages/work';
 import {GetInTorch} from "./common/components/getInTorch/GetInTorch";
 import {GoUp} from "./common/components/goUp";
+import {Cookie} from "./common/components/cookie";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
             <Header/>
             <GetInTorch />
             <GoUp/>
+            <Cookie/>
             <MainWrapper>
                 <Routes>
                     <Route path={ROUTS.HOME} element={<Home/>}/>

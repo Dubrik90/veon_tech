@@ -106,8 +106,11 @@ export const CardImageMobile = styled.div`
     width: 55px;
     height: 55px;
     transition: all 0.3s;
+    border-radius: 14px;
+    
   }
   img.activeCard {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     transform: translateY(-10px);
   }
 

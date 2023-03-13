@@ -6,17 +6,17 @@ import {Arrow} from "../header/assets";
 import Diamond from "../header/assets/diamond.png";
 import {MenuItem, MenuList, MenuSubItem, NavigateMenu, SubMenu} from "./style";
 import {ThemeType} from "../../types/types";
-import { Switch } from '../switch';
+import {Switch} from '../switch';
 
 
 type MenuProps = {
     isOpenBurger: boolean,
     theme: ThemeType,
     onClick: () => void,
-    onClickBurger: () => void
+    onClickCloseBurger: () => void
 
 }
-export const Menu: FC<MenuProps> = ({isOpenBurger, theme, onClick, onClickBurger}) => {
+export const Menu: FC<MenuProps> = ({isOpenBurger, theme, onClick, onClickCloseBurger}) => {
 
     const submenuLinksAbout = [
         {title: 'О НАШЕЙ КОМПАНИИ', to: ROUTS.WORK_IN_VEON},
@@ -31,33 +31,34 @@ export const Menu: FC<MenuProps> = ({isOpenBurger, theme, onClick, onClickBurger
     ]
 
     return (
-        <NavigateMenu >
+        <NavigateMenu>
             <MenuList isOpenBurger={isOpenBurger}>
-                <MenuItem>
-                    <NavLink onClick={onClickBurger} to={ROUTS.HOME}>ГЛАВНАЯ</NavLink>
-                </MenuItem>
-                <MenuItem>О НАС
-                    <Arrow/>
+                <MenuItem><NavLink onClick={onClickCloseBurger} to={ROUTS.HOME}>ГЛАВНАЯ</NavLink></MenuItem>
+                <MenuItem className='about-sub-menu'>О НАС<Arrow/>
                     <SubMenu>
-                        {submenuLinksAbout.map((el,index) => <MenuSubItem key={index}><Link to={el.to}>{el.title}</Link></MenuSubItem>)}
+                        {submenuLinksAbout.map((el, index) => <MenuSubItem key={index}><Link
+                            to={el.to}>{el.title}</Link></MenuSubItem>)}
                     </SubMenu>
                 </MenuItem>
+                <MenuItem className='about-link'><NavLink onClick={onClickCloseBurger} to={ROUTS.HOME}>О НАШЕЙ
+                    КОМПАНИИ</NavLink></MenuItem>
                 <MenuItem>
-                    <NavLink onClick={onClickBurger} to={ROUTS.WORK_IN_VEON}>КЕЙСЫ</NavLink>
+                    <NavLink onClick={onClickCloseBurger} to={ROUTS.WORK_IN_VEON}>КЕЙСЫ</NavLink>
                 </MenuItem>
-                <MenuItem>УСЛУГИ
-                    <Arrow/>
+                <MenuItem className='about-sub-menu'>УСЛУГИ<Arrow/>
                     <SubMenu>
-                        {submenuLinksServices.map((el,index) => <MenuSubItem key={index}><Link to={el.to}>{el.title}</Link></MenuSubItem>)}
+                        {submenuLinksServices.map((el, index) => <MenuSubItem key={index}><Link
+                            to={el.to}>{el.title}</Link></MenuSubItem>)}
                     </SubMenu>
                 </MenuItem>
-                <MenuItem>БОНУСЫ
-                    {theme === 'light' && <DiamondWrapper><img src={Diamond} alt="Logo"/></DiamondWrapper>}
+                <MenuItem className='about-link'>
+                    <NavLink onClick={onClickCloseBurger} to={ROUTS.WORK_IN_VEON}>Разработка сайтов</NavLink>
                 </MenuItem>
-                <MenuItem onClick={onClickBurger}><a href="#">КОНТАКТЫ</a></MenuItem>
-               <Switch theme={theme} onClick={onClick}/> 
+                <MenuItem>БОНУСЫ</MenuItem>
+                <MenuItem onClick={onClickCloseBurger}><Link to={ROUTS.WORK_IN_VEON}>КОНТАКТЫ</Link></MenuItem>
+                <Switch theme={theme} onClick={onClick}/>
             </MenuList>
-            
+
         </NavigateMenu>
     );
 };
