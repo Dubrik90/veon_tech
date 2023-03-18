@@ -13,7 +13,6 @@ export const CookieWrapper = styled.div<CookieWrapperProps>`
   position: fixed;
   left: 0.25rem;
   transition: all 0.3s;
-  //transition: background-color var(--colors-bg),visibility var(--transition),opacity var(--transition);
   z-index: 100;
   
   @media (min-width: 768px) {

@@ -6,13 +6,13 @@ export function ScrollToTop() {
 
     useEffect(() => {
         // плавный скролл
-        document.body.scrollTo(0, 0);
-        document.body.scrollIntoView({
-            block: "start",
-            behavior: "smooth",
-        });
+        // document.body.scrollTo(0, 0);
+        // document.body.scrollIntoView({
+        //     block: "start",
+        //     behavior: "smooth",
+        // });
         // быстрый скролл
-        // window.scrollTo(0, 0)
+         window.scrollTo(0, 0)
 
     }, [pathname]);
 

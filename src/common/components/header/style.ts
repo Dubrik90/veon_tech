@@ -11,7 +11,18 @@ export const HeaderWrapper = styled.header`
   left: 0;
   width: 100%;
   background-color: var(--colors-bg);
-  z-index: 99999;
+  z-index: 9999999;
+  
+  .content-shadow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    opacity: 0.8;
+    display: none;
+  }
 
   @media (max-width: 768px) {
     margin-bottom: 25px;
@@ -43,9 +54,9 @@ export const HeaderContent = styled.div`
 
   a {
     transition: all 0.3s;
-    overflow: hidden;
     position: relative;
     z-index: 10;
+
     @media (max-width: 400px) {
       flex: 1 0 212px;
     }

@@ -24,7 +24,7 @@ type ModalWindowPropsType = {
     openModal: () => void
 }
 
-export const ModalWindow: FC<ModalWindowPropsType> = ({openModal}) => {
+export const ModalWindow: FC<ModalWindowPropsType> = ({openModal, ...rest}) => {
 
     const formik = useFormik({
         initialValues: {
@@ -64,6 +64,7 @@ export const ModalWindow: FC<ModalWindowPropsType> = ({openModal}) => {
                                 <Errors>{formik.errors.name}</Errors>}
                         </Label>
                         <Label>
+
                             <CustomInput type='text'
                                          placeholder='BY Номер телефона'
                                          {...formik.getFieldProps('phone')}

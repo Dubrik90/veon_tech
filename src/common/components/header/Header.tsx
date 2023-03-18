@@ -19,6 +19,13 @@ export const Header = () => {
         setBodyLocked()
         setIsOpenBurger(!isOpenBurger)
     }
+    const onClickUpHandler = () => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth',
+        });
+    }
 
     const onClickCloseBurger = () => {
         if (isOpenBurger) {
@@ -39,7 +46,7 @@ export const Header = () => {
         <HeaderWrapper>
             <Container>
                 <HeaderContent>
-                    <Link to={ROUTS.HOME}>
+                    <Link to={ROUTS.HOME} onClick={onClickUpHandler}>
                         <ImgWrap img={theme === 'light' ? LogoLight : LogoDark}/>
                     </Link>
                     <Menu isOpenBurger={isOpenBurger}
@@ -50,6 +57,7 @@ export const Header = () => {
                     <Burger isOpenBurger={isOpenBurger} onClick={onClickOpenBurger}></Burger>
                 </HeaderContent>
             </Container>
+            <div className="content-shadow"></div>
         </HeaderWrapper>
     )
 }

@@ -26,9 +26,11 @@ export const MenuList = styled.ul<PropsMenu>`
   display: flex;
   column-gap: 52px;
   flex-wrap: wrap;
+
   .about-link {
     display: none;
   }
+
   @media (max-width: 1469px) {
     column-gap: 30px;
   }
@@ -49,7 +51,7 @@ export const MenuList = styled.ul<PropsMenu>`
     background-color: var(--colors-bg);
     width: 100%;
     transition: left 0.3s;
-    
+
     .about-sub-menu {
       display: none;
     }
@@ -64,20 +66,34 @@ export const MenuList = styled.ul<PropsMenu>`
 export const SubMenu = styled.ul`
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease 0s;
-  transform: translate(0px, 10px);
-  pointer-events: none;
+  transition: all 0.3s linear 0s;
+  transform: translate(0px, 24px);
   min-width: 200px;
   position: absolute;
-  left: 0;
-  top: 100%;
-  z-index: 50;
+  left: -16px;
+  top: 95%;
+  z-index: 10;
   background: var(--colors-bg);
   box-shadow: 0 7px 10px rgba(0, 0, 0, 0.25);
-  padding: 15px;
+  padding: 24px 15px;
   display: flex;
   flex-direction: column;
   row-gap: 30px;
+  @media (max-width: 1320px) {
+    transform: translate(0px, 27px);
+  }
+  
+  :before {
+    content: '';
+    position: absolute;
+    top: -29px;
+    left: 0;
+    width: 100%;
+    height: 36px;
+   // background: #007aff;
+  }
+  
+  
 
   a {
     font-weight: 600;
@@ -94,7 +110,7 @@ export const SubMenu = styled.ul`
       height: 10px;
       background: #79E35E;
       position: absolute;
-      top: 2px;
+      top: 0;
       left: 0;
       border-radius: 100%;
     }
@@ -108,6 +124,7 @@ export const MenuSubItem = styled.li`
 
 `
 export const MenuItem = styled.li`
+  cursor: context-menu;
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
@@ -115,8 +132,9 @@ export const MenuItem = styled.li`
   margin: 0 3px;
   padding: 5px 0 5px 10px;
   position: relative;
-  cursor: pointer;
   text-transform: uppercase;
+    z-index: 5;
+
   @media (max-width: 1320px) {
     font-size: var(--fs-sm);
   }
@@ -133,6 +151,19 @@ export const MenuItem = styled.li`
       fill: var(--colors-text-dark);
     }
   }
+  & a.active {
+    :before {
+      content: '';
+      width: 2px;
+      height: 20px;
+      background: #6EEC4E;
+      position: absolute;
+      top: -1px;
+      left: -6px;
+      border-radius: 100%;
+      transition: 0.3s;
+    }
+  }
 
   :before {
     content: '';
@@ -146,9 +177,15 @@ export const MenuItem = styled.li`
     opacity: 0;
     visibility: hidden;
     transition: 0.3s;
+   
   }
 
+  //&:hover ~ .content-shadow {
+  //  display: block;
+  //}
+
   :hover {
+  
     :before {
       opacity: 1;
       visibility: visible;
@@ -161,9 +198,7 @@ export const MenuItem = styled.li`
     ${SubMenu} {
       opacity: 1;
       visibility: visible;
-      transform: translate(0px, 0px);
-      pointer-events: auto;
-
-    }
+      transition: visibility .2s linear, opacity .2s linear;
+     }
   }
 `

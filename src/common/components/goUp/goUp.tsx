@@ -1,14 +1,17 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {GoUpWrapper} from "./style";
 import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 export const GoUp = () => {
+    gsap.registerPlugin(ScrollTrigger);
     const [up, setUp] = useState(false)
     const circleRef = useRef(null);
 
     useEffect(() => {
         const el = circleRef.current
-        document.body.scrollTo({
+        window.scrollTo({
             top: 0,
             left: 0,
             behavior: 'smooth',
@@ -35,8 +38,8 @@ export const GoUp = () => {
             scrollTrigger: {
                 trigger: "#thirdCircle",
 
-                start: "top center",
-                end: "bottom 80px",
+             //   start: "top center",
+             //   end: "bottom 80px",
                 scrub: true
             }
         });

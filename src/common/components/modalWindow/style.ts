@@ -15,7 +15,7 @@ export const ModalWindowWrapper = styled.div<ModalWindowWrapperProps>`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow-y: hidden;
+//  overflow-y: hidden;
   background: rgba(54, 54, 54, 0.3);
   backdrop-filter: blur(5px);
   z-index: 100000;

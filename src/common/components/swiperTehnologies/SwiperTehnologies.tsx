@@ -38,7 +38,7 @@ export const SwiperTehnologies: FC<SwiperTehnologiesPropsType> = ({data}) => {
             >
                 {data.map((el:any, index: number) => (
                     <SwiperSlide key={index}>
-                        <TechnologiesItem tech={el}/>
+                        <TechnologiesItem  tech={el}/>
                     </SwiperSlide>
                 ))}
             </Swiper>
