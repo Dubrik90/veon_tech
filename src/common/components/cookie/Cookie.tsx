@@ -13,10 +13,9 @@ export const Cookie = () => {
     return (
         <CookieWrapper isShowCookie={isShowCookie}>
             <CookieContent>
-                <Text>We use <Link to={ROUTS.WORK_IN_VEON}>cookies</Link> to optimise site functionality and
-                    enhance your experience.
+                <Text>Мы используем файлы <Link to={ROUTS.WORK_IN_VEON}>cookies </Link> чтобы оптимизировать работу сайта.
                 </Text>
-                <Button onClick={onClickCloseCookieHandler}>I&nbsp;agree</Button>
+                <Button onClick={onClickCloseCookieHandler}>Я согласен</Button>
             </CookieContent>
         </CookieWrapper>
     );

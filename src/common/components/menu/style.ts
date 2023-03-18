@@ -66,7 +66,7 @@ export const MenuList = styled.ul<PropsMenu>`
 export const SubMenu = styled.ul`
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s linear 0s;
+  transition: all 0.3s;
   transform: translate(0px, 24px);
   min-width: 200px;
   position: absolute;
@@ -82,7 +82,7 @@ export const SubMenu = styled.ul`
   @media (max-width: 1320px) {
     transform: translate(0px, 27px);
   }
-  
+
   :before {
     content: '';
     position: absolute;
@@ -90,10 +90,9 @@ export const SubMenu = styled.ul`
     left: 0;
     width: 100%;
     height: 36px;
-   // background: #007aff;
+    // background: #007aff;
   }
-  
-  
+
 
   a {
     font-weight: 600;
@@ -115,10 +114,12 @@ export const SubMenu = styled.ul`
       border-radius: 100%;
     }
 
+
     :hover {
       color: #79E35E;
     }
   }
+
 `
 export const MenuSubItem = styled.li`
 
@@ -133,7 +134,8 @@ export const MenuItem = styled.li`
   padding: 5px 0 5px 10px;
   position: relative;
   text-transform: uppercase;
-    z-index: 5;
+  z-index: 5;
+  
 
   @media (max-width: 1320px) {
     font-size: var(--fs-sm);
@@ -142,63 +144,31 @@ export const MenuItem = styled.li`
     ${fontSize(25)};
   }
 
-
   svg {
     transition: all 0.3s;
     margin-left: 10px;
-
     rect {
       fill: var(--colors-text-dark);
     }
   }
-  & a.active {
-    :before {
-      content: '';
-      width: 2px;
-      height: 20px;
-      background: #6EEC4E;
-      position: absolute;
-      top: -1px;
-      left: -6px;
-      border-radius: 100%;
-      transition: 0.3s;
-    }
+
+  .active {
+    color: var(--colors-text-green);
   }
-
-  :before {
-    content: '';
-    width: 2px;
-    height: 20px;
-    background: #6EEC4E;
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    border-radius: 100%;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s;
-   
-  }
-
-  //&:hover ~ .content-shadow {
-  //  display: block;
-  //}
-
-  :hover {
   
-    :before {
-      opacity: 1;
-      visibility: visible;
-    }
-
+  :hover {
+    color: #79E35E;
     svg {
       transform: rotate(-180deg);
+      rect {
+        fill: #79E35E;
+      }
     }
 
     ${SubMenu} {
       opacity: 1;
       visibility: visible;
-      transition: visibility .2s linear, opacity .2s linear;
-     }
+      transition: visibility .2s , opacity .2s ;
+    }
   }
 `

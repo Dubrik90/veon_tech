@@ -90,6 +90,7 @@ export const CardsMobile = styled.div`
     display: block;
     width: 100%;
     align-self: center;
+   
   }
 `
 export const CurrentDevMobile = styled.div`

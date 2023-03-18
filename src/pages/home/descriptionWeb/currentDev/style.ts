@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const CurrentDevWrapper = styled.div`
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #FFFDFD;
+ // background-color: var(--color-bg-tehno);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
   display: flex;
@@ -51,12 +52,14 @@ export const Title = styled.h3`
   font-weight: var(--fw-extra-bold);
   font-size: 25px;
   line-height: 129.5%;
+ // color: var(--colors-text-dark);
   color: #000;
 
 `
 export const SubTitle = styled.p`
   font-size: 15px;
   line-height: 129.5%;
+  //color: var(--colors-text-dark);
   color: #000000;
   flex: 1 1 auto;
 `
@@ -65,9 +68,13 @@ export const ButtonArrow = styled.button`
   font-weight: var(--fw-extra-bold);
   font-size: 13px;
   line-height: 129.5%;
+ // color: var(--colors-text-dark);
   color: #000000;
 
   svg {
     margin-left: 5px;
+    path {
+     // fill: var(--colors-text-dark);
+    }
   }
 `

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const FooterWrapper = styled.footer`
-  background-color: #3D5F47;
+  background-color: var(--color-dg-footer);
 `
 export const FooterContent = styled.div`
   display: flex;

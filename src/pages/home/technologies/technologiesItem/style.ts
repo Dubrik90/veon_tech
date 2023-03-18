@@ -14,7 +14,6 @@ export const TechnologiesItemWrapper = styled.div`
   @media (max-width: 768px) {
     min-width: 125px;
     height: 133px;
-   // 
   }
   @media (max-width: 425px) {
         padding: 11px;

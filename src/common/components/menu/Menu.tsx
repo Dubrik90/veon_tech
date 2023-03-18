@@ -1,9 +1,7 @@
 import React, {FC} from 'react';
-import {DiamondWrapper} from "../header/style";
 import {Link, NavLink} from "react-router-dom";
 import {ROUTS} from "../../constans/routs";
 import {Arrow} from "../header/assets";
-import Diamond from "../header/assets/diamond.png";
 import {MenuItem, MenuList, MenuSubItem, NavigateMenu, SubMenu} from "./style";
 import {ThemeType} from "../../types/types";
 import {Switch} from '../switch';
@@ -54,7 +52,7 @@ export const Menu: FC<MenuProps> = ({isOpenBurger, theme, onClick, onClickCloseB
                 <MenuItem className='about-link'>
                     <NavLink onClick={onClickCloseBurger} to={ROUTS.WORK_IN_VEON}>Разработка сайтов</NavLink>
                 </MenuItem>
-                <MenuItem><NavLink onClick={onClickCloseBurger} to={ROUTS.HOME}>БОНУСЫ</NavLink></MenuItem>
+                <MenuItem><NavLink onClick={onClickCloseBurger} to={ROUTS.WORK_IN_VEON}>БОНУСЫ</NavLink></MenuItem>
                 <MenuItem onClick={onClickCloseBurger}><Link to={ROUTS.WORK_IN_VEON}>КОНТАКТЫ</Link></MenuItem>
                 <Switch theme={theme} onClick={onClick}/>
             </MenuList>

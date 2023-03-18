@@ -7,7 +7,6 @@ import {Company} from './company';
 import {Reviews} from './reviews';
 import {Contacts} from "./contacts";
 import {Layer} from "./layer";
-import {InputPhone} from "../../common/components/inputPhone/InputPhone";
 
 export const Home = () => {
 
@@ -20,8 +19,8 @@ export const Home = () => {
             <Company/>
             <Layer/>
             <Reviews/>
+            <Layer/>
             <Contacts/>
         </>
-
     )
 }
