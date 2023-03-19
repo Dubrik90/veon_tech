@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const HeaderMainWrapper = styled.div`
-  padding: 335px 0 50px 0;
+  padding: 335px 0 250px 0;
   @media (max-width: 1024px) {
-    padding: 140px 0 50px 0;
+    padding: 160px 0 200px 0;
   }
 
 `
@@ -119,7 +119,7 @@ export const SubTitle = styled.p`
   @media (max-width: 1848px) {
     font-size: 14px;
   }
-  @media (max-width: 1024px) {
+  @media (max-width: 1050px) {
     display: none;
     margin-bottom: 40px;
   }

@@ -11,7 +11,7 @@ export const HeaderWrapper = styled.header`
   left: 0;
   width: 100%;
   background-color: var(--colors-bg);
-  z-index: 9999999;
+  z-index: 50;
   
   .content-shadow {
     position: absolute;

@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import './index.css';
 import {HashRouter, Route, Routes} from 'react-router-dom';
 import {ROUTS} from './common/constans/routs';
@@ -11,9 +11,17 @@ import {Work} from './pages/work';
 import {GetInTorch} from "./common/components/getInTorch/GetInTorch";
 import {GoUp} from "./common/components/goUp";
 import {Cookie} from "./common/components/cookie";
+import {ModalWindow} from "./common/components/modalWindow";
+import {useBodyScrollLock} from "./common/hook";
 
 
 function App() {
+    const [view, setView] = useState(false)
+    const [isBodyLocked, setBodyLocked] = useBodyScrollLock();
+    const openModal = () => {
+        setBodyLocked()
+        setView(!view)
+    }
 
     return (
         <HashRouter>
@@ -24,11 +32,12 @@ function App() {
             <Cookie/>
             <MainWrapper>
                 <Routes>
-                    <Route path={ROUTS.HOME} element={<Home/>}/>
+                    <Route path={ROUTS.HOME} element={<Home view={view} openModal={openModal}/>}/>
                     <Route path={ROUTS.WORK_IN_VEON} element={<Work/>}/>
                 </Routes>
             </MainWrapper>
             <Footer/>
+            {view && <ModalWindow openModal={openModal}/>}
         </HashRouter>
     );
 }

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import {Placeholder} from "../modalWindow/style";
 
 
 export const InputWrap = styled.input`
@@ -21,12 +20,7 @@ export const InputWrap = styled.input`
     outline: none;
   }
 
-  &:focus ~ ${Placeholder} {
-    transform: translateY(-14px);
-    font-size: 12px;
-    line-height: 16px;
-    color: var(--black40);
-  }
+  
 
 `
 

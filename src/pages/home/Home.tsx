@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC} from 'react';
 import {Technologies} from './technologies';
 import {DescriptionWeb} from './descriptionWeb/DescriptionWeb';
 import {HeadrMain} from './headrMain/HeadrMain';
@@ -8,18 +8,22 @@ import {Reviews} from './reviews';
 import {Contacts} from "./contacts";
 import {Layer} from "./layer";
 
-export const Home = () => {
+type HomePropsType = {
+    view: boolean,
+    openModal: () => void
+}
+
+export const Home:FC<HomePropsType> = ({openModal, view}) => {
 
     return (
         <>
-            <HeadrMain/>
+            <HeadrMain view={view} openModal={openModal}/>
             <DescriptionWeb/>
             <Technologies/>
             <Portfolio/>
             <Company/>
             <Layer/>
             <Reviews/>
-            <Layer/>
             <Contacts/>
         </>
     )
