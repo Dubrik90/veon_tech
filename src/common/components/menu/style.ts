@@ -48,6 +48,7 @@ export const MenuList = styled.ul<PropsMenu>`
     position: fixed;
     top: 0;
     padding-top: 120px;
+    padding-bottom: 40px;
     background-color: var(--colors-bg);
     width: 100%;
     transition: left 0.3s;

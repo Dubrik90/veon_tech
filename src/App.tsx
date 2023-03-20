@@ -13,9 +13,11 @@ import {GoUp} from "./common/components/goUp";
 import {Cookie} from "./common/components/cookie";
 import {ModalWindow} from "./common/components/modalWindow";
 import {useBodyScrollLock} from "./common/hook";
+import {ThemeType} from "./common/types/types";
 
 
 function App() {
+    const [theme, setTheme] = useState<ThemeType>('light');
     const [view, setView] = useState(false)
     const [isBodyLocked, setBodyLocked] = useBodyScrollLock();
     const openModal = () => {
@@ -26,13 +28,13 @@ function App() {
     return (
         <HashRouter>
             <ScrollToTop/>
-            <Header/>
+            <Header theme={theme} setTheme={setTheme}/>
             <GetInTorch />
             <GoUp/>
             <Cookie/>
             <MainWrapper>
                 <Routes>
-                    <Route path={ROUTS.HOME} element={<Home view={view} openModal={openModal}/>}/>
+                    <Route path={ROUTS.HOME} element={<Home theme={theme} view={view} openModal={openModal}/>}/>
                     <Route path={ROUTS.WORK_IN_VEON} element={<Work/>}/>
                 </Routes>
             </MainWrapper>

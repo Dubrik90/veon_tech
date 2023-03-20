@@ -37,18 +37,32 @@ export const Tint = styled.div`
 type ImgWrapProps = {
     img: string
 }
-export const ImgWrap = styled.div<ImgWrapProps>`
+export const ImgWrapDesctop = styled.div<ImgWrapProps>`
   background-image: url(${props => props.img});
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: cover;
   width: 260px;
   height: 65px;
-  @media (max-width: 400px) {
-    max-width: 212px;
-    height: 60px;
+  @media (max-width: 425px) {
+    display: none;
+   // max-width: 212px;
+  // height: 60px;
   }
 `;
+export const ImgWrapMobile = styled.div<ImgWrapProps>`
+  display: none;
+  @media (max-width: 425px) {
+    display: block;
+    background-image: url(${props => props.img});
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 70px;
+    height: 70px;
+  }
+`
+
 export const HeaderContent = styled.div`
   display: flex;
   align-items: center;

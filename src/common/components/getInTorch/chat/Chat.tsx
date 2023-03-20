@@ -2,7 +2,7 @@ import React from 'react';
 import {ButtonInputMassage, ChatContent, ChatFooter, ChatHeader, ChatWrapper, Close, Input, InputBlock} from "./style";
 import {AvatarWrap, Button, SubTitle, Title} from "../style";
 import {Messages} from "./Messages";
-import Avatar from "../assets/managerImg.jpg";
+import {Avatar, MassageIcon, Send} from "../assets";
 
 type ChatType = {
     closeModal: (e: any) => void
@@ -11,23 +11,26 @@ type ChatType = {
 export const Chat: React.FC<ChatType> = ({closeModal, view,}) => {
 
     return (
-        <ChatWrapper view={view}><Close onClick={closeModal}>x</Close>
+        <ChatWrapper view={view}> <Close onClick={closeModal}>x</Close>
             <ChatHeader>
-                <AvatarWrap img={Avatar}/>
+                {/*<MassageIcon/>*/}
+                <Avatar/>
+                {/*<AvatarWrap img={Avatar}/>*/}
                 <Button>
-                    <Title>Пишите, отвечу лично-</Title>
-                    <SubTitle>Александра Иванцова, sales-manager</SubTitle>
+                    <Title>Артем</Title>
+                    <SubTitle>Customer support</SubTitle>
                 </Button>
             </ChatHeader>
             <ChatContent>
                 <Messages/>
             </ChatContent>
             <InputBlock>
-                <Input type="text" placeholder='Введите ваше сообщение'/>
-                <ButtonInputMassage type='button'></ButtonInputMassage>
+                <Input placeholder='Введите сообщение'></Input>
+                <Send/>
+                {/*<ButtonInputMassage type='button'></ButtonInputMassage>*/}
             </InputBlock>
             <ChatFooter>
-                Чат для сайта Veon-Tech
+
             </ChatFooter>
 
             {/*<ContentFooter>*/}

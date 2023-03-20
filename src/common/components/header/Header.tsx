@@ -1,9 +1,11 @@
-import React, {useEffect, useState} from "react";
+import React, {FC, useEffect, useState} from "react";
 import {Container} from "../../style/Container";
-import {HeaderContent, HeaderLogo, HeaderWrapper, ImgWrap, Tint} from "./style"
+import {HeaderContent, HeaderLogo, HeaderWrapper, ImgWrapDesctop, ImgWrapMobile, Tint} from "./style"
 import {Burger} from "../../style/Burger";
 import LogoLight from './assets/logoLight.svg';
 import LogoDark from './assets/logoDark.svg';
+import LogoMobileDark from './assets/logoMobileDark.png';
+import LogoMobileWhite from './assets/logoMobileWhite.png';
 import {Menu} from "../menu";
 import {ThemeType} from "../../types/types";
 import {useBodyScrollLock} from "../../hook";
@@ -11,9 +13,13 @@ import {Link} from "react-router-dom";
 import {ROUTS} from "../../constans/routs";
 import gsap from "gsap";
 
-export const Header = () => {
+type HeaderPropsType = {
+    theme: ThemeType,
+    setTheme: (val: ThemeType)=> void
+}
+export const Header: FC<HeaderPropsType> = ({theme, setTheme}) => {
     const [isBodyLocked, setBodyLocked] = useBodyScrollLock();
-    const [theme, setTheme] = useState<ThemeType>('light');
+
     const [isOpenBurger, setIsOpenBurger] = useState<boolean>(false);
 
     const onClickOpenBurger = () => {
@@ -70,7 +76,8 @@ export const Header = () => {
                 <Container>
                     <HeaderContent>
                         <Link to={ROUTS.HOME} onClick={onClickUpHandler}>
-                            <ImgWrap img={theme === 'light' ? LogoLight : LogoDark}/>
+                            <ImgWrapDesctop img={theme === 'light' ? LogoLight : LogoDark}/>
+                            <ImgWrapMobile img={theme === 'light' ? LogoMobileWhite : LogoMobileDark}/>
                         </Link>
                         <Menu isOpenBurger={isOpenBurger}
                               theme={theme}

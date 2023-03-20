@@ -10,7 +10,7 @@ export const Layout = () => {
     return (
         <>
             <ScrollToTop/>
-                <Header/>
+                {/*<Header/>*/}
                     <Outlet/>
                 <Footer/>
         </>

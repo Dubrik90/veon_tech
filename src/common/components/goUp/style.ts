@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const GoUpWrapper = styled.div`
-  min-width: 50px;
-  min-height: 50px;
+  min-width: 40px;
+  min-height: 40px;
   border-radius: 50%;
   background-color: #5db447;
   position: fixed;
@@ -23,13 +23,13 @@ export const GoUpWrapper = styled.div`
     display: inline-block;
     transform: rotate(-135deg);
     --webkit-transform: rotate(-135deg);
-    padding: 7px;
+    padding: 6px;
     color: white;
     position: absolute;
     width: 10px;
     height: 10px;
-    top: 20px;
-    left: 17px;
+    top: 17px;
+    left: 13px;
   }
   &:hover {
     background: var(--colors-bg-green);

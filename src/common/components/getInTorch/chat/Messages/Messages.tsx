@@ -6,7 +6,7 @@ export const Messages = () => {
         <MessagesWrapper>
             <WelcomeBlock>
                 <MassageWrapper>
-                    <Massage>Приветствуем Вас. Готовы проконсультировать по каждой из представленных услуг!</Massage>
+                    <Massage>Приветствуем Вас.</Massage>
                     <Time>Отправлено в 19:00</Time>
                 </MassageWrapper>
                 <MassageWrapper>
@@ -14,7 +14,7 @@ export const Messages = () => {
                     <Time>Отправлено в 19:00</Time>
                 </MassageWrapper>
                 <MassageWrapper>
-                    <Massage>Напишите, что Вас интересует, и я Вам обязательно помогу.</Massage>
+                    <Massage>Вам обязательно помогу.</Massage>
                     <Time>Отправлено в 19:00</Time>
                 </MassageWrapper>
                 <MassageWrapper>

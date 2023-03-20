@@ -5,7 +5,7 @@ type ChatWrapperProps = {
     view: boolean
 }
 export const ChatWrapper = styled.div<ChatWrapperProps>`
-  overflow: ${({view}) => view && 'hidden'};
+ // overflow: ${({view}) => view && 'hidden'};
   bottom: ${({view}) => view ? '0' : '-100%'};
   transform: ${({view}) => view ? 'translate(0,0)' : 'translate( 0,100%)'};
  // z-index: ${({view}) => view ? '123456789' : '2345678902'};
@@ -19,8 +19,12 @@ export const ChatWrapper = styled.div<ChatWrapperProps>`
   background: var(--colors-bg-green);
   display: flex;
   flex-direction: column;
-  padding: 5px;
-  border-radius: 17px;
+ // padding: 5px;
+  border-top-left-radius: 17px;
+  border-top-right-radius: 17px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  //border-radius: 17px;
   
   @media (max-width: 425px) {
     right: 0;
@@ -31,17 +35,18 @@ export const ChatWrapper = styled.div<ChatWrapperProps>`
  
 `
 export const Close = styled.span`
-  position: absolute;
-  right: 10px;
+ position: absolute;
+  right: 22px;
   top: 3px;
-  color: var(--color-dark)  ;
-  line-height: 129.5%;
-  ${fontSize(30)};
+  color: var(--color-dark);
+  font-size: 28px;
+  font-weight: 400;
   cursor: pointer;
   z-index: 50;
   transition: all 0.3s;
+  
   &:hover {
-    color: white;
+    color: #5db447;
   }
 `
 export const ChatHeader = styled.div`
@@ -51,7 +56,12 @@ export const ChatHeader = styled.div`
   column-gap: 12px;
   font-weight: var(--fw-bold);
   transition: all 0.3s;
-  height: 50px;
+  height: 80px;
+  
+  svg {
+    width: 30px;
+    fill: var(--colors-text-wight);
+  }
   
  
   padding: 5px 14px 3px 14px;
@@ -78,7 +88,23 @@ export const ChatContent = styled.div`
 export const InputBlock = styled.div`
   position: relative;
   background: var(--colors-text-wight);
-  padding: 10px;
+ // padding: 10px;
+  
+  svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    width: 25px;
+    height: 25px;
+   // background: var(--colors-bg-green);
+    border-radius: 100%;
+    z-index: 4;
+    transition: all 0.3s;
+    :hover {
+      fill: var(--colors-bg-green);
+    }
+  }
  
 `
 export const ButtonInputMassage = styled.button`
@@ -94,7 +120,7 @@ export const ButtonInputMassage = styled.button`
   transition: all 0.3s;
   
   :before {
-    content: '>';
+    content: '';
     position: absolute;
     font-size: 14px;
     top: 48%;
@@ -113,20 +139,21 @@ export const ButtonInputMassage = styled.button`
   }
 `
 
-export const Input = styled.input`
+export const Input = styled.textarea`
   background: #FFFFFF;
-  border: 1px solid rgba(0, 0, 0, 0.17);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
-  ${fontSize(14)};
-  padding: 7px 12px;
+  border-top: 1px solid rgba(0, 0, 0, 0.17);
+ // box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+ // border-radius: 20px;
+  font-size: 14px;
+  padding: 10px 12px ;
   width: 100%;
   position: relative;
+  height: 60px;
 
 
   ::placeholder {
     font-family: 'Mulish';
-    ${fontSize(12)};
+    font-size: 12px;
     line-height: 129.5%;
     color: #888585;
   }
@@ -135,6 +162,7 @@ export const Input = styled.input`
 
 export const ChatFooter = styled.div`
   text-align: center;
+  background: var(--colors-text-wight);
   color: var(--colors-text-wight);
   ${fontSize(12)};
   padding: 5px;

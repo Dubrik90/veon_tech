@@ -4,7 +4,8 @@ import gsap from 'gsap';
 import {AvatarWrap, Button, GetInTorchWrapper, SubTitle, Title} from "./style";
 import LogoLight from "../header/assets/logoLight.svg";
 import LogoDark from "../header/assets/logoDark.svg";
-import Avatar from './assets/managerImg.jpg'
+import Avatar from './assets/massageIcon.svg'
+import {MassageIcon} from "./assets";
 
 
 export const GetInTorch = () => {
@@ -39,10 +40,11 @@ export const GetInTorch = () => {
     return (
         <>
             <GetInTorchWrapper view={view} className='torch' ref={circleRef}>
-                <AvatarWrap img={Avatar}/>
+                <MassageIcon/>
+                {/*<AvatarWrap img={Avatar}/>*/}
                 <Button onClick={openModal}>
-                    <Title>Пишите, отвечу лично-</Title>
-                    <SubTitle>Александра Иванцова, sales-manager</SubTitle>
+                    <Title>Отправте нам сообщение</Title>
+                    {/*<SubTitle>Александра Иванцова, sales-manager</SubTitle>*/}
                 </Button>
             </GetInTorchWrapper>
             <Chat view={view} closeModal={closeModal}/>
