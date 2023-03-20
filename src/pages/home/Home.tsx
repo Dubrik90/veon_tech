@@ -24,7 +24,7 @@ export const Home:FC<HomePropsType> = ({openModal, view}) => {
             <Company/>
             <Layer/>
             <Reviews/>
-            <Contacts/>
+            <Contacts view={view} openModal={openModal}/>
         </>
     )
 }

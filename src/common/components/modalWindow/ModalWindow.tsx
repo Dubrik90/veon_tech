@@ -36,10 +36,10 @@ export const ModalWindow: FC<ModalWindowPropsType> = ({openModal, ...rest}) => {
         {val: 'Больше 50 K'},
     ]
     const servicesArray = [
-        {service: 'Digital Marketing'},
-        {service: 'Web development'},
-        {service: 'Creative Web Design'},
-        {service: 'Branding'},
+        {service: 'Разработка сайтов'},
+        {service: 'Разработка ПО'},
+        {service: 'Поддержка проектов'},
+        {service: 'UX/UI дизайн'},
     ]
     const onClickSetBudgetHandler = (val: string) => {
         setBudget(val)
@@ -64,8 +64,6 @@ export const ModalWindow: FC<ModalWindowPropsType> = ({openModal, ...rest}) => {
             helpFizUser: '',
             service: '',
             files: ''
-
-
         },
 
 
