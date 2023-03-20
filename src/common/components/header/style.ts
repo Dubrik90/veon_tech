@@ -12,17 +12,6 @@ export const HeaderWrapper = styled.header`
   width: 100%;
   background-color: var(--colors-bg);
   z-index: 50;
-  
-  .content-shadow {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    background: black;
-    opacity: 0.8;
-    display: none;
-  }
 
   @media (max-width: 768px) {
     margin-bottom: 25px;
@@ -31,6 +20,20 @@ export const HeaderWrapper = styled.header`
     min-height: 60px;
   }
 `
+
+export const Tint = styled.div`
+  background-color: rgba(0, 0, 0, .15);
+  height: 100vh;
+  opacity: 0;
+  transition: visibility .2s linear, opacity .2s linear;
+  visibility: hidden;
+  z-index: 1;
+  left: 0;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+`
+
 type ImgWrapProps = {
     img: string
 }

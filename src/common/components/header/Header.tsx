@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {Container} from "../../style/Container";
-import {HeaderContent, HeaderLogo, HeaderWrapper, ImgWrap} from "./style"
+import {HeaderContent, HeaderLogo, HeaderWrapper, ImgWrap, Tint} from "./style"
 import {Burger} from "../../style/Burger";
 import LogoLight from './assets/logoLight.svg';
 import LogoDark from './assets/logoDark.svg';
@@ -9,6 +9,7 @@ import {ThemeType} from "../../types/types";
 import {useBodyScrollLock} from "../../hook";
 import {Link} from "react-router-dom";
 import {ROUTS} from "../../constans/routs";
+import gsap from "gsap";
 
 export const Header = () => {
     const [isBodyLocked, setBodyLocked] = useBodyScrollLock();
@@ -42,22 +43,47 @@ export const Header = () => {
         document.body.setAttribute('data-theme', theme);
     }, [theme]);
 
+    useEffect(() => {
+        let headerTint = gsap.utils.toArray('.header-tint')
+        let itemMenu = gsap.utils.toArray('.about-sub-menu')
+
+        itemMenu.forEach((link:any, ind) => {
+            link.addEventListener('mouseover', () => {
+                gsap.to(headerTint, {
+                    opacity:1,
+                    visibility: 'visible'
+                });
+            } )
+            link.addEventListener('mouseout', () => {
+                gsap.to(headerTint, {
+                    opacity:0,
+                    visibility: 'hidden'
+                });
+            } )
+        })
+    }, []);
+
+
     return (
-        <HeaderWrapper>
-            <Container>
-                <HeaderContent>
-                    <Link to={ROUTS.HOME} onClick={onClickUpHandler}>
-                        <ImgWrap img={theme === 'light' ? LogoLight : LogoDark}/>
-                    </Link>
-                    <Menu isOpenBurger={isOpenBurger}
-                          theme={theme}
-                          onClick={toggleTheme}
-                          onClickCloseBurger={onClickCloseBurger}
-                    />
-                    <Burger isOpenBurger={isOpenBurger} onClick={onClickOpenBurger}></Burger>
-                </HeaderContent>
-            </Container>
-            <div className="content-shadow"></div>
-        </HeaderWrapper>
+        <>
+            <HeaderWrapper>
+                <Container>
+                    <HeaderContent>
+                        <Link to={ROUTS.HOME} onClick={onClickUpHandler}>
+                            <ImgWrap img={theme === 'light' ? LogoLight : LogoDark}/>
+                        </Link>
+                        <Menu isOpenBurger={isOpenBurger}
+                              theme={theme}
+                              onClick={toggleTheme}
+                              onClickCloseBurger={onClickCloseBurger}
+                        />
+                        <Burger isOpenBurger={isOpenBurger} onClick={onClickOpenBurger}></Burger>
+                    </HeaderContent>
+                </Container>
+
+            </HeaderWrapper>
+            <Tint className="header-tint"></Tint>
+        </>
+
     )
 }
