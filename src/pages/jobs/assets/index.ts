@@ -1,0 +1,1 @@
+export { ReactComponent as Blank } from './blank.svg';

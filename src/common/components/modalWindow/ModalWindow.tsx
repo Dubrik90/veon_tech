@@ -1,24 +1,28 @@
 import React, {FC, useState, MouseEvent, useRef} from 'react';
 import {ModalWindowWrapper} from "./style";
-import {useFormik} from "formik";
+import {Form, useFormik} from "formik";
+import {useAppDispatch, useAppSelector, useBodyScrollLock} from "../../hook";
+import {setIsOpenFormAC} from "../../../app/app-reduser";
 
 type FormikErrorType = {
     name?: string,
     phone?: string
 }
 
-type ModalWindowPropsType = {
-    openModal: () => void
-}
-
-type BudgetType = 'Индивидуальный расчет' | '5K - 10K' | '10K - 50K' | 'Больше 50 K' | ''
-export const ModalWindow: FC<ModalWindowPropsType> = ({openModal, ...rest}) => {
+export const ModalWindow = () => {
+    const dispatch = useAppDispatch()
+    const isOpenForm = useAppSelector(state => state.app.isOpenForm)
+    const [isBodyLocked, setBodyLocked] = useBodyScrollLock();
     const [activeTab, setActiveTab] = useState(true)
     const [service, setService] = useState(true)
     const [budget, setBudget] = useState('')
     const [helpFizUser, setHelpFizUser] = useState('')
     const [helpCompany, setHelpCompany] = useState('')
 
+    const closeFormModal = () => {
+        setBodyLocked()
+        dispatch(setIsOpenFormAC({isOpen: !isOpenForm}))
+    }
 
     const helpFizUserArray = [
         {val: 'Я знаю чего хочу'},
@@ -41,14 +45,6 @@ export const ModalWindow: FC<ModalWindowPropsType> = ({openModal, ...rest}) => {
         {service: 'Поддержка проектов'},
         {service: 'UX/UI дизайн'},
     ]
-    const onClickSetBudgetHandler = (val: string) => {
-        setBudget(val)
-    }
-    const initialValueFile = {
-        file: ""
-    };
-    const fileRef = useRef(null);
-
 
     const formik = useFormik({
 
@@ -84,13 +80,14 @@ export const ModalWindow: FC<ModalWindowPropsType> = ({openModal, ...rest}) => {
 
     return (
         <ModalWindowWrapper>
+
             <div className="modal-main-set modal-main-set--active">
                 <div className="container">
                     <div className="modal-main-set__content">
                         <div className="dynamic-contact">
                             <div className="dynamic-contact__head">
                                 <div className="modal-title">Свяжитесь с нами</div>
-                                <div onClick={() => openModal()} className="close-modal">
+                                <div onClick={closeFormModal} className="close-modal">
                                     <div></div>
                                     <div></div>
                                 </div>

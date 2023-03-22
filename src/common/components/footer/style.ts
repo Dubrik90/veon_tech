@@ -29,7 +29,7 @@ export const FooterTop = styled.div`
     max-height: 100%;
     @media (max-width: 1227px) {
       padding: 0;
-      max-height: 155px;
+      max-height: 85px;
       object-fit: contain;
     }
   }

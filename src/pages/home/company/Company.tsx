@@ -5,12 +5,11 @@ import {CompanyBlock, CompanyWrapper, ImgWrap, Title} from './style';
 import Marquee from "react-fast-marquee";
 import {clients} from "./data";
 import {ThemeType} from "../../../common/types/types";
+import {useAppSelector} from "../../../common/hook";
 
-type CompanyPropsType = {
-    theme: ThemeType
-}
-export const Company:FC<CompanyPropsType> = ({theme}) => {
-    console.log(theme)
+
+export const Company = () => {
+    const theme = useAppSelector(state => state.app.theme)
 
 
     return (

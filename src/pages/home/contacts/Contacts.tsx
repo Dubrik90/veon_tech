@@ -1,20 +1,25 @@
-import React, {FC} from 'react';
+import React, {FC, useRef} from 'react';
 import {ContactsWrapper, ContentBlock, Subtitle, Title} from "./style";
 import {Container} from "../../../common/style/Container";
+import {useAppDispatch, useAppSelector, useBodyScrollLock} from "../../../common/hook";
+import {setIsOpenFormAC} from "../../../app/app-reduser";
 
-type ContactsPropsType = {
-    view: boolean,
-    openModal: () => void
-}
+export const Contacts = () => {
+    const dispatch = useAppDispatch()
+    const isOpenForm = useAppSelector(state => state.app.isOpenForm)
+    const [isBodyLocked, setBodyLocked] = useBodyScrollLock();
 
-export const Contacts:FC<ContactsPropsType> = ({openModal, view}) => {
+    const onClickFormModalHandler = () => {
+        setBodyLocked()
+        dispatch(setIsOpenFormAC({isOpen: !isOpenForm}))
+    }
 
     return (
         <ContactsWrapper>
             <Container>
                 <ContentBlock>
                     <Subtitle>Давайте приступим к работе?</Subtitle>
-                    <Title onClick={openModal}>Связаться с нами</Title>
+                    <Title onClick={onClickFormModalHandler}>Связаться с нами</Title>
                 </ContentBlock>
             </Container>
         </ContactsWrapper>

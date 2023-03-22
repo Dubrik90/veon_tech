@@ -9,24 +9,19 @@ import {Contacts} from "./contacts";
 import {Layer} from "./layer";
 import {ThemeType} from "../../common/types/types";
 
-type HomePropsType = {
-    view: boolean,
-    openModal: () => void,
-    theme: ThemeType
-}
 
-export const Home:FC<HomePropsType> = ({openModal, view, theme}) => {
+export const Home = () => {
 
     return (
         <>
-            <HeadrMain view={view} openModal={openModal}/>
+            <HeadrMain />
             <DescriptionWeb/>
             <Technologies/>
             <Portfolio/>
-            <Company theme={theme}/>
+            <Company/>
             <Layer/>
             <Reviews/>
-            <Contacts view={view} openModal={openModal}/>
+            <Contacts/>
         </>
     )
 }

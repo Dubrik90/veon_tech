@@ -2,16 +2,21 @@ import React, {FC, useEffect, useRef, useState} from 'react'
 import {Container} from '../../../common/style/Container'
 import {Button, HeaderMainContent, HeaderMainWrapper, SubTitle, SubTitleSmall, Title, Title2} from './style'
 import {ModalWindow} from "../../../common/components/modalWindow";
-import {useBodyScrollLock} from "../../../common/hook";
+import {useAppDispatch, useAppSelector, useBodyScrollLock} from "../../../common/hook";
+import {setIsOpenFormAC} from "../../../app/app-reduser";
 
-type HeadrMainPropsType = {
-    view: boolean,
-    openModal: () => void
-}
 
-export const HeadrMain: FC<HeadrMainPropsType> = ({openModal, view}) => {
-    const headerAnimate = useRef(null)
+export const HeadrMain = () => {
+    const dispatch = useAppDispatch()
+    const isOpenForm = useAppSelector(state => state.app.isOpenForm)
     const [isBodyLocked, setBodyLocked] = useBodyScrollLock();
+    console.log(isBodyLocked)
+
+    const headerAnimate = useRef(null)
+    const onClickFormModalHandler = () => {
+        setBodyLocked()
+        dispatch(setIsOpenFormAC({isOpen: !isOpenForm}))
+    }
 
 
     useEffect(() => {
@@ -31,7 +36,7 @@ export const HeadrMain: FC<HeadrMainPropsType> = ({openModal, view}) => {
                     </SubTitleSmall>
                     <Title>Вот где начинаются</Title>
                     <Title2>ваши свершения</Title2>
-                    <Button onClick={openModal}>Оставить заявку</Button>
+                    <Button onClick={onClickFormModalHandler}>Оставить заявку</Button>
                 </HeaderMainContent>
             </Container>
         </HeaderMainWrapper>

@@ -44,7 +44,7 @@ export const ImgWrapDesctop = styled.div<ImgWrapProps>`
   background-size: cover;
   width: 260px;
   height: 65px;
-  @media (max-width: 425px) {
+  @media (max-width: 480px) {
     display: none;
    // max-width: 212px;
   // height: 60px;
@@ -52,14 +52,14 @@ export const ImgWrapDesctop = styled.div<ImgWrapProps>`
 `;
 export const ImgWrapMobile = styled.div<ImgWrapProps>`
   display: none;
-  @media (max-width: 425px) {
+  @media (max-width: 480px) {
     display: block;
     background-image: url(${props => props.img});
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 70px;
-    height: 70px;
+    width: 75px;
+    height: 75px;
   }
 `
 
@@ -73,6 +73,13 @@ export const HeaderContent = styled.div`
     transition: all 0.3s;
     position: relative;
     z-index: 10;
+    
+    max-width: 75px;
+    
+    img {
+      width: 100%;
+      height: 100%;
+    }
 
     @media (max-width: 400px) {
       flex: 1 0 212px;

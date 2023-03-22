@@ -8,23 +8,26 @@ import LogoMobileDark from './assets/logoMobileDark.png';
 import LogoMobileWhite from './assets/logoMobileWhite.png';
 import {Menu} from "../menu";
 import {ThemeType} from "../../types/types";
-import {useBodyScrollLock} from "../../hook";
+import {useAppDispatch, useAppSelector, useBodyScrollLock} from "../../hook";
 import {Link} from "react-router-dom";
 import {ROUTS} from "../../constans/routs";
 import gsap from "gsap";
+import {setIsOpenBurgerAC, setThemeAC} from "../../../app/app-reduser";
 
-type HeaderPropsType = {
-    theme: ThemeType,
-    setTheme: (val: ThemeType)=> void
-}
-export const Header: FC<HeaderPropsType> = ({theme, setTheme}) => {
+
+export const Header = () => {
+    const dispatch = useAppDispatch()
+    const theme = useAppSelector(state => state.app.theme)
+    const isOpenBurger = useAppSelector(state => state.app.isOpenBurger)
+
     const [isBodyLocked, setBodyLocked] = useBodyScrollLock();
 
-    const [isOpenBurger, setIsOpenBurger] = useState<boolean>(false);
+    // const [isOpenBurger, setIsOpenBurger] = useState<boolean>(false);
 
     const onClickOpenBurger = () => {
         setBodyLocked()
-        setIsOpenBurger(!isOpenBurger)
+        dispatch(setIsOpenBurgerAC({isOpen: !isOpenBurger}))
+        // setIsOpenBurger(!isOpenBurger)
     }
     const onClickUpHandler = () => {
         window.scrollTo({
@@ -38,11 +41,13 @@ export const Header: FC<HeaderPropsType> = ({theme, setTheme}) => {
         if (isOpenBurger) {
             setBodyLocked()
         }
-        setIsOpenBurger(false)
+        dispatch(setIsOpenBurgerAC({isOpen: false}))
     }
 
     const toggleTheme = () => {
-        setTheme(theme === 'light' ? 'dark' : 'light');
+        if (theme === 'light') {
+            dispatch(setThemeAC({theme: 'dark'}))
+        } else dispatch(setThemeAC({theme: 'light'}))
     }
 
     useEffect(() => {
@@ -53,19 +58,19 @@ export const Header: FC<HeaderPropsType> = ({theme, setTheme}) => {
         let headerTint = gsap.utils.toArray('.header-tint')
         let itemMenu = gsap.utils.toArray('.about-sub-menu')
 
-        itemMenu.forEach((link:any, ind) => {
+        itemMenu.forEach((link: any, ind) => {
             link.addEventListener('mouseover', () => {
                 gsap.to(headerTint, {
-                    opacity:1,
+                    opacity: 1,
                     visibility: 'visible'
                 });
-            } )
+            })
             link.addEventListener('mouseout', () => {
                 gsap.to(headerTint, {
-                    opacity:0,
+                    opacity: 0,
                     visibility: 'hidden'
                 });
-            } )
+            })
         })
     }, []);
 
@@ -80,14 +85,12 @@ export const Header: FC<HeaderPropsType> = ({theme, setTheme}) => {
                             <ImgWrapMobile img={theme === 'light' ? LogoMobileWhite : LogoMobileDark}/>
                         </Link>
                         <Menu isOpenBurger={isOpenBurger}
-                              theme={theme}
                               onClick={toggleTheme}
                               onClickCloseBurger={onClickCloseBurger}
                         />
                         <Burger isOpenBurger={isOpenBurger} onClick={onClickOpenBurger}></Burger>
                     </HeaderContent>
                 </Container>
-
             </HeaderWrapper>
             <Tint className="header-tint"></Tint>
         </>

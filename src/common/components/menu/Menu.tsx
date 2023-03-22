@@ -5,27 +5,31 @@ import {Arrow} from "../header/assets";
 import {MenuItem, MenuList, MenuSubItem, NavigateMenu, SubMenu} from "./style";
 import {ThemeType} from "../../types/types";
 import {Switch} from '../switch';
+import {useAppSelector} from "../../hook";
 
 
 type MenuProps = {
     isOpenBurger: boolean,
-    theme: ThemeType,
+
     onClick: () => void,
     onClickCloseBurger: () => void
 
 }
-export const Menu: FC<MenuProps> = ({isOpenBurger, theme, onClick, onClickCloseBurger}) => {
+export const Menu: FC<MenuProps> = ({isOpenBurger, onClick, onClickCloseBurger}) => {
+    const theme = useAppSelector(state => state.app.theme)
+
+
 
     const submenuLinksAbout = [
-        {title: 'О НАШЕЙ КОМПАНИИ', to: ROUTS.WORK_IN_VEON},
-        {title: 'NDA', to: ROUTS.WORK_IN_VEON},
-        {title: 'ВАКАНСИИ', to: ROUTS.WORK_IN_VEON},
+        {title: 'О НАШЕЙ КОМПАНИИ', to: ROUTS.JOBS},
+        {title: 'NDA', to: ROUTS.JOBS},
+        {title: 'ВАКАНСИИ', to: ROUTS.JOBS},
     ]
     const submenuLinksServices = [
-        {title: 'Разработка сайтов', to: ROUTS.WORK_IN_VEON},
-        {title: 'Поддержка сайтов', to: ROUTS.WORK_IN_VEON},
-        {title: 'Разработка ПО', to: ROUTS.WORK_IN_VEON},
-        {title: 'UX/UI дизайн', to: ROUTS.WORK_IN_VEON},
+        {title: 'Разработка сайтов', to: ROUTS.JOBS},
+        {title: 'Поддержка сайтов', to: ROUTS.JOBS},
+        {title: 'Разработка ПО', to: ROUTS.JOBS},
+        {title: 'UX/UI дизайн', to: ROUTS.JOBS},
     ]
 
     return (
@@ -41,7 +45,7 @@ export const Menu: FC<MenuProps> = ({isOpenBurger, theme, onClick, onClickCloseB
                 <MenuItem className='about-link'><NavLink onClick={onClickCloseBurger} to={ROUTS.HOME}>О НАШЕЙ
                     КОМПАНИИ</NavLink></MenuItem>
                 <MenuItem>
-                    <NavLink onClick={onClickCloseBurger} to={ROUTS.WORK_IN_VEON}>КЕЙСЫ</NavLink>
+                    <NavLink onClick={onClickCloseBurger} to={ROUTS.JOBS}>КЕЙСЫ</NavLink>
                 </MenuItem>
                 <MenuItem className='about-sub-menu'>УСЛУГИ<Arrow/>
                     <SubMenu>
@@ -50,10 +54,10 @@ export const Menu: FC<MenuProps> = ({isOpenBurger, theme, onClick, onClickCloseB
                     </SubMenu>
                 </MenuItem>
                 <MenuItem className='about-link'>
-                    <NavLink onClick={onClickCloseBurger} to={ROUTS.WORK_IN_VEON}>Разработка сайтов</NavLink>
+                    <NavLink onClick={onClickCloseBurger} to={ROUTS.JOBS}>Разработка сайтов</NavLink>
                 </MenuItem>
-                <MenuItem><NavLink onClick={onClickCloseBurger} to={ROUTS.WORK_IN_VEON}>БОНУСЫ</NavLink></MenuItem>
-                <MenuItem onClick={onClickCloseBurger}><Link to={ROUTS.WORK_IN_VEON}>КОНТАКТЫ</Link></MenuItem>
+                <MenuItem><NavLink onClick={onClickCloseBurger} to={ROUTS.JOBS}>БОНУСЫ</NavLink></MenuItem>
+                <MenuItem onClick={onClickCloseBurger}><Link to={ROUTS.JOBS}>КОНТАКТЫ</Link></MenuItem>
                 <Switch theme={theme} onClick={onClick}/>
             </MenuList>
 

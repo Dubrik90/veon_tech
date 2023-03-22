@@ -1,2 +1,0 @@
-export {Work} from "./Work";
-

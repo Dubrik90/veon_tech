@@ -32,6 +32,13 @@ export default createGlobalStyle`
 
   body {
     line-height: 1;
+    margin: 0;
+    font-family: var(--family);
+    color: var(--colors-text-dark);
+    font-weight: var(--fw-regular);
+    background-color: var(--colors-bg);
+    font-size: var(--fs-md);
+    transition: all 0.3s;
   }
 
   input,
