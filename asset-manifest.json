@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/veon_tech/static/css/main.de72d59e.css",
-    "main.js": "/veon_tech/static/js/main.ad130b34.js",
+    "main.css": "/veon_tech/static/css/main.e8476e63.css",
+    "main.js": "/veon_tech/static/js/main.aa9dba62.js",
     "static/js/787.5fb054ca.chunk.js": "/veon_tech/static/js/787.5fb054ca.chunk.js",
     "static/media/logoLight.svg": "/veon_tech/static/media/logoLight.210c8e42e39ddc1b39b050125538f6de.svg",
     "static/media/logoDark.svg": "/veon_tech/static/media/logoDark.23e84bd6689370a922c109024b48c553.svg",
@@ -58,6 +58,7 @@
     "static/media/avatar.svg": "/veon_tech/static/media/avatar.f7d417a023633891ef19e1b1e3119ace.svg",
     "static/media/angular.svg": "/veon_tech/static/media/angular.7ccc9e1b507c21eea32804e04b3296a5.svg",
     "index.html": "/veon_tech/index.html",
+    "static/media/blank.svg": "/veon_tech/static/media/blank.3524875a57e72e53f86a68980da2310a.svg",
     "static/media/arrowNext.svg": "/veon_tech/static/media/arrowNext.5be1146f572368120b45fb1d7e25ca99.svg",
     "static/media/arrowPrev.svg": "/veon_tech/static/media/arrowPrev.6cda8e0bfa5b9e243dc124d65408fef9.svg",
     "static/media/Arrow.svg": "/veon_tech/static/media/Arrow.606be97968130e4b38a0cdfba48ee4aa.svg",
@@ -65,12 +66,12 @@
     "static/media/magento.svg": "/veon_tech/static/media/magento.0937555253fc0d35b8f3fb0d8587b5bb.svg",
     "static/media/npm.svg": "/veon_tech/static/media/npm.3105854e2a9d8a2e5167e7fac4f54901.svg",
     "static/media/vuejs.svg": "/veon_tech/static/media/vuejs.a9ef3938d4960ac238e9c64d78783931.svg",
-    "main.de72d59e.css.map": "/veon_tech/static/css/main.de72d59e.css.map",
-    "main.ad130b34.js.map": "/veon_tech/static/js/main.ad130b34.js.map",
+    "main.e8476e63.css.map": "/veon_tech/static/css/main.e8476e63.css.map",
+    "main.aa9dba62.js.map": "/veon_tech/static/js/main.aa9dba62.js.map",
     "787.5fb054ca.chunk.js.map": "/veon_tech/static/js/787.5fb054ca.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.de72d59e.css",
-    "static/js/main.ad130b34.js"
+    "static/css/main.e8476e63.css",
+    "static/js/main.aa9dba62.js"
   ]
 }
