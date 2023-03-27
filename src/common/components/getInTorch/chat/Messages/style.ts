@@ -33,7 +33,7 @@ export const Massage = styled.p`
 `
 
 export const Time = styled.span`
-  ${fontSize(9)};
+  font-size: 9px;
   color: var(--color-dark);
   opacity: 0.8;
 `

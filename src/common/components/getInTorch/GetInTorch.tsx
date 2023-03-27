@@ -41,10 +41,8 @@ export const GetInTorch = () => {
         <>
             <GetInTorchWrapper view={view} className='torch' ref={circleRef}>
                 <MassageIcon/>
-                {/*<AvatarWrap img={Avatar}/>*/}
                 <Button onClick={openModal}>
                     <Title>Отправте нам сообщение</Title>
-                    {/*<SubTitle>Александра Иванцова, sales-manager</SubTitle>*/}
                 </Button>
             </GetInTorchWrapper>
             <Chat view={view} closeModal={closeModal}/>

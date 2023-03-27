@@ -1,8 +1,8 @@
 import React from 'react';
-import {ButtonInputMassage, ChatContent, ChatFooter, ChatHeader, ChatWrapper, Close, Input, InputBlock} from "./style";
-import {AvatarWrap, Button, SubTitle, Title} from "../style";
+import {ChatContent, ChatFooter, ChatHeader, ChatWrapper, CloseIcon, Input, InputBlock} from "./style";
+import {Button, SubTitle, Title} from "../style";
 import {Messages} from "./Messages";
-import {Avatar, MassageIcon, Send} from "../assets";
+import {Avatar, Send} from "../assets";
 
 type ChatType = {
     closeModal: (e: any) => void
@@ -11,11 +11,10 @@ type ChatType = {
 export const Chat: React.FC<ChatType> = ({closeModal, view,}) => {
 
     return (
-        <ChatWrapper view={view}> <Close onClick={closeModal}>x</Close>
+        <ChatWrapper view={view}>
+            <CloseIcon onClick={closeModal}/>
             <ChatHeader>
-                {/*<MassageIcon/>*/}
                 <Avatar/>
-                {/*<AvatarWrap img={Avatar}/>*/}
                 <Button>
                     <Title>Артем</Title>
                     <SubTitle>Customer support</SubTitle>
@@ -27,15 +26,8 @@ export const Chat: React.FC<ChatType> = ({closeModal, view,}) => {
             <InputBlock>
                 <Input placeholder='Введите сообщение'></Input>
                 <Send/>
-                {/*<ButtonInputMassage type='button'></ButtonInputMassage>*/}
             </InputBlock>
-            <ChatFooter>
-
-            </ChatFooter>
-
-            {/*<ContentFooter>*/}
-            {/*    */}
-            {/*</ContentFooter>*/}
+            <ChatFooter></ChatFooter>
         </ChatWrapper>
     );
 };
