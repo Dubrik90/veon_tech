@@ -1,0 +1,1 @@
+export { ReactComponent as Lock } from './lock.svg';
