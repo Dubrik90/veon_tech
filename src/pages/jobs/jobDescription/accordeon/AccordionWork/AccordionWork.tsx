@@ -5,6 +5,7 @@ import {ProfDataType} from "../../data";
 import {LinkItem, List, Title, TitleWork} from "./style";
 import {AccordionDetails} from "@mui/material";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import {ButtonJob} from "../style";
 
 
 type AccordionWorkType = {
@@ -52,7 +53,9 @@ export const AccordionWork: React.FC<AccordionWorkType> = ({data}) => {
                 <List>
                     {data.terms.map((r, index) => <LinkItem key={index}>{r}</LinkItem>)}
                 </List>
+
             </AccordionDetails>
+            <ButtonJob>Откликнуться</ButtonJob>
         </Accordion>
     );
 };

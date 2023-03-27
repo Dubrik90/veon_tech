@@ -9,9 +9,6 @@ export const Jobs = () => {
         <JobsWrapper>
             <JobHeader/>
             <JobDescription/>
-            <Container>
-                <ButtonJobMobile>Откликнуться</ButtonJobMobile>
-            </Container>
         </JobsWrapper>
     );
 };

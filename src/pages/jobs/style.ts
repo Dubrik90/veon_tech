@@ -12,14 +12,14 @@ export const JobsWrapper = styled.div`
 `
 export const ButtonJobMobile = styled(Button)`
   display: none;
-  padding: 15px 20px;
-  @media (max-width: 632px) {
-    display: flex;
-    bottom: 0;
-    z-index: 5;
-    padding: 15px 80px;
-    margin-bottom: 20px;
-
-  }
+  //padding: 15px 20px;
+  //@media (max-width: 632px) {
+  //  display: flex;
+  //  bottom: 0;
+  //  z-index: 5;
+  //  padding: 15px 80px;
+  //  margin-bottom: 20px;
+  //
+  //}
 `
 

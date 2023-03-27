@@ -5,7 +5,7 @@ export const JobHeaderWrapper = styled.div`
   padding-bottom: 85px;
   background: var(--colors-bg-grey);
   @media (max-width: 632px) {
-    padding-top: 100px;
+   // padding-top: 100px;
     padding-bottom: 50px;
   }
   @media (max-width: 614px) {

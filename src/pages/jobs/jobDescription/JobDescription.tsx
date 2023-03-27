@@ -64,9 +64,7 @@ export const JobDescription = () => {
                             </CardsBlock>
                         </AboutQuality>
                         <Accordeon/>
-
                     </DescriptionContent>
-
                     <DescriptionBar>
                         <BarLinks>
                             {linksArrayData.map((el, index) => <Link key={index} to={el.to}>{el.title}</Link>)}
@@ -87,7 +85,6 @@ export const JobDescription = () => {
                             </EchoTextBlock>
                         </EchoBlock>
                     </DescriptionBar>
-
                 </DescriptionBlock>
             </ContainerJob>
         </JobDescriptionWrapper>

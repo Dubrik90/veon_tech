@@ -8,7 +8,7 @@ export const Accordeon = () => {
      return (
         <AccordeonWrapper>
             {professionsData.map((data,index)=><AccordionWork key={index} data={data}/>)}
-            <ButtonJob>Откликнуться</ButtonJob>
+            {/*<ButtonJob>Откликнуться</ButtonJob>*/}
         </AccordeonWrapper>
     );
 };

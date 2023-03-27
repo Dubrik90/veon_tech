@@ -26,6 +26,7 @@ export const DescriptionBlock = styled.div`
   justify-content: space-between;
   @media (max-width: 632px) {
     flex-direction: column;
+    row-gap: 20px;
   }
 
 `
@@ -84,7 +85,7 @@ export const BarLinksMobile = styled(BarLinks)`
         font-size: 12px;
       }
       @media (max-width: 366px) {
-        padding: 5px 10px;
+        padding: 5px 8px;
         
       }
       
