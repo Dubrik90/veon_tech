@@ -86,11 +86,8 @@ export const BarLinksMobile = styled(BarLinks)`
       }
       @media (max-width: 366px) {
         padding: 5px 8px;
-        
       }
-      
     }
-    
   }
 `
 
@@ -103,7 +100,7 @@ export const DescriptionBar = styled.div`
     max-width: 100%;
     row-gap: 30px;
   }
-  
+
 
 `
 export const AboutBlock = styled.div`
@@ -217,7 +214,7 @@ export const EchoBlock = styled.div`
   row-gap: 12px;
   padding: 15px 24px;
   background: var(--color-grey-light);
-  
+
 
 `
 export const EchoTitle = styled.h4`
@@ -225,7 +222,7 @@ export const EchoTitle = styled.h4`
   font-size: 20px;
   line-height: 172%;
   color: var(--color-dark);
- 
+
 `
 export const EchoText = styled.h4`
   display: flex;

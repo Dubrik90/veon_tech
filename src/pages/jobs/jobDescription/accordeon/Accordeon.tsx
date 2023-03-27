@@ -6,9 +6,8 @@ import {AccordionWork} from "./AccordionWork/";
 export const Accordeon = () => {
 
      return (
-        <AccordeonWrapper>
+        <AccordeonWrapper >
             {professionsData.map((data,index)=><AccordionWork key={index} data={data}/>)}
-            {/*<ButtonJob>Откликнуться</ButtonJob>*/}
         </AccordeonWrapper>
     );
 };

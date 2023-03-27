@@ -20,18 +20,7 @@ export const AccordeonWrapper = styled.div`
     align-items: flex-start;
   }
 
-
-  .css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root:hover{
-    background-color: var(--colors-text-green);
-    color: var(--color-grey-light);
-    transition: all 0.3s;
-    svg {
-        fill: var(--color-grey-light);
-      
-    }
-  }
-  
-  .css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+  .AccordionWrapper {
     background-color: var(--colors-bg);
     color: var(--colors-text-dark);
     box-shadow: none;
@@ -40,12 +29,23 @@ export const AccordeonWrapper = styled.div`
       display: none;
     }
 
-    .css-i4bv87-MuiSvgIcon-root {
+    svg {
       fill: var(--colors-text-dark);
     }
   }
 
-  .css-pwcg7p-MuiCollapse-root {
+  .AccordionHeader:hover {
+    background-color: var(--colors-text-green);
+    color: var(--color-grey-light);
+    transition: all 0.3s;
+
+    svg {
+      fill: var(--color-grey-light);
+
+    }
+  }
+
+  .AccordionDetails {
     @media (max-width: 988px) {
       margin-right: -250px;
     }

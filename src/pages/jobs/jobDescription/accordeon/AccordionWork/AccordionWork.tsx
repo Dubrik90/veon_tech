@@ -21,14 +21,15 @@ export const AccordionWork: React.FC<AccordionWorkType> = ({data}) => {
     };
 
     return (
-        <Accordion  expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+        <Accordion className='AccordionWrapper' expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
             <AccordionSummary
                 expandIcon={<ExpandMoreIcon/>}
                 aria-controls="panel1bh-content"
+                className='AccordionHeader'
                 id="panel1bh-header">
                 <TitleWork>{data.title}</TitleWork>
             </AccordionSummary>
-            <AccordionDetails>
+            <AccordionDetails className='AccordionDetails'>
                 <Title> Описание вакансии:</Title>
                 <List>
                     {data.descVacancy.map((r, index) => <LinkItem key={index}>{r}</LinkItem>)}
