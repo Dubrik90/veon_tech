@@ -3,9 +3,7 @@ import {LayerWrapper} from "./style";
 
 export const Layer = () => {
     return (
-        <LayerWrapper>
-
-        </LayerWrapper>
+        <LayerWrapper></LayerWrapper>
     );
 };
 

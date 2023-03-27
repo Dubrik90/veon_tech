@@ -102,7 +102,7 @@ export const SubMenu = styled.ul`
     color: var(--colors-text-dark);
     position: relative;
     padding-left: 30px;
-    display: inline-flex;
+   // display: inline-flex;
 
     :before {
       content: '';
@@ -127,7 +127,7 @@ export const MenuSubItem = styled.li`
 `
 export const MenuItem = styled.li`
   cursor: context-menu;
-  display: inline-flex;
+  //display: inline-flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;

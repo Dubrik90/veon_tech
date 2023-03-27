@@ -7,7 +7,10 @@ import {Container} from "../../common/style/Container";
 export const Jobs = () => {
     return (
         <JobsWrapper>
-            <JobHeader/>
+            <JobHeader title={'Работа'}
+                       span={'Veon-Tech'}
+                       breadcrumbsTitle={'Работа в Veon-Tech'}
+            />
             <JobDescription/>
         </JobsWrapper>
     );

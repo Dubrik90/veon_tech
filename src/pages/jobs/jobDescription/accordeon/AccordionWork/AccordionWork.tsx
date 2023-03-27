@@ -3,7 +3,7 @@ import AccordionSummary from '@mui/material/AccordionSummary/AccordionSummary';
 import React from 'react';
 import {ProfDataType} from "../../data";
 import {LinkItem, List, Title, TitleWork} from "./style";
-import {AccordionDetails} from "@mui/material";
+import AccordionDetails from "@mui/material/AccordionDetails/AccordionDetails";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import {ButtonJob} from "../style";
 

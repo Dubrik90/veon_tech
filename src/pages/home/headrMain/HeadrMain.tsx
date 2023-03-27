@@ -10,14 +10,12 @@ export const HeadrMain = () => {
     const dispatch = useAppDispatch()
     const isOpenForm = useAppSelector(state => state.app.isOpenForm)
     const [isBodyLocked, setBodyLocked] = useBodyScrollLock();
-    console.log(isBodyLocked)
 
     const headerAnimate = useRef(null)
     const onClickFormModalHandler = () => {
         setBodyLocked()
         dispatch(setIsOpenFormAC({isOpen: !isOpenForm}))
     }
-
 
     useEffect(() => {
         // const el = headerAnimate.current

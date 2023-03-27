@@ -3,7 +3,6 @@ import {Link, NavLink} from "react-router-dom";
 import {ROUTS} from "../../constans/routs";
 import {Arrow} from "../header/assets";
 import {MenuItem, MenuList, MenuSubItem, NavigateMenu, SubMenu} from "./style";
-import {ThemeType} from "../../types/types";
 import {Switch} from '../switch';
 import {useAppSelector} from "../../hook";
 
@@ -22,7 +21,7 @@ export const Menu: FC<MenuProps> = ({isOpenBurger, onClick, onClickCloseBurger})
 
     const submenuLinksAbout = [
         {title: 'О НАШЕЙ КОМПАНИИ', to: ROUTS.JOBS},
-        {title: 'NDA', to: ROUTS.JOBS},
+        {title: 'NDA', to: ROUTS.NDA},
         {title: 'ВАКАНСИИ', to: ROUTS.JOBS},
     ]
     const submenuLinksServices = [
@@ -42,10 +41,10 @@ export const Menu: FC<MenuProps> = ({isOpenBurger, onClick, onClickCloseBurger})
                             to={el.to}>{el.title}</Link></MenuSubItem>)}
                     </SubMenu>
                 </MenuItem>
-                <MenuItem className='about-link'><NavLink onClick={onClickCloseBurger} to={ROUTS.HOME}>О НАШЕЙ
+                <MenuItem className='about-link'><NavLink onClick={onClickCloseBurger} to={'/'}>О НАШЕЙ
                     КОМПАНИИ</NavLink></MenuItem>
                 <MenuItem>
-                    <NavLink onClick={onClickCloseBurger} to={ROUTS.JOBS}>КЕЙСЫ</NavLink>
+                    <NavLink onClick={onClickCloseBurger} to={'/qr'}>КЕЙСЫ</NavLink>
                 </MenuItem>
                 <MenuItem className='about-sub-menu'>УСЛУГИ<Arrow/>
                     <SubMenu>
@@ -54,10 +53,10 @@ export const Menu: FC<MenuProps> = ({isOpenBurger, onClick, onClickCloseBurger})
                     </SubMenu>
                 </MenuItem>
                 <MenuItem className='about-link'>
-                    <NavLink onClick={onClickCloseBurger} to={ROUTS.JOBS}>Разработка сайтов</NavLink>
+                    <NavLink onClick={onClickCloseBurger} to={'#'}>Разработка сайтов</NavLink>
                 </MenuItem>
-                <MenuItem><NavLink onClick={onClickCloseBurger} to={ROUTS.JOBS}>БОНУСЫ</NavLink></MenuItem>
-                <MenuItem onClick={onClickCloseBurger}><Link to={ROUTS.JOBS}>КОНТАКТЫ</Link></MenuItem>
+                <MenuItem><NavLink onClick={onClickCloseBurger} to={'/asq'}>БОНУСЫ</NavLink></MenuItem>
+                <MenuItem onClick={onClickCloseBurger}><NavLink to={ROUTS.JOBS}>КОНТАКТЫ</NavLink></MenuItem>
                 <Switch theme={theme} onClick={onClick}/>
             </MenuList>
 

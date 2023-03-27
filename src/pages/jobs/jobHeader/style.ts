@@ -1,9 +1,17 @@
 import styled from "styled-components";
 
-export const JobHeaderWrapper = styled.div`
+type JobHeaderWrapperProps = {
+    img?: string
+}
+
+export const JobHeaderWrapper = styled.div<JobHeaderWrapperProps>`
+  background-image: url(${props => props.img});
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding-top: 150px;
   padding-bottom: 85px;
-  background: var(--colors-bg-grey);
+  background-color: var(--colors-bg-grey);
   @media (max-width: 632px) {
    // padding-top: 100px;
     padding-bottom: 50px;
@@ -28,7 +36,7 @@ export const Title = styled.h2`
   margin-bottom: 20px;
   @media (max-width: 632px) {
     order: 1;
-    font-size: 60px;
+   // font-size: 60px;
    // max-width: 300px;
     
     span {
@@ -36,7 +44,7 @@ export const Title = styled.h2`
     }
   }
   @media (max-width: 614px) {
-    font-size: 50px;
+   // font-size: 50px;
   }
   @media (max-width: 526px) {
     font-size: 35px;

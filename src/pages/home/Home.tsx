@@ -14,7 +14,7 @@ export const Home = () => {
 
     return (
         <>
-            <HeadrMain />
+            <HeadrMain/>
             <DescriptionWeb/>
             <Technologies/>
             <Portfolio/>
