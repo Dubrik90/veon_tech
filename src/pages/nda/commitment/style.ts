@@ -22,7 +22,6 @@ export const CommitmentBlock = styled.div`
     row-gap: 10px;
   }
 `
-
 export const Content = styled.div`
   display: flex;
   flex-direction: column;

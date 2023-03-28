@@ -30,9 +30,17 @@ export const TitleHeader = styled.div`
   line-height: 1.3;
   color: var(--colors-text-dark);
   padding-top: 75px;
+
   @media (max-width: 1439px) {
     margin-bottom: 20px;
     padding-top: 25px;
+  }
+  @media (max-width: 528px) {
+    font-size: 30px;
+    padding-top: 0;
+  }
+  @media (max-width: 407px) {
+    font-size: 30px;
   }
 
 `

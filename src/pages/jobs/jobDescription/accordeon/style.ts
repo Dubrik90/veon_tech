@@ -25,10 +25,6 @@ export const AccordeonWrapper = styled.div`
     color: var(--colors-text-dark);
     box-shadow: none;
 
-    :before {
-      display: none;
-    }
-
     svg {
       fill: var(--colors-text-dark);
     }
