@@ -12,7 +12,6 @@ export const Nda = () => {
         <NdaWrapper>
             <JobHeader title={'НДА (Соглашение о неразглашении)'}
                        breadcrumbsTitle={'НДА (Соглашение о неразглашении)'}
-                       img={Bg}
             />
             <Commitment/>
             <Content/>
