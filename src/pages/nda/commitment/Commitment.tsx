@@ -19,7 +19,6 @@ export const Commitment = () => {
                     <ImageBlock>
                         <Img src={Treaty}/>
                     </ImageBlock>
-
                 </CommitmentBlock>
             </Container>
         </CommitmentWrapper>

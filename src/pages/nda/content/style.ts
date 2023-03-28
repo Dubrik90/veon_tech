@@ -1,13 +1,9 @@
 import styled from "styled-components";
-import LockIcon from '@mui/icons-material/Lock';
 
 export const ContentWrapper = styled.div`
   background-color: var(--color-bg-green-light);
   @media (max-width: 1260px) {
     padding: 40px 0;
-  }
-  @media (max-width: 424px) {
-   // margin: 0 -15px;
   }
 
   .LockIcon {
@@ -28,9 +24,20 @@ export const ContentWrapper = styled.div`
     }
   }
 `
+export const TitleHeader = styled.div`
+  font-weight: var(--fw-bold);
+  font-size: 40px;
+  line-height: 1.3;
+  color: var(--colors-text-dark);
+  padding-top: 75px;
+  @media (max-width: 1439px) {
+    margin-bottom: 20px;
+    padding-top: 25px;
+  }
 
+`
 export const ContentBlock = styled.div`
-  height: 900px;
+  height: 700px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,7 +89,7 @@ export const Title = styled.div`
   @media (max-width: 424px) {
     font-size: 16px;
   }
-  
+
 `
 export const Text = styled.div`
   font-size: 17px;
@@ -114,7 +121,7 @@ export const Block = styled.div`
   @media (max-width: 768px) {
     padding: 15px;
   }
-  
+
 
   span {
     position: relative;
@@ -134,18 +141,18 @@ export const Block = styled.div`
   }
 `
 export const Block1 = styled(Block)`
-  top: 16%;
+  top: 10%;
   left: 19%;
 
   @media (max-width: 1760px) {
-    top: 23%;
+    top: 13%;
   }
   @media (max-width: 1715px) {
     left: 15%;
   }
   @media (max-width: 1439px) {
     left: 10%;
-    top: 25%;
+    top: 18%;
   }
 
   span {
@@ -158,18 +165,18 @@ export const Block1 = styled(Block)`
 
 `
 export const Block2 = styled(Block)`
-  top: 16%;
+  top: 10%;
   right: 19%;
 
   @media (max-width: 1760px) {
-    top: 23%;
+    top: 13%;
     right: 19%;
   }
   @media (max-width: 1715px) {
     right: 15%;
   }
   @media (max-width: 1439px) {
-    top: 25%;
+    top: 18%;
     right: 10%;
   }
 
@@ -184,18 +191,18 @@ export const Block2 = styled(Block)`
 
 `
 export const Block3 = styled(Block)`
-  bottom: 16%;
+  bottom: 10%;
   right: 19%;
 
   @media (max-width: 1760px) {
-    bottom: 20%;
+    bottom: 13%;
     right: 19%;
   }
   @media (max-width: 1715px) {
     right: 15%;
   }
   @media (max-width: 1439px) {
-    bottom: 22%;
+    bottom: 15%;
     right: 10%;
   }
 
@@ -208,18 +215,18 @@ export const Block3 = styled(Block)`
   }
 `
 export const Block4 = styled(Block)`
-  bottom: 16%;
+  bottom: 10%;
   left: 19%;
 
   @media (max-width: 1760px) {
-    bottom: 20%;
+    bottom: 13%;
     left: 19%;
   }
   @media (max-width: 1715px) {
     left: 15%;
   }
   @media (max-width: 1439px) {
-    bottom: 22%;
+    bottom: 15%;
     left: 10%;
   }
 

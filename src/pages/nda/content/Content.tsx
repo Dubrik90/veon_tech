@@ -1,5 +1,5 @@
 import React from 'react';
-import {Block1, Block2, Block3, Block4, ContentBlock, ContentWrapper, Text, Title} from './style';
+import {Block1, Block2, Block3, Block4, ContentBlock, ContentWrapper, Text, Title, TitleHeader} from './style';
 import {Container} from '../../../common/style/Container';
 import LockIcon from '@mui/icons-material/Lock';
 
@@ -29,6 +29,7 @@ export const Content = () => {
     return (
         <ContentWrapper>
             <Container>
+                <TitleHeader>Вы можете нам доверять</TitleHeader>
                 <ContentBlock>
                     <LockIcon className={'LockIcon'}/>
                     {/*<Lock className='LockIc'/>*/}
