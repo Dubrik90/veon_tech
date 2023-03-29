@@ -1,12 +1,18 @@
 import React from 'react';
 import {HelpContent, HelpWrapper, Button, TitleBlock, Title, Text, ButtonBlock, ImageWrapper, Img, ContactBlock, PhoneLink, Email} from './style';
 import {Container} from '../../../common/style/Container';
-import {useAppSelector} from "../../../common/hook";
+import {useAppDispatch, useAppSelector} from "../../../common/hook";
 import Logo from '../assets/logo.png'
 import LogoLight from '../assets/logoLight.png'
+import {setIsModalWindowOpenAC} from "../../../app/app-reduser";
 
 export const Help = () => {
     const theme = useAppSelector(state => state.app.theme)
+    const dispatch = useAppDispatch()
+
+    const onClickOpenModalHandler = () => {
+        dispatch(setIsModalWindowOpenAC({isOpen: true}))
+    }
 
     return (
         <HelpWrapper>
@@ -25,7 +31,7 @@ export const Help = () => {
                         <ImageWrapper>
                             <Img src={theme === 'light' ? LogoLight : Logo}/>
                         </ImageWrapper>
-                            <Button>Получить консультацию</Button>
+                            <Button onClick={onClickOpenModalHandler}>Получить консультацию</Button>
                     </ButtonBlock>
                     <ContactBlock>
                         <PhoneLink href="tel:+79955775163">+7(995)577-51-63</PhoneLink>
