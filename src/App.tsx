@@ -6,6 +6,8 @@ import {Home} from './pages/home';
 import {Layout} from "./common/components/layout/Layout";
 import {Jobs} from "./pages/jobs";
 import {Nda} from "./pages/nda";
+import {Сases} from "./pages/cases";
+
 
 
 function App() {
@@ -17,6 +19,7 @@ function App() {
                     <Route path={ROUTS.HOME} element={<Home/>}/>
                     <Route path={ROUTS.JOBS} element={<Jobs/>}/>
                     <Route path={ROUTS.NDA} element={<Nda/>}/>
+                    <Route path={ROUTS.CASES} element={<Сases/>}/>
                 </Route>
             </Routes>
         </HashRouter>
