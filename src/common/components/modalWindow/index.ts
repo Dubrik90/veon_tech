@@ -1,1 +1,1 @@
-export {ModalWindow} from './ModalWindow'
+export {ModalWindoww} from './ModalWindow';

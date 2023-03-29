@@ -84,9 +84,9 @@ export const CustomInput = styled.input`
   border: 1px solid #A6A6A6;
   border-radius: 5px;
   font-size: 14px;
-
+  
   ::placeholder {
-
+    
   }
 
   &:focus {
@@ -102,21 +102,6 @@ export const CustomInput = styled.input`
     color: var(--black40);
   }
 `
-export const CustomInputFile = styled.input`
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-  display: block;
-  width: 0;
-  height: 0;
-
-`
-export const InputFileText = styled.span`
-  display: block;
-  padding-top: 10px;
-
-`
-
 export const Errors = styled.div`
   position: absolute;
   color: red;
@@ -142,6 +127,6 @@ export const Button = styled.button`
   color: #FFFFFF;
   padding: 13px 15px;
   width: 100%;
-
-
+ 
+  
 `

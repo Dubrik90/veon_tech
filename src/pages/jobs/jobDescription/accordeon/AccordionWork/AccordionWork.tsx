@@ -6,6 +6,8 @@ import {LinkItem, List, Title, TitleWork} from "./style";
 import AccordionDetails from "@mui/material/AccordionDetails/AccordionDetails";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import {ButtonJob} from "../style";
+import {useAppDispatch, useAppSelector} from "../../../../../common/hook";
+import {setIsModalWindowOpenAC} from "../../../../../app/app-reduser";
 
 
 type AccordionWorkType = {
@@ -13,6 +15,11 @@ type AccordionWorkType = {
 }
 
 export const AccordionWork: React.FC<AccordionWorkType> = ({data}) => {
+    const dispatch = useAppDispatch()
+
+    const onClickOpenModalHandler = () => {
+        dispatch(setIsModalWindowOpenAC({isOpen: true}))
+    }
 
     const [expanded, setExpanded] = React.useState<string | false>(false);
 
@@ -56,7 +63,7 @@ export const AccordionWork: React.FC<AccordionWorkType> = ({data}) => {
                 </List>
 
             </AccordionDetails>
-            <ButtonJob>Откликнуться</ButtonJob>
+            <ButtonJob onClick={onClickOpenModalHandler}>Откликнуться</ButtonJob>
         </Accordion>
     );
 };

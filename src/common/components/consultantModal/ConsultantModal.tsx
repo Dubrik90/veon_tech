@@ -1,50 +1,32 @@
-import React from "react";
-import {useFormik} from "formik";
-
-
+import React from 'react';
 import {
     Button,
     CustomInput,
-    CustomInputFile,
     Errors,
     FormWrapper,
-    InputBlock, InputFileText,
+    InputBlock,
     Label,
     ModalWindowWrapper,
     RegisterWrapper,
     SubText,
     Title
 } from "./style";
+import {useFormik} from "formik";
 import {Clouse} from "./assets";
 import {useAppDispatch, useAppSelector} from "../../hook";
-import {setIsModalWindowOpenAC} from "../../../app/app-reduser";
-
+import {setIsConsultantModalOpenAC} from "../../../app/app-reduser";
 
 type FormikErrorType = {
     name?: string,
-    phone?: string,
-    file?: null
+    phone?: string
 }
 
-
-export const ModalWindoww = () => {
-
-
+export const ConsultantModal = () => {
     const dispatch = useAppDispatch()
-    const isModalWindowOpen = useAppSelector(state => state.app.isModalWindowOpen)
-    //
-    const onClickOpenModalHandler = () => {
-        dispatch(setIsModalWindowOpenAC({isOpen: false}))
-    }
+    const isConsultantModalOpen = useAppSelector(state => state.app.isConsultantModalOpen)
 
-    const onChangeFileHandler = (e: any) => {
-        console.log(e)
-        if (e.currentTarget.files) {
-            formik.setFieldValue(
-                "file",
-                e.currentTarget.files[0]
-            );
-        }
+    const onClickOpenModalHandler = () => {
+        dispatch(setIsConsultantModalOpenAC({isOpen: false}))
     }
 
 
@@ -52,7 +34,6 @@ export const ModalWindoww = () => {
         initialValues: {
             name: '',
             phone: '',
-            file: ''
         },
 
         validate: (values) => {
@@ -66,7 +47,6 @@ export const ModalWindoww = () => {
                 errors.phone = 'укажите ваш телефон'
             }
 
-
             return errors
         },
         onSubmit: values => {
@@ -75,7 +55,7 @@ export const ModalWindoww = () => {
     })
 
     return (
-        <ModalWindowWrapper openModal={isModalWindowOpen}>
+        <ModalWindowWrapper openModal={isConsultantModalOpen}>
             <RegisterWrapper>
                 <Title>Заявка на обратный звонок</Title>
                 <Clouse onClick={onClickOpenModalHandler}/>
@@ -97,16 +77,6 @@ export const ModalWindoww = () => {
                                          onChange={formik.handleChange}/>
                             {formik.touched.phone && formik.errors.phone &&
                                 <Errors>{formik.errors.phone}</Errors>}
-                        </Label>
-                        <Label>
-                            <CustomInputFile type='file'
-                                             {...formik.getFieldProps('file')}
-                                // onChange={(e)=>onChangeFileHandler(e)}
-                            />
-                            <span>Прикрепите CV</span>
-                            <InputFileText>{formik.values.file}</InputFileText>
-                            {formik.touched.file && formik.errors.file &&
-                                <Errors>{formik.errors.file}</Errors>}
                         </Label>
                     </InputBlock>
                     <SubText>

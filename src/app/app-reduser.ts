@@ -4,8 +4,9 @@ const initialState: InitialStateStateType = {
     theme: 'light',
     isOpenBurger: false,
     isOpenForm: false,
-
+    isModalWindowOpen: false,
     isMenuOpen: false,
+    isConsultantModalOpen: false,
 
     status: 'loading',
     error: null
@@ -25,6 +26,13 @@ const slice = createSlice({
         setIsOpenFormAC(state, action: PayloadAction<{ isOpen: boolean }>) {
             state.isOpenForm = action.payload.isOpen
         },
+        setIsModalWindowOpenAC(state, action: PayloadAction<{ isOpen: boolean }>) {
+            state.isModalWindowOpen = action.payload.isOpen
+        },
+        setIsConsultantModalOpenAC(state, action: PayloadAction<{ isOpen: boolean }>) {
+            state.isConsultantModalOpen = action.payload.isOpen
+        },
+
 
         setIsMenuOpenAC(state, action: PayloadAction<{ value: boolean }>) {
             return {...state, isMenuOpen: action.payload.value}
@@ -44,7 +52,10 @@ type InitialStateStateType = {
     isOpenForm: boolean,
     status: RequestStatusType,
     error: string | null,
-    theme: ThemeType
+    theme: ThemeType,
+    isModalWindowOpen: boolean,
+    isConsultantModalOpen: boolean
+
 
 }
 export type RequestStatusType = 'idle' | 'loading' | 'error'
@@ -52,4 +63,13 @@ export type ThemeType = 'light' | 'dark'
 
 
 export const appReducer = slice.reducer
-export const {setThemeAC, setIsOpenFormAC, setIsMenuOpenAC, setIsOpenBurgerAC, setAppStatusAC, setAppErrorAC} = slice.actions
+export const {
+    setThemeAC,
+    setIsOpenFormAC,
+    setIsModalWindowOpenAC,
+    setIsConsultantModalOpenAC,
+    setIsMenuOpenAC,
+    setIsOpenBurgerAC,
+    setAppStatusAC,
+    setAppErrorAC
+} = slice.actions
