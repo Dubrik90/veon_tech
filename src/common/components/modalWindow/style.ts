@@ -6,10 +6,8 @@ type ModalWindowWrapperProps = {
 
 export const ModalWindowWrapper = styled.div<ModalWindowWrapperProps>`
   position: fixed;
-  top: 50%;
- // top: ${({openModal}) => openModal ? '0' : '-100%'};
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -23,9 +21,6 @@ export const ModalWindowWrapper = styled.div<ModalWindowWrapperProps>`
   transition: all 0.3s;
   opacity: 1;
   visibility: visible;
- // opacity: ${({openModal}) => openModal ? '1' : '0'};
- // scale: ${({openModal}) => openModal ? '1' : '0'};
- // visibility: ${({openModal}) => openModal ? 'visible' : 'hidden'};
 `
 export const RegisterWrapper = styled.div`
   width: 420px;
@@ -89,9 +84,9 @@ export const CustomInput = styled.input`
   border: 1px solid #A6A6A6;
   border-radius: 5px;
   font-size: 14px;
-  
+
   ::placeholder {
-    
+
   }
 
   &:focus {
@@ -117,7 +112,9 @@ export const CustomInputFile = styled.input`
 
 `
 export const InputFileText = styled.span`
-    
+  display: block;
+  padding-top: 10px;
+
 `
 
 export const Errors = styled.div`
@@ -145,6 +142,6 @@ export const Button = styled.button`
   color: #FFFFFF;
   padding: 13px 15px;
   width: 100%;
- 
-  
+
+
 `
