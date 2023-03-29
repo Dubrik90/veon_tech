@@ -29,6 +29,9 @@ export const RegisterWrapper = styled.div`
   background-color: #fff;
   position: relative;
   transition: scale 0.3s;
+  @media (max-width: 425px) {
+    width: 100%;
+  }
 
   svg {
     position: absolute;
