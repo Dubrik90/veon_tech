@@ -31,7 +31,7 @@ export const Help = () => {
                         <ImageWrapper>
                             <Img src={theme === 'light' ? LogoLight : Logo}/>
                         </ImageWrapper>
-                            <Button onClick={onClickOpenModalHandler}>Получить консультацию</Button>
+                            <Button onClick={onClickOpenModalHandler}>Получить коонсультацию</Button>
                     </ButtonBlock>
                     <ContactBlock>
                         <PhoneLink href="tel:+79955775163">+7(995)577-51-63</PhoneLink>
