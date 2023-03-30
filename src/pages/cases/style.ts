@@ -4,3 +4,9 @@ export const СasesWrapper = styled.div`
 
 
 `
+export const ContentBclock = styled.div`
+
+
+`
+
+

@@ -29,7 +29,6 @@ export const ConsultantModal = () => {
         dispatch(setIsConsultantModalOpenAC({isOpen: false}))
     }
 
-
     const formik = useFormik({
         initialValues: {
             name: '',

@@ -1,12 +1,19 @@
-import React, {useState} from 'react';
+import React, {FC, useState} from 'react';
 import {FilterBlockWrapper, FilterMenuList, MenuItem} from "./style";
 import {Container} from "../../../common/style/Container";
 import {FilterCaseType, FilterLinksType} from "../../../common/types/types";
+import {ContentBclock} from '../style';
+import {casesData} from "../../app/data";
 
-export const FilterBlock = () => {
-    const [filter, setFilter] = useState<FilterCaseType>('all')
+type FilterBlockPropsType = {
+    filter: FilterCaseType
+    setFilter: (valFilter: FilterCaseType) => void
+}
 
-    const aryLinks: FilterLinksType = [
+export const FilterBlock: FC<FilterBlockPropsType> = ({filter, setFilter}) => {
+
+
+    const arrayLinks: FilterLinksType = [
         {title: 'ВСЕ', filter: 'all'},
         {title: 'ИНТЕРНЕТ- МАГАЗИНЫ', filter: 'magazines'},
         {title: 'ИНТЕРНЕТ- КАТАЛОГИ', filter: 'catalogs'},
@@ -22,7 +29,7 @@ export const FilterBlock = () => {
         <FilterBlockWrapper>
             <Container>
                 <FilterMenuList>
-                    {aryLinks.map((el, index) => <MenuItem
+                    {arrayLinks.map((el, index) => <MenuItem
                         className={filter === el.filter ? 'activeFilter' : ''}
                         key={index}
                         onClick={() => onClickFilterHandler(el.filter)}
@@ -30,7 +37,6 @@ export const FilterBlock = () => {
                     </MenuItem>)}
                 </FilterMenuList>
             </Container>
-
         </FilterBlockWrapper>
     );
 };

@@ -2,11 +2,8 @@ import thunkMiddleware from 'redux-thunk';
 import {AnyAction, combineReducers, configureStore, ThunkAction} from '@reduxjs/toolkit';
 import {appReducer} from "./app-reduser";
 
-
-
 const rootReducer = combineReducers({
     app: appReducer,
-   // books: booksReducer,
    // card: cardReducer,
    // user: userReducer
 })

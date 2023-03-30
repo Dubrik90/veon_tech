@@ -52,6 +52,7 @@ export const ModalWindoww = () => {
         initialValues: {
             name: '',
             phone: '',
+            file: ''
         },
 
         validate: (values) => {
@@ -96,6 +97,16 @@ export const ModalWindoww = () => {
                                          onChange={formik.handleChange}/>
                             {formik.touched.phone && formik.errors.phone &&
                                 <Errors>{formik.errors.phone}</Errors>}
+                        </Label>
+                        <Label>
+                            <CustomInputFile type='file'
+                                             {...formik.getFieldProps('file')}
+                                // onChange={(e)=>onChangeFileHandler(e)}
+                            />
+                            <span>Прикрепите CV</span>
+                            <InputFileText>{formik.values.file}</InputFileText>
+                            {formik.touched.file && formik.errors.file &&
+                                <Errors>{formik.errors.file}</Errors>}
                         </Label>
                     </InputBlock>
                     <SubText>

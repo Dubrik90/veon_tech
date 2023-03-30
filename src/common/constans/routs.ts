@@ -2,5 +2,6 @@ export const ROUTS = {
     HOME: '/',
     JOBS: '/jobs',
     NDA: '/nda',
-    CASES: '/cases'
+    CASES: '/cases',
+    CASE: '/case/:category'
 }

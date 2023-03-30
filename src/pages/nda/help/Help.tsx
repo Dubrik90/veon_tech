@@ -4,14 +4,14 @@ import {Container} from '../../../common/style/Container';
 import {useAppDispatch, useAppSelector} from "../../../common/hook";
 import Logo from '../assets/logo.png'
 import LogoLight from '../assets/logoLight.png'
-import {setIsModalWindowOpenAC} from "../../../app/app-reduser";
+import {setIsConsultantModalOpenAC} from "../../../app/app-reduser";
 
 export const Help = () => {
     const theme = useAppSelector(state => state.app.theme)
     const dispatch = useAppDispatch()
 
     const onClickOpenModalHandler = () => {
-        dispatch(setIsModalWindowOpenAC({isOpen: true}))
+        dispatch(setIsConsultantModalOpenAC({isOpen: true}))
     }
 
     return (
