@@ -94,7 +94,6 @@ export const CustomInput = styled.input`
 
   &:focus {
     color: var(--dark);
-    border-bottom: 1px solid #252626;
     outline: none;
   }
 
