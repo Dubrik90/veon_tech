@@ -69,7 +69,7 @@ export const SubMenu = styled.ul`
   visibility: hidden;
   transition: all 0.3s;
   transform: translate(0px, 24px);
-  min-width: 200px;
+  min-width: 220px;
   position: absolute;
   left: -16px;
   top: 95%;

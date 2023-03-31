@@ -18,7 +18,9 @@ import {
 import {Clouse} from "./assets";
 import {useAppDispatch, useAppSelector} from "../../hook";
 import {setIsModalWindowOpenAC} from "../../../app/app-reduser";
-
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
+import es from 'react-phone-input-2/lang/es.json';
 
 type FormikErrorType = {
     name?: string,
@@ -91,12 +93,23 @@ export const ModalWindoww = () => {
                                 <Errors>{formik.errors.name}</Errors>}
                         </Label>
                         <Label>
-                            <CustomInput type='text'
-                                         placeholder='BY Номер телефона'
-                                         {...formik.getFieldProps('phone')}
-                                         onChange={formik.handleChange}/>
-                            {formik.touched.phone && formik.errors.phone &&
-                                <Errors>{formik.errors.phone}</Errors>}
+                            <PhoneInput
+                                value={'+ 375'}
+                                inputProps={{name: "phone"}}
+                                onlyCountries={['by', 'ru']}
+                                countryCodeEditable={false}
+                                onChange={(phoneNumber, country, e) => {
+                                    formik.handleChange(e)
+                                }}
+                                onBlur={formik.handleBlur}
+                            />
+                            {/*{formik.touched.phone && formik.errors.phone &&*/}
+                            {/*    <Errors>{formik.errors.phone}</Errors>}*/}
+                            {/*<CustomInput type='text'*/}
+                            {/*             placeholder='BY Номер телефона'*/}
+                            {/*             {...formik.getFieldProps('phone')}*/}
+                            {/*             onChange={formik.handleChange}/>*/}
+
                         </Label>
                         <Label>
                             <CustomInputFile type='file'

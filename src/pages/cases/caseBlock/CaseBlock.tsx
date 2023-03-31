@@ -53,7 +53,6 @@ export const CaseBlock: FC<CaseBlockPropsType> = ({filter}) => {
                     <Button>Продолжить</Button>
                     <ArrowIcon/>
                 </ButtonBlock>
-
             </Container>
         </CaseBlockWrapper>
     );

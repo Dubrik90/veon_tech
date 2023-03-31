@@ -1,9 +1,7 @@
-import React, {FC, useState} from 'react';
+import React, {FC} from 'react';
 import {FilterBlockWrapper, FilterMenuList, MenuItem} from "./style";
 import {Container} from "../../../common/style/Container";
 import {FilterCaseType, FilterLinksType} from "../../../common/types/types";
-import {ContentBclock} from '../style';
-import {casesData} from "../../app/data";
 
 type FilterBlockPropsType = {
     filter: FilterCaseType
@@ -11,7 +9,6 @@ type FilterBlockPropsType = {
 }
 
 export const FilterBlock: FC<FilterBlockPropsType> = ({filter, setFilter}) => {
-
 
     const arrayLinks: FilterLinksType = [
         {title: 'ВСЕ', filter: 'all'},

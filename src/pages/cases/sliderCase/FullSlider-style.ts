@@ -32,11 +32,26 @@ export const FullSliderWrapper = styled.div`
     }
 
     .swiper-slide-visible {
-      opacity: 0.3;
+    //  opacity: 0.3;
     }
 
     .swiper-slide-prev, .swiper-slide-next {
-      opacity: 0.8;
+      opacity: 1;
+      position: relative;
+      transition: all 0.3s;
+      border: 17px;
+      :before {
+        transition: all 0.3s;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #46474e;
+        opacity: 0.9;
+        
+      }
     }
 
     .swiper-slide-prev, .swiper-slide-next {
