@@ -10,7 +10,7 @@ export const FilterMenuList = styled.ul`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 796px) {
     justify-content: space-between;
     flex-wrap: wrap;
     row-gap: 10px;
@@ -55,7 +55,7 @@ export const MenuItem = styled.li`
         width: 15px;
         right: -16px;
       }
-      @media (max-width: 768px) {
+      @media (max-width: 796px) {
         display: none;
       }
     }
@@ -63,10 +63,10 @@ export const MenuItem = styled.li`
 
   @media (max-width: 1024px) {
     font-size: 13px;
-    padding: 0 8px;
+    padding: 0 5px;
   }
   
-  @media (max-width: 766px) {
+  @media (max-width: 796px) {
     padding: 0;
   }
   

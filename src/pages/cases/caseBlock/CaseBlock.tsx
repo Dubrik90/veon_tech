@@ -1,10 +1,23 @@
 import React, {FC} from 'react';
-import {CaseBlockWrapper, CaseContent, HiddenBlock, Img, ImgBlock, Title, Text, Content} from './style';
+import {
+    CaseBlockWrapper,
+    CaseContent,
+    HiddenBlock,
+    Img,
+    Button,
+    ImgBlock,
+    Title,
+    Text,
+    Content,
+    ButtonBlock,
+    ArrowIcon
+} from './style';
 import {Container} from "../../../common/style/Container";
 import {casesData} from "../../app/data";
 import {FilterCaseType} from "../../../common/types/types";
 import {Link} from "react-router-dom";
-import {FullSlider} from "../sliderCase/FullSlider";
+import {CasesSlider} from '../sliderCase';
+
 
 type CaseBlockPropsType = {
     filter: FilterCaseType
@@ -27,7 +40,7 @@ export const CaseBlock: FC<CaseBlockPropsType> = ({filter}) => {
                                         <HiddenBlock>
                                             <Title>{el.title}</Title>
                                             <Text>Какой-то текст описания кейса</Text>
-                                            <Link to={el.route}>Подробнее</Link>
+                                            <Link to={`/case/${el.type}`}>Подробнее</Link>
                                         </HiddenBlock>
                                     </Content>
                                 </React.Fragment>
@@ -35,7 +48,12 @@ export const CaseBlock: FC<CaseBlockPropsType> = ({filter}) => {
                         })
                     }
                 </CaseContent>
-                <FullSlider/>
+                <CasesSlider filter={filter}/>
+                <ButtonBlock>
+                    <Button>Продолжить</Button>
+                    <ArrowIcon/>
+                </ButtonBlock>
+
             </Container>
         </CaseBlockWrapper>
     );

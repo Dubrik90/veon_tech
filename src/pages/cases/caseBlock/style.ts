@@ -1,13 +1,16 @@
 import styled from "styled-components";
+import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 
 export const CaseBlockWrapper = styled.div`
 
 `
+
 export const CaseContent = styled.div`
   display: flex;
   gap: 60px;
   justify-content: space-around;
   flex-wrap: wrap;
+  padding: 30px 0;
   
   @media (max-width: 1440px) {
     gap: 30px;
@@ -15,6 +18,42 @@ export const CaseContent = styled.div`
   @media (max-width: 768px) {
     display: none;
   }
+  
+`
+export const Button = styled.button`
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--colors-text-dark);
+`
+export const ButtonBlock = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  background: var(--colors-bg);
+  border: 1px solid var(--colors-bg-green);
+  border-radius: 10px;
+  padding: 8px 10px;
+  max-width: 300px;
+  margin: 0 auto 20px auto;
+  transition: all 0.3s;
+  cursor: pointer;
+  
+  
+  :hover {
+    color: #5db447;
+    ${Button} {
+      color: #5db447;
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`
+export const ArrowIcon = styled(KeyboardDoubleArrowDownIcon)`
+    fill: var(var(--colors-text-dark)) !important;
+  
   
 `
 
@@ -59,12 +98,19 @@ export const Title = styled.h5`
   font-weight: var(--fw-medium);
   color: var(--color-grey-light);
   z-index: 50;
+  
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
 
 `
 export const Text = styled.p`
   font-size: 20px;
   line-height: 1.1;
   color: var(--color-grey-light);
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
 `
 
 
