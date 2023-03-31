@@ -20,7 +20,6 @@ import {useAppDispatch, useAppSelector} from "../../hook";
 import {setIsModalWindowOpenAC} from "../../../app/app-reduser";
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
-import es from 'react-phone-input-2/lang/es.json';
 
 type FormikErrorType = {
     name?: string,

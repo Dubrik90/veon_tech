@@ -15,6 +15,8 @@ import {useFormik} from "formik";
 import {Clouse} from "./assets";
 import {useAppDispatch, useAppSelector} from "../../hook";
 import {setIsConsultantModalOpenAC} from "../../../app/app-reduser";
+import PhoneInput from "react-phone-input-2";
+import 'react-phone-input-2/lib/style.css';
 
 type FormikErrorType = {
     name?: string,
@@ -70,12 +72,22 @@ export const ConsultantModal = () => {
                                 <Errors>{formik.errors.name}</Errors>}
                         </Label>
                         <Label>
-                            <CustomInput type='text'
-                                         placeholder='BY Номер телефона'
-                                         {...formik.getFieldProps('phone')}
-                                         onChange={formik.handleChange}/>
-                            {formik.touched.phone && formik.errors.phone &&
-                                <Errors>{formik.errors.phone}</Errors>}
+                            <PhoneInput
+                                value={'+ 375'}
+                                inputProps={{name: "phone"}}
+                                onlyCountries={['by', 'ru']}
+                                countryCodeEditable={false}
+                                onChange={(phoneNumber, country, e) => {
+                                    formik.handleChange(e)
+                                }}
+                                onBlur={formik.handleBlur}
+                            />
+                            {/*<CustomInput type='text'*/}
+                            {/*             placeholder='BY Номер телефона'*/}
+                            {/*             {...formik.getFieldProps('phone')}*/}
+                            {/*             onChange={formik.handleChange}/>*/}
+                            {/*{formik.touched.phone && formik.errors.phone &&*/}
+                            {/*    <Errors>{formik.errors.phone}</Errors>}*/}
                         </Label>
                     </InputBlock>
                     <SubText>
