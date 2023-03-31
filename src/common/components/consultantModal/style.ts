@@ -54,6 +54,11 @@ export const FormWrapper = styled.form`
 
 `
 export const InputBlock = styled.div`
+  .react-tel-input.form-control {
+    width: 100%;
+  }
+
+
 `
 
 export const Placeholder = styled.span`
@@ -77,6 +82,13 @@ export const Label = styled.label`
   height: 100%;
   margin-bottom: 16px;
 
+  .form-control {
+    width: 100% !important;
+  }
+
+ 
+
+
 `
 export const CustomInput = styled.input`
   width: 100%;
@@ -88,6 +100,7 @@ export const CustomInput = styled.input`
   border-radius: 5px;
   font-size: 14px;
   
+ 
   ::placeholder {
     
   }

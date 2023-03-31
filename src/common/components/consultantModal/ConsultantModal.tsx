@@ -16,7 +16,7 @@ import {Clouse} from "./assets";
 import {useAppDispatch, useAppSelector} from "../../hook";
 import {setIsConsultantModalOpenAC} from "../../../app/app-reduser";
 import PhoneInput from "react-phone-input-2";
-import 'react-phone-input-2/lib/style.css';
+import '../../style/PhoneInput.css';
 
 type FormikErrorType = {
     name?: string,
