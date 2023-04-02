@@ -6,6 +6,8 @@ export const CaseBlockWrapper = styled.div`
 `
 
 export const CaseContent = styled.div`
+  max-width: 1100px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   //display: flex;
@@ -15,7 +17,7 @@ export const CaseContent = styled.div`
   padding: 30px 0;
   
   @media (max-width: 1440px) {
-    gap: 30px;
+    gap: 20px;
   }
   @media (max-width: 768px) {
     display: none;
@@ -55,17 +57,15 @@ export const ButtonBlock = styled.div`
 `
 export const ArrowIcon = styled(KeyboardDoubleArrowDownIcon)`
     fill: var(var(--colors-text-dark)) !important;
-  
-  
 `
 
 export const HiddenBlock = styled.div`
   position: absolute;
   top: 0;
-  left: 0;
+  left: 100%;
   width: 100%;
   height: 100%;
-  background-color: var(--colors-text-green);
+ // background-color: var(--colors-text-green);
   opacity: 0;
   visibility: hidden;
   border-radius: 17px;
@@ -75,16 +75,16 @@ export const HiddenBlock = styled.div`
   align-items: center;
   justify-content: center;
   row-gap: 20px;
-  scale: 0;
-  backdrop-filter: blur(5px);
+ // scale: 0;
+ // backdrop-filter: blur(5px);
 
   a {
     display: inline-flex;
     padding: 10px 15px;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.1;
     font-weight: var(--fw-bold);
-    background-color: var(--color-grey);
+    background-color: var(--colors-text-green);
     color: var(--color-grey-light);
     transition: all 0.3s;
 
@@ -95,23 +95,23 @@ export const HiddenBlock = styled.div`
   }
 `
 export const Title = styled.h5`
-  font-size: 30px;
+  font-size: 20px;
   line-height: 1.1;
-  font-weight: var(--fw-medium);
+  font-weight: var(--fw-bold);
   color: var(--color-grey-light);
   z-index: 50;
   
   @media (max-width: 1024px) {
-    font-size: 20px;
+    font-size: 18px;
   }
 
 `
 export const Text = styled.p`
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.1;
   color: var(--color-grey-light);
   @media (max-width: 1024px) {
-    font-size: 16px;
+    font-size: 14px;
   }
 `
 
@@ -123,6 +123,7 @@ export const Content = styled.div`
   position: relative;
   border-radius: 17px;
   max-width: 512px;
+  overflow: hidden;
 
   @media (max-width: 1440px) {
     max-width: 400px;
@@ -130,13 +131,38 @@ export const Content = styled.div`
   @media (max-width: 1024px) {
     max-width: 290px;
   }
+  :before {
+    background: #000;
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    bottom: 0;
+    content: "";
+    left: -100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    transition: all 0.3s;
+    
+  }
+  
 
   :hover {
     ${HiddenBlock} {
       opacity: 1;
       visibility: visible;
-      scale: 1;
+      left: 0;
+     // scale: 1;
     }
+    
+    :before {
+      transition: all 0.3s;
+      opacity: .8;
+      visibility: visible;
+      left: 0;
+    }
+    
   }
 `
 

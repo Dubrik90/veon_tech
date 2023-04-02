@@ -8,7 +8,6 @@ import {useParams} from "react-router-dom";
 export const Case = () => {
     const {category} = useParams()
     const activeTitle = casesData
-    console.log(category)
 
 
     return (

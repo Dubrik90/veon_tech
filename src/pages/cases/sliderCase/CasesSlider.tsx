@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, useEffect, useMemo, useRef} from 'react';
 import {Swiper, SwiperSlide} from 'swiper/react'
 import {EffectCoverflow, Navigation, Pagination} from 'swiper';
 import 'swiper/swiper-bundle.min.css'
@@ -7,14 +7,39 @@ import {FullSliderWrapper} from './FullSlider-style';
 import {FilterCaseType} from "../../../common/types/types";
 import {casesData} from "../../app/data";
 import {Link} from "react-router-dom";
+import gsap from "gsap";
 
 type CasesSliderPropsType = {
     filter: FilterCaseType
 }
 
 export const CasesSlider: FC<CasesSliderPropsType> = ({filter}) => {
+
+    const el = useRef(null)
+    const q = useMemo(() => gsap.utils.selector(el), [])
+
+
+    useEffect(() => {
+        gsap.fromTo(
+            q('.case'),
+            {
+                opacity: 0,
+                visibility: 'hidden'
+
+            },
+            {
+                opacity: 1,
+                visibility: 'visible',
+                // продолжительность анимации
+                duration: 1.2,
+                stagger: 0.1
+            }
+        )
+
+    }, [filter])
+
     return (
-        <FullSliderWrapper>
+        <FullSliderWrapper ref={el}>
             <Swiper
                 effect={'coverflow'}
                 grabCursor={true}
@@ -45,7 +70,7 @@ export const CasesSlider: FC<CasesSliderPropsType> = ({filter}) => {
                 {
                     casesData[filter].map((el) => {
                         return (
-                            <SwiperSlide key={el.id}>
+                            <SwiperSlide key={el.id} className={'case'}>
                                 <Link to={`/case/${el.type}`}>
                                     <img src={el.img} alt="slide_image"/>
                                 </Link>

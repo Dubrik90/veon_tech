@@ -1,7 +1,6 @@
-import React, {FC, useEffect, useRef, useState} from 'react'
+import React, {useEffect, useRef} from 'react'
 import {Container} from '../../../common/style/Container'
 import {Button, HeaderMainContent, HeaderMainWrapper, SubTitle, SubTitleSmall, Title, Title2} from './style'
-import {FormUsers} from "../../../common/components/FormUsers";
 import {useAppDispatch, useAppSelector, useBodyScrollLock} from "../../../common/hook";
 import {setIsOpenFormAC} from "../../../app/app-reduser";
 

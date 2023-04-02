@@ -1,5 +1,5 @@
 import React, {FC} from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import {Swiper, SwiperSlide} from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/scrollbar";
@@ -16,7 +16,7 @@ export const SwiperTehnologies: FC<SwiperTehnologiesPropsType> = ({data}) => {
         <SwiperTehnologiesWrapper>
             <Swiper
                 scrollbar={{
-                    hide: true,
+                    hide: false,
                 }}
                 modules={[Scrollbar, FreeMode]}
                 slidesPerView={3}
@@ -36,9 +36,9 @@ export const SwiperTehnologies: FC<SwiperTehnologiesPropsType> = ({data}) => {
                     },
                 }}
             >
-                {data.map((el:any, index: number) => (
+                {data.map((el: any, index: number) => (
                     <SwiperSlide key={index}>
-                        <TechnologiesItem  tech={el}/>
+                        <TechnologiesItem tech={el}/>
                     </SwiperSlide>
                 ))}
             </Swiper>

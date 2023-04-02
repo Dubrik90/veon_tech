@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, useEffect, useMemo, useRef} from 'react';
 import {
     CaseBlockWrapper,
     CaseContent,
@@ -17,6 +17,7 @@ import {casesData} from "../../app/data";
 import {FilterCaseType} from "../../../common/types/types";
 import {Link} from "react-router-dom";
 import {CasesSlider} from '../sliderCase';
+import gsap from 'gsap'
 
 
 type CaseBlockPropsType = {
@@ -24,16 +25,34 @@ type CaseBlockPropsType = {
 }
 
 export const CaseBlock: FC<CaseBlockPropsType> = ({filter}) => {
+    const el = useRef(null)
+    const q = useMemo(() => gsap.utils.selector(el), [])
+
+
+    useEffect(() => {
+        gsap.fromTo(
+            q('.case'),
+            {
+                opacity: 0
+            },
+            {
+                opacity: 1,
+                // продолжительность анимации
+                duration: 1,
+                stagger: 0.33
+            }
+        )
+    }, [filter])
 
     return (
         <CaseBlockWrapper>
             <Container>
-                <CaseContent>
+                <CaseContent ref={el}>
                     {
                         casesData[filter].map((el) => {
                             return (
                                 <React.Fragment key={el.id}>
-                                    <Content>
+                                    <Content className='case'>
                                         <ImgBlock>
                                             <Img src={el.img} alt="case image"/>
                                         </ImgBlock>
@@ -49,10 +68,14 @@ export const CaseBlock: FC<CaseBlockPropsType> = ({filter}) => {
                     }
                 </CaseContent>
                 <CasesSlider filter={filter}/>
-                <ButtonBlock>
-                    <Button>Продолжить</Button>
-                    <ArrowIcon/>
-                </ButtonBlock>
+                {
+                    casesData[filter].length >= 9 &&
+                    <ButtonBlock>
+                        <Button>Продолжить</Button>
+                        <ArrowIcon/>
+                    </ButtonBlock>
+                }
+
             </Container>
         </CaseBlockWrapper>
     );
