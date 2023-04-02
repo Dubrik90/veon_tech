@@ -26,7 +26,7 @@ export const FullSliderWrapper = styled.div`
       width: 20rem;
       position: relative;
       @media (max-width: 425px) {
-        width: 14rem;
+        width: 14.6rem;
 
       }
     }
@@ -49,7 +49,7 @@ export const FullSliderWrapper = styled.div`
         width: 100%;
         height: 100%;
         background-color: #46474e;
-        opacity: 0.9;
+        opacity: 0.4;
         
       }
     }
@@ -63,11 +63,12 @@ export const FullSliderWrapper = styled.div`
     }
 
     .swiper-slide img {
-      width: 19.6rem;
+      width: 100%;
+      //width: 19.6rem;
       object-fit: contain;
 
       @media (max-width: 425px) {
-        width: 12.6rem;
+      //  width: 12.6rem;
 
       }
     }

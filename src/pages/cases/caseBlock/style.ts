@@ -6,7 +6,9 @@ export const CaseBlockWrapper = styled.div`
 `
 
 export const CaseContent = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  //display: flex;
   gap: 60px;
   justify-content: space-around;
   flex-wrap: wrap;
