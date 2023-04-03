@@ -8,8 +8,8 @@ import {Container} from "../../common/style/Container";
 import {HeaderCase} from "./headerCase";
 import {TableCase} from "./tableCase";
 import {ContentCase} from "./contentCase";
-import {CasesSlider} from "../cases/sliderCase";
 import {SliderPortfolio} from "./sliderPortfolio";
+import {CaseHelp} from './caseHelp';
 
 type UseParamsType = {
     category: FilterCaseType;
@@ -47,7 +47,7 @@ export const Case = () => {
                     <SliderPortfolio activeCaseImg={activeCase.portfolio}/>
                 </PortfolioBlockSlider>
             </Container>
-
+            <CaseHelp/>
         </CaseWrapper>
     );
 };

@@ -37,7 +37,7 @@ export const PortfolioBlock = styled.div`
   display: flex;
   column-gap: 53px;
   max-width: 1480px;
-  margin: 0 auto;
+  margin: 0 auto 50px auto;
 
   @media (max-width: 768px) {
     display: none;
@@ -45,10 +45,12 @@ export const PortfolioBlock = styled.div`
 `
 
 export const ImageBlock = styled.div`
-
+  max-height: 310px;
+  overflow: hidden;
 `
 export const Img = styled.img`
   max-width: 100%;
+  object-fit: contain;
 `
 export const PortfolioBlockSlider = styled.div``
 
