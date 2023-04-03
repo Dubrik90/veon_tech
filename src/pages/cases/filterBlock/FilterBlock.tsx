@@ -2,13 +2,16 @@ import React, {FC} from 'react';
 import {FilterBlockWrapper, FilterMenuList, MenuItem} from "./style";
 import {Container} from "../../../common/style/Container";
 import {FilterCaseType, FilterLinksType} from "../../../common/types/types";
+import {useAppDispatch} from "../../../common/hook";
+import {setFilterCaseAC} from "../../../app/app-reduser";
 
 type FilterBlockPropsType = {
     filter: FilterCaseType
-    setFilter: (valFilter: FilterCaseType) => void
+
 }
 
-export const FilterBlock: FC<FilterBlockPropsType> = ({filter, setFilter}) => {
+export const FilterBlock: FC<FilterBlockPropsType> = ({filter}) => {
+    const dispatch = useAppDispatch()
 
     const arrayLinks: FilterLinksType = [
         {title: 'ВСЕ', filter: 'all'},
@@ -19,7 +22,7 @@ export const FilterBlock: FC<FilterBlockPropsType> = ({filter, setFilter}) => {
     ]
 
     const onClickFilterHandler = (valFilter: FilterCaseType) => {
-        setFilter(valFilter)
+        dispatch(setFilterCaseAC({filter: valFilter}))
     }
 
     return (

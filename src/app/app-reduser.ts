@@ -1,4 +1,5 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {FilterCaseType} from "../common/types/types";
 
 const initialState: InitialStateStateType = {
     theme: 'light',
@@ -7,6 +8,7 @@ const initialState: InitialStateStateType = {
     isModalWindowOpen: false,
     isMenuOpen: false,
     isConsultantModalOpen: false,
+    filterCase: 'all',
 
     status: 'loading',
     error: null
@@ -32,6 +34,9 @@ const slice = createSlice({
         setIsConsultantModalOpenAC(state, action: PayloadAction<{ isOpen: boolean }>) {
             state.isConsultantModalOpen = action.payload.isOpen
         },
+        setFilterCaseAC(state, action: PayloadAction<{ filter: FilterCaseType }>) {
+            state.filterCase = action.payload.filter
+        },
 
 
         setIsMenuOpenAC(state, action: PayloadAction<{ value: boolean }>) {
@@ -54,7 +59,8 @@ type InitialStateStateType = {
     error: string | null,
     theme: ThemeType,
     isModalWindowOpen: boolean,
-    isConsultantModalOpen: boolean
+    isConsultantModalOpen: boolean,
+    filterCase: FilterCaseType
 
 
 }
@@ -71,5 +77,6 @@ export const {
     setIsMenuOpenAC,
     setIsOpenBurgerAC,
     setAppStatusAC,
-    setAppErrorAC
+    setAppErrorAC,
+    setFilterCaseAC
 } = slice.actions
