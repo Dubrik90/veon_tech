@@ -1,0 +1,1 @@
+export {SliderPortfolio} from './SliderPortfolio'

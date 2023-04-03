@@ -57,8 +57,6 @@ export const InputBlock = styled.div`
   .react-tel-input.form-control {
     width: 100%;
   }
-
-
 `
 
 export const Placeholder = styled.span`

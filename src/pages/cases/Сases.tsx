@@ -9,7 +9,6 @@ import {useAppSelector} from "../../common/hook";
 export const Сases = () => {
     const filter = useAppSelector(state => state.app.filterCase)
 
-
     return (
         <СasesWrapper>
             <JobHeader title={'Кейсы '}

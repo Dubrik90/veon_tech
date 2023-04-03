@@ -1,61 +1,33 @@
-import React, {FC, useEffect, useMemo, useRef} from 'react';
+import React, {FC} from 'react';
 import {Swiper, SwiperSlide} from 'swiper/react'
-import {EffectCoverflow, Navigation, Pagination} from 'swiper';
+import {EffectCoverflow} from 'swiper';
 import 'swiper/swiper-bundle.min.css'
 import 'swiper/swiper.min.css'
-import {FullSliderWrapper} from './FullSlider-style';
-import {FilterCaseType} from "../../../common/types/types";
-import {casesData} from "../../app/data";
+import {FullSliderWrapper} from './style';
 import {Link} from "react-router-dom";
-import gsap from "gsap";
-import {useAppSelector} from "../../../common/hook";
 
+type SliderPortfolioProps = {
+    activeCaseImg: Array<{img: string, src: string}>
+}
 
-
-export const CasesSlider = () => {
-    const filter = useAppSelector(state => state.app.filterCase)
-    const el = useRef(null)
-    const q = useMemo(() => gsap.utils.selector(el), [])
-
-    console.log(casesData[filter])
-
-    useEffect(() => {
-        gsap.fromTo(
-            q('.case'),
-            {
-                opacity: 0,
-                visibility: 'hidden'
-
-            },
-            {
-                opacity: 1,
-                visibility: 'visible',
-                // продолжительность анимации
-                duration: 1.2,
-                stagger: 0.1
-            }
-        )
-    }, [filter])
+export const SliderPortfolio:FC<SliderPortfolioProps> = ({activeCaseImg}) => {
 
     return (
-        <FullSliderWrapper ref={el}>
+        <FullSliderWrapper >
             <Swiper
                 effect={'coverflow'}
                 grabCursor={true}
                 // centeredSlides={true}
-                loop={true}
-                slidesPerView={3}
+               // loop={true}
+                slidesPerView={'auto'}
                 coverflowEffect={{
                     rotate: 0,
                     stretch: 0,
                     depth: 100,
-                    modifier: 2.5,
+                    modifier: 1,
                 }}
-                navigation={{
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                }}
-                modules={[EffectCoverflow, Pagination, Navigation]}
+
+                modules={[EffectCoverflow]}
                 className="swiper_container"
                 breakpoints={{
                     320: {
@@ -67,13 +39,12 @@ export const CasesSlider = () => {
                 }}
             >
                 {
-                    casesData[filter].map((el) => {
+                    activeCaseImg.map((el, index) => {
                         return (
-                            <SwiperSlide key={el.id} className={'case'}>
-                                <Link to={`/case/${el.type}`}>
+                            <SwiperSlide key={index} className={'case'}>
+                                <Link to={el.src}>
                                     <img src={el.img} alt="slide_image"/>
                                 </Link>
-
                             </SwiperSlide>
                         )
                     })

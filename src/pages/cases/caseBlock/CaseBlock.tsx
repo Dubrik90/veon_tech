@@ -67,7 +67,7 @@ export const CaseBlock: FC<CaseBlockPropsType> = ({filter}) => {
                         })
                     }
                 </CaseContent>
-                <CasesSlider filter={filter}/>
+                <CasesSlider/>
                 {
                     casesData[filter].length >= 9 &&
                     <ButtonBlock>
@@ -75,7 +75,6 @@ export const CaseBlock: FC<CaseBlockPropsType> = ({filter}) => {
                         <ArrowIcon/>
                     </ButtonBlock>
                 }
-
             </Container>
         </CaseBlockWrapper>
     );

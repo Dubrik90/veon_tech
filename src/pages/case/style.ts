@@ -28,14 +28,31 @@ export const CaseBlock = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   @media (max-width: 425px) {
     padding: 30px 0;
   }
 `
 export const PortfolioBlock = styled.div`
-    
+  display: flex;
+  column-gap: 53px;
+  max-width: 1480px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
+
+export const ImageBlock = styled.div`
+
+`
+export const Img = styled.img`
+  max-width: 100%;
+`
+export const PortfolioBlockSlider = styled.div``
+
+
 
 
 
