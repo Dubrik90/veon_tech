@@ -1,4 +1,4 @@
-import React, {FC, useEffect, useMemo, useRef} from 'react';
+import React, {FC, useEffect, useMemo, useRef, useState} from 'react';
 import {
     CaseBlockWrapper,
     CaseContent,
@@ -28,6 +28,12 @@ export const CaseBlock: FC<CaseBlockPropsType> = ({filter}) => {
     const el = useRef(null)
     const q = useMemo(() => gsap.utils.selector(el), [])
 
+    const [showMore, setShoeMore] = useState(false)
+
+    const onClickShowMoreHandler = () => {
+        setShoeMore(true)
+    }
+
 
     useEffect(() => {
         gsap.fromTo(
@@ -52,7 +58,7 @@ export const CaseBlock: FC<CaseBlockPropsType> = ({filter}) => {
                         casesData[filter].map((el) => {
                             return (
                                 <React.Fragment key={el.id}>
-                                    <Content className='case'>
+                                    <Content showMore={showMore} className='case'>
                                         <ImgBlock>
                                             <Img src={el.img} alt="case image"/>
                                         </ImgBlock>
@@ -69,8 +75,8 @@ export const CaseBlock: FC<CaseBlockPropsType> = ({filter}) => {
                 </CaseContent>
                 <CasesSlider/>
                 {
-                    casesData[filter].length >= 9 &&
-                    <ButtonBlock>
+                    casesData[filter].length > 10 &&
+                    <ButtonBlock showMore={showMore} onClick={onClickShowMoreHandler}>
                         <Button>Продолжить</Button>
                         <ArrowIcon/>
                     </ButtonBlock>

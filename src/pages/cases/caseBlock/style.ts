@@ -16,6 +16,8 @@ export const CaseContent = styled.div`
   flex-wrap: wrap;
   padding: 30px 0;
   
+ 
+  
   @media (max-width: 1440px) {
     gap: 20px;
   }
@@ -29,8 +31,12 @@ export const Button = styled.button`
   line-height: 1.2;
   color: var(--colors-text-dark);
 `
-export const ButtonBlock = styled.div`
-  display: flex;
+
+type ButtonBlockProps = {
+    showMore: boolean
+}
+export const ButtonBlock = styled.div<ButtonBlockProps>`
+  display: ${({showMore}) => showMore ? 'none' : 'flex'} ;
   justify-content: center;
   align-items: center;
   column-gap: 10px;
@@ -119,11 +125,22 @@ export const Text = styled.p`
 export const ImgBlock = styled.div`
   
 `
-export const Content = styled.div`
+type ContentProps = {
+    showMore: boolean
+}
+export const Content = styled.div<ContentProps>`
   position: relative;
   border-radius: 17px;
   max-width: 512px;
   overflow: hidden;
+
+ 
+
+
+  :nth-child(n + 10) {
+    ${({showMore}) => showMore ? 'display: block' : 'display: none'}
+  
+  }
 
   @media (max-width: 1440px) {
     max-width: 400px;
