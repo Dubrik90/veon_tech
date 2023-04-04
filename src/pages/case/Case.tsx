@@ -10,6 +10,7 @@ import {TableCase} from "./tableCase";
 import {ContentCase} from "./contentCase";
 import {SliderPortfolio} from "./sliderPortfolio";
 import {CaseHelp} from './caseHelp';
+import { SimilarCases } from './similarCases';
 
 type UseParamsType = {
     category: FilterCaseType;
@@ -48,6 +49,7 @@ export const Case = () => {
                 </PortfolioBlockSlider>
             </Container>
             <CaseHelp/>
+            <SimilarCases/>
         </CaseWrapper>
     );
 };

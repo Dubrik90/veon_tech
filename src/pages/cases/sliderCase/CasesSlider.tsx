@@ -17,8 +17,6 @@ export const CasesSlider = () => {
     const el = useRef(null)
     const q = useMemo(() => gsap.utils.selector(el), [])
 
-    console.log(casesData[filter])
-
     useEffect(() => {
         gsap.fromTo(
             q('.case'),
@@ -44,7 +42,7 @@ export const CasesSlider = () => {
                 grabCursor={true}
                 // centeredSlides={true}
                 loop={true}
-                slidesPerView={3}
+                slidesPerView={"auto"}
                 coverflowEffect={{
                     rotate: 0,
                     stretch: 0,

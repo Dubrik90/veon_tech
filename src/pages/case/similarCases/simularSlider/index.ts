@@ -1,0 +1,1 @@
+export {SimilarSlider} from './SimilarSlider'
