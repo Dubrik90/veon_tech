@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {flexColumn} from "../../common/style/mixin";
 
 export const CaseWrapper = styled.div`
 
@@ -24,9 +25,8 @@ export const Title = styled.h3`
   }
 `
 export const CaseBlock = styled.div`
+  ${flexColumn()};
   padding: 55px 0;
-  display: flex;
-  flex-direction: column;
   align-items: center;
 
   @media (max-width: 425px) {

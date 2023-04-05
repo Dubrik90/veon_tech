@@ -1,10 +1,9 @@
-import {createGlobalStyle} from 'styled-components'
+import styled, {createGlobalStyle} from 'styled-components'
 
 import '../../assets/font/font.css'
 export default createGlobalStyle`
   html {
     width: 100%;
-    // overflow-x: hidden;
   }
 
   * {
@@ -84,5 +83,39 @@ export default createGlobalStyle`
     font-weight: inherit;
     font-size: inherit;
   }
+`
 
+export const TitleH2 = styled.h2`
+  font-weight: var(--fw-bold);
+  font-size: 40px;
+  line-height: 1.1;
+  color: var(--colors-text-dark);
+`
+export const TitleH3 = styled.h3`
+  font-weight: var(--fw-bold);
+  font-size: 24px;
+  line-height: 1.3;
+  color: var(--colors-text-dark);
+`
+export const TitleH4 = styled.h4`
+  font-weight: var(--fw-bold);
+  font-size: 20px;
+  line-height: 1.1;
+  color: var(--colors-text-dark);
+`
+
+export const TextRegular = styled.p`
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--colors-text-dark);
+`
+export const TextMedium = styled.p`
+  font-size: 20px;
+  font-weight: var(--fw-medium);
+  line-height: 1.2;
+  color: var(--colors-text-dark);
+`
+export const FlexColumn = styled.div`
+  display: flex;
+  flex-direction: column;
 `

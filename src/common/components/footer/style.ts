@@ -1,11 +1,10 @@
 import styled from 'styled-components';
+import {FlexColumn} from "../../style/global";
 
 export const FooterWrapper = styled.footer`
   background-color: var(--color-dg-footer);
 `
-export const FooterContent = styled.div`
-  display: flex;
-  flex-direction: column;
+export const FooterContent = styled(FlexColumn)`
 `
 
 export const FooterTop = styled.div`
@@ -137,9 +136,7 @@ export const FooterBottom = styled.div`
     line-height: 20px;
   }
 `
-export const About = styled.div`
-  display: flex;
-  flex-direction: column;
+export const About = styled(FlexColumn)`
   row-gap: 40px;
   align-self: flex-end;
   @media (max-width: 1227px) {
@@ -152,9 +149,7 @@ export const About = styled.div`
   }
 `
 
-export const AboutContact = styled.div`
-  display: flex;
-  flex-direction: column;
+export const AboutContact = styled(FlexColumn)`
   row-gap: 15px;
   align-self: flex-start;
   @media (max-width: 1227px) {
@@ -165,9 +160,7 @@ export const AboutContact = styled.div`
     row-gap: 5px;
   }
 `
-export const Corporation = styled.div`
-  display: flex;
-  flex-direction: column;
+export const Corporation = styled(FlexColumn)`
   row-gap: 15px;
   align-self: center;
   @media (max-width: 768px) {

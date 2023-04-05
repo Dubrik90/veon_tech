@@ -1,10 +1,10 @@
 import styled from "styled-components";
+import {flexColumn} from "../../../../common/style/mixin";
 
 export const ApplicationWrapper = styled.div`
+  ${flexColumn()};
   max-width: 329px;
   background-color: var(--colors-text-green);
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   row-gap: 20px;

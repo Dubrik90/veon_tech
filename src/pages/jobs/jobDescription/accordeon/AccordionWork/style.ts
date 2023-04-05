@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {TitleH4} from "../../../../../common/style/global";
 
 
 export const TitleWork = styled.h3`
@@ -7,11 +8,9 @@ export const TitleWork = styled.h3`
 export const DescWrapper = styled.div`
 
 `
-export const Title = styled.div`
-  font-weight: var(--fw-bold);
-  font-size: 20px;
-  line-height: 164%;
+export const Title = styled(TitleH4)`  
   margin-bottom: 20px;
+  
   @media (max-width: 960px) {
     font-size: 18px;
   }

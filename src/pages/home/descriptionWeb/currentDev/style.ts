@@ -1,12 +1,11 @@
 import styled from 'styled-components';
+import {flexColumn} from "../../../../common/style/mixin";
 
 export const CurrentDevWrapper = styled.div`
+  ${flexColumn()};
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #FFFDFD;
- // background-color: var(--color-bg-tehno);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
-  display: flex;
-  flex-direction: column;
   row-gap: 20px;
   flex: 0 0 349px;
   padding: 35px 38px 11px 28px;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {TitleH3} from "../../../common/style/global";
 
 export const TableCaseWrapper= styled.div`
   margin-bottom: 50px;
@@ -7,11 +8,7 @@ export const TableCaseWrapper= styled.div`
   }
 `
 
-export const TableTitle= styled.div`
-  font-weight: var(--fw-bold);
-  font-size: 24px;
-  line-height: 1.2;
-  color: var(--colors-text-dark);
+export const TableTitle= styled(TitleH3)`
   background: #5DB447;
   border-radius: 6px 6px 0 0;
   text-align: center;

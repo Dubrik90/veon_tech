@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
+import {flexColumn} from "../../../common/style/mixin";
+import {TitleH4} from "../../../common/style/global";
 
 export const CaseBlockWrapper = styled.div`
 
@@ -66,6 +68,7 @@ export const ArrowIcon = styled(KeyboardDoubleArrowDownIcon)`
 `
 
 export const HiddenBlock = styled.div`
+  ${flexColumn()};
   position: absolute;
   top: 0;
   left: 100%;
@@ -76,8 +79,6 @@ export const HiddenBlock = styled.div`
   visibility: hidden;
   border-radius: 17px;
   transition: all 0.3s;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   row-gap: 20px;
@@ -100,10 +101,7 @@ export const HiddenBlock = styled.div`
     }
   }
 `
-export const Title = styled.h5`
-  font-size: 20px;
-  line-height: 1.1;
-  font-weight: var(--fw-bold);
+export const Title = styled(TitleH4)`
   color: var(--color-grey-light);
   z-index: 50;
   

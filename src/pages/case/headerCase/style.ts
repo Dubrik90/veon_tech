@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import {flexColumn} from "../../../common/style/mixin";
+import {TextMedium} from "../../../common/style/global";
+
 export const HeaderCaseWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -31,8 +34,7 @@ export const HeaderCaseWrapper = styled.div`
   }
 `
 export const CaseHeaderBlockColumn = styled.div`
-  display: flex;
-  flex-direction: column;
+  ${flexColumn()};
   row-gap: 10px;
  // flex-wrap: wrap;
   @media (max-width: 640px) {
@@ -66,20 +68,14 @@ export const Img = styled.img`
 `
 
 export const CaseHeaderBlock = styled.div`
-  display: flex;
-  flex-direction: column;
+  ${flexColumn()};
   row-gap: 5px;
   @media (max-width: 380px) {
     flex: 0 0 172px;
   }
  
 `
-export const ServiceTitle = styled.div`
-  font-weight: var(--fw-medium);
-  font-size: 20px;
-  line-height: 1.2;
-  color: var(--colors-text-dark);
-  
+export const ServiceTitle = styled(TextMedium)`
   @media (max-width: 1024px) {
     font-size: 16px;
   }

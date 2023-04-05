@@ -50,7 +50,6 @@ export const Title = styled.h2`
   font-size: 48px;
   line-height: 60px;
   margin-bottom: 15px;
-
   color: var(--colors-text-dark);
 
   span {

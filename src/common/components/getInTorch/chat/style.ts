@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {fontSize} from "../../../style/mixin";
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
+import {FlexColumn} from "../../../style/global";
 
 type ChatWrapperProps = {
     view: boolean
@@ -20,7 +21,7 @@ export const CloseIcon = styled(HighlightOffIcon)`
     color: var(--colors-bg);
   }
 `
-export const ChatWrapper = styled.div<ChatWrapperProps>`
+export const ChatWrapper = styled(FlexColumn)<ChatWrapperProps>`
   bottom: ${({view}) => view ? '0' : '-100%'};
   transform: ${({view}) => view ? 'translate(0,0)' : 'translate( 0,100%)'};
   transition: all 0.3s;
@@ -31,8 +32,6 @@ export const ChatWrapper = styled.div<ChatWrapperProps>`
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   height: 450px;
   background: var(--colors-bg-green);
-  display: flex;
-  flex-direction: column;
   border-top-left-radius: 17px;
   border-top-right-radius: 17px;
   border-bottom-right-radius: 0;
@@ -82,12 +81,10 @@ export const ChatHeader = styled.div`
   }
   
 `
-export const ChatContent = styled.div`
+export const ChatContent = styled(FlexColumn)`
   flex: 1 1 auto;
   background: var(--colors-text-wight);
   padding: 10px;
-  display: flex;
-  flex-direction: column;
   overflow: auto;
 `
 

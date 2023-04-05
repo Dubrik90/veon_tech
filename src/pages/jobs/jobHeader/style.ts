@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {TitleH2} from "../../../common/style/global";
 
 type JobHeaderWrapperProps = {
     img?: string
@@ -28,24 +29,16 @@ export const JobHeaderContent = styled.div`
   }
 
 `
-export const Title = styled.h2`
-  font-weight: var(--fw-bold);
-  font-size: 40px;
-  line-height: 50px;
-  color: var(--color-dark);
+export const Title = styled(TitleH2)`
   margin-bottom: 20px;
   @media (max-width: 632px) {
     order: 1;
-   // font-size: 60px;
-   // max-width: 300px;
     
     span {
       color: var(--colors-text-green);
     }
   }
-  @media (max-width: 614px) {
-   // font-size: 50px;
-  }
+ 
   @media (max-width: 526px) {
     font-size: 35px;
   }

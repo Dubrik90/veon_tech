@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {FlexColumn} from "../../../common/style/global";
 
 
 export const ContactsWrapper = styled.div`
@@ -21,9 +22,7 @@ export const ContactsWrapper = styled.div`
   }
 `
 
-export const ContentBlock = styled.div`
-  display: flex;
-  flex-direction: column;
+export const ContentBlock = styled(FlexColumn)`
   row-gap: 20px;
   align-items: center;
 `

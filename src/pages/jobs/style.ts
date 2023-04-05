@@ -1,14 +1,11 @@
 import styled from 'styled-components';
 import {Button} from "../home/headrMain/style";
+import {flexColumn} from "../../common/style/mixin";
 
 
 export const JobsWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-
+  ${flexColumn()};
   z-index: 0;
-
-
 `
 export const ButtonJobMobile = styled(Button)`
   display: none;

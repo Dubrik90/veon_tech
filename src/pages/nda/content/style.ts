@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import {TitleH2, TitleH4} from "../../../common/style/global";
+import {flexColumn} from "../../../common/style/mixin";
 
 export const ContentWrapper = styled.div`
   background-color: var(--color-bg-green-light);
@@ -24,11 +26,7 @@ export const ContentWrapper = styled.div`
     }
   }
 `
-export const TitleHeader = styled.div`
-  font-weight: var(--fw-bold);
-  font-size: 40px;
-  line-height: 1.3;
-  color: var(--colors-text-dark);
+export const TitleHeader = styled(TitleH2)`
   padding-top: 75px;
 
   @media (max-width: 1439px) {
@@ -84,12 +82,9 @@ export const ContentBlock = styled.div`
     }
   }
 `
-export const Title = styled.div`
-  font-weight: var(--fw-bold);
-  font-size: 20px;
-  line-height: 122%;
-  color: var(--colors-text-dark);
+export const Title = styled(TitleH4)`  
   margin-bottom: 10px;
+  
   @media (max-width: 767px) {
     font-size: 18px;
     text-align: center;
@@ -112,8 +107,7 @@ export const Text = styled.div`
   }
 `
 export const Block = styled.div`
-  display: flex;
-  flex-direction: column;
+  ${flexColumn()};
   background-color: var(--colors-bg);
   border-radius: 15px;
   max-width: 400px;

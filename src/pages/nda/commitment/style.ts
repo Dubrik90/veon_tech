@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import {TextRegular, TitleH2} from "../../../common/style/global";
+import {flexColumn} from "../../../common/style/mixin";
 
 export const CommitmentWrapper = styled.div`
   padding-top: 40px;
@@ -23,15 +25,10 @@ export const CommitmentBlock = styled.div`
   }
 `
 export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
+  ${flexColumn()};
   row-gap: 31px;
 `
-export const Title = styled.h3`
-  font-weight: var(--fw-bold);
-  font-size: 40px;
-  line-height: 1.1;
-  color: var(--colors-text-dark);
+export const Title = styled(TitleH2)`
   @media (max-width: 1024px) {
     font-size: 30px;
   }
@@ -39,13 +36,10 @@ export const Title = styled.h3`
     display: none;
   }
 `
-export const Text = styled.p`
- font-size: 20px;
-  line-height: 169%;
-  color: var(--colors-text-dark);
+export const Text = styled(TextRegular)`
   position: relative;
   padding-left: 30px;
-  
+
   @media (max-width: 1024px) {
     font-size: 18px;
     padding-left: 20px;
@@ -82,6 +76,5 @@ export const ImageBlock = styled.div`
 `
 export const Img = styled.img`
   max-width: 100%;
-  //height: 100%;
-   object-fit: cover;
+  object-fit: cover;
 `

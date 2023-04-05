@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import {TextRegular, TitleH2} from "../../../common/style/global";
+import {flexColumn} from "../../../common/style/mixin";
 
 export const HelpWrapper = styled.div`
     padding: 67px 0;
@@ -11,7 +13,6 @@ export const HelpContent = styled.div`
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
-  //grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
   align-items: center;
   padding: 40px 43px;
@@ -35,17 +36,12 @@ export const HelpContent = styled.div`
 
 `
 export const TitleBlock = styled.div`
-  display: flex;
-  flex-direction: column;
+  ${flexColumn()};
   row-gap: 15px;
   flex: 0 1 580px;
 
 `
-export const Title = styled.h3`
-  font-size: 40px;
-  line-height: 122%;
-  color: var(--colors-text-dark);
-  font-weight: var(--fw-bold);
+export const Title = styled(TitleH2)`
 
   @media (max-width: 1210px) {
     font-size: 30px;
@@ -57,10 +53,8 @@ export const Title = styled.h3`
     font-size: 14px;
   }
 `
-export const Text = styled.p`
-  font-size: 20px;
-  line-height: 122%;
-  color: var(--colors-text-dark);
+export const Text = styled(TextRegular)`
+  
   @media (max-width: 1210px) {
     font-size: 16px;
   }
@@ -72,12 +66,9 @@ export const Text = styled.p`
   }
 `
 export const ButtonBlock = styled.div`
-  display: flex;
-  flex-direction: column;
+  ${flexColumn()};
   align-items: center;
   row-gap: 10px;
-
-
 `
 export const ImageWrapper = styled.div`
   @media (max-width: 425px) {
@@ -143,8 +134,7 @@ export const Button = styled.button`
 
 `
 export const ContactBlock = styled.div`
-  display: flex;
-  flex-direction: column;
+  ${flexColumn()};
   align-items: center;
   row-gap: 15px;
   

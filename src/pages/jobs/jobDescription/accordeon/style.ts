@@ -1,22 +1,19 @@
 import styled from "styled-components";
 import {Button} from "../../../home/headrMain/style";
+import {flexColumn} from "../../../../common/style/mixin";
+
 
 export const AccordeonWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+  ${flexColumn()};
   align-items: flex-start;
-  // row-gap: 15px;
   z-index: 0;
-  @media (max-width: 768px) {
-    // align-items: stretch;
-  }
+  
   @media (max-width: 425px) {
     font-size: 16px;
   }
 
   .MuiAccordion-region {
-    display: flex;
-    flex-direction: column;
+    ${flexColumn()};
     align-items: flex-start;
   }
 
@@ -37,7 +34,6 @@ export const AccordeonWrapper = styled.div`
 
     svg {
       fill: var(--color-grey-light);
-
     }
   }
 

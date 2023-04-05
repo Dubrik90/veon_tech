@@ -1,14 +1,12 @@
 import styled from "styled-components";
+import {TextMedium, TitleH3} from "../../../common/style/global";
 
 export const ContentCaseWrapper = styled.div`
   max-width: 1300px;
   margin: 0 auto;
 `
-export const Title = styled.h5`
-  font-weight: var(--fw-bold);
-  font-size: 24px;
-  line-height: 1.3;
-  color: var(--colors-text-dark);
+export const Title = styled(TitleH3)`
+  
   @media (max-width: 425px) {
     font-size: 18px;
   }
@@ -16,11 +14,7 @@ export const Title = styled.h5`
     font-size: 16px;
   }
 `
-export const Text = styled.p`
-  font-weight: var(--fw-medium);
-  font-size: 20px;
-  line-height: 1.3;
-  color: var(--colors-text-dark);
+export const Text = styled(TextMedium)`
 
   :not(:last-child) {
     margin-bottom: 50px;

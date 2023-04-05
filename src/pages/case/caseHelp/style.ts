@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {flexColumn} from "../../../common/style/mixin";
 
 export const CaseHelpWrapper = styled.div`
   background: rgba(193, 193, 193, 0.36);
@@ -8,10 +9,8 @@ export const CaseHelpWrapper = styled.div`
   }
 `
 export const HelpContent = styled.div`
-  display: flex;
-  flex-direction: column;
+  ${flexColumn()};
   align-items: center;
-  
 `
 export const SubTitle = styled.h4`
   text-align: center;

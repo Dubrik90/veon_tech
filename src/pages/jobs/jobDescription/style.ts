@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import {TextRegular, TitleH4} from "../../../common/style/global";
+import { flexColumn } from "../../../common/style/mixin";
 
 export const JobDescriptionWrapper = styled.div`
   padding-top: 80px;
@@ -8,7 +10,6 @@ export const JobDescriptionWrapper = styled.div`
     padding-top: 40px;
     padding-bottom: 30px;
   }
-
 `
 export const ContainerJob = styled.div`
   max-width: 1300px;
@@ -28,11 +29,9 @@ export const DescriptionBlock = styled.div`
     flex-direction: column;
     row-gap: 20px;
   }
-
 `
 export const DescriptionContent = styled.div`
-  display: flex;
-  flex-direction: column;
+  ${flexColumn()};
   row-gap: 90px;
   flex: 0 1 730px;
   @media (max-width: 632px) {
@@ -40,8 +39,7 @@ export const DescriptionContent = styled.div`
   }
 `
 export const BarLinks = styled.div`
-  display: flex;
-  flex-direction: column;
+  ${flexColumn()};
   row-gap: 3px;
   width: 270px;
   @media (max-width: 632px) {
@@ -92,20 +90,16 @@ export const BarLinksMobile = styled(BarLinks)`
 `
 
 export const DescriptionBar = styled.div`
-  display: flex;
-  flex-direction: column;
+  ${flexColumn()};
   row-gap: 60px;
   max-width: 270px;
   @media (max-width: 632px) {
     max-width: 100%;
     row-gap: 30px;
   }
-
-
 `
 export const AboutBlock = styled.div`
-  display: flex;
-  flex-direction: column;
+  ${flexColumn()};
   row-gap: 30px;
 `
 
@@ -119,14 +113,11 @@ export const About = styled.p`
   }
 `
 export const AboutQuality = styled.div`
-  display: flex;
-  flex-direction: column;
+  ${flexColumn()};
   row-gap: 15px;
 `
-export const SubTitle = styled.p`
-  font-size: 20px;
-  line-height: 163%;
-  color: var(--colors-text-dark);
+export const SubTitle = styled(TextRegular)`
+  
   @media (max-width: 1030px) {
     font-size: 18px;
   }
@@ -140,13 +131,13 @@ export const SubTitle = styled.p`
     font-size: 14px;
     align-self: center;
   }
-
 `
 export const Title = styled.h3`
   font-weight: var(--fw-bold);
   font-size: 28px;
   line-height: 163%;
   color: var(--colors-text-dark);
+  
   @media (max-width: 1030px) {
     font-size: 25px;
   }
@@ -155,7 +146,6 @@ export const Title = styled.h3`
   }
   @media (max-width: 836px) {
     font-size: 18px;
-    // max-width: 320px;
   }
   @media (max-width: 800px) {
     max-width: 320px;
@@ -166,7 +156,6 @@ export const Title = styled.h3`
   @media (max-width: 425px) {
     font-size: 15px;
   }
-
 `
 export const CardsBlock = styled.div`
   display: grid;
@@ -194,7 +183,6 @@ export const Card = styled.div`
     font-size: 13px;
   }
 
-
   :before {
     content: '';
     position: absolute;
@@ -202,27 +190,17 @@ export const Card = styled.div`
     left: 0;
     width: 4px;
     height: 100%;
-
     background-color: var(--colors-text-green);
-
   }
 `
 
 export const EchoBlock = styled.div`
-  display: flex;
-  flex-direction: column;
+  ${flexColumn()};
   row-gap: 12px;
   padding: 15px 24px;
   background: var(--color-grey-light);
-
-
 `
-export const EchoTitle = styled.h4`
-  font-weight: var(--fw-bold);
-  font-size: 20px;
-  line-height: 172%;
-  color: var(--color-dark);
-
+export const EchoTitle = styled(TitleH4)`
 `
 export const EchoText = styled.h4`
   display: flex;
@@ -232,6 +210,7 @@ export const EchoText = styled.h4`
   line-height: 175%;
   text-align: justify;
   color: var(--color-grey);
+  
   @media (max-width: 366px) {
     line-height: 140%;
     row-gap: 10px;
