@@ -29,6 +29,8 @@ export const Content = styled.div`
   row-gap: 31px;
 `
 export const Title = styled(TitleH2)`
+  color: var(--colors-text-dark);
+  
   @media (max-width: 1024px) {
     font-size: 30px;
   }

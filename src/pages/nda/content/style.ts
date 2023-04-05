@@ -27,6 +27,7 @@ export const ContentWrapper = styled.div`
   }
 `
 export const TitleHeader = styled(TitleH2)`
+  color: var(--colors-text-dark);
   padding-top: 75px;
 
   @media (max-width: 1439px) {
@@ -82,7 +83,8 @@ export const ContentBlock = styled.div`
     }
   }
 `
-export const Title = styled(TitleH4)`  
+export const Title = styled(TitleH4)`
+  color: var(--colors-text-dark);
   margin-bottom: 10px;
   
   @media (max-width: 767px) {

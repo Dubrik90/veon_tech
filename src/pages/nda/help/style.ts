@@ -42,6 +42,7 @@ export const TitleBlock = styled.div`
 
 `
 export const Title = styled(TitleH2)`
+  color: var(--colors-text-dark);
 
   @media (max-width: 1210px) {
     font-size: 30px;
