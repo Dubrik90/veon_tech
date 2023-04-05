@@ -89,7 +89,7 @@ export const TitleH2 = styled.h2`
   font-weight: var(--fw-bold);
   font-size: 40px;
   line-height: 1.1;
-  color: var(--colors-text-dark);
+  color: var(--color-dark);
 `
 export const TitleH3 = styled.h3`
   font-weight: var(--fw-bold);
