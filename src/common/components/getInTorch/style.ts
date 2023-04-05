@@ -26,14 +26,12 @@ export const GetInTorchWrapper = styled.div<GetInTorchWrapperProps>`
   svg {
     fill: var(--colors-text-wight);
   }
+  :hover {
+    background: var(--color-dg-footer);
+  }
+  
   @media (max-width: 768px) {
     height: 45px;
-  }
-
-  @media (max-width: 425px) {
-    //opacity: 0;
-    //visibility: hidden;
-    
   }
 `
 type ImgWrapProps = {
@@ -47,7 +45,6 @@ export const AvatarWrap = styled.div<ImgWrapProps>`
   width: 33px;
   height: 33px;
   border-radius: 100%;
-   
 `
 
 export const Button = styled.button`
@@ -55,19 +52,15 @@ export const Button = styled.button`
   flex-direction: column;
   font-family: 'Mulish';
   font-weight: var(--fw-bold);
- // color: var(--colors-text-dark);
   padding: 10px 0;
 `
 export const Title = styled.p`
-  font-weight: 500;
-  font-size: 16px;
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-16);
   line-height: 129.5%;
   color: var(--colors-text-wight);
+  
   @media (max-width: 425px) {
     font-size: 14px;
   }
-`
-export const SubTitle = styled.p`
-  font-size: 12px;
-  font-weight: 400;
 `

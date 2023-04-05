@@ -21,7 +21,7 @@ export const ApplicationWrapper = styled.div`
     max-width: 280px;
   }
 
-  @media (max-width: 940px) {
+  @media (max-width: 1049px) {
     row-gap: 15px;
 
     svg {
@@ -49,7 +49,7 @@ export const Text = styled.p`
   @media (max-width: 1245px) {
     font-size: 25px;
   }
-  @media (max-width: 940px) {
+  @media (max-width: 1049px) {
     font-size: 18px;
   }
 `

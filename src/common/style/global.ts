@@ -33,10 +33,10 @@ export default createGlobalStyle`
     line-height: 1;
     margin: 0;
     font-family: var(--family);
-    color: var(--colors-text-dark);
+   // color: var(--colors-text-dark);
     font-weight: var(--fw-regular);
     background-color: var(--colors-bg);
-    font-size: var(--fs-md);
+    font-size: var(--fs-18);
     transition: all 0.3s;
   }
 
@@ -89,7 +89,7 @@ export const TitleH2 = styled.h2`
   font-weight: var(--fw-bold);
   font-size: 40px;
   line-height: 1.1;
-  color: var(--colors-text-dark);
+  color: var(--color-dark);
 `
 export const TitleH3 = styled.h3`
   font-weight: var(--fw-bold);
@@ -115,7 +115,7 @@ export const TextMedium = styled.p`
   line-height: 1.2;
   color: var(--colors-text-dark);
 `
-export const FlexColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-`
+// export const FlexColumn = styled.div`
+//   display: flex;
+//   flex-direction: column;
+// `

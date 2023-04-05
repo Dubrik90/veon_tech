@@ -6,7 +6,7 @@ import React from "react";
 import {FormUsers} from "../FormUsers";
 import {useAppSelector} from "../../hook";
 import {MainWrapper} from "../../style/Main";
-import {ScrollToTop} from "../scrollToTop";
+import {ScrollToTop} from "../../hook/scrollToTop";
 import {Header} from "../header";
 import {Footer} from "../footer";
 import {ModalWindoww} from "../modalWindow";

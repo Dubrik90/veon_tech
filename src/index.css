@@ -2,8 +2,11 @@
 :root {
     /* Typography */
     --family: "Manrope", sans-serif;
-    --fs-sm: 14px;
-    --fs-md: 18px;
+    --fs-12: 12px;
+    --fs-14: 14px;
+    --fs-16: 16px;
+    --fs-18: 18px;
+
     --fw-regular: 400;
     --fw-medium: 500;
     --fw-bold: 700;
@@ -13,9 +16,12 @@
 
     /*Colors*/
     --color-dark: #000;
+    --color-withe: #fff;
     --color-grey: #393939;
     --color-grey-light: #EAEAEA;
-    --color-link: #18698B;
+    --color-menu-hover: #79E35E;
+
+
     --color-dg-footer: #3D5F47;
 }
 
@@ -24,6 +30,7 @@ body[data-theme="dark"] {
     --colors-text-light: #dbe8d3;
     --colors-text-wight: #dbe8d3;
     --colors-text-green: #5db447;
+    --color-link: #5bacd2;
 
     --colors-bg: #535461;
     --colors-bg-grey: #E9E9E9;
@@ -42,6 +49,7 @@ body[data-theme="light"] {
     --colors-text-light: #606060;
     --colors-text-green: #5db447;
     --colors-text-wight: #fff;
+    --color-link: #5bacd2;
 
     --colors-bg: #fff;
     --colors-bg-grey: #E9E9E9;

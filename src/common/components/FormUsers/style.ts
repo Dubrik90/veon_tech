@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import {fontSize} from "../../style/mixin";
 
-type ModalWindowWrapperProps = {
+type ModalFormWrapperProps = {
     openModal: boolean
 }
 
-export const ModalWindowWrapper = styled.div`
+export const ModalFormWrapper = styled.div`
   .container {
     max-width: 1440px;
     margin: 0 auto;

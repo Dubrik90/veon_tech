@@ -1,14 +1,14 @@
 import React from 'react';
 import {
-    About, AboutContact,
-    BottomLogo, Corporation,
+    About,
+    AboutContact,
+    Corporation,
     FooterBottom,
     FooterContent,
     FooterIcons,
     FooterTop,
     FooterWrapper,
-    ImgBlock,
-    ImgWrap, ImgWrapBottom
+    ImgWrap
 } from "./style";
 import {Container} from "../../style/Container";
 
@@ -18,9 +18,6 @@ import facebook from './assets/facebook.png'
 import linkedin from './assets/linkedin.png'
 import watsap from './assets/watsapp.png'
 import telega from './assets/teleg.png'
-import logoBottom from './assets/logoFooter.png'
-import {Link} from "react-router-dom";
-import {ROUTS} from "../../constans/routs";
 
 const dataSocial = [
     {img: instagram, to: 'https://instagram.com/veontech.agency?igshid=YmMyMTA2M2Y='},

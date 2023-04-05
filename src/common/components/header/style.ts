@@ -44,14 +44,14 @@ export const ImgWrapDesctop = styled.div<ImgWrapProps>`
   background-size: cover;
   width: 260px;
   height: 65px;
+  
   @media (max-width: 480px) {
     display: none;
-   // max-width: 212px;
-  // height: 60px;
   }
-`;
+`
 export const ImgWrapMobile = styled.div<ImgWrapProps>`
   display: none;
+  
   @media (max-width: 480px) {
     display: block;
     background-image: url(${props => props.img});
@@ -62,7 +62,6 @@ export const ImgWrapMobile = styled.div<ImgWrapProps>`
     height: 75px;
   }
 `
-
 export const HeaderContent = styled.div`
   display: flex;
   align-items: center;
@@ -73,9 +72,8 @@ export const HeaderContent = styled.div`
     transition: all 0.3s;
     position: relative;
     z-index: 10;
-    
     max-width: 75px;
-    
+
     img {
       width: 100%;
       height: 100%;
@@ -103,34 +101,18 @@ type PropsImageType = {
 }
 
 export const HeaderLogo = styled.div<PropsImageType>`
-  // width: 315px;
-  // height: 90px;
-  // transition: all 0.3s;
-  // overflow: hidden;
-  // flex: 1 1 auto;
-  // position: relative;
-  // z-index: 10;
-  //margin-left: -20px;
+  img {
+    object-fit: contain;
+    cursor: pointer;
+    
+    @media (max-width: 450px) {
+      width: 250px;
+    }
+  }
 
   @media (max-width: 768px) {
     width: 250px;
     height: 80px;
   }
-
-  img {
-    object-fit: contain;
-    cursor: pointer;
-    @media (max-width: 450px) {
-      width: 250px;
-    }
-  }
-`
-
-
-export const DiamondWrapper = styled.div`
-  padding-left: 25px;
-  position: absolute;
-  top: -3px;
-  right: -28px;
 `
 

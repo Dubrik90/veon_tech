@@ -3,5 +3,8 @@ export const ROUTS = {
     JOBS: '/jobs',
     NDA: '/nda',
     CASES: '/cases',
-    CASE: '/case/:category'
+    CASE: '/case/:category',
+    ABOUT: '/about',
+    DEVELOP: '/development',
+    POLICY: '/policy'
 }

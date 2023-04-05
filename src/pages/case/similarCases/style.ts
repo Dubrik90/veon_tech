@@ -6,7 +6,9 @@ export const SimilarCasesWrapper = styled.div`
 `
 
 export const SimilarCasesDesktop = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  //display: flex;
   column-gap: 20px;
   
   

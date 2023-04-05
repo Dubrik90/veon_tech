@@ -7,8 +7,6 @@ import {Company} from './company';
 import {Reviews} from './reviews';
 import {Contacts} from "./contacts";
 import {Layer} from "./layer";
-import {ThemeType} from "../../common/types/types";
-
 
 export const Home = () => {
 
@@ -21,6 +19,7 @@ export const Home = () => {
             <Company/>
             <Layer/>
             <Reviews/>
+
             <Contacts/>
         </>
     )

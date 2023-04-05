@@ -26,7 +26,7 @@ export const AboutText = styled.p`
   @media (max-width: 760px) {
     font-size: 14px;
     span {
-      color: #79E35E;
+      color: var(--color-menu-hover);
     }
   }
 

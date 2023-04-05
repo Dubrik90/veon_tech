@@ -17,6 +17,8 @@ import {useAppDispatch, useAppSelector} from "../../hook";
 import {setIsConsultantModalOpenAC} from "../../../app/app-reduser";
 import PhoneInput from "react-phone-input-2";
 import '../../style/PhoneInput.css';
+import {Link} from "react-router-dom";
+import {ROUTS} from "../../constans/routs";
 
 type FormikErrorType = {
     name?: string,
@@ -47,7 +49,6 @@ export const ConsultantModal = () => {
             if (!values.phone) {
                 errors.phone = 'укажите ваш телефон'
             }
-
             return errors
         },
         onSubmit: values => {
@@ -82,17 +83,11 @@ export const ConsultantModal = () => {
                                 }}
                                 onBlur={formik.handleBlur}
                             />
-                            {/*<CustomInput type='text'*/}
-                            {/*             placeholder='BY Номер телефона'*/}
-                            {/*             {...formik.getFieldProps('phone')}*/}
-                            {/*             onChange={formik.handleChange}/>*/}
-                            {/*{formik.touched.phone && formik.errors.phone &&*/}
-                            {/*    <Errors>{formik.errors.phone}</Errors>}*/}
                         </Label>
                     </InputBlock>
                     <SubText>
                         Нажимая на кнопку «Отправить», вы даете свое согласие на обработку персональных данных в
-                        соответствии с целями указанными в Политике обработки персональных данных
+                        соответствии с целями указанными в <Link to={ROUTS.POLICY}>Политике обработки персональных данных</Link>
                     </SubText>
                     <Button type='submit'>Отправить</Button>
                 </FormWrapper>

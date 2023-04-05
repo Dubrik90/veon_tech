@@ -10,9 +10,6 @@ export const NavigateMenu = styled.nav`
     font-weight: var(--fw-medium);
     line-height: 1.3;
     color: var(--colors-text-dark);
-    //@media (max-width: 858px) {
-    //  font-size: 18px;
-    //}
   }
 
   @media (max-width: 768px) {
@@ -62,8 +59,6 @@ export const MenuList = styled.ul<PropsMenu>`
     }
   }
 `
-
-
 export const SubMenu = styled.ul`
   opacity: 0;
   visibility: hidden;
@@ -80,6 +75,7 @@ export const SubMenu = styled.ul`
   display: flex;
   flex-direction: column;
   row-gap: 30px;
+  
   @media (max-width: 1320px) {
     transform: translate(0px, 27px);
   }
@@ -91,10 +87,8 @@ export const SubMenu = styled.ul`
     left: 0;
     width: 100%;
     height: 36px;
-    // background: #007aff;
   }
-
-
+  
   a {
     font-weight: 600;
     font-size: 12px;
@@ -102,22 +96,20 @@ export const SubMenu = styled.ul`
     color: var(--colors-text-dark);
     position: relative;
     padding-left: 30px;
-   // display: inline-flex;
 
     :before {
       content: '';
       width: 10px;
       height: 10px;
-      background: #79E35E;
+      background: var(--colors-bg-green);
       position: absolute;
       top: 0;
       left: 0;
       border-radius: 100%;
     }
-
-
+    
     :hover {
-      color: #79E35E;
+      color: var(--color-menu-hover);
     }
   }
 
@@ -127,7 +119,6 @@ export const MenuSubItem = styled.li`
 `
 export const MenuItem = styled.li`
   cursor: context-menu;
-  //display: inline-flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -137,12 +128,11 @@ export const MenuItem = styled.li`
   text-transform: uppercase;
   z-index: 5;
   
-
   @media (max-width: 1320px) {
-    font-size: var(--fs-sm);
+    font-size: var(--fs-14);
   }
   @media (max-width: 1092px) {
-    ${fontSize(25)};
+    font-size: 25px;
   }
 
   svg {
@@ -158,11 +148,11 @@ export const MenuItem = styled.li`
   }
   
   :hover {
-    color: #79E35E;
+    color: var(--color-menu-hover);
     svg {
       transform: rotate(-180deg);
       rect {
-        fill: #79E35E;
+        fill: var(--color-menu-hover);
       }
     }
 

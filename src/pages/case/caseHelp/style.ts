@@ -4,6 +4,7 @@ import {flexColumn} from "../../../common/style/mixin";
 export const CaseHelpWrapper = styled.div`
   background: rgba(193, 193, 193, 0.36);
   padding: 60px 0 30px 0;
+  
   @media(max-width: 768px) {
     padding: 40px 0 25px 0;
   }
@@ -34,7 +35,7 @@ export const SubTitle = styled.h4`
 
 export const Title = styled.button`
   font-family: Coolvetica, sans-serif;
-  font-weight: 400;
+  font-weight: var(--fw-regular);
   line-height: 1.2em;
   --transition-time: .5s;
   color: var(--colors-text-dark);
@@ -45,11 +46,9 @@ export const Title = styled.button`
   transition: color var(--transition-time) ease-in-out;
   z-index: 2;
   font-size: 60px;
- // font-size: calc(30px + 70 * (100vw / 1920));
-
+  
   @media(max-width: 768px) {
     font-size: 50px;
-   // font-size: calc(30px + (70 + 70 * 0.7) * ((100vw - 320px) / 1600));
   }
   @media(max-width: 425px) {
     font-size: 30px;
@@ -95,12 +94,9 @@ export const Title = styled.button`
     }
 
     :after {
-      //background: #007aff;
       transform: translateX(175%);
     }
-
   }
-
 `
 
 

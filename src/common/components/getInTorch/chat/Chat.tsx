@@ -1,6 +1,6 @@
 import React from 'react';
-import {ChatContent, ChatFooter, ChatHeader, ChatWrapper, CloseIcon, Input, InputBlock} from "./style";
-import {Button, SubTitle, Title} from "../style";
+import {ChatContent, ChatFooter, ChatHeader, ChatWrapper, CloseIcon, Input, InputBlock, SubTitle} from "./style";
+import {Button, Title} from "../style";
 import {Messages} from "./Messages";
 import {Avatar, Send} from "../assets";
 

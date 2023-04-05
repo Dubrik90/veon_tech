@@ -3,23 +3,24 @@ import {useFormik} from "formik";
 
 
 import {
-    Button,
-    CustomInput,
     CustomInputFile,
-    Errors,
-    FormWrapper,
-    InputBlock, InputFileText,
-    Label,
-    ModalWindowWrapper,
-    RegisterWrapper,
-    SubText,
-    Title
+    InputFileText,
 } from "./style";
 import {Clouse} from "./assets";
 import {useAppDispatch, useAppSelector} from "../../hook";
 import {setIsModalWindowOpenAC} from "../../../app/app-reduser";
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
+import {
+    Button,
+    CustomInput,
+    Errors,
+    FormWrapper,
+    InputBlock,
+    Label,
+    ModalWindowWrapper, RegisterWrapper, SubText,
+    Title
+} from "../consultantModal/style";
 
 type FormikErrorType = {
     name?: string,
@@ -102,18 +103,11 @@ export const ModalWindoww = () => {
                                 }}
                                 onBlur={formik.handleBlur}
                             />
-                            {/*{formik.touched.phone && formik.errors.phone &&*/}
-                            {/*    <Errors>{formik.errors.phone}</Errors>}*/}
-                            {/*<CustomInput type='text'*/}
-                            {/*             placeholder='BY Номер телефона'*/}
-                            {/*             {...formik.getFieldProps('phone')}*/}
-                            {/*             onChange={formik.handleChange}/>*/}
-
                         </Label>
                         <Label>
                             <CustomInputFile type='file'
                                              {...formik.getFieldProps('file')}
-                                // onChange={(e)=>onChangeFileHandler(e)}
+
                             />
                             <span>Прикрепите CV</span>
                             <InputFileText>{formik.values.file}</InputFileText>

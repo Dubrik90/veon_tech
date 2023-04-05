@@ -18,7 +18,6 @@ export const Menu: FC<MenuProps> = ({isOpenBurger, onClick, onClickCloseBurger})
     const theme = useAppSelector(state => state.app.theme)
 
 
-
     const submenuLinksAbout = [
         {title: 'О НАШЕЙ КОМПАНИИ', to: ROUTS.JOBS},
         {title: 'NDA', to: ROUTS.NDA},
@@ -41,8 +40,8 @@ export const Menu: FC<MenuProps> = ({isOpenBurger, onClick, onClickCloseBurger})
                             to={el.to}>{el.title}</Link></MenuSubItem>)}
                     </SubMenu>
                 </MenuItem>
-                <MenuItem className='about-link'><NavLink onClick={onClickCloseBurger} to={'/'}>О НАШЕЙ
-                    КОМПАНИИ</NavLink></MenuItem>
+                <MenuItem className='about-link'><NavLink onClick={onClickCloseBurger} to={ROUTS.ABOUT}>
+                    О НАШЕЙ КОМПАНИИ</NavLink></MenuItem>
                 <MenuItem>
                     <NavLink onClick={onClickCloseBurger} to={ROUTS.CASES}>КЕЙСЫ</NavLink>
                 </MenuItem>
@@ -53,13 +52,12 @@ export const Menu: FC<MenuProps> = ({isOpenBurger, onClick, onClickCloseBurger})
                     </SubMenu>
                 </MenuItem>
                 <MenuItem className='about-link'>
-                    <NavLink onClick={onClickCloseBurger} to={ROUTS.HOME}>Разработка сайтов</NavLink>
+                    <NavLink onClick={onClickCloseBurger} to={ROUTS.DEVELOP}>Разработка сайтов</NavLink>
                 </MenuItem>
                 <MenuItem><NavLink onClick={onClickCloseBurger} to={'/asq'}>БОНУСЫ</NavLink></MenuItem>
                 <MenuItem onClick={onClickCloseBurger}><NavLink to={ROUTS.JOBS}>КОНТАКТЫ</NavLink></MenuItem>
                 <Switch theme={theme} onClick={onClick}/>
             </MenuList>
-
         </NavigateMenu>
     );
 };

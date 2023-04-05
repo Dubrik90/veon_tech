@@ -4,7 +4,7 @@ export const GoUpWrapper = styled.div`
   min-width: 40px;
   min-height: 40px;
   border-radius: 50%;
-  background-color: #5db447;
+  background-color: var(--colors-text-green);
   position: fixed;
   right: -60px;
   bottom: 20px;
@@ -12,9 +12,6 @@ export const GoUpWrapper = styled.div`
   z-index: 100;
   transition: all 0.3s;
   cursor: pointer;
-  @media (max-width: 1100px) {
-   // display: none;
-  }
 
   &:after {
     content: "";
@@ -32,7 +29,7 @@ export const GoUpWrapper = styled.div`
     left: 13px;
   }
   &:hover {
-    background: var(--colors-bg-green);
+    background: var(--color-dg-footer);
   }
 `
 

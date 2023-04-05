@@ -7,18 +7,17 @@ import {FullSliderWrapper} from './style';
 import {Link} from "react-router-dom";
 
 type SliderPortfolioProps = {
-    activeCaseImg: Array<{img: string, src: string}>
+    activeCaseImg: Array<{ img: string, src: string }>
 }
 
-export const SliderPortfolio:FC<SliderPortfolioProps> = ({activeCaseImg}) => {
+export const SliderPortfolio: FC<SliderPortfolioProps> = ({activeCaseImg}) => {
 
     return (
-        <FullSliderWrapper >
+        <FullSliderWrapper>
             <Swiper
                 effect={'coverflow'}
                 grabCursor={true}
                 // centeredSlides={true}
-               // loop={true}
                 slidesPerView={'auto'}
                 coverflowEffect={{
                     rotate: 0,
@@ -26,7 +25,6 @@ export const SliderPortfolio:FC<SliderPortfolioProps> = ({activeCaseImg}) => {
                     depth: 100,
                     modifier: 1,
                 }}
-
                 modules={[EffectCoverflow]}
                 className="swiper_container"
                 breakpoints={{
@@ -49,15 +47,6 @@ export const SliderPortfolio:FC<SliderPortfolioProps> = ({activeCaseImg}) => {
                         )
                     })
                 }
-                {/*<div className="slider-controler">*/}
-                {/*    <div className="swiper-button-prev slider-arrow">*/}
-                {/*        <img src={left_arrow} alt="left_arrow"/>*/}
-                {/*    </div>*/}
-                {/*    <div className="swiper-button-next slider-arrow">*/}
-                {/*        <img src={right_arrow} alt="right_arrow"/>*/}
-                {/*    </div>*/}
-                {/*    <div className="swiper-pagination"></div>*/}
-                {/*</div>*/}
             </Swiper>
         </FullSliderWrapper>
     );

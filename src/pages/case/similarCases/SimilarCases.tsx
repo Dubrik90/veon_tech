@@ -26,17 +26,11 @@ export const SimilarCases = () => {
                 <SimilarCasesBlock>
                     <Title>Похожие кейсы:</Title>
                     <SimilarCasesDesktop>
-                        {
-                            similarCasesArray.map((el, index) => {
-                                return (
-                                    <ImgBlock key={index}>
-                                        <Link to={el.to}>
-                                            <Img src={el.img} alt={'image'}/>
-                                        </Link>
-                                    </ImgBlock>
-                                )
-                            })
-                        }
+                        {similarCasesArray.map((el, index) => <ImgBlock key={index}>
+                            <Link to={el.to}>
+                                <Img src={el.img} alt={'image'}/>
+                            </Link>
+                        </ImgBlock>)}
                         <Application/>
                     </SimilarCasesDesktop>
                     <SimilarSlider similarCasesArray={similarCasesArray}/>

@@ -31,6 +31,7 @@ export const JobHeaderContent = styled.div`
 `
 export const Title = styled(TitleH2)`
   margin-bottom: 20px;
+  
   @media (max-width: 632px) {
     order: 1;
     

@@ -1,10 +1,6 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useRef} from 'react';
 import {Chat} from "./chat/Chat";
-import gsap from 'gsap';
-import {AvatarWrap, Button, GetInTorchWrapper, SubTitle, Title} from "./style";
-import LogoLight from "../header/assets/logoLight.svg";
-import LogoDark from "../header/assets/logoDark.svg";
-import Avatar from './assets/massageIcon.svg'
+import {Button, GetInTorchWrapper, Title} from "./style";
 import {MassageIcon} from "./assets";
 
 

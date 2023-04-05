@@ -1,5 +1,5 @@
 import React, {FC, useState, MouseEvent, useRef} from 'react';
-import {ModalWindowWrapper} from "./style";
+import {ModalFormWrapper} from "./style";
 import {Form, useFormik} from "formik";
 import {useAppDispatch, useAppSelector, useBodyScrollLock} from "../../hook";
 import {setIsOpenFormAC} from "../../../app/app-reduser";
@@ -79,8 +79,7 @@ export const FormUsers = () => {
     })
 
     return (
-        <ModalWindowWrapper>
-
+        <ModalFormWrapper>
             <div className="modal-main-set modal-main-set--active">
                 <div className="container">
                     <div className="modal-main-set__content">
@@ -368,7 +367,7 @@ export const FormUsers = () => {
                     </div>
                 </div>
             </div>
-        </ModalWindowWrapper>
+        </ModalFormWrapper>
 
     )
 }

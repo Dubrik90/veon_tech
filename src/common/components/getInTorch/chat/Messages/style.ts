@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import {fontSize} from "../../../../style/mixin";
-import {FlexColumn} from "../../../../style/global";
+import {flexColumn} from "../../../../style/mixin";
+
 
 export const MessagesWrapper = styled.div`
   flex: 1 1 auto;
@@ -17,7 +17,8 @@ export const WelcomeBlock = styled.div`
 export const MessageContainer = styled.div`
 
 `
-export const MassageWrapper = styled(FlexColumn)`
+export const MassageWrapper = styled.div`
+  ${flexColumn()}
   row-gap: 5px;
 `
 export const Massage = styled.p`

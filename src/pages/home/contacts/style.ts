@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import {FlexColumn} from "../../../common/style/global";
+import {flexColumn} from "../../../common/style/mixin";
+
 
 
 export const ContactsWrapper = styled.div`
@@ -22,7 +23,8 @@ export const ContactsWrapper = styled.div`
   }
 `
 
-export const ContentBlock = styled(FlexColumn)`
+export const ContentBlock = styled.div`
+  ${flexColumn()}
   row-gap: 20px;
   align-items: center;
 `

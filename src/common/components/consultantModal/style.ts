@@ -1,11 +1,13 @@
 import styled from "styled-components";
-import {FlexColumn} from "../../style/global";
+import {flexColumn} from "../../style/mixin";
+import {TitleH4} from "../../style/global";
 
 type ModalWindowWrapperProps = {
     openModal?: boolean
 }
 
-export const ModalWindowWrapper = styled(FlexColumn)<ModalWindowWrapperProps>`
+export const ModalWindowWrapper = styled.div<ModalWindowWrapperProps>`
+  ${flexColumn()}
   position: fixed;
   top: 0;
   left: 0;
@@ -25,9 +27,10 @@ export const RegisterWrapper = styled.div`
   width: 420px;
   padding: 32px 40px;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: var(--colors-bg);
   position: relative;
   transition: scale 0.3s;
+
   @media (max-width: 425px) {
     width: 100%;
   }
@@ -40,12 +43,9 @@ export const RegisterWrapper = styled.div`
   }
 
 `
-export const Title = styled.p`
+export const Title = styled(TitleH4)`
+  font-size: var(--fs-16);
   text-align: center;
-  font-weight: 600;
-  font-size: 17px;
-  line-height: 129.5%;
-  color: #000000;
   margin-bottom: 23px;
 `
 
@@ -82,10 +82,6 @@ export const Label = styled.label`
   .form-control {
     width: 100% !important;
   }
-
- 
-
-
 `
 export const CustomInput = styled.input`
   width: 100%;
@@ -121,24 +117,35 @@ export const Errors = styled.div`
   z-index: 90000;
   font-size: 14px;
 `
-export const SubText = styled.button`
-  font-weight: 600;
+export const SubText = styled.p`
+  font-weight: var(--fw-medium);
   font-size: 9px;
-  line-height: 129.5%;
-  color: #000000;
+  line-height: 1.4;
+  letter-spacing: 0.1px;
+  color: var(--colors-text-dark);
   text-align: left;
   margin-bottom: 18px;
+  
+  a {
+    color: var(--color-link);
+    :hover {
+      color: var(--color-dark);
+    }
+  }
 `
 
 export const Button = styled.button`
-  background: #6EEC4E;
+  background-color: var(--colors-bg-green);
   border-radius: 30px;
-  font-weight: 600;
-  font-size: 17px;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-18);
   line-height: 129.5%;
-  color: #FFFFFF;
+  color: var(--colors-text-wight);
   padding: 13px 15px;
   width: 100%;
- 
+  transition: all 0.3s;
   
+  :hover {
+    background-color: var(--color-dg-footer);
+  }
 `
