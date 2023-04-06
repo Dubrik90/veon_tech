@@ -17,17 +17,16 @@ type MenuProps = {
 export const Menu: FC<MenuProps> = ({isOpenBurger, onClick, onClickCloseBurger}) => {
     const theme = useAppSelector(state => state.app.theme)
 
-
     const submenuLinksAbout = [
         {title: 'О НАШЕЙ КОМПАНИИ', to: ROUTS.JOBS},
         {title: 'NDA', to: ROUTS.NDA},
         {title: 'ВАКАНСИИ', to: ROUTS.JOBS},
     ]
     const submenuLinksServices = [
-        {title: 'Разработка сайтов', to: ROUTS.JOBS},
-        {title: 'Поддержка сайтов', to: ROUTS.JOBS},
-        {title: 'Разработка ПО', to: ROUTS.JOBS},
-        {title: 'UX/UI дизайн', to: ROUTS.JOBS},
+        {title: 'Разработка сайтов', to: `/services/webDev`},
+        {title: 'Поддержка сайтов', to: `/services/support`},
+        {title: 'Разработка ПО', to: `/services/webPO`},
+        {title: 'UX/UI дизайн', to: `/services/ux`},
     ]
 
     return (
@@ -52,7 +51,7 @@ export const Menu: FC<MenuProps> = ({isOpenBurger, onClick, onClickCloseBurger})
                     </SubMenu>
                 </MenuItem>
                 <MenuItem className='about-link'>
-                    <NavLink onClick={onClickCloseBurger} to={ROUTS.DEVELOP}>Разработка сайтов</NavLink>
+                    <NavLink onClick={onClickCloseBurger} to={ROUTS.SERVICES}>Разработка сайтов</NavLink>
                 </MenuItem>
                 <MenuItem><NavLink onClick={onClickCloseBurger} to={'/asq'}>БОНУСЫ</NavLink></MenuItem>
                 <MenuItem onClick={onClickCloseBurger}><NavLink to={ROUTS.JOBS}>КОНТАКТЫ</NavLink></MenuItem>

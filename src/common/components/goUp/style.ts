@@ -4,7 +4,7 @@ export const GoUpWrapper = styled.div`
   min-width: 40px;
   min-height: 40px;
   border-radius: 50%;
-  background-color: var(--colors-text-green);
+  background: var(--colors-bg-green);
   position: fixed;
   right: -60px;
   bottom: 20px;
