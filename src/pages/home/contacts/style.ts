@@ -29,6 +29,7 @@ export const ContentBlock = styled.div`
   align-items: center;
 `
 export const Subtitle = styled.div`
+  color: var(--colors-text-dark);
   font-family: Manrope, sans-serif;
   font-size: .875rem;
   font-weight: 600;

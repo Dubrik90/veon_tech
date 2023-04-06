@@ -106,7 +106,7 @@ export const TitleH4 = styled.h4`
 
 export const TextRegular = styled.p`
   font-size: 20px;
-  line-height: 1.2;
+  line-height: 1.3;
   color: var(--colors-text-dark);
 `
 export const TextMedium = styled.p`

@@ -42,6 +42,7 @@ export const BarLinks = styled.div`
   ${flexColumn()};
   row-gap: 3px;
   width: 270px;
+  
   @media (max-width: 632px) {
     display: none;
   }
