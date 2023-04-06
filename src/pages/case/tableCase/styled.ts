@@ -50,6 +50,7 @@ export const Table = styled.table`
   }
 `
 export const Tbody = styled.tbody`
+  color: var(--colors-text-dark);
   border-radius: 0 0 6px 6px;
   box-shadow: 0 4px 20px 10px rgba(0, 0, 0, .25);
   padding: 10px;
@@ -61,5 +62,4 @@ export const TdL = styled.td`
 export const TdR = styled.td`
   border: solid #e6e6e6;
   border-width: 0 0 1px;
-
 `
