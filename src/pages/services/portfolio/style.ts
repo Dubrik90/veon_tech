@@ -4,6 +4,7 @@ import {flexColumn} from "../../../common/style/mixin";
 
 export const PortfolioWrapper = styled.div`
   padding: 72px 0 60px 0;
+  background-color: rgba(110, 236, 78, 0.15);
 
   @media (max-width: 768px) {
     padding: 40px 0 40px 0;
@@ -14,7 +15,7 @@ export const PortfolioContent = styled.div`
 export const Title = styled(TitleH3)`
   font-size: 30px;
   margin-bottom: 30px;
-
+  text-align: center;
 
   @media (max-width: 768px) {
     font-size: 25px;
@@ -56,6 +57,10 @@ export const SwiperCardWrapper = styled.div`
   border-radius: 15px;
   overflow: hidden;
   
+  @media (max-width: 768px) {
+    border-radius: 0;
+  }
+  
 `
 export const ImgBlock = styled.div`
   height: 300px;
@@ -68,6 +73,10 @@ export const Img = styled.img`
   height: 100%;
   object-fit: cover;
   border-radius: 15px;
+  
+  @media (max-width: 768px) {
+    border-radius: 0;
+  }
   
 `
 export const ContentBlock = styled.div`

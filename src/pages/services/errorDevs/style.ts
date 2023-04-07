@@ -12,6 +12,7 @@ export const ErrorDevsWrapper = styled.div`
 `
 export const Title = styled(TitleH3)`
   font-size: 30px;
+  text-align: center;
   margin-bottom: 30px;
 
   @media (max-width: 768px) {

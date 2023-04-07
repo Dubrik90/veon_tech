@@ -10,7 +10,6 @@ type WorkUsProps = {
 }
 export const WorkUs:FC<WorkUsProps> = ({title,cardArray}) => {
 
-
     return (
         <WorkUsWrapper>
             <Container>

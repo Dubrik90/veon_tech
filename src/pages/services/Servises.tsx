@@ -12,7 +12,7 @@ import Proto3 from "./assets/stateDev/prototype3.svg";
 import Comp4 from "./assets/stateDev/computer4.svg";
 import Check5 from "./assets/stateDev/quality-check5.svg";
 import Up6 from "./assets/stateDev/start-up6.svg";
-import { DeveloperWork } from './developerWork';
+import {DeveloperWork} from './developerWork';
 import {Portfolio} from "./portfolio";
 
 export type CardWorkUsType = {
@@ -83,10 +83,11 @@ export const Services = () => {
                            text={activeDataService.text}
                            title={activeDataService.title}
             />
+
+
             {service === 'webDev' &&
                 <>
                     <ErrorDevs/>
-
                     <WorkUs cardArray={cardArray1}
                             title={'Почему работать с нами удобно и выгодно?'}
                     />
@@ -95,6 +96,14 @@ export const Services = () => {
                             title={'Этапы разработки и создания сайта'}
                     />
                     <Portfolio/>
+                    <CaseHelp/>
+                </>
+            }
+            {service === 'support' &&
+                <>
+                    <WorkUs cardArray={cardArray1}
+                            title={'Почему работать с нами удобно и выгодно?'}
+                    />
                     <CaseHelp/>
                 </>
             }
