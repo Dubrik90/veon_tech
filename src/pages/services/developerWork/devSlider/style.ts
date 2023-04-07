@@ -1,16 +1,14 @@
 import styled from 'styled-components';
 
-export const FullSliderWrapper = styled.div`
+export const DevSliderWrapper = styled.div`
 
   display: none;
   
   @media (max-width: 768px) {
-
     display: block;
-
-
+    
     .swiper_container {
-      padding: 2rem 0;
+      padding-bottom: 2rem;
       position: relative;
     }
 
@@ -24,21 +22,18 @@ export const FullSliderWrapper = styled.div`
     .swiper-slide {
       width: 20rem;
       position: relative;
+      
       @media (max-width: 425px) {
         width: 14.6rem;
-
       }
     }
-
-    .swiper-slide-visible {
-    //  opacity: 0.3;
-    }
-
+    
     .swiper-slide-prev, .swiper-slide-next {
       opacity: 1;
       position: relative;
       transition: all 0.3s;
       border: 17px;
+      
       :before {
         transition: all 0.3s;
         content: '';
@@ -63,13 +58,7 @@ export const FullSliderWrapper = styled.div`
 
     .swiper-slide img {
       width: 100%;
-      //width: 19.6rem;
-      object-fit: contain;
-
-      @media (max-width: 425px) {
-      //  width: 12.6rem;
-
-      }
+      object-fit: cover;
     }
 
     .swiper-slide-shadow-left,

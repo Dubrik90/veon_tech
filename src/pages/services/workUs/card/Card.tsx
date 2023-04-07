@@ -7,7 +7,6 @@ type CardProps = {
 }
 
 export const Card: FC<CardProps> = ({el}) => {
-    console.log(el)
     return (
         <CardWrapper>
             <ImgBlock>

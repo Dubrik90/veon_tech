@@ -71,7 +71,6 @@ export const CasesSlider = () => {
                                 <Link to={`/case/${el.type}`}>
                                     <img src={el.img} alt="slide_image"/>
                                 </Link>
-
                             </SwiperSlide>
                         )
                     })

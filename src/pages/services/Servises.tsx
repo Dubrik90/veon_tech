@@ -12,6 +12,8 @@ import Proto3 from "./assets/stateDev/prototype3.svg";
 import Comp4 from "./assets/stateDev/computer4.svg";
 import Check5 from "./assets/stateDev/quality-check5.svg";
 import Up6 from "./assets/stateDev/start-up6.svg";
+import { DeveloperWork } from './developerWork';
+import {Portfolio} from "./portfolio";
 
 export type CardWorkUsType = {
     img: string,
@@ -75,8 +77,6 @@ export const Services = () => {
         },
     ]
 
-
-
     return (
         <ServicesWrapper>
             <ServiceHeader img={activeDataService.img}
@@ -90,9 +90,11 @@ export const Services = () => {
                     <WorkUs cardArray={cardArray1}
                             title={'Почему работать с нами удобно и выгодно?'}
                     />
+                    <DeveloperWork/>
                     <WorkUs cardArray={cardArray2}
                             title={'Этапы разработки и создания сайта'}
                     />
+                    <Portfolio/>
                 </>
             }
         </ServicesWrapper>
