@@ -86,7 +86,7 @@ export const Services = () => {
             {service === 'webDev' &&
                 <>
                     <ErrorDevs/>
-                    <CaseHelp/>
+
                     <WorkUs cardArray={cardArray1}
                             title={'Почему работать с нами удобно и выгодно?'}
                     />
@@ -95,6 +95,7 @@ export const Services = () => {
                             title={'Этапы разработки и создания сайта'}
                     />
                     <Portfolio/>
+                    <CaseHelp/>
                 </>
             }
         </ServicesWrapper>
