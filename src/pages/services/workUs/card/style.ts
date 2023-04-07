@@ -44,7 +44,9 @@ export const Title = styled.h3`
   }
 `
 export const Text = styled(TextRegular)`
-  font-size: 16px;
+  font-size: 14px;
+  text-align: justify;
+  
   color: var(--color-dark);
   @media(max-width: 1112px) {
     font-size: 14px;
