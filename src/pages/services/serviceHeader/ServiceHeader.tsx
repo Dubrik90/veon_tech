@@ -34,7 +34,6 @@ export const ServiceHeader:FC<ServiceHeaderPropsType> = ({text, img, title}) => 
                     </HeaderImage>
                 </HeaderBlock>
             </Container>
-
         </ServiceHeaderWrapper>
     );
 };

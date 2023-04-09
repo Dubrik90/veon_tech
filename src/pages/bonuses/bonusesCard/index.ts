@@ -1,0 +1,1 @@
+export {BonusesCard} from './BonusesCard'

@@ -7,5 +7,6 @@ export const ROUTS = {
     ABOUT: '/about',
     //DEVELOP: '/development',
     POLICY: '/policy',
-    SERVICES: '/services/:service'
+    SERVICES: '/services/:service',
+    BONUSES: '/bonuses',
 }

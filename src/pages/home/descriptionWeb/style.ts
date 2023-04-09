@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const DescriptionWebWrapper = styled.div`
-  background-color: rgba(110, 236, 78, 0.15);
+  background-color: var(--colors-bg-green-dark);
   padding: 72px 0 60px 0;
 
 `

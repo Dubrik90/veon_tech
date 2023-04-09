@@ -1,0 +1,1 @@
+export {SliderBonuse} from './SliderBonuse'

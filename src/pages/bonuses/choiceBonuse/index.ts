@@ -1,0 +1,1 @@
+export {ChoiceBonuse} from './ChoiceBonuse'

@@ -83,8 +83,6 @@ export const Services = () => {
                            text={activeDataService.text}
                            title={activeDataService.title}
             />
-
-
             {service === 'webDev' &&
                 <>
                     <ErrorDevs/>

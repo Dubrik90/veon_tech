@@ -9,6 +9,7 @@ import {Nda} from "./pages/nda";
 import {Сases} from "./pages/cases";
 import {Case} from "./pages/case";
 import {Services} from "./pages/services";
+import { Bonuses } from './pages/bonuses';
 
 
 
@@ -24,6 +25,7 @@ function App() {
                     <Route path={ROUTS.CASES} element={<Сases/>}/>
                     <Route path={ROUTS.CASE} element={<Case/>}/>
                     <Route path={ROUTS.SERVICES} element={<Services/>}/>
+                    <Route path={ROUTS.BONUSES} element={<Bonuses/>}/>
                 </Route>
             </Routes>
         </HashRouter>
