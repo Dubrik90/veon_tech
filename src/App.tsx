@@ -10,6 +10,7 @@ import {Сases} from "./pages/cases";
 import {Case} from "./pages/case";
 import {Services} from "./pages/services";
 import { Bonuses } from './pages/bonuses';
+import {Contacts} from "./pages/Contacts";
 
 
 
@@ -26,6 +27,7 @@ function App() {
                     <Route path={ROUTS.CASE} element={<Case/>}/>
                     <Route path={ROUTS.SERVICES} element={<Services/>}/>
                     <Route path={ROUTS.BONUSES} element={<Bonuses/>}/>
+                    <Route path={ROUTS.CONTACTS} element={<Contacts/>}/>
                 </Route>
             </Routes>
         </HashRouter>

@@ -9,4 +9,5 @@ export const ROUTS = {
     POLICY: '/policy',
     SERVICES: '/services/:service',
     BONUSES: '/bonuses',
+    CONTACTS: 'contacts'
 }

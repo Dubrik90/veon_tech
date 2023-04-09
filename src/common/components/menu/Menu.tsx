@@ -54,7 +54,7 @@ export const Menu: FC<MenuProps> = ({isOpenBurger, onClick, onClickCloseBurger})
                     <NavLink onClick={onClickCloseBurger} to={ROUTS.SERVICES}>Разработка сайтов</NavLink>
                 </MenuItem>
                 <MenuItem><NavLink onClick={onClickCloseBurger} to={ROUTS.BONUSES}>БОНУСЫ</NavLink></MenuItem>
-                <MenuItem onClick={onClickCloseBurger}><NavLink to={ROUTS.JOBS}>КОНТАКТЫ</NavLink></MenuItem>
+                <MenuItem onClick={onClickCloseBurger}><NavLink to={ROUTS.CONTACTS}>КОНТАКТЫ</NavLink></MenuItem>
                 <Switch theme={theme} onClick={onClick}/>
             </MenuList>
         </NavigateMenu>
