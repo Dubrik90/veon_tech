@@ -2,10 +2,11 @@ import React, {useState} from 'react';
 import {ContactsWrapper} from './style';
 import {JobHeader} from "../jobs/jobHeader";
 import {ContactsAbout} from './contactsAbout';
+import {OfficeHours} from "./officeHours";
 
 
 export const Contacts = () => {
-    const [selectedDay, setSelectedDay] = useState(new Date().getDay());
+
 
     return (
         <ContactsWrapper>
@@ -13,6 +14,7 @@ export const Contacts = () => {
                        breadcrumbsTitle={'КОНТАКТЫ'}
             />
             <ContactsAbout/>
+            <OfficeHours/>
         </ContactsWrapper>
     );
 };
