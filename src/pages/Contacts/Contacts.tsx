@@ -4,7 +4,7 @@ import {JobHeader} from "../jobs/jobHeader";
 import {ContactsAbout} from './contactsAbout';
 import {OfficeHours} from "./officeHours";
 import {Requisites} from "./requisites";
-import {Map} from "./map";
+import {MapComponent} from "./map";
 
 
 export const Contacts = () => {
@@ -16,7 +16,7 @@ export const Contacts = () => {
             />
             <ContactsAbout/>
             <OfficeHours/>
-            <Map/>
+            <MapComponent/>
             <Requisites/>
         </ContactsWrapper>
     );
