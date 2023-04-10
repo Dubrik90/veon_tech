@@ -48,27 +48,22 @@ export const OfficeHours = () => {
         },
     ]
 
-
     return (
         <OfficeHoursWrapper>
             <Container>
-
                 <OfficeHoursContent>
                     <Title>Время работы:</Title>
                     <HoursBlock>
-                        {
-                            hoursData.map(el => (
-                                <HoursCard key={el.id} className={selectedDay === el.id ? 'active_day' : ''}>
-                                    <Day>{el.day}</Day>
-                                    <Hours>{el.hours}</Hours>
-                                </HoursCard>
-                            ))
-                        }
+                        {hoursData.map(el => (
+                            <HoursCard key={el.id}
+                                       className={selectedDay === el.id ? 'active_day' : ''}>
+                                <Day>{el.day}</Day>
+                                <Hours>{el.hours}</Hours>
+                            </HoursCard>
+                        ))}
                     </HoursBlock>
                 </OfficeHoursContent>
             </Container>
-
-            OfficeHours
         </OfficeHoursWrapper>
     );
 };

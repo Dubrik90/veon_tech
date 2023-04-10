@@ -2,6 +2,8 @@ import styled from "styled-components";
 import {flexColumn} from "../../../common/style/mixin";
 
 export const OfficeHoursWrapper = styled.div`
+  padding-top: calc(30px + (40 - 30) * ((100vw - 320px) / (1920 - 320)));
+  padding-bottom: calc(30px + (40 - 30) * ((100vw - 320px) / (1920 - 320)));
 
 
 `
@@ -11,12 +13,11 @@ export const OfficeHoursContent = styled.div`
   justify-content: center;
   align-items: center;
   row-gap: calc(20px + (25 - 20) * ((100vw - 320px) / (1920 - 320)));
-
-
 `
+
 export const Title = styled.h4`
   font-weight: var(--fw-bold);
-  font-size: 28px;
+  font-size: calc(16px + (28 - 16) * ((100vw - 320px) / (1920 - 320)));
   line-height: 1.3;
   color: var(--colors-text-dark);
 `
@@ -30,11 +31,11 @@ export const HoursBlock = styled.div`
   //  grid-template-rows: repeat(5, 1fr);
     row-gap: 10px;
    // align-items: center;
-   // justify-content: center;
     
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 340px;
     
   }
 `
@@ -56,32 +57,32 @@ export const HoursCard = styled.div`
     background: var(--colors-text-green);
   }
   
-  :nth-child(1) {
-    grid-area: 1 / 1 / 2 / 2;
-  }
-  :nth-child(2) {
-    grid-area: 1 / 2 / 2 / 3;
-  }
-  :nth-child(3) {
-    grid-area: 1 / 3 / 2 / 4;
-  }
-  :nth-child(4) {
-    grid-area: 1 / 4 / 2 / 5;
-  }
-  :nth-child(5) {
-    grid-area: 1 / 5 / 2 / 6;
-  }
-  :nth-child(6) {
-    grid-area: 2 / 2 / 3 / 3;
-  }
-  :nth-child(7) {
-    grid-area: 2 / 4 / 3 / 5;
-  }
+  //:nth-child(1) {
+  //  grid-area: 1 / 1 / 2 / 2;
+  //}
+  //:nth-child(2) {
+  //  grid-area: 1 / 2 / 2 / 3;
+  //}
+  //:nth-child(3) {
+  //  grid-area: 1 / 3 / 2 / 4;
+  //}
+  //:nth-child(4) {
+  //  grid-area: 1 / 4 / 2 / 5;
+  //}
+  //:nth-child(5) {
+  //  grid-area: 1 / 5 / 2 / 6;
+  //}
+  //:nth-child(6) {
+  //  grid-area: 2 / 2 / 3 / 3;
+  //}
+  //:nth-child(7) {
+  //  grid-area: 2 / 4 / 3 / 5;
+  //}
 `
 export const Day = styled.p`
   color: var(--colors-text-dark);
   font-weight: var(--fw-bold);
-  font-size: calc(8px + (14 - 8) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(9px + (14 - 9) * ((100vw - 320px) / (1920 - 320)));
   line-height: 1.3;
   
   .active_day & {

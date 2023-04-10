@@ -65,6 +65,16 @@ export const ContactsCardContent = styled.div`
       }
     }
   }
+  @media (max-width: 768px) {
+    :after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: -12px;
+      right: 0;
+      background: #D9D9D9;
+  }
 `
 
 export const Title = styled.h5`

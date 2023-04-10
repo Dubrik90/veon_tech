@@ -6,7 +6,7 @@ import {OverridableComponent} from "@mui/material/OverridableComponent";
 import {SvgIconTypeMap} from "@mui/material";
 
 
-const SocialItem: FC<{ item: { icon: OverridableComponent<SvgIconTypeMap<{}, "svg">> & { muiName: string; }, title: string, text: string, link: string, } }> = React.memo(({item}) => {
+const ContactsCard: FC<{ item: { icon: OverridableComponent<SvgIconTypeMap<{}, "svg">> & { muiName: string; }, title: string, text: string, link: string, } }> = React.memo(({item}) => {
     const Icon = item.icon;
 
     return (
@@ -21,7 +21,7 @@ const SocialItem: FC<{ item: { icon: OverridableComponent<SvgIconTypeMap<{}, "sv
 
 export const ContactsAbout: FC = () => {
 
-    const renderItems = () => SOCIAL_LINKS.map((item, index) => <SocialItem item={item} key={index}/>);
+    const renderItems = () => SOCIAL_LINKS.map((item, index) => <ContactsCard item={item} key={index}/>);
 
     return (
         <Container>

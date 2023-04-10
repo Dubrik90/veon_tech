@@ -12,8 +12,6 @@ import {Services} from "./pages/services";
 import { Bonuses } from './pages/bonuses';
 import {Contacts} from "./pages/Contacts";
 
-
-
 function App() {
 
     return (
