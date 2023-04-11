@@ -84,11 +84,13 @@ export const Title = styled.h5`
   line-height: 1.3;
   color: var(--colors-text-dark);
   text-align: center;
-  margin-bottom: 25px;
+ margin-bottom: 10px;
+  min-height: 40px;
   
   @media (max-width: 768px) {
     margin-bottom: 0;
     justify-self: flex-start;
+    min-height: auto;
   }
 `
 export const Text = styled.p`
