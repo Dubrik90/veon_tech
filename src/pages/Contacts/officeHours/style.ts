@@ -40,7 +40,7 @@ export const HoursBlock = styled.div`
   }
 `
 export const HoursCard = styled.div`
-  box-shadow: 2px 4px 20px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
   background: var(--colors-bg);
   ${flexColumn()};
   padding-top: calc(5px + (7 - 5) * ((100vw - 320px) / (1920 - 320)));

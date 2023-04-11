@@ -85,8 +85,16 @@ export const Img = styled.img`
 export const Button = styled.button`
   position: relative;
   font-size: 16px;
-  
-
+  background: var(--colors-bg-green);
+  font-weight: var(--fw-extra-bold);
+  line-height: 20px;
+  color: var(--colors-text-wight);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s;
+  font-family: var(--family);
+  text-transform: uppercase;
 
   :before {
     background-color: var(--colors-bg-green);
@@ -101,16 +109,7 @@ export const Button = styled.button`
     z-index: -1;
   }
 
-  background: var(--colors-bg-green);
-  font-weight: var(--fw-extra-bold);
-  line-height: 20px;
-  color: var(--colors-text-wight);
-  padding: 15px 20px;
-  display: flex;
-  justify-content: center;
-  transition: all 0.3s;
-  font-family: var(--family);
-  text-transform: uppercase;
+ 
 
   @media (max-width: 834px) {
     font-size: 12px;

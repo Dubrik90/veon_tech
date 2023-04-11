@@ -1,22 +1,129 @@
 import React from 'react';
-import {MapWrapper} from './style';
+import {
+    Button,
+    CardWrapper,
+    CustomInput,
+    CustomTextArea,
+    Errors,
+    FormBlock,
+    FormWrapper,
+    InputBlock,
+    Label,
+    MapComponentWrapper,
+    MapWrapper,
+    MapWrapperBlock,
+    StyledMap,
+    SubText,
+    SubTitle,
+    Title
+} from './style';
 import {Container} from "../../../common/style/Container";
-import { YMaps, Map, Placemark } from 'react-yandex-maps';
+import {Placemark, YMaps} from 'react-yandex-maps';
+import {useFormik} from "formik";
+
+import PhoneInput from "react-phone-input-2";
+import {ROUTS} from "../../../common/constans/routs";
+
+type FormikErrorType = {
+    name?: string,
+    phone?: string,
+    text?: string
+}
 
 export const MapComponent = () => {
-    const mapState = { center: [53.905087, 27.529956], zoom: 16 };
-    const coordinates = [53.905087, 27.529956];
+    const mapState = {center: [53.932681, 27.555049], zoom: 16};
+    const coordinates = [53.932681, 27.555049];
+
+    const formik = useFormik({
+        initialValues: {
+            name: '',
+            phone: '',
+            text: ''
+        },
+
+        validate: (values) => {
+            const errors: FormikErrorType = {}
+
+            if (!values.name) {
+                errors.name = 'Поле не может быть пустым'
+            }
+
+            if (!values.phone) {
+                errors.phone = 'укажите ваш телефон'
+            }
+
+
+            return errors
+        },
+        onSubmit: values => {
+            console.log(formik.values)
+        }
+    })
 
     return (
-        <MapWrapper>
+        <MapComponentWrapper>
             <Container>
-                <YMaps>
-                    <Map state={mapState}>
-                        <Placemark geometry={coordinates} />
-                    </Map>
-                </YMaps>
+                <MapWrapperBlock>
+                    <CardWrapper>
+                        <Title><span>РАСПОЛОЖЕНИЕ</span> Нашего Офиса </Title>
+                        <MapWrapper>
+                            <YMaps width="100%" height="400px">
+                                <StyledMap state={mapState}>
+                                    <Placemark geometry={coordinates}/>
+                                </StyledMap>
+                            </YMaps>
+                        </MapWrapper>
+                    </CardWrapper>
+                    <FormBlock>
+                        <Title>Мы рады увидеть <span>Вашу</span> заявку!</Title>
+                        <SubTitle>
+                            Пожалуйста оставьте Ваши имя и телефон, мы будем счастливы помочь Вам.
+                        </SubTitle>
+                        <FormWrapper onSubmit={formik.handleSubmit}>
+                            <InputBlock>
+                                <Label>
+                                    <CustomInput type='text'
+                                                 placeholder='Ваше имя'
+                                                 {...formik.getFieldProps('name')}
+                                                 onChange={formik.handleChange}
+                                    />
+                                    {formik.touched.name && formik.errors.name &&
+                                        <Errors>{formik.errors.name}</Errors>}
+                                </Label>
+                                <Label>
+                                    <PhoneInput
+                                        value={'+ 375'}
+                                        inputProps={{name: "phone"}}
+                                        onlyCountries={['by', 'ru']}
+                                        countryCodeEditable={false}
+                                        onChange={(phoneNumber, country, e) => {
+                                            formik.handleChange(e)
+                                        }}
+                                        onBlur={formik.handleBlur}
+                                    />
+                                </Label>
+                                <Label>
+                                    <CustomTextArea
+                                        placeholder='Сообщение'
+                                        {...formik.getFieldProps('text')}
+                                        onChange={formik.handleChange}
+                                    />
+                                    {formik.touched.name && formik.errors.name &&
+                                        <Errors>{formik.errors.name}</Errors>}
+                                </Label>
+                            </InputBlock>
+                            <SubText>
+                                Нажимая на кнопку «Отправить», вы даете свое согласие на обработку персональных данных в
+                                соответствии с целями указанными в <a href={ROUTS.POLICY}>Политике обработки персональных
+                                данных</a>
+                            </SubText>
+                            <Button type='submit'>Отправить</Button>
+                        </FormWrapper>
+                    </FormBlock>
+
+                </MapWrapperBlock>
             </Container>
-        </MapWrapper>
+        </MapComponentWrapper>
     );
 }
 

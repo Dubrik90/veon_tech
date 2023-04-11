@@ -5,6 +5,7 @@ import {ContactsAbout} from './contactsAbout';
 import {OfficeHours} from "./officeHours";
 import {Requisites} from "./requisites";
 import {MapComponent} from "./map";
+import {SocialIcons} from "./socialIcons";
 
 
 export const Contacts = () => {
@@ -15,6 +16,7 @@ export const Contacts = () => {
                        breadcrumbsTitle={'КОНТАКТЫ'}
             />
             <ContactsAbout/>
+            <SocialIcons/>
             <OfficeHours/>
             <MapComponent/>
             <Requisites/>
