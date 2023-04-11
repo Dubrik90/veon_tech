@@ -9,4 +9,8 @@ export const SocialIconsContent = styled.div`
   display: flex;
   column-gap: 10px;
   justify-content: center;
+  
+  svg:hover {
+    fill: #5DB447;
+  }
 `
