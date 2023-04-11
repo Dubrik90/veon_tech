@@ -99,6 +99,7 @@ export const Text = styled.p`
   text-align: center;
   color: var(--colors-text-dark);
   margin-bottom: 50px;
+  flex: 1 1 auto;
 
   @media (max-width: 768px) {
     text-align: left;
