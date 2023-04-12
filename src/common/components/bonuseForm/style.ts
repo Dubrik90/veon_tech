@@ -282,27 +282,61 @@ export const Radio = styled(Field)`
 export const CheckboxContainer = styled.div`
   grid-column: 1 / span 2;
   display: flex;
+ 
+  
+ 
   flex-wrap: wrap;
-  gap: calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320)));
-  align-items: center;
+  gap: 10px;
+  
+// gap: calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320)));
+ // align-items: center;
+ // margin-bottom: 15px;
+  
+  
+  
+
+  .choise-btn {
+    padding: 14px 32px;
+    padding-top: calc(6px + (14 - 6) * ((100vw - 320px) / (1920 - 320)));
+    padding-bottom: calc(6px + (14 - 6) * ((100vw - 320px) / (1920 - 320)));
+    padding-right: calc(10px + (32 - 10) * ((100vw - 320px) / (1920 - 320)));
+    padding-left: calc(10px + (32 - 10) * ((100vw - 320px) / (1920 - 320)));
+    font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: var(--fw-medium);
+    background: transparent;
+    overflow: hidden;
+    cursor: pointer;
+    color: var(--colors-text-dark);
+    transition: all 0.2s ease 0s;
+    position: relative;
+    border: 1px solid var(--colors-text-light);
+    border-radius: 500px;
+  }
+  .choise-btn--active {
+    color: var(--colors-text-dark);
+    border: 1px solid transparent;
+    background: var(--colors-bg-green);
+  }
 `;
 
 export const TitleBonuse = styled.div`
   grid-column: 1 / span 2;
-  font-size: 24px;
+  font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
   color: var(--colors-text-dark);
   text-align: left;
+  font-weight: var(--fw-bold);
+  margin-bottom: 5px;
 `
 
 type CheckboxLabelProps = {
     checked: boolean
 }
 export const CheckboxLabel = styled.label<CheckboxLabelProps>`
-  padding: 14px 32px;
-  padding-top: calc(6px + (14 - 6) * ((100vw - 320px) / (1920 - 320)));
-  padding-bottom: calc(6px + (14 - 6) * ((100vw - 320px) / (1920 - 320)));
-  padding-right: calc(10px + (32 - 10) * ((100vw - 320px) / (1920 - 320)));
-  padding-left: calc(10px + (32 - 10) * ((100vw - 320px) / (1920 - 320)));
+ // padding: 14px 32px;
+ // padding-top: calc(6px + (14 - 6) * ((100vw - 320px) / (1920 - 320)));
+ // padding-bottom: calc(6px + (14 - 6) * ((100vw - 320px) / (1920 - 320)));
+ // padding-right: calc(10px + (32 - 10) * ((100vw - 320px) / (1920 - 320)));
+ // padding-left: calc(10px + (32 - 10) * ((100vw - 320px) / (1920 - 320)));
   font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1920 - 320)));
   font-weight: var(--fw-bold);
   background: transparent;
@@ -311,43 +345,51 @@ export const CheckboxLabel = styled.label<CheckboxLabelProps>`
   color: var(--colors-text-dark);
   transition: all 0.2s ease 0s;
   position: relative;
-  border: 1px solid var(--colors-text-light);
-  border-radius: 500px;
+  width: 100%;
+  
+ // border: 1px solid var(--colors-text-light);
+ // border-radius: 500px;
+  p {
+    padding: 10px;
+    font-weight: var(--fw-regular);
+   
+  }
 
   &:hover {
     box-shadow: var(--shadow);
   }
 
-  &:before {
-    content: "";
-    width: 0;
-    height: 100%;
-    background: var(--colors-bg-green);
-    position: absolute;
-    right: 0;
-    top: 0;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
-    z-index: -1
-  }
+  //&:before {
+  //  content: "";
+  //  width: 0;
+  //  height: 100%;
+  //  background: var(--colors-bg-green);
+  //  position: absolute;
+  //  right: 0;
+  //  top: 0;
+  //  -webkit-transition: all 0.2s;
+  //  transition: all 0.2s;
+  //  z-index: -1
+  //}
 
   ${({checked}) =>
           checked &&
           `
     &:before {
-     width: 100%;
+    
     }
-    border: 1px solid transparent !important;
+   
   `}
 `;
 
 
 export const Checkbox = styled(Field)`
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
+  //position: absolute;
+  //opacity: 0;
+  //cursor: pointer;
+  //height: 0;
+  //width: 0;
+  margin-right: 10px; 
 `;
 
 export const InputFileContainer = styled.div`
@@ -520,11 +562,11 @@ export const TextareaItem = styled.textarea`
   }
 
   :focus ~ label {
-    -webkit-transform: translate(20px, -45px);
-    transform: translate(20px, -45px);
+    -webkit-transform: translate(20px, -31px);
+    transform: translate(20px, -31px);
     background: var(--colors-text-green);
     color: var(--colors-text-dark);
-    padding: 10px 30px;
+    padding: 5px 20px;
     font-weight: 500;
     z-index: -1;
     border-top-left-radius: 20px;
@@ -548,7 +590,7 @@ export const TextareaLabel = styled.label`
   display: block;
   position: absolute;
   border-radius: 16px;
-  top: 10px;
+  top: 17px;
   z-index: 2;
   pointer-events: none;
   transition: all 0.2s ease 0s;

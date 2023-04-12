@@ -33,10 +33,10 @@ import {
     UploadWrapper,
     Radio
 } from "./style";
-import {setIsOpenBonuseFormAC} from "../../../app/app-reduser";
-import {useAppDispatch} from "../../hook";
+import {setIsOpenBonuseFormAC, setIsOpenFormAC} from "../../../app/app-reduser";
+import {useAppDispatch, useAppSelector, useBodyScrollLock} from "../../hook";
 import {ROUTS} from "../../constans/routs";
-import {Link} from "react-router-dom";
+import {Link, useLocation, useParams} from "react-router-dom";
 
 interface MyFormValues {
     firstName: string;
@@ -51,14 +51,23 @@ interface MyFormValues {
     bonus4: boolean;
     myFile: File | null;
     personType: string;
+    budget: string,
+    service: string,
+    helpFizUser: string,
+    helpCompany: string,
 }
 
 
 export const BonuseForm: React.FC = () => {
     const dispatch = useAppDispatch()
 
+    const [budget, setBudget] = useState('')
+    const [helpFizUser, setHelpFizUser] = useState('')
     const [activeField, setActiveField] = useState("");
     const [service, setService] = useState(true)
+    const [helpCompany, setHelpCompany] = useState('')
+    const [bonuse, setBonuse] = useState('')
+
 
     const closeFormModal = () => {
         dispatch(setIsOpenBonuseFormAC({isOpen: false}))
@@ -92,7 +101,11 @@ export const BonuseForm: React.FC = () => {
                 bonus3: false,
                 bonus4: false,
                 myFile: null,
-                personType: 'Физическое'
+                personType: 'Физическое',
+                budget: '',
+                service: '',
+                helpFizUser: '',
+                helpCompany: '',
 
             }}
             onSubmit={handleSubmit}
@@ -202,6 +215,7 @@ export const BonuseForm: React.FC = () => {
                             <TitleBonuse>
                                 Выберите бонус
                             </TitleBonuse>
+                            {/*select bonuses*/}
                             <CheckboxContainer>
                                 <CheckboxLabel checked={values.bonus1}>
                                     <Checkbox
@@ -211,6 +225,7 @@ export const BonuseForm: React.FC = () => {
                                         onChange={handleChange}
                                     />
                                     Скидка 100 BYN
+                                    <p>При подписании договора в течение 3 дней после получения коммерческого предложения</p>
                                 </CheckboxLabel>
                                 <CheckboxLabel checked={values.bonus2}>
                                     <Checkbox
@@ -220,6 +235,7 @@ export const BonuseForm: React.FC = () => {
                                         onChange={handleChange}
                                     />
                                     Бесплатный логотип
+                                    <p>При подписании договора в течение 3 дней после получения коммерческого предложения</p>
                                 </CheckboxLabel>
                                 <CheckboxLabel checked={values.bonus3}>
                                     <Checkbox
@@ -229,6 +245,7 @@ export const BonuseForm: React.FC = () => {
                                         onChange={handleChange}
                                     />
                                     Hostfly.by
+                                    <p>На любой тариф хостинга</p>
                                 </CheckboxLabel>
                                 <CheckboxLabel checked={values.bonus4}>
                                     <Checkbox
@@ -238,8 +255,10 @@ export const BonuseForm: React.FC = () => {
                                         onChange={handleChange}
                                     />
                                     5% скидка на все услуги
+                                    <p>При единовременном платеже всей суммы услуги. Для новых клиентов. Исключение оплата лицензий.</p>
                                 </CheckboxLabel>
                             </CheckboxContainer>
+
                             {/*textarea*/}
                             <FormDataItemComment>
                                 <TextareaWrapper>
@@ -305,6 +324,7 @@ export const BonuseForm: React.FC = () => {
                                     </UploadCancel>
                                 </UploadWrapper>
                             </FormDataItemUpload>
+                            {/*BUTTON*/}
                             <SubmitButton type="submit"><span><span>Отправить</span></span></SubmitButton>
                             <PrivacyPolicy>
                                 <TextPolicy>

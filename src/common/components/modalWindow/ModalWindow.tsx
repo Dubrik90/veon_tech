@@ -89,8 +89,6 @@ export const ModalWindoww = () => {
                                             }}
                                             value={undefined}/>
                                     </InputFileText>
-
-
                                 </Label>
                             </InputBlock>
                             <SubText>

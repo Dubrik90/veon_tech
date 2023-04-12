@@ -36,8 +36,6 @@ export const MapComponent = () => {
     const mapState = {center: [53.932681, 27.555049], zoom: 16};
     const coordinates = [53.932681, 27.555049];
 
-
-
     const formik = useFormik({
         initialValues: {
             name: '',

@@ -20,7 +20,6 @@ const ContactsCard: FC<{ item: { icon: OverridableComponent<SvgIconTypeMap<{}, "
 });
 
 export const ContactsAbout: FC = () => {
-
     const renderItems = () => SOCIAL_LINKS.map((item, index) => <ContactsCard item={item} key={index}/>);
 
     return (

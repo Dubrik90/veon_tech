@@ -175,7 +175,7 @@ export const Errors = styled.div`
 `
 export const SubText = styled.p`
   font-weight: var(--fw-medium);
-  font-size: 9px;
+  font-size: 11px;
   line-height: 1.4;
   letter-spacing: 0.1px;
   color: var(--colors-text-dark);

@@ -21,7 +21,6 @@ export const Contacts = () => {
             <OfficeHours/>
             <MapComponent/>
             <Requisites/>
-
         </ContactsWrapper>
     );
 };

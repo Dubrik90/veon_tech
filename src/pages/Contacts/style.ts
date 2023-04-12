@@ -96,11 +96,11 @@ export const Title = styled.h5`
 export const Text = styled.p`
   grid-area: 2 / 1 / 3 / 4;
   font-weight: var(--fw-regularfw);
-  font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
   line-height: 1.2;
   text-align: center;
   color: var(--colors-text-dark);
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   flex: 1 1 auto;
 
   @media (max-width: 768px) {
@@ -111,7 +111,7 @@ export const Text = styled.p`
 export const ContactLink = styled.p`
   grid-area: 3 / 1 / 4 / 4;
   font-weight: var(--fw-bold);
-  font-size: calc(14px + (24 - 14) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
   line-height: 1.4;
   text-align: center;
   color: var(--colors-text-green);
