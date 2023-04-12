@@ -53,6 +53,9 @@ export const FormWrapper = styled.form`
 
 `
 export const InputBlock = styled.div`
+  ${flexColumn()};
+  row-gap: 20px;
+  
   .react-tel-input.form-control {
     width: 100%;
   }
@@ -77,7 +80,8 @@ export const Label = styled.label`
   display: inline-block;
   width: 100%;
   height: 100%;
-  margin-bottom: 16px;
+  cursor: pointer;
+  //margin-bottom: 16px;
 
   .form-control {
     width: 100% !important;

@@ -4,7 +4,6 @@ import {Field} from "formik";
 export const ContainerForm = styled.div`
   max-width: 1440px;
   margin: 0 auto;
-  // padding: 100px 70px;
   padding-top: calc(50px + (100 - 50) * ((100vw - 320px) / (1920 - 320)));
   padding-bottom: calc(50px + (100 - 50) * ((100vw - 320px) / (1920 - 320)));
   padding-right: calc(15px + (70 - 15) * ((100vw - 320px) / (1920 - 320)));
@@ -15,7 +14,6 @@ export const ModalTitle = styled.div`
   color: var(--colors-text-dark);
 `
 export const DynamicContactHead = styled.div`
-  //padding-bottom: 25px;
   padding-bottom: calc(10px + (45 - 10) * ((100vw - 320px) / (1920 - 320)));
   border-bottom: 1px solid #6EEC4E;
   display: -webkit-box;
@@ -113,21 +111,17 @@ export const BonuseFormWrapper = styled.div`
 export const InputContainer = styled.div`
   position: relative;
   margin-bottom: 20px;
-
 `;
 
 export const Label = styled.label<{ isActive?: boolean }>`
   position: absolute;
   top: ${({isActive}) => (isActive ? "-24px" : "10px")};
   left: ${({isActive}) => (isActive ? "15px" : "5px")};
-  //left: 10px;
   font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1920 - 320)));
   pointer-events: none;
   transition: all 0.2s ease-in-out;
   background: ${({isActive}) => (isActive ? "var(--colors-text-green)" : "none")};
   color: var(--colors-text-dark);
-
-
   padding: 5px 20px;
   font-weight: 500;
   border-top-left-radius: 20px;
@@ -149,7 +143,6 @@ export const Input = styled(Field)`
   padding-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320)));
   padding-right: calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320)));
   padding-left: calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320)));
-  // padding: 20px 30px;
   border-radius: 16px;
   color: var(--colors-text-dark);
   font-weight: 100;
@@ -157,7 +150,6 @@ export const Input = styled(Field)`
   transition: all 0.2s ease 0s;
   z-index: 1;
   caret-color: var(--colors-text-dark);
-
 
   &:focus {
     border-color: var(--colors-bg-green);
@@ -185,8 +177,6 @@ export const SubmitButton = styled.button`
   padding-right: calc(15px + (32 - 15) * ((100vw - 320px) / (1920 - 320)));
   padding-left: calc(15px + (32 - 15) * ((100vw - 320px) / (1920 - 320)));
   align-self: center;
-
-  //padding: 16px 32px;
   margin: 0;
   font-family: inherit;
   text-decoration: none;
@@ -228,20 +218,73 @@ export const SubmitButton = styled.button`
     border: 1px solid transparent;
 
     :before {
-      //-webkit-transform: skew(30deg);
       -webkit-transform: translate3d(100%, 0, 0) skew(30deg);
       transform: translate3d(100%, 0, 0)
     }
   }
 
 `;
+
+export const StyledRadioContainer = styled.div`
+  grid-column: 1 / span 2;
+  display: flex;
+  column-gap: calc(10px + (20 - 10) *((100vw - 320px) / (1920 - 320)));
+  align-items: center;
+  justify-content: center;
+  margin-bottom: calc(15px + (30 - 15) *((100vw - 320px) / (1920 - 320)));
+`;
+
+export const StyledRadioLabel = styled.label<CheckboxLabelProps>`
+  padding-top: calc(10px + (14 - 10) *((100vw - 320px) / (1920 - 320)));
+  padding-bottom: calc(10px + (14 - 10) *((100vw - 320px) / (1920 - 320)));
+  padding-right: calc(13px + (32 - 13) *((100vw - 320px) / (1920 - 320)));
+  padding-left: calc(13px + (32 - 13) *((100vw - 320px) / (1920 - 320)));
+  font-size: calc(12px + (16 - 12) *((100vw - 320px) / (1920 - 320)));
+  font-weight: var(--fw-bold);
+  background: transparent;
+  overflow: hidden;
+  cursor: pointer;
+  color: var(--colors-text-dark);
+  transition: all 0.2s ease 0s;
+  position: relative;
+  border: 1px solid var(--colors-text-light);
+  border-radius: 500px;
+
+  :before {
+    content: "";
+    width: 0;
+    height: 100%;
+
+    background: var(--colors-bg-green);
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    z-index: -1
+  }
+
+  :hover:before {
+    width: 100%
+  }
+
+  ${({checked}) =>
+    checked && `
+     background: var(--colors-bg-green);
+     border: 1px solid transparent !important;
+  `
+}
+`;
+export const Radio = styled(Field)`
+  display: none;
+  position: relative;
+`
 export const CheckboxContainer = styled.div`
   grid-column: 1 / span 2;
   display: flex;
   flex-wrap: wrap;
   gap: calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320)));
   align-items: center;
-
 `;
 
 export const TitleBonuse = styled.div`
@@ -293,7 +336,6 @@ export const CheckboxLabel = styled.label<CheckboxLabelProps>`
           `
     &:before {
      width: 100%;
-
     }
     border: 1px solid transparent !important;
   `}
@@ -311,7 +353,6 @@ export const Checkbox = styled(Field)`
 export const InputFileContainer = styled.div`
   position: relative;
   margin-bottom: 20px;
-
 `;
 
 
@@ -441,8 +482,6 @@ export const FormDataItemComment = styled.div`
   grid-column: 1 / auto;
 
   @media (max-width: 768px) {
-    // -ms-grid-column: 1;
-    // grid-column: 1
     grid-column: 1 / span 2;
   }
 
@@ -469,7 +508,6 @@ export const TextareaItem = styled.textarea`
   position: relative;
   transition: all 0.2s ease 0s;
   z-index: 1;
-
 
   :focus {
     outline: none;
@@ -498,8 +536,6 @@ export const TextareaItem = styled.textarea`
   @media (max-width: 767px) {
     padding: 7px 25px;
     min-height: 100px;
-    // -webkit-transform: translate(20px, -29px);
-    // transform: translate(20px, -29px)
   }
 `
 

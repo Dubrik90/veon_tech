@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Field, Form, Formik, FormikHelpers} from "formik";
+import {Form, Formik, FormikHelpers} from "formik";
 import {
     BonuseFormWrapper,
     Checkbox,
@@ -16,20 +16,23 @@ import {
     Label,
     ModalTitle,
     PrivacyPolicy,
+    StyledRadioContainer,
+    StyledRadioLabel,
     SubmitButton,
     TextareaItem,
     TextareaLabel,
     TextareaWrapper,
-    TextPolicy, TitleBonuse,
+    TextPolicy,
+    TitleBonuse,
     UploadCancel,
     UploadCancelInner,
     UploadItem,
     UploadItemIcCont,
     UploadItemLabel,
     UploadItemResult,
-    UploadWrapper
+    UploadWrapper,
+    Radio
 } from "./style";
-import styled from "styled-components";
 import {setIsOpenBonuseFormAC} from "../../../app/app-reduser";
 import {useAppDispatch} from "../../hook";
 import {ROUTS} from "../../constans/routs";
@@ -50,66 +53,6 @@ interface MyFormValues {
     personType: string;
 }
 
-const StyledRadioContainer = styled.div`
-  grid-column: 1 / span 2;
-  display: flex;
-  column-gap: calc(10px + (20 - 10) *((100vw - 320px) / (1920 - 320)));
-  align-items: center;
-  justify-content: center;
-  margin-bottom: calc(15px + (30 - 15) *((100vw - 320px) / (1920 - 320)));
-`;
-
-type CheckboxLabelProps = {
-    checked: boolean
-}
-const StyledRadioLabel = styled.label<CheckboxLabelProps>`
-  padding-top: calc(10px + (14 - 10) *((100vw - 320px) / (1920 - 320)));
-  padding-bottom: calc(10px + (14 - 10) *((100vw - 320px) / (1920 - 320)));
-  padding-right: calc(13px + (32 - 13) *((100vw - 320px) / (1920 - 320)));
-  padding-left: calc(13px + (32 - 13) *((100vw - 320px) / (1920 - 320)));
-
-  //padding: 14px 32px;
-  font-size: calc(12px + (16 - 12) *((100vw - 320px) / (1920 - 320)));
-  font-weight: var(--fw-bold);
-  background: transparent;
-  overflow: hidden;
-  cursor: pointer;
-  color: var(--colors-text-dark);
-  transition: all 0.2s ease 0s;
-  position: relative;
-  border: 1px solid var(--colors-text-light);
-  border-radius: 500px;
-
-  :before {
-    content: "";
-    width: 0;
-    height: 100%;
-
-    background: var(--colors-bg-green);
-    position: absolute;
-    right: 0;
-    top: 0;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
-    z-index: -1
-  }
-
-  :hover:before {
-    width: 100%
-  }
-
-  ${({checked}) =>
-          checked && `
-     background: var(--colors-bg-green);
-     border: 1px solid transparent !important;
-  `
-  }
-`;
-export const Radio = styled(Field)`
-  display: none;
-  position: relative;
-  
-`
 
 export const BonuseForm: React.FC = () => {
     const dispatch = useAppDispatch()
@@ -123,7 +66,6 @@ export const BonuseForm: React.FC = () => {
     const handleFocus = (fieldName: string) => {
         setActiveField(fieldName);
     };
-
     const handleBlur = () => {
         setActiveField("");
     };
@@ -367,12 +309,12 @@ export const BonuseForm: React.FC = () => {
                             <PrivacyPolicy>
                                 <TextPolicy>
                                     Отправляя форму, Вы даете согласие на обработку своих
-                                    персональных данных в соответствии с <Link to={ROUTS.POLICY}>политикой конфиденциальности</Link>
+                                    персональных данных в соответствии с <Link to={ROUTS.POLICY}>политикой
+                                    конфиденциальности</Link>
                                 </TextPolicy>
                             </PrivacyPolicy>
                         </Form>
                     </ContainerForm>
-
                 </BonuseFormWrapper>
             )}
         </Formik>
