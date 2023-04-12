@@ -1,12 +1,19 @@
 import React, {FC} from 'react';
 import {SaleCardsType} from "../Bonuses";
 import {BonusesCardWrapper, Img, ImgBlock, SubText, SubTitle, Title, Text, Button} from "./style";
+import {useAppDispatch} from "../../../common/hook";
+import {setIsOpenBonuseFormAC} from "../../../app/app-reduser";
 
 type BonusesCardProps = {
     card: SaleCardsType
 }
 
-export const BonusesCard:FC<BonusesCardProps> = ({card}) => {
+export const BonusesCard: FC<BonusesCardProps> = ({card}) => {
+    const dispatch = useAppDispatch()
+    const onClickOpenBonuseFormHandler = () => {
+        dispatch(setIsOpenBonuseFormAC({isOpen: true}))
+    }
+
     return (
         <BonusesCardWrapper>
             <span>{card.id}</span>
@@ -17,7 +24,7 @@ export const BonusesCard:FC<BonusesCardProps> = ({card}) => {
             <SubTitle>{card.subtitle}</SubTitle>
             <Text>{card.text}</Text>
             <SubText>{card.subText}</SubText>
-            <Button>Выбрать</Button>
+            <Button onClick={onClickOpenBonuseFormHandler}>Выбрать</Button>
         </BonusesCardWrapper>
     );
 };

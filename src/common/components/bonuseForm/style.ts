@@ -1,18 +1,83 @@
 import styled, {css} from "styled-components";
 import {Field} from "formik";
 
-
-export const BonuseFormWrapper = styled.div`
-  form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px 30px;
-    grid-auto-flow: dense;
-  }
-  
+export const ContainerForm = styled.div`
   max-width: 1440px;
   margin: 0 auto;
-  padding: 50px 15px;
+  // padding: 100px 70px;
+  padding-top: calc(50px + (100 - 50) * ((100vw - 320px) / (1920 - 320)));
+  padding-bottom: calc(50px + (100 - 50) * ((100vw - 320px) / (1920 - 320)));
+  padding-right: calc(15px + (70 - 15) * ((100vw - 320px) / (1920 - 320)));
+  padding-left: calc(15px + (70 - 15) * ((100vw - 320px) / (1920 - 320)));
+`
+export const ModalTitle = styled.div`
+  font-size: calc(24px + (48 - 24) * ((100vw - 320px) / (1920 - 320)));
+  color: var(--colors-text-dark);
+`
+export const DynamicContactHead = styled.div`
+  //padding-bottom: 25px;
+  padding-bottom: calc(10px + (45 - 10) * ((100vw - 320px) / (1920 - 320)));
+  border-bottom: 1px solid #6EEC4E;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 30px
+`
+export const CloseModal = styled.div`
+  display: block;
+  cursor: pointer;
+  width: 56px;
+  height: 56px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  position: relative;
+  color: var(--colors-text-dark);
+
+  div {
+    position: absolute;
+    width: 70%;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: var(--colors-text-dark);
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s
+  }
+
+  div:nth-child(1) {
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg)
+  }
+
+  div:nth-child(2) {
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg)
+  }
+
+  :hover div {
+    width: 55%;
+    opacity: .7
+  }
+
+  @media (max-width: 767px) {
+    width: 45px;
+    height: 45px
+  }
+`
+
+export const BonuseFormWrapper = styled.div`
   width: 100%;
   background: var(--color-bg-green-light);
   z-index: 55;
@@ -28,33 +93,74 @@ export const BonuseFormWrapper = styled.div`
   transition-delay: 0.2s;
   overflow-y: auto;
 
+  form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px 30px;
+    grid-auto-flow: dense;
+    justify-content: center;
+    padding-top: 30px;
+
+    @media (max-width: 580px) {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      padding-top: 15px;
+    } 
+  }
 `;
 
 export const InputContainer = styled.div`
   position: relative;
   margin-bottom: 20px;
-`;
 
+`;
 
 export const Label = styled.label<{ isActive?: boolean }>`
   position: absolute;
-  top: ${({isActive}) => (isActive ? "-10px" : "10px")};
-  left: 10px;
-  font-size: ${({isActive}) => (isActive ? "14px" : "16px")};
-  color: ${({isActive}) => (isActive ? "#0077cc" : "#333")};
+  top: ${({isActive}) => (isActive ? "-24px" : "10px")};
+  left: ${({isActive}) => (isActive ? "15px" : "5px")};
+  //left: 10px;
+  font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1920 - 320)));
   pointer-events: none;
   transition: all 0.2s ease-in-out;
+  background: ${({isActive}) => (isActive ? "var(--colors-text-green)" : "none")};
+  color: var(--colors-text-dark);
+
+
+  padding: 5px 20px;
+  font-weight: 500;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  z-index: 10;
 `;
 
 export const Input = styled(Field)`
+  background: var(--color-bg-green-light);
+  border: 1px solid var(--colors-text-dark);
+  line-height: 0;
+  font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
   width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 2px solid #ccc;
-  border-radius: 5px;
+  display: block;
+  box-sizing: border-box;
+  padding-top: calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320)));
+  padding-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320)));
+  padding-right: calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320)));
+  padding-left: calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320)));
+  // padding: 20px 30px;
+  border-radius: 16px;
+  color: var(--colors-text-dark);
+  font-weight: 100;
+  position: relative;
+  transition: all 0.2s ease 0s;
+  z-index: 1;
+  caret-color: var(--colors-text-dark);
+
 
   &:focus {
-    border-color: #0077cc;
+    border-color: var(--colors-bg-green);
     outline: none;
   }
 
@@ -62,67 +168,134 @@ export const Input = styled(Field)`
           value &&
           css`
             & + ${Label} {
-              top: -10px;
-              left: 10px;
+              top: -24px;
+              left: 20px;
               font-size: 14px;
-              color: #0077cc;
+              background: var(--colors-text-green);
             }
           `}
 `;
 
 export const SubmitButton = styled.button`
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  background-color: #0077cc;
-  color: #fff;
+  pointer-events: auto;
   cursor: pointer;
+  border: 1px solid var(--colors-text-dark);
+  padding-top: calc(8px + (16 - 8) * ((100vw - 320px) / (1920 - 320)));
+  padding-bottom: calc(8px + (16 - 8) * ((100vw - 320px) / (1920 - 320)));
+  padding-right: calc(15px + (32 - 15) * ((100vw - 320px) / (1920 - 320)));
+  padding-left: calc(15px + (32 - 15) * ((100vw - 320px) / (1920 - 320)));
+  align-self: center;
 
-  &:hover {
-    background-color: #005fa3;
+  //padding: 16px 32px;
+  margin: 0;
+  font-family: inherit;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  font-size: 16px;
+  border-radius: 500px;
+  overflow: hidden;
+  color: var(--colors-text-dark);
+  text-align: center;
+  z-index: 5;
+  background: var(--colors-text-green);
+  background: var(--colors-text-green);
+  @media (max-width: 580px) {
+    align-self: stretch;
   }
+
+  :before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background: var(--colors-bg);
+    width: 140%;
+    left: -20%;
+    -webkit-transition: -webkit-transform 0.4s cubic-bezier(.3, 1, .8, 1);
+    transition: -webkit-transform 0.4s cubic-bezier(.3, 1, .8, 1);
+    transition: transform 0.4s cubic-bezier(.3, 1, .8, 1);
+    transition: transform 0.4s cubic-bezier(.3, 1, .8, 1), -webkit-transform 0.4s cubic-bezier(.3, 1, .8, 1)
+  }
+
+  span {
+    position: relative
+  }
+
+  :hover {
+    border: 1px solid transparent;
+
+    :before {
+      //-webkit-transform: skew(30deg);
+      -webkit-transform: translate3d(100%, 0, 0) skew(30deg);
+      transform: translate3d(100%, 0, 0)
+    }
+  }
+
 `;
 export const CheckboxContainer = styled.div`
+  grid-column: 1 / span 2;
   display: flex;
-  column-gap: 20px;
+  flex-wrap: wrap;
+  gap: calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320)));
+  align-items: center;
+
 `;
+
+export const TitleBonuse = styled.div`
+  grid-column: 1 / span 2;
+  font-size: 24px;
+  color: var(--colors-text-dark);
+  text-align: left;
+`
 
 type CheckboxLabelProps = {
     checked: boolean
 }
 export const CheckboxLabel = styled.label<CheckboxLabelProps>`
-  display: block;
-  position: relative;
-  padding: 8px 10px;
-  margin-bottom: 20px;
+  padding: 14px 32px;
+  padding-top: calc(6px + (14 - 6) * ((100vw - 320px) / (1920 - 320)));
+  padding-bottom: calc(6px + (14 - 6) * ((100vw - 320px) / (1920 - 320)));
+  padding-right: calc(10px + (32 - 10) * ((100vw - 320px) / (1920 - 320)));
+  padding-left: calc(10px + (32 - 10) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1920 - 320)));
+  font-weight: var(--fw-bold);
+  background: transparent;
+  overflow: hidden;
   cursor: pointer;
-  font-size: 16px;
-  user-select: none;
-  transition: all 0.2s ease-in-out;
+  color: var(--colors-text-dark);
+  transition: all 0.2s ease 0s;
+  position: relative;
+  border: 1px solid var(--colors-text-light);
+  border-radius: 500px;
 
   &:hover {
-    opacity: 0.8;
+    box-shadow: var(--shadow);
   }
 
   &:before {
     content: "";
+    width: 0;
+    height: 100%;
+    background: var(--colors-bg-green);
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 25px;
-    z-index: -1;
+    right: 0;
+    top: 0;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    z-index: -1
   }
 
   ${({checked}) =>
           checked &&
           `
     &:before {
-      background-color: #3cb371;
-      border-color: #3cb371;
+     width: 100%;
+
     }
+    border: 1px solid transparent !important;
   `}
 `;
 
@@ -147,9 +320,8 @@ export const FormDataItemUpload = styled.div`
   grid-column: 2;
   padding: 10px 0;
 
-  @media (max-width: 767px) {
-    -ms-grid-column: 1;
-    grid-column: 1
+  @media (max-width: 768px) {
+    grid-column: 1 / span 2;
   }
 `;
 
@@ -189,8 +361,8 @@ export const UploadItem = styled.div`
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 
-  @media (max-width: 767px) {
-    padding: 50px 15px
+  @media (max-width: 768px) {
+    padding: 15px 15px;
   }
 
   svg {
@@ -202,22 +374,20 @@ export const UploadItem = styled.div`
 `
 export const UploadItemIcCont = styled.div`
   svg {
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
-    // fill: rgba(255, 255, 255, .4);
-    fill: var(--colors-text-dark);
+    width: calc(30px + (57 - 30) * ((100vw - 320px) / (1920 - 320)));
   }
 `
 export const UploadItemResult = styled.div`
-  font-size: 18px;
+  font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1920 - 320)));
   color: var(--colors-text-dark);
   font-weight: 500;
   margin-top: 10px;
-  max-width: 220px;
+  max-width: 350px;
   word-break: break-all;
 `
 export const UploadItemLabel = styled.label`
-
+  color: var(--colors-text-dark);
+  font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1920 - 320)));
 `
 export const InputUploadItem = styled.input`
   -webkit-transition: all 0.2s;
@@ -237,7 +407,13 @@ export const UploadCancel = styled.div`
   border: 1px dashed rgba(255, 91, 91, .5);
   overflow: hidden;
   -webkit-transition: all 0.2s;
-  transition: all 0.2s
+  transition: all 0.2s;
+
+  :hover {
+    svg {
+      fill: rgba(241, 9, 9, 0.5)
+    }
+  }
 `
 
 export const UploadCancelInner = styled.div`
@@ -251,45 +427,32 @@ export const UploadCancelInner = styled.div`
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center
+  align-items: center;
+
+  svg {
+    margin: auto;
+    width: 40px;
+    fill: rgba(255, 91, 91, .5);
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s
+  }
 `
 export const FormDataItemComment = styled.div`
   grid-column: 1 / auto;
 
-  @media (max-width: 767px) {
-    -ms-grid-column: 1;
-    grid-column: 1
+  @media (max-width: 768px) {
+    // -ms-grid-column: 1;
+    // grid-column: 1
+    grid-column: 1 / span 2;
   }
 
 `
 export const TextareaWrapper = styled.div`
-  //  padding: 10px 0;
-  //  position: relative;
-
-  -webkit-transform-origin: left center;
-  transform-origin: left center;
-  color: var(--colors-text-dark);
-  font-size: 20px;
-  font-weight: 400;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 30px 30px;
-  display: block;
-  position: absolute;
-  border-radius: 16px;
-  top: 10px;
-  z-index: 2;
-  pointer-events: none;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-
-  @media (max-width: 767px) {
-    font-size: 14px
-  }
-
+  padding: 10px 0;
+  position: relative;
 `
 export const TextareaItem = styled.textarea`
-  min-height: 235px;
+  min-height: calc(185px + (215 - 185) * ((100vw - 768px) / (1920 - 768)));
   resize: none;
   outline: none;
   background: var(--color-bg-green-light);
@@ -306,6 +469,7 @@ export const TextareaItem = styled.textarea`
   position: relative;
   transition: all 0.2s ease 0s;
   z-index: 1;
+
 
   :focus {
     outline: none;
@@ -333,16 +497,16 @@ export const TextareaItem = styled.textarea`
 
   @media (max-width: 767px) {
     padding: 7px 25px;
-    -webkit-transform: translate(20px, -29px);
-    transform: translate(20px, -29px)
+    min-height: 100px;
+    // -webkit-transform: translate(20px, -29px);
+    // transform: translate(20px, -29px)
   }
 `
 
 export const TextareaLabel = styled.label`
   transform-origin: left center;
   color: var(--colors-text-dark);
-  font-size: 20px;
-  font-weight: 400;
+  font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1920 - 320)));
   box-sizing: border-box;
   padding: 30px;
   display: block;
@@ -353,8 +517,24 @@ export const TextareaLabel = styled.label`
   pointer-events: none;
   transition: all 0.2s ease 0s;
 `
+export const PrivacyPolicy = styled.div``
 
+export const TextPolicy = styled.p`
+  font-weight: var(--fw-medium);
+  font-size: calc(12px + (18 - 12) * ((100vw - 320px) / (1920 - 320)));
+  line-height: 1.2;
+  letter-spacing: 0.1px;
+  color: var(--colors-text-dark);
+  text-align: left;
 
+  a {
+    color: var(--color-link);
+
+    :hover {
+      color: var(--color-dark);
+    }
+  }
+`
 
 
 

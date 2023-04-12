@@ -11,12 +11,14 @@ import {Header} from "../header";
 import {Footer} from "../footer";
 import {ModalWindoww} from "../modalWindow";
 import {ConsultantModal} from "../consultantModal";
+import {BonuseForm} from "../bonuseForm";
 
 
 export const Layout = () => {
     const isOpenForm = useAppSelector(state => state.app.isOpenForm)
     const isModalWindowOpen = useAppSelector(state => state.app.isModalWindowOpen)
     const isConsultantModalOpen = useAppSelector(state => state.app.isConsultantModalOpen)
+    const isOpenBonuseFormOpen = useAppSelector(state => state.app.isOpenBonuseForm)
 
     return (
         <>
@@ -32,6 +34,7 @@ export const Layout = () => {
             <Cookie/>
             {isModalWindowOpen && <ModalWindoww />}
             {isConsultantModalOpen && <ConsultantModal />}
+            {isOpenBonuseFormOpen && <BonuseForm />}
         </>
     )
 }

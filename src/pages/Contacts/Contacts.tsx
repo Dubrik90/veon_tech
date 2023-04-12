@@ -21,7 +21,7 @@ export const Contacts = () => {
             <OfficeHours/>
             <MapComponent/>
             <Requisites/>
-            <BonuseForm/>
+
         </ContactsWrapper>
     );
 };

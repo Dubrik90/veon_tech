@@ -6,6 +6,7 @@ const initialState: InitialStateStateType = {
     isOpenBurger: false,
     isOpenForm: false,
     isModalWindowOpen: false,
+    isOpenBonuseForm: false,
     isMenuOpen: false,
     isConsultantModalOpen: false,
     filterCase: 'all',
@@ -37,7 +38,9 @@ const slice = createSlice({
         setFilterCaseAC(state, action: PayloadAction<{ filter: FilterCaseType }>) {
             state.filterCase = action.payload.filter
         },
-
+        setIsOpenBonuseFormAC(state, action: PayloadAction<{ isOpen: boolean }>) {
+            state.isOpenBonuseForm = action.payload.isOpen
+        },
 
         setIsMenuOpenAC(state, action: PayloadAction<{ value: boolean }>) {
             return {...state, isMenuOpen: action.payload.value}
@@ -55,6 +58,7 @@ type InitialStateStateType = {
     isMenuOpen: boolean,
     isOpenBurger: boolean,
     isOpenForm: boolean,
+    isOpenBonuseForm: boolean,
     status: RequestStatusType,
     error: string | null,
     theme: ThemeType,
@@ -78,5 +82,6 @@ export const {
     setIsOpenBurgerAC,
     setAppStatusAC,
     setAppErrorAC,
-    setFilterCaseAC
+    setFilterCaseAC,
+    setIsOpenBonuseFormAC
 } = slice.actions
