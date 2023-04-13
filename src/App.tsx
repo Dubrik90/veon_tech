@@ -11,6 +11,7 @@ import {Case} from "./pages/case";
 import {Services} from "./pages/services";
 import { Bonuses } from './pages/bonuses';
 import {Contacts} from "./pages/Contacts";
+import {Policy} from "./pages/policy";
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
                     <Route path={ROUTS.SERVICES} element={<Services/>}/>
                     <Route path={ROUTS.BONUSES} element={<Bonuses/>}/>
                     <Route path={ROUTS.CONTACTS} element={<Contacts/>}/>
+                    <Route path={ROUTS.POLICY} element={<Policy/>}/>
                 </Route>
             </Routes>
         </HashRouter>

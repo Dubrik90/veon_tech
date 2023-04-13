@@ -24,6 +24,7 @@ import {useFormik} from "formik";
 import PhoneInput from "react-phone-input-2";
 import {ROUTS} from "../../../common/constans/routs";
 import {useAppDispatch} from "../../../common/hook";
+import {Link} from "react-router-dom";
 
 type FormikErrorType = {
     name?: string,
@@ -116,8 +117,8 @@ export const MapComponent = () => {
                             </InputBlock>
                             <SubText>
                                 Нажимая на кнопку «Отправить», вы даете свое согласие на обработку персональных данных в
-                                соответствии с целями указанными в <a href={ROUTS.POLICY}>Политике обработки персональных
-                                данных</a>
+                                соответствии с целями указанными в <Link to={ROUTS.POLICY}>Политике обработки персональных
+                                данных</Link>
                             </SubText>
                             <Button type='submit'>Отправить</Button>
                         </FormWrapper>
