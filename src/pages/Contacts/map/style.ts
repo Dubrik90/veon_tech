@@ -97,7 +97,12 @@ export const InputBlock = styled.div`
     background-color: var(--colors-bg);
     color: var(--colors-text-dark);
   }
-  
+  .selected-flag {
+    background-color: var(--colors-bg);
+    .arrow {
+      border-top: 4px solid var(--colors-text-dark);
+    }
+  }
 `
 
 export const Placeholder = styled.span`

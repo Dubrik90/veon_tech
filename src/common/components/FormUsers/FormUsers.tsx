@@ -3,8 +3,8 @@ import {Form, Formik, FormikHelpers} from "formik";
 import {
     BonuseFormWrapper,
     Checkbox,
-    CheckboxContainer,
-    CheckboxLabel,
+    CheckboxContainer, CheckboxContainerGlobalForm, CheckboxGlobalForm,
+    CheckboxLabel, CheckboxLabelGlobalForm,
     CloseModal,
     ContainerForm,
     DynamicContactHead,
@@ -243,49 +243,6 @@ export const FormUsers: React.FC = () => {
                                     </InputContainer>
                                 </>}
                             <TitleBonuse>
-                                Выберите бонус
-                            </TitleBonuse>
-                            {/*select bonuses*/}
-                            <CheckboxContainer>
-                                <CheckboxLabel checked={values.bonus1}>
-                                    <Checkbox
-                                        type="checkbox"
-                                        name="bonus1"
-                                        checked={values.bonus1}
-                                        onChange={handleChange}
-
-                                    />
-                                    Скидка 100 BYN
-                                </CheckboxLabel>
-                                <CheckboxLabel checked={values.bonus2}>
-                                    <Checkbox
-                                        type="checkbox"
-                                        name="bonus2"
-                                        checked={values.bonus2}
-                                        onChange={handleChange}
-                                    />
-                                    Бесплатный логотип
-                                </CheckboxLabel>
-                                <CheckboxLabel checked={values.bonus3}>
-                                    <Checkbox
-                                        type="checkbox"
-                                        name="bonus3"
-                                        checked={values.bonus3}
-                                        onChange={handleChange}
-                                    />
-                                    Hostfly.by
-                                </CheckboxLabel>
-                                <CheckboxLabel checked={values.bonus4}>
-                                    <Checkbox
-                                        type="checkbox"
-                                        name="bonus4"
-                                        checked={values.bonus4}
-                                        onChange={handleChange}
-                                    />
-                                    5% скидка на все услуги
-                                </CheckboxLabel>
-                            </CheckboxContainer>
-                            <TitleBonuse>
                                 Бюджет в USD
                             </TitleBonuse>
                             {/*Budget*/}
@@ -372,7 +329,49 @@ export const FormUsers: React.FC = () => {
                                     </CheckboxContainer>
                                 </>
                             }
+                            <TitleBonuse>
+                                Выберите бонус
+                            </TitleBonuse>
+                            {/*select bonuses*/}
+                            <CheckboxContainerGlobalForm>
+                                <CheckboxLabelGlobalForm checked={values.bonus1}>
+                                    <CheckboxGlobalForm
+                                        type="checkbox"
+                                        name="bonus1"
+                                        checked={values.bonus1}
+                                        onChange={handleChange}
 
+                                    />
+                                    Скидка 100 BYN
+                                </CheckboxLabelGlobalForm>
+                                <CheckboxLabelGlobalForm checked={values.bonus2}>
+                                    <CheckboxGlobalForm
+                                        type="checkbox"
+                                        name="bonus2"
+                                        checked={values.bonus2}
+                                        onChange={handleChange}
+                                    />
+                                    Бесплатный логотип
+                                </CheckboxLabelGlobalForm>
+                                <CheckboxLabelGlobalForm checked={values.bonus3}>
+                                    <CheckboxGlobalForm
+                                        type="checkbox"
+                                        name="bonus3"
+                                        checked={values.bonus3}
+                                        onChange={handleChange}
+                                    />
+                                    Hostfly.by
+                                </CheckboxLabelGlobalForm>
+                                <CheckboxLabelGlobalForm checked={values.bonus4}>
+                                    <CheckboxGlobalForm
+                                        type="checkbox"
+                                        name="bonus4"
+                                        checked={values.bonus4}
+                                        onChange={handleChange}
+                                    />
+                                    5% скидка на все услуги
+                                </CheckboxLabelGlobalForm>
+                            </CheckboxContainerGlobalForm>
 
                             {/*textarea*/}
                             <FormDataItemComment>

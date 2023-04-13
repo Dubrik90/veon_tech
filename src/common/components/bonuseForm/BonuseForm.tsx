@@ -31,7 +31,7 @@ import {
     UploadItemLabel,
     UploadItemResult,
     UploadWrapper,
-    Radio
+    Radio, CheckboxContainerBonuses
 } from "./style";
 import {setIsOpenBonuseFormAC, setIsOpenFormAC} from "../../../app/app-reduser";
 import {useAppDispatch, useAppSelector, useBodyScrollLock} from "../../hook";
@@ -216,7 +216,7 @@ export const BonuseForm: React.FC = () => {
                                 Выберите бонус
                             </TitleBonuse>
                             {/*select bonuses*/}
-                            <CheckboxContainer>
+                            <CheckboxContainerBonuses>
                                 <CheckboxLabel checked={values.bonus1}>
                                     <Checkbox
                                         type="checkbox"
@@ -225,8 +225,9 @@ export const BonuseForm: React.FC = () => {
                                         onChange={handleChange}
                                     />
                                     Скидка 100 BYN
-                                    <p>При подписании договора в течение 3 дней после получения коммерческого предложения</p>
                                 </CheckboxLabel>
+                                <p>При подписании договора в течение 3 дней после получения коммерческого
+                                    предложения</p>
                                 <CheckboxLabel checked={values.bonus2}>
                                     <Checkbox
                                         type="checkbox"
@@ -235,8 +236,9 @@ export const BonuseForm: React.FC = () => {
                                         onChange={handleChange}
                                     />
                                     Бесплатный логотип
-                                    <p>При подписании договора в течение 3 дней после получения коммерческого предложения</p>
                                 </CheckboxLabel>
+                                <p>При подписании договора в течение 3 дней после получения коммерческого
+                                    предложения</p>
                                 <CheckboxLabel checked={values.bonus3}>
                                     <Checkbox
                                         type="checkbox"
@@ -245,8 +247,8 @@ export const BonuseForm: React.FC = () => {
                                         onChange={handleChange}
                                     />
                                     Hostfly.by
-                                    <p>На любой тариф хостинга</p>
                                 </CheckboxLabel>
+                                <p>На любой тариф хостинга</p>
                                 <CheckboxLabel checked={values.bonus4}>
                                     <Checkbox
                                         type="checkbox"
@@ -255,9 +257,10 @@ export const BonuseForm: React.FC = () => {
                                         onChange={handleChange}
                                     />
                                     5% скидка на все услуги
-                                    <p>При единовременном платеже всей суммы услуги. Для новых клиентов. Исключение оплата лицензий.</p>
                                 </CheckboxLabel>
-                            </CheckboxContainer>
+                                <p>При единовременном платеже всей суммы услуги. Для новых клиентов. Исключение
+                                    оплата лицензий.</p>
+                            </CheckboxContainerBonuses>
 
                             {/*textarea*/}
                             <FormDataItemComment>
