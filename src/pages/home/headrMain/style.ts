@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
 export const HeaderMainWrapper = styled.div`
+  opacity: 0;
+  clip-path: polygon(0 100%, 100% 100%, 80% 100%, 0 0);
   padding: 335px 0 250px 0;
   @media (max-width: 1024px) {
     padding: 160px 0 200px 0;
   }
-
 `
 export const HeaderMainContent = styled.div`
   display: grid;
@@ -136,6 +137,8 @@ export const SubTitleSmall = styled(SubTitle)`
 
 `
 export const Button = styled.button`
+  opacity: 0;
+ // clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
   grid-area: button;
   position: relative;
   font-size: 18px;

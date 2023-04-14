@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const DescriptionWebWrapper = styled.div`
+  opacity: 0;
+  clip-path: polygon(0 100%, 100% 100%, 100% 38%, 0 38%);
   background-color: var(--colors-bg-green-dark);
   padding: 72px 0 60px 0;
 

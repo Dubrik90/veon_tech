@@ -77,7 +77,7 @@ export const Header = () => {
 
     return (
         <>
-            <HeaderWrapper>
+            <HeaderWrapper className={'header'}>
                 <Container>
                     <HeaderContent>
                         <Link to={ROUTS.HOME} onClick={onClickUpHandler}>

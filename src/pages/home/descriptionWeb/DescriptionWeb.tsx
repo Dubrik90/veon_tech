@@ -14,12 +14,16 @@ import {
     Title,
     TitleMobile
 } from './style';
-import React, {useEffect, useRef, useState} from "react";
+import React, {FC, useEffect, useRef, useState} from "react";
 import {Link} from "react-router-dom";
 import gsap from "gsap";
 
+type DescriptionWebProps = {
+    descriptionWeb: React.RefObject<HTMLInputElement>;
+}
 
-export const DescriptionWeb = () => {
+export const DescriptionWeb:FC<DescriptionWebProps> = ({descriptionWeb}) => {
+
     const elAnimate = useRef(null)
     const [cardIndex, setCardIndex] = useState<number>(0)
     const activeCard: DevDataType = devData[cardIndex]
@@ -46,7 +50,7 @@ export const DescriptionWeb = () => {
             scrollTrigger: {
                 trigger: el,
                 start: 'top 90%',
-               // start: "top top",
+                // start: "top top",
             }
         })
     }, [cardIndex])
@@ -58,7 +62,7 @@ export const DescriptionWeb = () => {
 
 
     return (
-        <DescriptionWebWrapper>
+        <DescriptionWebWrapper ref={descriptionWeb}>
             <Container>
                 <DescriptionWebContent>
                     <DescriptionWebBlock>

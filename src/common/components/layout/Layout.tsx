@@ -2,7 +2,7 @@ import {Outlet} from "react-router-dom"
 import {GetInTorch} from "../getInTorch/GetInTorch";
 import {GoUp} from "../goUp";
 import {Cookie} from "../cookie";
-import React from "react";
+import React, {useEffect} from "react";
 import {FormUsers} from "../FormUsers";
 import {useAppSelector} from "../../hook";
 import {MainWrapper} from "../../style/Main";
@@ -13,6 +13,7 @@ import {ModalWindoww} from "../modalWindow";
 import {ConsultantModal} from "../consultantModal";
 import {BonuseForm} from "../bonuseForm";
 import {useScrollBlock} from "../../hook/use-scroll-block";
+import {gsap} from "gsap";
 
 
 export const Layout = () => {
@@ -20,6 +21,8 @@ export const Layout = () => {
     const isModalWindowOpen = useAppSelector(state => state.app.isModalWindowOpen)
     const isConsultantModalOpen = useAppSelector(state => state.app.isConsultantModalOpen)
     const isOpenBonuseFormOpen = useAppSelector(state => state.app.isOpenBonuseForm)
+
+
 
     return (
         <>

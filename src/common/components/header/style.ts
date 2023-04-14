@@ -2,6 +2,9 @@ import styled from 'styled-components';
 
 
 export const HeaderWrapper = styled.header`
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  opacity: 0;
+  transform: translateY(-100px);
   padding: 5px 0;
   min-height: 70px;
   margin-bottom: 50px;
