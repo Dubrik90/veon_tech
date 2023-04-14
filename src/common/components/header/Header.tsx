@@ -79,7 +79,7 @@ export const Header = () => {
         <>
             <HeaderWrapper className={'header'}>
                 <Container>
-                    <HeaderContent>
+                    <HeaderContent >
                         <Link to={ROUTS.HOME} onClick={onClickUpHandler}>
                             <ImgWrapDesctop img={theme === 'light' ? LogoLight : LogoDark}/>
                             <ImgWrapMobile img={theme === 'light' ? LogoMobileWhite : LogoMobileDark}/>

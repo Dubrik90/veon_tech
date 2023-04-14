@@ -78,7 +78,7 @@ export const CloseModal = styled.div`
 export const BonuseFormWrapper = styled.div`
   width: 100%;
   background: var(--color-bg-green-light);
-  z-index: 55;
+  z-index: 100;
   position: fixed;
   top: 0;
   right: 0;

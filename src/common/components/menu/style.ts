@@ -41,7 +41,7 @@ export const MenuList = styled.ul<PropsMenu>`
     flex-wrap: nowrap;
     row-gap: 20px;
     overflow: auto;
-    height: 100%;
+    height: 100vh;
     position: fixed;
     top: 0;
     padding-top: 120px;

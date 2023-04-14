@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 export const HeaderWrapper = styled.header`
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  
   opacity: 0;
   transform: translateY(-100px);
   padding: 5px 0;
@@ -14,7 +14,7 @@ export const HeaderWrapper = styled.header`
   left: 0;
   width: 100%;
   background-color: var(--colors-bg);
-  z-index: 100;
+ z-index: 60;
 
   @media (max-width: 768px) {
     margin-bottom: 25px;

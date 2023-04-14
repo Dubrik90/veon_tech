@@ -24,7 +24,7 @@ export const Home = () => {
         const but = button.current;
         const descWeb = descriptionWeb.current;
 
-        tl.to('header', {clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', opacity: 1, y: 0})
+        tl.to('header', {opacity: 1, y: 0})
             .to(el, {clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity: 1,}, '-=1')
             .to(but, {opacity: 1, ease: 'power0.easeNone'}, '-=1.8')
             .to(descWeb, {clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity: 1}, '-=1.8')
