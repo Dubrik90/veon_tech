@@ -63,7 +63,9 @@ export const JobDescription = () => {
                                 {cardArrayData.map((el, index) => <Card key={index}>{el.title}</Card>)}
                             </CardsBlock>
                         </AboutQuality>
+
                         <Accordeon/>
+
                     </DescriptionContent>
                     <DescriptionBar>
                         <BarLinks>

@@ -1,7 +1,7 @@
 import React from 'react';
 import {CaseHelpWrapper, HelpContent, SubTitle, Title} from './style';
 import {Container} from "../../../common/style/Container";
-import {useAppDispatch, useAppSelector, useBodyScrollLock} from "../../../common/hook";
+import {useAppDispatch, useAppSelector} from "../../../common/hook";
 import {setIsOpenFormAC} from "../../../app/app-reduser";
 import {useParams} from "react-router-dom";
 
@@ -10,10 +10,8 @@ export const CaseHelp = () => {
     const {service} = useParams()
     const dispatch = useAppDispatch()
     const isOpenForm = useAppSelector(state => state.app.isOpenForm)
-    const [isBodyLocked, setBodyLocked] = useBodyScrollLock();
 
     const onClickFormModalHandler = () => {
-        setBodyLocked()
         dispatch(setIsOpenFormAC({isOpen: !isOpenForm}))
     }
 

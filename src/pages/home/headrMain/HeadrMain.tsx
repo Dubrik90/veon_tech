@@ -1,19 +1,21 @@
 import React, {useEffect, useRef} from 'react'
 import {Container} from '../../../common/style/Container'
 import {Button, HeaderMainContent, HeaderMainWrapper, SubTitle, SubTitleSmall, Title, Title2} from './style'
-import {useAppDispatch, useAppSelector, useBodyScrollLock} from "../../../common/hook";
+import {useAppDispatch, useAppSelector} from "../../../common/hook";
 import {setIsOpenFormAC} from "../../../app/app-reduser";
+import {useScrollBlock} from "../../../common/hook/use-scroll-block";
 
 
 export const HeadrMain = () => {
     const dispatch = useAppDispatch()
     const isOpenForm = useAppSelector(state => state.app.isOpenForm)
-    const [isBodyLocked, setBodyLocked] = useBodyScrollLock();
+    const [blockScroll, allowScroll] = useScrollBlock();
 
     const headerAnimate = useRef(null)
+
     const onClickFormModalHandler = () => {
-        setBodyLocked()
-        dispatch(setIsOpenFormAC({isOpen: !isOpenForm}))
+        blockScroll()
+        dispatch(setIsOpenFormAC({isOpen: true}))
     }
 
     useEffect(() => {

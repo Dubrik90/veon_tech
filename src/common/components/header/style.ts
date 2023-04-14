@@ -11,7 +11,7 @@ export const HeaderWrapper = styled.header`
   left: 0;
   width: 100%;
   background-color: var(--colors-bg);
-  z-index: 50;
+  z-index: 100;
 
   @media (max-width: 768px) {
     margin-bottom: 25px;

@@ -5,12 +5,16 @@ import {useAppDispatch, useAppSelector} from "../../../common/hook";
 import Logo from '../assets/logo.png'
 import LogoLight from '../assets/logoLight.png'
 import {setIsConsultantModalOpenAC} from "../../../app/app-reduser";
+import {useScrollBlock} from "../../../common/hook/use-scroll-block";
+import {ConsultantModal} from "../../../common/components/consultantModal";
 
 export const Help = () => {
     const theme = useAppSelector(state => state.app.theme)
+    const [blockScroll, allowScroll] = useScrollBlock();
     const dispatch = useAppDispatch()
 
     const onClickOpenModalHandler = () => {
+        blockScroll()
         dispatch(setIsConsultantModalOpenAC({isOpen: true}))
     }
 
@@ -39,6 +43,7 @@ export const Help = () => {
                     </ContactBlock>
                 </HelpContent>
             </Container>
+
         </HelpWrapper>
     );
 };

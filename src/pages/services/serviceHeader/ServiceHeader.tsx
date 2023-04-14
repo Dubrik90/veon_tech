@@ -1,8 +1,9 @@
 import React, {FC} from 'react';
 import {HeaderBlock, HeaderContent, HeaderText, ServiceHeaderWrapper, Title, Text, Button, HeaderImage, Img} from './style';
 import {Container} from "../../../common/style/Container";
-import {useAppDispatch, useAppSelector, useBodyScrollLock} from "../../../common/hook";
+import {useAppDispatch, useAppSelector} from "../../../common/hook";
 import {setIsOpenFormAC} from "../../../app/app-reduser";
+import {useScrollBlock} from "../../../common/hook/use-scroll-block";
 
 type ServiceHeaderPropsType = {
     title: string,
@@ -13,10 +14,10 @@ type ServiceHeaderPropsType = {
 export const ServiceHeader:FC<ServiceHeaderPropsType> = ({text, img, title}) => {
     const dispatch = useAppDispatch()
     const isOpenForm = useAppSelector(state => state.app.isOpenForm)
-    const [isBodyLocked, setBodyLocked] = useBodyScrollLock();
+    const [blockScroll, allowScroll] = useScrollBlock();
 
     const onClickFormModalHandler = () => {
-        setBodyLocked()
+        blockScroll()
         dispatch(setIsOpenFormAC({isOpen: !isOpenForm}))
     }
 

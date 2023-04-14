@@ -19,6 +19,7 @@ import PhoneInput from "react-phone-input-2";
 import '../../style/PhoneInput.css';
 import {Link} from "react-router-dom";
 import {ROUTS} from "../../constans/routs";
+import {useScrollBlock} from "../../hook/use-scroll-block";
 
 type FormikErrorType = {
     name?: string,
@@ -28,8 +29,10 @@ type FormikErrorType = {
 export const ConsultantModal = () => {
     const dispatch = useAppDispatch()
     const isConsultantModalOpen = useAppSelector(state => state.app.isConsultantModalOpen)
+    const [blockScroll, allowScroll] = useScrollBlock();
 
-    const onClickOpenModalHandler = () => {
+    const onClickClouseModalHandler = () => {
+        allowScroll()
         dispatch(setIsConsultantModalOpenAC({isOpen: false}))
     }
 
@@ -60,7 +63,7 @@ export const ConsultantModal = () => {
         <ModalWindowWrapper openModal={isConsultantModalOpen}>
             <RegisterWrapper>
                 <Title>Заявка на обратный звонок</Title>
-                <Clouse onClick={onClickOpenModalHandler}/>
+                <Clouse onClick={onClickClouseModalHandler}/>
                 <FormWrapper onSubmit={formik.handleSubmit}>
                     <InputBlock>
                         <Label>

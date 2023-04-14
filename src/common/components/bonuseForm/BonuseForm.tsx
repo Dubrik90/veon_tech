@@ -3,7 +3,7 @@ import {Form, Formik, FormikHelpers} from "formik";
 import {
     BonuseFormWrapper,
     Checkbox,
-    CheckboxContainer,
+    CheckboxContainerBonuses,
     CheckboxLabel,
     CloseModal,
     ContainerForm,
@@ -16,6 +16,7 @@ import {
     Label,
     ModalTitle,
     PrivacyPolicy,
+    Radio,
     StyledRadioContainer,
     StyledRadioLabel,
     SubmitButton,
@@ -30,13 +31,13 @@ import {
     UploadItemIcCont,
     UploadItemLabel,
     UploadItemResult,
-    UploadWrapper,
-    Radio, CheckboxContainerBonuses
+    UploadWrapper
 } from "./style";
-import {setIsOpenBonuseFormAC, setIsOpenFormAC} from "../../../app/app-reduser";
-import {useAppDispatch, useAppSelector, useBodyScrollLock} from "../../hook";
+import {setIsOpenBonuseFormAC} from "../../../app/app-reduser";
+import {useAppDispatch} from "../../hook";
 import {ROUTS} from "../../constans/routs";
-import {Link, useLocation, useParams} from "react-router-dom";
+import {Link} from "react-router-dom";
+import {useScrollBlock} from "../../hook/use-scroll-block";
 
 interface MyFormValues {
     firstName: string;
@@ -67,9 +68,10 @@ export const BonuseForm: React.FC = () => {
     const [service, setService] = useState(true)
     const [helpCompany, setHelpCompany] = useState('')
     const [bonuse, setBonuse] = useState('')
-
+    const [blockScroll, allowScroll] = useScrollBlock();
 
     const closeFormModal = () => {
+        allowScroll()
         dispatch(setIsOpenBonuseFormAC({isOpen: false}))
     }
     const handleFocus = (fieldName: string) => {

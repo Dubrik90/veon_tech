@@ -10,6 +10,7 @@ export const DescWrapper = styled.div`
 `
 export const Title = styled(TitleH4)`  
   margin-bottom: 20px;
+  color: var(--colors-text-dark);
   
   @media (max-width: 960px) {
     font-size: 18px;
@@ -23,6 +24,7 @@ export const List = styled.ul`
   display: flex;
   flex-direction: column;
   padding-left: 40px;
+  margin-bottom: 10px;
   // row-gap: 5px;
   @media (max-width: 425px) {
     padding-left: 25px;

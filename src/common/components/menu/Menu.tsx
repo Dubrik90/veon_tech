@@ -32,7 +32,9 @@ export const Menu: FC<MenuProps> = ({isOpenBurger, onClick, onClickCloseBurger})
     return (
         <NavigateMenu>
             <MenuList isOpenBurger={isOpenBurger}>
-                <MenuItem><NavLink onClick={onClickCloseBurger} to={ROUTS.HOME}>ГЛАВНАЯ</NavLink></MenuItem>
+                <MenuItem>
+                    <NavLink onClick={onClickCloseBurger} to={ROUTS.HOME}>ГЛАВНАЯ</NavLink>
+                </MenuItem>
                 <MenuItem className='about-sub-menu'>О НАС<Arrow/>
                     <SubMenu>
                         {submenuLinksAbout.map((el, index) => <MenuSubItem key={index}><Link

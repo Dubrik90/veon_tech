@@ -5,6 +5,7 @@ import Bg from './assets/bg.png'
 import {Commitment} from "./commitment";
 import {Content} from './content';
 import {Help} from "./help";
+import {ConsultantModal} from "../../common/components/consultantModal";
 
 
 export const Nda = () => {
@@ -16,6 +17,7 @@ export const Nda = () => {
             <Commitment/>
             <Content/>
             <Help/>
+
         </NdaWrapper>
     );
 };

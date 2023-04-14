@@ -7,21 +7,26 @@ type ModalWindowWrapperProps = {
 }
 
 export const ModalWindowWrapper = styled.div<ModalWindowWrapperProps>`
+  
   ${flexColumn()}
   position: fixed;
-  top: 0;
-  left: 0;
+ // top: 0;
+ // left: 0;
   width: 100%;
   height: 100vh;
   align-items: center;
   justify-content: center;
-  overflow-y: hidden;
+ // overflow-y: hidden;
   background: rgba(54, 54, 54, 0.3);
   backdrop-filter: blur(5px);
   z-index: 100;
   transition: all 0.3s;
-  opacity: 1;
-  visibility: visible;
+  opacity: ${({openModal}) => openModal ? '1' : '0'};
+  visibility: ${({openModal}) => openModal ? 'visible' : 'hidden'};
+  scale: ${({openModal}) => openModal ? '1' : '0'};
+  
+  //opacity: 1;
+  //visibility: visible;
 `
 export const RegisterWrapper = styled.div`
   width: 420px;
@@ -40,6 +45,9 @@ export const RegisterWrapper = styled.div`
     top: 10px;
     right: 10px;
     cursor: pointer;
+    rect{
+      fill: var(--colors-text-dark);
+    }
   }
 
 `
@@ -47,6 +55,7 @@ export const Title = styled(TitleH4)`
   font-size: var(--fs-16);
   text-align: center;
   margin-bottom: 23px;
+  color: var(--colors-text-dark);
 `
 
 export const FormWrapper = styled.form`
@@ -55,9 +64,17 @@ export const FormWrapper = styled.form`
 export const InputBlock = styled.div`
   ${flexColumn()};
   row-gap: 20px;
-  
-  .react-tel-input.form-control {
+
+  .react-tel-input .form-control {
     width: 100%;
+    background-color: var(--colors-bg);
+    color: var(--colors-text-dark);
+  }
+  .selected-flag {
+    background-color: var(--colors-bg);
+    .arrow {
+      border-top: 4px solid var(--colors-text-dark);
+    }
   }
 `
 
@@ -81,6 +98,7 @@ export const Label = styled.label`
   width: 100%;
   height: 100%;
   cursor: pointer;
+  color: var(--colors-text-dark);
   //margin-bottom: 16px;
 
   .form-control {
@@ -91,19 +109,18 @@ export const CustomInput = styled.input`
   width: 100%;
   height: 38px;
   padding: 10px;
-  color: #363636;
-  background-color: #F9F9FA;;
   border: 1px solid #A6A6A6;
   border-radius: 5px;
   font-size: 14px;
-  
+  background-color: var(--colors-bg);
+  color: var(--colors-text-dark);
  
   ::placeholder {
-    
+    color: var(--colors-text-dark);
   }
 
   &:focus {
-    color: var(--dark);
+    color: var(--colors-text-dark);
     outline: none;
   }
 

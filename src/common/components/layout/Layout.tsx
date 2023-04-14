@@ -12,6 +12,7 @@ import {Footer} from "../footer";
 import {ModalWindoww} from "../modalWindow";
 import {ConsultantModal} from "../consultantModal";
 import {BonuseForm} from "../bonuseForm";
+import {useScrollBlock} from "../../hook/use-scroll-block";
 
 
 export const Layout = () => {
@@ -32,8 +33,9 @@ export const Layout = () => {
             <GetInTorch/>
             <GoUp/>
             <Cookie/>
+            <ConsultantModal />
             {isModalWindowOpen && <ModalWindoww />}
-            {isConsultantModalOpen && <ConsultantModal />}
+            {/*{isConsultantModalOpen && <ConsultantModal />}*/}
             {isOpenBonuseFormOpen && <BonuseForm />}
         </>
     )

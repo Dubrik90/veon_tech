@@ -34,9 +34,10 @@ import {
     UploadWrapper
 } from "../bonuseForm/style";
 import {setIsOpenFormAC} from "../../../app/app-reduser";
-import {useAppDispatch, useAppSelector, useBodyScrollLock} from "../../hook";
+import {useAppDispatch, useAppSelector} from "../../hook";
 import {ROUTS} from "../../constans/routs";
 import {Link, useLocation} from "react-router-dom";
+import {useScrollBlock} from "../../hook/use-scroll-block";
 
 
 interface MyFormValues {
@@ -61,7 +62,6 @@ interface MyFormValues {
 
 export const FormUsers: React.FC = () => {
     const dispatch = useAppDispatch()
-    let location = useLocation();
 
     const [budget, setBudget] = useState('')
     const [helpFizUser, setHelpFizUser] = useState('')
@@ -69,15 +69,15 @@ export const FormUsers: React.FC = () => {
     const [service, setService] = useState(true)
     const [helpCompany, setHelpCompany] = useState('')
     const [bonuse, setBonuse] = useState('')
+    const [blockScroll, allowScroll] = useScrollBlock();
 
     const isOpenForm = useAppSelector(state => state.app.isOpenForm)
-    const [isBodyLocked, setBodyLocked] = useBodyScrollLock();
+
+
     const closeFormModal = () => {
-        setBodyLocked()
-        dispatch(setIsOpenFormAC({isOpen: !isOpenForm}))
+        allowScroll()
+        dispatch(setIsOpenFormAC({isOpen: false}))
     }
-
-
 
     const helpCompanyArray = [
         {val: 'У нас есть готовая идея'},

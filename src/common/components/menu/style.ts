@@ -71,10 +71,10 @@ export const SubMenu = styled.ul`
   z-index: 10;
   background: var(--colors-bg);
   box-shadow: 0 7px 10px rgba(0, 0, 0, 0.25);
-  padding: 24px 15px;
+  padding: 10px 15px;
   display: flex;
   flex-direction: column;
-  row-gap: 30px;
+  row-gap: 15px;
   
   @media (max-width: 1320px) {
     transform: translate(0px, 27px);
@@ -91,7 +91,7 @@ export const SubMenu = styled.ul`
   
   a {
     font-weight: 600;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 11px;
     color: var(--colors-text-dark);
     position: relative;
@@ -103,8 +103,9 @@ export const SubMenu = styled.ul`
       height: 10px;
       background: var(--colors-bg-green);
       position: absolute;
-      top: 0;
+      top: 50%;
       left: 0;
+      transform: translateY(-50%);
       border-radius: 100%;
     }
     
@@ -118,6 +119,10 @@ export const MenuSubItem = styled.li`
 
 `
 export const MenuItem = styled.li`
+  @media (min-width: 1092px) {
+    display: flex;
+  }
+  
   cursor: context-menu;
   align-items: center;
   justify-content: space-between;

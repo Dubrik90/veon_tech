@@ -2,18 +2,41 @@ import React, { useRef, useEffect } from 'react';
 import {BonuseContent, ChoiceBonuseWrapper, SubTitle, Title, Text} from "./style";
 import {Container} from "../../../common/style/Container";
 
-import { gsap } from 'gsap';
+import { gsap, SteppedEase } from 'gsap';
+
+
 
 export const ChoiceBonuse = () => {
+    let Timeline = gsap.core.Timeline;
+    const textAnimate = useRef(null)
 
+    useEffect(() => {
+        const tl = new Timeline()
+        tl.fromTo(".type-me", 2, {
+            width: "0",
+        }, {
+            width: "100%",
+            delay: 0.5,
+            ease: SteppedEase.config(83),
+        }, 0);
+
+        tl.fromTo(".type-me2", 2, {
+            width: "0",
+        }, {
+            width: "100%",
+            delay: 0,
+            ease: SteppedEase.config(83)
+        }, 2);
+
+    }, [])
 
 
     return (
         <ChoiceBonuseWrapper>
             <Container>
                 <BonuseContent>
-                    <Title>Бонусы и скидки на разработку. Программа лояльности для клиентов компании VEON-TECH</Title>
-                    <SubTitle>При работе с нами вы получите дополнительные опции для развития Вашего бизнеса. Улучшаем ваш бизнес вместе !</SubTitle>
+                    <Title ref={textAnimate} className={'text-description type-me'}>Бонусы и скидки на разработку. Программа лояльности для клиентов компании VEON-TECH</Title>
+                    <SubTitle ref={textAnimate} className={'type-me2'}>При работе с нами вы получите дополнительные опции для развития Вашего бизнеса. Улучшаем ваш бизнес вместе !</SubTitle>
                     <Text >Выберите <span>свой</span> бонус!</Text>
 
                 </BonuseContent>

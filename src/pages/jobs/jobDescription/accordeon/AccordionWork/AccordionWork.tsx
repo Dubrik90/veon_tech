@@ -8,6 +8,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import {ButtonJob} from "../style";
 import {useAppDispatch, useAppSelector} from "../../../../../common/hook";
 import {setIsModalWindowOpenAC} from "../../../../../app/app-reduser";
+import {useScrollBlock} from "../../../../../common/hook/use-scroll-block";
 
 
 type AccordionWorkType = {
@@ -16,8 +17,10 @@ type AccordionWorkType = {
 
 export const AccordionWork: React.FC<AccordionWorkType> = ({data}) => {
     const dispatch = useAppDispatch()
+    const [blockScroll, allowScroll] = useScrollBlock();
 
     const onClickOpenModalHandler = () => {
+        blockScroll()
         dispatch(setIsModalWindowOpenAC({isOpen: true}))
     }
 
@@ -61,7 +64,6 @@ export const AccordionWork: React.FC<AccordionWorkType> = ({data}) => {
                 <List>
                     {data.terms.map((r, index) => <LinkItem key={index}>{r}</LinkItem>)}
                 </List>
-
             </AccordionDetails>
             <ButtonJob onClick={onClickOpenModalHandler}>Откликнуться</ButtonJob>
         </Accordion>

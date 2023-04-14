@@ -16,6 +16,7 @@ import {
     Title
 } from "../consultantModal/style";
 import {CustomInputFile, InputFileText} from "./style";
+import {useScrollBlock} from "../../hook/use-scroll-block";
 
 
 interface MyFormValues {
@@ -28,7 +29,10 @@ interface MyFormValues {
 export const ModalWindoww = () => {
     const dispatch = useAppDispatch()
     const isModalWindowOpen = useAppSelector(state => state.app.isModalWindowOpen)
-    const onClickOpenModalHandler = () => {
+    const [blockScroll, allowScroll] = useScrollBlock();
+
+    const onClickClouseModalHandler = () => {
+        allowScroll()
         dispatch(setIsModalWindowOpenAC({isOpen: false}))
     }
 
@@ -54,12 +58,13 @@ export const ModalWindoww = () => {
                 <ModalWindowWrapper openModal={isModalWindowOpen}>
                     <RegisterWrapper>
                         <Title>Заявка на обратный звонок</Title>
-                        <Clouse onClick={onClickOpenModalHandler}/>
+                        <Clouse onClick={onClickClouseModalHandler}/>
                         <Form onSubmit={handleSubmit}>
                             <InputBlock>
                                 <Label>
                                     <CustomInput type="text"
                                                  name="firstName"
+                                                 placeholder='Ваше имя'
                                                  value={values.firstName}
                                                  onChange={handleChange}
                                     />

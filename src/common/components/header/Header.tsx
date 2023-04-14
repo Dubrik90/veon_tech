@@ -1,33 +1,35 @@
-import React, {FC, useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import {Container} from "../../style/Container";
-import {HeaderContent, HeaderLogo, HeaderWrapper, ImgWrapDesctop, ImgWrapMobile, Tint} from "./style"
+import {HeaderContent, HeaderWrapper, ImgWrapDesctop, ImgWrapMobile, Tint} from "./style"
 import {Burger} from "../../style/Burger";
 import LogoLight from './assets/logoLight.svg';
 import LogoDark from './assets/logoDark.svg';
 import LogoMobileDark from './assets/logoMobileDark.png';
 import LogoMobileWhite from './assets/logoMobileWhite.png';
 import {Menu} from "../menu";
-import {ThemeType} from "../../types/types";
-import {useAppDispatch, useAppSelector, useBodyScrollLock} from "../../hook";
+import {useAppDispatch, useAppSelector} from "../../hook";
 import {Link} from "react-router-dom";
 import {ROUTS} from "../../constans/routs";
 import gsap from "gsap";
 import {setIsOpenBurgerAC, setThemeAC} from "../../../app/app-reduser";
+import {useScrollBlock} from "../../hook/use-scroll-block";
 
 
 export const Header = () => {
     const dispatch = useAppDispatch()
     const theme = useAppSelector(state => state.app.theme)
     const isOpenBurger = useAppSelector(state => state.app.isOpenBurger)
-
-    const [isBodyLocked, setBodyLocked] = useBodyScrollLock();
-
-    // const [isOpenBurger, setIsOpenBurger] = useState<boolean>(false);
+    const [blockScroll, allowScroll] = useScrollBlock();
 
     const onClickOpenBurger = () => {
-        setBodyLocked()
+        if(!isOpenBurger) {
+            blockScroll()
+        }
+
         dispatch(setIsOpenBurgerAC({isOpen: !isOpenBurger}))
-        // setIsOpenBurger(!isOpenBurger)
+        if(isOpenBurger) {
+            allowScroll()
+        }
     }
     const onClickUpHandler = () => {
         window.scrollTo({
@@ -38,9 +40,7 @@ export const Header = () => {
     }
 
     const onClickCloseBurger = () => {
-        if (isOpenBurger) {
-            setBodyLocked()
-        }
+        allowScroll()
         dispatch(setIsOpenBurgerAC({isOpen: false}))
     }
 

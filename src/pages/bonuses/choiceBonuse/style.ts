@@ -23,6 +23,12 @@ export const Title = styled.h4`
   font-size: calc(16px + (28 - 16) * ((100vw - 320px) / (1920 - 320)));
   line-height: 1.3;
   color: var(--colors-text-dark);
+
+ // width: 1205px;
+  overflow: hidden;
+  white-space: nowrap;
+ // font-size: 3em;
+  
   
 `
 export const SubTitle = styled.p`
@@ -30,7 +36,9 @@ export const SubTitle = styled.p`
   line-height: 1.3;
   color: var(--colors-text-dark);
   margin-bottom: calc(30px + (60 - 30) * ((100vw - 320px) / (1920 - 320)));
-  
+ // width: 1205px;
+  overflow: hidden;
+  white-space: nowrap;
 `
 export const Text = styled.p`
   align-self: center;
