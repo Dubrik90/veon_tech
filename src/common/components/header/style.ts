@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 export const HeaderWrapper = styled.header`
-  
+  will-change: transform;
   opacity: 0;
   transform: translateY(-100px);
   padding: 5px 0;

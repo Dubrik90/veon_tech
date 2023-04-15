@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const DescriptionWebWrapper = styled.div`
+  will-change: transform;
   opacity: 0;
   clip-path: polygon(0 100%, 100% 100%, 100% 38%, 0 38%);
   background-color: var(--colors-bg-green-dark);
@@ -19,6 +20,7 @@ export const DescriptionWebContent = styled.div`
 
 `
 export const AboutText = styled.p`
+  will-change: transform;
   opacity: 0;
   clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
   transform: translateY(150px);
@@ -51,6 +53,7 @@ export const DescriptionWebBlock = styled.div`
 `
 
 export const Title = styled.h2`
+  will-change: transform;
   top: 140px;
   transform: rotate(20deg);
   opacity: 0;

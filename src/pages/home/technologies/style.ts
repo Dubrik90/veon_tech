@@ -7,6 +7,7 @@ export const TechnologiesWrapper = styled.div`
   text-align: center;
 `
 export const TechnologiesTitle = styled.h2`
+  will-change: transform;
   font-weight: var(--fw-bold);
   font-size: 48px;
   line-height: 60px;

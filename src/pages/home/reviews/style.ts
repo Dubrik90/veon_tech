@@ -7,6 +7,7 @@ export const ReviewsWrapper = styled.div`
   
 `
 export const Title = styled.h3`
+  will-change: transform;
   color: var(--colors-text-dark);
   border-top: 2px solid #6EEC4E;
   padding-top: 80px;

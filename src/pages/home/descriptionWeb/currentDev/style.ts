@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import {flexColumn} from "../../../../common/style/mixin";
 
 export const CurrentDevWrapper = styled.div`
-  
+  will-change: transform;
   ${flexColumn()};
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #FFFDFD;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);

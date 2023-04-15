@@ -29,6 +29,7 @@ export const SubTitle = styled.p`
  
 `
 export const Title = styled.h3`
+  will-change: transform;
   font-weight: var(--fw-extra-bold);
   font-size: 42px;
   line-height: 53px;

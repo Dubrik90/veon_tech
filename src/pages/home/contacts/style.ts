@@ -24,6 +24,7 @@ export const ContactsWrapper = styled.div`
 `
 
 export const ContentBlock = styled.div`
+  will-change: transform;
   ${flexColumn()}
   row-gap: 20px;
   align-items: center;
