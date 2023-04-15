@@ -2,7 +2,7 @@ import {Outlet} from "react-router-dom"
 import {GetInTorch} from "../getInTorch/GetInTorch";
 import {GoUp} from "../goUp";
 import {Cookie} from "../cookie";
-import React, {useEffect} from "react";
+import React, {useEffect, useRef} from "react";
 import {FormUsers} from "../FormUsers";
 import {useAppSelector} from "../../hook";
 import {MainWrapper} from "../../style/Main";
@@ -22,7 +22,11 @@ export const Layout = () => {
     const isConsultantModalOpen = useAppSelector(state => state.app.isConsultantModalOpen)
     const isOpenBonuseFormOpen = useAppSelector(state => state.app.isOpenBonuseForm)
 
+    const tl = gsap.timeline({defaults: {ease: 'power2.easeInOut', duration: 2}})
 
+    useEffect(() => {
+        tl.to('header', {opacity: 1, y: 0})
+    }, [])
 
     return (
         <>
