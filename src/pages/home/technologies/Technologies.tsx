@@ -6,6 +6,7 @@ import {Container} from '../../../common/style/Container';
 import gsap from "gsap";
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
 import {SwiperTehnologies} from "../../../common/components/swiperTehnologies";
+
 gsap.registerPlugin(ScrollTrigger)
 
 type TechType = 'frontend' | 'developmentSoftware' | 'dataBase' | 'CMS'
@@ -24,20 +25,46 @@ export const Technologies = () => {
     const elAnimate = useRef(null)
 
     useEffect(() => {
-
         const el = elAnimate.current
-        gsap.to(el,  {opacity: 1, scale: 1, visibility: 'visible', duration: 1,
+
+        gsap.to(el, {
+            opacity: 1, scale: 1, visibility: 'visible', duration: 1,
             scrollTrigger: {
                 trigger: el,
                 start: 'top 90%',
-            }})
+            }
+        })
+
+        const titles = gsap.utils.toArray('.title-technologies')
+
+        titles.forEach((title: any) => {
+
+            gsap.fromTo(title, {
+                    clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)',
+                    opacity: 0, y: 50,
+                },
+                {
+                    clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.2,
+                    scrollTrigger: {
+                        trigger: title,
+                        start: 'top 80%',
+
+                    }
+                })
+        })
+
+
+
     }, [])
 
     return (
         <TechnologiesWrapper>
             <Container>
-                <TechnologiesTitle>Технологии, с которыми мы работаем</TechnologiesTitle>
-                <Tabs >
+                <TechnologiesTitle className='title-technologies'>Технологии, с которыми мы работаем</TechnologiesTitle>
+                <Tabs>
                     <ButtomTab className={active === 'frontend' ? 'active' : ''} id={'frontend'}
                                onClick={activeCorrectFilter}>Front-end разработка</ButtomTab>
                     <ButtomTab className={active === 'developmentSoftware' ? 'active' : ''} id={'developmentSoftware'}

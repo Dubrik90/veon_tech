@@ -7,7 +7,7 @@ export const Reviews = () => {
     return (
         <ReviewsWrapper>
             <Container>
-                <Title>Отзывы</Title>
+                <Title className='title-technologies'>Отзывы</Title>
             </Container>
             <SliderReviews/>
             <Container>

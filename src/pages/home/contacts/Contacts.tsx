@@ -15,7 +15,7 @@ export const Contacts = () => {
     return (
         <ContactsWrapper>
             <Container>
-                <ContentBlock>
+                <ContentBlock className='title-technologies'>
                     <Subtitle>Давайте приступим к работе?</Subtitle>
                     <Title onClick={onClickFormModalHandler}>Связаться с нами</Title>
                 </ContentBlock>

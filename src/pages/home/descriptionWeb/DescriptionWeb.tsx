@@ -16,27 +16,99 @@ import {
 } from './style';
 import React, {FC, useEffect, useRef, useState} from "react";
 import {Link} from "react-router-dom";
-import gsap from "gsap";
+import gsap from "gsap/all";
+
 
 type DescriptionWebProps = {
     descriptionWeb: React.RefObject<HTMLInputElement>;
 }
 
-export const DescriptionWeb:FC<DescriptionWebProps> = ({descriptionWeb}) => {
+export const DescriptionWeb: FC<DescriptionWebProps> = ({descriptionWeb}) => {
+
 
     const elAnimate = useRef(null)
+    const text1Animate = useRef(null)
+    const text2Animate = useRef(null)
+    const cardAnimate = useRef<HTMLInputElement>(null);
+
+
+    const headTitle = useRef(null)
     const [cardIndex, setCardIndex] = useState<number>(0)
     const activeCard: DevDataType = devData[cardIndex]
 
-    //
-    // useEffect(() => {
-    //     const el = elAnimate.current
-    //     let tl = gsap.timeline({defaults: {ease: "power4.inOut", duration: 2}})
-    //     tl.to('.link', { 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity: 1, y: 0, duration: 2.2, scrollTrigger: {
-    //             trigger: el
-    //         }})
-    //
-    // }, [cardIndex])
+
+    useEffect(() => {
+        const el = headTitle.current
+        const text1 = text1Animate.current
+        const text2 = text2Animate.current
+        // const card = cardAnimate.current
+        gsap.to(el, {
+            opacity: 1,
+            ease: "power4.out",
+            top: 0,
+            transform: 'rotate(0deg)',
+            duration: 1.5,
+            scrollTrigger: {
+                trigger: el,
+                start: 'top 75%',
+            }
+        })
+        gsap.to(text1, {
+            clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+            y: 0,
+            opacity: 1,
+            ease: "power4.out",
+            duration: 1.5,
+            scrollTrigger: {
+                trigger: el,
+                start: 'top 70%',
+            }
+        })
+        gsap.to(text2, {
+            clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+            y: 0,
+            opacity: 1,
+            ease: "power4.out",
+            duration: 1.5,
+            scrollTrigger: {
+                trigger: el,
+                start: 'top 40%',
+            }
+        })
+
+        const cards = gsap.utils.toArray('.card')
+
+
+        cards.forEach((card: any) => {
+            gsap.fromTo(card, {opacity: 0, x: 100, y: 100}, {
+                opacity: 1,
+                x: 0,
+                y: 0,
+                duration: 1.5,
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 75%',
+                    end: 'bottom 20%',
+                }
+            })
+        })
+        const images = gsap.utils.toArray('.image')
+        images.forEach((image: any) => {
+            gsap.fromTo(image, {opacity: 0, scale: 0.8, y: 50}, {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                duration: 0.8,
+                scrollTrigger: {
+                    trigger: image,
+                    start: 'top 75%',
+                    end: 'bottom 20%',
+                }
+            })
+        })
+
+
+    }, [])
 
     useEffect(() => {
         const el = elAnimate.current
@@ -45,11 +117,12 @@ export const DescriptionWeb:FC<DescriptionWebProps> = ({descriptionWeb}) => {
             opacity: 1,
             ease: "power4.out",
             visibility: 'visible',
-            delay: 0.5,
-            duration: 0.5,
+            //  delay: 0.5,
+            duration: 1.5,
             scrollTrigger: {
                 trigger: el,
-                start: 'top 90%',
+                start: 'center center',
+
                 // start: "top top",
             }
         })
@@ -62,14 +135,14 @@ export const DescriptionWeb:FC<DescriptionWebProps> = ({descriptionWeb}) => {
 
 
     return (
-        <DescriptionWebWrapper ref={descriptionWeb}>
+        <DescriptionWebWrapper ref={descriptionWeb} className={'description-web-wrapper'}>
             <Container>
                 <DescriptionWebContent>
                     <DescriptionWebBlock>
-                        <Title>
+                        <Title ref={headTitle}>
                             <span>WEB-студия</span> <br/> полного цикла
                         </Title>
-                        <AboutText>
+                        <AboutText ref={text1Animate}>
                             Команда профессиональных специалистов <span>VEON-TECH</span> предоставляет широкий спектр
                             услуг в области
                             веб-разработки: лидогенерация, поисковая SEO оптимизация, контекстная реклама,
@@ -79,7 +152,7 @@ export const DescriptionWeb:FC<DescriptionWebProps> = ({descriptionWeb}) => {
                             продающих текстов, наполнение веб-сайтов, технические и юзабилити аудиты, брендинг и
                             дизайн.
                         </AboutText>
-                        <AboutText>
+                        <AboutText ref={text2Animate}>
                             Digital агентство <span>VEON-TECH</span> предлагает комплексную стратегию в формате
                             performance marketing.
                             Понимаем цели каждого клиента и подбираем инструменты для их достижения. Работаем на
@@ -90,7 +163,7 @@ export const DescriptionWeb:FC<DescriptionWebProps> = ({descriptionWeb}) => {
                         </AboutText>
                     </DescriptionWebBlock>
                     <Cards>
-                        {devData.map((el, index) => <CurrentDev key={index} card={el}/>)}
+                        {devData?.map((el, index) => <CurrentDev myRef={cardAnimate} key={index} card={el}/>)}
                     </Cards>
                     <CardsMobile>
                         <CurrentDevWrapper>

@@ -6,12 +6,14 @@ import {WorkDesk} from "./workDesk";
 import {SliderSwiper} from "../../../common/components/swiper";
 
 export const Portfolio = () => {
+
+
     return (
         <PortfolioWrapper>
             <Container>
                 <PortfolioContent>
                     <SubTitle>МЫ РУЧАЕМСЯ ЗА КАЧЕСТВО</SubTitle>
-                    <Title>НАШИ КЕЙСЫ</Title>
+                    <Title className='title-technologies'>НАШИ КЕЙСЫ</Title>
                     <Works>
                         <SliderSwiper/>
                         {portfolioData.map((el, index) => <WorkDesk key={index} work={el}/>)}

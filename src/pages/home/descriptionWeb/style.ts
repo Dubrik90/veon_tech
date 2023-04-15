@@ -19,6 +19,9 @@ export const DescriptionWebContent = styled.div`
 
 `
 export const AboutText = styled.p`
+  opacity: 0;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  transform: translateY(150px);
   font-weight: var(--fw-medium);
   line-height: 25px;
   color: var(--colors-text-light);
@@ -48,6 +51,10 @@ export const DescriptionWebBlock = styled.div`
 `
 
 export const Title = styled.h2`
+  top: 140px;
+  transform: rotate(20deg);
+  opacity: 0;
+  position: relative;
   font-weight: var(--fw-bold);
   font-size: 48px;
   line-height: 60px;
@@ -61,7 +68,6 @@ export const Title = styled.h2`
   @media (max-width: 760px) {
     font-size: 41px;
     line-height: 36px;
-
   }
 
 `
