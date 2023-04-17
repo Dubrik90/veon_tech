@@ -23,7 +23,6 @@ import {useFormik} from "formik";
 
 import PhoneInput from "react-phone-input-2";
 import {ROUTS} from "../../../common/constans/routs";
-import {useAppDispatch} from "../../../common/hook";
 import {Link} from "react-router-dom";
 
 type FormikErrorType = {

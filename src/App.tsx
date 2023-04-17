@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.css';
-import {HashRouter, Route, Routes} from 'react-router-dom';
+import {HashRouter, Route, Routes, useLocation} from 'react-router-dom';
 import {ROUTS} from './common/constans/routs';
 import {Home} from './pages/home';
 import {Layout} from "./common/components/layout/Layout";
@@ -9,14 +9,17 @@ import {Nda} from "./pages/nda";
 import {Сases} from "./pages/cases";
 import {Case} from "./pages/case";
 import {Services} from "./pages/services";
-import { Bonuses } from './pages/bonuses';
+import {Bonuses} from './pages/bonuses';
 import {Contacts} from "./pages/Contacts";
 import {Policy} from "./pages/policy";
+import {TransitionRouter} from './common/components/transitionRouter';
+import {useAppSelector} from "./common/hook";
 
 function App() {
+    const location = useLocation();
 
     return (
-        <HashRouter>
+     //   <TransitionRouter location={location}>
             <Routes>
                 <Route path={ROUTS.HOME} element={<Layout/>}>
                     <Route path={ROUTS.HOME} element={<Home/>}/>
@@ -30,7 +33,7 @@ function App() {
                     <Route path={ROUTS.POLICY} element={<Policy/>}/>
                 </Route>
             </Routes>
-        </HashRouter>
+      //   </TransitionRouter>
     );
 }
 

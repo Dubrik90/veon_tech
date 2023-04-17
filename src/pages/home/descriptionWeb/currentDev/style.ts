@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import {flexColumn} from "../../../../common/style/mixin";
 
 export const CurrentDevWrapper = styled.div`
-  will-change: transform;
+ 
   ${flexColumn()};
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #FFFDFD;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -15,8 +15,8 @@ export const CurrentDevWrapper = styled.div`
   
   a {
     //transition: all 0.3s;
-    opacity: 0;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  //  opacity: 0;
+  //  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     display: flex;
     flex-direction: column;
     row-gap: 15px;
@@ -49,7 +49,7 @@ export const CardImage = styled.div`
 `
 
 export const Title = styled.h3`
-  font-weight: var(--fw-extra-bold);
+  font-weight: var(--fw-medium);
   font-size: 25px;
   line-height: 129.5%;
  // color: var(--colors-text-dark);
@@ -63,18 +63,35 @@ export const SubTitle = styled.p`
   color: #000000;
   flex: 1 1 auto;
 `
+
 export const ButtonArrow = styled.button`
+  display: flex;
+  align-items: center;
   align-self: flex-start;
   font-weight: var(--fw-extra-bold);
   font-size: 13px;
   line-height: 129.5%;
  // color: var(--colors-text-dark);
   color: #000000;
+  transition: all 0.3s;
 
   svg {
+    transition: all 0.3s;
     margin-left: 5px;
+    
     path {
      // fill: var(--colors-text-dark);
+    }
+  }
+  
+  :hover {
+    color: #5DB447;
+    
+    svg {
+      transform: translateX(5px);
+      path {
+         fill:#5DB447;
+      }
     }
   }
 `

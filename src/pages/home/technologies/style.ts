@@ -7,19 +7,14 @@ export const TechnologiesWrapper = styled.div`
   text-align: center;
 `
 export const TechnologiesTitle = styled.h2`
-  will-change: transform;
   font-weight: var(--fw-bold);
-  font-size: 48px;
-  line-height: 60px;
+  font-size: calc(25px + (45 - 25) * ((100vw - 320px) / (1920 - 320)));
+  line-height: 1.4;
   margin-bottom: 66px;
   color: var(--colors-text-dark);
+  
   @media (max-width: 768px) {
-    font-size: 38px;
     margin-bottom: 30px;
-  }
-  @media (max-width: 500px) {
-    font-size: 28px;
-    line-height: 37px;
   }
 
 `

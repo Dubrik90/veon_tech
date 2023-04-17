@@ -138,7 +138,6 @@ export const SubTitleSmall = styled(SubTitle)`
 
 `
 export const Button = styled.button`
-  will-change: transform;
   opacity: 0;
  // clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
   grid-area: button;

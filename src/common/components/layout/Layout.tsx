@@ -14,12 +14,13 @@ import {ConsultantModal} from "../consultantModal";
 import {BonuseForm} from "../bonuseForm";
 import {useScrollBlock} from "../../hook/use-scroll-block";
 import {gsap} from "gsap";
+import {WaterfallModal} from "../waterfallModal";
+import {ScramModal} from "../scrumModal";
 
 
 export const Layout = () => {
     const isOpenForm = useAppSelector(state => state.app.isOpenForm)
     const isModalWindowOpen = useAppSelector(state => state.app.isModalWindowOpen)
-    const isConsultantModalOpen = useAppSelector(state => state.app.isConsultantModalOpen)
     const isOpenBonuseFormOpen = useAppSelector(state => state.app.isOpenBonuseForm)
 
     const tl = gsap.timeline({defaults: {ease: 'power2.easeInOut', duration: 2}})
@@ -41,9 +42,11 @@ export const Layout = () => {
             <GoUp/>
             <Cookie/>
             <ConsultantModal />
+            <ScramModal />
             {isModalWindowOpen && <ModalWindoww />}
-            {/*{isConsultantModalOpen && <ConsultantModal />}*/}
             {isOpenBonuseFormOpen && <BonuseForm />}
+            <WaterfallModal/>
+
         </>
     )
 }

@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 
 export const HeaderWrapper = styled.header`
-  will-change: transform;
   opacity: 0;
   transform: translateY(-100px);
   padding: 5px 0;
@@ -75,7 +74,7 @@ export const HeaderContent = styled.div`
     transition: all 0.3s;
     position: relative;
     z-index: 10;
-    max-width: 75px;
+   // max-width: 75px;
 
     img {
       width: 100%;

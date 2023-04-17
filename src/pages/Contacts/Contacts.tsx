@@ -6,8 +6,6 @@ import {OfficeHours} from "./officeHours";
 import {Requisites} from "./requisites";
 import {MapComponent} from "./map";
 import {SocialIcons} from "./socialIcons";
-import {BonuseForm} from "../../common/components/bonuseForm";
-
 
 export const Contacts = () => {
 

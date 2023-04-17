@@ -3,6 +3,7 @@ import {DevDataType} from '../../data';
 import {ButtonArrow, CardImage, CurrentDevWrapper, SubTitle, Title} from './style';
 
 import {Arrow} from '../assets'
+import {Link} from "react-router-dom";
 
 type CurrentDevType = {
     card: DevDataType,
@@ -12,14 +13,16 @@ export const CurrentDev: React.FC<CurrentDevType> = ({card, myRef}) => {
 
 
     return (
-        <CurrentDevWrapper  className={'card'}>
+        <CurrentDevWrapper className={'card'}>
             <CardImage>
                 <img src={card.img} alt=""/>
             </CardImage>
             <Title>{card.header}</Title>
             <SubTitle>{card.desc}</SubTitle>
             <ButtonArrow>
-                Узнать подробнее
+                <Link to={card.link}>
+                    Узнать подробнее
+                </Link>
                 <Arrow/>
             </ButtonArrow>
         </CurrentDevWrapper>

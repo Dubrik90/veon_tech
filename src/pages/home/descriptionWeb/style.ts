@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const DescriptionWebWrapper = styled.div`
-  will-change: transform;
   opacity: 0;
   clip-path: polygon(0 100%, 100% 100%, 100% 38%, 0 38%);
   background-color: var(--colors-bg-green-dark);
@@ -20,13 +19,13 @@ export const DescriptionWebContent = styled.div`
 
 `
 export const AboutText = styled.p`
-  will-change: transform;
   opacity: 0;
   clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
   transform: translateY(150px);
   font-weight: var(--fw-medium);
   line-height: 25px;
   color: var(--colors-text-light);
+  
   @media (max-width: 760px) {
     
   }

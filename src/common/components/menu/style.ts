@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {fontSize} from "../../style/mixin";
+import {flexColumn, fontSize} from "../../style/mixin";
 
 export const NavigateMenu = styled.nav`
   display: flex;
@@ -74,8 +74,9 @@ export const SubMenu = styled.ul`
   padding: 10px 15px;
   display: flex;
   flex-direction: column;
-  row-gap: 15px;
-  
+  row-gap: 8px;
+  border-radius: 3px;
+
   @media (max-width: 1320px) {
     transform: translate(0px, 27px);
   }
@@ -88,29 +89,34 @@ export const SubMenu = styled.ul`
     width: 100%;
     height: 36px;
   }
-  
+
   a {
-    font-weight: 600;
+    //font-weight: 600;
     font-size: 13px;
     line-height: 11px;
     color: var(--colors-text-dark);
     position: relative;
-    padding-left: 30px;
+    //padding-left: 30px;
+    display: flex;
 
-    :before {
-      content: '';
-      width: 10px;
-      height: 10px;
-      background: var(--colors-bg-green);
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      border-radius: 100%;
-    }
-    
+    padding: 5px;
+
+    //:before {
+    //  content: '';
+    //  width: 100%;
+    //  height: 10px;
+    //  background: var(--colors-bg-green);
+    //  position: absolute;
+    //  top: 50%;
+    //  left: 0;
+    //  transform: translateY(-50%);
+    //  border-radius: 5px;
+    //}
+
     :hover {
-      color: var(--color-menu-hover);
+      // color: var(--color-menu-hover);
+      background: #bec4c5;
+      border-radius: 3px;
     }
   }
 
@@ -119,10 +125,6 @@ export const MenuSubItem = styled.li`
 
 `
 export const MenuItem = styled.li`
-  @media (min-width: 1092px) {
-    display: flex;
-  }
-  
   cursor: context-menu;
   align-items: center;
   justify-content: space-between;
@@ -132,6 +134,45 @@ export const MenuItem = styled.li`
   position: relative;
   text-transform: uppercase;
   z-index: 5;
+  
+  .link__wrap {
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+  .link__title {
+    position: relative;
+    display: block;
+    transition: transform 467ms cubic-bezier(.55, 0, .1, 1) 0s;
+    -webkit-transition: transform 467ms cubic-bezier(.55, 0, .1, 1) 0s, -webkit-transform 467ms cubic-bezier(.55, 0, .1, 1) 0s;
+    transition-property: transform;
+    transition-duration: 467ms, 467ms;
+    transition-timing-function: cubic-bezier(.55, 0, .1, 1), cubic-bezier(.55, 0, .1, 1);
+    transition-delay: 0s, 0s
+  }
+  .link__title--duplicate {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(100%)
+  }
+  
+  .link__wrap:hover .link__title {
+    transform: translateY(-100%);
+    transition: transform 467ms cubic-bezier(.55, 0, .1, 1) 0s;
+    -webkit-transition: transform 467ms cubic-bezier(.55, 0, .1, 1) 0s, -webkit-transform 467ms cubic-bezier(.55, 0, .1, 1) 0s;
+    transition-property: transform;
+    transition-duration: 467ms, 467ms;
+    transition-timing-function: cubic-bezier(.55, 0, .1, 1), cubic-bezier(.55, 0, .1, 1);
+    transition-delay: 0s, 0s
+  }
+  
+  @media (min-width: 1092px) {
+    display: flex;
+  }
+  
+  
   
   @media (max-width: 1320px) {
     font-size: var(--fs-14);
@@ -154,6 +195,7 @@ export const MenuItem = styled.li`
   
   :hover {
     color: var(--color-menu-hover);
+        
     svg {
       transform: rotate(-180deg);
       rect {

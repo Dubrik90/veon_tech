@@ -9,6 +9,7 @@ import {Contacts} from "./contacts";
 import {Layer} from "./layer";
 import {gsap} from "gsap";
 import {setIsOpenFormAC} from "../../app/app-reduser";
+import {Methodology} from "./methodology";
 
 export const Home = () => {
     const headerAnimate = useRef(null)
@@ -25,7 +26,7 @@ export const Home = () => {
 
         tl.to(el, {clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity: 1, duration: 1.5}, 1)
             .to(but, {opacity: 1, ease: 'power0.easeNone'}, 1.7)
-            .to(descWeb, {clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity: 1}, 2)
+            .to(descWeb, {clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity: 1}, 1.7)
 
     }, [])
 
@@ -34,6 +35,7 @@ export const Home = () => {
         <>
             <HeadrMain headerAnimate={headerAnimate} button={button}/>
             <DescriptionWeb descriptionWeb={descriptionWeb}/>
+            <Methodology/>
             <Technologies/>
             <Portfolio/>
             <Company/>
