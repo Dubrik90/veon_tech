@@ -6,23 +6,24 @@ type ModalWindowWrapperProps = {
 }
 
 export const WaterfallModalWrapper = styled.div<ModalWindowWrapperProps>`
-  ${flexColumn()}
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
   background: rgba(21, 21, 21, 0.96);
   z-index: 100;
-  transition: all 0.3s;
+  position: fixed;
+  top: 0;
+  right: 0;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  height: 100vh;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+  overflow-y: auto;
+  padding: 100px 0;
   opacity: ${({openModal}) => openModal ? '1' : '0'};
   visibility: ${({openModal}) => openModal ? 'visible' : 'hidden'};
   scale: ${({openModal}) => openModal ? '1' : '0'};
-  overflow-y: auto;
-  padding: 60px 0;
-  
 `
 
 export const GridContainer = styled.div`

@@ -6,22 +6,41 @@ type ModalWindowWrapperProps = {
 }
 
 export const WaterfallModalWrapper = styled.div<ModalWindowWrapperProps>`
-  ${flexColumn()}
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
   background: rgba(21, 21, 21, 0.96);
   z-index: 100;
-  transition: all 0.3s;
+  position: fixed;
+  top: 0;
+  right: 0;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  height: 100vh;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+  overflow-y: auto;
+  padding: 100px 0;
   opacity: ${({openModal}) => openModal ? '1' : '0'};
   visibility: ${({openModal}) => openModal ? 'visible' : 'hidden'};
   scale: ${({openModal}) => openModal ? '1' : '0'};
-  overflow-y: auto;
- // padding: 100px 0 30px 0;
+
+  //  
+  //  position: fixed;
+  //  top: 0;
+  //  left: 0;
+  //  width: 100vw;
+  //  height: 100%;
+  //  align-items: center;
+  //  justify-content: center;
+  //  background: rgba(21, 21, 21, 0.96);
+  //  z-index: 100;
+  //  transition: all 0.3s;
+    //  opacity: ${({openModal}) => openModal ? '1' : '0'};
+    //  visibility: ${({openModal}) => openModal ? 'visible' : 'hidden'};
+    //  scale: ${({openModal}) => openModal ? '1' : '0'};
+  //  overflow-y: auto;
+  // // padding: 100px 0 30px 0;
 `
 
 export const GridContainer = styled.div`
@@ -59,7 +78,7 @@ export const GridContainer = styled.div`
     padding: 20px 0;
     position: relative;
   }
-  
+
   .div1 {
     grid-area: 1 / 2 / 2 / 3;
   }
@@ -145,8 +164,8 @@ export const GridContainer = styled.div`
   .div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8, .div9, .div10, .div11, .div12, .div13, .div14, .div15 {
     color: #dbe8d3;
     padding: 3px 10px;
-  //  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
-    
+    //  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+
   }
 
   .div4, .div5, .div6, .div7, .div8, .div9, .div10, .div11, .div12, .div13, .div14, .div15 {
@@ -183,7 +202,7 @@ export const HeaderBlock = styled.div`
   column-gap: calc(30px + (300 - 30) * ((100vw - 768px) / (1920 - 768)));
   justify-content: center;
   align-items: center;
-  margin-bottom:  calc(30px + (60 - 30) * ((100vw - 320px) / (1920 - 320)));
+  margin-bottom: calc(30px + (60 - 30) * ((100vw - 320px) / (1920 - 320)));
 
   @media (max-width: 1000px) {
     flex-direction: column;
