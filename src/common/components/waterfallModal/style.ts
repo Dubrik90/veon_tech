@@ -22,6 +22,7 @@ export const WaterfallModalWrapper = styled.div<ModalWindowWrapperProps>`
   scale: ${({openModal}) => openModal ? '1' : '0'};
   overflow-y: auto;
   padding: 60px 0;
+  
 `
 
 export const GridContainer = styled.div`

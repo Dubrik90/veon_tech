@@ -21,7 +21,7 @@ export const WaterfallModalWrapper = styled.div<ModalWindowWrapperProps>`
   visibility: ${({openModal}) => openModal ? 'visible' : 'hidden'};
   scale: ${({openModal}) => openModal ? '1' : '0'};
   overflow-y: auto;
-  padding: 60px 0;
+ // padding: 100px 0 30px 0;
 `
 
 export const GridContainer = styled.div`
@@ -59,44 +59,7 @@ export const GridContainer = styled.div`
     padding: 20px 0;
     position: relative;
   }
-
-
-  //.div2, .div3, .div4, .div5, .div6, .div7 {
-  //  padding: 45px 5px 5px 10px;
-  //  border-left: 2px solid var(--color-dg-footer);
-  //  color: #dbe8d3;
-  //  font-weight: var(--fw-bold);
-  //  position: relative;
-  //
-  //  :after {
-  //    content: '';
-  //    position: absolute;
-  //    bottom: -28px;
-  //    left: -12px;
-  //    width: 22px;
-  //    height: 22px;
-  //    background: var(--colors-bg);
-  //    border-radius: 100%;
-  //  }
-  //
-  //  :before {
-  //    position: absolute;
-  //    font-size: 14px;
-  //    bottom: -24px;
-  //    left: -4px;
-  //    z-index: 10;
-  //    color: var(--colors-text-dark);
-  //  }
-  //}
-  //
-  //.div10, .div11, .div12, .div13, .div14, .div15 {
-  //  padding: 10px 5px;
-  //  border-left: 2px solid var(--color-dg-footer);
-  //  color: #dbe8d3;
-  //  font-size: 13px;
-  //  line-height: 1.2;
-  //}
-
+  
   .div1 {
     grid-area: 1 / 2 / 2 / 3;
   }
@@ -175,30 +138,43 @@ export const GridContainer = styled.div`
 
   .div1, .div2, .div3 {
     justify-self: center;
-    font-weight: var(--fw-medium);
-    font-size: 20px;
-    
+    font-weight: var(--fw-bold);
+    font-size: 22px;
   }
-  
+
   .div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8, .div9, .div10, .div11, .div12, .div13, .div14, .div15 {
     color: #dbe8d3;
-    padding: 5px 10px;
+    padding: 3px 10px;
+  //  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+    
   }
+
   .div4, .div5, .div6, .div7, .div8, .div9, .div10, .div11, .div12, .div13, .div14, .div15 {
     border-left: 2px solid var(--color-dg-footer);
   }
-  
+
   .div7, .div11, .div15 {
     position: relative;
-    
+
     span {
       position: absolute;
       bottom: -26px;
-      right: 50px;
+      right: 55px;
+
+      :before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -40px;
+        height: 35px;
+        width: 35px;
+        clip-path: polygon(70% 1%, 100% 50%, 70% 100%, 40% 100%, 70% 51%, 40% 0);
+        background: #dbe8d3;
+      }
+
     }
   }
-
-  
 `
 export const HeaderBlock = styled.div`
 
@@ -207,7 +183,7 @@ export const HeaderBlock = styled.div`
   column-gap: calc(30px + (300 - 30) * ((100vw - 768px) / (1920 - 768)));
   justify-content: center;
   align-items: center;
-  margin-bottom: 60px;
+  margin-bottom:  calc(30px + (60 - 30) * ((100vw - 320px) / (1920 - 320)));
 
   @media (max-width: 1000px) {
     flex-direction: column;
