@@ -19,14 +19,13 @@ export const PortfolioContent = styled.div`
     align-items: center;
 `
 export const SubTitle = styled.p`
-  font-weight: var(--fw-bold);
-  line-height: 25px;
+  font-weight: var(--fw-medium);
+  text-align: center;
+  line-height: 1.3;
+  font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
   color: #5DB447;
   margin-bottom: 15px;
-   @media (max-width: 415px) {
-    font-size: 19px;
-  }
- 
+  
 `
 export const Title = styled.h3`
   will-change: transform;

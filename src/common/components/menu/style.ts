@@ -178,7 +178,7 @@ export const MenuItem = styled.li`
     font-size: var(--fs-14);
   }
   @media (max-width: 1092px) {
-    font-size: 25px;
+    font-size: 22px;
   }
 
   svg {

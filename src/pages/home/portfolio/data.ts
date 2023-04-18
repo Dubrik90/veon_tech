@@ -1,7 +1,7 @@
 import Img01 from "./assets/01.png";
 import Img02 from "./assets/02.png";
 import Img03 from "./assets/03.png";
-import Img04 from "./assets/04.png";
+import Img04 from "./assets/01.png";
 import Img05 from "./assets/05.png";
 
 import {DevDataType} from "../data";

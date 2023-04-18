@@ -1,17 +1,18 @@
 import styled from 'styled-components';
+import {flexColumn} from "../../style/mixin";
 
 
 export const SwiperReviewsWrapper = styled.div`
-  max-width: 1120px;
-  box-sizing: content-box;
+ // max-width: 1120px;
+ // box-sizing: content-box;
   margin: 0 auto;
-  padding: 0 40px 30px 40px;
+  padding: 0 30px 30px 30px;
  // background: var(--color-bg-green-light);
 
   .swiper {
     width: 100%;
     height: 100%;
-
+    
     .swiper-wrapper {
       margin-bottom: 20px;
     }
@@ -22,6 +23,7 @@ export const SwiperReviewsWrapper = styled.div`
     font-weight: 600;
     font-size: 20px;
     line-height: 25px;
+    overflow: hidden;
 
     color: var(--colors-text-dark);
   }
@@ -66,16 +68,83 @@ export const SwiperReviewsWrapper = styled.div`
 
 
 `
+type ReviewBlockProps = {
+    background: string
+}
+export const ReviewBlock = styled.div<ReviewBlockProps>`
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: ${({background}) => background ? `${background}` : '#fff'};
+`
+export const ReviewUser = styled.div`
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+`
+export const LogoBlock = styled.div`
+  display: flex;
+  column-gap: 30px;
+  
 
-export const Review = styled.p`
-  width: 100%;
-  color: var(--colors-text-dark);
-  @media (max-width: 768px) {
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 20px;
+`
+export const LogoCompany = styled.div`
+  width: 100px;
+  background-color: #dbe8d3;
+  border-radius: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    max-width: 60px;
+    max-height: 60px;
+    object-fit: contain;
+  }
+`
+export const LogoUser = styled.div`
+  width: 100px;
+  background-color: #5DB447;
+  border-radius: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -50px;
+
+  img {
+    max-width: 60px;
+    max-height: 60px;
+    object-fit: contain;
   }
 
+`
+export const UserName = styled.div`
+  ${flexColumn()};
+  font-weight: var(--fw-regular);
+  padding-top: 20px;
+`
+export const UserTitle = styled.p`
+    font-weight: var(--fw-medium);
+  font-size: 20px;
+
+    
+`
+export const UserText = styled.p`
+  font-size: 20px;
+  opacity: 0.6;
+    
+`
+
+
+
+export const Review = styled.p`
+  max-width: 600px;
+  color: var(--colors-text-dark);
+  font-weight: var(--fw-regular);
+  
+  
 `
 
 export const NavigationBlock = styled.div`

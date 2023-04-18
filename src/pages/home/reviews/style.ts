@@ -3,28 +3,22 @@ import styled from 'styled-components';
 
 export const ReviewsWrapper = styled.div`
  // background: var(--color-bg-green-light);
-  
-  
+  padding-top: calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320)));
+  padding-bottom: calc(30px + (40 - 30) * ((100vw - 320px) / (1920 - 320)));
+
 `
 export const Title = styled.h3`
-  will-change: transform;
-  color: var(--colors-text-dark);
-  border-top: 2px solid #6EEC4E;
-  padding-top: 80px;
-  font-weight: var(--fw-bold);
-  line-height: 21px;
-  padding-bottom: 40px;
-  font-size: 36px;
   text-align: center;
+  font-weight: var(--fw-bold);
+  font-size: calc(25px + (45 - 25) * ((100vw - 320px) / (1920 - 320)));
+  line-height: 1.4;
+  color: var(--colors-text-dark);
+  margin-bottom: 30px;
   
   @media (max-width: 768px) {
-    text-align: center;
-    font-size: 28px;
-    line-height: 31px;
-    font-weight: var(--fw-bold);
-    margin: 0 -15px 30px -15px;
-    padding-top: 25px;
-    border-top: none;
+    //margin: 0 -15px 30px -15px;
+    //padding-top: 25px;
+    //border-top: none;
   }
 
 

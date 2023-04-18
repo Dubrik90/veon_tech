@@ -58,6 +58,9 @@ export const Technologies = () => {
 
 
 
+
+
+
     }, [])
 
     return (

@@ -15,9 +15,9 @@ export const Contacts = () => {
     return (
         <ContactsWrapper>
             <Container>
-                <ContentBlock className='title-technologies'>
-                    <Subtitle>Давайте приступим к работе?</Subtitle>
-                    <Title onClick={onClickFormModalHandler}>Связаться с нами</Title>
+                <ContentBlock >
+                    <Subtitle className='title-technologies'>Давайте приступим к работе?</Subtitle>
+                    <Title onClick={onClickFormModalHandler} className='animate'>Связаться с нами</Title>
                 </ContentBlock>
             </Container>
         </ContactsWrapper>

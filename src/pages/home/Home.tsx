@@ -10,6 +10,8 @@ import {Layer} from "./layer";
 import {gsap} from "gsap";
 import {setIsOpenFormAC} from "../../app/app-reduser";
 import {Methodology} from "./methodology";
+import { Techno } from './techno';
+import { PortfolioSlider } from './portfolioSlider';
 
 export const Home = () => {
     const headerAnimate = useRef(null)
@@ -36,8 +38,10 @@ export const Home = () => {
             <HeadrMain headerAnimate={headerAnimate} button={button}/>
             <DescriptionWeb descriptionWeb={descriptionWeb}/>
             <Methodology/>
-            <Technologies/>
-            <Portfolio/>
+            <Techno/>
+            <PortfolioSlider/>
+            {/*<Technologies/>*/}
+            {/*<Portfolio/>*/}
             <Company/>
             <Layer/>
             <Reviews/>
