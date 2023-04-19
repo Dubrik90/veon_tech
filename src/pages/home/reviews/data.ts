@@ -1,4 +1,9 @@
-import logo1 from './assets/comp1.png'
+import Logo1 from "../../../assets/logo1.jpg";
+import Logo2 from "../../../assets/logo2.png";
+import Logo3 from "../../../assets/logo3.jpg";
+import User1 from "../../../assets/user1.jpg";
+import User2 from "../../../assets/user2.jpg";
+import User3 from "../../../assets/user3.jpg";
 
 export type reviewDataType = {
     review: string,
@@ -6,41 +11,52 @@ export type reviewDataType = {
     logoUser: string,
     userName: string,
     position: string,
-    background: string
+    background: string,
+    link: string,
+    header: string
 
 }
 export const reviewData: reviewDataType[] = [
     {
-        review: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. que penatibu nusto. Nuliivutaa, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus',
-        logoComp: logo1,
-        logoUser: logo1,
-        userName: 'Имя Фамилия 1',
-        position: 'Директор ООО',
-        background: 'orange'
+        review: 'Начиная с момента бизнес-анализа успешных банковских продуктов и составления ТЗ и\n' +
+            '                                    заканчивая программной разработкой, компания «Новый Сайт» на всех этапах\n' +
+            '                                    демонстрировала\n' +
+            '                                    высокую компетенцию и постоянную вовлеченность в проект, креативный подход к каждому\n' +
+            '                                    бизнес-требованию и предлагала действительно свежие и понятные решения в разработке\n' +
+            '                                    сайта.',
+        logoComp: Logo1,
+        logoUser: User1,
+        userName: 'Д.В. Гуща',
+        position: 'Менеджер проектов «Альфа-Банк»',
+        background: '#F02F10',
+        header: 'Альфа-Банк',
+        link: 'services/webDev',
+    },
+    {
+        review: 'ОАО «Галантэя» — крупнейший производитель кожгалантерейных изделий в Республике\n' +
+            '                                    Беларусь. В рамках предприятия производится разнообразный ассортимент аксессуаров:\n' +
+            '                                    от\n' +
+            '                                    портмоне, ремня и ключницы до сумки, портфеля и чемодана — на все случаи жизни.',
+        logoComp: Logo2,
+        logoUser: User2,
+        userName: 'А.В. Гливинская',
+        position: 'Заместитель директора по маркетингу и продажам',
+        background: '#3a3937',
+        header: 'Галантэя',
+        link: 'services/webDev',
+    },
+    {
+        review: ' «Планета Здоровья» — одна из крупнейших аптечных сетей на рынке Беларуси. Более 300\n' +
+            '                                    аптек в разных городах республики, более 15000 товаров в ассортименте и сотни\n' +
+            '                                    тысяч\n' +
+            '                                    покупателей.',
+        logoComp: Logo3,
+        logoUser: User3,
+        userName: 'Е.В. Голынникова',
+        position: 'Директор',
+        background: '#108fd3',
+        header: 'Планета Здоровья',
+        link: 'services/webDev',
+    },
 
-    },
-    {
-        review: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. que penatibu nusto. Nuliivutaa, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus',
-        logoComp: logo1,
-        logoUser: logo1,
-        userName: 'Имя Фамилия 2',
-        position: 'Заместитель директора ЗАО',
-        background: '#8dee78'
-    },
-    {
-        review: 'onsectetuer aenean commododolon massa. Cum sociis natoque penatibus et magnis nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus',
-        logoComp: logo1,
-        logoUser: logo1,
-        userName: 'Имя Фамилия 3',
-        position: 'ИП',
-        background: '#1d506e'
-    },
-    {
-        review: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.itae, eleifend ac, enim. Aliquam iverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus',
-        logoComp: logo1,
-        logoUser: logo1,
-        userName: 'Имя Фамилия 4',
-        position: 'Менеджер',
-        background: '#f8f813'
-    }
 ]

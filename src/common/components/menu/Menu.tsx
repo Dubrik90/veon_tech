@@ -18,7 +18,7 @@ export const Menu: FC<MenuProps> = ({isOpenBurger, onClick, onClickCloseBurger})
     const theme = useAppSelector(state => state.app.theme)
 
     const submenuLinksAbout = [
-        {title: 'О НАШЕЙ КОМПАНИИ', to: ROUTS.JOBS},
+        {title: 'О НАШЕЙ КОМПАНИИ', to: ROUTS.ABOUT},
         {title: 'NDA', to: ROUTS.NDA},
         {title: 'ВАКАНСИИ', to: ROUTS.JOBS},
     ]

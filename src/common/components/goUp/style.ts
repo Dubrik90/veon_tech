@@ -9,7 +9,7 @@ export const GoUpWrapper = styled.div`
   right: -60px;
   bottom: 20px;
   opacity: 1;
-  z-index: 100;
+  z-index: 50;
   transition: all 0.3s;
   cursor: pointer;
 

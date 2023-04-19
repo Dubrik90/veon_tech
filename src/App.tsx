@@ -14,6 +14,7 @@ import {Contacts} from "./pages/Contacts";
 import {Policy} from "./pages/policy";
 import {TransitionRouter} from './common/components/transitionRouter';
 import {useAppSelector} from "./common/hook";
+import {About} from "./pages/about";
 
 function App() {
     const location = useLocation();
@@ -23,6 +24,7 @@ function App() {
             <Routes>
                 <Route path={ROUTS.HOME} element={<Layout/>}>
                     <Route path={ROUTS.HOME} element={<Home/>}/>
+                    <Route path={ROUTS.ABOUT} element={<About/>}/>
                     <Route path={ROUTS.JOBS} element={<Jobs/>}/>
                     <Route path={ROUTS.NDA} element={<Nda/>}/>
                     <Route path={ROUTS.CASES} element={<Сases/>}/>
