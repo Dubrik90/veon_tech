@@ -4,11 +4,8 @@ export const DescriptionWebWrapper = styled.div`
   opacity: 0;
   clip-path: polygon(0 100%, 100% 100%, 100% 38%, 0 38%);
   background-color: var(--colors-bg-green-dark);
-
   padding-top: calc(50px + (120 - 50) * ((100vw - 320px) / (1920 - 320)));
   padding-bottom: calc(30px + (40 - 30) * ((100vw - 320px) / (1920 - 320)));
-
-
 `
 export const DescriptionWebContent = styled.div`
   display: flex;

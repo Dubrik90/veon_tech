@@ -18,8 +18,6 @@ import {Link} from "react-router-dom";
 
 
 export const PortfolioSlider = () => {
-
-
     return (
         <PortfolioSliderWrapper>
             <Container>

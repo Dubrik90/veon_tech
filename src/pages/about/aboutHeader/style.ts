@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {flexColumn} from "../../common/style/mixin";
+import {flexColumn} from "../../../common/style/mixin";
 
 export const ServiceHeaderWrapper = styled.div`
   padding: 130px 0 50px 0;

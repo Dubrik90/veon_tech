@@ -8,8 +8,8 @@ import {
     Text,
     Title
 } from "./style";
-import {Container} from "../../common/style/Container";
-import ImgWebDev from "../services/assets/wedDevImages/logo.png";
+import {Container} from "../../../common/style/Container";
+import ImgWebDev from "../../services/assets/wedDevImages/logo.png";
 
 export const AboutHeader = () => {
     return (

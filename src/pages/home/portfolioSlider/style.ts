@@ -5,7 +5,6 @@ export const PortfolioSliderWrapper = styled.div`
   padding-top: calc(50px + (120 - 50) * ((100vw - 320px) / (1920 - 320)));
   padding-bottom: calc(56px + (180 - 56) * ((100vw - 320px) / (1920 - 320)));
 
-
   .swiper {
     width: 100%;
     height: 100%;
