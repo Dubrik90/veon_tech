@@ -13,7 +13,7 @@ export const CurrentDev: React.FC<CurrentDevType> = ({card, myRef}) => {
 
 
     return (
-        <CurrentDevWrapper className={'card'}>
+        <CurrentDevWrapper className='animate'>
             <CardImage>
                 <img src={card.img} alt=""/>
             </CardImage>

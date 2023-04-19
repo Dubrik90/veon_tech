@@ -4,7 +4,10 @@ export const DescriptionWebWrapper = styled.div`
   opacity: 0;
   clip-path: polygon(0 100%, 100% 100%, 100% 38%, 0 38%);
   background-color: var(--colors-bg-green-dark);
-  padding: 72px 0 60px 0;
+
+  padding-top: calc(50px + (120 - 50) * ((100vw - 320px) / (1920 - 320)));
+  padding-bottom: calc(30px + (40 - 30) * ((100vw - 320px) / (1920 - 320)));
+
 
 `
 export const DescriptionWebContent = styled.div`
@@ -23,14 +26,12 @@ export const AboutText = styled.p`
   clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
   transform: translateY(150px);
   font-weight: var(--fw-medium);
-  line-height: 25px;
+  font-size: calc(18px + (20 - 18) * ((100vw - 320px) / (1920 - 320)));
+  line-height: 1.2;
   color: var(--colors-text-light);
   
   @media (max-width: 760px) {
-    
-  }
-  @media (max-width: 760px) {
-    font-size: 14px;
+   
     span {
       color: var(--color-menu-hover);
     }
@@ -52,14 +53,14 @@ export const DescriptionWebBlock = styled.div`
 `
 
 export const Title = styled.h2`
-  will-change: transform;
-  top: 140px;
-  transform: rotate(20deg);
-  opacity: 0;
+  //will-change: transform;
+ // top: 140px;
+ // transform: rotate(20deg);
+ // opacity: 0;
   position: relative;
   font-weight: var(--fw-bold);
-  font-size: 48px;
-  line-height: 60px;
+  font-size: calc(41px + (50 - 41) * ((100vw - 320px) / (1920 - 320)));
+  line-height: 1.1;
   margin-bottom: 15px;
   color: var(--colors-text-dark);
 
@@ -67,10 +68,10 @@ export const Title = styled.h2`
     color: var(--colors-text-green)
   }
 
-  @media (max-width: 760px) {
-    font-size: 41px;
-    line-height: 36px;
-  }
+  //@media (max-width: 760px) {
+  //  font-size: 41px;
+  //  line-height: 36px;
+  //}
 
 `
 

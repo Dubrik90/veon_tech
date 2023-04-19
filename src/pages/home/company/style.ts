@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const CompanyWrapper = styled.div`
   background-color: var(--colors-bg-green-dark);
-  padding-top: calc(30px + (70 - 30) * ((100vw - 320px) / (1920 - 320)));
-  padding-bottom: calc(10px + (50 - 10) * ((100vw - 768px) / (1920 - 768)));
+  padding-top: calc(50px + (120 - 50) * ((100vw - 320px) / (1920 - 320)));
+  padding-bottom: calc(56px + (180 - 56) * ((100vw - 320px) / (1920 - 320)));
   
   @media (max-width: 768px) {
    // padding: 25px 0;
@@ -18,7 +18,7 @@ export const CompanyWrapper = styled.div`
 export const Title = styled.h3`
   text-align: center;
   font-weight: var(--fw-bold);
-  font-size: calc(25px + (45 - 25) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(30px + (76 - 30) * ((100vw - 320px) / (1920 - 320)));
   line-height: 1.4;
   //margin-bottom:calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
   color: var(--colors-text-dark);

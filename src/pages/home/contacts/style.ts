@@ -5,21 +5,24 @@ import {flexColumn} from "../../../common/style/mixin";
 
 export const ContactsWrapper = styled.div`
   position: relative;
-  margin-bottom: 5rem;
-  margin-top: 7.375rem;
+  //margin-bottom: 5rem;
+  //margin-top: 7.375rem;
+  padding-top: calc(50px + (80 - 50) * ((100vw - 320px) / (1920 - 320)));
+  padding-bottom: calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320)));
+
 
   @media (min-width: 768px) {
-    margin-top: 5.5rem
+  //  margin-top: 5.5rem
   }
 
   @media (min-width: 1024px) {
-    margin-bottom: 5rem;
-    margin-top: 7.375rem
+  //  margin-bottom: 5rem;
+   // margin-top: 7.375rem
   }
 
   @media (min-width: 1600px) {
-    margin-bottom: 7.5rem;
-    margin-top: 10rem
+  //  margin-bottom: 7.5rem;
+  //  margin-top: 10rem
   }
 `
 

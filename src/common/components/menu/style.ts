@@ -98,7 +98,7 @@ export const SubMenu = styled.ul`
     position: relative;
     //padding-left: 30px;
     display: flex;
-
+    border-radius: 3px;
     padding: 5px;
 
     //:before {
@@ -115,8 +115,8 @@ export const SubMenu = styled.ul`
 
     :hover {
       // color: var(--color-menu-hover);
-      background: #bec4c5;
-      border-radius: 3px;
+      background: var(--color-menu-hover);
+    
     }
   }
 

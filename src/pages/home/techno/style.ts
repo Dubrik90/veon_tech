@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const TechnoWrapper = styled.div`
   background-color: var(--colors-bg-green-dark);
-  padding-top: calc(30px + (70 - 30) * ((100vw - 320px) / (1920 - 320)));
-  padding-bottom: calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320)));
+  padding-top: calc(50px + (120 - 50) * ((100vw - 320px) / (1920 - 320)));
+  padding-bottom: calc(56px + (180 - 56) * ((100vw - 320px) / (1920 - 320)));
 `
 
 export const TechnoContent = styled.div`
@@ -115,8 +115,9 @@ export const TechnoBlock = styled.div`
 export const TechnoText = styled.p`
   max-width: calc(370px + (550 - 370) * ((100vw - 768px) / (1920 - 768)));
   color: var(--colors-text-dark);
-  font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)));
   line-height: 1.3;
+  font-weight: var(--fw-medium);
 
   @media (max-width: 767px) {
     max-width: 100%;

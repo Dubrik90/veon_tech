@@ -14,6 +14,7 @@ import ArrowLeft  from '@mui/icons-material/EastOutlined';
 import {Navigation} from "swiper";
 import {portfolioData} from "../portfolio/data";
 import {Container} from "../../../common/style/Container";
+import {Link} from "react-router-dom";
 
 
 export const PortfolioSlider = () => {
@@ -22,7 +23,7 @@ export const PortfolioSlider = () => {
     return (
         <PortfolioSliderWrapper>
             <Container>
-                <SubTitle>МЫ РУЧАЕМСЯ ЗА КАЧЕСТВО</SubTitle>
+                <SubTitle className='animate'>МЫ РУЧАЕМСЯ ЗА КАЧЕСТВО</SubTitle>
                 <Title className='animate'>НАШИ КЕЙСЫ</Title>
                 <ArrowBlock>
                     <ArrowRight className="prev"/>
@@ -48,16 +49,22 @@ export const PortfolioSlider = () => {
                         slidesPerView: 2,
                         spaceBetween: 20,
                     },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                    },
 
                 }}
             >
                 {portfolioData.map((el, index) => (
-                    <SwiperSlide key={index}>
-                        <img src={el.img} alt='img'/>
-                        <AboutBlock>
-                            <TitleCase>{el.header}</TitleCase>
-                            <SubTitleCase>{el.desc}</SubTitleCase>
-                        </AboutBlock>
+                    <SwiperSlide key={index} className='animate'>
+                        <Link to={el.link}>
+                            <img src={el.img} alt='img'/>
+                            <AboutBlock>
+                                <TitleCase>{el.header}</TitleCase>
+                                {/*<SubTitleCase>{el.desc}</SubTitleCase>*/}
+                            </AboutBlock>
+                        </Link>
                     </SwiperSlide>
                 ))}
             </Swiper>

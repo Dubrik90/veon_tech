@@ -7,12 +7,12 @@ export const Reviews = () => {
     return (
         <ReviewsWrapper>
             <Container>
-                <Title className='title-technologies'>Отзывы</Title>
+                <Title className='animate'>Отзывы</Title>
             </Container>
             <SliderReviews/>
-            <Container>
-                <Line></Line>
-            </Container>
+            {/*<Container>*/}
+            {/*    <Line></Line>*/}
+            {/*</Container>*/}
         </ReviewsWrapper>
     )
 

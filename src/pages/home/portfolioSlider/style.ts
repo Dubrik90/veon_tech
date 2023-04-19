@@ -2,12 +2,25 @@ import styled from "styled-components";
 import {flexColumn} from "../../../common/style/mixin";
 
 export const PortfolioSliderWrapper = styled.div`
-  padding-top: calc(30px + (70 - 30) * ((100vw - 320px) / (1920 - 320)));
-  padding-bottom: calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320)));
+  padding-top: calc(50px + (120 - 50) * ((100vw - 320px) / (1920 - 320)));
+  padding-bottom: calc(56px + (180 - 56) * ((100vw - 320px) / (1920 - 320)));
+
 
   .swiper {
     width: 100%;
     height: 100%;
+
+    a {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+
+    a:hover {
+      span {
+        color: var(--colors-text-green);
+      }
+    }
 
     .swiper-slide {
       ${flexColumn()};
@@ -43,9 +56,9 @@ export const SubTitle = styled.p`
 export const Title = styled.h3`
   text-align: center;
   font-weight: var(--fw-bold);
-  font-size: calc(25px + (45 - 25) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(30px + (76 - 30) * ((100vw - 320px) / (1920 - 320)));
   line-height: 1.4;
-  margin-bottom:calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
+  margin-bottom: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
   color: var(--colors-text-dark);
 
 `
@@ -58,7 +71,7 @@ export const ArrowBlock = styled.div`
   @media (max-width: 768px) {
     display: none;
   }
-  
+
 
   svg {
     width: 40px;
@@ -77,15 +90,21 @@ export const ArrowBlock = styled.div`
 `
 
 export const AboutBlock = styled.div`
-  ${flexColumn()};
+  display: flex;
   row-gap: 5px;
-
+  justify-content: start;
+  width: 100%;
 `
-export const TitleCase = styled.p`
-  font-weight: var(--fw-bold);
-  font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
+export const TitleCase = styled.span`
+  font-weight: var(--fw-regular);
+  font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)));
   line-height: 1.1;
   color: var(--colors-text-dark);
+  border-bottom: 3px solid var(--colors-text-green);
+  align-self: flex-start;
+  text-align: start;
+  transition: color 0.3s;
+
 `
 export const SubTitleCase = styled.p`
   font-weight: var(--fw-medium);

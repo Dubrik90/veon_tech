@@ -1,8 +1,8 @@
-import Img01 from "./assets/01.png";
-import Img02 from "./assets/02.png";
-import Img03 from "./assets/03.png";
-import Img04 from "./assets/01.png";
-import Img05 from "./assets/05.png";
+import Img01 from "./assets/011.jpg";
+import Img02 from "./assets/022.jpg";
+import Img03 from "./assets/033.jpg";
+import Img04 from "./assets/044.jpeg";
+import Img05 from "./assets/055.jpeg";
 
 import {DevDataType} from "../data";
 

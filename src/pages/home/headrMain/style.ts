@@ -110,7 +110,7 @@ export const SubTitle = styled.p`
   line-height: 1.4;
   color: var(--colors-text-dark);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 0.5px;
   position: relative;
   bottom: -8px;

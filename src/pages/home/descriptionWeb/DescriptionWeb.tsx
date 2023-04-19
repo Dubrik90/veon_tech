@@ -153,7 +153,7 @@ export const DescriptionWeb: FC<DescriptionWebProps> = ({descriptionWeb}) => {
             <Container>
                 <DescriptionWebContent>
                     <DescriptionWebBlock>
-                        <Title ref={headTitle}>
+                        <Title className='animate'>
                             <span>WEB-студия</span> <br/> полного цикла
                         </Title>
                         <AboutText ref={text1Animate}>

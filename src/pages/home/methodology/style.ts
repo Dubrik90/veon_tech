@@ -2,8 +2,8 @@ import styled from "styled-components";
 import {flexColumn} from "../../../common/style/mixin";
 
 export const MethodologyWrapper = styled.div`
-  padding-top: calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320)));
-  padding-bottom: calc(30px + (40 - 30) * ((100vw - 320px) / (1920 - 320)));
+  padding-top: calc(50px + (120 - 50) * ((100vw - 320px) / (1920 - 320)));
+  padding-bottom: calc(56px + (180 - 56) * ((100vw - 320px) / (1920 - 320)));
 
 `
 export const MethodologyContent = styled.div`
@@ -13,7 +13,7 @@ export const MethodologyContent = styled.div`
 export const Title = styled.h2`
   text-align: center;
   font-weight: var(--fw-bold);
-  font-size: calc(25px + (45 - 25) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(30px + (76 - 30) * ((100vw - 320px) / (1920 - 320)));
   line-height: 1.4;
   margin-bottom: 66px;
   color: var(--colors-text-dark);
