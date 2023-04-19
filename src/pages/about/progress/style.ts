@@ -3,14 +3,9 @@ import Tail from '../assets/tail-yellow.svg'
 import Quotes from '../assets/quotes.svg'
 
 export const ProgressWrapper = styled.div`
-  padding-top: calc(40px + (80 - 40) * ((100vw - 320px) / (1920 - 320)));
-  padding-bottom: calc(40px + (80 - 40) * ((100vw - 320px) / (1920 - 320)));
-
+  padding-top: calc(40px + (120 - 40) * ((100vw - 320px) / (1920 - 320)));
+  padding-bottom: calc(40px + (90 - 40) * ((100vw - 320px) / (1920 - 320)));
   background-color: var(--colors-bg-green-dark);
-
-  @media (min-width: 768px) {
-    padding: 0 0 180px
-  }
 `
 
 export const Title = styled.h3`
@@ -24,7 +19,7 @@ export const Title = styled.h3`
   @media (min-width: 1200px) {
     font-size: 42px;
     line-height: 52px;
-    margin-bottom: 70px
+    margin-bottom: 70px;
   }
 `
 export const ProgressContentTop = styled.div`
