@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/veon_tech/static/css/main.85ac7680.css",
-    "main.js": "/veon_tech/static/js/main.2c8196d0.js",
+    "main.js": "/veon_tech/static/js/main.a80632ea.js",
     "static/js/787.5fb054ca.chunk.js": "/veon_tech/static/js/787.5fb054ca.chunk.js",
     "static/media/logoLight.svg": "/veon_tech/static/media/logoLight.210c8e42e39ddc1b39b050125538f6de.svg",
     "static/media/logoDark.svg": "/veon_tech/static/media/logoDark.23e84bd6689370a922c109024b48c553.svg",
@@ -40,6 +40,7 @@
     "static/media/CoolveticaBk-Regular.woff": "/veon_tech/static/media/CoolveticaBk-Regular.df4b01396f025c5bd4b6.woff",
     "static/media/CoolveticaBk-Regular.woff2": "/veon_tech/static/media/CoolveticaBk-Regular.70ac8e2ab9acc0f6c6be.woff2",
     "static/media/sale.svg": "/veon_tech/static/media/sale.56a313cee1f120e4331e25195ed82079.svg",
+    "static/media/file-folder.png": "/veon_tech/static/media/file-folder.a1dcbf6b6fca971bbe26.png",
     "static/media/creativity2.svg": "/veon_tech/static/media/creativity2.e0182d194148da272cffa19ec13b5950.svg",
     "static/media/moon.svg": "/veon_tech/static/media/moon.ec913ad17fc0c205c4926be19f15eabc.svg",
     "static/media/biglogo.png": "/veon_tech/static/media/biglogo.293bc03b192782b2529e.png",
@@ -75,11 +76,11 @@
     "static/media/chevron_left.svg": "/veon_tech/static/media/chevron_left.96204af78932cc392255743e83f93f1f.svg",
     "static/media/chevron_right.svg": "/veon_tech/static/media/chevron_right.8827aabaed10ab77bfd1a575f02be46a.svg",
     "main.85ac7680.css.map": "/veon_tech/static/css/main.85ac7680.css.map",
-    "main.2c8196d0.js.map": "/veon_tech/static/js/main.2c8196d0.js.map",
+    "main.a80632ea.js.map": "/veon_tech/static/js/main.a80632ea.js.map",
     "787.5fb054ca.chunk.js.map": "/veon_tech/static/js/787.5fb054ca.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.85ac7680.css",
-    "static/js/main.2c8196d0.js"
+    "static/js/main.a80632ea.js"
   ]
 }
