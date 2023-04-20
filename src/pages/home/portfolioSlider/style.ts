@@ -95,14 +95,15 @@ export const AboutBlock = styled.div`
   width: 100%;
 `
 export const TitleCase = styled.span`
-  font-weight: var(--fw-regular);
-  font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)));
+  font-weight: var(--fw-medium);
+  font-size: calc(20px + (24 - 20) * ((100vw - 320px) / (1920 - 320)));
   line-height: 1.1;
   color: var(--colors-text-dark);
   border-bottom: 3px solid var(--colors-text-green);
   align-self: flex-start;
   text-align: start;
-  transition: color 0.3s;
+  transition: color 0.5s ease;
+  padding-top: 10px;
 
 `
 export const SubTitleCase = styled.p`

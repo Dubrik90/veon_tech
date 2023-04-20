@@ -113,11 +113,11 @@ export const TechnoBlock = styled.div`
 
 `
 export const TechnoText = styled.p`
-  max-width: calc(370px + (550 - 370) * ((100vw - 768px) / (1920 - 768)));
+  max-width: calc(370px + (600 - 370) * ((100vw - 768px) / (1920 - 768)));
   color: var(--colors-text-dark);
-  font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(18px + (28 - 18) * ((100vw - 320px) / (1920 - 320)));
   line-height: 1.3;
-  font-weight: var(--fw-medium);
+  font-weight: var(--fw-regular);
 
   @media (max-width: 767px) {
     max-width: 100%;

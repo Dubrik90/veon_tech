@@ -16,7 +16,6 @@ export const About = () => {
             <Principles/>
             <Reviews/>
             <ContactUs/>
-
         </AboutWrapper>
     );
 };

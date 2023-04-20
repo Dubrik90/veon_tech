@@ -6,9 +6,9 @@ import {Line, ReviewsWrapper, Title} from "./style"
 export const Reviews = () => {
     return (
         <ReviewsWrapper>
-            <Container>
-                <Title className='animate'>Отзывы</Title>
-            </Container>
+            {/*<Container>*/}
+            {/*    <Title className='animate'>Отзывы</Title>*/}
+            {/*</Container>*/}
             <SliderReviews/>
             {/*<Container>*/}
             {/*    <Line></Line>*/}

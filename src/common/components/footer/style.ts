@@ -4,6 +4,7 @@ import {flexColumn} from "../../style/mixin";
 
 export const FooterWrapper = styled.footer`
   background-color: var(--color-dg-footer);
+  padding-top: calc(20px + (50 - 20) * ((100vw - 320px) / (1920 - 320)));
 `
 export const FooterContent = styled.div`
   ${flexColumn()}
@@ -14,7 +15,8 @@ export const FooterTop = styled.div`
   column-gap: 20px;
   justify-content: space-between;
   padding-bottom: 20px;
-  min-height: 200px;
+  align-items: center;
+ // min-height: 200px;
 
   @media (max-width: 1227px) {
     flex-direction: column;
@@ -24,7 +26,7 @@ export const FooterTop = styled.div`
   }
 
   img {
-    padding: 70px 0;
+  //  padding: 70px 0;
     max-width: 100%;
     max-height: 100%;
     @media (max-width: 1227px) {
@@ -42,7 +44,7 @@ type ImgWrapProps = {
 export const FooterIcons = styled.div`
   display: flex;
   justify-content: center;
-  align-self: flex-end;
+ // align-self: flex-end;
   flex-wrap: wrap;
   column-gap: 12px;
   

@@ -21,7 +21,7 @@ type PropsMenu = {
 }
 export const MenuList = styled.ul<PropsMenu>`
   display: flex;
-  column-gap: 52px;
+  column-gap: calc(24px + (52 - 24) * ((100vw - 1092px) / (1920 - 1092)));
   flex-wrap: wrap;
 
   .about-link {
@@ -29,10 +29,10 @@ export const MenuList = styled.ul<PropsMenu>`
   }
 
   @media (max-width: 1469px) {
-    column-gap: 30px;
+   // column-gap: 30px;
   }
   @media (max-width: 1115px) {
-    column-gap: 25px;
+   // column-gap: 25px;
   }
   @media (max-width: 1092px) {
     left: ${({isOpenBurger}) => isOpenBurger ? '0' : '-100%'};

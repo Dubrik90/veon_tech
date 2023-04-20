@@ -22,9 +22,9 @@ export const AboutText = styled.p`
  // opacity: 0;
  // clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
  // transform: translateY(150px);
-  font-weight: var(--fw-medium);
-  font-size: calc(18px + (20 - 18) * ((100vw - 320px) / (1920 - 320)));
-  line-height: 1.2;
+  font-weight: var(--fw-regular);
+  font-size: calc(18px + (28 - 18) * ((100vw - 320px) / (1920 - 320)));
+  line-height: 1.3;
   color: var(--colors-text-light);
   
   @media (max-width: 760px) {
@@ -56,7 +56,7 @@ export const Title = styled.h2`
  // opacity: 0;
   position: relative;
   font-weight: var(--fw-bold);
-  font-size: calc(41px + (50 - 41) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(30px + (60 - 30) * ((100vw - 320px) / (1920 - 320)));
   line-height: 1.1;
   margin-bottom: 15px;
   color: var(--colors-text-dark);

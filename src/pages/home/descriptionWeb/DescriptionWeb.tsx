@@ -167,11 +167,6 @@ export const DescriptionWeb: FC<DescriptionWebProps> = ({descriptionWeb}) => {
                             действительно хорошо: современный адаптивный дизайн, верстка на фреймворке bootstrap с
                             контролем качества, правильная настройка 1С-Битрикс, прохождение контроля качества.
                         </AboutText>
-                        <AboutText className={'animate'}>
-                            В решениях и наработках Студии участвовали лучшие специалисты отрасли, и сейчас наши решения
-                            получает каждый из клиентов, заказавший разработку сайта интернет-магазина или
-                            корпоративного сайта.”
-                        </AboutText>
                     </DescriptionWebBlock>
                     <Cards>
                         {devData?.map((el, index) => <CurrentDev key={index} card={el}/>)}

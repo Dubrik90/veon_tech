@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const ContactUsWrapper =styled.div`
+  max-width: 1600px;
+  margin: 0 auto;
   padding-top: calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320)));
  // padding-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320)));
   hr {
@@ -15,6 +17,7 @@ export const DiscussProject =styled.div`
   cursor: pointer;
   transition: color 0.5s ease;
   align-items: center;
+  padding: 38px 0;
   
   a{
     width: 100%;
