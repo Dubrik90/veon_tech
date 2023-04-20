@@ -62,9 +62,71 @@ export const HeaderText = styled.div`
 
 export const HeaderImage = styled.div`
   justify-self: center;
+  position: relative;
+
+
+  .about-us__btn {
+    bottom: 20px;
+    left: 55px;
+    width: 161px;
+    height: 161px;
+    background: var(--colors-bg-green);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+    padding: 0 10px;
+    color: var(--colors-text-dark);
+    font-weight: 600;
+    font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1920 - 320)));
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: -.02em;
+    cursor: pointer;
+    z-index: 4;
+    transition: color .15s;
+
+    @media (max-width: 1024px) {
+      bottom: -13px;
+      left: 16px;
+      width: 140px;
+      height: 140px;
+    }
+  }
+
+  .about-us__btn-icon {
+    position: relative;
+    bottom: 2px;
+    display: inline;
+    height: 22px;
+    width: 22px;
+    margin: 0 4px
+  }
+
+  @media (min-width: 1400px) {
+    .about-us__btn {
+      width: 184px;
+      height: 184px;
+      padding: 0 30px;
+      bottom: 19px;
+      left: 18px
+    }
+  }
+
+  .about-us__btn:active {
+    color: #000
+  }
+
+  @media (any-hover: hover) {
+    .about-us__btn:hover {
+      color: #000
+    }
+  }
+
 
   @media (max-width: 720px) {
-  //  display: none;
+    //  display: none;
     max-width: 400px;
   }
 `

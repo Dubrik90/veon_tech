@@ -21,7 +21,7 @@ type PropsMenu = {
 }
 export const MenuList = styled.ul<PropsMenu>`
   display: flex;
-  column-gap: calc(24px + (52 - 24) * ((100vw - 1092px) / (1920 - 1092)));
+  column-gap: calc(15px + (52 - 15) * ((100vw - 1092px) / (1920 - 1092)));
   flex-wrap: wrap;
 
   .about-link {

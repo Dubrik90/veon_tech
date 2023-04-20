@@ -10,6 +10,7 @@ import {
 } from "./style";
 import {Container} from "../../../common/style/Container";
 import ImgWebDev from "../../services/assets/wedDevImages/logo.png";
+import FileImg from "../assets/file-folder.png";
 
 export const AboutHeader = () => {
     return (
@@ -20,11 +21,17 @@ export const AboutHeader = () => {
                         <Title className={'animate'}> <span>VEON-TECH</span> - лидер белорусского рынка
                             разработки и тестирования проектов
                             по методологии Scrum</Title>
-                        <Button>Скачать презентацию</Button>
+                        {/*<Button>Скачать презентацию</Button>*/}
                         {/*<Text>{text}</Text>*/}
                     </HeaderContent>
                     <HeaderImage className={'animate'}>
                         <Img src={ImgWebDev} alt='image'/>
+                        <a href="../upload/ПрезентацияNS_2023.pdf" className="about-us__btn" target="_blank">
+                            <span className="about-us__btn-label">Скачать презентацию PDF
+                                <img className="about-us__btn-icon" src={FileImg}
+                                     loading="lazy"/>
+                            </span>
+                        </a>
                     </HeaderImage>
                 </HeaderBlock>
             </Container>
