@@ -8,13 +8,15 @@ type CardProps = {
 
 export const Card: FC<CardProps> = ({el}) => {
     return (
-        <CardWrapper>
-            <ImgBlock>
-                <Img src={el.img} alt=""/>
-            </ImgBlock>
-            <Title>{el.title}</Title>
-            <Text>{el.text}</Text>
-        </CardWrapper>
+        <>
+            <CardWrapper>
+                <ImgBlock>
+                    <Img src={el.img} alt=""/>
+                    <Title>{el.title}</Title>
+                </ImgBlock>
+                <Text>{el.text}</Text>
+            </CardWrapper>
+        </>
     );
 };
 

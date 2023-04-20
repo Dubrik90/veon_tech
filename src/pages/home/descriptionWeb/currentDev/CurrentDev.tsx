@@ -7,9 +7,9 @@ import {Link} from "react-router-dom";
 
 type CurrentDevType = {
     card: DevDataType,
-    myRef: React.RefObject<HTMLInputElement>;
+   // myRef: React.RefObject<HTMLInputElement>;
 }
-export const CurrentDev: React.FC<CurrentDevType> = ({card, myRef}) => {
+export const CurrentDev: React.FC<CurrentDevType> = ({card}) => {
 
 
     return (

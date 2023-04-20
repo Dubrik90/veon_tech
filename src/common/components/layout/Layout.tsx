@@ -60,10 +60,10 @@ export const Layout = () => {
             <GetInTorch/>
             <GoUp/>
             <Cookie/>
-            <ConsultantModal />
+            <ConsultantModal/>
             <ScramModal />
-            {isModalWindowOpen && <ModalWindoww />}
-            {isOpenBonuseFormOpen && <BonuseForm />}
+            {isModalWindowOpen && <ModalWindoww/>}
+            {isOpenBonuseFormOpen && <BonuseForm/>}
             <WaterfallModal/>
 
         </>

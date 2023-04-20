@@ -17,13 +17,13 @@ export const AboutHeader = () => {
             <Container>
                 <HeaderBlock>
                     <HeaderContent>
-                        <Title> <span>VEON-TECH</span> - лидер белорусского рынка
+                        <Title className={'animate'}> <span>VEON-TECH</span> - лидер белорусского рынка
                             разработки и тестирования проектов
                             по методологии Scrum</Title>
                         <Button>Скачать презентацию</Button>
                         {/*<Text>{text}</Text>*/}
                     </HeaderContent>
-                    <HeaderImage>
+                    <HeaderImage className={'animate'}>
                         <Img src={ImgWebDev} alt='image'/>
                     </HeaderImage>
                 </HeaderBlock>

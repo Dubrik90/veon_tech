@@ -12,7 +12,6 @@ export const useScrollBlock = (): [() => void, () => void] => {
     const {body} = safeDocument;
 
     const blockScroll = (): void => {
-        console.log('blockScroll')
       //  if (!body || !body.style || scrollBlocked.current) return;
 
         if (document === undefined) return;
@@ -36,7 +35,6 @@ export const useScrollBlock = (): [() => void, () => void] => {
     };
 
     const allowScroll = (): void => {
-        console.log('allowScroll')
       //  if (!body || !body.style || !scrollBlocked.current) return;
 
       //  html.style.position = '';

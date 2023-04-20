@@ -28,7 +28,7 @@ export const reviewData: reviewDataType[] = [
         logoUser: User1,
         userName: 'Д.В. Гуща',
         position: 'Менеджер проектов «Альфа-Банк»',
-        background: '#F02F10',
+        background: 'var(--colors-text-green)',
         header: 'Альфа-Банк',
         link: 'services/webDev',
     },

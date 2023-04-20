@@ -2,12 +2,11 @@
     font-family: 'Coolvetica';
     src: url('CoolveticaBk-Regular.eot');
     src: url('CoolveticaBk-Regular.eot#iefix') format('embedded-opentype'),
-        url('CoolveticaBk-Regular.woff2') format('woff2'),
-        url('CoolveticaBk-Regular.woff') format('woff'),
-        url('CoolveticaBk-Regular.ttf') format('truetype'),
-        url('CoolveticaBk-Regular.svg#CoolveticaBk-Regular') format('svg');
+    url('CoolveticaBk-Regular.woff2') format('woff2'),
+    url('CoolveticaBk-Regular.woff') format('woff'),
+    url('CoolveticaBk-Regular.ttf') format('truetype'),
+    url('CoolveticaBk-Regular.svg#CoolveticaBk-Regular') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
-

@@ -75,7 +75,7 @@ export const Principles = () => {
     return (
         <PrinciplesWrapper>
             <Container>
-                <Title>Принципы работы</Title>
+                <Title className={'animate'}>Принципы работы</Title>
                 <PrinciplesAccordeon>
                     {accordionData.map((el, index) => (
                         <AccordionItem className={activeAccordeonItem === el.id ? 'open' : ''} key={el.id} onClick={()=>onClickToggleHandler(el.id)}>

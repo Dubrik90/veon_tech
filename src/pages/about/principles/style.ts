@@ -2,12 +2,9 @@ import styled from "styled-components";
 import {flexColumn} from "../../../common/style/mixin";
 
 export const PrinciplesWrapper = styled.div`
-  background-color: #fff200;
-  padding: 50px 0;
-
-  @media (min-width: 992px) {
-    padding: 148px 0 301px
-  }
+  background-color: var(--colors-bg-green-dark);
+  padding-top: calc(60px + (130 - 60) * ((100vw - 320px) / (1920 - 320)));
+  padding-bottom: calc(60px + (100 - 60) * ((100vw - 320px) / (1920 - 320)));
 `
 export const Title = styled.h2`
   margin-top: 0;
@@ -17,6 +14,7 @@ export const Title = styled.h2`
   font-size: calc(1.375rem + 1.5vw);
   padding-bottom: 32px;
   padding-top: 0;
+  color: var(--colors-text-dark);
 
   @media (min-width: 1200px) {
     font-size: 2.5rem;
@@ -36,7 +34,7 @@ export const AccordionItem = styled.div`
   flex-direction: column;
   padding: 25px 0;
   color: #000;
-  border-top: 2px solid #000;
+  border-top: 2px solid var(--colors-text-dark);
   transition: color .3s;
 
   @media (min-width: 992px) {
@@ -50,7 +48,7 @@ export const AccordionItem = styled.div`
   }
 
   :last-of-type {
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid var(--colors-text-dark);
 
     @media (max-width: 767.98px) {
       border-bottom: 1px solid transparent;
@@ -76,6 +74,7 @@ export const TitleList = styled.div`
   font-size: 22px;
   line-height: 28px;
   letter-spacing: -.02em;
+  color: var(--colors-text-dark);
 
   @media (min-width: 992px) {
     font-size: 42px;
@@ -87,7 +86,7 @@ export const ListBtn = styled.div`
   position: relative;
   height: 22px;
   width: 22px;
- 
+  color: var(--colors-text-dark);
   
   @media (min-width: 992px) {
     display: none;
@@ -105,7 +104,7 @@ export const ListBtn = styled.div`
     left: 2px;
     width: 22px;
     height: 2px;
-    background-color: #000;
+    background-color: var(--colors-text-dark);
   }
 
   :before {
@@ -115,7 +114,7 @@ export const ListBtn = styled.div`
     left: 12px;
     width: 2px;
     height: 22px;
-    background-color: #000;
+    background-color: var(--colors-text-dark);
     transition: transform .2s .2s;
   }
 `
@@ -147,7 +146,7 @@ export const AccordionDesk = styled.div`
     cursor: pointer;
     z-index: 2;
     transition: transform .3s;
-    color: #fff;
+    color: var(--colors-text-dark);
     transform: rotate(-45deg);
 
     :hover {
@@ -162,7 +161,7 @@ export const AccordionDesk = styled.div`
       transform: translate(-50%, -50%);
       width: 20px;
       height: 2px;
-      background-color: black;
+      background-color: var(--colors-text-dark);
       border-radius: 2px;
     }
 
@@ -174,7 +173,7 @@ export const AccordionDesk = styled.div`
       transform: translate(-50%, -50%) rotate(90deg);
       width: 20px;
       height: 2px;
-      background-color: black;
+      background-color: var(--colors-text-dark);
       border-radius: 2px;
     }
   }
@@ -211,6 +210,7 @@ export const AccordionText = styled.p`
   transition: all .3s;
   font-size: 18px;
   line-height: 25px;
+  color: var(--colors-text-dark);
 
   @media (min-width: 992px) {
     font-size: 20px;

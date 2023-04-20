@@ -12,6 +12,7 @@ export const ContainerForm = styled.div`
 export const ModalTitle = styled.div`
   font-size: calc(24px + (48 - 24) * ((100vw - 320px) / (1920 - 320)));
   color: var(--colors-text-dark);
+  text-transform: uppercase;
 `
 export const DynamicContactHead = styled.div`
   padding-bottom: calc(10px + (45 - 10) * ((100vw - 320px) / (1920 - 320)));

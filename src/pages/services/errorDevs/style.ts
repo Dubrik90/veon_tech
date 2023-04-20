@@ -10,16 +10,16 @@ export const ErrorDevsWrapper = styled.div`
     padding: 40px 0 40px 0;
   }
 `
-export const Title = styled(TitleH3)`
-  font-size: 30px;
+export const Title = styled.h3`
   text-align: center;
+  font-weight: var(--fw-bold);
+  font-size: calc(30px + (56 - 30) * ((100vw - 320px) / (1920 - 320)));
+  line-height: 1.4;
+  color: var(--colors-text-dark);
   margin-bottom: 30px;
 
   @media (max-width: 768px) {
-    font-size: 25px;
-  }
-  @media (max-width: 620px) {
-    font-size: 18px;
+    margin-bottom: 30px;
   }
 `
 export const ErrorDevsContent = styled.div`

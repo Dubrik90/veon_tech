@@ -17,24 +17,24 @@ export const Progress = () => {
     return (
         <ProgressWrapper>
             <Container>
-                <Title>
+                <Title className={'animate'}>
                     Создаем и развиваем сайты, магазины, приложения, порталы, CRM.
                 </Title>
                 <ProgressContentTop>
                     <Ul>
-                        <Li>
+                        <Li className={'animate'}>
                             <SubTitle>№1</SubTitle>
                             <Text> первые в Рейтинге Байнета <br/> +90 различных наград</Text>
                         </Li>
-                        <Li>
+                        <Li className={'animate'}>
                             <SubTitle>20</SubTitle>
                             <Text> лет на рынке с 2003</Text>
                         </Li>
-                        <Li>
+                        <Li className={'animate'}>
                             <SubTitle>100</SubTitle>
                             <Text>специалистов в штате</Text>
                         </Li>
-                        <Li>
+                        <Li className={'animate'}>
                             <SubTitle>500</SubTitle>
                             <Text>завершенных проектов</Text>
                         </Li>
@@ -49,7 +49,7 @@ export const Progress = () => {
                         </svg>
                         {/*<img src={BrasRight} alt=""/>*/}
                     </ImgBlock>
-                    <ContentText>
+                    <ContentText className={'animate'}>
                         <span className="violet-text">Наша миссия </span>обеспечивать встречу лучших технологий, опыта и
                         бизнеса
                     </ContentText>

@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {CardBlock, Title, WorkUsContent, WorkUsWrapper} from './style';
+import {ArrowIcon, CardBlock, Title, WorkUsContent, WorkUsWrapper} from './style';
 import {Container} from "../../../common/style/Container";
 import {Card} from "./card";
 import {CardWorkUsType} from "../Servises";
@@ -19,6 +19,8 @@ export const WorkUs:FC<WorkUsProps> = ({title,cardArray}) => {
                         {cardArray.map((el, index) => (
                             <Card el={el} key={index}/>
                         ))}
+                        <ArrowIcon/>
+                        <span></span>
                     </CardBlock>
                 </WorkUsContent>
             </Container>

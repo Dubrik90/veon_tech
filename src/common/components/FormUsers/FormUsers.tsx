@@ -36,7 +36,7 @@ import {
 import {setIsOpenFormAC} from "../../../app/app-reduser";
 import {useAppDispatch, useAppSelector} from "../../hook";
 import {ROUTS} from "../../constans/routs";
-import {Link, useLocation} from "react-router-dom";
+import {Link, useLocation, useNavigate, useParams} from "react-router-dom";
 import {useScrollBlock} from "../../hook/use-scroll-block";
 
 
@@ -62,6 +62,8 @@ interface MyFormValues {
 
 export const FormUsers: React.FC = () => {
     const dispatch = useAppDispatch()
+    const location = useLocation();
+    const currentPath = location.pathname
 
     const [budget, setBudget] = useState('')
     const [helpFizUser, setHelpFizUser] = useState('')
@@ -72,7 +74,6 @@ export const FormUsers: React.FC = () => {
     const [blockScroll, allowScroll] = useScrollBlock();
 
     const isOpenForm = useAppSelector(state => state.app.isOpenForm)
-
 
     const closeFormModal = () => {
         allowScroll()
@@ -144,7 +145,7 @@ export const FormUsers: React.FC = () => {
                 <BonuseFormWrapper>
                     <ContainerForm>
                         <DynamicContactHead>
-                            <ModalTitle>Свяжитесь с нами</ModalTitle>
+                            <ModalTitle>{currentPath === '/about' ? 'ОБСУДИТЬ ПРОЕКТ' : 'Свяжитесь с нами'} </ModalTitle>
                             <CloseModal onClick={closeFormModal}>
                                 <div></div>
                                 <div></div>
