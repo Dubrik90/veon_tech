@@ -7,9 +7,10 @@ export const AccordeonWrapper = styled.div`
   ${flexColumn()};
   align-items: flex-start;
   z-index: 0;
-  
+
+ 
   @media (max-width: 425px) {
-    font-size: 16px;
+   // font-size: 16px;
   }
 
   .MuiAccordion-region {
@@ -38,10 +39,11 @@ export const AccordeonWrapper = styled.div`
   }
 
   .AccordionDetails {
-    @media (max-width: 988px) {
-      margin-right: -250px;
+    @media (max-width: 1024px) {
+      margin-right: -200px;
     }
-    @media (max-width: 632px) {
+    
+    @media (max-width: 768px) {
       margin-right: 0;
     }
   }

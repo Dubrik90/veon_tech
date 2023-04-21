@@ -79,8 +79,8 @@ export const TechnoBlock = styled.div`
   }
 
   figure:nth-of-type(2) {
-    left: 63.7586%;
-    top: 28.6452%;
+    left: 67.7586%;
+    top: 32.6452%;
     width: 26.5776%;
     height: 28%;
     z-index: 3;

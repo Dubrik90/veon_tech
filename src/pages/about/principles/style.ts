@@ -9,20 +9,12 @@ export const PrinciplesWrapper = styled.div`
 export const Title = styled.h2`
   margin-top: 0;
   margin-bottom: .5rem;
-  font-weight: 500;
+  font-weight: var(--fw-bold);
   line-height: 1.2;
-  font-size: calc(1.375rem + 1.5vw);
+  font-size: calc(30px + (76 - 30) * ((100vw - 320px) / (1920 - 320)));
   padding-bottom: 32px;
   padding-top: 0;
   color: var(--colors-text-dark);
-
-  @media (min-width: 1200px) {
-    font-size: 2.5rem;
-  }
-
-  @media (min-width: 992px) {
-    padding-bottom: 66px;
-  }
 `
 export const PrinciplesAccordeon = styled.div`
   ${flexColumn()};
@@ -70,7 +62,7 @@ export const AccordionListTop = styled.div`
 
 `
 export const TitleList = styled.div`
-  font-weight: 600;
+  font-weight: var(--fw-medium);
   font-size: 22px;
   line-height: 28px;
   letter-spacing: -.02em;

@@ -10,15 +10,15 @@ export const ProgressWrapper = styled.div`
 
 export const Title = styled.h3`
   font-weight: 600;
-  font-size: 22px;
-  line-height: 28px;
+  font-size: calc(30px + (76 - 30) * ((100vw - 320px) / (1920 - 320)));
+  line-height: 1.3;
   letter-spacing: -.02em;
   color: var(--colors-text-dark);
   margin-bottom: 50px;
 
   @media (min-width: 1200px) {
-    font-size: 42px;
-    line-height: 52px;
+   // font-size: 42px;
+   // line-height: 52px;
     margin-bottom: 70px;
   }
 `
@@ -54,6 +54,42 @@ export const Li = styled.li`
   align-items: flex-start;
   letter-spacing: -.02em;
   color: #000;
+  position: relative;
+
+  @media (max-width: 1199px) {
+    // border-bottom: 2px solid #5DB447;
+  }
+
+  :not(:last-child) {
+    :after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 10px;
+      height: 100%;
+      width: 2px;
+      background-color: #5DB447;
+      @media (max-width: 1199px) {
+        top: 100%;
+        left: 0;
+        width: 310px;
+        height: 2px;
+      }
+    }
+  }
+  
+  @media (max-width: 1199px) {
+    :after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 310px;
+      height: 2px;
+      background-color: #5DB447;
+    }
+  }
+
 
   @media (min-width: 768px) {
     width: 50%;

@@ -6,7 +6,7 @@ type SwitchWrapperProps = {
 }
 export const SwitchWrapper = styled.div<SwitchWrapperProps>`
   background: #E8FCE3;
-  padding: 3px 5px;
+  padding: 4px 5px;
   border-radius: 15px;
   position: relative;
   display: flex;
@@ -22,7 +22,7 @@ export const SwitchWrapper = styled.div<SwitchWrapperProps>`
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: ${({theme}) => theme === 'light' ? '35px' : '4px'};
+    left: ${({theme}) => theme === 'light' ? '31px' : '4px'};
     width: 25px;
     height: 25px;
     border-radius: 100px;

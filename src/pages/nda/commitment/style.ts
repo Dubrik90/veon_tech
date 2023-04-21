@@ -3,7 +3,7 @@ import {TextRegular, TitleH2} from "../../../common/style/global";
 import {flexColumn} from "../../../common/style/mixin";
 
 export const CommitmentWrapper = styled.div`
-  padding-top: 40px;
+  padding-top: 140px;
   @media (max-width: 768px) {
     padding-bottom: 20px;
 
@@ -16,12 +16,13 @@ export const CommitmentBlock = styled.div`
   justify-content: space-between;
 
   @media (max-width: 768px) {
-    border-bottom: 2px solid var(--colors-bg-green);
+   // border-bottom: 2px solid var(--colors-bg-green);
+    padding-bottom: 20px;
     column-gap: 10px;
   }
-  @media (max-width: 425px) {
+  @media (max-width: 848px) {
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 40px;
   }
 `
 export const Content = styled.div`
@@ -41,18 +42,21 @@ export const Title = styled(TitleH2)`
 export const Text = styled(TextRegular)`
   position: relative;
   padding-left: 30px;
-
-  @media (max-width: 1024px) {
-    font-size: 18px;
-    padding-left: 20px;
-  }
-  @media (max-width: 768px) {
-    padding-left: 0;
-    font-size: 16px;
-  }
-  @media (max-width: 560px) {
-    font-size: 14px;
-  }
+  font-size: calc(20px + (28 - 20) * ((100vw - 320px) / (1920 - 320)));
+  //font-size: 21px;
+  //
+  //
+  //@media (max-width: 916px) {
+  //  font-size: 18px;
+  //  padding-left: 20px;
+  //}
+  //@media (max-width: 807px) {
+  // // padding-left: 0;
+  //  font-size: 18px;
+  //}
+  //@media (max-width: 560px) {
+  //  font-size: 14px;
+  //}
 
   :before {
     content: '';
@@ -72,8 +76,9 @@ export const Text = styled(TextRegular)`
 export const ImageBlock = styled.div`
   flex: 1 0 40%;
   align-self: flex-end;
-  @media (max-width: 768px) {
-    margin-bottom: 10px;
+  @media (max-width: 848px) {
+    align-self: center;
+    margin-bottom: 60px;
   }
 `
 export const Img = styled.img`

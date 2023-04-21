@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const ContactUsWrapper =styled.div`
-  max-width: 1600px;
-  margin: 0 auto;
   padding-top: calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320)));
  // padding-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320)));
   hr {
@@ -13,19 +11,20 @@ export const ContactUsWrapper =styled.div`
 export const DiscussProject =styled.div`
   display: flex;
   justify-content: space-between;
-  column-gap: 10px;
+  column-gap: calc(30px + (90 - 30) * ((100vw - 320px) / (1920 - 320)));
   cursor: pointer;
   transition: color 0.5s ease;
   align-items: center;
-  padding: 38px 0;
+  padding: 47px 0;
   
   a{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    column-gap: 10px;
+    column-gap: calc(30px + (90 - 30) * ((100vw - 320px) / (1920 - 320)));
     align-items: center;
   }
+  
   svg {
     transition: all .5s ease;
     width: calc(30px + (108 - 30) * ((100vw - 320px) / (1920 - 320)));
@@ -58,12 +57,30 @@ export const DiscussProject =styled.div`
   
 `
 export const Title =styled.h3`
-  font-size: calc(31px + (100 - 31) * ((100vw - 320px) / (1920 - 320)));
+  //font-size: calc(33px + (110 - 33) * ((100vw - 320px) / (1920 - 320)));
+  font-size: 100px;
   letter-spacing: -.01em;
-  font-weight: var(--fw-bold);
   line-height: 1.4;
   transition: color 0.5s ease;
   color: var(--colors-text-dark);
+  font-family: 'Inter';
+  font-weight: 800;
+
+  @media (max-width: 1240px) {
+    font-size: 95px;
+  }
+  @media (max-width: 1190px) {
+    font-size: 80px;
+  }
+  @media (max-width: 1008px) {
+    font-size: 70px;
+  }
+  @media (max-width: 896px) {
+    font-size: 50px;
+  }
+  @media (max-width: 622px) {
+    font-size: 30px;
+  }
 `
 export const Button =styled.div`
   position: relative;

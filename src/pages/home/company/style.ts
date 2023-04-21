@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const CompanyWrapper = styled.div`
   background-color: var(--colors-bg-green-dark);
   padding-top: calc(50px + (120 - 50) * ((100vw - 320px) / (1920 - 320)));
-  padding-bottom: calc(56px + (180 - 56) * ((100vw - 320px) / (1920 - 320)));
+  padding-bottom: calc(20px + (180 - 20) * ((100vw - 320px) / (1920 - 320)));
   
   @media (max-width: 768px) {
    // padding: 25px 0;
@@ -16,7 +16,8 @@ export const CompanyWrapper = styled.div`
 
 `
 export const Title = styled.h3`
-  text-align: center;
+  //text-align: center;
+  text-indent: 15px;
   font-weight: var(--fw-bold);
   font-size: calc(30px + (76 - 30) * ((100vw - 320px) / (1920 - 320)));
   line-height: 1.4;
@@ -25,8 +26,10 @@ export const Title = styled.h3`
   border-bottom: 2px solid #6EEC4E;
   padding-bottom: 40px;
   margin: 0 0 25px;
+  
   @media (max-width: 768px) {
-    margin: 0 -15px;
+    padding-bottom: 25px;
+    margin: 0 -15px 35px -15px;
   }
   
   //@media (max-width: 768px) {
@@ -47,7 +50,7 @@ export const CompanyBlock = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 30px 0;
+  padding: 60px 0;
   //margin-bottom: 10px;
   @media (max-width: 768px) {
     padding: 30px 0 20px 0 ;
@@ -88,7 +91,7 @@ export const Laer = styled.div`
     content: '';
     width: 100%;
     position: absolute;
-    top: 0;
+    top: 25px;
     left: 0;
     height: 2px;
     background: #6EEC4E;

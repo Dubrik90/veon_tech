@@ -27,7 +27,7 @@ export const HeaderContent = styled.div`
 `
 export const Title = styled.h2`
   font-weight: var(--fw-bold);
-  font-size:  calc(24px + (50 - 24) * ((100vw - 320px) / (1920 - 320)));
+  font-size:  calc(38px + (68 - 38) * ((100vw - 320px) / (1920 - 320)));
   line-height: 1.3;
   color: var(--colors-text-dark);
   span {

@@ -20,10 +20,14 @@ export const WaterfallModalWrapper = styled.div<ModalWindowWrapperProps>`
   -webkit-transition-delay: 0.2s;
   transition-delay: 0.2s;
   overflow-y: auto;
-  padding: 100px 0;
+  padding: 170px 0 50px 0;
   opacity: ${({openModal}) => openModal ? '1' : '0'};
   visibility: ${({openModal}) => openModal ? 'visible' : 'hidden'};
   scale: ${({openModal}) => openModal ? '1' : '0'};
+
+  @media (max-width: 768px) {
+    padding-top: 100px;
+  }
 `
 
 export const GridContainer = styled.div`
@@ -31,11 +35,11 @@ export const GridContainer = styled.div`
 
   .cross {
     display: inline-block;
-    width: 35px;
-    height: 35px;
-    line-height: 22px;
+    width: 40px;
+    height: 40px;
+    line-height: 35px;
     text-align: center;
-    font-size: 25px;
+    font-size: 40px;
     color: #faf8f8;
     cursor: pointer;
     position: fixed;
@@ -196,7 +200,7 @@ export const HeaderBlock = styled.div`
   column-gap: calc(30px + (300 - 30) * ((100vw - 768px) / (1920 - 768)));
   justify-content: center;
   align-items: center;
-  margin-bottom: 60px;
+  margin-bottom: calc(30px + (100 - 30) * ((100vw - 320px) / (1920 - 320)));
 
   @media (max-width: 1000px) {
     flex-direction: column;

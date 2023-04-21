@@ -13,6 +13,7 @@ import {
 } from "./style";
 import {Container} from "../../../common/style/Container";
 import {mistakeData} from "../app/dataError";
+import Star from "../../home/methodology/assets/star.svg";
 
 export const ErrorDevs = () => {
 
@@ -41,7 +42,8 @@ export const ErrorDevs = () => {
                         <UlError>
                             {activeErrorData.ul?.map((el: any, index: any) => (
                                 <LiError key={index}
-                                >{el}</LiError>))}
+                                ><img src={Star} alt=""/> <span>{el}</span>
+                                </LiError>))}
                         </UlError>
                     </ErrorContent>
                 </ErrorDevsContent>

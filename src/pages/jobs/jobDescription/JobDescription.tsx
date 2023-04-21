@@ -21,6 +21,7 @@ import {
 import {Link} from "react-router-dom";
 import {Blank} from "../assets";
 import {Accordeon} from "./accordeon";
+import {TitleHead} from "../../services/benefit/style";
 
 export const JobDescription = () => {
     const cardArrayData = [
@@ -39,6 +40,7 @@ export const JobDescription = () => {
     return (
         <JobDescriptionWrapper>
             <ContainerJob>
+                <TitleHead>Работа в Veon-Tech</TitleHead>
                 <DescriptionBlock>
                     <DescriptionContent>
                         <BarLinksMobile>

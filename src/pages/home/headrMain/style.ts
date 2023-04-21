@@ -28,21 +28,24 @@ export const HeaderMainContent = styled.div`
 export const Title = styled.h1`
   grid-area: tit1;
   font-family: Coolvetica, sans-serif;
-  font-size: 180px;
+  font-size: 190px;
   line-height: 1.1;
   justify-self: flex-end;
   color: var(--colors-text-dark);
 
-  @media (max-width: 1932px) {
+  @media (max-width: 1965px) {
+    font-size: 180px;
+  }
+  @media (max-width: 1882px) {
     font-size: 170px;
   }
-  @media (max-width: 1848px) {
+  @media (max-width: 1798px) {
     font-size: 160px;
   }
-  @media (max-width: 1765px) {
+  @media (max-width: 1715px) {
     font-size: 150px;
   }
-  @media (max-width: 1682px) {
+  @media (max-width: 1632px) {
     font-size: 140px;
   }
   @media (max-width: 1548px) {
@@ -51,7 +54,7 @@ export const Title = styled.h1`
   @media (max-width: 1465px) {
     font-size: 120px;
   }
-  @media (max-width: 1385px) {
+  @media (max-width: 1382px) {
     font-size: 110px;
   }
   @media (max-width: 1298px) {
@@ -66,10 +69,7 @@ export const Title = styled.h1`
   @media (max-width: 1050px) {
     font-size: 100px;
   }
-  @media (max-width: 980px) {
-    font-size: 90px;
-  }
-  @media (max-width: 900px) {
+  @media (max-width: 946px) {
     font-size: 80px;
   }
   @media (max-width: 768px) {
@@ -109,7 +109,7 @@ export const SubTitle = styled.p`
   grid-area: sub;
   line-height: 1.4;
   color: var(--colors-text-dark);
-  font-weight: 600;
+  font-weight: var(--fw-regular);
   font-size: 14px;
   letter-spacing: 0.5px;
   position: relative;
@@ -143,20 +143,7 @@ export const Button = styled.button`
   grid-area: button;
   position: relative;
   font-size: 18px;
-
-  :before {
-    background-color: var(--colors-bg-green);
-    border: 2px solid var(--colors-bg-green);
-    content: "";
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    transition: background-color .3s ease-in-out, border-color .3s ease-in-out, transform .3s ease-in-out;
-    width: 100%;
-    z-index: -1;
-  }
-
+  border-radius:5px;
   background: var(--colors-bg-green);
   font-weight: var(--fw-extra-bold);
   line-height: 20px;
@@ -168,6 +155,22 @@ export const Button = styled.button`
   font-family: var(--family);
   text-transform: uppercase;
   bottom: -17px;
+
+  :before {
+    background-color: var(--colors-bg-green);
+    border: 2px solid var(--colors-bg-green);
+    border-radius:5px;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: background-color .3s ease-in-out, border-color .3s ease-in-out, transform .3s ease-in-out;
+    width: 100%;
+    z-index: -1;
+  }
+
+  
 
   :hover {
     background: var(--colors-text-wight);

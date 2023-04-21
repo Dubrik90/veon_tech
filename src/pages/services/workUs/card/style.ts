@@ -8,7 +8,7 @@ export const CardWrapper = styled.div`
  // background: var(--color-grey-light);
  // border-radius: 15px;
  // box-shadow: 0 4px 4px rgba(0,0,0,.25);
-  padding: 20px 20px 60px 20px;
+  padding: 20px 40px 60px 40px;
   align-items: center;
   border-bottom: 1px solid  rgb(217, 217, 217);
  
@@ -70,7 +70,7 @@ export const Img = styled.img`
   }
 `
 export const Title = styled.h3`
-  font-size: 20px;
+  font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1920 - 320)));
   //min-height: 45px;
   font-weight: var(--fw-bold);
   line-height: 1.3;
@@ -94,7 +94,7 @@ export const Title = styled.h3`
   //}
 `
 export const Text = styled(TextRegular)`
-  font-size: 14px;
+  font-size:  calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
   text-align: justify;
   color: var(--colors-text-dark);
   

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {flexColumn} from "../../../common/style/mixin";
 
 export const ServiceHeaderWrapper = styled.div`
-  padding: 130px 0 50px 0;
+  padding: 100px 0 50px 0;
 `
 
 export const HeaderBlock = styled.div`
@@ -26,19 +26,19 @@ export const HeaderContent = styled.div`
 `
 export const Title = styled.h2`
   font-weight: var(--fw-bold);
-  font-size: 36px;
+  font-size: calc(33px + (52 - 33) * ((100vw - 320px) / (1920 - 320)));
   line-height: 1.3;
   color: var(--colors-text-dark);
 
-  @media (max-width: 1070px) {
-    font-size: 28px;
-  }
-  @media (max-width: 852px) {
-    font-size: 23px;
-  }
-  @media (max-width: 375px) {
-    font-size: 18px;
-  }
+  //@media (max-width: 1070px) {
+  //  font-size: 28px;
+  //}
+  //@media (max-width: 852px) {
+  //  font-size: 23px;
+  //}
+  //@media (max-width: 375px) {
+  //  font-size: 18px;
+  //}
 
 `
 export const Text = styled.p`
@@ -72,17 +72,18 @@ export const Img = styled.img`
 export const Button = styled.button`
   position: relative;
   align-self: flex-start;
-  font-size: var(--fs-18);
+  font-size: var(--fs-16);
   background: var(--colors-bg-green);
   font-weight: var(--fw-extra-bold);
   line-height: 20px;
   color: var(--colors-text-wight);
-  padding: 25px 20px;
+  padding: 20px 20px;
   display: flex;
   justify-content: center;
   transition: all 0.3s;
   font-family: var(--family);
   text-transform: uppercase;
+  border-radius: 5px;
 
   @media (max-width: 852px) {
     font-size: 16px;
@@ -108,6 +109,7 @@ export const Button = styled.button`
       transition: background-color .3s ease-in-out, border-color .3s ease-in-out, transform .3s ease-in-out;
       width: 100%;
       z-index: -1;
+      border-radius: 5px;
     }
 
     :hover {

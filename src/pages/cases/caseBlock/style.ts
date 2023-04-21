@@ -94,6 +94,7 @@ export const HiddenBlock = styled.div`
     background-color: var(--colors-text-green);
     color: var(--color-grey-light);
     transition: all 0.3s;
+    border-radius: 5px;
 
     :hover {
       background-color: var(--color-grey-light);

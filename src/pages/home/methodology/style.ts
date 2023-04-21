@@ -11,11 +11,10 @@ export const MethodologyContent = styled.div`
   justify-content: center;
 `
 export const Title = styled.h2`
-  text-align: center;
   font-weight: var(--fw-bold);
   font-size: calc(30px + (76 - 30) * ((100vw - 320px) / (1920 - 320)));
   line-height: 1.4;
-  margin-bottom: 66px;
+  margin-bottom: 100px;
   color: var(--colors-text-dark);
   
   @media (max-width: 768px) {
@@ -34,7 +33,7 @@ export const MethodologyBlock = styled.div`
   
   @media (max-width: 600px) {
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 40px;
    // align-items: center;
   }
 `

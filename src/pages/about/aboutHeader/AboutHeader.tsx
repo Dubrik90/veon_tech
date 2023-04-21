@@ -18,9 +18,7 @@ export const AboutHeader = () => {
             <Container>
                 <HeaderBlock>
                     <HeaderContent>
-                        <Title className={'animate'}> <span>VEON-TECH</span> - лидер белорусского рынка
-                            разработки и тестирования проектов
-                            по методологии Scrum</Title>
+                        <Title className={'animate'}> <span>VEON-TECH</span> — лидер белорусского рынка</Title>
                         {/*<Button>Скачать презентацию</Button>*/}
                         {/*<Text>{text}</Text>*/}
                     </HeaderContent>

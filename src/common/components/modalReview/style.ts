@@ -26,8 +26,8 @@ export const WrapperCenter = styled.div`
 
 export const Clouse = styled.div`
   position: absolute;
-  right: 110px;
-  top: -30px;
+  right: 0;
+  top: -60px;
   cursor: pointer;
   z-index: 2;
   transition: transform .3s;
@@ -65,7 +65,7 @@ export const Clouse = styled.div`
     
 `
 export const Content = styled.div`
-
+  position: relative;
   max-width: 960px;
   margin: 0 auto;
   box-sizing: content-box;
@@ -168,20 +168,21 @@ export const Content = styled.div`
       font-weight: 600
     }
   }
+
   .modal-review__description {
     margin-bottom: 30px;
-    
+
   }
 
   .modal-review__description p {
     margin-bottom: 35px;
-    
+
     :last-of-type {
       margin-bottom: 0
     }
   }
-  
-  a{
+
+  a {
     align-self: flex-start;
     position: relative;
     font-size: 16px;
@@ -196,7 +197,7 @@ export const Content = styled.div`
     font-family: var(--family);
     text-transform: uppercase;
     z-index: 10;
-  
+
 
     :before {
       background-color: var(--colors-bg-green);
@@ -210,7 +211,6 @@ export const Content = styled.div`
       width: 100%;
       z-index: -1;
     }
-
 
 
     @media (max-width: 834px) {

@@ -20,10 +20,14 @@ export const WaterfallModalWrapper = styled.div<ModalWindowWrapperProps>`
   -webkit-transition-delay: 0.2s;
   transition-delay: 0.2s;
   overflow-y: auto;
-  padding: 100px 0;
+  padding: 170px 0 50px 0;
   opacity: ${({openModal}) => openModal ? '1' : '0'};
   visibility: ${({openModal}) => openModal ? 'visible' : 'hidden'};
   scale: ${({openModal}) => openModal ? '1' : '0'};
+  
+  @media (max-width: 768px) {
+    padding-top: 100px;
+  }
 
   //  
   //  position: fixed;
@@ -48,11 +52,11 @@ export const GridContainer = styled.div`
 
   .cross {
     display: inline-block;
-    width: 35px;
-    height: 35px;
-    line-height: 22px;
+    width: 40px;
+    height: 40px;
+    line-height: 35px;
     text-align: center;
-    font-size: 25px;
+    font-size: 40px;
     color: #faf8f8;
     cursor: pointer;
     position: fixed;
@@ -71,7 +75,7 @@ export const GridContainer = styled.div`
   .scrum-parent {
     display: grid;
     grid-template-columns: 50px repeat(3, 1fr) 50px;
-    grid-template-rows: repeat(5, 30px) 35px;
+    grid-template-rows: 50px repeat(3, 32px) 50px 35px;
     grid-column-gap: 20px;
     width: 90vw;
     overflow-x: auto;
@@ -158,10 +162,12 @@ export const GridContainer = styled.div`
   .div1, .div2, .div3 {
     justify-self: center;
     font-weight: var(--fw-bold);
-    font-size: 22px;
+    font-size: 24px;
+    padding-bottom: 40px;
+    color: #dbe8d3;
   }
 
-  .div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8, .div9, .div10, .div11, .div12, .div13, .div14, .div15 {
+   .div4, .div5, .div6, .div7, .div8, .div9, .div10, .div11, .div12, .div13, .div14, .div15 {
     color: #dbe8d3;
     padding: 3px 10px;
     //  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
@@ -177,7 +183,7 @@ export const GridContainer = styled.div`
 
     span {
       position: absolute;
-      bottom: -26px;
+      bottom: -27.5px;
       right: 55px;
 
       :before {
@@ -202,7 +208,7 @@ export const HeaderBlock = styled.div`
   column-gap: calc(30px + (300 - 30) * ((100vw - 768px) / (1920 - 768)));
   justify-content: center;
   align-items: center;
-  margin-bottom: calc(30px + (60 - 30) * ((100vw - 320px) / (1920 - 320)));
+  margin-bottom: calc(30px + (100 - 30) * ((100vw - 320px) / (1920 - 320)));
 
   @media (max-width: 1000px) {
     flex-direction: column;

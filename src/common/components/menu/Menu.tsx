@@ -18,7 +18,7 @@ export const Menu: FC<MenuProps> = ({isOpenBurger, onClick, onClickCloseBurger})
     const theme = useAppSelector(state => state.app.theme)
 
     const submenuLinksAbout = [
-        {title: 'О НАШЕЙ КОМПАНИИ', to: ROUTS.ABOUT},
+        // {title: 'О НАШЕЙ КОМПАНИИ', to: ROUTS.ABOUT},
         {title: 'NDA', to: ROUTS.NDA},
         {title: 'ВАКАНСИИ', to: ROUTS.JOBS},
     ]
@@ -33,20 +33,22 @@ export const Menu: FC<MenuProps> = ({isOpenBurger, onClick, onClickCloseBurger})
         <NavigateMenu>
             <MenuList isOpenBurger={isOpenBurger}>
                 <MenuItem>
-                    <NavLink onClick={onClickCloseBurger} to={ROUTS.HOME}>
+                    {/*<NavLink onClick={onClickCloseBurger} to={ROUTS.ABOUT}>*/}
+                    {/*    <span className='link__wrap'>*/}
+                    {/*    <span className='link__title'>О НАШЕЙ КОМПАНИИ*/}
+                    {/*    <span className="link__title--duplicate">О НАШЕЙ КОМПАНИИ</span>*/}
+                    {/*    </span>*/}
+                    {/*</span>*/}
+                    {/*</NavLink>*/}
+                </MenuItem>
+                <MenuItem className='about-sub-menu'>
+                    <NavLink onClick={onClickCloseBurger} to={ROUTS.ABOUT}>
                         <span className='link__wrap'>
-                        <span className='link__title'>ГЛАВНАЯ
-                        <span className="link__title--duplicate">ГЛАВНАЯ</span>
+                        <span className='link__title'>О НАШЕЙ КОМПАНИИ
+                        <span className="link__title--duplicate">О НАШЕЙ КОМПАНИИ</span>
                         </span>
                     </span>
                     </NavLink>
-                </MenuItem>
-                <MenuItem className='about-sub-menu'>
-                    <span className='link__wrap'>
-                        <span className='link__title'>О НАС
-                        <span className="link__title--duplicate">О НАС</span>
-                        </span>
-                    </span>
                     <Arrow/>
                     <SubMenu>
                         {submenuLinksAbout.map((el, index) => <MenuSubItem key={index}><Link

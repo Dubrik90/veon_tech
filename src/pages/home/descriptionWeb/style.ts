@@ -56,7 +56,8 @@ export const Title = styled.h2`
  // opacity: 0;
   position: relative;
   font-weight: var(--fw-bold);
-  font-size: calc(30px + (60 - 30) * ((100vw - 320px) / (1920 - 320)));
+  //font-size: calc(30px + (60 - 30) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(min(60px, 32px + (32 * ((100vw - 320px) / (1920 - 320)))));
   line-height: 1.1;
   margin-bottom: 15px;
   color: var(--colors-text-dark);

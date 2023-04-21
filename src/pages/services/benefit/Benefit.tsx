@@ -17,8 +17,8 @@ export const Benefit = () => {
         <BenefitWrapper>
             <Container>
                 <BenefitContentTop>
-                    <Title>ЗАКАЗАВ РАЗРАБОТКУ И СОЗДАНИЕ САЙТА ПОД КЛЮЧ</Title>
-                    <SubTitle>у нас вы получаете</SubTitle>
+                    <Title>ЗАКАЗАВ РАЗРАБОТКУ И СОЗДАНИЕ <br/> САЙТА ПОД КЛЮЧ</Title>
+                    <SubTitle>Вы получите</SubTitle>
                 </BenefitContentTop>
                 <BenefitContentBottom>
                     <BenefitCard>

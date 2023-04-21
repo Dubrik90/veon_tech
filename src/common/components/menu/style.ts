@@ -75,7 +75,7 @@ export const SubMenu = styled.ul`
   display: flex;
   flex-direction: column;
   row-gap: 8px;
-  border-radius: 3px;
+  border-radius: 5px;
 
   @media (max-width: 1320px) {
     transform: translate(0px, 27px);

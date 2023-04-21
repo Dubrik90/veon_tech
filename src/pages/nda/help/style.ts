@@ -13,24 +13,26 @@ export const HelpContent = styled.div`
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
+  column-gap: 20px;
   justify-content: space-between;
   align-items: center;
   padding: 40px 43px;
   border: 1px solid #6EEC4E;
   border-radius: 19px;
   
-  @media (max-width: 1210px) {
+  @media (max-width: 1364px) {
     padding: 0 10px;
     border: none;
     display: grid;
     grid-template-columns: 60% 40%;
     justify-content: flex-start;
-    row-gap: 30px;
+    row-gap: 50px;
     column-gap: 15px;
   }
-  @media (max-width: 660px) {
-    grid-template-columns: 50% 50%;
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(1, 1fr);
     column-gap: 10px;
+    justify-items: flex-start;
   }
   
 
@@ -38,33 +40,37 @@ export const HelpContent = styled.div`
 export const TitleBlock = styled.div`
   ${flexColumn()};
   row-gap: 15px;
-  flex: 0 1 580px;
+  flex: 0 1 650px;
 
 `
 export const Title = styled(TitleH2)`
   color: var(--colors-text-dark);
+  font-size: calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320)));
+  
 
-  @media (max-width: 1210px) {
-    font-size: 30px;
-  }
-  @media (max-width: 834px) {
-    font-size: 18px;
-  }
-  @media (max-width: 425px) {
-    font-size: 14px;
-  }
+  //@media (max-width: 1210px) {
+  //  font-size: 30px;
+  //}
+  //@media (max-width: 834px) {
+  //  font-size: 18px;
+  //}
+  //@media (max-width: 425px) {
+  //  font-size: 14px;
+  //}
 `
 export const Text = styled(TextRegular)`
+  font-size: calc(18px + (28 - 18) * ((100vw - 320px) / (1920 - 320)));
   
-  @media (max-width: 1210px) {
-    font-size: 16px;
-  }
-  @media (max-width: 834px) {
-    font-size: 14px;
-  }
-  @media (max-width: 425px) {
-    font-size: 12px;
-  }
+  
+  //@media (max-width: 1210px) {
+  //  font-size: 16px;
+  //}
+  //@media (max-width: 834px) {
+  //  font-size: 14px;
+  //}
+  //@media (max-width: 425px) {
+  //  font-size: 12px;
+  //}
 `
 export const ButtonBlock = styled.div`
   ${flexColumn()};
@@ -72,13 +78,14 @@ export const ButtonBlock = styled.div`
   row-gap: 10px;
 `
 export const ImageWrapper = styled.div`
+  max-width: 260px;
   @media (max-width: 425px) {
     max-width: 130px;
   }
 
 `
 export const Img = styled.img`
-    width: 100%;
+  width: 200px;
   object-fit: cover;
 
 `
@@ -89,12 +96,13 @@ export const Button = styled.button`
   font-weight: var(--fw-extra-bold);
   line-height: 20px;
   color: var(--colors-text-wight);
-  padding: 15px 20px;
+  padding: 15px 25px;
   display: flex;
   justify-content: center;
   transition: all 0.3s;
   font-family: var(--family);
   text-transform: uppercase;
+  border-radius: 5px;
 
   :before {
     background-color: var(--colors-bg-green);
@@ -107,6 +115,7 @@ export const Button = styled.button`
     transition: background-color .3s ease-in-out, border-color .3s ease-in-out, transform .3s ease-in-out;
     width: 100%;
     z-index: -1;
+    border-radius: 5px;
   }
 
  
@@ -138,14 +147,14 @@ export const ContactBlock = styled.div`
   align-items: center;
   row-gap: 15px;
   
-  @media (max-width: 1210px) {
+  @media (max-width: 1364px) {
    align-items: flex-start;
     row-gap: 5px;
   }
 `
 export const PhoneLink = styled.a`
   font-weight: var(--fw-medium);
-  font-size: 18px;
+  font-size: 24px;
   line-height: 122%;
   color: var(--colors-text-dark);
   display: inline-block;
@@ -186,7 +195,7 @@ export const PhoneLink = styled.a`
 `
 export const Email = styled.p`
   font-weight: var(--fw-medium);
-  font-size: 18px;
+  font-size: 20px;
   line-height: 122%;
   color: var(--colors-text-dark);
   
