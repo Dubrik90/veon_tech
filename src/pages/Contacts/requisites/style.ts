@@ -54,12 +54,13 @@ export const Button = styled.a`
   display: flex;
   justify-content: center;
   transition: all 0.3s;
-  font-family: 'Coolvetica';
+  font-family: 'Montserrat';
   letter-spacing: 1.1px;
   text-transform: uppercase;
   z-index: 10;
   align-self: stretch;
   cursor: pointer;
+  border-radius: 5px;
   
   :before {
     background-color: var(--colors-bg-green);
@@ -72,6 +73,7 @@ export const Button = styled.a`
     transition: background-color .3s ease-in-out, border-color .3s ease-in-out, transform .3s ease-in-out;
     width: 100%;
     z-index: -1;
+    border-radius: 5px;
   }
 
   @media (min-width: 769px) {
