@@ -138,12 +138,13 @@ export const Img = styled.img`
 `
 export const Title = styled.h5`
   font-weight: var(--fw-bold);
-  font-size: calc(18px + (32 - 18) * ((100vw - 768px) / (1920 - 768)));
+  font-size: calc(20px + (32 - 20) * ((100vw - 768px) / (1920 - 768)));
   line-height: 129.5%;
   text-align: center;
   color: var(--colors-text-dark);
+  
   @media (max-width: 768px) {
-    font-size: 16px
+    font-size: 20px
   }
 `
 export const SubTitle = styled.p`
@@ -159,14 +160,15 @@ export const SubTitle = styled.p`
   }
 `
 export const Text = styled.p`
-  font-size: calc(13px + (17 - 13) * ((100vw - 768px) / (1920 - 768)));
-  line-height: 178.5%;
+  font-size: calc(16px + (21 - 16) * ((100vw - 768px) / (1920 - 768)));
+  line-height: 1.4;
   text-align: center;
   letter-spacing: 0.005em;
   color: var(--colors-text-dark);
   margin-bottom: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));
+  
   @media (max-width: 768px) {
-    font-size: 14px
+    font-size: 16px
   }
 `
 export const SubText = styled.p`
@@ -189,10 +191,11 @@ export const Button = styled.button`
   display: flex;
   justify-content: center;
   transition: all 0.3s;
-  font-family: 'Coolvetica';
-  letter-spacing: 1.1px;
+  font-family: 'Montserrat';
+  //letter-spacing: 1.1px;
   text-transform: uppercase;
   z-index: 10;
+  border-radius: 5px;
 
   @media (max-width: 1024px) {
     align-self: stretch;
@@ -214,6 +217,7 @@ export const Button = styled.button`
     transition: background-color .3s ease-in-out, border-color .3s ease-in-out, transform .3s ease-in-out;
     width: 100%;
     z-index: -1;
+    border-radius: 5px;
   }
 
   @media (min-width: 769px) {

@@ -20,7 +20,7 @@ export const BonuseContent = styled.div`
 `
 export const Title = styled.h4`
   font-weight: var(--fw-bold);
-  font-size: calc(16px + (28 - 16) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(21px + (28 - 21) * ((100vw - 320px) / (1920 - 320)));
   line-height: 1.3;
   color: var(--colors-text-dark);
 
@@ -43,7 +43,7 @@ export const SubTitle = styled.p`
 export const Text = styled.p`
   align-self: center;
   font-weight: var(--fw-bold);
-  font-size: calc(18px + (40 - 18) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(21px + (40 - 21) * ((100vw - 320px) / (1920 - 320)));
   line-height: 1.4;
   color: var(--colors-text-dark);
   position: relative;

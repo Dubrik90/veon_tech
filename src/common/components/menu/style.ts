@@ -174,7 +174,7 @@ export const MenuItem = styled.li`
   
   
   
-  @media (max-width: 1320px) {
+  @media (max-width: 1364px) {
     font-size: var(--fs-14);
   }
   @media (max-width: 1092px) {

@@ -78,14 +78,14 @@ export const ButtonBlock = styled.div`
   row-gap: 10px;
 `
 export const ImageWrapper = styled.div`
-  max-width: 260px;
+//  max-width: 260px;
   @media (max-width: 425px) {
-    max-width: 130px;
+  //  max-width: 130px;
   }
 
 `
 export const Img = styled.img`
-  width: 200px;
+  //width: 200px;
   object-fit: cover;
 
 `
@@ -121,12 +121,13 @@ export const Button = styled.button`
  
 
   @media (max-width: 834px) {
-    font-size: 12px;
+    font-size: 14px;
     padding: 10px;
   }
   @media (max-width: 425px) {
-    font-size: 11px;
-    padding: 5px;
+    width: 100%;
+   // font-size: 11px;
+   // padding: 5px;
   }
 
   :hover {
@@ -151,6 +152,7 @@ export const ContactBlock = styled.div`
    align-items: flex-start;
     row-gap: 5px;
   }
+  
 `
 export const PhoneLink = styled.a`
   font-weight: var(--fw-medium);
@@ -188,8 +190,8 @@ export const PhoneLink = styled.a`
    
   }
   
-  @media (max-width: 834px) {
-    font-size: 14px;
+  @media (max-width: 768px) {
+    font-size: 16px;
   }
 
 `
@@ -198,8 +200,8 @@ export const Email = styled.p`
   font-size: 20px;
   line-height: 122%;
   color: var(--colors-text-dark);
-  
-  @media (max-width: 834px) {
-    font-size: 14px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
   }
 `

@@ -36,7 +36,7 @@ export const DescriptionContent = styled.div`
   row-gap: 90px;
   flex: 0 1 900px;
   @media (max-width: 632px) {
-    row-gap: 30px;
+    row-gap: 50px;
   }
 `
 export const BarLinks = styled.div`
@@ -78,7 +78,7 @@ export const BarLinksMobile = styled(BarLinks)`
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     width: 100%;
-    gap: 20px;
+    gap: 10px;
 
     @media (max-width: 366px) {
       gap: 10px;
@@ -213,6 +213,7 @@ export const EchoBlock = styled.div`
   row-gap: 12px;
   padding: 15px 24px;
   background: var(--color-grey-light);
+  border-radius: 5px;
 `
 export const EchoTitle = styled(TitleH4)`
   font-size: 26px;

@@ -4,6 +4,7 @@ import {Container} from "../../../common/style/Container";
 import {SOCIAL_LINKS} from "../app/data";
 import {OverridableComponent} from "@mui/material/OverridableComponent";
 import {SvgIconTypeMap} from "@mui/material";
+import {TitleHead} from "../../services/benefit/style";
 
 
 const ContactsCard: FC<{ item: { icon: OverridableComponent<SvgIconTypeMap<{}, "svg">> & { muiName: string; }, title: string, text: string, link: string, } }> = React.memo(({item}) => {
@@ -24,6 +25,7 @@ export const ContactsAbout: FC = () => {
 
     return (
         <Container>
+            <TitleHead>Контакты</TitleHead>
             <ContactsCardWrapper>
                 <SocialContainer>{renderItems()}</SocialContainer>
             </ContactsCardWrapper>

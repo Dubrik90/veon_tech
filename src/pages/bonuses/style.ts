@@ -2,7 +2,11 @@ import styled from "styled-components";
 import {flexColumn} from "../../common/style/mixin";
 
 export const BonusesWrapper = styled.div`
-  background: var(--colors-bg-green-dark);
+//  background: var(--colors-bg-green-dark);
+  padding-top: 140px;
+  @media (max-width: 768px) {
+    padding-bottom: 20px;
+  }
 `
 export const BonusesCardsBlock = styled.ol`
   display: grid;

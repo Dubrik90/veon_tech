@@ -11,11 +11,11 @@ export const Contacts = () => {
 
     return (
         <ContactsWrapper>
-            <JobHeader title={'Контакты'}
-                       breadcrumbsTitle={'КОНТАКТЫ'}
-            />
+            {/*<JobHeader title={'Контакты'}*/}
+            {/*           breadcrumbsTitle={'КОНТАКТЫ'}*/}
+            {/*/>*/}
             <ContactsAbout/>
-            <SocialIcons/>
+            {/*<SocialIcons/>*/}
             <OfficeHours/>
             <MapComponent/>
             <Requisites/>

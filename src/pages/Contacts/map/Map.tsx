@@ -54,7 +54,6 @@ export const MapComponent = () => {
                 errors.phone = 'укажите ваш телефон'
             }
 
-
             return errors
         },
         onSubmit: values => {
@@ -110,8 +109,8 @@ export const MapComponent = () => {
                                         {...formik.getFieldProps('text')}
                                         onChange={formik.handleChange}
                                     />
-                                    {formik.touched.name && formik.errors.name &&
-                                        <Errors>{formik.errors.name}</Errors>}
+                                    {/*{formik.touched.name && formik.errors.name &&*/}
+                                    {/*    <Errors>{formik.errors.name}</Errors>}*/}
                                 </Label>
                             </InputBlock>
                             <SubText>

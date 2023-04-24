@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 import { Map } from 'react-yandex-maps';
+import {flexColumn} from "../../../common/style/mixin";
 
 export const StyledMap = styled(Map)`
-  width: calc(460px + (670 - 460) * ((100vw - 1024px) / (1920 - 1024)));
+  margin-top: 50px;
+  width: calc(460px + (700 - 460) * ((100vw - 1024px) / (1920 - 1024)));
   height: calc(300px + (390 - 300) * ((100vw - 320px) / (1920 - 320)));
  //border-radius: 17px;
   
@@ -19,7 +21,7 @@ export const MapComponentWrapper = styled.div`
 `
 export const MapWrapperBlock = styled.div`
   display: flex;
-  column-gap: calc(30px + (170 - 30) * ((100vw - 320px) / (1920 - 320)));
+  column-gap: calc(30px + (140 - 30) * ((100vw - 320px) / (1920 - 320)));
   justify-content: center;
 
   @media(max-width: 1024px) {
@@ -40,23 +42,26 @@ export const CardWrapper = styled.div`
 `
 export const MapWrapper = styled.div`
  border-radius: 17px;
-  overflow: hidden;
+  //overflow: hidden;
   
   @media(max-width: 1024px) {
     width: 100%;
   }
 `
 export const FormBlock = styled.div`
+  
   @media(max-width: 1024px) {
-    text-align: center;
+    //text-align: center;
+    ${flexColumn()};
+    align-items: center;
   }
 `
 
 
 export const Title = styled.h3`
   font-weight: var(--fw-bold);
-  font-size: calc(16px + (23 - 16) * ((100vw - 320px) / (1920 - 320)));
-  line-height: 163%;
+  font-size: calc(24px + (32 - 24) * ((100vw - 320px) / (1920 - 320)));
+  line-height: 1.3;
   color: var(--colors-text-dark);
   margin-bottom: 15px;
 
@@ -69,8 +74,8 @@ export const Title = styled.h3`
 
 export const SubTitle = styled.p`
   font-weight: var(--fw-medium);
-  font-size: calc(10px + (13 - 10) * ((100vw - 320px) / (1920 - 320)));
-  line-height: 163%;
+  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+  line-height: 1.3;
   color: var(--colors-text-dark);
   margin-bottom: 10px;
 `
@@ -139,9 +144,11 @@ export const CustomInput = styled.input`
   border-radius: 5px;
   font-size: 14px;
   color: var(--colors-text-dark);
+  font-family: 'Montserrat';
   
   ::placeholder {
     color: var(--colors-text-dark);
+    opacity: 0.6;
   }
 
   &:focus {
@@ -165,9 +172,11 @@ export const CustomTextArea = styled.textarea`
   border: 1px solid #A6A6A6;
   border-radius: 5px;
   font-size: 14px;
+  font-family: 'Montserrat';
   
   ::placeholder {
     color: var(--colors-text-dark);
+    opacity: 0.6;
   }
 `
 
@@ -207,10 +216,11 @@ export const Button = styled.button`
   display: flex;
   justify-content: center;
   transition: all 0.3s;
-  font-family: 'Coolvetica';
+  font-family: 'Montserrat';
   letter-spacing: 1.1px;
   text-transform: uppercase;
   z-index: 10;
+  border-radius: 5px;
   
   @media(max-width: 480px) {
    width: 100%;
@@ -232,6 +242,7 @@ export const Button = styled.button`
     transition: background-color .3s ease-in-out, border-color .3s ease-in-out, transform .3s ease-in-out;
     width: 100%;
     z-index: -1;
+    border-radius: 5px;
   }
 
   @media (min-width: 769px) {

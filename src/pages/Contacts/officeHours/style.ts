@@ -25,7 +25,7 @@ export const HoursBlock = styled.div`
   display: flex;
   column-gap: calc(5px + (25 - 5) * ((100vw - 320px) / (1920 - 320)));
 
-  @media(max-width: 552px) {
+  @media(max-width: 588px) {
    // display: grid;
   //  grid-template-columns: repeat(5, 1fr);
   //  grid-template-rows: repeat(5, 1fr);
@@ -35,7 +35,7 @@ export const HoursBlock = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 340px;
+    max-width: 400px;
     
   }
 `
@@ -82,7 +82,7 @@ export const HoursCard = styled.div`
 export const Day = styled.p`
   color: var(--colors-text-dark);
   font-weight: var(--fw-bold);
-  font-size: calc(9px + (14 - 9) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(11px + (14 - 11) * ((100vw - 320px) / (1920 - 320)));
   line-height: 1.3;
   
   .active_day & {
@@ -93,7 +93,7 @@ export const Day = styled.p`
 export const Hours = styled.p`
   color: var(--colors-text-dark);
   font-weight: var(--fw-medium);
-  font-size: calc(8px + (14 - 8) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(10px + (14 - 10) * ((100vw - 320px) / (1920 - 320)));
   line-height: 1.3;
   
   .active_day & {

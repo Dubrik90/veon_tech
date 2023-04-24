@@ -2,6 +2,11 @@ import styled from "styled-components";
 import {flexColumn} from "../../common/style/mixin";
 
 export const ContactsWrapper = styled.div`
+  padding-top: 140px;
+  @media (max-width: 768px) {
+    padding-bottom: 20px;
+  }
+  
   svg {
     grid-area: 1 / 1 / 2 / 2;
     font-size: 44px;
@@ -27,7 +32,7 @@ export const SocialContainer = styled.div`
 
 export const ContactsCardWrapper = styled.div`
   ${flexColumn()};
-  padding-top: calc(50px + (132 - 50) * ((100vw - 320px) / (1920 - 320)));
+ // padding-top: calc(50px + (132 - 50) * ((100vw - 320px) / (1920 - 320)));
   padding-bottom: calc(30px + (60 - 30) * ((100vw - 320px) / (1920 - 320)));
 
   @media(max-width: 768px) {
@@ -80,12 +85,12 @@ export const ContactsCardContent = styled.div`
 export const Title = styled.h5`
   grid-area: 1 / 2 / 2 / 3;
   font-weight: var(--fw-bold);
-  font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)));
-  line-height: 1.3;
+  font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)));
+  line-height: 1.2;
   color: var(--colors-text-dark);
   text-align: center;
  margin-bottom: 10px;
-  min-height: 40px;
+  min-height: 50px;
   
   @media (max-width: 768px) {
     margin-bottom: 0;
@@ -96,7 +101,7 @@ export const Title = styled.h5`
 export const Text = styled.p`
   grid-area: 2 / 1 / 3 / 4;
   font-weight: var(--fw-regularfw);
-  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
   line-height: 1.2;
   text-align: center;
   color: var(--colors-text-dark);

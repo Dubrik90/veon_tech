@@ -11,7 +11,10 @@ export const CardWrapper = styled.div`
   padding: 20px 40px 60px 40px;
   align-items: center;
   border-bottom: 1px solid  rgb(217, 217, 217);
- 
+
+  @media (max-width: 767px) {
+    padding: 20px 20px 60px 20px;
+  }
 
   @media (min-width: 768px) {
     border-right: 1px solid  rgb(217, 217, 217);

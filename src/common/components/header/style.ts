@@ -68,7 +68,7 @@ export const HeaderContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  column-gap: 70px;
+  column-gap: calc(15px + (70 - 15) * ((100vw - 1092px) / (1920 - 1092)));
 
   a {
     transition: all 0.3s;

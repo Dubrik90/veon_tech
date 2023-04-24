@@ -10,6 +10,7 @@ import Sale from './assets/sale.svg';
 import {BonusesCard} from "./bonusesCard";
 import {Container} from "../../common/style/Container";
 import {SliderBonuse} from "./sliderBonuse";
+import {TitleHead} from "../services/benefit/style";
 
 export type SaleCardsType = {
     id: string
@@ -58,9 +59,12 @@ export const Bonuses = () => {
 
     return (
         <BonusesWrapper>
-            <JobHeader title={'Бонусы'}
-                       breadcrumbsTitle={'БОНУСЫ'}
-            />
+            {/*<JobHeader title={'Бонусы'}*/}
+            {/*           breadcrumbsTitle={'БОНУСЫ'}*/}
+            {/*/>*/}
+            <Container>
+                <TitleHead>Бонусы</TitleHead>
+            </Container>
             <ChoiceBonuse/>
             <Container>
                 <BonusesCardsBlock>
