@@ -17,11 +17,11 @@ export const Benefit = () => {
         <BenefitWrapper>
             <Container>
                 <BenefitContentTop>
-                    <Title>ЗАКАЗАВ РАЗРАБОТКУ И СОЗДАНИЕ <br/> САЙТА ПОД КЛЮЧ</Title>
+                    <Title className='animate'>ЗАКАЗАВ РАЗРАБОТКУ И СОЗДАНИЕ <br/> САЙТА ПОД КЛЮЧ</Title>
                     <SubTitle>Вы получите</SubTitle>
                 </BenefitContentTop>
                 <BenefitContentBottom>
-                    <BenefitCard>
+                    <BenefitCard className='animate'>
                         <CardTitle>ГАРАНТИИ И УВЕРЕННОСТЬ</CardTitle>
                         <СircleWrap>
                             <Сircle>
@@ -30,7 +30,7 @@ export const Benefit = () => {
                         </СircleWrap>
                         <CardText>Все работы выполняются согласно условиям заключённого договора. Оплата производится по безналичному расчёту.</CardText>
                     </BenefitCard>
-                    <BenefitCard>
+                    <BenefitCard className='animate'>
                         <CardTitle>КОНТРОЛЬ И ОТЧЁТНОСТЬ</CardTitle>
                         <СircleWrap>
                             <Сircle>
@@ -38,8 +38,8 @@ export const Benefit = () => {
                             </Сircle>
                         </СircleWrap>
                         <CardText>На все работы определяется время выполнения, согласуется техническое задание и сопроводительная документация.</CardText>
-                    </BenefitCard>
-                    <BenefitCard>
+                    </BenefitCard >
+                    <BenefitCard className='animate'>
                         <CardTitle>ОБУЧЕНИЕ И ПОДДЕРЖКА</CardTitle>
                         <СircleWrap>
                             <Сircle>

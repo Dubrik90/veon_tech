@@ -16,6 +16,7 @@ import {useScrollBlock} from "../../hook/use-scroll-block";
 import {gsap} from "gsap";
 import {WaterfallModal} from "../waterfallModal";
 import {ScramModal} from "../scrumModal";
+import {animateText} from "../../animate/animateText";
 
 
 export const Layout = () => {
@@ -28,24 +29,7 @@ export const Layout = () => {
     useEffect(() => {
         tl.to('header', {opacity: 1, y: 0})
 
-        const animSolb = gsap.utils.toArray('.animate')
-
-        animSolb.forEach((anim: any) => {
-
-            gsap.fromTo(anim, {
-                opacity: 0,
-                transform: 'rotate(3deg) scaleY(.9) translateY(50px)',
-            }, {
-                opacity: 1,
-                transform: 'rotate(0) scaleY(1) translateY(0)',
-                duration: 1.5,
-                transitionTimingFunction: 'cubic-bezier(.19,.91,.36,.99)',
-                scrollTrigger: {
-                    trigger: anim,
-                    start: 'top 90%',
-                }
-            })
-        })
+        animateText()
     }, [])
 
     return (

@@ -19,7 +19,7 @@ import {useScrollBlock} from "../../../common/hook/use-scroll-block";
 import {setIsOpenFormAC} from "../../../app/app-reduser";
 import {useAppDispatch} from "../../../common/hook";
 
-export const ContactUsServise = () => {
+export const  ContactUsServise = () => {
     const dispatch = useAppDispatch()
     const [blockScroll, allowScroll] = useScrollBlock();
 
@@ -33,12 +33,12 @@ export const ContactUsServise = () => {
             <Container>
                 <ContactUsBlokTop>
                     <Content>
-                        <Title>
+                        <Title className='animate'>
                             Чтобы заказать создание сайта под ключ в Минске - свяжитесь с нами, удобным для Вас способом.
                         </Title>
                         <LinksBlock>
-                            <LinkUs to={ROUTS.CONTACTS}>Связаться с нами</LinkUs>
-                            <Button onClick={onClickFormModalHandler}>Оставить заявку</Button>
+                            <LinkUs className='animate' to={ROUTS.CONTACTS}>Связаться с нами</LinkUs>
+                            <Button className='animate' onClick={onClickFormModalHandler}>Оставить заявку</Button>
                         </LinksBlock>
                     </Content>
                 </ContactUsBlokTop>
@@ -49,8 +49,8 @@ export const ContactUsServise = () => {
                 </LineBlock>
                 <TitleBottom>ВОЗМОЖНО, ВАС ЗАИНТЕРЕСУЮТ</TitleBottom>
                 <LinksBottomBlock>
-                    <ButtonBottom onClick={onClickFormModalHandler}>SEO</ButtonBottom>
-                    <ButtonBottom onClick={onClickFormModalHandler}>ВЕБ-АНАЛИТИКА</ButtonBottom>
+                    <ButtonBottom className='animate' onClick={onClickFormModalHandler}>SEO</ButtonBottom>
+                    <ButtonBottom className='animate' onClick={onClickFormModalHandler}>ВЕБ-АНАЛИТИКА</ButtonBottom>
                 </LinksBottomBlock>
             </Container>
         </ContactUsServiseWrapper>

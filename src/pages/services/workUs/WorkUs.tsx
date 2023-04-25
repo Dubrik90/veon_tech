@@ -14,10 +14,10 @@ export const WorkUs:FC<WorkUsProps> = ({title,cardArray}) => {
         <WorkUsWrapper>
             <Container>
                 <WorkUsContent>
-                    <Title>{title}</Title>
+                    <Title className='animate'>{title}</Title>
                     <CardBlock>
                         {cardArray.map((el, index) => (
-                            <Card el={el} key={index}/>
+                            <Card  el={el} key={index}/>
                         ))}
                         <ArrowIcon/>
                         <span></span>

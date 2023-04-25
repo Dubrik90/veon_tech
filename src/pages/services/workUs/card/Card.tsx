@@ -9,7 +9,7 @@ type CardProps = {
 export const Card: FC<CardProps> = ({el}) => {
     return (
         <>
-            <CardWrapper>
+            <CardWrapper className='animate'>
                 <ImgBlock>
                     <Img src={el.img} alt=""/>
                     <Title>{el.title}</Title>

@@ -13,9 +13,9 @@ const ContactsCard: FC<{ item: { icon: OverridableComponent<SvgIconTypeMap<{}, "
     return (
         <ContactsCardContent>
             <Icon/>
-            <Title>{item.title}</Title>
-            <Text>{item.text}</Text>
-            <ContactLink>{item.link}</ContactLink>
+            <Title className='animate'>{item.title}</Title>
+            <Text className='animate'>{item.text}</Text>
+            <ContactLink className='animate'>{item.link}</ContactLink>
         </ContactsCardContent>
     );
 });
@@ -25,7 +25,7 @@ export const ContactsAbout: FC = () => {
 
     return (
         <Container>
-            <TitleHead>Контакты</TitleHead>
+            <TitleHead className='animate'>Контакты</TitleHead>
             <ContactsCardWrapper>
                 <SocialContainer>{renderItems()}</SocialContainer>
             </ContactsCardWrapper>

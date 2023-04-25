@@ -6,7 +6,7 @@ export const ROUTS = {
     CASE: '/case/:category',
     ABOUT: '/about',
     //DEVELOP: '/development',
-    POLICY: '/policy',
+    POLICY: '/privacy',
     SERVICES: '/services/:service',
     BONUSES: '/bonuses',
     CONTACTS: '/contacts'

@@ -26,9 +26,9 @@ export const ServiceHeader:FC<ServiceHeaderPropsType> = ({text, img, title}) => 
             <Container>
                 <HeaderBlock>
                     <HeaderContent>
-                        <Title>{title}</Title>
+                        <Title className='animate'>{title}</Title>
                         {/*<Text>{text}</Text>*/}
-                        <Button onClick={onClickFormModalHandler}>ПОЛУЧИТЬ САЙТ</Button>
+                        <Button className='animate' onClick={onClickFormModalHandler}>ПОЛУЧИТЬ САЙТ</Button>
                     </HeaderContent>
                     <HeaderImage>
                         <Img src={img} alt='image'/>

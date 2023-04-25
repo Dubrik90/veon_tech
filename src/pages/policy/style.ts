@@ -6,6 +6,16 @@ export const PolicyWrapper = styled.div`
 `
 
 export const Content = styled.div`
+  span {
+    font-weight: var(--fw-bold);
+  }
+  a {
+    color: var(--color-link);
+    :hover {
+      color: var(--color-dark);
+    }
+  }
+  
   ol {
     ounter-reset: num;
     list-style: none;
@@ -66,9 +76,10 @@ export const Title = styled.h5`
 export const Text = styled.p`
   font-size: calc(13px + (18 - 13) * ((100vw - 320px) / (1920 - 320)));
   font-weight: var(--fw-regular);
-  line-height: 1.3;
+  line-height: 1.4;
   color: var(--colors-text-light);
   margin-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320)));
+  
 `
 
 export const Ol = styled.ol`

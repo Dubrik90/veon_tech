@@ -27,7 +27,7 @@ export const ErrorDevs = () => {
     return (
         <ErrorDevsWrapper>
             <Container>
-                <Title>4 основные ошибки при разработке сайта</Title>
+                <Title className='animate'>4 основные ошибки при разработке сайта</Title>
                 <ErrorDevsContent>
                     <Ul>
                         {mistakeData.map((el: any, index: any) => (
@@ -37,11 +37,11 @@ export const ErrorDevs = () => {
                             >{el.head}</Li>))}
                     </Ul>
                     <ErrorContent>
-                        <TitleError>{activeErrorData.head}</TitleError>
-                        <Text>{activeErrorData.text}</Text>
+                        <TitleError className='animate'>{activeErrorData.head}</TitleError>
+                        <Text className='animate'>{activeErrorData.text}</Text>
                         <UlError>
                             {activeErrorData.ul?.map((el: any, index: any) => (
-                                <LiError key={index}
+                                <LiError key={index} className='animate'
                                 ><img src={Star} alt=""/> <span>{el}</span>
                                 </LiError>))}
                         </UlError>

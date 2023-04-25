@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {ServicesWrapper} from './style';
 import {ServiceHeader} from "./serviceHeader";
 import {useParams} from "react-router-dom";
@@ -16,6 +16,7 @@ import {DeveloperWork} from './developerWork';
 import {Portfolio} from "./portfolio";
 import {Benefit} from "./benefit";
 import {ContactUsServise} from "./contactUs";
+import {animateText} from "../../common/animate/animateText";
 
 
 export type CardWorkUsType = {
@@ -27,6 +28,10 @@ export type CardWorkUsType = {
 export const Services = () => {
     const {service} = useParams()
     const activeDataService = dataServices.filter(el => el.type === service)[0]
+
+    useEffect(() => {
+        animateText()
+    }, [])
 
     const cardArray1: CardWorkUsType[] = [
         {
@@ -112,7 +117,26 @@ export const Services = () => {
                     <WorkUs cardArray={cardArray1}
                             title={'Почему работать с нами удобно и выгодно?'}
                     />
-                    <CaseHelp/>
+                    <Benefit/>
+                    <ContactUsServise/>
+                </>
+            }
+            {service === 'ux' &&
+                <>
+                    <WorkUs cardArray={cardArray1}
+                            title={'Почему работать с нами удобно и выгодно?'}
+                    />
+                    <Benefit/>
+                    <ContactUsServise/>
+                </>
+            }
+            {service === 'webPO' &&
+                <>
+                    <WorkUs cardArray={cardArray1}
+                            title={'Почему работать с нами удобно и выгодно?'}
+                    />
+                    <Benefit/>
+                    <ContactUsServise/>
                 </>
             }
         </ServicesWrapper>

@@ -40,29 +40,30 @@ export const JobDescription = () => {
     return (
         <JobDescriptionWrapper>
             <ContainerJob>
-                <TitleHead>Работа в Veon-Tech</TitleHead>
+                <TitleHead className='animate'>
+                    Работа в Veon-Tech</TitleHead>
                 <DescriptionBlock>
                     <DescriptionContent>
                         <BarLinksMobile>
-                            {linksArrayData.map((el, index) => <Link key={index} to={el.to}>{el.title}</Link>)}
+                            {linksArrayData.map((el, index) => <Link className='animate' key={index} to={el.to}>{el.title}</Link>)}
                         </BarLinksMobile>
                         <AboutBlock>
-                            <About>
+                            <About className='animate'>
                                 Амбициозная и целеустремленная команда экспертов, с большим стремлением оказывать
                                 высококачественные услуги по интернет-маркетингу и веб-разработке. Если Вы желаете стать
                                 частью нашей команды, тогда отправляйте нам Ваше резюме на электронную почту
                                 sales@veon-tech.ru
                             </About>
-                            <About>
+                            <About className='animate'>
                                 Если Вы ищете душевное место работы с классной атмосферой, приятными людьми и хорошей
                                 оплатой труда, то Вам в нашу команду!
                             </About>
                         </AboutBlock>
                         <AboutQuality>
-                            <SubTitle>Мы работаем эффективно, поэтому у нас 7-часовой рабочий день!</SubTitle>
+                            <SubTitle className='animate'>Мы работаем эффективно, поэтому у нас 7-часовой рабочий день!</SubTitle>
                             <Title>Почему нужно работать именно в Veon-Tech?</Title>
                             <CardsBlock>
-                                {cardArrayData.map((el, index) => <Card key={index}>{el.title}</Card>)}
+                                {cardArrayData.map((el, index) => <Card className='animate' key={index}>{el.title}</Card>)}
                             </CardsBlock>
                         </AboutQuality>
 
@@ -71,10 +72,10 @@ export const JobDescription = () => {
                     </DescriptionContent>
                     <DescriptionBar>
                         <BarLinks>
-                            {linksArrayData.map((el, index) => <Link key={index} to={el.to}>{el.title}</Link>)}
+                            {linksArrayData.map((el, index) => <Link className='animate' key={index} to={el.to}>{el.title}</Link>)}
                         </BarLinks>
                         <EchoBlock>
-                            <EchoTitle>Откликнуться</EchoTitle>
+                            <EchoTitle className='animate'>Откликнуться</EchoTitle>
                             <EchoText>
                                 Пожалуйста вышлите Ваше резюме на контактный e-mail указанный ниже. Мы рассмотрим Вашу
                                 кандидатуру и дадим ответ в течение 3-5 рабочих дней.
@@ -82,7 +83,7 @@ export const JobDescription = () => {
                             </EchoText>
                         </EchoBlock>
                         <EchoBlock>
-                            <EchoTitle>Нет бланка резюме? Поможем!</EchoTitle>
+                            <EchoTitle className='animate'>Нет бланка резюме? Поможем!</EchoTitle>
                             <EchoTextBlock>
                                 <Blank/>
                                 Чистый бланк резюме для заполнения

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {BonusesCardsBlock, BonusesContent, BonusesWrapper, Text, TextBlock} from "./style";
 import {JobHeader} from "../jobs/jobHeader";
 import {ChoiceBonuse} from "./choiceBonuse";
@@ -11,6 +11,7 @@ import {BonusesCard} from "./bonusesCard";
 import {Container} from "../../common/style/Container";
 import {SliderBonuse} from "./sliderBonuse";
 import {TitleHead} from "../services/benefit/style";
+import {animateText} from "../../common/animate/animateText";
 
 export type SaleCardsType = {
     id: string
@@ -21,6 +22,10 @@ export type SaleCardsType = {
     subText: string
 }
 export const Bonuses = () => {
+
+    useEffect(() => {
+        animateText()
+    }, [])
 
     const saleCards: SaleCardsType[] = [
         {
@@ -63,14 +68,14 @@ export const Bonuses = () => {
             {/*           breadcrumbsTitle={'БОНУСЫ'}*/}
             {/*/>*/}
             <Container>
-                <TitleHead>Бонусы</TitleHead>
+                <TitleHead className='animate'>Бонусы</TitleHead>
             </Container>
             <ChoiceBonuse/>
             <Container>
                 <BonusesCardsBlock>
                     {
                         saleCards.map((el, index) => (
-                            <BonusesCard card={el} key={index}/>
+                            <BonusesCard  card={el} key={index}/>
                         ))
                     }
                 </BonusesCardsBlock>
@@ -79,7 +84,7 @@ export const Bonuses = () => {
             <BonusesContent>
                 <Container>
                     <TextBlock>
-                        <Text>Для команды VEON-TECH клиенты – на первом месте. Нам нравится заботиться о своих клиентах,
+                        <Text className='animate'>Для команды VEON-TECH клиенты – на первом месте. Нам нравится заботиться о своих клиентах,
                             поэтому мы рекомендуем подходить к разработке комплексно, использовать максимальное
                             количество
                             существующих инструментов с учетом специфики бренда. Наша команда подготовила для вас
@@ -88,7 +93,7 @@ export const Bonuses = () => {
                             продвижения
                             вашей компании!
                         </Text>
-                        <Text>Выбирайте подходящий под ваши конкретные цели бонус и воспользуйтесь им, повышайте ваши
+                        <Text className='animate'>Выбирайте подходящий под ваши конкретные цели бонус и воспользуйтесь им, повышайте ваши
                             результативные показатели без лишних затрат.
                         </Text>
                     </TextBlock>
