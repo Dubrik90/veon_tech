@@ -15,6 +15,8 @@ import Up6 from "./assets/stateDev/start-up6.svg";
 import {DeveloperWork} from './developerWork';
 import {Portfolio} from "./portfolio";
 import {Benefit} from "./benefit";
+import {ContactUsServise} from "./contactUs";
+
 
 export type CardWorkUsType = {
     img: string,
@@ -96,6 +98,7 @@ export const Services = () => {
                             title={'Почему работать с нами удобно и выгодно?'}
                     />
                     <Benefit/>
+                    <ContactUsServise/>
                     {/*<DeveloperWork/>*/}
                     {/*<WorkUs cardArray={cardArray2}*/}
                     {/*        title={'Этапы разработки и создания сайта'}*/}

@@ -41,6 +41,21 @@ export const Content = styled.div`
     content: counter(num) '.' counter(num2);
   }
 
+  /* 3-й уровень */
+
+  ol ol ol {
+    counter-reset: num3;
+  }
+
+  ol ol ol > li {
+    counter-increment: num3;
+  }
+
+  ol ol ol > li::before {
+    content: counter(num) '.' counter(num2) '.' counter(num3);
+  //  border: 1px solid #368c49;
+  }
+
 `
 export const Title = styled.h5`
   color: var(--colors-text-dark);

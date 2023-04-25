@@ -6,6 +6,7 @@ type SwitchWrapperProps = {
 }
 export const SwitchWrapper = styled.div<SwitchWrapperProps>`
   background: #E8FCE3;
+  align-self: center;
   padding: 4px 5px;
   border-radius: 15px;
   position: relative;
