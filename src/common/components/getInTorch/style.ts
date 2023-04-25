@@ -12,8 +12,8 @@ export const GetInTorchWrapper = styled.div<GetInTorchWrapperProps>`
   justify-content: flex-start;
   column-gap: 12px;
   position: fixed;
-  right: 0;
-  bottom: 20px;
+  right: -95px;
+  bottom: 100px;
   z-index: 40;
   font-weight: var(--fw-bold);
   transition: all 0.3s;
@@ -22,6 +22,7 @@ export const GetInTorchWrapper = styled.div<GetInTorchWrapperProps>`
   border-radius: 14px;
   background: var(--colors-bg-green);
   padding: 5px 14px 3px 14px;
+  transform: rotate(-90deg);
   
   svg {
     fill: var(--colors-text-wight);

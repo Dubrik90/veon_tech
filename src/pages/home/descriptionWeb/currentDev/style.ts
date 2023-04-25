@@ -6,7 +6,7 @@ export const CurrentDevWrapper = styled.div`
   ${flexColumn()};
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #FFFDFD;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 15px;
+  border-radius: 5px;
   row-gap: 20px;
   flex: 0 0 349px;
   padding: 35px 38px 11px 28px;

@@ -23,8 +23,8 @@ export const GoUp = () => {
 
     useEffect(() => {
         gsap.to("#thirdCircle", {
-            x: -70,
-            duration: 3,
+            x: -63,
+          //  duration: 3,
             scrollTrigger: {
                 trigger: "#thirdCircle",
                 start: "top center",
@@ -32,9 +32,9 @@ export const GoUp = () => {
                 scrub: true
             }
         });
-        gsap.to(".torch", {
-            x: -70,
-            duration: 3,
+        gsap.fromTo(".torch", {y:0},{
+            y: -75,
+          //  duration: 3,
             scrollTrigger: {
                 trigger: "#thirdCircle",
 
