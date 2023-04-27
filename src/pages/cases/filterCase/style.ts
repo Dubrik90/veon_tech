@@ -15,12 +15,12 @@ export const FilterCaseWrapper = styled.div`
 
   @media (max-width: 767.98px) {
     .filter__block {
-     // margin-right: 0
+      // margin-right: 0
     }
   }
 
   .filter__block:last-child {
-   // margin-right: 0
+    // margin-right: 0
   }
 
   .filter-btn {
@@ -39,13 +39,13 @@ export const FilterCaseWrapper = styled.div`
   }
 
   .filter__title {
-    font-weight: 600;
+    font-weight: var(--fw-bold);
     font-size: 24px;
     line-height: 36px;
     display: flex;
     align-items: flex-end;
     letter-spacing: -.02em;
-    color: #000;
+    color: var(--colors-text-dark);
     margin-right: calc(10px + (24 - 10) * ((100vw - 768px) / (1920 - 768)));
     white-space: nowrap
   }
@@ -77,7 +77,7 @@ export const FilterCaseWrapper = styled.div`
     left: 1px;
     width: 35px;
     height: 2px;
-    background-color: #000
+    background-color: var(--colors-text-dark)
   }
 
   .filter-btn::before {
@@ -87,7 +87,7 @@ export const FilterCaseWrapper = styled.div`
     left: 17.5px;
     width: 2px;
     height: 35px;
-    background-color: #000
+    background-color: var(--colors-text-dark)
   }
 
   .filter__content-inner {
@@ -98,7 +98,7 @@ export const FilterCaseWrapper = styled.div`
     padding: 30px 10px 30px 28px;
     top: calc(100% + 15px);
     left: -20px;
-    background: #fff;
+    background: var(--colors-bg);
     box-shadow: 0 0 27px rgba(0, 0, 0, .14);
     border-radius: 5px;
     z-index: 10;
@@ -128,7 +128,7 @@ export const FilterCaseWrapper = styled.div`
 
   @media (max-width: 767.98px) {
     .filter__content {
-    //  display: block
+      //  display: block
     }
   }
 
@@ -412,40 +412,40 @@ export const FilterCaseWrapper = styled.div`
   }
 
   @media (max-width: 650px) {
-  //  .styled-checkbox + label:before {
-  //    top: 6px
-  //  }
-  //
-  //  .styled-checkbox:checked + label:after {
-  //    top: 12px
-  //  }
-  //
-  //  .filter__mob-open {
-  //    display: block;
-  //    margin-bottom: 67px
-  //  }
-  //
-  //  .filter__mob-open .filter__item {
-  //    margin-bottom: 0
-  //  }
-  //
-  //  .filter__content-item {
-  //    margin-bottom: 0;
-  //    padding-left: 0
-  //  }
-  //
-  //  .styled-checkbox + label {
-  //    padding: 10px 0 10px 38px
-  //  }
-  //
-  //  .filter-tags {
-  //    padding: 0
-  //  }
-  //
-  //  .filter-tags-box {
-  //    margin-bottom: 40px
-  //  }
-  //
+    //  .styled-checkbox + label:before {
+    //    top: 6px
+    //  }
+    //
+    //  .styled-checkbox:checked + label:after {
+    //    top: 12px
+    //  }
+    //
+    //  .filter__mob-open {
+    //    display: block;
+    //    margin-bottom: 67px
+    //  }
+    //
+    //  .filter__mob-open .filter__item {
+    //    margin-bottom: 0
+    //  }
+    //
+    //  .filter__content-item {
+    //    margin-bottom: 0;
+    //    padding-left: 0
+    //  }
+    //
+    //  .styled-checkbox + label {
+    //    padding: 10px 0 10px 38px
+    //  }
+    //
+    //  .filter-tags {
+    //    padding: 0
+    //  }
+    //
+    //  .filter-tags-box {
+    //    margin-bottom: 40px
+    //  }
+    //
     .filter__form {
       ${flexColumn()};
       row-gap: 10px;
@@ -458,65 +458,66 @@ export const FilterCaseWrapper = styled.div`
       //background-color: #5bacd2;
       //z-index: 10;
     }
-  //
-  //  .filter__desk {
-  //    position: fixed;
-  //    top: 0;
-  //    left: 0;
-  //    right: 0;
-  //    bottom: 0;
-  //    background-color: #fff;
-  //    z-index: 1000;
-  //    transition: transform .25s;
-  //    transform: translateX(100%)
-  //  }
-  //
-  //  .filter__desk .container {
-  //    height: 100%
-  //  }
-  //
-  //  .filter.open .filter__desk {
-  //    transform: translateX(0)
-  //  }
-  //
-  //  .filter.open .filter__desk-close {
-  //    display: flex;
-  //    align-items: center;
-  //    justify-content: center;
-  //    position: absolute;
-  //    top: 32px;
-  //    right: 20px;
-  //    z-index: 1100
-  //  }
-  //
-  //  .filter__block {
-  //    margin-top: 60px
-  //  }
-  //
-  //  .filter__block:first-child {
-  //    margin-top: 0
-  //  }
-  //
-  //  .filter__block .filter-btn, .filter__block .filter__content-btn {
-  //    display: none
-  //  }
-  //
-  //  .filter__block .filter__title {
-  //    margin-right: 0;
-  //    font-weight: 500;
-  //    font-size: 28px;
-  //    line-height: 30px
-  //  }
-  //
-  //  .filter__item {
-  //    margin-bottom: 14px
-  //  }
-  //
-  //  .filter__content {
-  //    display: block;
-  //    z-index: 10;
-  //  }
-  //
+
+    //
+    //  .filter__desk {
+    //    position: fixed;
+    //    top: 0;
+    //    left: 0;
+    //    right: 0;
+    //    bottom: 0;
+    //    background-color: #fff;
+    //    z-index: 1000;
+    //    transition: transform .25s;
+    //    transform: translateX(100%)
+    //  }
+    //
+    //  .filter__desk .container {
+    //    height: 100%
+    //  }
+    //
+    //  .filter.open .filter__desk {
+    //    transform: translateX(0)
+    //  }
+    //
+    //  .filter.open .filter__desk-close {
+    //    display: flex;
+    //    align-items: center;
+    //    justify-content: center;
+    //    position: absolute;
+    //    top: 32px;
+    //    right: 20px;
+    //    z-index: 1100
+    //  }
+    //
+    //  .filter__block {
+    //    margin-top: 60px
+    //  }
+    //
+    //  .filter__block:first-child {
+    //    margin-top: 0
+    //  }
+    //
+    //  .filter__block .filter-btn, .filter__block .filter__content-btn {
+    //    display: none
+    //  }
+    //
+    //  .filter__block .filter__title {
+    //    margin-right: 0;
+    //    font-weight: 500;
+    //    font-size: 28px;
+    //    line-height: 30px
+    //  }
+    //
+    //  .filter__item {
+    //    margin-bottom: 14px
+    //  }
+    //
+    //  .filter__content {
+    //    display: block;
+    //    z-index: 10;
+    //  }
+    //
     .filter__content-inner {
       //position: relative;
       //top: 0;
@@ -527,27 +528,28 @@ export const FilterCaseWrapper = styled.div`
       //border-radius: 0;
       //box-shadow: none
     }
-  //
-  //  .filter__content-list {
-  //    height: auto;
-  //    overflow: visible;
-  //    max-height: unset;
-  //    z-index: 10;
-  //  }
-  //
-  //  .filter__mob-apply {
-  //    display: block;
-  //    position: absolute;
-  //    bottom: 0;
-  //    left: 0;
-  //    width: 100%;
-  //    padding: 0 10px 12px;
-  //    z-index: 1000
-  //  }
-  //
-  //  .filter__mob-apply .btn {
-  //    width: 100%
-  //  }
+
+    //
+    //  .filter__content-list {
+    //    height: auto;
+    //    overflow: visible;
+    //    max-height: unset;
+    //    z-index: 10;
+    //  }
+    //
+    //  .filter__mob-apply {
+    //    display: block;
+    //    position: absolute;
+    //    bottom: 0;
+    //    left: 0;
+    //    width: 100%;
+    //    padding: 0 10px 12px;
+    //    z-index: 1000
+    //  }
+    //
+    //  .filter__mob-apply .btn {
+    //    width: 100%
+    //  }
   }
 
   @media (max-width: 767px) {
@@ -582,9 +584,9 @@ export const Button = styled.button`
   text-transform: uppercase;
   z-index: 10;
   border-radius: 5px;
-  
 
-  @media(max-width: 480px) {
+
+  @media (max-width: 480px) {
     width: 100%;
   }
 

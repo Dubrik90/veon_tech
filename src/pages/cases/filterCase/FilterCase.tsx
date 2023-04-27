@@ -10,7 +10,7 @@ interface MyFormValues {
 }
 
 interface FilterProps {
-    options: string[];
+   // options: string[];
     // applyFilter: (selectedOptions: string[]) => void;
 }
 
@@ -104,7 +104,7 @@ const Ul = styled.ul`
 
 `;
 
-export const FilterCase: React.FC<FilterProps> = ({options}) => {
+export const FilterCase: React.FC<FilterProps> = ({}) => {
     const [activeGroup, setActiveGroup] = useState<string | null>(null);
 
     // const [res, setRes] = useState<string[]>([])

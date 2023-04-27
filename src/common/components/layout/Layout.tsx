@@ -49,7 +49,6 @@ export const Layout = () => {
             {isModalWindowOpen && <ModalWindoww/>}
             {isOpenBonuseFormOpen && <BonuseForm/>}
             <WaterfallModal/>
-
         </>
     )
 }

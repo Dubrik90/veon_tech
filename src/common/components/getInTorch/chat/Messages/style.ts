@@ -20,12 +20,13 @@ export const MessageContainer = styled.div`
 export const MassageWrapper = styled.div`
   ${flexColumn()}
   row-gap: 5px;
+  max-width: 240px;
 `
 export const Massage = styled.p`
   background-color: #f1f0f0;
 //  border: 1px solid rgba(0, 0, 0, 0.14);
   border-radius: 8px;
-  padding: 9px 10px;
+  padding: 12px 16px;
   line-height: 1.4;
   font-size: 14px;
   color: var(--color-dark);

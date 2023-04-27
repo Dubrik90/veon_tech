@@ -60,6 +60,7 @@ export const Button = styled.button`
   text-transform: uppercase;
   transition: color .3s ease-in-out;
   z-index: 1;
+  border-radius: 5px;
 
   min-height: 2.75rem;
   padding: 0.75rem 1.5rem;
@@ -82,6 +83,7 @@ export const Button = styled.button`
     transition: background-color .3s ease-in-out, border-color .3s ease-in-out, transform .3s ease-in-out;
     width: 100%;
     z-index: -1;
+    border-radius: 5px;
   }
 
   :hover {

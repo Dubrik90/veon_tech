@@ -14,10 +14,10 @@ export const Chat: React.FC<ChatType> = ({closeModal, view,}) => {
         <ChatWrapper view={view}>
             <CloseIcon onClick={closeModal}/>
             <ChatHeader>
-                <Avatar/>
+                {/*<Avatar/>*/}
                 <Button>
-                    <Title>Артем</Title>
-                    <SubTitle>Customer support</SubTitle>
+                    <Title>Отправте нам сообщение</Title>
+                    {/*<SubTitle>Customer support</SubTitle>*/}
                 </Button>
             </ChatHeader>
             <ChatContent>

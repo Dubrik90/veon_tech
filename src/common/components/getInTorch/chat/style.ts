@@ -8,17 +8,23 @@ type ChatWrapperProps = {
 }
 export const CloseIcon = styled(HighlightOffIcon)`
   position: absolute;
-  right: 10px;
-  top: 10px;
+  left: -30px;
+  top: -5px;
   font-size: 28px;
   font-weight: var(--fw-regular);
   cursor: pointer;
   z-index: 50;
   transition: all 0.3s;
+  
+  @media (max-width: 425px) {
+    left: 90%;
+    top: 15px;
+  }
+  
 
   &:hover {
     transition: all 0.3s;
-    color: var(--colors-bg);
+   // color: var(--colors-bg);
   }
 `
 export const ChatWrapper = styled.div<ChatWrapperProps>`
@@ -33,8 +39,8 @@ export const ChatWrapper = styled.div<ChatWrapperProps>`
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   height: 450px;
   background: var(--colors-bg-green);
-  border-top-left-radius: 17px;
-  border-top-right-radius: 17px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 30px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 
@@ -62,7 +68,7 @@ export const ChatHeader = styled.div`
   }
   
   @media (max-width: 768px) {
-    height: 45px;
+   // height: 45px;
   }
 `
 export const ChatContent = styled.div`
@@ -105,9 +111,10 @@ export const Input = styled.textarea`
   width: 100%;
   position: relative;
   height: 60px;
+  font-family: 'Montserrat';
 
   ::placeholder {
-    font-family: 'Mulish';
+    font-family: 'Montserrat';
     font-size: var(--fs-12);
     line-height: 129.5%;
     color: var(--color-grey);

@@ -1,6 +1,7 @@
 import styled, {createGlobalStyle} from 'styled-components'
 
 import '../../assets/font/font.css'
+
 export default createGlobalStyle`
   html {
     width: 100%;

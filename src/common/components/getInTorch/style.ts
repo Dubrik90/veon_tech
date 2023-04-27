@@ -12,25 +12,38 @@ export const GetInTorchWrapper = styled.div<GetInTorchWrapperProps>`
   justify-content: flex-start;
   column-gap: 12px;
   position: fixed;
-  right: -95px;
-  bottom: 100px;
+  right: -115px;
+  bottom: 115px;
   z-index: 40;
   font-weight: var(--fw-bold);
   transition: all 0.3s;
   height: 40px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 14px;
+  border-radius: 5px;
   background: var(--colors-bg-green);
   padding: 5px 14px 3px 14px;
   transform: rotate(-90deg);
-  
+
   svg {
-    fill: var(--colors-text-wight);
+    transition: all 0.3s;
+    fill: var(--colors-text-dark);
   }
+
   :hover {
+    transition: all 0.3s;
     background: var(--color-dg-footer);
+
+    div {
+      p {
+        color: var(--colors-text-wight);
+      }
+    }
+
+    svg {
+        fill: var(--colors-text-wight);
+    }
   }
-  
+
   @media (max-width: 768px) {
     height: 45px;
   }
@@ -48,20 +61,24 @@ export const AvatarWrap = styled.div<ImgWrapProps>`
   border-radius: 100%;
 `
 
-export const Button = styled.button`
+export const Button = styled.div`
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  font-family: 'Mulish';
+
   font-weight: var(--fw-bold);
   padding: 10px 0;
 `
 export const Title = styled.p`
-  font-weight: var(--fw-medium);
-  font-size: var(--fs-16);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: var(--fw-regular);
+  font-size: 16px;
+  letter-spacing: -0.2px;
   line-height: 129.5%;
-  color: var(--colors-text-wight);
-  
+  color: var(--colors-text-dark);
+  transition: all 0.3s;
+
   @media (max-width: 425px) {
-    font-size: 14px;
+    font-size: 15px;
   }
 `
