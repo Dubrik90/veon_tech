@@ -66,7 +66,7 @@ export const MapComponent = () => {
             <Container>
                 <MapWrapperBlock>
                     <CardWrapper>
-                        <Title className='animate'><span>РАСПОЛОЖЕНИЕ</span> Нашего Офиса </Title>
+                        <Title><span>РАСПОЛОЖЕНИЕ</span> Нашего Офиса </Title>
                         <MapWrapper>
                             <YMaps width="100%" height="400px">
                                 <StyledMap state={mapState}>
@@ -76,8 +76,8 @@ export const MapComponent = () => {
                         </MapWrapper>
                     </CardWrapper>
                     <FormBlock>
-                        <Title className='animate'>Мы рады увидеть <span>Вашу</span> заявку!</Title>
-                        <SubTitle className='animate'>
+                        <Title>Мы рады увидеть <span>Вашу</span> заявку!</Title>
+                        <SubTitle>
                             Пожалуйста оставьте Ваши имя и телефон, мы будем счастливы помочь Вам.
                         </SubTitle>
                         <FormWrapper onSubmit={formik.handleSubmit}>

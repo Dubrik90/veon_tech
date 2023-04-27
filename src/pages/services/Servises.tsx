@@ -95,6 +95,7 @@ export const Services = () => {
             <ServiceHeader img={activeDataService.img}
                            text={activeDataService.text}
                            title={activeDataService.title}
+                           titleBtn={activeDataService.titleBtn}
             />
             {service === 'webDev' &&
                 <>

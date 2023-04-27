@@ -22,6 +22,7 @@ import {Link} from "react-router-dom";
 import {Blank} from "../assets";
 import {Accordeon} from "./accordeon";
 import {TitleHead} from "../../services/benefit/style";
+import {ROUTS} from "../../../common/constans/routs";
 
 export const JobDescription = () => {
     const cardArrayData = [
@@ -31,10 +32,10 @@ export const JobDescription = () => {
         {title: 'Перспективный карьерный рост'},
     ]
     const linksArrayData = [
-        {title: 'О нашей компании', to: ''},
-        {title: 'Работа в Veon-Tech', to: ''},
+        {title: 'О нашей компании', to: ROUTS.ABOUT},
+        {title: 'Работа в Veon-Tech', to: ROUTS.JOBS},
         {title: 'Отзывы клиентов', to: ''},
-        {title: 'Популярные вопросы', to: ''},
+        {title: 'Бонусы', to: ROUTS.BONUSES},
     ]
 
     return (

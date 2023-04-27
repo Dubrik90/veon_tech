@@ -8,10 +8,11 @@ import {useScrollBlock} from "../../../common/hook/use-scroll-block";
 type ServiceHeaderPropsType = {
     title: string,
     text: string,
-    img: string
+    img: string,
+    titleBtn: string
 }
 
-export const ServiceHeader:FC<ServiceHeaderPropsType> = ({text, img, title}) => {
+export const ServiceHeader:FC<ServiceHeaderPropsType> = ({text, img, title, titleBtn}) => {
     const dispatch = useAppDispatch()
     const isOpenForm = useAppSelector(state => state.app.isOpenForm)
     const [blockScroll, allowScroll] = useScrollBlock();
@@ -28,7 +29,7 @@ export const ServiceHeader:FC<ServiceHeaderPropsType> = ({text, img, title}) => 
                     <HeaderContent>
                         <Title className='animate'>{title}</Title>
                         {/*<Text>{text}</Text>*/}
-                        <Button className='animate' onClick={onClickFormModalHandler}>ПОЛУЧИТЬ САЙТ</Button>
+                        <Button className='animate' onClick={onClickFormModalHandler}>{titleBtn}</Button>
                     </HeaderContent>
                     <HeaderImage>
                         <Img src={img} alt='image'/>

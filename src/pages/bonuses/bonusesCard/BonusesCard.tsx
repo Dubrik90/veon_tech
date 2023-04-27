@@ -24,11 +24,11 @@ export const BonusesCard: FC<BonusesCardProps> = ({card}) => {
             <ImgBlock>
                 <Img src={card.img} alt='logo bonuse'/>
             </ImgBlock>
-            <Title className='animate'>{card.title}</Title>
-            <SubTitle className='animate'>{card.subtitle}</SubTitle>
-            <Text className='animate'>{card.text}</Text>
-            <SubText className='animate'>{card.subText}</SubText>
-            <Button className='animate' onClick={onClickOpenBonuseFormHandler}>Выбрать</Button>
+            <Title>{card.title}</Title>
+            <SubTitle>{card.subtitle}</SubTitle>
+            <Text>{card.text}</Text>
+            <SubText>{card.subText}</SubText>
+            <Button onClick={onClickOpenBonuseFormHandler}>Выбрать</Button>
         </BonusesCardWrapper>
     );
 };

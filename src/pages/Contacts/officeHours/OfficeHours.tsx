@@ -56,7 +56,7 @@ export const OfficeHours = () => {
                     <HoursBlock>
                         {hoursData.map(el => (
                             <HoursCard key={el.id}
-                                       className={selectedDay === el.id ? 'active_day animate' : ' animate'}>
+                                       className={selectedDay === el.id ? 'active_day' : ''}>
                                 <Day>{el.day}</Day>
                                 <Hours>{el.hours}</Hours>
                             </HoursCard>

@@ -8,6 +8,7 @@ import {useAppSelector} from "../../common/hook";
 import {Container} from '../../common/style/Container';
 import {TitleHead} from "../services/benefit/style";
 import {animateText} from "../../common/animate/animateText";
+import { FilterCase } from './filterCase';
 
 export const Сases = () => {
     const filter = useAppSelector(state => state.app.filterCase)
@@ -24,8 +25,9 @@ export const Сases = () => {
             <Container>
                 <TitleHead className='animate'>Кейсы</TitleHead>
             </Container>
-            <FilterBlock filter={filter}
-            />
+            <FilterCase/>
+            {/*<FilterBlock filter={filter}*/}
+            {/*/>*/}
             <CaseBlock filter={filter}/>
         </СasesWrapper>
     );

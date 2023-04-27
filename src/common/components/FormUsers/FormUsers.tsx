@@ -80,6 +80,7 @@ export const FormUsers: React.FC = () => {
         dispatch(setIsOpenFormAC({isOpen: false}))
     }
 
+
     const helpCompanyArray = [
         {val: 'У нас есть готовая идея'},
         {val: 'Доверимся вашей компании'},
@@ -444,7 +445,7 @@ export const FormUsers: React.FC = () => {
                             <PrivacyPolicy>
                                 <TextPolicy>
                                     Отправляя форму, Вы даете согласие на обработку своих
-                                    персональных данных в соответствии с <Link to={ROUTS.POLICY}>политикой
+                                    персональных данных в соответствии с <Link onClick={closeFormModal} to={ROUTS.POLICY}>политикой
                                     конфиденциальности</Link>
                                 </TextPolicy>
                             </PrivacyPolicy>

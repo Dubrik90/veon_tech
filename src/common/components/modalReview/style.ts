@@ -31,7 +31,7 @@ export const Clouse = styled.div`
   cursor: pointer;
   z-index: 2;
   transition: transform .3s;
-  color: #fff;
+  color: var(--color-withe);
   transform: rotate(-45deg);
   width: 40px;
   height: 40px;
@@ -48,7 +48,7 @@ export const Clouse = styled.div`
     transform: translate(-50%, -50%);
     width: 40px;
     height: 2px;
-    background-color: black;
+    background-color: var(--color-withe);
     border-radius: 2px;
   }
   span:nth-child(2) {
@@ -59,7 +59,7 @@ export const Clouse = styled.div`
     transform: translate(-50%, -50%) rotate(90deg);
     width: 40px;
     height: 2px;
-    background-color: black;
+    background-color: var(--color-withe);
     border-radius: 2px;
   }
     
