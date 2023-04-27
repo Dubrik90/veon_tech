@@ -17,6 +17,8 @@ export const Сases = () => {
         animateText()
     }, [])
 
+    const arr: string[] = ['Интернет-магазины', 'B2B', 'Сайты', 'Приложения', 'Интеграции', 'Битрикс24', 'Техподдержка', 'Дизайн-концепция', 'Готовые решения']
+
     return (
         <СasesWrapper>
             {/*<JobHeader title={'Кейсы '}*/}
@@ -25,7 +27,7 @@ export const Сases = () => {
             <Container>
                 <TitleHead className='animate'>Кейсы</TitleHead>
             </Container>
-            <FilterCase/>
+            <FilterCase options={arr} />
             {/*<FilterBlock filter={filter}*/}
             {/*/>*/}
             <CaseBlock filter={filter}/>
