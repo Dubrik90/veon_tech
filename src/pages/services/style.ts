@@ -27,13 +27,14 @@ export const Title = styled.h2`
   margin-bottom: 28px;
   font-size: calc(35px + (60 - 35) * ((100vw - 320px) / (1920 - 320)));
   line-height: 110%;
-  color: #111;
+  color:var( --colors-text-dark);
   font-weight: 700;
 `
 export const Text = styled.p`
   margin-bottom: 28px;
   font-size: calc(21px + (28 - 21) * ((100vw - 320px) / (1920 - 320)));
   line-height: 130%;
+  color:var( --colors-text-dark);
 `
 export const LinkBlock = styled.div`
   margin-top: 30px;
@@ -81,6 +82,7 @@ export const ColumnBlockWrap = styled.div`
     p {
       font-size: 20px;
       line-height: 130%;
+      color:var( --colors-text-dark);
 
       strong {
         font-weight: var(--fw-medium);
@@ -102,6 +104,7 @@ export const ContentBlock = styled.div`
       font-size: calc(21px + (26 - 21) * ((100vw - 320px) / (1920 - 320)));
       line-height: 130%;
       position: relative;
+      color:var( --colors-text-dark);
 
       :before {
         content: '';
