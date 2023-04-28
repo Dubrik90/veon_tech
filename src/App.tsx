@@ -21,23 +21,21 @@ function App() {
     const location = useLocation();
 
     return (
-     //   <TransitionRouter location={location}>
-            <Routes>
-                <Route path={ROUTS.HOME} element={<Layout/>}>
-                    <Route path={ROUTS.HOME} element={<Home/>}/>
-                    <Route path={ROUTS.ABOUT} element={<About/>}/>
-                    <Route path={ROUTS.JOBS} element={<Jobs/>}/>
-                    <Route path={ROUTS.NDA} element={<Nda/>}/>
-                    <Route path={ROUTS.CASES} element={<Сases/>}/>
-                    <Route path={ROUTS.CASE} element={<Case/>}/>
-                    <Route path={ROUTS.SERVICES} element={<Services/>}/>
-                    <Route path={ROUTS.BONUSES} element={<Bonuses/>}/>
-                    <Route path={ROUTS.CONTACTS} element={<Contacts/>}/>
-                    <Route path={ROUTS.POLICY} element={<Policy/>}/>
-                    <Route path={ROUTS.CASE_GRANIT} element={<CaseGranit/>}/>
-                </Route>
-            </Routes>
-      //   </TransitionRouter>
+        <Routes>
+            <Route path={ROUTS.HOME} element={<Layout/>}>
+                <Route path={ROUTS.HOME} element={<Home/>}/>
+                <Route path={ROUTS.ABOUT} element={<About/>}/>
+                <Route path={ROUTS.JOBS} element={<Jobs/>}/>
+                <Route path={ROUTS.NDA} element={<Nda/>}/>
+                <Route path={ROUTS.CASES} element={<Сases/>}/>
+                <Route path={ROUTS.CASE} element={<Case/>}/>
+                <Route path={ROUTS.SERVICES} element={<Services/>}/>
+                <Route path={ROUTS.BONUSES} element={<Bonuses/>}/>
+                <Route path={ROUTS.CONTACTS} element={<Contacts/>}/>
+                <Route path={ROUTS.POLICY} element={<Policy/>}/>
+                <Route path={ROUTS.CASE_GRANIT} element={<CaseGranit/>}/>
+            </Route>
+        </Routes>
     );
 }
 
