@@ -90,7 +90,7 @@ export const ConsultantModal = () => {
                     </InputBlock>
                     <SubText>
                         Нажимая на кнопку «Отправить», вы даете свое согласие на обработку персональных данных в
-                        соответствии с целями указанными в <Link to={ROUTS.POLICY}>Политике обработки персональных данных</Link>
+                        соответствии с целями указанными в <Link onClick={onClickClouseModalHandler} to={ROUTS.POLICY}>Политике обработки персональных данных</Link>
                     </SubText>
                     <Button type='submit'>Отправить</Button>
                 </FormWrapper>

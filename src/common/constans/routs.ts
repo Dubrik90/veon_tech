@@ -9,5 +9,6 @@ export const ROUTS = {
     POLICY: '/privacy',
     SERVICES: '/services/:service',
     BONUSES: '/bonuses',
-    CONTACTS: '/contacts'
+    CONTACTS: '/contacts',
+    CASE_GRANIT: '/case/granit-company',
 }

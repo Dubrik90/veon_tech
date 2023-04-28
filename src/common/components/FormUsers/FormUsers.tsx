@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useRef,FormEvent, useState} from "react";
 import {Form, Formik, FormikHelpers} from "formik";
 import {
     BonuseFormWrapper,
@@ -38,6 +38,8 @@ import {useAppDispatch, useAppSelector} from "../../hook";
 import {ROUTS} from "../../constans/routs";
 import {Link, useLocation, useNavigate, useParams} from "react-router-dom";
 import {useScrollBlock} from "../../hook/use-scroll-block";
+import emailjs from 'emailjs-com';
+import {log} from "util";
 
 
 interface MyFormValues {
@@ -64,6 +66,7 @@ export const FormUsers: React.FC = () => {
     const dispatch = useAppDispatch()
     const location = useLocation();
     const currentPath = location.pathname
+    const form = useRef<FormEvent<HTMLFormElement> | ''>('');
 
     const [budget, setBudget] = useState('')
     const [helpFizUser, setHelpFizUser] = useState('')
@@ -112,11 +115,24 @@ export const FormUsers: React.FC = () => {
     };
 
     const handleSubmit = (
-        values: MyFormValues,
+        values: any,
         {setSubmitting}: FormikHelpers<MyFormValues>
     ) => {
+
         console.log(values);
-        setSubmitting(false);
+        setSubmitting(true);
+       // e.preventDefault();
+        emailjs.send('service_jwks1lh', 'template_m2zj1z6', values, 'iy68w7qmdmjCwvP5W')
+            .then((result: any) => {
+                console.log('then')
+                console.log(result.text);
+            }, (error: any) => {
+                console.log('error')
+                console.log(error.text);
+                alert('message error')
+            });
+     //   e.currentTarget.reset()
+
     };
 
     return (

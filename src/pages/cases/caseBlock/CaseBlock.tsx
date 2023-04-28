@@ -65,7 +65,7 @@ export const CaseBlock: FC<CaseBlockPropsType> = ({filter}) => {
                                         <HiddenBlock>
                                             <Title>{el.title}</Title>
                                             <Text>Какой-то текст описания кейса</Text>
-                                            <Link to={`/case/${el.type}`}>Подробнее</Link>
+                                            <Link to={el.route}>Подробнее</Link>
                                         </HiddenBlock>
                                     </Content>
                                 </React.Fragment>

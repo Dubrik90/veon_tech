@@ -28,7 +28,7 @@ export const casesData: CasesType = {
         {id: '7', type: 'sites', title: 'КОРПОРАТИВНЫЙ САЙТ', route: ROUTS.CASE, img: mediaCorporat}
     ],
     ['catalogs']: [
-        {id: '6', type: 'catalogs', title: 'ИНТЕРНЕТ-КАТАЛОГ', route: ROUTS.CASE, img: granitCatalog},
+        {id: '6', type: 'catalogs', title: 'ИНТЕРНЕТ-КАТАЛОГ', route: ROUTS.CASE_GRANIT, img: granitCatalog},
         {id: '9', type: 'catalogs', title: 'ИНТЕРНЕТ-КАТАЛОГ', route: ROUTS.CASE, img: sdCatalog},
         {id: '10', type: 'catalogs', title: 'ИНТЕРНЕТ-КАТАЛОГ', route: ROUTS.CASE, img: sodoxCatalog},
         {id: '11', type: 'catalogs', title: 'ИНТЕРНЕТ-КАТАЛОГ', route: ROUTS.CASE, img: wellCatalog},
@@ -39,7 +39,7 @@ export const casesData: CasesType = {
         {id: '3', type: 'sites', title: 'КОРПОРАТИВНЫЙ САЙТ', route: ROUTS.CASE, img: partyCorporat},
         {id: '4', type: 'visit', title: 'САЙТ-ВИЗИТКА', route: ROUTS.CASE, img: prosnowVisit},
         {id: '5', type: 'visit', title: 'САЙТ-ВИЗИТКА', route: ROUTS.CASE, img: elephantVizit},
-        {id: '6', type: 'catalogs', title: 'ИНТЕРНЕТ-КАТАЛОГ', route: ROUTS.CASE, img: granitCatalog},
+        {id: '6', type: 'catalogs', title: 'ИНТЕРНЕТ-КАТАЛОГ', route: ROUTS.CASE_GRANIT, img: granitCatalog},
         {id: '7', type: 'sites', title: 'КОРПОРАТИВНЫЙ САЙТ', route: ROUTS.CASE, img: mediaCorporat},
         {id: '8', type: 'magazines', title: 'ИНТЕРНЕТ-МАГАЗИН', route: ROUTS.CASE, img: noomblistMarket},
         {id: '9', type: 'catalogs', title: 'ИНТЕРНЕТ-КАТАЛОГ', route: ROUTS.CASE, img: sdCatalog},

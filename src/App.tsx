@@ -15,6 +15,7 @@ import {Policy} from "./pages/policy";
 import {TransitionRouter} from './common/components/transitionRouter';
 import {useAppSelector} from "./common/hook";
 import {About} from "./pages/about";
+import {CaseGranit} from "./pages/caseGranit";
 
 function App() {
     const location = useLocation();
@@ -33,6 +34,7 @@ function App() {
                     <Route path={ROUTS.BONUSES} element={<Bonuses/>}/>
                     <Route path={ROUTS.CONTACTS} element={<Contacts/>}/>
                     <Route path={ROUTS.POLICY} element={<Policy/>}/>
+                    <Route path={ROUTS.CASE_GRANIT} element={<CaseGranit/>}/>
                 </Route>
             </Routes>
       //   </TransitionRouter>

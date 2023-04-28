@@ -25,6 +25,8 @@
     "@types/yup": "^0.32.0",
     "babel-plugin-styled-components": "^2.0.7",
     "classnames": "^2.3.2",
+    "emailjs": "^4.0.1",
+    "emailjs-com": "^3.2.0",
     "expo-font": "^11.1.1",
     "formik": "^2.2.9",
     "formik-file-and-image-input": "^0.0.6",
