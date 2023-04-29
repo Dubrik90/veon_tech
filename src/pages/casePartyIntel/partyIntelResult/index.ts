@@ -1,0 +1,1 @@
+export {PartyIntelResult} from './PartyIntelResult'

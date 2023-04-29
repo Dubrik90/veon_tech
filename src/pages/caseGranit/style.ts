@@ -11,9 +11,14 @@ export const GranitTextContent = styled.div`
   z-index: 15;
   ${flexColumn()};
   row-gap: 50px;
+  margin-top: 80px;
+
+ }
 
   @media (max-width: 1920px) {
     row-gap: calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320)));
+    margin-top: calc(40px + (80 - 40) * ((100vw - 320px) / (1920 - 320)));
+
     margin-bottom: calc(50px + (80 - 50) * ((100vw - 320px) / (1920 - 320)));
   }
 

@@ -1,0 +1,1 @@
+export {PartyIntelAbout} from './PartyIntelAbout'

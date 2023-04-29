@@ -1,0 +1,1 @@
+export {CaseSwissResult} from './CaseSwissResult'

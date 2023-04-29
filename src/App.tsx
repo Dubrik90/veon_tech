@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.css';
-import {HashRouter, Route, Routes, useLocation} from 'react-router-dom';
+import {Route, Routes, useLocation} from 'react-router-dom';
 import {ROUTS} from './common/constans/routs';
 import {Home} from './pages/home';
 import {Layout} from "./common/components/layout/Layout";
@@ -12,13 +12,13 @@ import {Services} from "./pages/services";
 import {Bonuses} from './pages/bonuses';
 import {Contacts} from "./pages/Contacts";
 import {Policy} from "./pages/policy";
-import {TransitionRouter} from './common/components/transitionRouter';
-import {useAppSelector} from "./common/hook";
 import {About} from "./pages/about";
 import {CaseGranit} from "./pages/caseGranit";
+import {CaseSwiss} from './pages/caseSwiss';
+import {CasePartyIntel} from './pages/casePartyIntel';
+import {CaseHappyElephant} from "./pages/caseHappyElephant";
 
 function App() {
-    const location = useLocation();
 
     return (
         <Routes>
@@ -34,6 +34,10 @@ function App() {
                 <Route path={ROUTS.CONTACTS} element={<Contacts/>}/>
                 <Route path={ROUTS.POLICY} element={<Policy/>}/>
                 <Route path={ROUTS.CASE_GRANIT} element={<CaseGranit/>}/>
+                <Route path={ROUTS.CASE_SWISS} element={<CaseSwiss/>}/>
+                <Route path={ROUTS.CASE_PARTY_INTEL} element={<CasePartyIntel/>}/>
+                <Route path={ROUTS.CASE_PAPPY_ELEPHANT} element={<CaseHappyElephant/>}/>
+
             </Route>
         </Routes>
     );
