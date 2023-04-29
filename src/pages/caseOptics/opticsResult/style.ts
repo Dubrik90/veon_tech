@@ -20,9 +20,9 @@ export const Title = styled.h3`
     font-size: calc(30px + (64 - 30) * ((100vw - 320px) / (1920 - 320)));
   }
   @media (max-width: 648px) {
-   position: relative;
+    position: relative;
     color: var(--colors-text-dark);
-    
+
   }
 
 `

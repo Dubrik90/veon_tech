@@ -25,12 +25,13 @@ export const Title = styled.h3`
   }
 `
 export const CaseBlock = styled.div`
+  padding: 150px 0;
   ${flexColumn()};
-  padding: 55px 0;
+ // padding: 55px 0;
   align-items: center;
 
   @media (max-width: 425px) {
-    padding: 30px 0;
+    padding: 150px 0 30px 0;
   }
 `
 export const PortfolioBlock = styled.div`

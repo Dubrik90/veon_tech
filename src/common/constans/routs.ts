@@ -3,7 +3,7 @@ export const ROUTS = {
     JOBS: '/jobs',
     NDA: '/nda',
     CASES: '/cases',
-    CASE: '/case/:category',
+    CASE: '/case/cat',
     ABOUT: '/about',
     //DEVELOP: '/development',
     POLICY: '/privacy',
@@ -15,4 +15,6 @@ export const ROUTS = {
     CASE_PARTY_INTEL: '/case/party-intel',
     CASE_PAPPY_ELEPHANT: '/case/happy-elephant',
     CASE_OPTICS: '/case/optics',
+    CASE_CENTAVRAS: '/case/centavras',
+    CASE_RENT_CLUB: '/case/rent-club',
 }

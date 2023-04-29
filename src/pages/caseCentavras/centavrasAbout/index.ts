@@ -1,0 +1,1 @@
+export {CentavrasAbout} from './CentavrasAbout'

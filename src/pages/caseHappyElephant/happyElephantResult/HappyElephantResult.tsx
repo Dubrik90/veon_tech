@@ -1,22 +1,24 @@
-import React from 'react';
+import React, {FC} from 'react';
 import {HappyElephantResultWrapper, ResultContent, Text} from './style';
-import ResultImg from '../assets/elepfantResult.webp'
+
 import {Container} from '../../../common/style/Container';
 
-export const HappyElephantResult = () => {
+type HappyElephantResultProps = {
+    img: string,
+    text1: string,
+    text2: string,
+}
+
+export const HappyElephantResult:FC<HappyElephantResultProps> = ({text1, text2,img}) => {
     return (
-        <HappyElephantResultWrapper src={ResultImg}>
+        <HappyElephantResultWrapper src={img}>
             <Container>
                 <ResultContent>
                     <Text>
-                        Оплата в свою очередь осуществляется через платежные модули, подключаемые к сайту в типовом
-                        механизме. (Т.е. механизм подключения платежных модулей не меняется.) При переходе к оплате
-                        ставятся в резерв Бонусы.
+                        {text1}
                     </Text>
                     <Text>
-                        Выбирая нас клиент получил следующее: - Календарь бронирования с широким функционалом - Кабинет
-                        сделки с интуитивно-понятным пользователю интерфейсом - Реализована система платежей - Также
-                        наша команда разработала различные сценарии поведения Пользователя в кабинете сделки.
+                        {text2}
                     </Text>
                 </ResultContent>
             </Container>

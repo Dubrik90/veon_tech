@@ -1,0 +1,1 @@
+export {CentavrasDesc} from './CentavrasDesc'

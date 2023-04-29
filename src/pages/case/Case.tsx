@@ -19,13 +19,13 @@ type UseParamsType = {
 export const Case = () => {
     const {category} = useParams<UseParamsType>()
 
-    const activeCase = caseDataArray.filter(el => el.type === category)[0]
+    const activeCase = caseDataArray[0]
 
     return (
         <CaseWrapper>
-            <JobHeader title={'Кейсы по разработке сайтов'}
-                       breadcrumbsTitle={'КЕЙСЫ'}
-            />
+            {/*<JobHeader title={'Кейсы по разработке сайтов'}*/}
+            {/*           breadcrumbsTitle={'КЕЙСЫ'}*/}
+            {/*/>*/}
             <Container>
                 <CaseBlock>
                     <Title>{activeCase.title}</Title>

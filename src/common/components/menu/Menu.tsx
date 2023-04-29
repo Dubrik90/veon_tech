@@ -79,7 +79,7 @@ export const Menu: FC<MenuProps> = ({isOpenBurger, onClick, onClickCloseBurger})
                     </SubMenu>
                 </MenuItem>
                 <MenuItem className='about-link'>
-                    <NavLink onClick={onClickCloseBurger} to={ROUTS.SERVICES}>Разработка сайтов</NavLink>
+                    <NavLink onClick={onClickCloseBurger} to={'/services/webDev'}>Разработка сайтов</NavLink>
                 </MenuItem>
                 <MenuItem><NavLink onClick={onClickCloseBurger} to={ROUTS.BONUSES}>
                     <span className='link__wrap'>

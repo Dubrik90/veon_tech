@@ -18,6 +18,8 @@ import {CaseSwiss} from './pages/caseSwiss';
 import {CasePartyIntel} from './pages/casePartyIntel';
 import {CaseHappyElephant} from "./pages/caseHappyElephant";
 import { CaseOptics } from './pages/caseOptics';
+import {CaseCentavras} from "./pages/caseCentavras";
+import {CaseRentClub} from "./pages/caseRentClub";
 
 function App() {
 
@@ -29,7 +31,7 @@ function App() {
                 <Route path={ROUTS.JOBS} element={<Jobs/>}/>
                 <Route path={ROUTS.NDA} element={<Nda/>}/>
                 <Route path={ROUTS.CASES} element={<Сases/>}/>
-                <Route path={ROUTS.CASE} element={<Case/>}/>
+
                 <Route path={ROUTS.SERVICES} element={<Services/>}/>
                 <Route path={ROUTS.BONUSES} element={<Bonuses/>}/>
                 <Route path={ROUTS.CONTACTS} element={<Contacts/>}/>
@@ -39,6 +41,10 @@ function App() {
                 <Route path={ROUTS.CASE_PARTY_INTEL} element={<CasePartyIntel/>}/>
                 <Route path={ROUTS.CASE_PAPPY_ELEPHANT} element={<CaseHappyElephant/>}/>
                 <Route path={ROUTS.CASE_OPTICS} element={<CaseOptics/>}/>
+                <Route path={ROUTS.CASE_CENTAVRAS} element={<CaseCentavras/>}/>
+                <Route path={ROUTS.CASE_RENT_CLUB} element={<Case/>}/>
+                {/*<Route path={ROUTS.CASE_RENT_CLUB} element={<CaseRentClub/>}/>*/}
+
             </Route>
         </Routes>
     );
