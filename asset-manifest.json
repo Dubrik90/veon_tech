@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/veon_tech/static/css/main.37979bcd.css",
-    "main.js": "/veon_tech/static/js/main.f5d671cb.js",
+    "main.js": "/veon_tech/static/js/main.7b751d1d.js",
     "static/js/787.5fb054ca.chunk.js": "/veon_tech/static/js/787.5fb054ca.chunk.js",
     "static/media/swissImg1.png": "/veon_tech/static/media/swissImg1.79598e747c9fdf1546f4.png",
     "static/media/logoLight.svg": "/veon_tech/static/media/logoLight.210c8e42e39ddc1b39b050125538f6de.svg",
@@ -32,7 +32,9 @@
     "static/media/partyCorporat.png": "/veon_tech/static/media/partyCorporat.4b55dfd5d392ff054149.png",
     "static/media/swissResult.webp": "/veon_tech/static/media/swissResult.fe823a40a3396b4c8496.webp",
     "static/media/image2.png": "/veon_tech/static/media/image2.bcc7af2631d75670a1ac.png",
+    "static/media/opticsResult.webp": "/veon_tech/static/media/opticsResult.1db27fc6511b93caa82a.webp",
     "static/media/elephantAbutImage.webp": "/veon_tech/static/media/elephantAbutImage.d39407cf2b446e793e24.webp",
+    "static/media/CentavrasDescImg.webp": "/veon_tech/static/media/CentavrasDescImg.05ef3e59a5f3f4ebfb27.webp",
     "static/media/img1.png": "/veon_tech/static/media/img1.b2e4e5a4b97172ae6fa1.png",
     "static/media/party.webp": "/veon_tech/static/media/party.d04ea15ac5b2f04c9ff8.webp",
     "static/media/img3.png": "/veon_tech/static/media/img3.834c6d05e0902b20a678.png",
@@ -42,11 +44,18 @@
     "static/media/swiss.webp": "/veon_tech/static/media/swiss.25b572f31f2822744da0.webp",
     "static/media/bak1.webp": "/veon_tech/static/media/bak1.1520e9cb14514ba0ac09.webp",
     "static/media/hr-girl.jpg": "/veon_tech/static/media/hr-girl.a928a8a876445dbfc3d5.jpg",
+    "static/media/CentavrasResult.webp": "/veon_tech/static/media/CentavrasResult.67eb809584d2b57b50e2.webp",
+    "static/media/optics.webp": "/veon_tech/static/media/optics.70063742565e4d26b780.webp",
     "static/media/treaty.png": "/veon_tech/static/media/treaty.73f7ff366a3a9a88522b.png",
     "static/media/granitCompany.webp": "/veon_tech/static/media/granitCompany.bc5c7a9a7ad2a8058876.webp",
     "static/media/elephant.webp": "/veon_tech/static/media/elephant.85b589ec01b69de8d516.webp",
+    "static/media/centavrasAboutImg.webp": "/veon_tech/static/media/centavrasAboutImg.cc089b2b80b984714c25.webp",
     "static/media/palit.svg": "/veon_tech/static/media/palit.174aea86f38f550572caf04de759e2e3.svg",
     "static/media/CoolveticaBk-Regular.woff": "/veon_tech/static/media/CoolveticaBk-Regular.df4b01396f025c5bd4b6.woff",
+    "static/media/opticsAbout.webp": "/veon_tech/static/media/opticsAbout.7eba9654c3d8166346ef.webp",
+    "static/media/elepfantResult.webp": "/veon_tech/static/media/elepfantResult.08155fd87a6c4691f9ef.webp",
+    "static/media/centavras.webp": "/veon_tech/static/media/centavras.1f9c0ccda4d968684572.webp",
+    "static/media/elephantMobile.webp": "/veon_tech/static/media/elephantMobile.9738d3c4fafe55d177dc.webp",
     "static/media/CoolveticaBk-Regular.woff2": "/veon_tech/static/media/CoolveticaBk-Regular.70ac8e2ab9acc0f6c6be.woff2",
     "static/media/sale.svg": "/veon_tech/static/media/sale.56a313cee1f120e4331e25195ed82079.svg",
     "static/media/file-folder.png": "/veon_tech/static/media/file-folder.a1dcbf6b6fca971bbe26.png",
@@ -88,11 +97,11 @@
     "static/media/chevron_left.svg": "/veon_tech/static/media/chevron_left.96204af78932cc392255743e83f93f1f.svg",
     "static/media/chevron_right.svg": "/veon_tech/static/media/chevron_right.8827aabaed10ab77bfd1a575f02be46a.svg",
     "main.37979bcd.css.map": "/veon_tech/static/css/main.37979bcd.css.map",
-    "main.f5d671cb.js.map": "/veon_tech/static/js/main.f5d671cb.js.map",
+    "main.7b751d1d.js.map": "/veon_tech/static/js/main.7b751d1d.js.map",
     "787.5fb054ca.chunk.js.map": "/veon_tech/static/js/787.5fb054ca.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.37979bcd.css",
-    "static/js/main.f5d671cb.js"
+    "static/js/main.7b751d1d.js"
   ]
 }
