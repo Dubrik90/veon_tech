@@ -1,7 +1,6 @@
 import React from 'react';
 import {CaseSwissResultWrapper, ContentBlock, ImageBlock, Text, TextBlock} from './style';
-import SwissRusult from "../assets/swissResult.webp";
-import {Container} from "../../../common/style/Container";
+import SwissResoult from "../assets/swissResult.webp";
 
 export const CaseSwissResult = () => {
     return (
@@ -19,7 +18,7 @@ export const CaseSwissResult = () => {
                         ознакомиться с последними изменениями в жизни компании.
                     </Text>
                 </TextBlock>
-                <ImageBlock src={SwissRusult}></ImageBlock>
+                <ImageBlock src={SwissResoult}></ImageBlock>
             </ContentBlock>
         </CaseSwissResultWrapper>
     );

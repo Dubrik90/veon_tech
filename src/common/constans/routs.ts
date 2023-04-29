@@ -14,4 +14,5 @@ export const ROUTS = {
     CASE_SWISS: '/case/swiss',
     CASE_PARTY_INTEL: '/case/party-intel',
     CASE_PAPPY_ELEPHANT: '/case/happy-elephant',
+    CASE_OPTICS: '/case/optics',
 }

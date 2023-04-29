@@ -17,6 +17,7 @@ import {CaseGranit} from "./pages/caseGranit";
 import {CaseSwiss} from './pages/caseSwiss';
 import {CasePartyIntel} from './pages/casePartyIntel';
 import {CaseHappyElephant} from "./pages/caseHappyElephant";
+import { CaseOptics } from './pages/caseOptics';
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
                 <Route path={ROUTS.CASE_SWISS} element={<CaseSwiss/>}/>
                 <Route path={ROUTS.CASE_PARTY_INTEL} element={<CasePartyIntel/>}/>
                 <Route path={ROUTS.CASE_PAPPY_ELEPHANT} element={<CaseHappyElephant/>}/>
+                <Route path={ROUTS.CASE_OPTICS} element={<CaseOptics/>}/>
             </Route>
         </Routes>
     );
