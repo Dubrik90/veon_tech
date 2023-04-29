@@ -31,11 +31,11 @@ function App() {
                 <Route path={ROUTS.JOBS} element={<Jobs/>}/>
                 <Route path={ROUTS.NDA} element={<Nda/>}/>
                 <Route path={ROUTS.CASES} element={<Сases/>}/>
-
                 <Route path={ROUTS.SERVICES} element={<Services/>}/>
                 <Route path={ROUTS.BONUSES} element={<Bonuses/>}/>
                 <Route path={ROUTS.CONTACTS} element={<Contacts/>}/>
                 <Route path={ROUTS.POLICY} element={<Policy/>}/>
+
                 <Route path={ROUTS.CASE_GRANIT} element={<CaseGranit/>}/>
                 <Route path={ROUTS.CASE_SWISS} element={<CaseSwiss/>}/>
                 <Route path={ROUTS.CASE_PARTY_INTEL} element={<CasePartyIntel/>}/>
