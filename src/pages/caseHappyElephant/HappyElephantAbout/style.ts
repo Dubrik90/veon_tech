@@ -52,7 +52,7 @@ export const Title = styled.div`
   font-weight: 600;
   font-size: 48px;
   line-height: 1.3;
-  color: var(--colors-text-dark);
+  color: var(--color-dark);
   margin-bottom: 40px;
 
   @media (max-width: 1920px) {
@@ -64,7 +64,7 @@ export const Text = styled.p`
   font-weight: var(--fw-medium);
   font-size: 40px;
   line-height: 1.3;
-  color: var(--colors-text-dark);
+  color: var(--color-dark);
 
 
   @media (max-width: 1920px) {

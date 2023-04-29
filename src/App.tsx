@@ -37,7 +37,6 @@ function App() {
                 <Route path={ROUTS.CASE_SWISS} element={<CaseSwiss/>}/>
                 <Route path={ROUTS.CASE_PARTY_INTEL} element={<CasePartyIntel/>}/>
                 <Route path={ROUTS.CASE_PAPPY_ELEPHANT} element={<CaseHappyElephant/>}/>
-
             </Route>
         </Routes>
     );

@@ -24,7 +24,7 @@ export const casesData: CasesType = {
         {id: '5', type: 'visit', title: 'САЙТ-ВИЗИТКА', route: ROUTS.CASE_PAPPY_ELEPHANT, img: elephantVizit},
     ],
     ['sites']: [
-        {id: '3', type: 'sites', title: 'КОРПОРАТИВНЫЙ САЙТ', route: ROUTS.CASE, img: partyCorporat},
+        {id: '3', type: 'sites', title: 'КОРПОРАТИВНЫЙ САЙТ', route: ROUTS.CASE_PARTY_INTEL, img: partyCorporat},
         {id: '7', type: 'sites', title: 'КОРПОРАТИВНЫЙ САЙТ', route: ROUTS.CASE, img: mediaCorporat}
     ],
     ['catalogs']: [
@@ -36,7 +36,7 @@ export const casesData: CasesType = {
     ['all']: [
         {id: '1', type: 'magazines', title: 'ИНТЕРНЕТ-МАГАЗИН', route: ROUTS.CASE, img: rentMarket},
         {id: '2', type: 'visit', title: 'САЙТ-ВИЗИТКА', route: ROUTS.CASE, img: couchingVisit},
-        {id: '3', type: 'sites', title: 'КОРПОРАТИВНЫЙ САЙТ', route: ROUTS.CASE, img: partyCorporat},
+        {id: '3', type: 'sites', title: 'КОРПОРАТИВНЫЙ САЙТ', route: ROUTS.CASE_PARTY_INTEL, img: partyCorporat},
         {id: '4', type: 'visit', title: 'САЙТ-ВИЗИТКА', route: ROUTS.CASE_PARTY_INTEL, img: prosnowVisit},
         {id: '5', type: 'visit', title: 'САЙТ-ВИЗИТКА', route: ROUTS.CASE_PAPPY_ELEPHANT, img: elephantVizit},
         {id: '6', type: 'catalogs', title: 'ИНТЕРНЕТ-КАТАЛОГ', route: ROUTS.CASE_GRANIT, img: granitCatalog},
