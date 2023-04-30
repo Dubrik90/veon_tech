@@ -22,7 +22,7 @@ export const FilterBlock: FC<FilterBlockPropsType> = ({filter}) => {
     ]
 
     const onClickFilterHandler = (valFilter: FilterCaseType) => {
-        dispatch(setFilterCaseAC({filter: valFilter}))
+      //  dispatch(setFilterCaseAC({filter: valFilter}))
     }
 
     return (

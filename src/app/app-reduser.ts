@@ -1,5 +1,17 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {FilterCaseType} from "../common/types/types";
+import {CasesType, CaseType, FilterCaseType} from "../common/types/types";
+import {ROUTS} from "../common/constans/routs";
+import rentMarket from "../pages/cases/assets/rentMarket.png";
+import couchingVisit from "../pages/cases/assets/couchingVisit.png";
+import partyCorporat from "../pages/cases/assets/partyCorporat.png";
+import prosnowVisit from "../pages/cases/assets/prosnowVisit.png";
+import elephantVizit from "../pages/cases/assets/elephantVizit.png";
+import granitCatalog from "../pages/cases/assets/granitCatalog.png";
+import mediaCorporat from "../pages/cases/assets/mediaCorporat.png";
+import noomblistMarket from "../pages/cases/assets/noomblistMarket.png";
+import sdCatalog from "../pages/cases/assets/sdCatalog.png";
+import sodoxCatalog from "../pages/cases/assets/sodoxCatalog.png";
+import wellCatalog from "../pages/cases/assets/wellCatalog.png";
 
 const initialState: InitialStateStateType = {
     theme: 'light',
@@ -11,7 +23,20 @@ const initialState: InitialStateStateType = {
     isOpenBonuseForm: false,
     isMenuOpen: false,
     isConsultantModalOpen: false,
-    filterCase: 'all',
+    filterCase: [],
+    cases: [
+        {id: '1', type: 'magazines', title: 'Интернет-магазины', route: ROUTS.CASE_RENT_CLUB, img: rentMarket},
+        {id: '2', type: 'visit', title: 'Сайт-визитки', route: ROUTS.CASE_CENTAVRAS, img: couchingVisit},
+        {id: '3', type: 'sites', title: 'Корпоративные сайты', route: ROUTS.CASE_PARTY_INTEL, img: partyCorporat},
+        {id: '4', type: 'visit', title: 'Сайт-визитки', route: ROUTS.CASE_OPTICS, img: prosnowVisit},
+        {id: '5', type: 'visit', title: 'Сайт-визитки', route: ROUTS.CASE_PAPPY_ELEPHANT, img: elephantVizit},
+        {id: '6', type: 'catalogs', title: 'Интеренет-каталоги', route: ROUTS.CASE_GRANIT, img: granitCatalog},
+        {id: '7', type: 'sites', title: 'Корпоративные сайты', route: ROUTS.CASE_RENT_CLUB, img: mediaCorporat},
+        {id: '8', type: 'magazines', title: 'Интернет-магазины', route: ROUTS.CASE_RENT_CLUB, img: noomblistMarket},
+        {id: '9', type: 'catalogs', title: 'Интеренет-каталоги', route: ROUTS.CASE_RENT_CLUB, img: sdCatalog},
+        {id: '10', type: 'catalogs', title: 'Интеренет-каталоги', route: ROUTS.CASE_RENT_CLUB, img: sodoxCatalog},
+        {id: '11', type: 'catalogs', title: 'Интеренет-каталоги', route: ROUTS.CASE_SWISS, img: wellCatalog},
+    ],
 
     status: 'loading',
     error: null
@@ -37,7 +62,8 @@ const slice = createSlice({
         setIsConsultantModalOpenAC(state, action: PayloadAction<{ isOpen: boolean }>) {
             state.isConsultantModalOpen = action.payload.isOpen
         },
-        setFilterCaseAC(state, action: PayloadAction<{ filter: FilterCaseType }>) {
+        setFilterCaseAC(state, action: PayloadAction<{ filter: string[] }>) {
+         //   console.log(action.payload.filter)
             state.filterCase = action.payload.filter
         },
         setIsOpenBonuseFormAC(state, action: PayloadAction<{ isOpen: boolean }>) {
@@ -73,9 +99,8 @@ type InitialStateStateType = {
     theme: ThemeType,
     isModalWindowOpen: boolean,
     isConsultantModalOpen: boolean,
-    filterCase: FilterCaseType
-
-
+    filterCase: string[],
+    cases: CaseType[]
 }
 export type RequestStatusType = 'idle' | 'loading' | 'error'
 export type ThemeType = 'light' | 'dark'

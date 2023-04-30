@@ -14,14 +14,14 @@ import {
 } from './style';
 import {Container} from "../../../common/style/Container";
 import {casesData} from "../../app/data";
-import {FilterCaseType} from "../../../common/types/types";
+import {CaseType, FilterCaseType} from "../../../common/types/types";
 import {Link} from "react-router-dom";
 import {CasesSlider} from '../sliderCase';
 import gsap from 'gsap'
 
 
 type CaseBlockPropsType = {
-    filter: FilterCaseType
+    filter: CaseType[]
 }
 
 export const CaseBlock: FC<CaseBlockPropsType> = ({filter}) => {
@@ -55,7 +55,7 @@ export const CaseBlock: FC<CaseBlockPropsType> = ({filter}) => {
             <Container>
                 <CaseContent ref={el}>
                     {
-                        casesData[filter].map((el) => {
+                        filter.map((el) => {
                             return (
                                 <React.Fragment key={el.id}>
                                     <Content showMore={showMore} className='case'>
@@ -73,9 +73,9 @@ export const CaseBlock: FC<CaseBlockPropsType> = ({filter}) => {
                         })
                     }
                 </CaseContent>
-                <CasesSlider/>
+                <CasesSlider filter={filter}/>
                 {
-                    casesData[filter].length > 10 &&
+                    filter.length > 10 &&
                     <ButtonBlock showMore={showMore} onClick={onClickShowMoreHandler}>
                         <Button>Продолжить</Button>
                         <ArrowIcon/>

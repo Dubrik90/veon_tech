@@ -2,6 +2,9 @@ import React, {useState} from 'react';
 import {Button, FilterCaseWrapper} from './style';
 import {Container} from '../../../common/style/Container';
 import styled from 'styled-components';
+import {casesData} from "../../app/data";
+import {setFilterCaseAC} from "../../../app/app-reduser";
+import {useAppDispatch} from "../../../common/hook";
 
 interface MyFormValues {
     category: string;
@@ -10,7 +13,7 @@ interface MyFormValues {
 }
 
 interface FilterProps {
-   // options: string[];
+    // options: string[];
     // applyFilter: (selectedOptions: string[]) => void;
 }
 
@@ -105,11 +108,17 @@ const Ul = styled.ul`
 `;
 
 export const FilterCase: React.FC<FilterProps> = ({}) => {
+    const dispatch = useAppDispatch()
     const [activeGroup, setActiveGroup] = useState<string | null>(null);
 
     // const [res, setRes] = useState<string[]>([])
     const [selectedOptions, setSelectedOptions] = React.useState<string[]>([]);
-    console.log(selectedOptions)
+
+
+    // const filterResultArr = casesData['all'].filter(el => {
+    //     return res.includes(el.title)
+    // })
+   // console.log(filterResultArr)
 
     const handleOptionChange = (option: string) => {
         setSelectedOptions((prevSelectedOptions) =>
@@ -120,7 +129,8 @@ export const FilterCase: React.FC<FilterProps> = ({}) => {
     };
 
     const handleApplyClick = () => {
-        //  setRes(selectedOptions);
+        dispatch(setFilterCaseAC({filter: selectedOptions}))
+        //setRes(selectedOptions);
         setActiveGroup(null)
     };
 
@@ -131,7 +141,8 @@ export const FilterCase: React.FC<FilterProps> = ({}) => {
         {
             id: '0',
             filterName: 'Категории',
-            filterCategories: ['Интернет-магазины', 'B2B', 'Сайты', 'Приложения', 'Интеграции', 'Битрикс24', 'Техподдержка', 'Дизайн-концепция', 'Готовые решения',]
+            type: ['magazines', 'catalogs', 'sites', 'visit'],
+            filterCategories: ['Интернет-магазины', 'Интеренет-каталоги', 'Корпоративные сайты', 'Сайт-визитки']
         },
         {
             id: '1',
