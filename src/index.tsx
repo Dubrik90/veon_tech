@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import GlobalStyles from './common/style/global';
 import {Provider} from "react-redux";
 import {store} from "./app/store";
-import { HashRouter } from 'react-router-dom';
+import {BrowserRouter, HashRouter} from 'react-router-dom';
 
 
 const root = ReactDOM.createRoot(
@@ -15,9 +15,9 @@ const root = ReactDOM.createRoot(
 root.render(
     <Provider store={store}>
         <GlobalStyles/>
-        <HashRouter>
+        <BrowserRouter>
             <App/>
-        </HashRouter>
+        </BrowserRouter>
     </Provider>
 );
 
