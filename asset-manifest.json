@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/veon_tech/static/css/main.37979bcd.css",
-    "main.js": "/veon_tech/static/js/main.108c990d.js",
+    "main.js": "/veon_tech/static/js/main.860a6c02.js",
     "static/js/787.5fb054ca.chunk.js": "/veon_tech/static/js/787.5fb054ca.chunk.js",
     "static/media/swissImg1.png": "/veon_tech/static/media/swissImg1.79598e747c9fdf1546f4.png",
     "static/media/LogoLightN.svg": "/veon_tech/static/media/LogoLightN.bd559b707a3b93e22ad040476030dd03.svg",
@@ -22,6 +22,7 @@
     "static/media/swissResult.webp": "/veon_tech/static/media/swissResult.fe823a40a3396b4c8496.webp",
     "static/media/image2.png": "/veon_tech/static/media/image2.bcc7af2631d75670a1ac.png",
     "static/media/elephantVizit.webp": "/veon_tech/static/media/elephantVizit.4480dfc3cac8e3c9ae40.webp",
+    "static/media/bak2.webp": "/veon_tech/static/media/bak2.4414d18207e4eb35fa76.webp",
     "static/media/opticsResult.webp": "/veon_tech/static/media/opticsResult.1db27fc6511b93caa82a.webp",
     "static/media/elephantAbutImage.webp": "/veon_tech/static/media/elephantAbutImage.d39407cf2b446e793e24.webp",
     "static/media/CentavrasDescImg.webp": "/veon_tech/static/media/CentavrasDescImg.05ef3e59a5f3f4ebfb27.webp",
@@ -100,11 +101,11 @@
     "static/media/chevron_left.svg": "/veon_tech/static/media/chevron_left.96204af78932cc392255743e83f93f1f.svg",
     "static/media/chevron_right.svg": "/veon_tech/static/media/chevron_right.8827aabaed10ab77bfd1a575f02be46a.svg",
     "main.37979bcd.css.map": "/veon_tech/static/css/main.37979bcd.css.map",
-    "main.108c990d.js.map": "/veon_tech/static/js/main.108c990d.js.map",
+    "main.860a6c02.js.map": "/veon_tech/static/js/main.860a6c02.js.map",
     "787.5fb054ca.chunk.js.map": "/veon_tech/static/js/787.5fb054ca.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.37979bcd.css",
-    "static/js/main.108c990d.js"
+    "static/js/main.860a6c02.js"
   ]
 }
