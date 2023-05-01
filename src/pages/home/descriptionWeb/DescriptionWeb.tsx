@@ -151,13 +151,13 @@ export const DescriptionWeb: FC<DescriptionWebProps> = ({descriptionWeb}) => {
     return (
         <DescriptionWebWrapper ref={descriptionWeb} >
             <Container>
+                <Title className='animate'>
+                    <p>Разработка проектов</p>
+                    <p><span>highload-класса</span>  по scrum</p>
+                    <p>- И в этом мы сильны</p>
+                </Title>
                 <DescriptionWebContent>
                     <DescriptionWebBlock>
-                        <Title className='animate'>
-                            <p>Разработка проектов</p>
-                            <span>highload-класса по scrum</span>
-                            <p>- И в этом мы сильны</p>
-                        </Title>
                         <AboutText className={'animate'}>
                             <span>VEON-TECH</span> — это профессиональный разработчик, веб-сервисов, интернет-порталов и сайтов любой направленности. Также компания, которая оказывает услуги по поисковому продвижению и управлению репутацией в интернете.
                         </AboutText>

@@ -69,7 +69,7 @@ export const Title = styled.h2`
     font-size: 18px;
   }
 
-  span {
+  p span {
     color: var(--colors-text-green)
   }
 
