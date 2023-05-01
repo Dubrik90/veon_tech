@@ -50,6 +50,12 @@ export const Title = styled.h2`
       height: 12px;
       background-color: #5DB447;
     }
+
+    @media (max-width: 394px) {
+     :before {
+       width: 0;
+     }
+    }
     
   }
   
