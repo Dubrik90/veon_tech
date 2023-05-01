@@ -12,10 +12,10 @@ type SwitchProps = {
 export const Switch: FC<SwitchProps> = ({theme, onClick}) => {
 
     return (
-        <SwitchWrapper theme={theme} onClick={onClick}>
+        <SwitchWrapper  theme={theme} onClick={onClick}>
             <img src={Moon} alt=""/>
             <img src={Sun} alt=""/>
-            <span></span>
+            <span className={'switch'}></span>
         </SwitchWrapper>
     );
 };

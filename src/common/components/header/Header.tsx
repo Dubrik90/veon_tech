@@ -8,7 +8,7 @@ import LogoMobileDark from './assets/logoMobileDark.png';
 import LogoMobileWhite from './assets/logoMobileWhite.png';
 import {Menu} from "../menu";
 import {useAppDispatch, useAppSelector} from "../../hook";
-import {Link} from "react-router-dom";
+import {Link, useLocation, useParams, useRoutes} from "react-router-dom";
 import {ROUTS} from "../../constans/routs";
 import gsap from "gsap";
 import {setIsOpenBurgerAC, setThemeAC} from "../../../app/app-reduser";
@@ -17,18 +17,22 @@ import LogoDark from './assets/LogoDarkN.svg'
 
 
 export const Header = () => {
+    const location = useLocation();
+    console.log(location.pathname)
+
+
     const dispatch = useAppDispatch()
     const theme = useAppSelector(state => state.app.theme)
     const isOpenBurger = useAppSelector(state => state.app.isOpenBurger)
     const [blockScroll, allowScroll] = useScrollBlock();
 
     const onClickOpenBurger = () => {
-        if(!isOpenBurger) {
+        if (!isOpenBurger) {
             blockScroll()
         }
 
         dispatch(setIsOpenBurgerAC({isOpen: !isOpenBurger}))
-        if(isOpenBurger) {
+        if (isOpenBurger) {
             allowScroll()
         }
     }
@@ -44,16 +48,41 @@ export const Header = () => {
         allowScroll()
         dispatch(setIsOpenBurgerAC({isOpen: false}))
     }
+    const switchElement = document.querySelector('.switch');
+
+    const validPaths = ['/case/happy-elephant', '/case/optics', '/case/swiss', '/case/granit-company', '/case/party-intel', '/case/centavras', '/case/rent-club'];
 
     const toggleTheme = () => {
-        if (theme === 'light') {
+        if (validPaths.includes(location.pathname)) {
+            const anim = gsap.fromTo(
+                switchElement,
+                {
+                    left: 31,
+                },
+                {
+                    left: 0,
+                    onComplete: () => {
+                        // Удаляем стили анимации после ее выполнения
+                        gsap.set(switchElement, {clearProps: 'all'});
+                    },
+                }
+            ).repeat(1)
+                .yoyo(true);
+            return
+        } else if (theme === 'light') {
             dispatch(setThemeAC({theme: 'dark'}))
         } else dispatch(setThemeAC({theme: 'light'}))
+
+        // if (theme === 'light') {
+        //     dispatch(setThemeAC({theme: 'dark'}))
+        // } else dispatch(setThemeAC({theme: 'light'}))
     }
 
     useEffect(() => {
         document.body.setAttribute('data-theme', theme);
     }, [theme]);
+
+
 
     useEffect(() => {
         let headerTint = gsap.utils.toArray('.header-tint')
@@ -80,7 +109,7 @@ export const Header = () => {
         <>
             <HeaderWrapper className={'header'}>
                 <Container>
-                    <HeaderContent >
+                    <HeaderContent>
                         <Link to={ROUTS.HOME} onClick={onClickUpHandler}>
                             <img src={theme === 'light' ? LogoLight : LogoDark} alt=""/>
                             {/*<ImgWrapDesctop img={theme === 'light' ? LogoLight : LogoDark}/>*/}

@@ -20,6 +20,7 @@ import {CaseHappyElephant} from "./pages/caseHappyElephant";
 import { CaseOptics } from './pages/caseOptics';
 import {CaseCentavras} from "./pages/caseCentavras";
 import {CaseRentClub} from "./pages/caseRentClub";
+import {caseDataArray} from "./pages/case/app/data";
 
 function App() {
 
@@ -42,7 +43,10 @@ function App() {
                 <Route path={ROUTS.CASE_PAPPY_ELEPHANT} element={<CaseHappyElephant/>}/>
                 <Route path={ROUTS.CASE_OPTICS} element={<CaseOptics/>}/>
                 <Route path={ROUTS.CASE_CENTAVRAS} element={<CaseCentavras/>}/>
-                <Route path={ROUTS.CASE_RENT_CLUB} element={<Case/>}/>
+                <Route path={ROUTS.CASE_RENT_CLUB} element={<Case caseData={caseDataArray[3]}/>}/>
+                <Route path={ROUTS.CASE_SODOX} element={<Case caseData={caseDataArray[2]}/>}/>
+                <Route path={ROUTS.CASE_ART_MEDIA} element={<Case caseData={caseDataArray[1]}/>}/>
+
                 {/*<Route path={ROUTS.CASE_RENT_CLUB} element={<CaseRentClub/>}/>*/}
 
             </Route>

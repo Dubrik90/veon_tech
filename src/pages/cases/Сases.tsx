@@ -11,7 +11,6 @@ export const Сases = () => {
 
     const casesArray = useAppSelector(state => state.app.cases)
     const filterCase = useAppSelector(state => state.app.filterCase)
-    console.log(filterCase)
 
     const filterResultArr = casesArray.filter(el => {
         if(filterCase.length === 0) {

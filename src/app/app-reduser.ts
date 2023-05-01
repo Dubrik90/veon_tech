@@ -85,7 +85,7 @@ const initialState: InitialStateStateType = {
             desk: 'Тот самый дизайн, который отличает от других!',
             country: 'Беларусь',
             route: ROUTS.CASE_GRANIT,
-            color: '',
+            color: 'wight',
             img: ural
         },
         {

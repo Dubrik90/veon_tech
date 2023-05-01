@@ -50,7 +50,6 @@ export const CaseBlock: FC<CaseBlockPropsType> = ({filter}) => {
     //     )
     // }, [filter])
 
-    console.log(filter.length)
 
     return (
         <CaseBlockWrapper>

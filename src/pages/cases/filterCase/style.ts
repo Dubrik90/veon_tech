@@ -5,7 +5,8 @@ import {flexColumn} from "../../../common/style/mixin";
 export const FilterCaseWrapper = styled.div`
   .filter__form {
     display: flex;
-    width: 90%
+    width: 90%;
+    z-index: 50;
   }
 
   .filter__block {

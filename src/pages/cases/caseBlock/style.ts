@@ -19,6 +19,10 @@ export const CaseContent = styled.div`
   grid-column-gap: 30px;
   grid-row-gap: 30px;
 
+  @media (max-width: 1439px) {
+    ${flexColumn()}
+  }
+
   div:nth-child(1) {
     grid-area: 1 / 1 / 2 / 6;
   }
@@ -99,7 +103,11 @@ export const ButtonBlock = styled.div<ButtonBlockProps>`
   margin: 0 auto 20px auto;
   transition: all 0.3s;
   cursor: pointer;
-  margin-top: 40px ;
+  margin-top: 40px;
+  
+  span {
+    color: var(--colors-text-dark);
+  }
 
 
   :hover {
@@ -182,7 +190,7 @@ export const HiddenBlock = styled.div`
 `
 export const Title = styled(TitleH4)`
   // color: var(--color-grey-light);
-  z-index: 50;
+  z-index: 1;
   font-size: 24px;
   line-height: 29px;
   font-weight: var(--fw-regular);
@@ -192,8 +200,8 @@ export const Title = styled(TitleH4)`
     color: #fff;
   }
 
-  @media (max-width: 1024px) {
-    // font-size: 18px;
+  @media (max-width: 1920px) {
+    font-size: calc(14px + (32 - 14) * ((100vw - 320px) / (1920 - 320)));
   }
 
 `
@@ -210,8 +218,8 @@ export const Text = styled.p`
     color: #fff;
   }
 
-  @media (max-width: 1024px) {
-    // font-size: 14px;
+  @media (max-width: 1920px) {
+    font-size: calc(14px + (32 - 14) * ((100vw - 320px) / (1920 - 320)));
   }
 `
 
@@ -292,6 +300,11 @@ export const Img = styled.img`
   object-fit: cover;
   border-radius: 15px;
   transition: all 0.3s;
+
+  @media (max-width: 1439px) {
+    width: 100%;
+    height: calc(350px + (632 - 350) * ((100vw - 320px) / (1439 - 320)));
+  }
 
 `
 
