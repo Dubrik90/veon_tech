@@ -49,8 +49,8 @@ export const  ContactUsServise = () => {
                 </LineBlock>
                 <TitleBottom>ВОЗМОЖНО, ВАС ЗАИНТЕРЕСУЮТ</TitleBottom>
                 <LinksBottomBlock>
-                    <ButtonBottom className='animate' onClick={onClickFormModalHandler}>SEO</ButtonBottom>
-                    <ButtonBottom className='animate' onClick={onClickFormModalHandler}>ВЕБ-АНАЛИТИКА</ButtonBottom>
+                    <ButtonBottom className='animate' onClick={onClickFormModalHandler}>ПОДДЕРЖКА САЙТОВ</ButtonBottom>
+                    <ButtonBottom className='animate' onClick={onClickFormModalHandler}>ДИЗАЙН</ButtonBottom>
                 </LinksBottomBlock>
             </Container>
         </ContactUsServiseWrapper>

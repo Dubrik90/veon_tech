@@ -10,6 +10,7 @@ import {
     Img,
     ImgBlock,
     Text,
+    TextDesk,
     Title
 } from './style';
 import {Container} from "../../../common/style/Container";
@@ -34,20 +35,20 @@ export const CaseBlock: FC<CaseBlockPropsType> = ({filter}) => {
     }
 
 
-    useEffect(() => {
-        gsap.fromTo(
-            q('.case'),
-            {
-                opacity: 0
-            },
-            {
-                opacity: 1,
-                // продолжительность анимации
-                duration: 1,
-                stagger: 0.33
-            }
-        )
-    }, [filter])
+    // useEffect(() => {
+    //     gsap.fromTo(
+    //         q('.case'),
+    //         {
+    //             opacity: 0
+    //         },
+    //         {
+    //             opacity: 1,
+    //             // продолжительность анимации
+    //             duration: 1,
+    //             stagger: 0.33
+    //         }
+    //     )
+    // }, [filter])
 
     console.log(filter.length)
 
@@ -60,36 +61,33 @@ export const CaseBlock: FC<CaseBlockPropsType> = ({filter}) => {
                             return (
                                 <React.Fragment key={el.id}>
                                     <Content showMore={showMore} className='case'>
-                                        <ImgBlock>
-                                            <Img src={el.img} alt="case image"/>
-                                        </ImgBlock>
-                                        <HiddenBlock>
-                                            <Title>{el.title}</Title>
-                                            <Text>Какой-то текст описания кейса</Text>
-                                            <Link to={el.route}>Подробнее</Link>
-                                        </HiddenBlock>
+                                        <Link to={el.route}>
+                                            <ImgBlock>
+                                                <Img src={el.img} alt="case image"/>
+                                            </ImgBlock>
+                                            <HiddenBlock className={el.color === 'wight' ? 'wight' : ''}>
+                                                <div>
+                                                    <Title>{el.name}</Title>
+                                                    <Text>{el.about}</Text>
+                                                    <Title>{el.desk}</Title>
+                                                    {/*<Link to={el.route}>Подробнее</Link>*/}
+                                                </div>
+                                            </HiddenBlock>
+                                        </Link>
                                     </Content>
                                 </React.Fragment>
                             )
                         })
                     }
-                    {
-                        // filter.length < 10 &&
-                        // <ButtonBlock showMore={showMore} onClick={onClickShowMoreHandler}>
-                            <Content showMore={showMore} className='case' onClick={onClickShowMoreHandler}>
-                                <ImgBlock>
-                                    {/*<Img src={el.img} alt="case image"/>*/}
-                                </ImgBlock>
-                                <HiddenBlock>
-                                    <Title>стрелка</Title>
-                                    <Text>Какой-то текст описания кейса</Text>
-                                    {/*<Link to={el.route}>Подробнее</Link>*/}
-                                </HiddenBlock>
-                            </Content>
-                        // </ButtonBlock>
-                    }
-
                 </CaseContent>
+
+                {
+                    filter.length < 12 &&
+                    <ButtonBlock showMore={showMore} onClick={onClickShowMoreHandler}>
+                        <span>Показать еще</span>
+                        <ArrowIcon/>
+                    </ButtonBlock>
+                }
                 <CasesSlider filter={filter}/>
 
             </Container>

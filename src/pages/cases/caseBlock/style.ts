@@ -5,8 +5,8 @@ import {TitleH4} from "../../../common/style/global";
 
 export const CaseBlockWrapper = styled.div`
   padding-top: 80px;
-  padding-bottom: 80px;
-    
+  padding-bottom: 40px;
+
 `
 
 export const CaseContent = styled.div`
@@ -15,35 +15,36 @@ export const CaseContent = styled.div`
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+//  grid-template-rows: repeat(6, 1fr);
   grid-column-gap: 30px;
   grid-row-gap: 30px;
 
   div:nth-child(1) {
+    grid-area: 1 / 1 / 2 / 6;
   }
 
   div:nth-child(2) {
-    grid-area: 1 / 1 / 2 / 4;
-  }
-
-  div:nth-child(3) {
     grid-area: 2 / 1 / 3 / 2;
   }
 
-  div:nth-child(4) {
+  div:nth-child(3) {
     grid-area: 2 / 2 / 3 / 4;
   }
 
-  div:nth-child(5) {
+  div:nth-child(4) {
     grid-area: 3 / 3 / 4 / 4;
   }
 
-  div:nth-child(6) {
+  div:nth-child(5) {
     grid-area: 3 / 1 / 4 / 3;
   }
 
-  div:nth-child(7) {
+  div:nth-child(6) {
     grid-area: 4 / 1 / 5 / 4;
+  }
+
+  div:nth-child(7) {
+    grid-area: 5 / 1 / 6 / 2;
   }
 
   div:nth-child(8) {
@@ -92,11 +93,13 @@ export const ButtonBlock = styled.div<ButtonBlockProps>`
   background: var(--colors-bg);
   border: 1px solid var(--colors-bg-green);
   border-radius: 10px;
+  font-size: 24px;
   padding: 8px 10px;
   max-width: 300px;
   margin: 0 auto 20px auto;
   transition: all 0.3s;
   cursor: pointer;
+  margin-top: 40px ;
 
 
   :hover {
@@ -116,22 +119,49 @@ export const ArrowIcon = styled(KeyboardDoubleArrowDownIcon)`
 `
 
 export const HiddenBlock = styled.div`
-  ${flexColumn()};
+
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 10px;
+  left: 30px;
+
+
   width: 100%;
   height: 100%;
   // background-color: var(--colors-text-green);
   opacity: 1;
-//  visibility: hidden;
+  //  visibility: hidden;
   border-radius: 17px;
   transition: all 0.3s;
-  align-items: center;
-  justify-content: center;
-  row-gap: 20px;
+
+
   // scale: 0;
   // backdrop-filter: blur(5px);
+
+  :hover {
+
+  }
+
+  div {
+    ${flexColumn()};
+    align-items: flex-start;
+    justify-content: flex-start;
+    row-gap: 10px;
+    position: relative;
+    padding: 10px 20px;
+
+
+    //:before {
+    //  content: '';
+    //  position: absolute;
+    //  opacity: 0.5;
+    //  top: 0;
+    //  left: 0;
+    //  width: 100%;
+    //  height: 200px;
+    //  background-color: #d3e3ec;
+    //}
+  }
+
 
   a {
     display: inline-flex;
@@ -151,20 +181,37 @@ export const HiddenBlock = styled.div`
   }
 `
 export const Title = styled(TitleH4)`
-  color: var(--color-grey-light);
+  // color: var(--color-grey-light);
   z-index: 50;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: var(--fw-regular);
+  color: #000000;
+
+  .wight & {
+    color: #fff;
+  }
 
   @media (max-width: 1024px) {
-    font-size: 18px;
+    // font-size: 18px;
   }
 
 `
+export const TextDesk = styled.p`
+
+`
 export const Text = styled.p`
-  font-size: 16px;
+  font-weight: 700;
+  font-size: 32px;
+  color: #000000;
   line-height: 1.1;
-  color: var(--color-grey-light);
+
+  .wight & {
+    color: #fff;
+  }
+
   @media (max-width: 1024px) {
-    font-size: 14px;
+    // font-size: 14px;
   }
 `
 
@@ -176,15 +223,12 @@ type ContentProps = {
     showMore: boolean
 }
 export const Content = styled.div<ContentProps>`
-
-
-
-
-
-
-
-
-
+  transition: all 0.3s;
+  
+  :hover {
+      transition: all 0.3s;
+      scale: 1.03;
+  }
 
 
   position: relative;
@@ -195,10 +239,11 @@ export const Content = styled.div<ContentProps>`
   //
   //
   //
-  :nth-child(n + 10) {
-      ${({showMore}) => showMore ? 'display: block' : 'display: none'}
+  :nth-child(n + 9) {
+    ${({showMore}) => showMore ? 'display: block' : 'display: none'}
 
   }
+
   //
   // @media (max-width: 1440px) {
   //   max-width: 400px;
@@ -207,7 +252,7 @@ export const Content = styled.div<ContentProps>`
   //   max-width: 290px;
   // }
   :before {
-    background: #000;
+    //  background: #000;
     border-radius: 10px;
     opacity: 1;
     //   visibility: hidden;
@@ -242,10 +287,11 @@ export const Content = styled.div<ContentProps>`
 `
 
 export const Img = styled.img`
-  width: 100%;
-  height: 480px;
+  max-width: 1860px;
+  height: 632px;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 15px;
+  transition: all 0.3s;
 
 `
 

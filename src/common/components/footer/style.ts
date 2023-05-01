@@ -48,6 +48,10 @@ export const FooterIcons = styled.div`
   flex-wrap: wrap;
   column-gap: 12px;
   
+  svg {
+  //  width: 66px;
+  }
+  
   @media (max-width: 1227px) {
     align-self: center;
     column-gap: 20px;

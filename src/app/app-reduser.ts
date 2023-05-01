@@ -1,17 +1,17 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {CasesType, CaseType, FilterCaseType} from "../common/types/types";
 import {ROUTS} from "../common/constans/routs";
-import rentMarket from "../pages/cases/assets/rentMarket.png";
+import rent from "../pages/cases/assets/rent.webp";
 import couchingVisit from "../pages/cases/assets/couchingVisit.png";
-import partyCorporat from "../pages/cases/assets/partyCorporat.png";
-import prosnowVisit from "../pages/cases/assets/prosnowVisit.png";
-import elephantVizit from "../pages/cases/assets/elephantVizit.png";
-import granitCatalog from "../pages/cases/assets/granitCatalog.png";
-import mediaCorporat from "../pages/cases/assets/mediaCorporat.png";
-import noomblistMarket from "../pages/cases/assets/noomblistMarket.png";
-import sdCatalog from "../pages/cases/assets/sdCatalog.png";
-import sodoxCatalog from "../pages/cases/assets/sodoxCatalog.png";
-import wellCatalog from "../pages/cases/assets/wellCatalog.png";
+import optics from "../pages/cases/assets/optics.webp";
+import swiss from "../pages/cases/assets/wiss.webp";
+import elephantVizit from "../pages/cases/assets/elephantVizit.webp";
+import ural from "../pages/cases/assets/ural.webp";
+import party from "../pages/cases/assets/party.webp";
+import kentavr from "../pages/cases/assets/kentavr.webp";
+import artMedia from "../pages/cases/assets/artMedia.webp";
+import sodox from "../pages/cases/assets/sodox.webp";
+import sinaradesign from "../pages/cases/assets/sinaradesign.webp";
 
 const initialState: InitialStateStateType = {
     theme: 'light',
@@ -25,17 +25,142 @@ const initialState: InitialStateStateType = {
     isConsultantModalOpen: false,
     filterCase: [],
     cases: [
-        {id: '1', type: 'magazines', title: 'Интернет-магазины', country: 'Беларусь',  route: ROUTS.CASE_RENT_CLUB, img: rentMarket},
-        {id: '2', type: 'visit', title: 'Сайт-визитки', country: 'Беларусь', route: ROUTS.CASE_CENTAVRAS, img: couchingVisit},
-        {id: '3', type: 'sites', title: 'Корпоративные сайты', country: 'Россия', route: ROUTS.CASE_PARTY_INTEL, img: partyCorporat},
-        {id: '4', type: 'visit', title: 'Сайт-визитки',country: 'Россия', route: ROUTS.CASE_OPTICS, img: prosnowVisit},
-        {id: '5', type: 'visit', title: 'Сайт-визитки',country: 'Беларусь', route: ROUTS.CASE_PAPPY_ELEPHANT, img: elephantVizit},
-        {id: '6', type: 'catalogs', title: 'Интеренет-каталоги',country: 'Европа', route: ROUTS.CASE_GRANIT, img: granitCatalog},
-        {id: '7', type: 'sites', title: 'Корпоративные сайты',country: 'Европа', route: ROUTS.CASE_RENT_CLUB, img: mediaCorporat},
-        {id: '8', type: 'magazines', title: 'Интернет-магазины',country: 'Европа', route: ROUTS.CASE_RENT_CLUB, img: noomblistMarket},
-        {id: '9', type: 'catalogs', title: 'Интеренет-каталоги',country: 'Беларусь', route: ROUTS.CASE_RENT_CLUB, img: sdCatalog},
-        {id: '10', type: 'catalogs', title: 'Интеренет-каталоги',country: 'Беларусь', route: ROUTS.CASE_RENT_CLUB, img: sodoxCatalog},
-        {id: '11', type: 'catalogs', title: 'Интеренет-каталоги',country: 'США', route: ROUTS.CASE_SWISS, img: wellCatalog},
+        {
+            id: '1',
+            type: 'visit',
+            title: 'Счастливый слон',
+            name: 'Счастливый слон',
+            about: 'Разработка календаря бронирования',
+            country: 'Беларусь',
+            color: '',
+            desk: 'Сайт для корректного отображения на всех устройствах!',
+            route: ROUTS.CASE_PAPPY_ELEPHANT,
+            img: elephantVizit
+        },
+        {
+            id: '2',
+            type: 'sites',
+            title: 'Корпоративные сайты',
+            name: 'Коннектор Оптикс',
+            about: 'Разработка корпоративного сайта',
+            desk: '',
+            country: 'Россия',
+            color: 'wight',
+            route: ROUTS.CASE_OPTICS,
+            img: optics
+        },
+        {
+            id: '3',
+            type: 'visit',
+            title: 'Сайт-визитки',
+            name: ' B.Well Swiss',
+            about: 'Редизайн интернет-каталога',
+            desk: 'Простое и понятное решение, которое помогает!',
+            country: 'Россия',
+            route: ROUTS.CASE_SWISS,
+            color: '',
+            img: swiss
+        },
+
+        {
+            id: '4',
+            type: 'visit',
+            title: 'Сайт-визитки',
+            name: 'LLC "PartyIntel"',
+            about: 'Cервис поиска услуг',
+            desk: '',
+            country: 'Беларусь',
+            route: ROUTS.CASE_PARTY_INTEL,
+            color: 'wight',
+            img: party
+        },
+
+
+        {
+            id: '5',
+            type: 'magazines',
+            title: 'Интернет-магазины',
+            name: 'Уральская гранитная компания',
+            about: 'Создание сайта-каталога',
+            desk: 'Тот самый дизайн, который отличает от других!',
+            country: 'Беларусь',
+            route: ROUTS.CASE_GRANIT,
+            color: '',
+            img: ural
+        },
+        {
+            id: '6',
+            type: 'catalogs',
+            title: 'Интеренет-каталоги',
+            name: 'Centavras Kft',
+            about: 'Разработка корпоративного сайта',
+            desk: 'Делаем в кротчайшие срок и учитываем желания!',
+            country: 'Европа',
+            route: ROUTS.CASE_CENTAVRAS,
+            color: '',
+            img: kentavr
+        },
+        {
+            id: '7',
+            type: 'sites',
+            title: 'Корпоративные сайты',
+            name: 'ArtDoc.media',
+            about: 'Разработка онлайн сервиса',
+            desk: '',
+            country: 'Европа',
+            route: ROUTS.CASE_RENT_CLUB,
+            color: '',
+            img: artMedia
+        },
+        {
+            id: '8',
+            type: 'magazines',
+            title: 'Интернет-магазины',
+            name: 'ООО "Содокс Пром"',
+            about: 'Создание сайта-каталога',
+            desk: 'Создание современного сайта, с которым можно выделиться!',
+            country: 'Европа',
+            route: ROUTS.CASE_RENT_CLUB,
+            color: '',
+            img: sodox
+        },
+        {
+            id: '9',
+            type: 'catalogs',
+            title: 'Интеренет-каталоги',
+            name: 'ООО "Sinaradesign"',
+            about: 'Разработка сайта каталога',
+            desk: 'Уникальный дизайн удовлетворяющий современные тенденции!',
+            country: 'Беларусь',
+            route: ROUTS.CASE_RENT_CLUB,
+            color: '',
+            img: sinaradesign
+        },
+        {
+            id: '10',
+            type: 'catalogs',
+            title: 'Интеренет-каталоги',
+            name: 'ООО "Рент клаб"',
+            about: 'Создание маркетплейса',
+            desk: '',
+            country: 'Беларусь',
+            route: ROUTS.CASE_RENT_CLUB,
+            color: '',
+            img: rent
+        },
+        // {
+        //     id: '11',
+        //     type: 'catalogs',
+        //     title: 'Интеренет-каталоги',
+        //     name: '',
+        //     about: '',
+        //     desk: '',
+        //     country: 'США',
+        //     route: ROUTS.CASE_SWISS,
+        //     color: '',
+        //     img: ''
+        // },
+
     ],
 
     status: 'loading',
@@ -63,7 +188,7 @@ const slice = createSlice({
             state.isConsultantModalOpen = action.payload.isOpen
         },
         setFilterCaseAC(state, action: PayloadAction<{ filter: string[] }>) {
-         //   console.log(action.payload.filter)
+            //   console.log(action.payload.filter)
             state.filterCase = action.payload.filter
         },
         setIsOpenBonuseFormAC(state, action: PayloadAction<{ isOpen: boolean }>) {
