@@ -19,7 +19,7 @@ export const CaseContent = styled.div`
   grid-column-gap: 30px;
   grid-row-gap: 30px;
 
-  @media (max-width: 1439px) {
+  @media (max-width: 1023px) {
     ${flexColumn()}
   }
 
@@ -303,7 +303,7 @@ export const Img = styled.img`
 
   @media (max-width: 1439px) {
     width: 100%;
-    height: calc(350px + (632 - 350) * ((100vw - 320px) / (1439 - 320)));
+    height: calc(280px + (632 - 280) * ((100vw - 320px) / (1439 - 320)));
   }
 
 `

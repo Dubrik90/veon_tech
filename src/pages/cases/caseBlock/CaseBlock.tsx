@@ -87,7 +87,7 @@ export const CaseBlock: FC<CaseBlockPropsType> = ({filter}) => {
                         <ArrowIcon/>
                     </ButtonBlock>
                 }
-                <CasesSlider filter={filter}/>
+                {/*<CasesSlider filter={filter}/>*/}
 
             </Container>
         </CaseBlockWrapper>

@@ -18,8 +18,6 @@ import LogoDark from './assets/LogoDarkN.svg'
 
 export const Header = () => {
     const location = useLocation();
-    console.log(location.pathname)
-
 
     const dispatch = useAppDispatch()
     const theme = useAppSelector(state => state.app.theme)

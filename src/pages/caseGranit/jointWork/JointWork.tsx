@@ -1,7 +1,7 @@
 import React from 'react';
 import {Content, Img, JointWorkWrapper, Text} from './style';
 import {Container} from "../../../common/style/Container";
-import bak2 from "../../caseSwiss/assets/swissResult.webp";
+import bak2 from "../assets/bak2.webp";
 
 
 export const JointWork = () => {
