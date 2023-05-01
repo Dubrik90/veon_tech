@@ -1,9 +1,13 @@
-import ImgMagazine from "../assets/imgMagazine.png";
+import Sinaradesign from "../../case/assets/sinaradesignCase.webp";
+import Sodox from "../../case/assets/sodoxCase.webp";
+import Art from "../../case/assets/artCase.webp";
+import Rent from "../../case/assets/imgMagazine.png";
+
 import LogoImg from "../assets/logoMagazine.png";
 import Image1 from "../assets/image1.png";
 import Image2 from "../assets/image2.png";
 import Image3 from "../assets/image3.png";
-import ImgCatalog from "../assets/imgCatalog.png";
+
 
 
 
@@ -12,7 +16,7 @@ export const caseDataArray: CaseDataType = [
         id: '1',
         type: 'magazines',
         title: 'Кейс по разработке маркетплейса для сервиса аренды вещей',
-        screenImg: ImgMagazine,
+        screenImg: Sinaradesign,
         logoImg: LogoImg,
         service: 'Разработка сайта каталога',
         client: 'ООО "Sinaradesign"',
@@ -68,7 +72,7 @@ export const caseDataArray: CaseDataType = [
         id: '2',
         type: 'catalogs',
         title: 'Кейс по разработке интернет каталога',
-        screenImg: ImgCatalog,
+        screenImg: Art,
         logoImg: LogoImg,
         service: 'Разработка онлайн сервиса',
         client: 'ArtDoc.media',
@@ -113,7 +117,7 @@ export const caseDataArray: CaseDataType = [
         id: '3',
         type: 'sites',
         title: 'Кейс по разработке сайтов',
-        screenImg: ImgCatalog,
+        screenImg: Sodox,
         logoImg: LogoImg,
         service: 'Создание сайта-каталога',
         client: 'ООО "Содокс Пром"',
@@ -163,7 +167,7 @@ export const caseDataArray: CaseDataType = [
         id: '4',
         type: 'sites',
         title: 'Создание маркетплейса',
-        screenImg: ImgCatalog,
+        screenImg: Rent,
         logoImg: LogoImg,
         service: 'Создание сайта-каталога',
         client: 'ООО "Рент клаб" (под НДА)',

@@ -19,4 +19,5 @@ export const ROUTS = {
     CASE_RENT_CLUB: '/case/rent-club',
     CASE_SODOX: '/case/sodox',
     CASE_ART_MEDIA: '/case/art-media',
+    CASE_SINARADESING: '/case/sinaradesign',
 }

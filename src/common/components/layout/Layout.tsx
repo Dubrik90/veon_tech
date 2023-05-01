@@ -31,6 +31,7 @@ export const Layout = () => {
         animateText()
     }, [])
 
+
     return (
         <>
             <ScrollToTop/>

@@ -108,7 +108,7 @@ const initialState: InitialStateStateType = {
             about: 'Разработка онлайн сервиса',
             desk: '',
             country: 'Европа',
-            route: ROUTS.CASE_RENT_CLUB,
+            route: ROUTS.CASE_ART_MEDIA,
             color: '',
             img: artMedia
         },
@@ -120,7 +120,7 @@ const initialState: InitialStateStateType = {
             about: 'Создание сайта-каталога',
             desk: 'Создание современного сайта, с которым можно выделиться!',
             country: 'Европа',
-            route: ROUTS.CASE_RENT_CLUB,
+            route: ROUTS.CASE_SODOX,
             color: '',
             img: sodox
         },
@@ -132,7 +132,7 @@ const initialState: InitialStateStateType = {
             about: 'Разработка сайта каталога',
             desk: 'Уникальный дизайн удовлетворяющий современные тенденции!',
             country: 'Беларусь',
-            route: ROUTS.CASE_RENT_CLUB,
+            route: ROUTS.CASE_SINARADESING,
             color: '',
             img: sinaradesign
         },

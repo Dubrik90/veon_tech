@@ -46,6 +46,7 @@ function App() {
                 <Route path={ROUTS.CASE_RENT_CLUB} element={<Case caseData={caseDataArray[3]}/>}/>
                 <Route path={ROUTS.CASE_SODOX} element={<Case caseData={caseDataArray[2]}/>}/>
                 <Route path={ROUTS.CASE_ART_MEDIA} element={<Case caseData={caseDataArray[1]}/>}/>
+                <Route path={ROUTS.CASE_SINARADESING} element={<Case caseData={caseDataArray[0]}/>}/>
 
                 {/*<Route path={ROUTS.CASE_RENT_CLUB} element={<CaseRentClub/>}/>*/}
 
