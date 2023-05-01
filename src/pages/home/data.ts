@@ -1,8 +1,8 @@
 
-import Img01 from './descriptionWeb/assets/01.svg';
-import Img02 from './descriptionWeb/assets/02.svg';
-import Img03 from './descriptionWeb/assets/03.svg';
-import Img04 from './descriptionWeb/assets/04.svg';
+import Img01 from './descriptionWeb/assets/0111.png';
+import Img02 from './descriptionWeb/assets/0222.png';
+import Img03 from './descriptionWeb/assets/0333.png';
+import Img04 from './descriptionWeb/assets/0444.png';
 import Img05 from './descriptionWeb/assets/05.svg';
 import {ROUTS} from "../../common/constans/routs";
 

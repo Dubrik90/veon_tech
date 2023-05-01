@@ -1,7 +1,7 @@
 import React from 'react';
 import {Container} from "../../../common/style/Container";
 import {OpticsDeskWrapper, ImageBlock, Img, Text, OpticsDeskContent, Ul, Block} from "./style";
-import MobileImg from "../../caseHappyElephant/assets/elephantMobile.webp";
+import MobileImg from "../assets/mobileOptics.webp";
 
 export const OpticsDesk = () => {
     return (

@@ -61,10 +61,10 @@ export const FooterIcons = styled.div`
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: 66px;
+   width: 66px;
     height: 66px;
     border-radius: 50%;
-    background-color: var(--color-withe);
+   // background-color: var(--color-withe);
     cursor: pointer;
     transition: all 0.3s;
     

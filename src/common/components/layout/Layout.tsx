@@ -28,7 +28,6 @@ export const Layout = () => {
 
     useEffect(() => {
         tl.to('header', {opacity: 1, y: 0})
-
         animateText()
     }, [])
 

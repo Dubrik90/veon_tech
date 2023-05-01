@@ -19,8 +19,8 @@ export const SliderBonuse:FC<SliderBonuseProps> = ({saleCards}) => {
             <Swiper
                 effect={'coverflow'}
                 grabCursor={true}
-                // centeredSlides={true}
-                //loop={true}
+                 centeredSlides={true}
+                loop={true}
                 slidesPerView={"auto"}
                 coverflowEffect={{
                     rotate: 0,

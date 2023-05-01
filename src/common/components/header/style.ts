@@ -68,29 +68,30 @@ export const HeaderContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  column-gap: calc(15px + (70 - 15) * ((100vw - 1092px) / (1920 - 1092)));
+ // column-gap: calc(15px + (70 - 15) * ((100vw - 1092px) / (1920 - 1092)));
 
   a {
     transition: all 0.3s;
     position: relative;
     z-index: 10;
+    max-width: 260px;
    // max-width: 75px;
 
     img {
       width: 100%;
-      height: 100%;
+      max-height: 75px;
     }
 
-    @media (max-width: 400px) {
-      flex: 1 0 212px;
-    }
+    //@media (max-width: 400px) {
+    //  flex: 1 0 212px;
+    //}
   }
 
   @media (max-width: 1300px) {
-    column-gap: 20px;
+   // column-gap: 20px;
   }
   @media (max-width: 768px) {
-    justify-content: stretch;
+   // justify-content: stretch;
   }
 `
 

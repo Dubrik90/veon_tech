@@ -5,6 +5,7 @@ import CentavrasImg from './assets/CentavrasDescImg.webp'
 export const CentavrasDesc = () => {
     return (
         <CentavrasDescWrapper>
+
             <Text>
                 Веб-интерфейс представляет собой программу для упрощения формирования коммерческих предложений
                 Заказчиком. <br/> Наша команда разработала уникальный дизайн и логотип компании.

@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {Button, FilterCaseWrapper} from './style';
 import {Container} from '../../../common/style/Container';
 import styled from 'styled-components';
-import {casesData} from "../../app/data";
 import {setFilterCaseAC} from "../../../app/app-reduser";
 import {useAppDispatch} from "../../../common/hook";
 

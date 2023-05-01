@@ -110,7 +110,7 @@ export const SubTitle = styled.p`
   line-height: 1.4;
   color: var(--colors-text-dark);
   font-weight: var(--fw-regular);
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: 0.5px;
   position: relative;
   bottom: -8px;
@@ -119,7 +119,7 @@ export const SubTitle = styled.p`
     line-height: 1.3;
   }
   @media (max-width: 1848px) {
-    font-size: 14px;
+   // font-size: 14px;
   }
   @media (max-width: 1050px) {
     display: none;

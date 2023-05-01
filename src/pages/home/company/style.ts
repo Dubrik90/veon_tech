@@ -17,6 +17,7 @@ export const CompanyWrapper = styled.div`
 `
 export const Title = styled.h3`
   //text-align: center;
+  text-transform: uppercase;
   text-indent: 15px;
   font-weight: var(--fw-bold);
   font-size: calc(30px + (76 - 30) * ((100vw - 320px) / (1920 - 320)));

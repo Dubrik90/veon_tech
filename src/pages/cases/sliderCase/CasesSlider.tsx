@@ -4,11 +4,9 @@ import {EffectCoverflow, Navigation, Pagination} from 'swiper';
 import 'swiper/swiper-bundle.min.css'
 import 'swiper/swiper.min.css'
 import {FullSliderWrapper} from './FullSlider-style';
-import {CaseType, FilterCaseType} from "../../../common/types/types";
-import {casesData} from "../../app/data";
+import {CaseType} from "../../../common/types/types";
 import {Link} from "react-router-dom";
 import gsap from "gsap";
-import {useAppSelector} from "../../../common/hook";
 
 type CasesSliderPropsType = {
     filter:CaseType[]

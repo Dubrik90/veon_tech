@@ -21,8 +21,12 @@ type PropsMenu = {
 }
 export const MenuList = styled.ul<PropsMenu>`
   display: flex;
-  column-gap: calc(15px + (52 - 15) * ((100vw - 1092px) / (1920 - 1092)));
+  column-gap: 52px;
   flex-wrap: wrap;
+
+  @media (max-width: 1920px) {
+    column-gap: calc(15px + (52 - 15) * ((100vw - 1092px) / (1920 - 1092)));
+  }
 
   .about-link {
     display: none;
@@ -91,32 +95,16 @@ export const SubMenu = styled.ul`
   }
 
   a {
-    //font-weight: 600;
     font-size: 13px;
     line-height: 11px;
     color: var(--colors-text-dark);
     position: relative;
-    //padding-left: 30px;
     display: flex;
     border-radius: 3px;
     padding: 5px;
 
-    //:before {
-    //  content: '';
-    //  width: 100%;
-    //  height: 10px;
-    //  background: var(--colors-bg-green);
-    //  position: absolute;
-    //  top: 50%;
-    //  left: 0;
-    //  transform: translateY(-50%);
-    //  border-radius: 5px;
-    //}
-
     :hover {
-      // color: var(--color-menu-hover);
       background: var(--color-menu-hover);
-    
     }
   }
 

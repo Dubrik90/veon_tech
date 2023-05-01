@@ -12,6 +12,7 @@ export type CaseType = {
     route: string,
     img: string,
     title: string,
+    country: string
 }
 export type CasesType = {
     ['magazines']: CaseType[],

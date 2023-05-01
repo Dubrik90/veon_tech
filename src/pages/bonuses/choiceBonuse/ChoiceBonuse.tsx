@@ -3,6 +3,7 @@ import {BonuseContent, ChoiceBonuseWrapper, SubTitle, Title, Text} from "./style
 import {Container} from "../../../common/style/Container";
 
 import { gsap, SteppedEase } from 'gsap';
+import {TypingText} from "../../../common/animate/TypingText";
 
 
 

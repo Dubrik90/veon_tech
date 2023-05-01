@@ -2,6 +2,11 @@ import styled from "styled-components";
 
 export const CentavrasDescWrapper = styled.div`
   position: relative;
+  
+  @media (max-width: 1439px) {
+   padding-top: 50px;
+  }
+  
 `
 export const ImgBlock = styled.div`
   width: 100%;
@@ -31,14 +36,19 @@ export const Text = styled.div`
     font-size: calc(18px + (40 - 18) * ((100vw - 320px) / (1920 - 320)));
     top: calc(-15% + (-12 - 15) * ((100vw - 320px) / (1308 - 320)));
     right: 0;
-    
   }
+  @media (max-width: 1439px) {
+    position: relative;
+    max-width: 100%;
+    margin-bottom: 50px;
+  }
+  
 
   @media (max-width: 447px) {
-    top: 10%;
+   // top: 10%;
    // left: 50%;
-    transform: translate(-50% -50%);
-    max-width: 100%;
+   // transform: translate(-50% -50%);
+  //  max-width: 100%;
     
   }
 `

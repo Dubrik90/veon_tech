@@ -1,20 +1,19 @@
 import React, {FC, useEffect, useMemo, useRef, useState} from 'react';
 import {
+    ArrowIcon,
+    Button,
+    ButtonBlock,
     CaseBlockWrapper,
     CaseContent,
+    Content,
     HiddenBlock,
     Img,
-    Button,
     ImgBlock,
-    Title,
     Text,
-    Content,
-    ButtonBlock,
-    ArrowIcon
+    Title
 } from './style';
 import {Container} from "../../../common/style/Container";
-import {casesData} from "../../app/data";
-import {CaseType, FilterCaseType} from "../../../common/types/types";
+import {CaseType} from "../../../common/types/types";
 import {Link} from "react-router-dom";
 import {CasesSlider} from '../sliderCase';
 import gsap from 'gsap'
@@ -50,6 +49,8 @@ export const CaseBlock: FC<CaseBlockPropsType> = ({filter}) => {
         )
     }, [filter])
 
+    console.log(filter.length)
+
     return (
         <CaseBlockWrapper>
             <Container>
@@ -72,15 +73,25 @@ export const CaseBlock: FC<CaseBlockPropsType> = ({filter}) => {
                             )
                         })
                     }
+                    {
+                        // filter.length < 10 &&
+                        // <ButtonBlock showMore={showMore} onClick={onClickShowMoreHandler}>
+                            <Content showMore={showMore} className='case' onClick={onClickShowMoreHandler}>
+                                <ImgBlock>
+                                    {/*<Img src={el.img} alt="case image"/>*/}
+                                </ImgBlock>
+                                <HiddenBlock>
+                                    <Title>стрелка</Title>
+                                    <Text>Какой-то текст описания кейса</Text>
+                                    {/*<Link to={el.route}>Подробнее</Link>*/}
+                                </HiddenBlock>
+                            </Content>
+                        // </ButtonBlock>
+                    }
+
                 </CaseContent>
                 <CasesSlider filter={filter}/>
-                {
-                    filter.length > 10 &&
-                    <ButtonBlock showMore={showMore} onClick={onClickShowMoreHandler}>
-                        <Button>Продолжить</Button>
-                        <ArrowIcon/>
-                    </ButtonBlock>
-                }
+
             </Container>
         </CaseBlockWrapper>
     );

@@ -12,7 +12,8 @@ export const About = () => {
 
     useEffect(() => {
         animateText()
-    }, [])
+    }, []);
+
 
     return (
         <AboutWrapper>

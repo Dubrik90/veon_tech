@@ -2,7 +2,12 @@ import styled from "styled-components";
 
 export const HappyElephantDescWrapper = styled.div`
   background-color: var(--color-withe);
+  padding-top: 50px;
 
+  @media (max-width: 1023px) {
+    padding-top: 0;
+    
+  }
 `
 export const ElephantDescContent = styled.div`
   display: flex;

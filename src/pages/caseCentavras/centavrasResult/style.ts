@@ -12,11 +12,17 @@ export const CentavrasResultWrapper = styled.div<ImageProps>`
   background-size: cover;
 
   padding-bottom: 12%;
-  
+
+  @media (max-width: 1439px) {
+    display: none;
+  }
+
   @media (max-width: 1237px) {
     background-size: 0;
     padding: 40px 0;
   }
+
+
 
 `
 
@@ -36,11 +42,12 @@ export const Text = styled.p`
 
   @media (max-width: 1920px) {
     font-size: calc(21px + (40 - 21) * ((100vw - 320px) / (1920 - 320)));
+    max-width: calc(755px + (840 - 755) * ((100vw - 1440px) / (1920 - 1440)));
   }
 
   @media (max-width: 1237px) {
     color: var(--colors-text-dark);
-    max-width:100%;
+    max-width: 100%;
   }
 `
 

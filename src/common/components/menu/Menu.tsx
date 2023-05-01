@@ -32,7 +32,7 @@ export const Menu: FC<MenuProps> = ({isOpenBurger, onClick, onClickCloseBurger})
     return (
         <NavigateMenu>
             <MenuList isOpenBurger={isOpenBurger}>
-                <MenuItem>
+                {/*<MenuItem>*/}
                     {/*<NavLink onClick={onClickCloseBurger} to={ROUTS.ABOUT}>*/}
                     {/*    <span className='link__wrap'>*/}
                     {/*    <span className='link__title'>О НАШЕЙ КОМПАНИИ*/}
@@ -40,7 +40,7 @@ export const Menu: FC<MenuProps> = ({isOpenBurger, onClick, onClickCloseBurger})
                     {/*    </span>*/}
                     {/*</span>*/}
                     {/*</NavLink>*/}
-                </MenuItem>
+                {/*</MenuItem>*/}
                 <MenuItem className='about-sub-menu'>
                     <NavLink onClick={onClickCloseBurger} to={ROUTS.ABOUT}>
                         <span className='link__wrap'>

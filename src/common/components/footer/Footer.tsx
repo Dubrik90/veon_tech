@@ -13,11 +13,11 @@ import {
 import {Container} from "../../style/Container";
 
 import logo from './assets/biglogo.png'
-import instagram from './assets/insta.png'
-import facebook from './assets/facebook.png'
-import linkedin from './assets/linkedin.png'
-import watsap from './assets/watsapp.png'
-import telega from './assets/teleg.png'
+import instagram from './assets/insta.svg'
+import facebook from './assets/facebook.svg'
+import linkedin from './assets/linkedin.svg'
+import watsap from './assets/watsapp.svg'
+import telega from './assets/teleg.svg'
 
 const dataSocial = [
     {img: instagram, to: 'https://instagram.com/veontech.agency?igshid=YmMyMTA2M2Y='},
@@ -36,7 +36,7 @@ export const Footer = () => {
                         <img src={logo} alt="logo"/>
                         <FooterIcons>
                             {dataSocial.map((el, index) => <a target='_blank' href={el.to} key={index}>
-                                <ImgWrap img={el.img}/></a>)}
+                                <img src={el.img}/></a>)}
                         </FooterIcons>
                     </FooterTop>
                     <FooterBottom>
