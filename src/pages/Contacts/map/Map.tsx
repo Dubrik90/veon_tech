@@ -33,8 +33,8 @@ type FormikErrorType = {
 
 export const MapComponent = () => {
 
-    const mapState = {center: [53.932681, 27.555049], zoom: 16};
-    const coordinates = [53.932681, 27.555049];
+    const mapState = {center: [53.92859307064951, 27.58288749999989], zoom: 16};
+    const coordinates = [53.92859307064951, 27.58288749999989];
 
     const formik = useFormik({
         initialValues: {

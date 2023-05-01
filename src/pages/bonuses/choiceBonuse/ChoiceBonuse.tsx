@@ -37,9 +37,9 @@ export const ChoiceBonuse = () => {
         <ChoiceBonuseWrapper>
             <Container>
                 <BonuseContent>
-                    <Title ref={textAnimate} className={'text-description type-me'}>Бонусы и скидки на разработку. Программа лояльности для клиентов компании VEON-TECH</Title>
-                    <SubTitle ref={textAnimate} className={'type-me2'}>При работе с нами вы получите дополнительные опции для развития Вашего бизнеса. Улучшаем ваш бизнес вместе!</SubTitle>
-                    <Text >Выберите <span>свой</span> бонус!</Text>
+                    <SubTitle >При работе с нами вы получите дополнительные опции для развития Вашего бизнеса. Улучшаем ваш бизнес вместе!</SubTitle>
+                    <Title> Программа лояльности для клиентов компании <span>VEON-TECH</span></Title>
+                    <Text>Выберите <span>свой</span> бонус!</Text>
                 </BonuseContent>
             </Container>
         </ChoiceBonuseWrapper>

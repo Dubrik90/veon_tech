@@ -3,7 +3,6 @@ import {DocBlock, Img, ImgBlock, P, RequisitesBlock, Button, RequisitesContent, 
 import {Container} from "../../../common/style/Container";
 import PdfIcon from './assets/pdfIcon.png'
 
-
 export const Requisites = () => {
     return (
         <RequisitesWrapper>

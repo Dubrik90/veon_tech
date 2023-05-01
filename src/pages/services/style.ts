@@ -29,13 +29,40 @@ export const Title = styled.h2`
   line-height: 110%;
   color:var( --colors-text-dark);
   font-weight: 700;
+  
+  span {
+    position: relative;
+    display: inline-block;
+    // border-bottom: 12px solid #5DB447;
+    // padding-bottom: -15px;
+    :before {
+      content: '';
+      width: 100%;
+      position: absolute;
+      bottom: 8px;
+      opacity: 0.8;
+      left: 0;
+      z-index: -1;
+      height: 12px;
+      background-color: #5DB447;
+    }
 `
 export const Text = styled.p`
   margin-bottom: 28px;
   font-size: calc(21px + (28 - 21) * ((100vw - 320px) / (1920 - 320)));
   line-height: 130%;
   color:var( --colors-text-dark);
+  
+  .cursive {
+  }
 `
+export const TextCursive = styled.p`
+  font-size: calc(21px + (24 - 21) * ((100vw - 320px) / (1920 - 320)));
+  font-style: italic;
+  margin-top: -10px;
+
+`
+
 export const LinkBlock = styled.div`
   margin-top: 30px;
   margin-bottom: 30px;

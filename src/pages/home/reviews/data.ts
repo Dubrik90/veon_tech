@@ -56,7 +56,7 @@ export const reviewData: reviewDataType[] = [
         logoUser: User4,
         userName: 'D. Fisher',
         position: 'Chief executive officer',
-        background: '#108fd3',
+        background: '#d31027',
         header: 'Party Intel',
         link: 'services/webDev',
     },

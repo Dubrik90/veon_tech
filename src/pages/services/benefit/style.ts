@@ -132,6 +132,26 @@ export const TitleHead = styled.h2`
   line-height: 1.4;
   margin-bottom: 80px;
   color: var(--colors-text-dark);
+  position: relative;
+  display: inline-block;
+  
+  :before {
+    content: '';
+    width: 100%;
+    position: absolute;
+    bottom: 13px;
+    opacity: 0.8;
+    left: 0;
+    z-index: -1;
+    height: 12px;
+    background-color: #5DB447;
+  }
+  span:nth-child(2) {
+    position: relative;
+    
+    // border-bottom: 12px solid #5DB447;
+    // padding-bottom: -15px;
+    
 `
 
 export const CardTitle = styled.h4`

@@ -20,8 +20,8 @@ import watsap from './assets/watsapp.svg'
 import telega from './assets/teleg.svg'
 
 const dataSocial = [
-    {img: instagram, to: 'https://instagram.com/veontech.agency?igshid=YmMyMTA2M2Y='},
-    {img: facebook, to: 'https://www.facebook.com/{ID}'},
+    {img: instagram, to: 'https://www.instagram.com/veontech.agency/?igshid=YmMyMTA2M2Y%3D'},
+    {img: facebook, to: 'https://www.facebook.com/veontech.ru'},
     {img: linkedin, to: 'https://www.linkedin.com/company/veon-tech/'},
     {img: watsap, to: 'https://wa.me/'},
     {img: telega, to: 'https://t.me/veon_tech'},

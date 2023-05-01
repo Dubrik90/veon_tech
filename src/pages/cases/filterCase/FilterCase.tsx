@@ -117,7 +117,7 @@ export const FilterCase: React.FC<FilterProps> = ({}) => {
     // const filterResultArr = casesData['all'].filter(el => {
     //     return res.includes(el.title)
     // })
-   // console.log(filterResultArr)
+    // console.log(filterResultArr)
 
     const handleOptionChange = (option: string) => {
         setSelectedOptions((prevSelectedOptions) =>
@@ -141,18 +141,17 @@ export const FilterCase: React.FC<FilterProps> = ({}) => {
             id: '0',
             filterName: 'Категории',
             type: ['magazines', 'catalogs', 'sites', 'visit'],
-            filterCategories: ['Интернет-магазины', 'Интеренет-каталоги', 'Корпоративные сайты', 'Сайт-визитки']
+            filterCategories: ['Интернет-магазины', 'Интеренет-каталоги', 'Корпоративные сайты', 'Сайт-визитки', 'Веб-сервисы', 'Мобильные приложения', 'ПО', ]
         },
         {
             id: '1',
             filterName: 'Отрасли',
-            filterCategories: ['Топ', 'Банки', 'Образование', 'Гос. организации', 'Фитнес', 'Развлечения', 'Технологии',
-                'Канцтовары', 'Некоммерческие организации', 'Медицина', 'Промышленность',]
+            filterCategories: ['Медицина', 'Образование', 'Интеренет торговля', 'Развлечения', 'Логистика']
         },
         {
             id: '2',
             filterName: 'Страны',
-            filterCategories: ['Беларусь', 'Россия', 'Армения', 'Казахстан', 'Европа', 'США']
+            filterCategories: ['Беларусь', 'Россия', 'США', 'Эстония', 'Казахстан', 'Европа']
         },
     ]
 
