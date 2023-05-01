@@ -1,14 +1,13 @@
 {
   "files": {
     "main.css": "/veon_tech/static/css/main.37979bcd.css",
-    "main.js": "/veon_tech/static/js/main.f4a77772.js",
+    "main.js": "/veon_tech/static/js/main.108c990d.js",
     "static/js/787.5fb054ca.chunk.js": "/veon_tech/static/js/787.5fb054ca.chunk.js",
     "static/media/swissImg1.png": "/veon_tech/static/media/swissImg1.79598e747c9fdf1546f4.png",
     "static/media/LogoLightN.svg": "/veon_tech/static/media/LogoLightN.bd559b707a3b93e22ad040476030dd03.svg",
     "static/media/imgMagazine.png": "/veon_tech/static/media/imgMagazine.2752976d9498e1aeb4fb.png",
     "static/media/CoolveticaBk-Regular.svg": "/veon_tech/static/media/CoolveticaBk-Regular.19ed8ff01e78fd27d26f.svg",
     "static/media/image3.png": "/veon_tech/static/media/image3.5ac1e70ca8ff10515e2b.png",
-    "static/media/imgCatalog.png": "/veon_tech/static/media/imgCatalog.c29eda9c50f4ce9c428c.png",
     "static/media/image1.png": "/veon_tech/static/media/image1.3bbea3b33b7eac74b854.png",
     "static/media/055.jpeg": "/veon_tech/static/media/055.36b4ca73fa570ca53847.jpeg",
     "static/media/033.jpg": "/veon_tech/static/media/033.2a0aeffa121fdd347ba8.jpg",
@@ -44,11 +43,14 @@
     "static/media/elephant.webp": "/veon_tech/static/media/elephant.85b589ec01b69de8d516.webp",
     "static/media/sinaradesign.webp": "/veon_tech/static/media/sinaradesign.b9e2e9bf6600b6845158.webp",
     "static/media/centavrasAboutImg.webp": "/veon_tech/static/media/centavrasAboutImg.cc089b2b80b984714c25.webp",
+    "static/media/sodoxCase.webp": "/veon_tech/static/media/sodoxCase.90e3e3a3ef1d1f2e60a6.webp",
     "static/media/palit.svg": "/veon_tech/static/media/palit.174aea86f38f550572caf04de759e2e3.svg",
     "static/media/sodox.webp": "/veon_tech/static/media/sodox.a4a285ba464bcec711dd.webp",
+    "static/media/artCase.webp": "/veon_tech/static/media/artCase.82292ed91fdd42e7441b.webp",
     "static/media/mobileOptics.webp": "/veon_tech/static/media/mobileOptics.f1fe1d7961e5e8620c2c.webp",
     "static/media/CoolveticaBk-Regular.woff": "/veon_tech/static/media/CoolveticaBk-Regular.df4b01396f025c5bd4b6.woff",
     "static/media/opticsAbout.webp": "/veon_tech/static/media/opticsAbout.7eba9654c3d8166346ef.webp",
+    "static/media/sinaradesignCase.webp": "/veon_tech/static/media/sinaradesignCase.0a9471c81c83f4c8f308.webp",
     "static/media/LogoDarkN.svg": "/veon_tech/static/media/LogoDarkN.757692a96acc22a8fb2351b5a1ca73e7.svg",
     "static/media/elepfantResult.webp": "/veon_tech/static/media/elepfantResult.08155fd87a6c4691f9ef.webp",
     "static/media/centavras.webp": "/veon_tech/static/media/centavras.1f9c0ccda4d968684572.webp",
@@ -98,11 +100,11 @@
     "static/media/chevron_left.svg": "/veon_tech/static/media/chevron_left.96204af78932cc392255743e83f93f1f.svg",
     "static/media/chevron_right.svg": "/veon_tech/static/media/chevron_right.8827aabaed10ab77bfd1a575f02be46a.svg",
     "main.37979bcd.css.map": "/veon_tech/static/css/main.37979bcd.css.map",
-    "main.f4a77772.js.map": "/veon_tech/static/js/main.f4a77772.js.map",
+    "main.108c990d.js.map": "/veon_tech/static/js/main.108c990d.js.map",
     "787.5fb054ca.chunk.js.map": "/veon_tech/static/js/787.5fb054ca.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.37979bcd.css",
-    "static/js/main.f4a77772.js"
+    "static/js/main.108c990d.js"
   ]
 }
