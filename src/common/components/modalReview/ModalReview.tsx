@@ -54,15 +54,9 @@ export const ModalReview: React.FC<ModalProps> = ({isOpen, onRequestClose, revie
                                     {reviewData?.review}
                                 </div>
                                 <div className="text-content modal-review__description">
-                                    <p>
-                                        {reviewData?.review}
-                                    </p>
-                                    <p>
-                                        {reviewData?.review}
-                                    </p>
-                                    <p>
-                                        {reviewData?.review}
-                                    </p>
+                                    {/*<p>*/}
+                                    {/*    {reviewData?.review}*/}
+                                    {/*</p>*/}
                                 </div>
                             </div>
                         </div>

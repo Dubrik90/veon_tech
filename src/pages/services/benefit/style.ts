@@ -8,7 +8,7 @@ export const BenefitContentTop = styled.div`
   margin-bottom: 35px;
 `
 export const Title = styled.h3`
-  //text-align: center;
+  text-align: center;
   font-weight: var(--fw-bold);
   font-size: calc(30px + (56 - 30) * ((100vw - 320px) / (1920 - 320)));
   line-height: 1.4;

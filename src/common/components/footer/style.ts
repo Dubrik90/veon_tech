@@ -174,6 +174,7 @@ export const Corporation = styled.div`
   ${flexColumn()}
   row-gap: 15px;
   align-self: center;
+  line-height: 1.3;
   
   @media (max-width: 768px) {
     align-self: center;

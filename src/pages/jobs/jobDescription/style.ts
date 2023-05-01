@@ -246,17 +246,18 @@ export const EchoTextBlock = styled.h4`
   display: flex;
   column-gap: 10px;
   font-size: 13px;
-  line-height: 155%;
+  line-height: 1.4;
+  align-items: center;
   text-align: justify;
   color: var(--color-grey);
 
   svg {
     max-width: 35px;
     transition: fill 0.3s;
-    cursor: pointer;
+  //  cursor: pointer;
 
     :hover {
-      fill: var(--colors-text-green);
+     // fill: var(--colors-text-green);
     }
   }
 

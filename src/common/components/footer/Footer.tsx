@@ -45,13 +45,13 @@ export const Footer = () => {
                             <p>УНП 193082231</p>
                         </About>
                         <AboutContact>
-                            <a href="tel:+79955775163">+7(995)577-51-63</a>
-                            <p>sales@veon-tech.ru</p>
-                            <p>220068, г. Минск, ул. Орловская, 40а, офис 40-1</p>
+                            <a href="tel:+79955775163">+7 (995) 577-51-63</a>
+                            <p>clients@veon-tech.ru</p>
+                            <p>220068, г. Минск, ул. Сурганова, 57б, офис 187</p>
                             <p>С понедельника по пятницу</p>
                         </AboutContact>
                         <Corporation>
-                            <p>Copyright © 2022 Veon-Tech Ltd</p>
+                            <p>Copyright © 2023 VEON-TECH Ltd</p>
                             <p>All Rights Reserved.</p>
                         </Corporation>
                     </FooterBottom>

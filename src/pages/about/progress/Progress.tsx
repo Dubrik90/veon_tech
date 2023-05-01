@@ -18,25 +18,26 @@ export const Progress = () => {
         <ProgressWrapper>
             <Container>
                 <Title className={'animate'}>
-                    Создаем и развиваем сайты, магазины, приложения, порталы, CRM.
+                    Создаем цифровые решения для развития вашего бизнеса
                 </Title>
                 <ProgressContentTop>
                     <Ul>
                         <Li className={'animate'}>
-                            <SubTitle>№1</SubTitle>
-                            <Text> первые в Рейтинге Байнета <br/> +90 различных наград</Text>
+                            <SubTitle>+20</SubTitle>
+                            <Text>сфер покорили бок о бок<br/> с нашими клиентами</Text>
                         </Li>
                         <Li className={'animate'}>
-                            <SubTitle>20</SubTitle>
-                            <Text> лет на рынке с 2003</Text>
+                            <SubTitle>+5</SubTitle>
+                            <Text>лет успешно развиваемся на просторах web-a
+                            </Text>
                         </Li>
                         <Li className={'animate'}>
-                            <SubTitle>100</SubTitle>
-                            <Text>специалистов в штате</Text>
+                            <SubTitle>+80</SubTitle>
+                            <Text>блестательно реализованных проектов</Text>
                         </Li>
                         <Li className={'animate'}>
-                            <SubTitle>500</SubTitle>
-                            <Text>завершенных проектов</Text>
+                            <SubTitle>+50</SubTitle>
+                            <Text>клиентов достигли успеха доверяя нам</Text>
                         </Li>
                     </Ul>
                 </ProgressContentTop>
@@ -50,8 +51,7 @@ export const Progress = () => {
                         {/*<img src={BrasRight} alt=""/>*/}
                     </ImgBlock>
                     <ContentText className={'animate'}>
-                        <span className="violet-text">Наша миссия </span>обеспечивать встречу лучших технологий, опыта и
-                        бизнеса
+                        <span className="violet-text">Наша миссия </span>обеспечить клиентам конкурентное преимущество на рынке.
                     </ContentText>
                     <ImgBlock>
                         <svg width="98" height="319" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -7,10 +7,11 @@ export const ServiceHeaderWrapper = styled.div`
 
 export const HeaderBlock = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   align-items: center;
   column-gap: 30px;
   justify-content: space-between;
+  padding-top: 80px;
 
   @media (max-width: 852px) {
     column-gap: 20px;
@@ -21,18 +22,41 @@ export const HeaderBlock = styled.div`
 `
 export const HeaderContent = styled.div`
   ${flexColumn()};
-  row-gap: 25px;
+ // row-gap: 25px;
 
 `
 export const Title = styled.h2`
   font-weight: var(--fw-bold);
-  font-size: calc(33px + (52 - 33) * ((100vw - 320px) / (1920 - 320)));
+  font-size: 70px;
   line-height: 1.3;
   color: var(--colors-text-dark);
+  
+  span:nth-child(1) {
+    color: #5DB447;
+  }
+  span:nth-child(2) {
+    position: relative;
+    display: inline-block;
+   // border-bottom: 12px solid #5DB447;
+   // padding-bottom: -15px;
+    :before {
+      content: '';
+      width: 100%;
+      position: absolute;
+      bottom: 12px;
+      left: 0;
+      opacity: 1;
+      z-index: -1;
+      height: 12px;
+      background-color: #5DB447;
+    }
+    
+  }
+  
 
-  //@media (max-width: 1070px) {
-  //  font-size: 28px;
-  //}
+  @media (max-width: 1920px) {
+    font-size: calc(33px + (70 - 33) * ((100vw - 320px) / (1920 - 320)));
+  }
   //@media (max-width: 852px) {
   //  font-size: 23px;
   //}
@@ -71,8 +95,8 @@ export const Img = styled.img`
 
 export const Button = styled.button`
   position: relative;
-  align-self: flex-start;
-  font-size: var(--fs-16);
+  align-self: flex-end;
+  font-size: 18px;
   background: var(--colors-bg-green);
   font-weight: var(--fw-extra-bold);
   line-height: 20px;
@@ -84,6 +108,7 @@ export const Button = styled.button`
   font-family: var(--family);
   text-transform: uppercase;
   border-radius: 5px;
+  //transform: translateY(-50px);
 
   @media (max-width: 852px) {
     font-size: 16px;

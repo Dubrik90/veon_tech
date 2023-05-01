@@ -49,6 +49,8 @@ export const CaseHeaderBlockColumn = styled.div`
   
 `
 export const ImageBlock = styled.div`
+  max-width: 150px;
+  
   @media (max-width: 1024px) {
     max-width: 180px;
   }

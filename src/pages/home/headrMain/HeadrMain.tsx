@@ -29,10 +29,9 @@ export const HeadrMain:FC<HeadrMainProps>  = ({headerAnimate, button}) => {
         <HeaderMainWrapper ref={headerAnimate}>
             <Container>
                 <HeaderMainContent>
-                    <SubTitle>МЫ ПРЕДОСТАВЛЯЕМ <br/> КАЧЕСТВЕННЫЕ АУТСОРС УСЛУГИ <br/> ДЛЯ МИЛЛИОНОВ
-                        ПОЛЬЗОВАТЕЛЕЙ <br/> ПО ВСЕМУ МИРУ.
+                    <SubTitle>МЫ ПРЕДОСТАВЛЯЕМ <br/> КАЧЕСТВЕННЫЕ АУТСОРС <br/> УСЛУГИ  ДЛЯ КИЕНТОВ <br/> ПО ВСЕМУ МИРУ.
                     </SubTitle>
-                    <SubTitleSmall>МЫ ПРЕДОСТАВЛЯЕМ КАЧЕСТВЕННЫЕ <br/> АУТСОРС УСЛУГИ ДЛЯ МИЛЛИОНОВ <br/> ПОЛЬЗОВАТЕЛЕЙ
+                    <SubTitleSmall>МЫ ПРЕДОСТАВЛЯЕМ КАЧЕСТВЕННЫЕ <br/> АУТСОРС УСЛУГИ ДЛЯ КИЕНТОВ <br/>
                         ПО ВСЕМУ МИРУ.
                     </SubTitleSmall>
                     <Title>Вот где начинаются</Title>

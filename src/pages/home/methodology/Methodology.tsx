@@ -33,7 +33,7 @@ export const Methodology = () => {
         <MethodologyWrapper>
             <Container>
                 <MethodologyContent>
-                    <Title className='animate'>Работаем по подходящему для вас процессу</Title>
+                    <Title className='animate'>Работаем по подходящей для Вас методологии</Title>
                     <MethodologyBlock>
                         <BlockColumn>
                             <TitleMethodology>WATERFALL</TitleMethodology>

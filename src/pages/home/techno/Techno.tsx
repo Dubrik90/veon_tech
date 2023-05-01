@@ -33,10 +33,7 @@ export const Techno = () => {
                         </figure>
                     </TechnoBlock>
                     <TechnoText className='animate'>
-                        Solbeg aspires to help companies from all over the world grow, boost performance, optimize
-                        business processes, and outperform competition. Whenever your business requires a new tool or
-                        product, we will apply our knowledge and skills to implement an intelligent, robust solution at
-                        a competitive price.
+                        VEON-TECH стремится помогать компаниям со всего мира расти, повышать производительность, оптимизировать бизнес-процессы и опережать конкурентов. <br/> Всякий раз, когда Вашему бизнесу требуется новый инструмент или продукт, мы применяем наши знания и навыки для реализации интеллектуального и надежного решения по конкурентоспособной цене.
                     </TechnoText>
                 </TechnoContent>
 

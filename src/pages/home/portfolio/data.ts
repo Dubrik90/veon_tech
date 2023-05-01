@@ -1,40 +1,76 @@
-import Img01 from "./assets/011.jpg";
-import Img02 from "./assets/022.jpg";
-import Img03 from "./assets/033.jpg";
-import Img04 from "./assets/044.jpeg";
-import Img05 from "./assets/055.jpeg";
+import Img01 from "./assets/1.webp";
+import Img02 from "./assets/2.webp";
+import Img03 from "./assets/3.webp";
+import Img04 from "./assets/4.webp";
+import Img05 from "./assets/5.webp";
+import Img06 from "./assets/6.webp";
+import Img07 from "./assets/7.webp";
+import Img08 from "./assets/8.webp";
+import Img09 from "./assets/9.webp";
+import Img10 from "./assets/10.webp";
 
 import {DevDataType} from "../data";
+import {ROUTS} from "../../../common/constans/routs";
 
 export const portfolioData: DevDataType[] = [
     {
-        header: 'Creative business card',
+        header: 'Разработка сайта каталога',
         desc: 'UX, UI, Graphic Design',
-        img: Img01,
-        link: ''
+        img: Img07,
+        link: ROUTS.CASE_SINARADESING
     },
     {
-        header: 'Creative business card',
+        header: 'Разработка онлайн сервиса',
         desc: 'UX, UI, Graphic Design',
-        img: Img02,
-        link: ''
+        img: Img08,
+        link: ROUTS.CASE_ART_MEDIA
     },
     {
-        header: 'Creative business card',
+        header: 'Разработка корпоративного сайта',
         desc: 'UX, UI, Graphic Design',
         img: Img03,
-        link: ''
+        link: ROUTS.CASE_OPTICS
     },
     {
-        header: 'Creative business card',
+        header: 'Разработка календаря бронирования',
         desc: 'UX, UI, Graphic Design',
         img: Img04,
-        link: ''
+        link: ROUTS.CASE_PAPPY_ELEPHANT
+    },
+    {
+        header: 'Редизайн интернет-каталога',
+        desc: 'UX, UI, Graphic Design',
+        img: Img05,
+        link: ROUTS.CASE_SWISS
+    },
+    {
+        header: 'Создание сайта-каталога',
+        desc: 'UX, UI, Graphic Design',
+        img: Img06,
+        link: ROUTS.CASE_SODOX
+    },
+    {
+        header: 'Создание сайта-каталога',
+        desc: 'UX, UI, Graphic Design',
+        img: Img01,
+        link: ROUTS.CASE_GRANIT
+    },
+    {
+        header: 'Cервис поиска услуг',
+        desc: 'UX, UI, Graphic Design',
+        img: Img02,
+        link: ROUTS.CASE_PARTY_INTEL
     },
     {
         header: 'Creative business card',
         desc: 'UX, UI, Graphic Design',
-        img: Img05,
-        link: ''
+        img: Img09,
+        link: ROUTS.CASE_CENTAVRAS
+    },
+    {
+        header: 'Creative business card',
+        desc: 'UX, UI, Graphic Design',
+        img: Img10,
+        link: ROUTS.CASE_RENT_CLUB
     },
 ]

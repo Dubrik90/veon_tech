@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {flexColumn} from "../../../common/style/mixin";
 
 export const DescriptionWebWrapper = styled.div`
   opacity: 0;
@@ -61,6 +62,12 @@ export const Title = styled.h2`
   line-height: 1.1;
   margin-bottom: 15px;
   color: var(--colors-text-dark);
+  ${flexColumn()};
+  row-gap: 10px;
+  
+  p:nth-child(3) {
+    font-size: 18px;
+  }
 
   span {
     color: var(--colors-text-green)

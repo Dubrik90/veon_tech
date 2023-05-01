@@ -71,10 +71,10 @@ export const SliderReviews = () => {
                                     <div className="feedback__box">
                                         <div className="feedback__line">
                                             <div className="feedback__block">
-                                        <span className="feedback_img">
-											 <img src={el.logoComp}
-                                                  alt="Альфа-Банк" className="feedback_img" loading="lazy"/>
-										</span>
+                                        {/*<span className="feedback_img">*/}
+										{/*	 <img src={el.logoComp}*/}
+                                        {/*          alt="Альфа-Банк" className="feedback_img" loading="lazy"/>*/}
+										{/*</span>*/}
                                                 <img src={el.logoUser}
                                                      alt="Д.В. Гуща " className="feedback_img" loading="lazy"/>
                                                 <div className="feedback__person">

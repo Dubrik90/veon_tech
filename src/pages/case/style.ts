@@ -6,14 +6,14 @@ export const CaseWrapper = styled.div`
 `
 export const Title = styled.h3`
   font-weight: var(--fw-bold);
-  font-size: 35px;
+  font-size: 40px;
   line-height: 1.4;
   text-align: center;
   color: var(--colors-text-dark);
   margin-bottom: 70px;
 
-  @media (max-width: 1024px) {
-    font-size: 25px;
+  @media (max-width: 1920px) {
+    font-size: calc(16px + (40 - 16) * ((100vw - 320px) / (1920 - 320)));
     margin-bottom: 50px;
   }
   @media (max-width: 844px) {

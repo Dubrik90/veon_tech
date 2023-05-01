@@ -105,6 +105,10 @@ export const SubTitle = styled.span`
   line-height: 78px;
   font-weight: 700;
   color: var(--colors-text-dark);
+  
+  //span   {
+  //  font-size: 30px;
+  //}
 `
 export const Text = styled.p`
   font-size: 18px;

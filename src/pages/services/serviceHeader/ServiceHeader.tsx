@@ -27,13 +27,13 @@ export const ServiceHeader:FC<ServiceHeaderPropsType> = ({text, img, title, titl
             <Container>
                 <HeaderBlock>
                     <HeaderContent>
-                        <Title className='animate'>{title}</Title>
-                        {/*<Text>{text}</Text>*/}
-                        <Button className='animate' onClick={onClickFormModalHandler}>{titleBtn}</Button>
+                        <Title className='animate'>Создавая <span>уникальные сайты</span>, мы воплощаем в жизнь коммерческие цели <span>наших клиентов</span></Title>
+                        <Text>{text}</Text>
+                        {/*<Button className='animate' onClick={onClickFormModalHandler}>{titleBtn}</Button>*/}
                     </HeaderContent>
-                    <HeaderImage>
-                        <Img src={img} alt='image'/>
-                    </HeaderImage>
+                    {/*<HeaderImage>*/}
+                    {/*    <Img src={img} alt='image'/>*/}
+                    {/*</HeaderImage>*/}
                 </HeaderBlock>
             </Container>
         </ServiceHeaderWrapper>

@@ -3,12 +3,13 @@ import Sodox from "../../case/assets/sodoxCase.webp";
 import Art from "../../case/assets/artCase.webp";
 import Rent from "../../case/assets/imgMagazine.png";
 
-import LogoImg from "../assets/logoMagazine.png";
+import LogoImg from "../assets/SD.png";
+import LogoRent from "../assets/logoMagazine.png";
+
 import Image1 from "../assets/image1.png";
 import Image2 from "../assets/image2.png";
 import Image3 from "../assets/image3.png";
-
-
+import sodox from "../../home/company/assets/sodox.png";
 
 
 export const caseDataArray: CaseDataType = [
@@ -118,7 +119,7 @@ export const caseDataArray: CaseDataType = [
         type: 'sites',
         title: 'Кейс по разработке сайтов',
         screenImg: Sodox,
-        logoImg: LogoImg,
+        logoImg: sodox,
         service: 'Создание сайта-каталога',
         client: 'ООО "Содокс Пром"',
         projectUrl: 'https://sodox.by',
@@ -166,13 +167,13 @@ export const caseDataArray: CaseDataType = [
     {
         id: '4',
         type: 'sites',
-        title: 'Создание маркетплейса',
+        title: 'Кейс по разработке маркетплейса для  ООО "Рент клаб"',
         screenImg: Rent,
-        logoImg: LogoImg,
+        logoImg: LogoRent,
         service: 'Создание сайта-каталога',
         client: 'ООО "Рент клаб" (под НДА)',
         projectUrl: 'https://rentclub.pro',
-        aboutCompany: 'Группа компаний SODOX — производитель промышленного оборудования',
+        aboutCompany: 'ООО "Рент клаб" (под НДА)',
         targets: 'Реализация кабинета сделки, смены статусов и возможное поведение пользователей',
 
         tableData: [
