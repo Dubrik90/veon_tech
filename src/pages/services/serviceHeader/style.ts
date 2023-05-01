@@ -56,9 +56,7 @@ export const Title = styled.h2`
        width: 0;
      }
     }
-    
   }
-  
 
   @media (max-width: 1920px) {
     font-size: calc(33px + (70 - 33) * ((100vw - 320px) / (1920 - 320)));
