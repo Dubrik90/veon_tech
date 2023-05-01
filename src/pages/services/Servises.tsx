@@ -37,8 +37,21 @@ export const Services = () => {
     const activeDataService = dataServices.filter(el => el.type === service)[0]
 
     useEffect(() => {
+        if (service === 'webDev') {
+            document.title = 'Разработка сайтов — VEON-TECH'
+        } else if (service === 'support') {
+            document.title = 'Поддержка сайтов — VEON-TECH'
+        }
+        else if (service === 'ux') {
+            document.title = 'UX/UI Дизайн — VEON-TECH'
+        }else if (service === 'webPO') {
+            document.title = 'Разработка ПО — VEON-TECH'
+        }
+
+      //  document.title = 'Кейсы — VEON-TECH'
         animateText()
-    }, [])
+    }, [service])
+
 
     const cardArray1: CardWorkUsType[] = [
         {

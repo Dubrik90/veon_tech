@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './index.css';
 import {Route, Routes, useLocation} from 'react-router-dom';
 import {ROUTS} from './common/constans/routs';
@@ -23,6 +23,10 @@ import {CaseRentClub} from "./pages/caseRentClub";
 import {caseDataArray} from "./pages/case/app/data";
 
 function App() {
+    useEffect(() => {
+        document.title = 'Главная — VEON-TECH'
+    }, [])
+
 
     return (
         <Routes>
@@ -47,9 +51,7 @@ function App() {
                 <Route path={ROUTS.CASE_SODOX} element={<Case caseData={caseDataArray[2]}/>}/>
                 <Route path={ROUTS.CASE_ART_MEDIA} element={<Case caseData={caseDataArray[1]}/>}/>
                 <Route path={ROUTS.CASE_SINARADESING} element={<Case caseData={caseDataArray[0]}/>}/>
-
                 {/*<Route path={ROUTS.CASE_RENT_CLUB} element={<CaseRentClub/>}/>*/}
-
             </Route>
         </Routes>
     );

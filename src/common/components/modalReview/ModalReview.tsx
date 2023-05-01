@@ -37,10 +37,10 @@ export const ModalReview: React.FC<ModalProps> = ({isOpen, onRequestClose, revie
                         <div className="modal-review">
                             <div className="feedback__line">
                                 <div className="feedback__block">
-                                    <span className="feedback_img">
-									     <img src={reviewData?.logoComp}
-                                              className="feedback_img" loading="lazy"/>
-								    </span>
+                                    {/*<span className="feedback_img">*/}
+									{/*     <img src={reviewData?.logoComp}*/}
+                                    {/*          className="feedback_img" loading="lazy"/>*/}
+								    {/*</span>*/}
                                     <img src={reviewData?.logoUser}
                                          className="feedback_img" loading="lazy"/>
                                     <div className="feedback__person">
@@ -64,7 +64,6 @@ export const ModalReview: React.FC<ModalProps> = ({isOpen, onRequestClose, revie
                             Посмотреть кейс
                         </Link>
                     </Content>
-
                 </Container>
             </WrapperCenter>
         </ModalReviewWrapper>

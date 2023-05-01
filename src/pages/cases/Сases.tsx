@@ -21,6 +21,7 @@ export const Сases = () => {
     })
 
     useEffect(() => {
+        document.title = 'Кейсы — VEON-TECH'
         animateText()
     }, [])
 

@@ -5,6 +5,7 @@ import User1 from "../../../assets/sd.png";
 import User2 from "../../../assets/pros.png";
 import User3 from "../../../assets/nevil.png";
 import User4 from "../../../assets/party.png";
+import {ROUTS} from "../../../common/constans/routs";
 
 export type reviewDataType = {
     review: string,
@@ -26,18 +27,18 @@ export const reviewData: reviewDataType[] = [
         position: 'Art Director',
         background: 'var(--colors-text-green)',
         header: 'LLC "SinaraDesign" (USA, Florida)',
-        link: 'services/webDev',
+        link: ROUTS.CASE_SINARADESING,
     },
-    {
-        review: 'Команда Veon-Tech отлично выполнила поставленные задачи. В короткие сроки разработали сайт. Для поддержки используют самое современное программное обеспечение. Мы довольны креативным дизайном, достигнутым с помощью нашего нового бренда и веб-дизайна.',
-        logoComp: '',
-        logoUser: User2,
-        userName: 'F. Coleman',
-        position: 'Co-founder',
-        background: '#3a3937',
-        header: 'Pros NOW',
-        link: 'services/webDev',
-    },
+    // {
+    //     review: 'Команда Veon-Tech отлично выполнила поставленные задачи. В короткие сроки разработали сайт. Для поддержки используют самое современное программное обеспечение. Мы довольны креативным дизайном, достигнутым с помощью нашего нового бренда и веб-дизайна.',
+    //     logoComp: '',
+    //     logoUser: User2,
+    //     userName: 'F. Coleman',
+    //     position: 'Co-founder',
+    //     background: '#3a3937',
+    //     header: 'Pros NOW',
+    //     link: '',
+    // },
     {
         review: 'Изначально выбирали из множества компании, но на этапе обсуждения предложений видели, что не у всех хватает компетенций в реализации нашего проекта.\n' +
             'Работа выполнялась всегда в строгом соответствии с ТЗ на высоком профессиональном уровне.\n' +
@@ -48,7 +49,7 @@ export const reviewData: reviewDataType[] = [
         position: 'Исполнительный директор',
         background: '#108fd3',
         header: 'Nevildex Group LTD.',
-        link: 'services/webDev',
+        link: '',
     },
     {
         review: 'Были приятно удивлены - внимательным погружением в анализ нашего сайта и конкурентов. Получили конструктивное мнение в каком направлении двигаться и как лучше сделать сайт. Работу сделали оперативно, чётко и быстро. Команда постоянно была на связи и все желания учитывала в работе!',
@@ -58,7 +59,7 @@ export const reviewData: reviewDataType[] = [
         position: 'Chief executive officer',
         background: '#d31027',
         header: 'Party Intel',
-        link: 'services/webDev',
+        link:  ROUTS.CASE_PARTY_INTEL,
     },
 
 ]

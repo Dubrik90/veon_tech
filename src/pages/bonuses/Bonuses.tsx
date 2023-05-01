@@ -24,6 +24,7 @@ export type SaleCardsType = {
 export const Bonuses = () => {
 
     useEffect(() => {
+        document.title = 'Бонусы — VEON-TECH'
         animateText()
     }, [])
 
@@ -76,7 +77,7 @@ export const Bonuses = () => {
                 <BonusesCardsBlock>
                     {
                         saleCards.map((el, index) => (
-                            <BonusesCard  card={el} key={index}/>
+                            <BonusesCard card={el} key={index}/>
                         ))
                     }
                 </BonusesCardsBlock>
@@ -85,7 +86,8 @@ export const Bonuses = () => {
             <BonusesContent>
                 <Container>
                     <TextBlock>
-                        <Text className='animate'>Для команды VEON-TECH клиенты – на первом месте. Нам нравится заботиться о своих клиентах,
+                        <Text className='animate'>Для команды VEON-TECH клиенты – на первом месте. Нам нравится
+                            заботиться о своих клиентах,
                             поэтому мы рекомендуем подходить к разработке комплексно, использовать максимальное
                             количество
                             существующих инструментов с учетом специфики бренда. Наша команда подготовила для вас
@@ -94,7 +96,8 @@ export const Bonuses = () => {
                             продвижения
                             вашей компании!
                         </Text>
-                        <Text className='animate'>Выбирайте подходящий под ваши конкретные цели бонус и воспользуйтесь им, повышайте ваши
+                        <Text className='animate'>Выбирайте подходящий под ваши конкретные цели бонус и воспользуйтесь
+                            им, повышайте ваши
                             результативные показатели без лишних затрат.
                         </Text>
                     </TextBlock>

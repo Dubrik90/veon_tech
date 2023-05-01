@@ -7,7 +7,7 @@ type ModalReviewWrapperProps = {
 export const ModalReviewWrapper = styled.div<ModalReviewWrapperProps>`
   position: fixed;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   overflow-y: scroll;
   color: #fff;
   top: 0;
@@ -21,6 +21,7 @@ export const ModalReviewWrapper = styled.div<ModalReviewWrapperProps>`
 `
 export const WrapperCenter = styled.div`
   position: relative;
+  height: 100vh;
   padding: 100px 0;
 `
 
