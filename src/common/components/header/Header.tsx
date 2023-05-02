@@ -1,17 +1,15 @@
 import React, {useEffect} from "react";
 import {Container} from "../../style/Container";
-import {HeaderContent, HeaderWrapper, ImgWrapDesctop, ImgWrapMobile, Tint} from "./style"
+import {HeaderContent, HeaderWrapper, Tint} from "./style"
 import {Burger} from "../../style/Burger";
 import LogoLight from './assets/LogoLightN.svg';
 //import LogoDark from './assets/logoDark.svg';
-import LogoMobileDark from './assets/logoMobileDark.png';
-import LogoMobileWhite from './assets/logoMobileWhite.png';
 import {Menu} from "../menu";
 import {useAppDispatch, useAppSelector} from "../../hook";
-import {Link, useLocation, useParams, useRoutes} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import {ROUTS} from "../../constans/routs";
 import gsap from "gsap";
-import {setIsOpenBurgerAC, setThemeAC} from "../../../app/app-reduser";
+import {setIsOpenBurgerAC, setIsSelectThemBlockedAC, setThemeAC} from "../../../app/app-reduser";
 import {useScrollBlock} from "../../hook/use-scroll-block";
 import LogoDark from './assets/LogoDarkN.svg'
 
@@ -66,6 +64,7 @@ export const Header = () => {
                 }
             ).repeat(1)
                 .yoyo(true);
+            dispatch(setIsSelectThemBlockedAC({isBlock: true}))
             return
         } else if (theme === 'light') {
             dispatch(setThemeAC({theme: 'dark'}))
@@ -79,7 +78,6 @@ export const Header = () => {
     useEffect(() => {
         document.body.setAttribute('data-theme', theme);
     }, [theme]);
-
 
 
     useEffect(() => {
@@ -110,8 +108,6 @@ export const Header = () => {
                     <HeaderContent>
                         <Link to={ROUTS.HOME} onClick={onClickUpHandler}>
                             <img src={theme === 'light' ? LogoLight : LogoDark} alt=""/>
-                            {/*<ImgWrapDesctop img={theme === 'light' ? LogoLight : LogoDark}/>*/}
-                            {/*<ImgWrapMobile img={theme === 'light' ? LogoMobileWhite : LogoMobileDark}/>*/}
                         </Link>
                         <Menu isOpenBurger={isOpenBurger}
                               onClick={toggleTheme}
@@ -123,6 +119,5 @@ export const Header = () => {
             </HeaderWrapper>
             <Tint className="header-tint"></Tint>
         </>
-
     )
 }

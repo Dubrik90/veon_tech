@@ -12,7 +12,7 @@ import {
 } from "./style";
 import {Container} from "../../style/Container";
 
-import logo from './assets/biglogo.png'
+import logo from '../../../common/components/header/assets/LogoDarkN.svg'
 import instagram from './assets/insta.svg'
 import facebook from './assets/facebook.svg'
 import linkedin from './assets/linkedin.svg'

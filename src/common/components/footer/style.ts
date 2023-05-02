@@ -27,12 +27,10 @@ export const FooterTop = styled.div`
 
   img {
   //  padding: 70px 0;
-    max-width: 100%;
+    max-width: 200px;
     max-height: 100%;
     @media (max-width: 1227px) {
-      padding: 0;
-      max-height: 85px;
-      object-fit: contain;
+      margin-bottom: 20px; 
     }
   }
 
@@ -47,10 +45,6 @@ export const FooterIcons = styled.div`
  // align-self: flex-end;
   flex-wrap: wrap;
   column-gap: 12px;
-  
-  svg {
-  //  width: 66px;
-  }
   
   @media (max-width: 1227px) {
     align-self: center;

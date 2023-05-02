@@ -23,6 +23,7 @@ const initialState: InitialStateStateType = {
     isOpenBonuseForm: false,
     isMenuOpen: false,
     isConsultantModalOpen: false,
+    isSelectThemBlocked: false,
     filterCase: [],
     cases: [
         {
@@ -189,8 +190,12 @@ const slice = createSlice({
         },
         setFilterCaseAC(state, action: PayloadAction<{ filter: string[] }>) {
             //   console.log(action.payload.filter)
-            state.filterCase = action.payload.filter
+            state.filterCase = [...state.filterCase, ...action.payload.filter]
         },
+        setIsSelectThemBlockedAC(state, action: PayloadAction<{ isBlock: boolean }>) {
+            state.isSelectThemBlocked = action.payload.isBlock
+        },
+
         setIsOpenBonuseFormAC(state, action: PayloadAction<{ isOpen: boolean }>) {
             state.isOpenBonuseForm = action.payload.isOpen
         },
@@ -221,6 +226,7 @@ type InitialStateStateType = {
     isScramModalOpen: boolean,
     status: RequestStatusType,
     error: string | null,
+    isSelectThemBlocked: boolean,
     theme: ThemeType,
     isModalWindowOpen: boolean,
     isConsultantModalOpen: boolean,
@@ -244,5 +250,6 @@ export const {
     setFilterCaseAC,
     setIsOpenBonuseFormAC,
     setWaterfallModalOpenAC,
+    setIsSelectThemBlockedAC,
     setScramModalOpenAC
 } = slice.actions

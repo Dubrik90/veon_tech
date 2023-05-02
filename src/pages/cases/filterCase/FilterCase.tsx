@@ -3,7 +3,7 @@ import {Button, FilterCaseWrapper} from './style';
 import {Container} from '../../../common/style/Container';
 import styled from 'styled-components';
 import {setFilterCaseAC} from "../../../app/app-reduser";
-import {useAppDispatch} from "../../../common/hook";
+import {useAppDispatch, useAppSelector} from "../../../common/hook";
 
 interface MyFormValues {
     category: string;
@@ -112,7 +112,16 @@ export const FilterCase: React.FC<FilterProps> = ({}) => {
 
     // const [res, setRes] = useState<string[]>([])
     const [selectedOptions, setSelectedOptions] = React.useState<string[]>([]);
+    const filterStore = useAppSelector(state => state.app.filterCase)
+    console.log(filterStore)
 
+    // const activeFilter = (val: string) => {
+    //     if (selectedOptions.length === 0) {
+    //        return filterStore.includes(val)
+    //     } else return selectedOptions.includes(val)
+    // }
+    //
+   // const activeFilter = s ? selectedOptions :
 
     // const filterResultArr = casesData['all'].filter(el => {
     //     return res.includes(el.title)
@@ -120,10 +129,10 @@ export const FilterCase: React.FC<FilterProps> = ({}) => {
     // console.log(filterResultArr)
 
     const handleOptionChange = (option: string) => {
-        setSelectedOptions((prevSelectedOptions) =>
-            prevSelectedOptions.includes(option)
-                ? prevSelectedOptions.filter((o) => o !== option)
-                : [...prevSelectedOptions, option]
+        setSelectedOptions((filterStore) =>
+            filterStore.includes(option)
+                ? filterStore.filter((o) => o !== option)
+                : [...filterStore, option]
         );
     };
 

@@ -17,7 +17,7 @@ import {CaseGranit} from "./pages/caseGranit";
 import {CaseSwiss} from './pages/caseSwiss';
 import {CasePartyIntel} from './pages/casePartyIntel';
 import {CaseHappyElephant} from "./pages/caseHappyElephant";
-import { CaseOptics } from './pages/caseOptics';
+import {CaseOptics} from './pages/caseOptics';
 import {CaseCentavras} from "./pages/caseCentavras";
 import {CaseRentClub} from "./pages/caseRentClub";
 import {caseDataArray} from "./pages/case/app/data";

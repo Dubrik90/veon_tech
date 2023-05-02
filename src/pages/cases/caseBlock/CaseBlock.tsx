@@ -34,23 +34,6 @@ export const CaseBlock: FC<CaseBlockPropsType> = ({filter}) => {
         setShoeMore(true)
     }
 
-
-    // useEffect(() => {
-    //     gsap.fromTo(
-    //         q('.case'),
-    //         {
-    //             opacity: 0
-    //         },
-    //         {
-    //             opacity: 1,
-    //             // продолжительность анимации
-    //             duration: 1,
-    //             stagger: 0.33
-    //         }
-    //     )
-    // }, [filter])
-
-
     return (
         <CaseBlockWrapper>
             <Container>
@@ -79,9 +62,8 @@ export const CaseBlock: FC<CaseBlockPropsType> = ({filter}) => {
                         })
                     }
                 </CaseContent>
-
                 {
-                    filter.length < 12 &&
+                    filter.length > 9 &&
                     <ButtonBlock showMore={showMore} onClick={onClickShowMoreHandler}>
                         <span>Показать еще</span>
                         <ArrowIcon/>
