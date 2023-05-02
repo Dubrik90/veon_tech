@@ -12,15 +12,17 @@ export const SwitchWrapper = styled.div<SwitchWrapperProps>`
   position: relative;
   display: flex;
   column-gap: 10px;
-  cursor: pointer;
+  
   z-index: 9999;
 
   img {
     max-width: 20px;
+    cursor: pointer;
   }
 
   span {
     position: absolute;
+    cursor: pointer;
     top: 50%;
     transform: translateY(-50%);
     left: ${({theme}) => theme === 'light' ? '31px' : '4px'};
@@ -37,15 +39,17 @@ type ModalSwichProps = {
 
 export const ModalSwich = styled.div<ModalSwichProps>`
   position: absolute;
-  bottom: -90px;
+  bottom: -100px;
   left: -180px;
-  opacity: ${({isThemeBlock}) => isThemeBlock ? '1' : '1'};
-  overflow: ${({isThemeBlock}) => isThemeBlock ? 'visible' : 'visible'};
+  opacity: ${({isThemeBlock}) => isThemeBlock ? '1' : '0'};
+  overflow: ${({isThemeBlock}) => isThemeBlock ? 'visible' : 'hidden'};
   transition: all 0.3s ease;
   width: 250px;
   background-color: #5db447;
-  padding: 10px;
+  padding: 10px 15px;
   border-radius: 5px;
+  font-size: 18px;
+  color: var(--color-grey-light);
   
   :before {
     position: absolute;
@@ -54,11 +58,12 @@ export const ModalSwich = styled.div<ModalSwichProps>`
     width: 30px;
     height: 32px;
     display: block;
-    bottom: -6px;
-    left: 20%;
+    top: -6px;
+    right: 20%;
     border-radius: 4px;
-    transform: skewY(35deg);
-    border-top: 0px;
+    transform: skewY(150deg);
+    border-top: 0;
+    z-index: -1;
   }
   
 `

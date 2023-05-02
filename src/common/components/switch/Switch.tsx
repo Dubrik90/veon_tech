@@ -17,20 +17,20 @@ export const Switch: FC<SwitchProps> = ({theme, onClick}) => {
 
     useEffect(() => {
         if (isThemeBlock) {
-            setTimeout(() => {
+            const timeout = setTimeout(() => {
                 dispatch(setIsSelectThemBlockedAC({isBlock: false}))
+                clearTimeout(timeout);
             }, 2000)
-
         }
     }, [isThemeBlock])
 
     return (
 
-        <SwitchWrapper  theme={theme} onClick={onClick}>
+        <SwitchWrapper theme={theme} onClick={onClick}>
             <img src={Moon} alt=""/>
             <img src={Sun} alt=""/>
             <span className={'switch'}></span>
-            <ModalSwich isThemeBlock={isThemeBlock}>переключение темы в данном разделе недоступно</ModalSwich>
+            <ModalSwich isThemeBlock={isThemeBlock}>Переключение темы в данном разделе недоступно</ModalSwich>
         </SwitchWrapper>
     );
 };
