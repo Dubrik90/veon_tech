@@ -116,8 +116,9 @@ export const InputContainer = styled.div`
 
 export const Label = styled.label<{ isActive?: boolean }>`
   position: absolute;
-  top: ${({isActive}) => (isActive ? "-24px" : "10px")};
+  top: ${({isActive}) => (isActive ? "-24px" : "50%")};
   left: ${({isActive}) => (isActive ? "15px" : "5px")};
+  transform: ${({isActive}) => (isActive ? "translateY(0)" : "translateY(-50%)")};
   font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1920 - 320)));
   pointer-events: none;
   transition: all 0.2s ease-in-out;

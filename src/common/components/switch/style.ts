@@ -12,7 +12,6 @@ export const SwitchWrapper = styled.div<SwitchWrapperProps>`
   position: relative;
   display: flex;
   column-gap: 10px;
-  
   z-index: 9999;
 
   img {

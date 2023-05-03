@@ -128,13 +128,17 @@ export const BenefitCard = styled.div`
 `
 export const TitleHead = styled.h2`
   font-weight: var(--fw-bold);
-  font-size: calc(30px + (76 - 30) * ((100vw - 320px) / (1920 - 320)));
+  font-size: 76px;
   line-height: 1.4;
   margin-bottom: 80px;
   color: var(--colors-text-dark);
   position: relative;
   display: inline-block;
-  
+
+  @media (max-width: 1920px) {
+    font-size: calc(30px + (76 - 30) * ((100vw - 320px) / (1920 - 320)));
+  }
+
   :before {
     content: '';
     width: 100%;
@@ -146,12 +150,9 @@ export const TitleHead = styled.h2`
     height: 12px;
     background-color: #5DB447;
   }
+
   span:nth-child(2) {
     position: relative;
-    
-    // border-bottom: 12px solid #5DB447;
-    // padding-bottom: -15px;
-    
 `
 
 export const CardTitle = styled.h4`
