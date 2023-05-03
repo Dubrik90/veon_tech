@@ -69,6 +69,9 @@ export const TextBlock = styled.div`
   @media (max-width: 1920px) {
     padding-left: 5%;
   }
+  @media (max-width: 599px) {
+    padding: 0 15px;
+  }
 
 `
 

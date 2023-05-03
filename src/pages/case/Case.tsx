@@ -21,10 +21,6 @@ type CasePropsType = {
 
 
 export const Case:FC<CasePropsType> = ({caseData}) => {
-    const {category} = useParams<UseParamsType>()
-
-
-   // const activeCase = caseDataArray[0]
 
     return (
         <CaseWrapper>

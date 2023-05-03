@@ -113,7 +113,6 @@ export const FilterCase: React.FC<FilterProps> = ({}) => {
     // const [res, setRes] = useState<string[]>([])
     const [selectedOptions, setSelectedOptions] = React.useState<string[]>([]);
     const filterStore = useAppSelector(state => state.app.filterCase)
-    console.log(filterStore)
 
     // const activeFilter = (val: string) => {
     //     if (selectedOptions.length === 0) {

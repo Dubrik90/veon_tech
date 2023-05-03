@@ -14,16 +14,6 @@ import {setThemeAC} from "../../app/app-reduser";
 
 
 export const CaseHappyElephant = () => {
-    // const theme = useAppSelector(state => state.app.theme)
-    // const dispatch = useAppDispatch()
-    // const validPaths = ['/case/happy-elephant', '/case/optics', '/case/swiss', '/case/granit-company', '/case/party-intel', '/case/centavras', '/case/rent-club'];
-    //
-    //
-    // useEffect(() => {
-    //     if(theme === 'dark' && validPaths.includes(location.pathname)) {
-    //         dispatch(setThemeAC({theme: 'light'}))
-    //     }
-    // },[])
 
     return (
         <CaseHappyElephantWrapper>

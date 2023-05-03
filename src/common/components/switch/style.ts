@@ -65,5 +65,11 @@ export const ModalSwich = styled.div<ModalSwichProps>`
     border-top: 0;
     z-index: -1;
   }
-  
+  @media (max-width: 1092px) {
+    left: 50%;
+    transform: translateX(-50%);
+    :before {
+      right: 50%;
+    }
+  }
 `

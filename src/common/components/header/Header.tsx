@@ -3,7 +3,6 @@ import {Container} from "../../style/Container";
 import {HeaderContent, HeaderWrapper, Tint} from "./style"
 import {Burger} from "../../style/Burger";
 import LogoLight from './assets/LogoLightN.svg';
-//import LogoDark from './assets/logoDark.svg';
 import {Menu} from "../menu";
 import {useAppDispatch, useAppSelector} from "../../hook";
 import {Link, useLocation} from "react-router-dom";
@@ -21,12 +20,13 @@ export const Header = () => {
     const theme = useAppSelector(state => state.app.theme)
     const isOpenBurger = useAppSelector(state => state.app.isOpenBurger)
     const [blockScroll, allowScroll] = useScrollBlock();
+    const validPaths = ['/case/happy-elephant', '/case/optics', '/case/swiss', '/case/granit-company', '/case/party-intel', '/case/centavras', '/case/rent-club'];
+
 
     const onClickOpenBurger = () => {
         if (!isOpenBurger) {
             blockScroll()
         }
-
         dispatch(setIsOpenBurgerAC({isOpen: !isOpenBurger}))
         if (isOpenBurger) {
             allowScroll()
@@ -46,7 +46,12 @@ export const Header = () => {
     }
     const switchElement = document.querySelector('.switch');
 
-    const validPaths = ['/case/happy-elephant', '/case/optics', '/case/swiss', '/case/granit-company', '/case/party-intel', '/case/centavras', '/case/rent-club'];
+    useEffect(() => {
+        if (theme === 'dark' && validPaths.includes(location.pathname)) {
+            dispatch(setThemeAC({theme: 'light'}))
+            dispatch(setIsSelectThemBlockedAC({isBlock: true}))
+        }
+    }, [location.pathname])
 
     const toggleTheme = () => {
         if (validPaths.includes(location.pathname)) {
@@ -69,10 +74,6 @@ export const Header = () => {
         } else if (theme === 'light') {
             dispatch(setThemeAC({theme: 'dark'}))
         } else dispatch(setThemeAC({theme: 'light'}))
-
-        // if (theme === 'light') {
-        //     dispatch(setThemeAC({theme: 'dark'}))
-        // } else dispatch(setThemeAC({theme: 'light'}))
     }
 
     useEffect(() => {

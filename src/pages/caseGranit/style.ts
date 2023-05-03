@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {flexColumn} from "../../common/style/mixin";
 
 export const CaseGranitWrapper = styled.div`
-  overflow: hidden;
+ // overflow: hidden;
 `
 export const GranitTextContent = styled.div`
  // margin-top: 80px;

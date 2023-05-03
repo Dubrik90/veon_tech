@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {flexColumn} from "../../common/style/mixin";
 
 export const CaseWrapper = styled.div`
-  overflow: hidden;
+ // overflow: hidden;
 `
 export const Title = styled.h3`
   font-weight: var(--fw-bold);

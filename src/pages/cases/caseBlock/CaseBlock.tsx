@@ -38,8 +38,7 @@ export const CaseBlock: FC<CaseBlockPropsType> = ({filter}) => {
         <CaseBlockWrapper>
             <Container>
                 <CaseContent ref={el}>
-                    {
-                        filter.map((el) => {
+                    {filter.map((el) => {
                             return (
                                 <React.Fragment key={el.id}>
                                     <Content showMore={showMore} className='case'>
@@ -52,25 +51,20 @@ export const CaseBlock: FC<CaseBlockPropsType> = ({filter}) => {
                                                     <Title>{el.name}</Title>
                                                     <Text>{el.about}</Text>
                                                     <Title>{el.desk}</Title>
-                                                    {/*<Link to={el.route}>Подробнее</Link>*/}
                                                 </div>
                                             </HiddenBlock>
                                         </Link>
                                     </Content>
                                 </React.Fragment>
                             )
-                        })
-                    }
+                        })}
                 </CaseContent>
-                {
-                    filter.length > 9 &&
+                {filter.length > 9 &&
                     <ButtonBlock showMore={showMore} onClick={onClickShowMoreHandler}>
                         <span>Показать еще</span>
                         <ArrowIcon/>
-                    </ButtonBlock>
-                }
+                    </ButtonBlock>}
                 {/*<CasesSlider filter={filter}/>*/}
-
             </Container>
         </CaseBlockWrapper>
     );

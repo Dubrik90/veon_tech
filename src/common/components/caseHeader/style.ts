@@ -4,6 +4,7 @@ export const CaseHeaderWrapper = styled.div`
   padding-top: 140px;
   padding-bottom: 85px;
   background-color: var(--colors-bg);
+  overflow: hidden;
  
   @media (max-width: 1920px) {
     padding-bottom: calc(30px + (85 - 30) * ((100vw - 320px) / (1920 - 320)));

@@ -31,13 +31,7 @@ export const MenuList = styled.ul<PropsMenu>`
   .about-link {
     display: none;
   }
-
-  @media (max-width: 1469px) {
-   // column-gap: 30px;
-  }
-  @media (max-width: 1115px) {
-   // column-gap: 25px;
-  }
+  
   @media (max-width: 1092px) {
     left: ${({isOpenBurger}) => isOpenBurger ? '0' : '-100%'};
     flex-direction: column;
@@ -53,6 +47,17 @@ export const MenuList = styled.ul<PropsMenu>`
     background-color: var(--colors-bg);
     width: 100%;
     transition: left 0.3s;
+
+    :after {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      background-color: var(--colors-bg);
+      z-index: 10;
+    }
 
     .about-sub-menu {
       display: none;
@@ -84,6 +89,8 @@ export const SubMenu = styled.ul`
   @media (max-width: 1320px) {
     transform: translate(0px, 27px);
   }
+  
+  
 
   :before {
     content: '';
