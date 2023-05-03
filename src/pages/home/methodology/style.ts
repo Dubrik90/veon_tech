@@ -73,6 +73,7 @@ export const Ul = styled.ul`
   ${flexColumn()};
   row-gap: 10px;
   margin-bottom: 15px;
+  list-style: none;
 `
 export const Li = styled.li`
   display: flex;

@@ -127,26 +127,26 @@ export const ContentBlock = styled.div`
 
     li {
       max-width: 100%;
-      padding-left: 32px;
+     // padding-left: 32px;
       font-size: calc(21px + (26 - 21) * ((100vw - 320px) / (1920 - 320)));
       line-height: 130%;
       position: relative;
       color:var( --colors-text-dark);
 
-      :before {
-        content: '';
-        position: absolute;
-        display: block;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 0;
-        width: 17px;
-        height: 2px;
-        font-size: 20px;
-        line-height: 30px;
-        background-color: var(--colors-text-dark);
-        
-      }
+      //:before {
+      //  content: '';
+      //  position: absolute;
+      //  display: block;
+      //  top: 50%;
+      //  transform: translateY(-50%);
+      //  left: 0;
+      //  width: 17px;
+      //  height: 2px;
+      //  font-size: 20px;
+      //  line-height: 30px;
+      //  background-color: var(--colors-text-dark);
+      //  
+      //}
 
     }
   }
