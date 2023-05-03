@@ -1,7 +1,7 @@
 import React, {useRef} from 'react';
 import {Chat} from "./chat/Chat";
-import {Button, GetInTorchWrapper, Title} from "./style";
-import {MassageIcon} from "./assets";
+import {Button, GetInTorchWrapper, IconsBlock, Title} from "./style";
+import {Linkedin, MassageIcon, Telegram} from "./assets";
 
 
 export const GetInTorch = () => {
@@ -15,24 +15,6 @@ export const GetInTorch = () => {
         setView(!view)
     }
 
-    // useEffect(() => {
-    //     gsap.to("#Torch", {
-    //         x: -70,
-    //         duration: 3,
-    //         scrollTrigger: {
-    //             trigger: "#Torch",
-    //             start: "top center",
-    //             end: "bottom 180px",
-    //             scrub: true
-    //         }
-    //     });
-    //
-    //
-    // }, []);
-
-
-    // gsap.fromTo(el, {translateX: 0}, {translateX: 0, duration: 2.5})
-
     return (
         <>
             <GetInTorchWrapper view={view} className='torch' ref={circleRef}>
@@ -40,6 +22,14 @@ export const GetInTorch = () => {
                 <Button onClick={openModal}>
                     <Title>Отправте нам сообщение</Title>
                 </Button>
+                <IconsBlock>
+                    <a href="https://www.linkedin.com/company/veon-tech/" target={'_blank'}>
+                        <Linkedin/>
+                    </a>
+                    <a href="https://t.me/veon_tech" target={'_blank'}>
+                        <Telegram/>
+                    </a>
+                </IconsBlock>
             </GetInTorchWrapper>
             <Chat view={view} closeModal={closeModal}/>
         </>

@@ -18,7 +18,6 @@ export const Home = () => {
     const button = useRef(null)
     const descriptionWeb = useRef(null)
 
-
     const tl = gsap.timeline({defaults: {ease: 'power2.easeInOut'}})
 
     useEffect(() => {
@@ -29,7 +28,6 @@ export const Home = () => {
         tl.to(el, {clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity: 1, duration: 1.5}, 1)
             .to(but, {opacity: 1, ease: 'power0.easeNone'}, 1.7)
             .to(descWeb, {clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity: 1}, 1.7)
-
     }, [])
 
 
