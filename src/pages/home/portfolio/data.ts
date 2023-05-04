@@ -15,61 +15,61 @@ import {ROUTS} from "../../../common/constans/routs";
 export const portfolioData: DevDataType[] = [
     {
         header: 'Разработка сайта каталога',
-        desc: 'UX, UI, Graphic Design',
+        desc: '',
         img: Img07,
         link: ROUTS.CASE_SINARADESING
     },
     {
         header: 'Разработка онлайн сервиса',
-        desc: 'UX, UI, Graphic Design',
+        desc: '',
         img: Img08,
         link: ROUTS.CASE_ART_MEDIA
     },
     {
         header: 'Разработка корпоративного сайта',
-        desc: 'UX, UI, Graphic Design',
+        desc: '',
         img: Img03,
         link: ROUTS.CASE_OPTICS
     },
     {
         header: 'Разработка календаря бронирования',
-        desc: 'UX, UI, Graphic Design',
+        desc: '',
         img: Img04,
         link: ROUTS.CASE_PAPPY_ELEPHANT
     },
     {
         header: 'Редизайн интернет-каталога',
-        desc: 'UX, UI, Graphic Design',
+        desc: '',
         img: Img05,
         link: ROUTS.CASE_SWISS
     },
     {
         header: 'Создание сайта-каталога',
-        desc: 'UX, UI, Graphic Design',
+        desc: '',
         img: Img06,
         link: ROUTS.CASE_SODOX
     },
     {
         header: 'Создание сайта-каталога',
-        desc: 'UX, UI, Graphic Design',
+        desc: '',
         img: Img01,
         link: ROUTS.CASE_GRANIT
     },
     {
         header: 'Cервис поиска услуг',
-        desc: 'UX, UI, Graphic Design',
+        desc: '',
         img: Img02,
         link: ROUTS.CASE_PARTY_INTEL
     },
     {
-        header: 'Creative business card',
-        desc: 'UX, UI, Graphic Design',
+        header: 'Разработка корпоративного сайта',
+        desc: '',
         img: Img09,
         link: ROUTS.CASE_CENTAVRAS
     },
     {
-        header: 'Creative business card',
-        desc: 'UX, UI, Graphic Design',
+        header: 'Создание маркетплейса',
+        desc: '',
         img: Img10,
         link: ROUTS.CASE_RENT_CLUB
     },

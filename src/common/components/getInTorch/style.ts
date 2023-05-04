@@ -7,61 +7,98 @@ type GetInTorchWrapperProps = {
 
 export const IconsBlock = styled.div`
   ${flexColumn()};
-  align-items: center;
-  justify-content: center;
-  padding: 15px;
-  transform: rotate(90deg) translateX(100%);
-  row-gap: 20px;
+  // align-items: center;
+  // justify-content: center;
+  // padding: 15px;
+  transform: rotate(90deg);
+  // row-gap: 15px;
   opacity: 0;
   visibility: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
+  border-radius: 5px;
   z-index: 5;
   position: absolute;
-  top: -130px;
-  left: 25px; 
-  transition: all 0.3s;
+  top: -174px;
+  left: -86px;
+  //transition: all 0.3s;
+  background-color: var(--colors-bg);
+  color: var(--colors-text-dark);
+  font-size: 16px;
+  font-weight: var(--fw-regular);
 
-  a svg {
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-    transition: all 0.3s;
-
-    path {
-      fill: #233428;
-    }
-    rect {
-      fill: #233428;
-    }
-    circle {
-      fill: #233428;
-    }
+  div:not(:last-child) {
+    border-bottom: 1px solid rgb(217, 217, 217);
   }
-  a:nth-child(1) {
+
+  div {
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+
+    a {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      position: relative;
+      padding: 0 15px;
+    }
+    
     :hover {
-      circle:nth-child(1) {
-        fill: #0e76a8;
+      background-color: rgba(110, 236, 78, 0.15);
+
+      a span {
+        color: #000;
       }
     }
-  }
 
-  a:nth-child(2) {
-    :hover {
+    a svg {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+   //   transition: all 0.3s;
+
+      path {
+        fill: #233428;
+      }
+
+      rect {
+        fill: #233428;
+      }
+
       circle {
-        fill: #229ED9;
+        fill: #233428;
       }
     }
-  }
-}
 
-:after {
-  content: '';
-  width: 25px;
-  height: 100%;
-  position: absolute;
-  top: -10px;
-  right: 0;
-  z-index: -1;
-  opacity: 0;
+    //a:nth-child(1) {
+    //  :hover {
+    //    circle:nth-child(1) {
+    //      fill: #0e76a8;
+    //    }
+    //  }
+    //}
+    //
+    //a:nth-child(2) {
+    //  :hover {
+    //    circle {
+    //      fill: #229ED9;
+    //    }
+    //  }
+    //}
+  }
+
+
+  :after {
+    content: '';
+    width: 25px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -13px;
+    z-index: -1;
+    opacity: 0;
+    //  background-color: #5bacd2;
+  }
 }
 `
 
@@ -84,19 +121,19 @@ export const GetInTorchWrapper = styled.div<GetInTorchWrapperProps>`
   background: var(--colors-bg-green);
   padding: 5px 14px 3px 14px;
   transform: rotate(-90deg);
-  
+
   svg {
     transition: all 0.3s;
     fill: var(--colors-text-dark);
   }
 
   :hover {
-    transition: all 0.3s;
-    background: var(--color-dg-footer);
+   // transition: all 0.3s;
+  //  background: var(--color-dg-footer);
 
     div {
       p {
-        color: var(--colors-text-wight);
+    //    color: var(--colors-text-wight);
       }
     }
 

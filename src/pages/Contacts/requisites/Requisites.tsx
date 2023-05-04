@@ -27,7 +27,7 @@ export const Requisites = () => {
                         <ImgBlock>
                             <Img src={PdfIcon} alt={'pdf files'}/>
                         </ImgBlock>
-                        <DownloadButton fileName={'details.pdf'} url="/files/details.pdf">
+                        <DownloadButton fileName={'details.pdf'} url="/veon_tech/files/details.pdf">
                             Скачаь
                         </DownloadButton>
                         {/*<Button>Скачать</Button>*/}

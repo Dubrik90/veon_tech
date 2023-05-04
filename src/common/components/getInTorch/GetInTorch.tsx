@@ -23,12 +23,18 @@ export const GetInTorch = () => {
                     <Title>Отправте нам сообщение</Title>
                 </Button>
                 <IconsBlock>
-                    <a href="https://www.linkedin.com/company/veon-tech/" target={'_blank'}>
-                        <Linkedin/>
-                    </a>
-                    <a href="https://t.me/veon_tech" target={'_blank'}>
-                        <Telegram/>
-                    </a>
+                    <div>
+                        <a href="https://www.linkedin.com/company/veon-tech/" target={'_blank'}>
+                            <Linkedin/>
+                            <span>Сообщение в Linkedin</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://t.me/veon_tech" target={'_blank'}>
+                            <Telegram/>
+                            <span>Сообщение в Telegram</span>
+                        </a>
+                    </div>
                 </IconsBlock>
             </GetInTorchWrapper>
             <Chat view={view} closeModal={closeModal}/>
