@@ -12,11 +12,21 @@ export const Сases = () => {
     const casesArray = useAppSelector(state => state.app.cases)
     const filterCase = useAppSelector(state => state.app.filterCase)
 
+
+
+    // const filterResultArr = casesArray.filter(el =>
+    //     filterCase.some(filterVal =>
+    //         el.title.toLowerCase().includes(filterVal.toLowerCase()) ||
+    //         el.country.toLowerCase().includes(filterVal.toLowerCase())
+    //     )
+    // );
+
+
     const filterResultArr = casesArray.filter(el => {
         if(filterCase.length === 0) {
             return casesArray
         } else {
-            return filterCase.includes(el.title || el.country)
+            return filterCase.includes(el.title)
         }
     })
 

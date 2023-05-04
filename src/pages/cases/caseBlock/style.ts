@@ -151,7 +151,7 @@ export const HiddenBlock = styled.div`
 export const Title = styled(TitleH4)`
   z-index: 1;
   font-size: 24px;
-  line-height: 29px;
+  line-height: 1.2;
   font-weight: var(--fw-regular);
   color: #000000;
 

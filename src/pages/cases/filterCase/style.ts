@@ -183,25 +183,6 @@ export const FilterCaseWrapper = styled.div`
     vertical-align: bottom
   }
 
-  .cases-btn__download, .filter__content-apply {
-    background-color: #fff200;
-    border-radius: 50px;
-    width: 192px;
-    color: #000;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 22px;
-    padding: 17px;
-    border: transparent
-  }
-
-  .cases-btn__download {
-    width: 281px
-  }
-
   .styled-checkbox {
     position: absolute;
     opacity: 0
@@ -448,8 +429,9 @@ export const FilterCaseWrapper = styled.div`
     //  }
     //
     .filter__form {
-      ${flexColumn()};
-      row-gap: 10px;
+      display: none;
+
+      // row-gap: 10px;
       //height: 100%;
       //width: calc(100% + 20px);
       //flex-direction: column;
@@ -591,11 +573,6 @@ export const Button = styled.button`
     width: 100%;
   }
 
-
-  //@media (max-width: 980px) {
-  //  align-self: stretch;
-  //}
-
   :before {
     background-color: var(--colors-bg-green);
     border: 2px solid var(--colors-bg-green);
@@ -627,4 +604,33 @@ export const Button = styled.button`
 `
 
 
+export const FilterFormMobile = styled.div`
+  position: relative;
+  display: none;
+  
+  @media (max-width: 650px) {
+    display: block;
+  }
+
+`
+
+export const SubMobileMenu = styled.div`
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  background-color: rgb(145, 145, 147);
+  z-index: 20;
+  padding: 15px;
+  max-height: 400px;
+  overflow: auto;
+  border-radius: 5px;
+`
+export const TitleSubMobileMenu = styled.h5`
+  font-size: 24px;
+  font-weight: 600;
+  margin: 10px 0 20px 0;
+  color: var(--colors-text-dark);
+
+`
 

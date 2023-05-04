@@ -75,8 +75,6 @@ const initialState: InitialStateStateType = {
             color: 'wight',
             img: party
         },
-
-
         {
             id: '5',
             type: 'magazines',
@@ -189,8 +187,7 @@ const slice = createSlice({
             state.isConsultantModalOpen = action.payload.isOpen
         },
         setFilterCaseAC(state, action: PayloadAction<{ filter: string[] }>) {
-            //   console.log(action.payload.filter)
-            state.filterCase = [...state.filterCase, ...action.payload.filter]
+            state.filterCase = [...action.payload.filter]
         },
         setIsSelectThemBlockedAC(state, action: PayloadAction<{ isBlock: boolean }>) {
             state.isSelectThemBlocked = action.payload.isBlock

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Button, FilterCaseWrapper} from './style';
+import {Button, FilterCaseWrapper, FilterFormMobile, SubMobileMenu, TitleSubMobileMenu} from './style';
 import {Container} from '../../../common/style/Container';
 import styled from 'styled-components';
 import {setFilterCaseAC} from "../../../app/app-reduser";
@@ -69,6 +69,11 @@ export const CheckboxLabel = styled.label<CheckboxLabelProps>`
   font-size: 20px;
   color: var(--colors-text-dark);
   font-weight: var(--fw-medium);
+
+  @media (max-width: 650px) {
+    font-weight: var(--fw-regular);
+  }
+  
 `;
 
 
@@ -109,23 +114,9 @@ const Ul = styled.ul`
 export const FilterCase: React.FC<FilterProps> = ({}) => {
     const dispatch = useAppDispatch()
     const [activeGroup, setActiveGroup] = useState<string | null>(null);
-
-    // const [res, setRes] = useState<string[]>([])
+    const [showBlock, setShowBlock] = useState(false)
     const [selectedOptions, setSelectedOptions] = React.useState<string[]>([]);
-    const filterStore = useAppSelector(state => state.app.filterCase)
 
-    // const activeFilter = (val: string) => {
-    //     if (selectedOptions.length === 0) {
-    //        return filterStore.includes(val)
-    //     } else return selectedOptions.includes(val)
-    // }
-    //
-   // const activeFilter = s ? selectedOptions :
-
-    // const filterResultArr = casesData['all'].filter(el => {
-    //     return res.includes(el.title)
-    // })
-    // console.log(filterResultArr)
 
     const handleOptionChange = (option: string) => {
         setSelectedOptions((filterStore) =>
@@ -137,19 +128,16 @@ export const FilterCase: React.FC<FilterProps> = ({}) => {
 
     const handleApplyClick = () => {
         dispatch(setFilterCaseAC({filter: selectedOptions}))
-        //setRes(selectedOptions);
         setActiveGroup(null)
+        setShowBlock(false)
     };
-
-
-    const [showBlock, setShowBlock] = useState(false)
 
     const filterData = [
         {
             id: '0',
             filterName: 'Категории',
             type: ['magazines', 'catalogs', 'sites', 'visit'],
-            filterCategories: ['Интернет-магазины', 'Интеренет-каталоги', 'Корпоративные сайты', 'Сайт-визитки', 'Веб-сервисы', 'Мобильные приложения', 'ПО', ]
+            filterCategories: ['Интернет-магазины', 'Интеренет-каталоги', 'Корпоративные сайты', 'Сайт-визитки', 'Веб-сервисы', 'Мобильные приложения', 'ПО',]
         },
         {
             id: '1',
@@ -163,16 +151,12 @@ export const FilterCase: React.FC<FilterProps> = ({}) => {
         },
     ]
 
+
     const onClickToggleHandler = (ind: string) => {
         if (ind == activeGroup) {
             return setActiveGroup(null)
         }
         setActiveGroup(ind)
-    }
-    const onClickCloseGroup = () => {
-        if (activeGroup) {
-            setActiveGroup(null)
-        }
     }
 
     return (
@@ -211,6 +195,35 @@ export const FilterCase: React.FC<FilterProps> = ({}) => {
                     ))}
                 </div>
 
+                <FilterFormMobile >
+                    <div className={'filter__item'} onClick={() => setShowBlock(!showBlock)}>
+                        <span className="filter__title">Фильтр</span>
+                        <div className="filter-btn"></div>
+                    </div>
+                    { showBlock &&  <SubMobileMenu>
+                        {filterData.map((el) => (
+                            <div key={el.id}>
+                                <TitleSubMobileMenu>{el.filterName}</TitleSubMobileMenu>
+                                <ul className="filter__content-list scrollbar-theme">
+                                    {el.filterCategories.map(option => (
+                                        <li key={option}>
+                                            <CheckboxLabel checked={selectedOptions.includes(option)}>
+                                                <CheckboxFilter
+                                                    type="checkbox"
+                                                    checked={selectedOptions.includes(option)}
+                                                    onChange={() => handleOptionChange(option)}
+                                                />
+                                                {option}
+                                            </CheckboxLabel>
+                                        </li>))}
+                                </ul>
+                            </div>
+                        ))}
+                        <div className="filter__content-btn">
+                            <Button onClick={handleApplyClick}>Применить</Button>
+                        </div>
+                    </SubMobileMenu>}
+                </FilterFormMobile>
             </Container>
         </FilterCaseWrapper>
     );

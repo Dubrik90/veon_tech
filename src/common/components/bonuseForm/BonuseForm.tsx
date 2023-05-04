@@ -273,7 +273,7 @@ export const BonuseForm: React.FC = () => {
                                     </TextareaLabel>
                                 </TextareaWrapper>
                             </FormDataItemComment>
-                            {/*file*/}
+                            {/*files*/}
                             <FormDataItemUpload>
                                 <UploadWrapper>
                                     <UploadItem>

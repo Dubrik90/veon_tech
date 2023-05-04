@@ -2,6 +2,7 @@ import React from 'react';
 import {DocBlock, Img, ImgBlock, P, RequisitesBlock, Button, RequisitesContent, RequisitesWrapper, Title} from './style';
 import {Container} from "../../../common/style/Container";
 import PdfIcon from './assets/pdfIcon.png'
+import {DownloadButton} from "../../../common/components/downloadButton/DownloadButton";
 
 export const Requisites = () => {
     return (
@@ -24,9 +25,12 @@ export const Requisites = () => {
                     </RequisitesContent>
                     <DocBlock>
                         <ImgBlock>
-                            <Img src={PdfIcon} alt={'pdf file'}/>
+                            <Img src={PdfIcon} alt={'pdf files'}/>
                         </ImgBlock>
-                        <Button>Скачать</Button>
+                        <DownloadButton fileName={'details.pdf'} url="/files/details.pdf">
+                            Скачаь
+                        </DownloadButton>
+                        {/*<Button>Скачать</Button>*/}
                     </DocBlock>
                 </RequisitesBlock>
             </Container>

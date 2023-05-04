@@ -11,6 +11,7 @@ import {
 import {Container} from "../../../common/style/Container";
 import ImgWebDev from "../../services/assets/wedDevImages/logo.png";
 import FileImg from "../assets/file-folder.png";
+import {DownloadButton} from "../../../common/components/downloadButton/DownloadButton";
 
 export const AboutHeader = () => {
     return (
@@ -18,18 +19,19 @@ export const AboutHeader = () => {
             <Container>
                 <HeaderBlock>
                     <HeaderContent>
-                        <Title className={'animate'}> <span>VEON-TECH</span> — надежность и опыт в каждом проекте</Title>
+                        <Title className={'animate'}> <span>VEON-TECH</span> — надежность и опыт в каждом
+                            проекте</Title>
                         {/*<Button>Скачать презентацию</Button>*/}
                         {/*<Text>{text}</Text>*/}
                     </HeaderContent>
                     <HeaderImage className={'animate'}>
                         <Img src={ImgWebDev} alt='image'/>
-                        <a href="../upload/ПрезентацияNS_2023.pdf" className="about-us__btn" target="_blank">
+                        <DownloadButton fileName={'details.pdf'} className="about-us__btn" url="/files/details.pdf">
                             <span className="about-us__btn-label">Скачать презентацию PDF
                                 <img className="about-us__btn-icon" src={FileImg}
                                      loading="lazy"/>
                             </span>
-                        </a>
+                        </DownloadButton>
                     </HeaderImage>
                 </HeaderBlock>
             </Container>

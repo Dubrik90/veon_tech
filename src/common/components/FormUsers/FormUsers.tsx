@@ -400,7 +400,7 @@ export const FormUsers: React.FC = () => {
                                     </TextareaLabel>
                                 </TextareaWrapper>
                             </FormDataItemComment>
-                            {/*file*/}
+                            {/*files*/}
                             <FormDataItemUpload>
                                 <UploadWrapper>
                                     <UploadItem>
