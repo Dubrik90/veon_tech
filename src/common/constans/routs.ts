@@ -7,9 +7,12 @@ export const ROUTS = {
     ABOUT: '/about',
     //DEVELOP: '/development',
     POLICY: '/privacy',
+    SERVICE_PAGE: '/services',
     SERVICES: '/services/:service',
     BONUSES: '/bonuses',
     CONTACTS: '/contacts',
+
+
     CASE_GRANIT: '/case/granit-company',
     CASE_SWISS: '/case/swiss',
     CASE_PARTY_INTEL: '/case/party-intel',
@@ -20,4 +23,5 @@ export const ROUTS = {
     CASE_SODOX: '/case/sodox',
     CASE_ART_MEDIA: '/case/art-media',
     CASE_SINARADESING: '/case/sinaradesign',
+
 }

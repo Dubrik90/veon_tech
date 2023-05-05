@@ -15,9 +15,9 @@ const root = ReactDOM.createRoot(
 root.render(
     <Provider store={store}>
         <GlobalStyles/>
-        <HashRouter>
+        <BrowserRouter>
             <App/>
-        </HashRouter>
+        </BrowserRouter>
     </Provider>
 );
 

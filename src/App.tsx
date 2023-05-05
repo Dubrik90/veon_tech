@@ -21,6 +21,7 @@ import {CaseOptics} from './pages/caseOptics';
 import {CaseCentavras} from "./pages/caseCentavras";
 import {CaseRentClub} from "./pages/caseRentClub";
 import {caseDataArray} from "./pages/case/app/data";
+import { ServicesPage } from './pages/servicesPage';
 
 function App() {
     useEffect(() => {
@@ -37,6 +38,7 @@ function App() {
                 <Route path={ROUTS.NDA} element={<Nda/>}/>
                 <Route path={ROUTS.CASES} element={<Сases/>}/>
                 <Route path={ROUTS.SERVICES} element={<Services/>}/>
+                <Route path={ROUTS.SERVICE_PAGE} element={<ServicesPage/>}/>
                 <Route path={ROUTS.BONUSES} element={<Bonuses/>}/>
                 <Route path={ROUTS.CONTACTS} element={<Contacts/>}/>
                 <Route path={ROUTS.POLICY} element={<Policy/>}/>
