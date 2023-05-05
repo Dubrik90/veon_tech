@@ -2,6 +2,7 @@ import React, {useRef} from 'react';
 import {Chat} from "./chat/Chat";
 import {Button, GetInTorchWrapper, IconsBlock, Title} from "./style";
 import {Linkedin, MassageIcon, Telegram} from "./assets";
+import MassageIc from "./assets/massage.png";
 
 
 export const GetInTorch = () => {
@@ -34,6 +35,12 @@ export const GetInTorch = () => {
                             <Telegram/>
                             <span>Сообщение в Telegram</span>
                         </a>
+                    </div>
+                    <div>
+                        <p onClick={openModal}>
+                            <img src={MassageIc}/>
+                            <span>Оставить сообщение</span>
+                        </p>
                     </div>
                 </IconsBlock>
             </GetInTorchWrapper>

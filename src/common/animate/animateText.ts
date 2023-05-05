@@ -1,7 +1,7 @@
 import {gsap} from "gsap";
-import { matchMedia } from 'match-media';
+import {matchMedia} from 'match-media';
 import {useEffect, useState} from "react";
-import { CSSPlugin } from 'gsap/CSSPlugin';
+import {CSSPlugin} from 'gsap/CSSPlugin';
 
 export const animateText = () => {
 
@@ -32,8 +32,5 @@ export const animateText = () => {
     disableAnimation();
     window.addEventListener("resize", disableAnimation);
     return () => window.removeEventListener("resize", disableAnimation);
-
-
-
 }
 

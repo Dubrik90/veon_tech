@@ -7,42 +7,41 @@ type GetInTorchWrapperProps = {
 
 export const IconsBlock = styled.div`
   ${flexColumn()};
-  // align-items: center;
-  // justify-content: center;
-  // padding: 15px;
   transform: rotate(90deg);
-  // row-gap: 15px;
   opacity: 0;
   visibility: hidden;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
-  border-radius: 5px;
+  border-radius: 15px;
   z-index: 5;
   position: absolute;
-  top: -174px;
-  left: -86px;
-  //transition: all 0.3s;
+  top: -193px;
+  left: -60px;
   background-color: var(--colors-bg);
   color: var(--colors-text-dark);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: var(--fw-regular);
+  overflow: hidden;
 
   div:not(:last-child) {
     border-bottom: 1px solid rgb(217, 217, 217);
   }
 
+
   div {
     min-height: 40px;
     display: flex;
     align-items: center;
+    
 
-    a {
+    a, p {
       display: flex;
       align-items: center;
       column-gap: 10px;
       position: relative;
-      padding: 0 15px;
+      padding: 7px 15px;
+      cursor: pointer;
     }
-    
+
     :hover {
       background-color: rgba(110, 236, 78, 0.15);
 
@@ -51,11 +50,11 @@ export const IconsBlock = styled.div`
       }
     }
 
-    a svg {
+    a svg, img {
       width: 30px;
       height: 30px;
       cursor: pointer;
-   //   transition: all 0.3s;
+      //   transition: all 0.3s;
 
       path {
         fill: #233428;
@@ -69,22 +68,6 @@ export const IconsBlock = styled.div`
         fill: #233428;
       }
     }
-
-    //a:nth-child(1) {
-    //  :hover {
-    //    circle:nth-child(1) {
-    //      fill: #0e76a8;
-    //    }
-    //  }
-    //}
-    //
-    //a:nth-child(2) {
-    //  :hover {
-    //    circle {
-    //      fill: #229ED9;
-    //    }
-    //  }
-    //}
   }
 
 
@@ -97,7 +80,6 @@ export const IconsBlock = styled.div`
     right: -13px;
     z-index: -1;
     opacity: 0;
-    //  background-color: #5bacd2;
   }
 }
 `
@@ -128,14 +110,6 @@ export const GetInTorchWrapper = styled.div<GetInTorchWrapperProps>`
   }
 
   :hover {
-   // transition: all 0.3s;
-  //  background: var(--color-dg-footer);
-
-    div {
-      p {
-    //    color: var(--colors-text-wight);
-      }
-    }
 
     ${IconsBlock} {
       opacity: 1;

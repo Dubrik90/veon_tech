@@ -43,7 +43,7 @@ export const ModalSwich = styled.div<ModalSwichProps>`
   opacity: ${({isThemeBlock}) => isThemeBlock ? '1' : '0'};
   overflow: ${({isThemeBlock}) => isThemeBlock ? 'visible' : 'hidden'};
   transition: all 0.3s ease;
-  width: 250px;
+  width: 260px;
   background-color: #5db447;
   padding: 10px 15px;
   border-radius: 5px;
