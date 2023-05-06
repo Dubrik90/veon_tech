@@ -3,7 +3,6 @@ import {FilterBlockWrapper, FilterMenuList, MenuItem} from "./style";
 import {Container} from "../../../common/style/Container";
 import {FilterCaseType, FilterLinksType} from "../../../common/types/types";
 import {useAppDispatch} from "../../../common/hook";
-import {setFilterCaseAC} from "../../../app/app-reduser";
 
 type FilterBlockPropsType = {
     filter: FilterCaseType

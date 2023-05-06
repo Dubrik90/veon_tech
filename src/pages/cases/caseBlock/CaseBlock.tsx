@@ -24,7 +24,7 @@ type CaseBlockPropsType = {
     filter: CaseType[]
 }
 
-export const CaseBlock: FC<CaseBlockPropsType> = ({filter}) => {
+export const CaseBlock: FC<CaseBlockPropsType> = React.memo( ({filter}) => {
     const el = useRef(null)
     const q = useMemo(() => gsap.utils.selector(el), [])
 
@@ -68,5 +68,5 @@ export const CaseBlock: FC<CaseBlockPropsType> = ({filter}) => {
             </Container>
         </CaseBlockWrapper>
     );
-};
+});
 

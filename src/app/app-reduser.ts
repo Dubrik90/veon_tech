@@ -24,7 +24,9 @@ const initialState: InitialStateStateType = {
     isMenuOpen: false,
     isConsultantModalOpen: false,
     isSelectThemBlocked: false,
-    filterCase: [],
+    filterCountry: [],
+    filterIndustry: [],
+    filterCategory: [],
     cases: [
         {
             id: '1',
@@ -127,18 +129,6 @@ const initialState: InitialStateStateType = {
             id: '9',
             type: 'catalogs',
             title: 'Интеренет-каталоги',
-            name: 'ООО "Sinaradesign"',
-            about: 'Разработка сайта каталога',
-            desk: 'Уникальный дизайн удовлетворяющий современные тенденции!',
-            country: 'Беларусь',
-            route: ROUTS.CASE_SINARADESING,
-            color: '',
-            img: sinaradesign
-        },
-        {
-            id: '10',
-            type: 'catalogs',
-            title: 'Интеренет-каталоги',
             name: 'ООО "Рент клаб"',
             about: 'Создание маркетплейса',
             desk: '',
@@ -146,6 +136,18 @@ const initialState: InitialStateStateType = {
             route: ROUTS.CASE_RENT_CLUB,
             color: '',
             img: rent
+        },
+        {
+            id: '10',
+            type: 'catalogs',
+            title: 'Интеренет-каталоги',
+            name: 'ООО "Sinaradesign"',
+            about: 'Разработка сайта каталога',
+            desk: 'Уникальный дизайн удовлетворяющий современные тенденции!',
+            country: 'Беларусь',
+            route: ROUTS.CASE_SINARADESING,
+            color: '',
+            img: sinaradesign
         },
         // {
         //     id: '11',
@@ -186,9 +188,19 @@ const slice = createSlice({
         setIsConsultantModalOpenAC(state, action: PayloadAction<{ isOpen: boolean }>) {
             state.isConsultantModalOpen = action.payload.isOpen
         },
-        setFilterCaseAC(state, action: PayloadAction<{ filter: string[] }>) {
-            state.filterCase = [...action.payload.filter]
+
+        setFilterCategoryAC(state, action: PayloadAction<{ filter: string[] }>) {
+            state.filterCategory = [...action.payload.filter]
         },
+        setFilterIndustryAC(state, action: PayloadAction<{ filter: string[] }>) {
+            state.filterIndustry = [...action.payload.filter]
+        },
+        setFilterCountryAC(state, action: PayloadAction<{ filter: string[] }>) {
+            state.filterCountry = [...action.payload.filter]
+        },
+
+
+
         setIsSelectThemBlockedAC(state, action: PayloadAction<{ isBlock: boolean }>) {
             state.isSelectThemBlocked = action.payload.isBlock
         },
@@ -227,7 +239,9 @@ type InitialStateStateType = {
     theme: ThemeType,
     isModalWindowOpen: boolean,
     isConsultantModalOpen: boolean,
-    filterCase: string[],
+    filterCountry: string[],
+    filterIndustry: string[],
+    filterCategory: string[],
     cases: CaseType[]
 }
 export type RequestStatusType = 'idle' | 'loading' | 'error'
@@ -244,7 +258,9 @@ export const {
     setIsOpenBurgerAC,
     setAppStatusAC,
     setAppErrorAC,
-    setFilterCaseAC,
+    setFilterCategoryAC,
+    setFilterIndustryAC,
+    setFilterCountryAC,
     setIsOpenBonuseFormAC,
     setWaterfallModalOpenAC,
     setIsSelectThemBlockedAC,

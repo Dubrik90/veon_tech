@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import {СasesWrapper} from "./style";
 import {CaseBlock} from "./caseBlock";
 import {useAppSelector} from "../../common/hook";
@@ -6,29 +6,28 @@ import {Container} from '../../common/style/Container';
 import {TitleHead} from "../services/benefit/style";
 import {animateText} from "../../common/animate/animateText";
 import {FilterCase} from './filterCase';
+import {CaseType} from "../../common/types/types";
 
 export const Сases = () => {
 
     const casesArray = useAppSelector(state => state.app.cases)
-    const filterCase = useAppSelector(state => state.app.filterCase)
+    const [resultFilterArray, setResultFilterArray] = useState<CaseType[]>(casesArray)
+    const {filterCountry, filterCategory} = useAppSelector(state => state.app)
 
+    useEffect(() => {
 
-
-    // const filterResultArr = casesArray.filter(el =>
-    //     filterCase.some(filterVal =>
-    //         el.title.toLowerCase().includes(filterVal.toLowerCase()) ||
-    //         el.country.toLowerCase().includes(filterVal.toLowerCase())
-    //     )
-    // );
-
-
-    const filterResultArr = casesArray.filter(el => {
-        if(filterCase.length === 0) {
-            return casesArray
-        } else {
-            return filterCase.includes(el.title)
+        if (![...filterCountry, ...filterCategory].length) {
+            setResultFilterArray(casesArray)
+            return
         }
-    })
+
+        setResultFilterArray(casesArray.filter(el => {
+            return filterCountry.length ? filterCountry.includes(el.country) : resultFilterArray
+        }).filter(el => {
+            return filterCategory.length ? filterCategory.includes(el.title) : resultFilterArray
+        }))
+    }, [filterCountry, filterCategory])
+
 
     useEffect(() => {
         document.title = 'Кейсы — VEON-TECH'
@@ -43,10 +42,10 @@ export const Сases = () => {
             <Container>
                 <TitleHead className='animate'>Кейсы</TitleHead>
             </Container>
-            <FilterCase />
+            <FilterCase/>
             {/*<FilterBlock filter={filter}*/}
             {/*/>*/}
-            <CaseBlock filter={filterResultArr}/>
+            <CaseBlock filter={resultFilterArray}/>
         </СasesWrapper>
     );
 };

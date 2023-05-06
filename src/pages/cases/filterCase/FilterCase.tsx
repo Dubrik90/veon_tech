@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import {Button, FilterCaseWrapper, FilterFormMobile, SubMobileMenu, TitleSubMobileMenu} from './style';
 import {Container} from '../../../common/style/Container';
 import styled from 'styled-components';
-import {setFilterCaseAC} from "../../../app/app-reduser";
-import {useAppDispatch, useAppSelector} from "../../../common/hook";
+import {setFilterCategoryAC, setFilterCountryAC} from "../../../app/app-reduser";
+import {useAppDispatch} from "../../../common/hook";
 
 interface MyFormValues {
     category: string;
@@ -115,19 +115,30 @@ export const FilterCase: React.FC<FilterProps> = ({}) => {
     const dispatch = useAppDispatch()
     const [activeGroup, setActiveGroup] = useState<string | null>(null);
     const [showBlock, setShowBlock] = useState(false)
-    const [selectedOptions, setSelectedOptions] = React.useState<string[]>([]);
+    const [selectedCategory, setSelectedCategory] = React.useState<string[]>([]);
+    const [selectedCountry, setSelectedCountry] = React.useState<string[]>([]);
+
+    const handleOptionChange = (option: string, filterName: string) => {
+        if (filterName === 'Категории' ) {
+            setSelectedCategory((filterStore) =>
+                filterStore.includes(option)
+                    ? filterStore.filter((o) => o !== option)
+                    : [...filterStore, option]
+            );
+        } else if (filterName === 'Страны' ) {
+            setSelectedCountry((filterStore) =>
+                filterStore.includes(option)
+                    ? filterStore.filter((o) => o !== option)
+                    : [...filterStore, option]
+            );
+        }
 
 
-    const handleOptionChange = (option: string) => {
-        setSelectedOptions((filterStore) =>
-            filterStore.includes(option)
-                ? filterStore.filter((o) => o !== option)
-                : [...filterStore, option]
-        );
     };
 
     const handleApplyClick = () => {
-        dispatch(setFilterCaseAC({filter: selectedOptions}))
+        dispatch(setFilterCategoryAC({filter: selectedCategory}))
+        dispatch(setFilterCountryAC({filter: selectedCountry}))
         setActiveGroup(null)
         setShowBlock(false)
     };
@@ -164,6 +175,7 @@ export const FilterCase: React.FC<FilterProps> = ({}) => {
             <Container>
                 <div className="filter__form">
                     {filterData.map((el) => (
+
                         <div className={activeGroup === el.id ? 'filter__block show' : 'filter__block'} key={el.id}
                              onClick={() => onClickToggleHandler(el.id)}>
                             <div className="filter__item"
@@ -176,11 +188,11 @@ export const FilterCase: React.FC<FilterProps> = ({}) => {
                                     <Ul className="filter__content-list scrollbar-theme">
                                         {el.filterCategories.map((option) => (
                                             <li key={option}>
-                                                <CheckboxLabel checked={selectedOptions.includes(option)}>
+                                                <CheckboxLabel checked={[...selectedCategory, ...selectedCountry].includes(option)}>
                                                     <CheckboxFilter
                                                         type="checkbox"
-                                                        checked={selectedOptions.includes(option)}
-                                                        onChange={() => handleOptionChange(option)}
+                                                        checked={[...selectedCategory, ...selectedCountry].includes(option)}
+                                                        onChange={() => handleOptionChange(option, el.filterName)}
                                                     />
                                                     {option}
                                                 </CheckboxLabel>
@@ -207,11 +219,11 @@ export const FilterCase: React.FC<FilterProps> = ({}) => {
                                 <ul className="filter__content-list scrollbar-theme">
                                     {el.filterCategories.map(option => (
                                         <li key={option}>
-                                            <CheckboxLabel checked={selectedOptions.includes(option)}>
+                                            <CheckboxLabel checked={[...selectedCategory, ...selectedCountry].includes(option)}>
                                                 <CheckboxFilter
                                                     type="checkbox"
-                                                    checked={selectedOptions.includes(option)}
-                                                    onChange={() => handleOptionChange(option)}
+                                                    checked={[...selectedCategory, ...selectedCountry].includes(option)}
+                                                    onChange={() => handleOptionChange(option, el.filterName)}
                                                 />
                                                 {option}
                                             </CheckboxLabel>
