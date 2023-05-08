@@ -14,6 +14,7 @@ export const Сases = () => {
     const [resultFilterArray, setResultFilterArray] = useState<CaseType[]>(casesArray)
     const {filterCountry, filterCategory} = useAppSelector(state => state.app)
 
+
     useEffect(() => {
 
         if (![...filterCountry, ...filterCategory].length) {
