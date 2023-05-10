@@ -3,7 +3,7 @@ import {Container} from "../../../common/style/Container"
 import {Line, ReviewsWrapper, Title} from "./style"
 
 
-export const Reviews = () => {
+ const Reviews = () => {
     return (
         <ReviewsWrapper>
             {/*<Container>*/}
@@ -17,3 +17,5 @@ export const Reviews = () => {
     )
 
 }
+
+export default Reviews

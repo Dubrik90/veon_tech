@@ -23,8 +23,7 @@ type DescriptionWebProps = {
     descriptionWeb: React.RefObject<HTMLInputElement>;
 }
 
-export const DescriptionWeb: FC<DescriptionWebProps> = ({descriptionWeb}) => {
-
+const DescriptionWeb: FC<DescriptionWebProps> = ({descriptionWeb}) => {
 
     const elAnimate = useRef(null)
     const [cardIndex, setCardIndex] = useState<number>(0)
@@ -87,6 +86,7 @@ export const DescriptionWeb: FC<DescriptionWebProps> = ({descriptionWeb}) => {
                                     className={index === cardIndex ? 'activeCard' : ''}
                                     onClick={() => onClickActiveCardHandler(index)}
                                     key={index}
+                                    loading='lazy'
                                     src={el.img} alt="img"/>)}
                             </CardImageMobile>
                             <Link to={activeCard.link} ref={elAnimate} className='link'>
@@ -104,3 +104,5 @@ export const DescriptionWeb: FC<DescriptionWebProps> = ({descriptionWeb}) => {
         </DescriptionWebWrapper>
     );
 };
+
+export default DescriptionWeb

@@ -23,6 +23,7 @@ import {CaseRentClub} from "./pages/caseRentClub";
 import {caseDataArray} from "./pages/case/app/data";
 import { ServicesPage } from './pages/servicesPage';
 
+
 function App() {
     useEffect(() => {
         document.title = 'Главная — VEON-TECH'

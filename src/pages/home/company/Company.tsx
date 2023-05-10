@@ -8,7 +8,7 @@ import {ThemeType} from "../../../common/types/types";
 import {useAppSelector} from "../../../common/hook";
 
 
-export const Company = () => {
+ const Company = () => {
     const theme = useAppSelector(state => state.app.theme)
 
 
@@ -29,3 +29,4 @@ export const Company = () => {
     );
 };
 
+export default Company

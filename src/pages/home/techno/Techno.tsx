@@ -7,7 +7,6 @@ import {Title} from "../methodology/style";
 import {C, LaravelIcon, ReactIcon} from "./assets";
 
 export const Techno = () => {
-
     return (
         <TechnoWrapper >
             <Container>

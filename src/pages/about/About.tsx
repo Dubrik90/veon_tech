@@ -4,7 +4,7 @@ import {AboutWrapper} from "./style";
 import {Progress} from "./progress";
 import {Methodology} from "../home/methodology";
 import { Principles } from './principles';
-import {Reviews} from "../home/reviews";
+import Reviews from "../home/reviews/Reviews";
 import {ContactUs} from "./contactUs";
 import {animateText} from "../../common/animate/animateText";
 

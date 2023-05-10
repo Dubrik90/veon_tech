@@ -1,17 +1,20 @@
-import React, {FC, useEffect, useRef} from 'react';
-import {Technologies} from './technologies';
-import {DescriptionWeb} from './descriptionWeb/DescriptionWeb';
-import {HeadrMain} from './headrMain/HeadrMain';
-import {Portfolio} from "./portfolio";
-import {Company} from './company';
-import {Reviews} from './reviews';
+import React, {useEffect, useRef} from 'react';
+//import {DescriptionWeb} from './descriptionWeb/DescriptionWeb';
+// import {HeadrMain} from './headrMain/HeadrMain';
+//import {Company} from './company';
+// import {Reviews} from './reviews';
 import {Contacts} from "./contacts";
 import {Layer} from "./layer";
 import {gsap} from "gsap";
-import {setIsOpenFormAC} from "../../app/app-reduser";
 import {Methodology} from "./methodology";
-import { Techno } from './techno';
-import { PortfolioSlider } from './portfolioSlider';
+import {Techno} from './techno';
+//import {PortfolioSlider} from './portfolioSlider';
+
+const HeadrMain = React.lazy(() => import('./headrMain/HeadrMain'));
+const DescriptionWeb = React.lazy(() => import('./descriptionWeb/DescriptionWeb'));
+const PortfolioSlider = React.lazy(() => import('./portfolioSlider/PortfolioSlider'));
+const Company = React.lazy(() => import('./company/Company'));
+const Reviews = React.lazy(() => import('./reviews/Reviews'));
 
 export const Home = () => {
     const headerAnimate = useRef(null)
