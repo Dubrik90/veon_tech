@@ -9,7 +9,7 @@ export const WorkDesk: FC<WorkDeskPropsType> = ({work}) => {
     return (
         <WorkDeskWrapper>
             <WorkDeskImage className='image'>
-                <img src={work.img} alt="img"/>
+                <img loading= "lazy" src={work.img} alt="img"/>
             </WorkDeskImage>
             <Title>{work.header}</Title>
             <SubTitle>{work.desc}</SubTitle>

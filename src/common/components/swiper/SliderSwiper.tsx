@@ -33,7 +33,7 @@ export const SliderSwiper = () => {
             >
                 {portfolioData.map((el, index) => (
                     <SwiperSlide key={index}>
-                        <img src={el.img} alt='img'/>
+                        <img loading= "lazy" src={el.img} alt='img'/>
                     </SwiperSlide>
                 ))}
             </Swiper>

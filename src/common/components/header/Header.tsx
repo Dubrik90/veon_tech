@@ -108,7 +108,7 @@ export const Header = () => {
                 <Container>
                     <HeaderContent>
                         <Link to={ROUTS.HOME} onClick={onClickUpHandler}>
-                            <img src={theme === 'light' ? LogoLight : LogoDark} alt=""/>
+                            <img loading="lazy" src={theme === 'light' ? LogoLight : LogoDark} alt=""/>
                         </Link>
                         <Menu isOpenBurger={isOpenBurger}
                               onClick={toggleTheme}

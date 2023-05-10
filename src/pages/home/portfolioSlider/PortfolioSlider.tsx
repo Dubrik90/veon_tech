@@ -56,7 +56,7 @@ export const PortfolioSlider = () => {
                     {portfolioData.map((el, index) => (
                         <SwiperSlide key={index} className='animate'>
                             <Link to={el.link}>
-                                <img src={el.img} alt='img'/>
+                                <img loading="lazy" src={el.img} alt='img'/>
                                 <AboutBlock>
                                     <TitleCase>{el.header}</TitleCase>
                                     {/*<SubTitleCase>{el.desc}</SubTitleCase>*/}

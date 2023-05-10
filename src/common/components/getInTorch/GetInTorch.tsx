@@ -38,7 +38,7 @@ export const GetInTorch = () => {
                     </div>
                     <div>
                         <p onClick={openModal}>
-                            <img src={MassageIc}/>
+                            <img loading="lazy" src={MassageIc}/>
                             <span>Оставить сообщение</span>
                         </p>
                     </div>

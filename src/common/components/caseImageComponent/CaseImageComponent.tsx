@@ -9,7 +9,7 @@ export const CaseImageComponent: FC<CaseImageComponentPropsType> = ({img}) => {
     return (
         <CaseImageCompWrapper>
             <ImgBlock>
-                <Img src={img} alt={'логотип компании'}/>
+                <Img loading="lazy" src={img} alt={'логотип компании'}/>
             </ImgBlock>
         </CaseImageCompWrapper>
     );

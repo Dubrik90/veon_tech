@@ -38,7 +38,9 @@ export const HappyElephantAboutWrapper = styled.div<ImageProps>`
  // width: 100%;
 
 `
-export const Img = styled.img`
+export const Img = styled.img.attrs({
+    loading: "lazy"
+})`
   display: none;
   
   @media (max-width: 1439px) {

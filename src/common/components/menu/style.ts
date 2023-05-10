@@ -72,7 +72,7 @@ export const SubMenu = styled.ul`
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
-  transform: translate(0px, 24px);
+  transform: translate(15px, 24px);
   min-width: 220px;
   position: absolute;
   left: -16px;
@@ -87,11 +87,9 @@ export const SubMenu = styled.ul`
   border-radius: 5px;
 
   @media (max-width: 1320px) {
-    transform: translate(0px, 27px);
+    transform: translate(15px, 27px);
   }
   
-  
-
   :before {
     content: '';
     position: absolute;
@@ -166,8 +164,6 @@ export const MenuItem = styled.li`
   @media (min-width: 1092px) {
     display: flex;
   }
-  
-  
   
   @media (max-width: 1370px) {
     font-size: var(--fs-14);

@@ -46,18 +46,9 @@ export const SliderReviews = () => {
         <>
             <SwiperReviewsWrapper>
                 <Container>
-                    {/*<NavigationBlock>*/}
-                    {/*    <ArrowLeft className="prev"/>*/}
-                    {/*    <ArrowRight className="next"/>*/}
-                    {/*</NavigationBlock>*/}
                 </Container>
                 <Swiper
                     loop={true}
-                    //   effect="fade"
-                    //    autoplay={{
-                    //        delay: 1000,
-                    //        disableOnInteraction: false
-                    //    }}
                     navigation={{
                         nextEl: '.feedback__next',
                         prevEl: '.feedback__prev',
@@ -71,10 +62,6 @@ export const SliderReviews = () => {
                                     <div className="feedback__box">
                                         <div className="feedback__line">
                                             <div className="feedback__block">
-                                        {/*<span className="feedback_img">*/}
-										{/*	 <img src={el.logoComp}*/}
-                                        {/*          alt="Альфа-Банк" className="feedback_img" loading="lazy"/>*/}
-										{/*</span>*/}
                                                 <img src={el.logoUser}
                                                      alt="Д.В. Гуща " className="feedback_img" loading="lazy"/>
                                                 <div className="feedback__person">
@@ -99,10 +86,10 @@ export const SliderReviews = () => {
                                         <div className="feedback__descr">
                                             {el.review}
                                         </div>
-                                        <span onClick={() => handleOpenModal(el)} className="feedback__full js-open-modal"
-                                              data-modal-id="267201">
-									Весь отзыв
-                                </span>
+                                        <span onClick={() => handleOpenModal(el)}
+                                              className="feedback__full js-open-modal"
+                                              data-modal-id="267201">Весь отзыв
+                                        </span>
                                         <img src={Quots} className="feedback__qouts" alt="Цитата"
                                              loading="lazy"/>
                                     </div>

@@ -22,7 +22,7 @@ export const Menu: FC<MenuProps> = ({isOpenBurger, onClick, onClickCloseBurger})
         {title: 'NDA', to: ROUTS.NDA},
         {title: 'ВАКАНСИИ', to: ROUTS.JOBS},
     ]
-     const submenuLinksServices = [
+    const submenuLinksServices = [
         {title: 'Разработка сайтов', to: `/services/webDev`},
         {title: 'Поддержка сайтов', to: `/services/support`},
         {title: 'Разработка ПО', to: `/services/webPO`},
@@ -35,8 +35,8 @@ export const Menu: FC<MenuProps> = ({isOpenBurger, onClick, onClickCloseBurger})
                 <MenuItem className='about-sub-menu'>
                     <NavLink onClick={onClickCloseBurger} to={ROUTS.ABOUT}>
                         <span className='link__wrap'>
-                        <span className='link__title'>О НАШЕЙ КОМПАНИИ
-                        <span className="link__title--duplicate">О НАШЕЙ КОМПАНИИ</span>
+                            <span className='link__title'>О НАШЕЙ КОМПАНИИ
+                            <span className="link__title--duplicate">О НАШЕЙ КОМПАНИИ</span>
                         </span>
                     </span>
                     </NavLink>

@@ -33,10 +33,10 @@ export const Footer = () => {
             <Container>
                 <FooterContent>
                     <FooterTop>
-                        <img src={logo} alt="logo"/>
+                        <img loading="lazy" src={logo} alt="logo"/>
                         <FooterIcons>
                             {dataSocial.map((el, index) => <a target='_blank' href={el.to} key={index}>
-                                <img src={el.img}/></a>)}
+                                <img loading="lazy" src={el.img}/></a>)}
                         </FooterIcons>
                     </FooterTop>
                     <FooterBottom>

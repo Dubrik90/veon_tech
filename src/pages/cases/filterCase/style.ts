@@ -14,28 +14,15 @@ export const FilterCaseWrapper = styled.div`
     margin-right: calc(20px + (90 - 20) * ((100vw - 768px) / (1920 - 768)));
   }
 
-  @media (max-width: 767.98px) {
-    .filter__block {
-      // margin-right: 0
-    }
-  }
-
-  .filter__block:last-child {
-    // margin-right: 0
-  }
-
   .filter-btn {
     position: relative;
     width: 35px;
-    height: 35px
+    height: 35px;
   }
-
+  
   .filter__item {
     display: flex;
-    cursor: pointer
-  }
-
-  .filter-tags .filter__item {
+    cursor: pointer;
     align-items: center
   }
 
@@ -53,22 +40,22 @@ export const FilterCaseWrapper = styled.div`
 
   .filter__block.show .filter-btn::after {
     transform: rotate(45deg);
-    transition: transform .3s .2s
+    transition: transform .3s
   }
 
   .filter__block.show .filter-btn::before {
     transform: rotate(45deg);
-    transition: transform .3s .2s
+    transition: transform .3s
   }
 
   .filter__item .filter-btn::after {
     transform: rotate(0);
-    transition: transform .3s .2s
+    transition: transform .3s
   }
 
   .filter__item .filter-btn::before {
     transform: rotate(0);
-    transition: transform .3s .2s
+    transition: transform .3s
   }
 
   .filter-btn::after {
@@ -104,49 +91,17 @@ export const FilterCaseWrapper = styled.div`
     border-radius: 5px;
     z-index: 10;
     width: 280px;
-    height: auto
-  }
+    height: auto;
 
-  @media (min-width: 1200px) {
-    .filter__content-inner {
+    @media (min-width: 700px) {
       width: 333px
     }
   }
-
-  .filter__content-inner-mob {
-    width: 100%;
-    height: 100%
-  }
-
-  .filter-form-mob {
-    position: relative;
-    padding: 27px 19px 13px
-  }
-
+  
   .filter__content {
     display: none
   }
-
-  @media (max-width: 767.98px) {
-    .filter__content {
-      //  display: block
-    }
-  }
-
-  .filter__overlay {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    left: 0;
-    display: none
-  }
-
-  .filter__overlay.active {
-    display: block
-  }
-
+  
   .filter__block.show .filter__content {
     display: block
   }
@@ -154,213 +109,10 @@ export const FilterCaseWrapper = styled.div`
   .filter__content-list {
     height: auto;
     max-height: 220px;
-    overflow-y: auto
+    overflow-y: auto;
   }
-
-  .filter__content-item {
-    display: block;
-    margin-bottom: 20px;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 22px;
-    letter-spacing: -.02em;
-    color: #000;
-    padding-left: 38px;
-    padding-right: 10px;
-    position: relative;
-    min-height: 28px
-  }
-
-  .filter__content-item:last-child {
-    margin-bottom: 0
-  }
-
   .filter__content-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: flex-start;
     margin: 35px 0 0;
-    vertical-align: bottom
-  }
-
-  .styled-checkbox {
-    position: absolute;
-    opacity: 0
-  }
-
-  .styled-checkbox + label {
-    cursor: pointer;
-    padding: 3px 0 0 0;
-    width: 100%
-  }
-
-  .styled-checkbox:checked + .tabs-nav__link {
-    background-color: #22c014
-  }
-
-  .styled-checkbox + label:before {
-    content: "";
-    margin-right: 10px;
-    display: inline-block;
-    vertical-align: text-top;
-    width: 28px;
-    height: 28px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background: #fff;
-    border: 2px solid #000
-  }
-
-  .styled-checkbox:active + label:before {
-    background: #fff200
-  }
-
-  @media (min-width: 1280px) {
-    .styled-checkbox:hover + label:before {
-      background: #fff200
-    }
-  }
-
-  .styled-checkbox:focus + label:before {
-    border: 2px solid #000;
-    background: 0 0
-  }
-
-  .styled-checkbox:checked + label:before {
-    background: #fff200;
-    border-color: transparent;
-    color: #000
-  }
-
-  .styled-checkbox:checked + label:after {
-    content: "";
-    background: url(${Cheked}) no-repeat center/contain;
-    position: absolute;
-    left: 3px;
-    top: 6px;
-    width: 25px;
-    height: 16px
-  }
-
-  .cases-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 55px
-  }
-
-  @media (min-width: 768px) {
-    .cases-btn {
-      display: none
-    }
-  }
-
-  .filter-tags-box {
-    margin-bottom: 70px
-  }
-
-  .filter-tags {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    padding: 28px 0 0
-  }
-
-  @media (min-width: 768px) {
-    .filter-tags {
-      padding: 36px 0 0;
-      margin-bottom: -10px
-    }
-  }
-
-  .filter-tags .filter__item {
-    background-color: #fff200;
-    border-radius: 50px;
-    padding: 11px 20px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    cursor: pointer
-  }
-
-  @media (min-width: 768px) {
-    .filter-tags .filter__item {
-      margin-right: 15px;
-      padding: 15px 30px
-    }
-  }
-
-  .filter-tags .filter__title {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 18px;
-    margin-right: 15px;
-    white-space: nowrap
-  }
-
-  @media (min-width: 768px) {
-    .filter-tags .filter__title {
-      font-size: 20px;
-      line-height: 22px;
-      font-weight: 600
-    }
-  }
-
-  .filter-tags-btn {
-    position: relative;
-    width: 12px;
-    height: 12px
-  }
-
-  @media (min-width: 768px) {
-    .filter-tags-btn {
-      width: 16px;
-      height: 16px
-    }
-  }
-
-  .filter-tags-btn::after {
-    content: "";
-    position: absolute;
-    top: 6px;
-    left: 1px;
-    width: 12px;
-    height: 2px;
-    background-color: #000;
-    transform: rotate(45deg)
-  }
-
-  @media (min-width: 768px) {
-    .filter-tags-btn::after {
-      top: 7px;
-      left: 0;
-      width: 16px;
-      height: 2px
-    }
-  }
-
-  .filter-tags-btn::before {
-    content: "";
-    position: absolute;
-    top: 1px;
-    left: 6px;
-    width: 2px;
-    height: 12px;
-    background-color: #000;
-    transform: rotate(45deg)
-  }
-
-  @media (min-width: 768px) {
-    .filter-tags-btn::before {
-      top: 0;
-      left: 7px;
-      width: 2px;
-      height: 16px
-    }
-  }
-
-  .filter__mob-open {
-    display: none
   }
 
   .filter__desk-close {
@@ -394,145 +146,12 @@ export const FilterCaseWrapper = styled.div`
   }
 
   @media (max-width: 650px) {
-    //  .styled-checkbox + label:before {
-    //    top: 6px
-    //  }
-    //
-    //  .styled-checkbox:checked + label:after {
-    //    top: 12px
-    //  }
-    //
-    //  .filter__mob-open {
-    //    display: block;
-    //    margin-bottom: 67px
-    //  }
-    //
-    //  .filter__mob-open .filter__item {
-    //    margin-bottom: 0
-    //  }
-    //
-    //  .filter__content-item {
-    //    margin-bottom: 0;
-    //    padding-left: 0
-    //  }
-    //
-    //  .styled-checkbox + label {
-    //    padding: 10px 0 10px 38px
-    //  }
-    //
-    //  .filter-tags {
-    //    padding: 0
-    //  }
-    //
-    //  .filter-tags-box {
-    //    margin-bottom: 40px
-    //  }
-    //
     .filter__form {
       display: none;
-
-      // row-gap: 10px;
-      //height: 100%;
-      //width: calc(100% + 20px);
-      //flex-direction: column;
-      //padding: 28px 20px 88px 0;
-      //overflow: auto;
-      //margin-right: -20px;
-      //background-color: #5bacd2;
-      //z-index: 10;
-    }
-
-    //
-    //  .filter__desk {
-    //    position: fixed;
-    //    top: 0;
-    //    left: 0;
-    //    right: 0;
-    //    bottom: 0;
-    //    background-color: #fff;
-    //    z-index: 1000;
-    //    transition: transform .25s;
-    //    transform: translateX(100%)
-    //  }
-    //
-    //  .filter__desk .container {
-    //    height: 100%
-    //  }
-    //
-    //  .filter.open .filter__desk {
-    //    transform: translateX(0)
-    //  }
-    //
-    //  .filter.open .filter__desk-close {
-    //    display: flex;
-    //    align-items: center;
-    //    justify-content: center;
-    //    position: absolute;
-    //    top: 32px;
-    //    right: 20px;
-    //    z-index: 1100
-    //  }
-    //
-    //  .filter__block {
-    //    margin-top: 60px
-    //  }
-    //
-    //  .filter__block:first-child {
-    //    margin-top: 0
-    //  }
-    //
-    //  .filter__block .filter-btn, .filter__block .filter__content-btn {
-    //    display: none
-    //  }
-    //
-    //  .filter__block .filter__title {
-    //    margin-right: 0;
-    //    font-weight: 500;
-    //    font-size: 28px;
-    //    line-height: 30px
-    //  }
-    //
-    //  .filter__item {
-    //    margin-bottom: 14px
-    //  }
-    //
-    //  .filter__content {
-    //    display: block;
-    //    z-index: 10;
-    //  }
-    //
+      
     .filter__content-inner {
-      //position: relative;
-      //top: 0;
       left: 0;
-      //padding: 0;
-      //height: auto;
-      //width: auto;
-      //border-radius: 0;
-      //box-shadow: none
     }
-
-    //
-    //  .filter__content-list {
-    //    height: auto;
-    //    overflow: visible;
-    //    max-height: unset;
-    //    z-index: 10;
-    //  }
-    //
-    //  .filter__mob-apply {
-    //    display: block;
-    //    position: absolute;
-    //    bottom: 0;
-    //    left: 0;
-    //    width: 100%;
-    //    padding: 0 10px 12px;
-    //    z-index: 1000
-    //  }
-    //
-    //  .filter__mob-apply .btn {
-    //    width: 100%
-    //  }
   }
 
   @media (max-width: 767px) {
@@ -600,18 +219,16 @@ export const Button = styled.button`
       }
     }
   }
-
 `
 
 
 export const FilterFormMobile = styled.div`
   position: relative;
   display: none;
-  
+
   @media (max-width: 650px) {
     display: block;
   }
-
 `
 
 export const SubMobileMenu = styled.div`
@@ -619,7 +236,8 @@ export const SubMobileMenu = styled.div`
   top: 50px;
   left: 0;
   width: 100%;
-  background-color: rgb(145, 145, 147);
+ // background-color: var(--colors-bg-green-dark);
+  background-color: #E9FDE4;
   z-index: 20;
   padding: 15px;
   max-height: 400px;
@@ -630,7 +248,94 @@ export const TitleSubMobileMenu = styled.h5`
   font-size: 24px;
   font-weight: 600;
   margin: 10px 0 20px 0;
-  color: var(--colors-text-dark);
-
+  color: var(--color-dark);
 `
+export const CheckboxFilter = styled.input`
+  appearance: none;
+  min-width: 18px;
+  height: 18px;
+  border: 1px solid var(--colors-text-dark);
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  position: relative;
+  margin-right: 10px;
 
+  &:checked:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "\\2714";
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    line-height: 13px;
+    color: var(--colors-text-dark);
+
+  }
+
+  &:checked {
+    background: var(--colors-bg-green);
+    border: 1px solid transparent !important;
+  }
+
+  &:hover {
+    // background-color: #EFEFEF;
+  }
+`;
+type CheckboxLabelProps = {
+    checked: boolean
+}
+
+export const CheckboxLabel = styled.label<CheckboxLabelProps>`
+  display: inline-flex;
+  align-items: center;
+  margin-right: 12px;
+  // margin-bottom: 8px;
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--colors-text-dark);
+  font-weight: var(--fw-medium);
+
+  @media (max-width: 650px) {
+    font-weight: var(--fw-regular);
+    color: var(--color-dark);
+  }
+
+`;
+
+export const Ul = styled.ul`
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+
+  .scrollbar-none {
+    scrollbar-width: none;
+    -ms-overflow-style: none
+  }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+    width: 0
+  }
+
+  ::-webkit-scrollbar {
+    width: 7px
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #fff
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #d4d4d4;
+    border-radius: 6px
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #888
+  }
+
+`;

@@ -49,7 +49,9 @@ export const ImageBlock = styled.div`
   max-height: 310px;
   overflow: hidden;
 `
-export const Img = styled.img`
+export const Img = styled.img.attrs({
+  loading: "lazy"
+})`
   max-width: 100%;
   object-fit: contain;
 `

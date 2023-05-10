@@ -24,6 +24,7 @@ const initialState: InitialStateStateType = {
     isMenuOpen: false,
     isConsultantModalOpen: false,
     isSelectThemBlocked: false,
+
     filterCountry: [],
     filterIndustry: [],
     filterCategory: [],
@@ -34,7 +35,9 @@ const initialState: InitialStateStateType = {
             title: 'Счастливый слон',
             name: 'Счастливый слон',
             about: 'Разработка календаря бронирования',
+
             country: 'Беларусь',
+            industry:'',
             color: '',
             desk: 'Сайт для корректного отображения на всех устройствах!',
             route: ROUTS.CASE_PAPPY_ELEPHANT,
@@ -48,6 +51,7 @@ const initialState: InitialStateStateType = {
             about: 'Разработка корпоративного сайта',
             desk: '',
             country: 'Россия',
+            industry:'',
             color: 'wight',
             route: ROUTS.CASE_OPTICS,
             img: optics
@@ -60,6 +64,7 @@ const initialState: InitialStateStateType = {
             about: 'Редизайн интернет-каталога',
             desk: 'Простое и понятное решение, которое помогает!',
             country: 'Россия',
+            industry:'',
             route: ROUTS.CASE_SWISS,
             color: '',
             img: swiss
@@ -73,6 +78,7 @@ const initialState: InitialStateStateType = {
             about: 'Cервис поиска услуг',
             desk: '',
             country: 'Беларусь',
+            industry:'',
             route: ROUTS.CASE_PARTY_INTEL,
             color: 'wight',
             img: party
@@ -85,6 +91,7 @@ const initialState: InitialStateStateType = {
             about: 'Создание сайта-каталога',
             desk: 'Тот самый дизайн, который отличает от других!',
             country: 'Беларусь',
+            industry:'',
             route: ROUTS.CASE_GRANIT,
             color: 'wight',
             img: ural
@@ -97,6 +104,7 @@ const initialState: InitialStateStateType = {
             about: 'Разработка корпоративного сайта',
             desk: 'Делаем в кротчайшие срок и учитываем желания!',
             country: 'Европа',
+            industry:'',
             route: ROUTS.CASE_CENTAVRAS,
             color: '',
             img: kentavr
@@ -109,6 +117,7 @@ const initialState: InitialStateStateType = {
             about: 'Разработка онлайн сервиса',
             desk: '',
             country: 'Европа',
+            industry:'',
             route: ROUTS.CASE_ART_MEDIA,
             color: '',
             img: artMedia
@@ -121,6 +130,7 @@ const initialState: InitialStateStateType = {
             about: 'Создание сайта-каталога',
             desk: 'Создание современного сайта, с которым можно выделиться!',
             country: 'Европа',
+            industry:'',
             route: ROUTS.CASE_SODOX,
             color: '',
             img: sodox
@@ -133,6 +143,7 @@ const initialState: InitialStateStateType = {
             about: 'Создание маркетплейса',
             desk: '',
             country: 'Беларусь',
+            industry:'',
             route: ROUTS.CASE_RENT_CLUB,
             color: '',
             img: rent
@@ -145,6 +156,7 @@ const initialState: InitialStateStateType = {
             about: 'Разработка сайта каталога',
             desk: 'Уникальный дизайн удовлетворяющий современные тенденции!',
             country: 'Беларусь',
+            industry:'',
             route: ROUTS.CASE_SINARADESING,
             color: '',
             img: sinaradesign

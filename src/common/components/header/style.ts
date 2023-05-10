@@ -79,7 +79,7 @@ export const HeaderContent = styled.div`
 
     img {
       width: 100%;
-      max-height: 75px;
+      max-height: 67px;
     }
 
     //@media (max-width: 400px) {

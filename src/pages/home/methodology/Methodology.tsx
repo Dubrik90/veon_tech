@@ -38,9 +38,9 @@ export const Methodology = () => {
                         <BlockColumn>
                             <TitleMethodology>WATERFALL</TitleMethodology>
                             <Ul>
-                                <Li><img src={Star} alt=""/> <span>полное ТЗ</span> </Li>
-                                <Li><img src={Star} alt=""/> <span>запуск от 3 мес</span> </Li>
-                                <Li><img src={Star} alt=""/> <span>фиксированная цена</span> </Li>
+                                <Li><img loading= "lazy" src={Star} alt=""/> <span>полное ТЗ</span> </Li>
+                                <Li><img loading= "lazy" src={Star} alt=""/> <span>запуск от 3 мес</span> </Li>
+                                <Li><img loading= "lazy" src={Star} alt=""/> <span>фиксированная цена</span> </Li>
                             </Ul>
                             <Button onClick={onClickWaterfallModalHandler}>Подробнее</Button>
                         </BlockColumn>
