@@ -23,7 +23,7 @@ type DescriptionWebProps = {
     descriptionWeb: React.RefObject<HTMLInputElement>;
 }
 
-const DescriptionWeb: FC<DescriptionWebProps> = ({descriptionWeb}) => {
+export const DescriptionWeb: FC<DescriptionWebProps> = ({descriptionWeb}) => {
 
     const elAnimate = useRef(null)
     const [cardIndex, setCardIndex] = useState<number>(0)
@@ -104,5 +104,3 @@ const DescriptionWeb: FC<DescriptionWebProps> = ({descriptionWeb}) => {
         </DescriptionWebWrapper>
     );
 };
-
-export default DescriptionWeb

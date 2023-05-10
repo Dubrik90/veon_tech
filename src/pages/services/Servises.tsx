@@ -23,7 +23,7 @@ import Up6 from "./assets/stateDev/start-up6.svg";
 import {Benefit} from "./benefit";
 import {ContactUsServise} from "./contactUs";
 import {animateText} from "../../common/animate/animateText";
-import PortfolioSlider from "../home/portfolioSlider/PortfolioSlider";
+import {PortfolioSlider} from "../home/portfolioSlider/PortfolioSlider";
 import {Li, Ul} from "../home/methodology/style";
 import Star from "../home/methodology/assets/star.svg";
 

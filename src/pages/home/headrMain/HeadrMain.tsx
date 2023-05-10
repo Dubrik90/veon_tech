@@ -12,7 +12,7 @@ type HeadrMainProps = {
     button: React.RefObject<HTMLButtonElement>;
 }
 
-const HeadrMain:FC<HeadrMainProps>  = ({headerAnimate, button}) => {
+export const HeadrMain:FC<HeadrMainProps>  = ({headerAnimate, button}) => {
     gsap.registerPlugin(CSSPlugin);
     const dispatch = useAppDispatch()
     const isOpenForm = useAppSelector(state => state.app.isOpenForm)
@@ -43,4 +43,3 @@ const HeadrMain:FC<HeadrMainProps>  = ({headerAnimate, button}) => {
     )
 }
 
-export default HeadrMain

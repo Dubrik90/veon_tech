@@ -16,7 +16,7 @@ import {Container} from "../../../common/style/Container";
 import {Link} from "react-router-dom";
 
 
- const PortfolioSlider = () => {
+export const PortfolioSlider = () => {
     return (
         <PortfolioSliderWrapper>
             <Container>
@@ -69,5 +69,3 @@ import {Link} from "react-router-dom";
         </PortfolioSliderWrapper>
     );
 };
-
-export default PortfolioSlider

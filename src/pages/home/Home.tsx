@@ -1,20 +1,15 @@
 import React, {useEffect, useRef} from 'react';
-//import {DescriptionWeb} from './descriptionWeb/DescriptionWeb';
-// import {HeadrMain} from './headrMain/HeadrMain';
-//import {Company} from './company';
-// import {Reviews} from './reviews';
+import {DescriptionWeb} from './descriptionWeb/DescriptionWeb';
+import {HeadrMain} from './headrMain/HeadrMain';
+import {Company} from './company/Company';
+import {Reviews} from './reviews/Reviews';
 import {Contacts} from "./contacts";
 import {Layer} from "./layer";
 import {gsap} from "gsap";
 import {Methodology} from "./methodology";
 import {Techno} from './techno';
-//import {PortfolioSlider} from './portfolioSlider';
+import {PortfolioSlider} from './portfolioSlider/PortfolioSlider';
 
-const HeadrMain = React.lazy(() => import('./headrMain/HeadrMain'));
-const DescriptionWeb = React.lazy(() => import('./descriptionWeb/DescriptionWeb'));
-const PortfolioSlider = React.lazy(() => import('./portfolioSlider/PortfolioSlider'));
-const Company = React.lazy(() => import('./company/Company'));
-const Reviews = React.lazy(() => import('./reviews/Reviews'));
 
 export const Home = () => {
     const headerAnimate = useRef(null)
