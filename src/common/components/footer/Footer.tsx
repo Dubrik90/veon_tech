@@ -7,12 +7,11 @@ import {
     FooterContent,
     FooterIcons,
     FooterTop,
-    FooterWrapper,
-    ImgWrap
+    FooterWrapper
 } from "./style";
 import {Container} from "../../style/Container";
 
-import logo from '../../../common/components/header/assets/LogoDarkN.svg'
+import logo from '../../../common/components/header/assets/apdateLogo.png'
 import instagram from './assets/insta.svg'
 import facebook from './assets/facebook.svg'
 import linkedin from './assets/linkedin.svg'

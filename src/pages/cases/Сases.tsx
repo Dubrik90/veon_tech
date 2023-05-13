@@ -12,12 +12,12 @@ export const Сases = () => {
 
     const casesArray = useAppSelector(state => state.app.cases)
     const [resultFilterArray, setResultFilterArray] = useState<CaseType[]>(casesArray)
-    const {filterCountry, filterCategory} = useAppSelector(state => state.app)
+    const {filterCountry, filterCategory, filterIndustry} = useAppSelector(state => state.app)
 
 
     useEffect(() => {
 
-        if (![...filterCountry, ...filterCategory].length) {
+        if (![...filterCountry, ...filterCategory, filterIndustry].length) {
             setResultFilterArray(casesArray)
             return
         }
@@ -26,8 +26,10 @@ export const Сases = () => {
             return filterCountry.length ? filterCountry.includes(el.country) : resultFilterArray
         }).filter(el => {
             return filterCategory.length ? filterCategory.includes(el.title) : resultFilterArray
+        }).filter(el => {
+            return filterIndustry.length ? filterIndustry.includes(el.industry) : resultFilterArray
         }))
-    }, [filterCountry, filterCategory])
+    }, [filterCountry, filterCategory, filterIndustry])
 
 
     useEffect(() => {

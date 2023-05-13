@@ -28,16 +28,16 @@ const initialState: InitialStateStateType = {
     filterCountry: [],
     filterIndustry: [],
     filterCategory: [],
+
     cases: [
         {
             id: '1',
             type: 'visit',
-            title: 'Счастливый слон',
+            title: 'Интеренет-каталоги',
             name: 'Счастливый слон',
             about: 'Разработка календаря бронирования',
-
-            country: 'Беларусь',
-            industry:'',
+            country: 'Россия',
+            industry: 'Развлечения',
             color: '',
             desk: 'Сайт для корректного отображения на всех устройствах!',
             route: ROUTS.CASE_PAPPY_ELEPHANT,
@@ -51,7 +51,7 @@ const initialState: InitialStateStateType = {
             about: 'Разработка корпоративного сайта',
             desk: '',
             country: 'Россия',
-            industry:'',
+            industry: 'Медицина',
             color: 'wight',
             route: ROUTS.CASE_OPTICS,
             img: optics
@@ -59,12 +59,12 @@ const initialState: InitialStateStateType = {
         {
             id: '3',
             type: 'visit',
-            title: 'Сайт-визитки',
+            title: 'Интеренет-каталоги',
             name: ' B.Well Swiss',
             about: 'Редизайн интернет-каталога',
             desk: 'Простое и понятное решение, которое помогает!',
             country: 'Россия',
-            industry:'',
+            industry: '',
             route: ROUTS.CASE_SWISS,
             color: '',
             img: swiss
@@ -73,12 +73,12 @@ const initialState: InitialStateStateType = {
         {
             id: '4',
             type: 'visit',
-            title: 'Сайт-визитки',
+            title: 'Веб-сервисы',
             name: 'LLC "PartyIntel"',
             about: 'Cервис поиска услуг',
             desk: '',
-            country: 'Беларусь',
-            industry:'',
+            country: 'США',
+            industry: 'Развлечения',
             route: ROUTS.CASE_PARTY_INTEL,
             color: 'wight',
             img: party
@@ -86,12 +86,12 @@ const initialState: InitialStateStateType = {
         {
             id: '5',
             type: 'magazines',
-            title: 'Интернет-магазины',
+            title: 'Интеренет-каталоги',
             name: 'Уральская гранитная компания',
             about: 'Создание сайта-каталога',
             desk: 'Тот самый дизайн, который отличает от других!',
-            country: 'Беларусь',
-            industry:'',
+            country: 'Россия',
+            industry: 'Интеренет торговля',
             route: ROUTS.CASE_GRANIT,
             color: 'wight',
             img: ural
@@ -99,12 +99,12 @@ const initialState: InitialStateStateType = {
         {
             id: '6',
             type: 'catalogs',
-            title: 'Интеренет-каталоги',
+            title: 'Корпоративные сайты',
             name: 'Centavras Kft',
             about: 'Разработка корпоративного сайта',
             desk: 'Делаем в кротчайшие срок и учитываем желания!',
             country: 'Европа',
-            industry:'',
+            industry: 'Логистика',
             route: ROUTS.CASE_CENTAVRAS,
             color: '',
             img: kentavr
@@ -112,12 +112,12 @@ const initialState: InitialStateStateType = {
         {
             id: '7',
             type: 'sites',
-            title: 'Корпоративные сайты',
+            title: 'Веб-сервисы',
             name: 'ArtDoc.media',
             about: 'Разработка онлайн сервиса',
             desk: '',
-            country: 'Европа',
-            industry:'',
+            country: 'Россия',
+            industry: 'Развлечения',
             route: ROUTS.CASE_ART_MEDIA,
             color: '',
             img: artMedia
@@ -125,12 +125,12 @@ const initialState: InitialStateStateType = {
         {
             id: '8',
             type: 'magazines',
-            title: 'Интернет-магазины',
+            title: 'Интеренет-каталоги',
             name: 'ООО "Содокс Пром"',
             about: 'Создание сайта-каталога',
             desk: 'Создание современного сайта, с которым можно выделиться!',
-            country: 'Европа',
-            industry:'',
+            country: 'Беларусь',
+            industry: 'Интеренет торговля',
             route: ROUTS.CASE_SODOX,
             color: '',
             img: sodox
@@ -142,8 +142,8 @@ const initialState: InitialStateStateType = {
             name: 'ООО "Рент клаб"',
             about: 'Создание маркетплейса',
             desk: '',
-            country: 'Беларусь',
-            industry:'',
+            country: 'Россия',
+            industry: 'Интеренет торговля',
             route: ROUTS.CASE_RENT_CLUB,
             color: '',
             img: rent
@@ -155,8 +155,8 @@ const initialState: InitialStateStateType = {
             name: 'ООО "Sinaradesign"',
             about: 'Разработка сайта каталога',
             desk: 'Уникальный дизайн удовлетворяющий современные тенденции!',
-            country: 'Беларусь',
-            industry:'',
+            country: 'Россия',
+            industry: 'Интеренет торговля',
             route: ROUTS.CASE_SINARADESING,
             color: '',
             img: sinaradesign
@@ -205,12 +205,12 @@ const slice = createSlice({
             state.filterCategory = [...action.payload.filter]
         },
         setFilterIndustryAC(state, action: PayloadAction<{ filter: string[] }>) {
+
             state.filterIndustry = [...action.payload.filter]
         },
         setFilterCountryAC(state, action: PayloadAction<{ filter: string[] }>) {
             state.filterCountry = [...action.payload.filter]
         },
-
 
 
         setIsSelectThemBlockedAC(state, action: PayloadAction<{ isBlock: boolean }>) {

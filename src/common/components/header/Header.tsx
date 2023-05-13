@@ -11,7 +11,7 @@ import gsap from "gsap";
 import {setIsOpenBurgerAC, setIsSelectThemBlockedAC, setThemeAC} from "../../../app/app-reduser";
 import {useScrollBlock} from "../../hook/use-scroll-block";
 import LogoDark from './assets/LogoDarkN.svg'
-import ApdateLogo from './assets/apdateLogo.webp'
+import ApdateLogo from './assets/apdateLogo.png'
 
 
 export const Header = () => {

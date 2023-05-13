@@ -14,6 +14,7 @@ import {setFilterCategoryAC, setFilterCountryAC, setFilterIndustryAC} from "../.
 import {useAppDispatch} from "../../../common/hook";
 
 
+
 export const FilterCase: React.FC = () => {
     const dispatch = useAppDispatch()
     const [activeGroup, setActiveGroup] = useState<string | null>(null);
@@ -47,27 +48,28 @@ export const FilterCase: React.FC = () => {
     const handleApplyClick = () => {
         dispatch(setFilterCategoryAC({filter: selectedCategory}))
         dispatch(setFilterCountryAC({filter: selectedCountry}))
-        dispatch(setFilterIndustryAC({filter: selectedCountry}))
+        dispatch(setFilterIndustryAC({filter: selectedIndustry}))
         setActiveGroup(null)
         setShowBlock(false)
     };
+
 
     const filterData = [
         {
             id: '0',
             filterName: 'Категории',
-            type: ['magazines', 'catalogs', 'sites', 'visit'],
-            filterCategories: ['Интернет-магазины', 'Интеренет-каталоги', 'Корпоративные сайты', 'Сайт-визитки', 'Веб-сервисы', 'Мобильные приложения', 'ПО',]
+           // type: ['magazines', 'catalogs', 'sites', 'visit'],
+            filterCategories: ['Интернет-магазины', 'Интеренет-каталоги', 'Корпоративные сайты', 'Веб-сервисы', ]
         },
         {
             id: '1',
             filterName: 'Отрасли',
-            filterCategories: ['Медицина', 'Образование', 'Интеренет торговля', 'Развлечения', 'Логистика']
+            filterCategories: ['Медицина', 'Интеренет торговля', 'Развлечения', 'Логистика']
         },
         {
             id: '2',
             filterName: 'Страны',
-            filterCategories: ['Беларусь', 'Россия', 'США', 'Эстония', 'Казахстан', 'Европа']
+            filterCategories: ['Беларусь', 'Россия', 'США', 'Европа']
         },
     ]
 
