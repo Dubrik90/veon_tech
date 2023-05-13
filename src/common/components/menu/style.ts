@@ -87,7 +87,7 @@ export const SubMenu = styled.ul`
   border-radius: 5px;
 
   @media (max-width: 1320px) {
-    transform: translate(15px, 27px);
+    transform: translate(15px, 29px);
   }
   
   :before {

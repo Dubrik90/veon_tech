@@ -78,9 +78,11 @@ export const HeaderContent = styled.div`
     transition: all 0.3s;
     position: relative;
     z-index: 10;
-    max-width: 200px;
-
-    // max-width: 75px;
+    max-width: 245px;
+    
+    @media (max-width: 1091px) {
+      max-width: calc(190px + (245 - 190) * ((100vw - 320px) / (1920 - 320)));
+    }
 
     img {
       width: 100%;
