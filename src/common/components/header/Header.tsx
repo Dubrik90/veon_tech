@@ -11,6 +11,7 @@ import gsap from "gsap";
 import {setIsOpenBurgerAC, setIsSelectThemBlockedAC, setThemeAC} from "../../../app/app-reduser";
 import {useScrollBlock} from "../../hook/use-scroll-block";
 import LogoDark from './assets/LogoDarkN.svg'
+import ApdateLogo from './assets/apdateLogo.webp'
 
 
 export const Header = () => {
@@ -108,7 +109,8 @@ export const Header = () => {
                 <Container>
                     <HeaderContent>
                         <Link to={ROUTS.HOME} onClick={onClickUpHandler}>
-                            <img loading="lazy" src={theme === 'light' ? LogoLight : LogoDark} alt=""/>
+                            {/*<img loading="lazy" src={theme === 'light' ? LogoLight : LogoDark} alt="logo company"/>*/}
+                            <img loading="lazy" src={ApdateLogo} alt="logo company"/>
                         </Link>
                         <Menu isOpenBurger={isOpenBurger}
                               onClick={toggleTheme}

@@ -74,12 +74,15 @@ export const HeaderContent = styled.div`
     transition: all 0.3s;
     position: relative;
     z-index: 10;
-    max-width: 260px;
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
    // max-width: 75px;
 
     img {
       width: 100%;
-      max-height: 67px;
+      height: 100%;
     }
 
     //@media (max-width: 400px) {

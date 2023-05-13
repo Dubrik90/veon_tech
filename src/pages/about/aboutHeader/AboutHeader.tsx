@@ -26,7 +26,7 @@ export const AboutHeader = () => {
                     </HeaderContent>
                     <HeaderImage className={'animate'}>
                         <Img src={ImgWebDev} alt='image'/>
-                        <DownloadButton fileName={'details.pdf'} className="about-us__btn" url="/files/details.pdf">
+                        <DownloadButton fileName={'presentation.pdf'} className="about-us__btn" url="/files/presentation.pdf">
                             <span className="about-us__btn-label">Скачать презентацию PDF
                                 <img className="about-us__btn-icon" src={FileImg}
                                      loading="lazy"/>
