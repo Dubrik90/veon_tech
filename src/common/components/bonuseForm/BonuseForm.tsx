@@ -85,7 +85,6 @@ export const BonuseForm: React.FC = () => {
         values: MyFormValues,
         {setSubmitting}: FormikHelpers<MyFormValues>
     ) => {
-        console.log(values);
         setSubmitting(false);
     };
 
@@ -306,7 +305,6 @@ export const BonuseForm: React.FC = () => {
                                     <UploadCancel
                                         style={!!values.myFile ? {display: "block"} : {display: "none"}}
                                         onClick={() => {
-                                            console.log('del')
                                             values.myFile = null
                                             setService(!service)
                                         }}

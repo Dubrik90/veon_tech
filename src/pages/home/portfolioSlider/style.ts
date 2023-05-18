@@ -38,6 +38,7 @@ export const PortfolioSliderWrapper = styled.div`
         width: 100%;
         height: 100%;
         object-fit: cover;
+        border-radius: 20px;
       }
     }
   }
@@ -53,7 +54,7 @@ export const SubTitle = styled.p`
 
 `
 export const Title = styled.h3`
- // text-align: center;
+  // text-align: center;
   font-weight: var(--fw-bold);
   font-size: calc(30px + (76 - 30) * ((100vw - 320px) / (1920 - 320)));
   line-height: 1.4;
@@ -68,7 +69,7 @@ export const ArrowBlock = styled.div`
   margin-bottom: 20px;
   column-gap: 15px;
   @media (max-width: 768px) {
-  //  display: none;
+    //  display: none;
   }
 
 

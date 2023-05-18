@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react';
-import './index.css';
-import {Route, Routes, useLocation} from 'react-router-dom';
+import {Route, Routes} from 'react-router-dom';
 import {ROUTS} from './common/constans/routs';
 import {Home} from './pages/home';
 import {Layout} from "./common/components/layout/Layout";
@@ -19,9 +18,8 @@ import {CasePartyIntel} from './pages/casePartyIntel';
 import {CaseHappyElephant} from "./pages/caseHappyElephant";
 import {CaseOptics} from './pages/caseOptics';
 import {CaseCentavras} from "./pages/caseCentavras";
-import {CaseRentClub} from "./pages/caseRentClub";
 import {caseDataArray} from "./pages/case/app/data";
-import { ServicesPage } from './pages/servicesPage';
+import {ServicesPage} from './pages/servicesPage';
 
 
 function App() {

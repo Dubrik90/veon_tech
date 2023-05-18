@@ -40,7 +40,6 @@ export const ModalWindoww = () => {
         values: MyFormValues,
         {setSubmitting}: FormikHelpers<MyFormValues>
     ) => {
-        console.log(values);
         setSubmitting(false);
     };
 

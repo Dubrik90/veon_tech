@@ -49,19 +49,7 @@ export const ImgWrapDesctop = styled.div<ImgWrapProps>`
     display: none;
   }
 `
-export const ImgWrapMobile = styled.div<ImgWrapProps>`
-  display: none;
 
-  @media (max-width: 480px) {
-    display: block;
-    background-image: url(${props => props.img});
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 75px;
-    height: 75px;
-  }
-`
 export const HeaderContent = styled.div`
   display: flex;
   align-items: center;
@@ -72,8 +60,6 @@ export const HeaderContent = styled.div`
     min-height: 60px;
   }
   
-  // column-gap: calc(15px + (70 - 15) * ((100vw - 1092px) / (1920 - 1092)));
-
   a {
     transition: all 0.3s;
     position: relative;
@@ -89,40 +75,7 @@ export const HeaderContent = styled.div`
       height: 100%;
     }
 
-    //@media (max-width: 400px) {
-    //  flex: 1 0 212px;
-    //}
   }
 
-  @media (max-width: 1300px) {
-    // column-gap: 20px;
-  }
-  @media (max-width: 768px) {
-    // justify-content: stretch;
-  }
-`
-
-type PropsImageType = {
-    width?: string,
-    height?: string,
-    cursor?: string
-    borderRadius?: string
-    hover?: boolean
-}
-
-export const HeaderLogo = styled.div<PropsImageType>`
-  img {
-    object-fit: contain;
-    cursor: pointer;
-
-    @media (max-width: 450px) {
-      width: 250px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    width: 250px;
-    height: 80px;
-  }
 `
 

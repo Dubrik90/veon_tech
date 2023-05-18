@@ -2,7 +2,7 @@ import {Outlet} from "react-router-dom"
 import {GetInTorch} from "../getInTorch/GetInTorch";
 import {GoUp} from "../goUp";
 import {Cookie} from "../cookie";
-import React, {useEffect, useRef} from "react";
+import React, {useEffect} from "react";
 import {FormUsers} from "../FormUsers";
 import {useAppSelector} from "../../hook";
 import {MainWrapper} from "../../style/Main";
@@ -12,7 +12,6 @@ import {Footer} from "../footer";
 import {ModalWindoww} from "../modalWindow";
 import {ConsultantModal} from "../consultantModal";
 import {BonuseForm} from "../bonuseForm";
-import {useScrollBlock} from "../../hook/use-scroll-block";
 import {gsap} from "gsap";
 import {WaterfallModal} from "../waterfallModal";
 import {ScramModal} from "../scrumModal";
@@ -45,7 +44,7 @@ export const Layout = () => {
             <GoUp/>
             <Cookie/>
             <ConsultantModal/>
-            <ScramModal />
+            <ScramModal/>
             {isModalWindowOpen && <ModalWindoww/>}
             {isOpenBonuseFormOpen && <BonuseForm/>}
             <WaterfallModal/>

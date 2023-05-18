@@ -55,7 +55,6 @@ export const ConsultantModal = () => {
             return errors
         },
         onSubmit: values => {
-            console.log(formik.values)
         }
     })
 

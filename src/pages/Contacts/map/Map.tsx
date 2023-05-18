@@ -57,7 +57,6 @@ export const MapComponent = () => {
             return errors
         },
         onSubmit: values => {
-            console.log(formik.values)
         }
     })
 

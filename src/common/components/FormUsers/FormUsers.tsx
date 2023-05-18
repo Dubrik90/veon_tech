@@ -119,17 +119,12 @@ export const FormUsers: React.FC = () => {
         {setSubmitting}: FormikHelpers<MyFormValues>
     ) => {
 
-        console.log(values);
         setSubmitting(true);
        // e.preventDefault();
         emailjs.send('service_jwks1lh', 'template_m2zj1z6', values, 'iy68w7qmdmjCwvP5W')
             .then((result: any) => {
-                console.log('then')
-                console.log(result.text);
             }, (error: any) => {
-                console.log('error')
                 console.log(error.text);
-                alert('message error')
             });
      //   e.currentTarget.reset()
 
@@ -433,7 +428,6 @@ export const FormUsers: React.FC = () => {
                                     <UploadCancel
                                         style={!!values.myFile ? {display: "block"} : {display: "none"}}
                                         onClick={() => {
-                                            console.log('del')
                                             values.myFile = null
                                             setService(!service)
                                         }}

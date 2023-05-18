@@ -2,7 +2,6 @@ import React, {useEffect} from "react";
 import {Container} from "../../style/Container";
 import {HeaderContent, HeaderWrapper, Tint} from "./style"
 import {Burger} from "../../style/Burger";
-import LogoLight from './assets/LogoLightN.svg';
 import {Menu} from "../menu";
 import {useAppDispatch, useAppSelector} from "../../hook";
 import {Link, useLocation} from "react-router-dom";
@@ -10,7 +9,6 @@ import {ROUTS} from "../../constans/routs";
 import gsap from "gsap";
 import {setIsOpenBurgerAC, setIsSelectThemBlockedAC, setThemeAC} from "../../../app/app-reduser";
 import {useScrollBlock} from "../../hook/use-scroll-block";
-import LogoDark from './assets/LogoDarkN.svg'
 import ApdateLogo from './assets/apdateLogo.png'
 
 
@@ -109,7 +107,6 @@ export const Header = () => {
                 <Container>
                     <HeaderContent>
                         <Link to={ROUTS.HOME} onClick={onClickUpHandler}>
-                            {/*<img loading="lazy" src={theme === 'light' ? LogoLight : LogoDark} alt="logo company"/>*/}
                             <img loading="lazy" src={ApdateLogo} alt="logo company"/>
                         </Link>
                         <Menu isOpenBurger={isOpenBurger}

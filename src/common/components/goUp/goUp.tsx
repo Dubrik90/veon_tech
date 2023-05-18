@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {GoUpWrapper} from "./style";
 import gsap from 'gsap';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 
 export const GoUp = () => {
@@ -24,7 +24,6 @@ export const GoUp = () => {
     useEffect(() => {
         gsap.to("#thirdCircle", {
             x: -63,
-          //  duration: 3,
             scrollTrigger: {
                 trigger: "#thirdCircle",
                 start: "top center",
@@ -32,14 +31,10 @@ export const GoUp = () => {
                 scrub: true
             }
         });
-        gsap.fromTo(".torch", {y:0},{
+        gsap.fromTo(".torch", {y: 0}, {
             y: -75,
-          //  duration: 3,
             scrollTrigger: {
                 trigger: "#thirdCircle",
-
-             //   start: "top center",
-             //   end: "bottom 80px",
                 scrub: true
             }
         });
