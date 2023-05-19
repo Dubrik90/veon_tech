@@ -20,6 +20,7 @@ import '../../style/PhoneInput.css';
 import {Link} from "react-router-dom";
 import {ROUTS} from "../../constans/routs";
 import {useScrollBlock} from "../../hook/use-scroll-block";
+import emailjs from "emailjs-com";
 
 type FormikErrorType = {
     name?: string,
@@ -55,6 +56,13 @@ export const ConsultantModal = () => {
             return errors
         },
         onSubmit: values => {
+
+            emailjs.send('service_jwks1lh', 'template_h0lfcm6', values, 'iy68w7qmdmjCwvP5W')
+                .then((result: any) => {
+                    console.log(result)
+                }, (error: any) => {
+                    console.log(error.text);
+                });
         }
     })
 

@@ -17,6 +17,7 @@ import {
 } from "../consultantModal/style";
 import {CustomInputFile, InputFileText} from "./style";
 import {useScrollBlock} from "../../hook/use-scroll-block";
+import emailjs from "emailjs-com";
 
 
 interface MyFormValues {
@@ -37,10 +38,17 @@ export const ModalWindoww = () => {
     }
 
     const handleSubmit = (
-        values: MyFormValues,
+        values: any,
         {setSubmitting}: FormikHelpers<MyFormValues>
     ) => {
-        setSubmitting(false);
+        setSubmitting(true);
+        onClickClouseModalHandler()
+        emailjs.send('service_jwks1lh', 'template_h0lfcm6', values, 'iy68w7qmdmjCwvP5W')
+            .then((result: any) => {
+                console.log(result)
+            }, (error: any) => {
+                console.log(error.text);
+            });
     };
 
 

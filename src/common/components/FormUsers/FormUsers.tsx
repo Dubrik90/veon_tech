@@ -1,10 +1,11 @@
-import React, {useRef,FormEvent, useState} from "react";
+import React, {FormEvent, useRef, useState} from "react";
 import {Form, Formik, FormikHelpers} from "formik";
 import {
     BonuseFormWrapper,
-    Checkbox,
-    CheckboxContainer, CheckboxContainerGlobalForm, CheckboxGlobalForm,
-    CheckboxLabel, CheckboxLabelGlobalForm,
+    CheckboxContainer,
+    CheckboxContainerGlobalForm,
+    CheckboxGlobalForm,
+    CheckboxLabelGlobalForm,
     CloseModal,
     ContainerForm,
     DynamicContactHead,
@@ -36,10 +37,9 @@ import {
 import {setIsOpenFormAC} from "../../../app/app-reduser";
 import {useAppDispatch, useAppSelector} from "../../hook";
 import {ROUTS} from "../../constans/routs";
-import {Link, useLocation, useNavigate, useParams} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import {useScrollBlock} from "../../hook/use-scroll-block";
 import emailjs from 'emailjs-com';
-import {log} from "util";
 
 
 interface MyFormValues {
@@ -59,6 +59,7 @@ interface MyFormValues {
     service: string,
     helpFizUser: string,
     helpCompany: string,
+    comment: string
 }
 
 
@@ -82,7 +83,6 @@ export const FormUsers: React.FC = () => {
         allowScroll()
         dispatch(setIsOpenFormAC({isOpen: false}))
     }
-
 
     const helpCompanyArray = [
         {val: 'У нас есть готовая идея'},
@@ -118,15 +118,17 @@ export const FormUsers: React.FC = () => {
         values: any,
         {setSubmitting}: FormikHelpers<MyFormValues>
     ) => {
-
         setSubmitting(true);
-       // e.preventDefault();
+        // e.preventDefault();
+        closeFormModal();
         emailjs.send('service_jwks1lh', 'template_m2zj1z6', values, 'iy68w7qmdmjCwvP5W')
             .then((result: any) => {
+                console.log(result)
             }, (error: any) => {
                 console.log(error.text);
             });
-     //   e.currentTarget.reset()
+
+        //   e.currentTarget.reset()
 
     };
 
@@ -149,7 +151,7 @@ export const FormUsers: React.FC = () => {
                 service: '',
                 helpFizUser: '',
                 helpCompany: '',
-
+                comment: ''
             }}
             onSubmit={handleSubmit}
         >
@@ -389,7 +391,7 @@ export const FormUsers: React.FC = () => {
                             {/*textarea*/}
                             <FormDataItemComment>
                                 <TextareaWrapper>
-                                    <TextareaItem name="comment"/>
+                                    <TextareaItem name="comment" onChange={handleChange}/>
                                     <TextareaLabel>
                                         Расскажите о проекте
                                     </TextareaLabel>
@@ -455,7 +457,8 @@ export const FormUsers: React.FC = () => {
                             <PrivacyPolicy>
                                 <TextPolicy>
                                     Отправляя форму, Вы даете согласие на обработку своих
-                                    персональных данных в соответствии с <Link onClick={closeFormModal} to={ROUTS.POLICY}>политикой
+                                    персональных данных в соответствии с <Link onClick={closeFormModal}
+                                                                               to={ROUTS.POLICY}>политикой
                                     конфиденциальности</Link>
                                 </TextPolicy>
                             </PrivacyPolicy>

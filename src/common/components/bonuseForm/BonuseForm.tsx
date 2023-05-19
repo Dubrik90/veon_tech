@@ -38,6 +38,7 @@ import {useAppDispatch} from "../../hook";
 import {ROUTS} from "../../constans/routs";
 import {Link} from "react-router-dom";
 import {useScrollBlock} from "../../hook/use-scroll-block";
+import emailjs from "emailjs-com";
 
 interface MyFormValues {
     firstName: string;
@@ -56,6 +57,7 @@ interface MyFormValues {
     service: string,
     helpFizUser: string,
     helpCompany: string,
+    comment: string
 }
 
 
@@ -82,10 +84,18 @@ export const BonuseForm: React.FC = () => {
     };
 
     const handleSubmit = (
-        values: MyFormValues,
+        values: any,
         {setSubmitting}: FormikHelpers<MyFormValues>
     ) => {
-        setSubmitting(false);
+        setSubmitting(true);
+        closeFormModal();
+        emailjs.send('service_jwks1lh', 'template_m2zj1z6', values, 'iy68w7qmdmjCwvP5W')
+            .then((result: any) => {
+                console.log(result)
+            }, (error: any) => {
+                console.log(error.text);
+            });
+
     };
 
     return (
@@ -107,6 +117,7 @@ export const BonuseForm: React.FC = () => {
                 service: '',
                 helpFizUser: '',
                 helpCompany: '',
+                comment: ''
 
             }}
             onSubmit={handleSubmit}
@@ -266,7 +277,7 @@ export const BonuseForm: React.FC = () => {
                             {/*textarea*/}
                             <FormDataItemComment>
                                 <TextareaWrapper>
-                                    <TextareaItem name="comment"/>
+                                    <TextareaItem name="comment" onChange={handleChange}/>
                                     <TextareaLabel>
                                         Расскажите о проекте
                                     </TextareaLabel>
