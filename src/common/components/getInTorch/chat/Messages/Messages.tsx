@@ -7,8 +7,9 @@ export const Messages = () => {
             <WelcomeBlock>
                 <MassageWrapper>
                     <Massage>
-                        Здравствуйте.
-                        У вас возникли вопросы? Мы с удовольствием ответим!</Massage>
+                        Hello.
+                        Do you have any questions? We will be happy to answer!
+                    </Massage>
                     {/*<Time>Отправлено в 19:00</Time>*/}
                 </MassageWrapper>
 

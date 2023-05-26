@@ -21,7 +21,7 @@ export const CurrentDev: React.FC<CurrentDevType> = ({card}) => {
             <SubTitle>{card.desc}</SubTitle>
             <ButtonArrow>
                 <Link to={card.link}>
-                    Узнать подробнее
+                    Learn more
                 </Link>
                 <Arrow/>
             </ButtonArrow>

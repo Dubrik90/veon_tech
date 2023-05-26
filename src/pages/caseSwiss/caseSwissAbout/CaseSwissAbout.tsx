@@ -9,8 +9,8 @@ export const CaseSwissAbout = () => {
         <CaseSwissAboutWrapper src={swissImg1}>
             <Container>
                 <CaseSwissContent>
-                    <Text>Компания B.Well Swiss занимается разработкой медицинских товаров</Text>
-                    <Text>Заказчика беспокоило отсутствие визуального представления новостей и статей на сайте.</Text>
+                    <Text>B.Well Swiss specializes in the development of medical products.</Text>
+                    <Text>The client was concerned about the lack of visual representation of news and articles on the website.</Text>
                 </CaseSwissContent>
             </Container>
         </CaseSwissAboutWrapper>

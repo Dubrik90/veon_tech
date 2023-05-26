@@ -1,8 +1,8 @@
 import React from 'react';
-import {ChatContent, ChatFooter, ChatHeader, ChatWrapper, CloseIcon, Input, InputBlock, SubTitle} from "./style";
+import {ChatContent, ChatFooter, ChatHeader, ChatWrapper, CloseIcon, Input, InputBlock} from "./style";
 import {Button, Title} from "../style";
 import {Messages} from "./Messages";
-import {Avatar, Send} from "../assets";
+import {Send} from "../assets";
 
 type ChatType = {
     closeModal: (e: any) => void
@@ -14,17 +14,15 @@ export const Chat: React.FC<ChatType> = ({closeModal, view,}) => {
         <ChatWrapper view={view}>
             <CloseIcon onClick={closeModal}/>
             <ChatHeader>
-                {/*<Avatar/>*/}
                 <Button>
-                    <Title>Отправьте нам сообщение</Title>
-                    {/*<SubTitle>Customer support</SubTitle>*/}
+                    <Title>Send us a message</Title>
                 </Button>
             </ChatHeader>
             <ChatContent>
                 <Messages/>
             </ChatContent>
             <InputBlock>
-                <Input placeholder='Введите сообщение'></Input>
+                <Input placeholder='enter a message'></Input>
                 <Send/>
             </InputBlock>
             <ChatFooter></ChatFooter>

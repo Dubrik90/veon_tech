@@ -26,23 +26,23 @@ import {ROUTS} from "../../../common/constans/routs";
 
 export const JobDescription = () => {
     const cardArrayData = [
-        {title: 'Различные проекты и конкретные задачи'},
-        {title: 'Сплоченный, молодой коллектив'},
-        {title: 'Индивидуальная  прокачка навыков'},
-        {title: 'Перспективный карьерный рост'},
+        {title: 'Various projects and specific tasks'},
+        {title: 'Close-knit, young team'},
+        {title: 'Individual skills development'},
+        {title: 'Promising career growth'},
     ]
     const linksArrayData = [
-        {title: 'О нашей компании', to: ROUTS.ABOUT},
-        {title: 'Работа в Veon-Tech', to: ROUTS.JOBS},
+        {title: 'About our company', to: ROUTS.ABOUT},
+        {title: 'Job at Veon-Tech', to: ROUTS.JOBS},
         {title: 'Отзывы клиентов', to: ''},
-        {title: 'Бонусы', to: ROUTS.BONUSES},
+        {title: 'BONUSES', to: ROUTS.BONUSES},
     ]
 
     return (
         <JobDescriptionWrapper>
             <ContainerJob>
                 <TitleHead className='animate'>
-                    Работа в Veon-Tech</TitleHead>
+                    Job at Veon-Tech</TitleHead>
                 <DescriptionBlock>
                     <DescriptionContent>
                         <BarLinksMobile>
@@ -50,19 +50,15 @@ export const JobDescription = () => {
                         </BarLinksMobile>
                         <AboutBlock>
                             <About className='animate'>
-                                Амбициозная и целеустремленная команда экспертов, с большим стремлением оказывать
-                                высококачественные услуги по интернет-маркетингу и веб-разработке. <br/> Если Вы желаете стать
-                                частью нашей команды, тогда отправляйте нам Ваше резюме на электронную почту:
-                                sales@veon-tech.ru
+                                An ambitious and determined team of experts with a strong commitment to providing high-quality internet marketing and web development services. <br/> If you wish to become part of our team, please send us your resume to the email address: sales@veon-tech.ru
                             </About>
                             <About className='animate'>
-                                Если Вы ищете душевное место работы с классной атмосферой, приятными людьми и хорошей
-                                оплатой труда, то Вам в нашу команду!
+                                If you're looking for a welcoming work environment with a great atmosphere, pleasant people, and good pay, then our team is the right fit for you!
                             </About>
                         </AboutBlock>
                         <AboutQuality>
-                            <SubTitle className='animate'>Мы работаем эффективно, поэтому у нас 7-часовой рабочий день!</SubTitle>
-                            <Title>Почему нужно работать именно в Veon-Tech?</Title>
+                            <SubTitle className='animate'>We work efficiently, which is why our workday is 7 hours long!</SubTitle>
+                            <Title>Why should you work at Veon-Tech?</Title>
                             <CardsBlock>
                                 {cardArrayData.map((el, index) => <Card className='animate' key={index}>{el.title}</Card>)}
                             </CardsBlock>

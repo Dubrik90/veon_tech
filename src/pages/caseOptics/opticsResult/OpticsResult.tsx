@@ -8,7 +8,7 @@ import OpticsResultImg from '../assets/opticsResult.webp';
 export const OpticsResult = () => {
     return (
         <OpticsResultWrapper>
-            <Title>ООО "Коннектор Оптикс"</Title>
+            <Title>Connector Optics LLC</Title>
             <CaseImageComponent img={OpticsResultImg}/>
         </OpticsResultWrapper>
     );

@@ -21,25 +21,25 @@ export const GetInTorch = () => {
             <GetInTorchWrapper view={view} className='torch' ref={circleRef}>
                 <MassageIcon/>
                 <Button onClick={openModal}>
-                    <Title>Отправьте нам сообщение</Title>
+                    <Title>Send us a message</Title>
                 </Button>
                 <IconsBlock>
                     <div>
                         <a href="https://www.linkedin.com/company/veon-tech/" target={'_blank'}>
                             <Linkedin/>
-                            <span>Сообщение в Linkedin</span>
+                            <span>Linkedin message</span>
                         </a>
                     </div>
                     <div>
                         <a href="https://t.me/veon_tech" target={'_blank'}>
                             <Telegram/>
-                            <span>Сообщение в Telegram</span>
+                            <span>Telegram message</span>
                         </a>
                     </div>
                     <div>
                         <p onClick={openModal}>
                             <img loading="lazy" src={MassageIc}/>
-                            <span>Оставить сообщение</span>
+                            <span>Leave a message</span>
                         </p>
                     </div>
                 </IconsBlock>

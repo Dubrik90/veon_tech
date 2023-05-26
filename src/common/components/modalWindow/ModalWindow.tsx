@@ -18,6 +18,8 @@ import {
 import {CustomInputFile, InputFileText} from "./style";
 import {useScrollBlock} from "../../hook/use-scroll-block";
 import emailjs from "emailjs-com";
+import {ROUTS} from "../../constans/routs";
+import {Link} from "react-router-dom";
 
 
 interface MyFormValues {
@@ -61,58 +63,63 @@ export const ModalWindoww = () => {
             }}
             onSubmit={handleSubmit}
         >
-            {({values, handleSubmit, handleChange, setFieldValue}) => (
-                <ModalWindowWrapper openModal={isModalWindowOpen}>
-                    <RegisterWrapper>
-                        <Title>Заявка на обратный звонок</Title>
-                        <Clouse onClick={onClickClouseModalHandler}/>
-                        <Form onSubmit={handleSubmit}>
-                            <InputBlock>
-                                <Label>
-                                    <CustomInput type="text"
-                                                 name="firstName"
-                                                 placeholder='Ваше имя'
-                                                 value={values.firstName}
-                                                 onChange={handleChange}
-                                    />
-                                </Label>
-                                <Label>
-                                    <PhoneInput
-                                        value={'+ 375'}
-                                        inputProps={{name: "phone"}}
-                                        onlyCountries={['by', 'ru']}
-                                        countryCodeEditable={false}
-                                        onChange={(phoneNumber, country, e) => {
-                                            handleChange(e)
-                                        }}
-                                    />
-                                </Label>
-                                <Label>
-                                    <InputFileText>
-                                        {values.myFile?.name}
-                                        <Label htmlFor="myFile">
-                                            Загрузите CV
-                                        </Label>
-                                        <CustomInputFile
-                                            name="myFile"
-                                            type="file"
-                                            onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-                                                setFieldValue("myFile", event.currentTarget.files?.[0] || null);
+            {({ values, handleSubmit, handleChange, setFieldValue }) => {
+                return (
+                    <ModalWindowWrapper openModal={isModalWindowOpen}>
+                        <RegisterWrapper>
+                            <Title>Request a callback</Title>
+                            <Clouse onClick={onClickClouseModalHandler} />
+                            <Form onSubmit={handleSubmit}>
+                                <InputBlock>
+                                    <Label>
+                                        <CustomInput
+                                            type="text"
+                                            name="firstName"
+                                            placeholder="Name"
+                                            value={values.firstName}
+                                            onChange={handleChange}
+                                        />
+                                    </Label>
+                                    <Label>
+                                        <PhoneInput
+                                            value={"+ 375"}
+                                            inputProps={{ name: "phone" }}
+                                            onlyCountries={["by", "ru"]}
+                                            countryCodeEditable={false}
+                                            onChange={(phoneNumber, country, e) => {
+                                                handleChange(e);
                                             }}
-                                            value={undefined}/>
-                                    </InputFileText>
-                                </Label>
-                            </InputBlock>
-                            <SubText>
-                                Нажимая на кнопку «Отправить», вы даете свое согласие на обработку персональных данных в
-                                соответствии с целями указанными в Политике обработки персональных данных
-                            </SubText>
-                            <Button type='submit'>Отправить</Button>
-                        </Form>
-
-                    </RegisterWrapper>
-                </ModalWindowWrapper>
-            )}
+                                        />
+                                    </Label>
+                                    <Label>
+                                        <InputFileText>
+                                            {values.myFile?.name}
+                                            <Label htmlFor="myFile">Upload a CV</Label>
+                                            <CustomInputFile
+                                                name="myFile"
+                                                type="file"
+                                                onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+                                                    setFieldValue(
+                                                        "myFile",
+                                                        event.currentTarget.files?.[0] || null
+                                                    );
+                                                }}
+                                                value={undefined}
+                                            />
+                                        </InputFileText>
+                                    </Label>
+                                </InputBlock>
+                                <SubText>
+                                    By clicking "Submit," you give your consent to the processing of
+                                    personal data in accordance with the purposes specified in the
+                                    <Link to={ROUTS.POLICY}> Privacy Policy.</Link>
+                                </SubText>
+                                <Button type="submit">Submit</Button>
+                            </Form>
+                        </RegisterWrapper>
+                    </ModalWindowWrapper>
+                );
+            }}
         </Formik>
     );
 };

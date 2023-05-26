@@ -13,9 +13,9 @@ export const Cookie = () => {
     return (
         <CookieWrapper isShowCookie={isShowCookie}>
             <CookieContent>
-                <Text>Мы используем файлы <Link to={ROUTS.POLICY}>cookies </Link> чтобы оптимизировать работу сайта.
+                <Text>We use <Link to={ROUTS.POLICY}>cookies </Link> to optimize the website's performance.
                 </Text>
-                <Button onClick={onClickCloseCookieHandler}>Я согласен</Button>
+                <Button onClick={onClickCloseCookieHandler}>I AGREE</Button>
             </CookieContent>
         </CookieWrapper>
     );

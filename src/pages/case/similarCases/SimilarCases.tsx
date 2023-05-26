@@ -24,7 +24,7 @@ export const SimilarCases = () => {
         <SimilarCasesWrapper>
             <Container>
                 <SimilarCasesBlock>
-                    <Title>Похожие кейсы:</Title>
+                    <Title>Similar case studies:</Title>
                     <SimilarCasesDesktop>
                         {similarCasesArray.map((el, index) => <ImgBlock key={index}>
                             <Link to={el.to}>

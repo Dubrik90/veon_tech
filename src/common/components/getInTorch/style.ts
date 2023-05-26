@@ -14,8 +14,8 @@ export const IconsBlock = styled.div`
   border-radius: 15px;
   z-index: 5;
   position: absolute;
-  top: -193px;
-  left: -60px;
+  top: -174px;
+  left: -38px;
   background-color: var(--colors-bg);
   color: var(--colors-text-dark);
   font-size: 15px;
@@ -76,8 +76,8 @@ export const IconsBlock = styled.div`
     width: 25px;
     height: 100%;
     position: absolute;
-    top: 0;
-    right: -13px;
+    top: -18px;
+    right: -18px;
     z-index: -1;
     opacity: 0;
   }
@@ -92,8 +92,8 @@ export const GetInTorchWrapper = styled.div<GetInTorchWrapperProps>`
   justify-content: flex-start;
   column-gap: 12px;
   position: fixed;
-  right: -115px;
-  bottom: 115px;
+  right: -83px;
+  bottom: 81px;
   z-index: 40;
   font-weight: var(--fw-bold);
   transition: all 0.3s;

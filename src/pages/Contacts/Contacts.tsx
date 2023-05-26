@@ -11,7 +11,7 @@ import {animateText} from "../../common/animate/animateText";
 export const Contacts = () => {
 
     useEffect(() => {
-        document.title = 'Контакты — VEON-TECH'
+        document.title = 'Contacts — VEON-TECH'
         animateText()
     }, [])
 

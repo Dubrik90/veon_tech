@@ -29,28 +29,25 @@ export const Content = () => {
     return (
         <ContentWrapper>
             <Container>
-                <TitleHeader className='animate'>Вы можете нам доверять</TitleHeader>
+                <TitleHeader className='animate'>You can trust us</TitleHeader>
                 <ContentBlock>
                     <div className="parent">
                         <div className="div1 animate">
-                            <Title>Ограничиваем доступ к информации</Title>
-                            <Text>Определяем порядок доступа к коммерческой информации и устанавливаем контроль за его соблюдением</Text>
+                            <Title>We restrict access to information</Title>
+                            <Text>We determine the procedures for accessing commercial information and establish controls to ensure compliance.</Text>
                         </div>
                         <div className="div2 animate">
-                            <Title>Ведём учет тех, кто получил доступ</Title>
-                            <Text>Это позволяет установить нарушителя, разгласившего коммерческую тайну, или того, кто
-                                неправомерно получил к ней доступ</Text>
+                            <Title>We keep a record of those who have access</Title>
+                            <Text>This helps identify any violators who disclose commercial secrets or gain unauthorized access to them.</Text>
                         </div>
                         <div className="div3 animate">
-                            <Title>Устанавливаем режим коммерческой тайны в документах</Title>
-                            <Text>Все сотрудники подписали договор о неразглашении коммерческой тайны и понесут
-                                ответственность при его нарушении</Text>
+                            <Title>We establish a regime of commercial secrecy in documents</Title>
+                            <Text>All employees have signed a non-disclosure agreement regarding commercial secrets and will be held accountable for any violations.</Text>
 
                         </div>
                         <div className="div4 animate">
-                            <Title>Создали условия для соблюдения режима коммерческой тайны</Title>
-                            <Text>Определяем порядок доступа к коммерческой информации и устанавливаем контроль за его
-                                соблюдением</Text>
+                            <Title>We have created conditions to ensure compliance with the regime of commercial secrecy</Title>
+                            <Text>We determine the procedures for accessing commercial information and establish controls to ensure compliance.</Text>
                         </div>
                         <div className="div5"><LockIcon className={'LockIcon'}/></div>
                     </div>

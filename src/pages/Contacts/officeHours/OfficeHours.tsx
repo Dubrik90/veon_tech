@@ -13,38 +13,38 @@ export const OfficeHours = () => {
     const hoursData: HoursDataType[] = [
         {
             id: 1,
-            day: 'Понедельник',
-            hours: '9:00-17:00'
+            day: 'Monday',
+            hours: '9:00AM-5:00PM'
         },
         {
             id: 2,
-            day: 'Вторник',
-            hours: '9:00-17:00'
+            day: 'Tuesday',
+            hours: '9:00AM-5:00PM'
         },
         {
             id: 3,
-            day: 'Среда',
-            hours: '9:00-17:00'
+            day: 'Wednesday',
+            hours: '9:00AM-5:00PM'
         },
         {
             id: 4,
-            day: 'Четверг',
-            hours: '9:00-17:00'
+            day: 'Thursday',
+            hours: '9:00AM-5:00PM'
         },
         {
             id: 5,
-            day: 'Пятница',
-            hours: '9:00-17:00'
+            day: 'Friday',
+            hours: '9:00AM-5:00PM'
         },
         {
             id: 6,
-            day: 'Суббота',
-            hours: 'выходной'
+            day: 'Saturday',
+            hours: 'Closed'
         },
         {
             id: 0,
-            day: 'Воскресенье',
-            hours: 'выходной'
+            day: 'Sunday',
+            hours: 'Closed'
         },
     ]
 
@@ -52,7 +52,7 @@ export const OfficeHours = () => {
         <OfficeHoursWrapper>
             <Container>
                 <OfficeHoursContent>
-                    <Title>Время работы:</Title>
+                    <Title>Office Hours:</Title>
                     <HoursBlock>
                         {hoursData.map(el => (
                             <HoursCard key={el.id}

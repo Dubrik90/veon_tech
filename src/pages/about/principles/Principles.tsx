@@ -14,28 +14,23 @@ export const Principles = () => {
     const accordionData = [
         {
             id: '0',
-            title: 'Производительность',
-            text: 'Мы гарантируем максимальную производительность и скорость разработки. Используем проверенные и современные технологии и методологии в управлении проектами.\n' +
-                'Наша команда всегда открыта для новых решений. Готова быстро адаптироваться к изменениям на рынке, чтобы обеспечить клиентам наилучшие результаты.\n'
+            title: 'Performance',
+            text: 'We guarantee maximum performance and development speed. We utilize proven and modern technologies and project management methodologies. Our team is always open to new solutions and ready to quickly adapt to market changes in order to deliver the best results to our clients.'
         },
         {
             id: '1',
-            title: 'Исследование ниши',
-            text: 'Более 5 лет мы предоставляем качественные аутсорс услуги в сфере веб-разработки. Однако, мы не придерживаемся универсального подхода при создании веб-ресурсов.\n' +
-                'Мы уделяем дотошное внимание внутреннему и внешнему анализу рынка клиента, чтобы применять лучшие практики и международный опыт наших сотрудников и партнёров.\n'
+            title: 'Niche research',
+            text: 'For over 5 years, we have been providing high-quality outsourcing services in the field of web development. However, we don\'t adhere to a one-size-fits-all approach when it comes to creating web resources. We pay meticulous attention to internal and external market analysis for each client, allowing us to apply the best practices and international expertise of our team members and partners.'
         },
         {
             id: '2',
-            title: 'Перспективы развития',
-            text: 'Мы не останавливаемся на достигнутом и всегда смотрим в будущее.\n' +
-                'Наша команда планирует постоянно работу совместно с клиентом. Определяем последовательность этапов развития, которые помогут привести бизнес клиента к успеху.\n' +
-                'Именно такой подход гарантирует получать эффективные инструменты и постоянно улучшать результаты. Наш бизнес - развиваться вместе с ними.\n'
+            title: 'Development prospects',
+            text: 'We never rest on our laurels and always look towards the future. Our team plans to work closely with the client on an ongoing basis. We determine the sequence of development stages that will help lead the client\'s business to success. It is this approach that guarantees the acquisition of effective tools and constant improvement of results. Our business is to grow together with our clients.'
         },
         {
             id: '3',
-            title: 'Безграничные возможности',
-            text: 'Коммерческий опыт в различных сферах позволяет нам быть готовым к любым вызовам и преодолевать трудности. Мы всегда ищем новые возможности, открыты для работы с многофункциональными проектами различной направленности.\n' +
-                'Будь это сложный веб-ресурс или уникальное приложение. Мы готовы принять вызов и помочь Вам достичь успеха.\n'
+            title: 'Limitless possibilities',
+            text: 'Our commercial experience in various industries allows us to be prepared for any challenges and overcome difficulties. We are always on the lookout for new opportunities and open to working on multifunctional projects of different orientations. Whether it\'s a complex web resource or a unique application, we are ready to take on the challenge and help you achieve success.'
         },
     ]
     const [activeItem, setActiveItem] = useState()
@@ -50,7 +45,7 @@ export const Principles = () => {
     return (
         <PrinciplesWrapper>
             <Container>
-                <Title className={'animate'}>Принципы работы</Title>
+                <Title className={'animate'}>Operating Principles</Title>
                 <PrinciplesAccordeon>
                     {accordionData.map((el, index) => (
                         <AccordionItem className={activeAccordeonItem === el.id ? 'open' : ''} key={el.id} onClick={()=>onClickToggleHandler(el.id)}>

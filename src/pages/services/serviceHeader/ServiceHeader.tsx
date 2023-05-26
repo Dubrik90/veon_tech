@@ -27,7 +27,7 @@ export const ServiceHeader:FC<ServiceHeaderPropsType> = ({text, img, title, titl
             <Container>
                 <HeaderBlock>
                     <HeaderContent>
-                        <Title className='animate'>Создавая <span>уникальные сайты</span>, мы воплощаем в жизнь коммерческие цели <span>наших клиентов</span></Title>
+                        <Title className='animate'>Creating <span>unique websites</span>, we bring <span>our clients' </span> commercial goals to life</Title>
                         <Text>{text}</Text>
                         {/*<Button className='animate' onClick={onClickFormModalHandler}>{titleBtn}</Button>*/}
                     </HeaderContent>

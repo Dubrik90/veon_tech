@@ -8,12 +8,12 @@ export const OpticsAbout = () => {
         <OpticsAboutWrapper>
             <ContentBlock>
                 <TextBlock>
-                    <Title>Коннектор Оптикс</Title>
+                    <Title>Company Name: Connector Optics LLC</Title>
                     <Text>
-                        Научно-производственная компания, специализирующаяся на разработке и изготовлении гетероструктур для фотоники, в первую очередь для высокоскоростных вертикально-излучающих лазеров спектрального диапазона 850 – 1550 нм.
+                        A scientific and manufacturing company specializing in the development and production of heterostructures for photonics, primarily for high-speed vertical-cavity surface-emitting lasers in the spectral range of 850 - 1550 nm.
                     </Text>
                     <Text>
-                        Компания ООО "Коннектор Оптикс" обратилась к нам за доработкой сайта и переноса его на новый шаблон.
+                        Connector Optics LLC approached us for website enhancement and migration to a new template.
                     </Text>
                 </TextBlock>
                 <ImageBlock src={OpticsAboutImg}></ImageBlock>

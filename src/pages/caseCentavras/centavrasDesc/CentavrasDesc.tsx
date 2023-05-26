@@ -7,8 +7,7 @@ export const CentavrasDesc = () => {
         <CentavrasDescWrapper>
 
             <Text>
-                Веб-интерфейс представляет собой программу для упрощения формирования коммерческих предложений
-                Заказчиком. <br/> Наша команда разработала уникальный дизайн и логотип компании.
+                The web interface is a program designed to simplify the process of creating commercial proposals for our customers. <br/> Our team has developed a unique design and logo for the company.
             </Text>
             <ImgBlock>
                 <Img src={CentavrasImg} alt={'Centavras'}/>

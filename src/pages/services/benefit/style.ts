@@ -10,6 +10,7 @@ export const BenefitContentTop = styled.div`
 export const Title = styled.h3`
   text-align: center;
   font-weight: var(--fw-bold);
+  text-transform: uppercase;
   font-size: calc(30px + (56 - 30) * ((100vw - 320px) / (1920 - 320)));
   line-height: 1.4;
   color: var(--colors-text-dark);
@@ -158,13 +159,14 @@ export const TitleHead = styled.h2`
 export const CardTitle = styled.h4`
   font-size: calc(20px + (24 - 20) * ((100vw - 320px) / (1920 - 320)));
   text-transform: uppercase;
+  text-align: center;
   line-height: 1.3;
   font-weight: var(--fw-bold);
   padding: 10px;
   color: var(--colors-text-dark);
 
   @media (max-width: 1052px) {
-    max-width: 230px;
+   // max-width: 230px;
     text-align: center;
   }
   @media (max-width: 767px) {

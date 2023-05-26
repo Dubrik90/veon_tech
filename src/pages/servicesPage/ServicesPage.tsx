@@ -7,16 +7,15 @@ import {animateText} from "../../common/animate/animateText";
 export const ServicesPage = () => {
 
     useEffect(() => {
-        document.title = 'Сервисы — VEON-TECH'
+        document.title = 'Servises — VEON-TECH'
         animateText()
     }, []);
 
     const serviseLinks  = [
-        {title: 'Разработка сайтов', to: `/services/webDev`},
-        {title: 'Поддержка сайтов', to: `/services/support`},
-        {title: 'Разработка ПО', to: `/services/webPO`},
-        {title: 'UX/UI дизайн', to: `/services/ux`},
-
+        {title: 'WEBSITE DEVELOPMENT', to: `/services/webDev`},
+        {title: 'WEBSITE SUPPORT', to: `/services/support`},
+        {title: 'SOFTWARE DEVELOPMENT', to: `/services/webPO`},
+        {title: 'UX/UI DESIGN', to: `/services/ux`},
     ]
 
     return (

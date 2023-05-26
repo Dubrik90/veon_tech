@@ -8,11 +8,11 @@ export const HappyElephantDesc = () => {
         <HappyElephantDescWrapper>
             <Container>
                 <ElephantDescContent>
-                    <Text>Бэк эндом является 1С, управляющая календарями и записями. <br/> Пользователи работают с календарями в различных фронт-системах. </Text>
+                    <Text>The backend is managed by 1C, which handles calendars and appointments. <br/> Users interact with calendars through various frontend systems. </Text>
                     <ImageBlock>
                         <Img src={MobileImg} alt={'mobile image'}/>
                     </ImageBlock>
-                    <Text>Одним из ключевых требований заказчика была Адаптивность. <br/> С задачей мы справились успешно! <br/>Проект работает как в десктопной, так и мобильной версиях.</Text>
+                    <Text>One of the client's key requirements was responsiveness, and we successfully fulfilled this task. <br/>One of the client's key requirements was responsiveness, and we successfully fulfilled this task.</Text>
                 </ElephantDescContent>
             </Container>
         </HappyElephantDescWrapper>

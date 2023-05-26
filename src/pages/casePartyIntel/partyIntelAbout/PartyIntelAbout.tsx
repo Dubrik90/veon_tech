@@ -8,12 +8,13 @@ export const PartyIntelAbout = () => {
             <Container>
                 <ContentBlock>
                     <TextBlock>
-                        <Title>LLC "PartyIntel" (USA, LA) </Title>
-                        <Text>специализируется на сервисах поиска мероприятий/услуг</Text>
+                        <Title>Company Name: PartyIntel Location: USA, Los Angeles </Title>
+                        <Text>Specialization: Event and service search services</Text>
                     </TextBlock>
                     <TextBlock>
-                        <Title>Основная цель</Title>
-                        <Text>Реализация админки, реализация мессенджера в рамках контактов между Исполнителем и Заказчиком, раздел Leads - для платных объявлений, раздел объявлений Заказчика</Text>
+                        <Title>Main Objective:</Title>
+                        <Text>- Implementation of an admin panel <br/>- Implementation of a messenger for communication between Service Providers and Customers<br/>- Leads section for paid advertisements <br/>- Customer advertisement section
+                        </Text>
                     </TextBlock>
                 </ContentBlock>
             </Container>

@@ -15,7 +15,7 @@ export const Company = () => {
     return (
         <CompanyWrapper>
             <Container>
-                <Title className='animate'>Наши клиенты</Title>
+                <Title className='animate'>OUR CLIENTS</Title>
             </Container>
             <Marquee speed={150}>
                 <CompanyBlock>

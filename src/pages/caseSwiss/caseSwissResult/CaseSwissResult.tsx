@@ -8,14 +8,10 @@ export const CaseSwissResult = () => {
             <ContentBlock>
                 <TextBlock>
                     <Text>
-                        Мы внесли все изменения в сайт, что хотел заказчик. Реализовали возможность добавления баннеров
-                        к
-                        статьям и новостям на сайт.
+                        We made all the requested changes to the website, as desired by the client. We implemented the ability to add banners to articles and news on the site.
                     </Text>
                     <Text>
-                        Мы отдельно выделили раздел с новостями. Теперь постоянные посетители могут узнать что-то новое
-                        и
-                        ознакомиться с последними изменениями в жизни компании.
+                        We created a dedicated news section. Now, regular visitors can discover something new and stay updated with the latest changes in the company's life.
                     </Text>
                 </TextBlock>
                 <ImageBlock src={SwissResoult}></ImageBlock>

@@ -21,8 +21,8 @@ export const CaseHelp = () => {
                 <HelpContent>
                     {service === 'webDev'
                         ? <SubTitle>Давайте обсудим <span>Ваш</span> проект</SubTitle>
-                        : <SubTitle>ХОТИТЕ <span>ТАК ЖЕ?</span> МЫ <span>ПОМОЖЕМ!</span></SubTitle>}
-                    <Title onClick={onClickFormModalHandler}>Заказать звонок</Title>
+                        : <SubTitle>WANT <span>THE SAME RESULTS?</span> WE <span>CAN HELP!</span></SubTitle>}
+                    <Title onClick={onClickFormModalHandler}>Request a callback</Title>
                 </HelpContent>
             </Container>
         </CaseHelpWrapper>

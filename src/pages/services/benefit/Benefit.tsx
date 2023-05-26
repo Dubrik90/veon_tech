@@ -17,36 +17,36 @@ export const Benefit = () => {
         <BenefitWrapper>
             <Container>
                 <BenefitContentTop>
-                    <Title className='animate'>ЗАКАЗАВ РАЗРАБОТКУ И СОЗДАНИЕ <br/> САЙТА ПОД КЛЮЧ</Title>
-                    <SubTitle>Вы получите</SubTitle>
+                    <Title className='animate'>Ordering website development <br/> and creation from us</Title>
+                    <SubTitle>you will receive</SubTitle>
                 </BenefitContentTop>
                 <BenefitContentBottom>
                     <BenefitCard className='animate'>
-                        <CardTitle>ГАРАНТИИ И УВЕРЕННОСТЬ</CardTitle>
+                        <CardTitle>Guarantees and confidence</CardTitle>
                         <СircleWrap>
                             <Сircle>
                                 <span>01</span>
                             </Сircle>
                         </СircleWrap>
-                        <CardText>Все работы выполняются согласно условиям заключённого договора. Оплата производится по безналичному расчёту.</CardText>
+                        <CardText>All work is done according to the terms of the contract, and payment is made via non-cash settlement.</CardText>
                     </BenefitCard>
                     <BenefitCard className='animate'>
-                        <CardTitle>КОНТРОЛЬ И ОТЧЁТНОСТЬ</CardTitle>
+                        <CardTitle>Control and accountability</CardTitle>
                         <СircleWrap>
                             <Сircle>
                                 <span>02</span>
                             </Сircle>
                         </СircleWrap>
-                        <CardText>На все работы определяется время выполнения, согласуется техническое задание и сопроводительная документация.</CardText>
+                        <CardText>Timeframes for all work are determined, and technical specifications and accompanying documentation are agreed upon.</CardText>
                     </BenefitCard >
                     <BenefitCard className='animate'>
-                        <CardTitle>ОБУЧЕНИЕ И ПОДДЕРЖКА</CardTitle>
+                        <CardTitle>Training and <br/> support</CardTitle>
                         <СircleWrap>
                             <Сircle>
                                 <span>03</span>
                             </Сircle>
                         </СircleWrap>
-                        <CardText>После сдачи проекта мы обучаем вас или вашего ответственного сотрудника с последующей консультационной поддержкой.</CardText>
+                        <CardText>After project delivery, we provide training for you or your responsible employee, along with subsequent consultation support.</CardText>
                     </BenefitCard>
                 </BenefitContentBottom>
             </Container>

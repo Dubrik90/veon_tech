@@ -236,6 +236,7 @@ export const LinksBottomBlock = styled.div`
   
 `
 export const ButtonBottom = styled(Button)`
+  text-transform: uppercase;
   @media (max-width: 767px) {
     flex: 1 1 auto;
     width: 100%;

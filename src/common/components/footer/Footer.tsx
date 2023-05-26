@@ -40,14 +40,14 @@ export const Footer = () => {
                     </FooterTop>
                     <FooterBottom>
                         <About>
-                            <p>ООО "Веон-консалт"</p>
-                            <p>УНП 193082231</p>
+                            <p>LLC "Veon-consult"</p>
+                            <p>Unified State Register of Legal Entities 193082231</p>
                         </About>
                         <AboutContact>
                             <a href="tel:+375333028790">+375 (33) 302-87-90</a>
                             <p>clients@veon-tech.ru</p>
-                            <p>220068, г. Минск, ул. Сурганова, 57б, офис 187</p>
-                            <p>С понедельника по пятницу</p>
+                            <p>220068, Minsk, Surganova St., 57b, office 187</p>
+                            <p>Monday to Friday</p>
                         </AboutContact>
                         <Corporation>
                             <p>Copyright © 2023 VEON-TECH Ltd</p>

@@ -24,7 +24,7 @@ export type SaleCardsType = {
 export const Bonuses = () => {
 
     useEffect(() => {
-        document.title = 'Бонусы — VEON-TECH'
+        document.title = 'Bonuses — VEON-TECH'
         animateText()
     }, [])
 
@@ -32,36 +32,35 @@ export const Bonuses = () => {
         {
             id: '1',
             img: Clock,
-            title: 'Скидка 100 BYN',
-            subtitle: 'за скорость',
-            text: 'При подписании договора в течение 3 дней после получения коммерческого предложения',
-            subText: '*При заказе от 1500 BYN'
+            title: '100 BYN discount',
+            subtitle: 'for speed',
+            text: 'When signing the contract within 3 days after receiving the commercial offer',
+            subText: '*For orders over 1500 BYN'
         },
         {
             id: '2',
             img: Palit,
-            title: 'Бесплатный',
-            subtitle: 'логотип',
-            text: 'При подписании договора в течение 3 дней после получения коммерческого предложения',
+            title: 'Free',
+            subtitle: 'logo',
+            text: 'When signing the contract within 3 days after receiving the commercial offer',
             subText: ''
         },
         {
             id: '3',
             img: Hosting,
             title: 'Hostfly.by',
-            subtitle: '14 дней бесплатно',
-            text: '*На любой тариф хостинга',
+            subtitle: '14 days free',
+            text: '*On any hosting tariff',
             subText: ''
         },
         {
             id: '4',
             img: Sale,
-            title: '5% скидка',
-            subtitle: 'на все услуги',
-            text: '*При единовременном платеже всей суммы услуги. Для новых клиентов. Исключение оплата лицензий.',
+            title: '5% discount',
+            subtitle: 'on all services',
+            text: '*For one-time payment of the entire service amount. For new customers. License fees are excluded.',
             subText: ''
         },
-
     ]
 
     return (
@@ -70,35 +69,23 @@ export const Bonuses = () => {
             {/*           breadcrumbsTitle={'БОНУСЫ'}*/}
             {/*/>*/}
             <Container>
-                <TitleHead className='animate'>Бонусы</TitleHead>
+                <TitleHead className='animate'>Bonuses</TitleHead>
             </Container>
             <ChoiceBonuse/>
             <Container>
                 <BonusesCardsBlock>
-                    {
-                        saleCards.map((el, index) => (
+                    {saleCards.map((el, index) => (
                             <BonusesCard card={el} key={index}/>
-                        ))
-                    }
+                        ))}
                 </BonusesCardsBlock>
                 <SliderBonuse saleCards={saleCards}/>
             </Container>
             <BonusesContent>
                 <Container>
                     <TextBlock>
-                        <Text className='animate'>Для команды VEON-TECH клиенты – на первом месте. Нам нравится
-                            заботиться о своих клиентах,
-                            поэтому мы рекомендуем подходить к разработке комплексно, использовать максимальное
-                            количество
-                            существующих инструментов с учетом специфики бренда. Наша команда подготовила для вас
-                            уникальные
-                            бонусы по всем категориям инструментов интернет-разработки для еще более успешного
-                            продвижения
-                            вашей компании!
+                        <Text className='animate'>For the VEON-TECH team, clients come first. We enjoy taking care of our clients, so we recommend taking a comprehensive approach to development, utilizing the maximum number of existing tools while considering the brand's specific requirements. Our team has prepared unique bonuses for you across all categories of internet development tools for even more successful promotion of your company!
                         </Text>
-                        <Text className='animate'>Выбирайте подходящий под ваши конкретные цели бонус и воспользуйтесь
-                            им, повышайте ваши
-                            результативные показатели без лишних затрат.
+                        <Text className='animate'>Choose the bonus that suits your specific goals and take advantage of it to enhance your performance without unnecessary expenses.
                         </Text>
                     </TextBlock>
                 </Container>

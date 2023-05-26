@@ -29,14 +29,15 @@ export const HeadrMain:FC<HeadrMainProps>  = ({headerAnimate, button}) => {
         <HeaderMainWrapper ref={headerAnimate}>
             <Container>
                 <HeaderMainContent>
-                    <SubTitle>МЫ ПРЕДОСТАВЛЯЕМ <br/> КАЧЕСТВЕННЫЕ АУТСОРС <br/> УСЛУГИ  ДЛЯ КЛИЕНТОВ <br/> ПО ВСЕМУ МИРУ.
+                    <SubTitle>WE PROVIDE <br/> HIGH-QUALITY OUTSOURCING <br/> SERVICES FOR CLIENTS <br/> AROUND THE WORLD.
                     </SubTitle>
-                    <SubTitleSmall>МЫ ПРЕДОСТАВЛЯЕМ КАЧЕСТВЕННЫЕ <br/> АУТСОРС УСЛУГИ ДЛЯ КЛИЕНТОВ <br/>
-                        ПО ВСЕМУ МИРУ.
+                    <SubTitleSmall>WE PROVIDE HIGH-QUALITY <br/> OUTSOURCING SERVICES FOR
+                        <br/>
+                        CLIENTS AROUND THE WORLD.
                     </SubTitleSmall>
-                    <Title>Вот где начинаются</Title>
-                    <Title2>ваши свершения</Title2>
-                    <Button ref={button} onClick={onClickFormModalHandler}>Оставить заявку</Button>
+                    <Title>This is where your</Title>
+                    <Title2>achievements begin.</Title2>
+                    <Button ref={button} onClick={onClickFormModalHandler}>LEAVE AN INQUIRY</Button>
                 </HeaderMainContent>
             </Container>
         </HeaderMainWrapper>

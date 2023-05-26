@@ -47,11 +47,11 @@ export const MapComponent = () => {
             const errors: FormikErrorType = {}
 
             if (!values.name) {
-                errors.name = 'Поле не может быть пустым'
+                errors.name = 'The field cannot be empty'
             }
 
             if (!values.phone) {
-                errors.phone = 'укажите ваш телефон'
+                errors.phone = 'Please provide your phone number'
             }
 
             return errors
@@ -65,7 +65,7 @@ export const MapComponent = () => {
             <Container>
                 <MapWrapperBlock>
                     <CardWrapper>
-                        <Title><span>РАСПОЛОЖЕНИЕ</span> Нашего Офиса </Title>
+                        <Title> Our Office <span>Location</span> </Title>
                         <MapWrapper>
                             <YMaps width="100%" height="400px">
                                 <StyledMap state={mapState}>
@@ -75,15 +75,15 @@ export const MapComponent = () => {
                         </MapWrapper>
                     </CardWrapper>
                     <FormBlock>
-                        <Title>Мы рады увидеть <span>Вашу</span> заявку!</Title>
+                        <Title>We are happy to receive <span>your</span> inquiries!</Title>
                         <SubTitle>
-                            Пожалуйста оставьте Ваши имя и телефон, мы будем счастливы помочь Вам.
+                            Please leave your name and phone number, and we will be delighted to assist you.
                         </SubTitle>
                         <FormWrapper onSubmit={formik.handleSubmit}>
                             <InputBlock>
                                 <Label>
                                     <CustomInput type='text'
-                                                 placeholder='Ваше имя'
+                                                 placeholder='Name'
                                                  {...formik.getFieldProps('name')}
                                                  onChange={formik.handleChange}
                                     />
@@ -104,23 +104,18 @@ export const MapComponent = () => {
                                 </Label>
                                 <Label>
                                     <CustomTextArea
-                                        placeholder='Сообщение'
+                                        placeholder='Massage'
                                         {...formik.getFieldProps('text')}
                                         onChange={formik.handleChange}
                                     />
-                                    {/*{formik.touched.name && formik.errors.name &&*/}
-                                    {/*    <Errors>{formik.errors.name}</Errors>}*/}
                                 </Label>
                             </InputBlock>
                             <SubText>
-                                Нажимая на кнопку «Отправить», вы даете свое согласие на обработку персональных данных в
-                                соответствии с целями указанными в <Link to={ROUTS.POLICY}>Политике обработки персональных
-                                данных</Link>
+                                By clicking "Submit," you give your consent to the processing of personal data in accordance with the purposes specified in the<Link to={ROUTS.POLICY}> Privacy Policy.</Link>
                             </SubText>
-                            <Button type='submit'>Отправить</Button>
+                            <Button type='submit'>SUBMIT</Button>
                         </FormWrapper>
                     </FormBlock>
-
                 </MapWrapperBlock>
             </Container>
         </MapComponentWrapper>

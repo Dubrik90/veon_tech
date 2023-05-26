@@ -14,61 +14,61 @@ import {ROUTS} from "../../../common/constans/routs";
 
 export const portfolioData: DevDataType[] = [
     {
-        header: 'Разработка сайта каталога',
+        header: 'Catalog website development',
         desc: '',
         img: Img07,
         link: ROUTS.CASE_SINARADESING
     },
     {
-        header: 'Разработка онлайн сервиса',
+        header: 'Online service development',
         desc: '',
         img: Img08,
         link: ROUTS.CASE_ART_MEDIA
     },
     {
-        header: 'Разработка корпоративного сайта',
+        header: 'Corporate website development',
         desc: '',
         img: Img03,
         link: ROUTS.CASE_OPTICS
     },
     {
-        header: 'Разработка календаря бронирования',
+        header: 'Booking calendar development',
         desc: '',
         img: Img04,
         link: ROUTS.CASE_PAPPY_ELEPHANT
     },
     {
-        header: 'Редизайн интернет-каталога',
+        header: 'Internet catalog redesign',
         desc: '',
         img: Img05,
         link: ROUTS.CASE_SWISS
     },
     {
-        header: 'Создание сайта-каталога',
+        header: 'Catalog website creation',
         desc: '',
         img: Img06,
         link: ROUTS.CASE_SODOX
     },
     {
-        header: 'Создание сайта-каталога',
+        header: 'Catalog website creation',
         desc: '',
         img: Img01,
         link: ROUTS.CASE_GRANIT
     },
     {
-        header: 'Cервис поиска услуг',
+        header: 'Service for service search',
         desc: '',
         img: Img02,
         link: ROUTS.CASE_PARTY_INTEL
     },
     {
-        header: 'Разработка корпоративного сайта',
+        header: 'Corporate website development',
         desc: '',
         img: Img09,
         link: ROUTS.CASE_CENTAVRAS
     },
     {
-        header: 'Создание маркетплейса',
+        header: 'Marketplace creation',
         desc: '',
         img: Img10,
         link: ROUTS.CASE_RENT_CLUB

@@ -10,7 +10,8 @@ export const Techno = () => {
     return (
         <TechnoWrapper >
             <Container>
-                <Title className='animate'>Большой опыт разработки проектов различной сложности</Title>
+                <Title className='animate'>Extensive experience in developing projects of various complexity
+                </Title>
                 <TechnoContent>
                     <TechnoBlock className='animate'>
                         <svg viewBox="0 0 464 372">
@@ -32,7 +33,7 @@ export const Techno = () => {
                         </figure>
                     </TechnoBlock>
                     <TechnoText className='animate'>
-                        VEON-TECH стремится помогать компаниям со всего мира расти, повышать производительность, оптимизировать бизнес-процессы и опережать конкурентов. <br/> Всякий раз, когда Вашему бизнесу требуется новый инструмент или продукт, мы применяем наши знания и навыки для реализации интеллектуального и надежного решения по конкурентоспособной цене.
+                        VEON-TECH strives to help companies from all over the world grow, improve productivity, optimize business processes, and outperform competitors. <br/> Whenever your business needs a new tool or product, we apply our knowledge and skills to implement an intelligent and reliable solution at a competitive price.
                     </TechnoText>
                 </TechnoContent>
 

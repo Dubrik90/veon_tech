@@ -11,20 +11,10 @@ export const CentavrasResult = () => {
             <CentavrasResultWrapper src={CentavrasResultImg}>
                 <Container>
                     <Content>
-                        <Text>Мы разделили нашу работу на несколько этапов</Text>
-                        <Text>Этап №1: Регистрация. <br/>При регистрации на сайте пользователь указывает ФИО, email,
-                            свою
-                            страну и категории интересующего его товара. После пользователь ждет одобрение
-                            администратора на
-                            просмотр выбранной категории товаров
+                        <Text>We divided our work into several stages:</Text>
+                        <Text>ЭStage 1: Registration <br/>During registration on the website, users provide their full name, email address, country, and categories of products they are interested in. After registration, users await approval from the administrator to view their selected product categories.
                         </Text>
-                        <Text>Этап №2: Панель Администратора. <br/> При одобрении аккаунта, Администратор указывает %
-                            надбавки к
-                            стоимости товара в зависимости от страны клиента. После одобрение клиенту приходит
-                            оповещающее
-                            регистрацию письмо на email + ссылка на вход в его кабинет. В панели администратора
-                            отображаются
-                            заказы клиента в excel файлах.
+                        <Text>Stage 2: Administrator Panel <br/> Upon account approval, the administrator specifies the percentage markup on the product cost based on the client's country. Once approved, the client receives a registration confirmation email containing a link to access their account. In the administrator panel, client orders are displayed in Excel files. When a client places an order, all order data is automatically recorded in the database, visible to the administrator.
                         </Text>
                     </Content>
                 </Container>
@@ -33,25 +23,13 @@ export const CentavrasResult = () => {
             <HappyElephantResultWrapperMob>
                 <Container>
                     <TextMob>
-                        Мы разделили нашу работу на несколько этапов
+                        We divided our work into several stages:
                     </TextMob>
                     <TextMob>
-                        Этап №1: Регистрация. <br/>При регистрации на сайте пользователь указывает ФИО, email,
-                        свою
-                        страну и категории интересующего его товара. После пользователь ждет одобрение
-                        администратора на
-                        просмотр выбранной категории товаров
+                        Stage 1: Registration <br/>During registration on the website, users provide their full name, email address, country, and categories of products they are interested in. After registration, users await approval from the administrator to view their selected product categories.
                     </TextMob>
                     <TextMob>
-                        Этап №2: Панель Администратора. <br/> При одобрении аккаунта, Администратор указывает %
-                        надбавки к
-                        стоимости товара в зависимости от страны клиента. После одобрение клиенту приходит
-                        оповещающее
-                        регистрацию письмо на email + ссылка на вход в его кабинет. В панели администратора
-                        отображаются
-                        заказы клиента в excel файлах. Когда клиент оформляет заказ, все данные о заказе
-                        автоматически
-                        заносятся в Базу данных и администратор может это видеть.
+                        Stage 2: Administrator Panel <br/> Upon account approval, the administrator specifies the percentage markup on the product cost based on the client's country. Once approved, the client receives a registration confirmation email containing a link to access their account. In the administrator panel, client orders are displayed in Excel files. When a client places an order, all order data is automatically recorded in the database, visible to the administrator.
                     </TextMob>
                 </Container>
                 <Img src={CentavrasResultImg}/>

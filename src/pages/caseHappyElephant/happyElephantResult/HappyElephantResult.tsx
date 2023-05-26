@@ -18,13 +18,12 @@ export const HappyElephantResult: FC<HappyElephantResultProps> = ({text1, text2,
                 <Container>
                     <ResultContent>
                         <Text>
-                            Оплата в свою очередь осуществляется через платежные модули, подключаемые к сайту в типовом механизме. <br/> При переходе к оплате ставятся в резерв Бонусы.
+                            Payment, on the other hand, is facilitated through payment modules connected to the website using a standard mechanism. <br/> When proceeding to payment, bonuses are reserved.
                             {/*{text1}*/}
                         </Text>
                         <Text>
-                            {/*{text2}*/}
                             Выбирая нас клиент получил следующее: <br/>
-                            -Календарь бронирования с широким функционалом <br/>
+                            - Календарь бронирования с широким функционалом <br/>
                             - Кабинет сделки с интуитивно-понятным пользователю интерфейсом <br/>
                             - Реализована система платежей <br/>
                         </Text>
@@ -38,7 +37,11 @@ export const HappyElephantResult: FC<HappyElephantResultProps> = ({text1, text2,
                         {text1}
                     </TextMob>
                     <TextMob>
-                        {text2}
+                        By choosing our services, the client received the following:<br/>
+                        - A feature-rich booking calendar<br/>
+                        - A user-friendly deal cabinet interface<br/>
+                        - Implemented payment system<br/>
+                        - Our team also developed various user behavior scenarios in the deal cabinet.<br/>
                     </TextMob>
                 </Container>
             </HappyElephantResultWrapperMob>

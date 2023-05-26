@@ -56,24 +56,22 @@ export const DescriptionWeb: FC<DescriptionWebProps> = ({descriptionWeb}) => {
         <DescriptionWebWrapper ref={descriptionWeb}>
             <Container>
                 <Title className='animate'>
-                    <p>Разработка проектов</p>
-                    <p><span>highload-класса</span> по scrum</p>
-                    <p>- И в этом мы сильны</p>
+                    <p>Project development</p>
+                    <p>Scrum-based<span> high-load class</span></p>
+                    <p>- And we are good at it.</p>
                 </Title>
                 <DescriptionWebContent>
                     <DescriptionWebBlock>
                         <AboutText className={'animate'}>
-                            <span>VEON-TECH</span> — это профессиональный разработчик, веб-сервисов, интернет-порталов и
-                            сайтов любой направленности. Также компания, которая оказывает услуги по поисковому
-                            продвижению и управлению репутацией в интернете.
+                            <span>VEON-TECH</span> is a professional developer of web services, internet portals, and websites of any orientation. It is also a company that provides services for search engine optimization and online reputation management.
                         </AboutText>
                         <AboutText className={'animate'}>
-                            Создание многофункциональных проектов по методологии Time & Materials, является основным
-                            продуктом компании. Мы реализуем проекты действительно хорошо: <br/>
-                            - Современный адаптивный дизайн;<br/>
-                            - Разработка и вёрстка проектов с использованием различных языков и фреймворков;<br/>
-                            - Правильная настройка 1С-Битрикс;<br/>
-                            - Прохождение контроля качества.<br/>
+                            Creating multi-functional projects using the Time & Materials methodology is the company's main product. We implement projects really well:
+                            <br/>
+                            - Modern adaptive design;<br/>
+                            - Development and layout of projects using various languages and frameworks;<br/>
+                            - Proper configuration of 1C-Bitrix;<br/>
+                            - Quality control.<br/>
                         </AboutText>
                     </DescriptionWebBlock>
                     <Cards>
@@ -93,7 +91,7 @@ export const DescriptionWeb: FC<DescriptionWebProps> = ({descriptionWeb}) => {
                                 <TitleMobile>{activeCard.header}</TitleMobile>
                                 <SubTitle>{activeCard.desc}</SubTitle>
                                 <ButtonArrow>
-                                    Узнать подробнее
+                                    Learn more
                                     <Arrow/>
                                 </ButtonArrow>
                             </Link>

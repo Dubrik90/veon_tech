@@ -8,14 +8,14 @@ type ContentCaseProps = {
 export const ContentCase:FC<ContentCaseProps> = ({activeCase}) => {
     return (
         <ContentCaseWrapper>
-            <Title>Обращение:</Title>
+            <Title>Background:</Title>
             <Text>{activeCase.appealClient}</Text>
             <ImageBlock>
                 <Img src={activeCase.screenImg} alt="picture"/>
             </ImageBlock>
-            <Title>Процесс разработки:</Title>
+            <Title>Development Process:</Title>
             <Text>{activeCase.process}</Text>
-            <Title>Результаты:</Title>
+            <Title>Results:</Title>
             <Text>{activeCase.result}</Text>
         </ContentCaseWrapper>
     );

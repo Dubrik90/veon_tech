@@ -13,7 +13,7 @@ import {SimilarCases} from "../case/similarCases";
 export const CaseCentavras = () => {
     return (
         <CaseCentavrasWrapper>
-            <CaseHeader title={'Кейс по разработке сайта для ООО "Centavras Kft"'}/>
+            <CaseHeader title={'Centavras Kft'}/>
             <CaseImageComponent img={CentavrasImg}/>
             <CentavrasAbout/>
             <CentavrasDesc/>

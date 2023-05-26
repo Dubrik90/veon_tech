@@ -16,51 +16,40 @@ export const caseDataArray: CaseDataType = [
     {
         id: '1',
         type: 'magazines',
-        title: 'Кейс по разработке маркетплейса для сервиса аренды вещей',
+        title: 'Case Study: Marketplace Development for Rental Service',
         screenImg: Sinaradesign,
         logoImg: LogoImg,
-        service: 'Разработка сайта каталога',
-        client: 'ООО "Sinaradesign"',
+        service: 'Catalog website development',
+        client: 'Sinaradesign LLC',
         projectUrl: 'https://sinaradesign.com/',
-        aboutCompany: 'ООО "Sinaradesign" специализируется на продаже крафтовых изделий.',
-        targets: 'Создание сайта-каталога для привлечения новых клиентов, адаптивное отображение сайта на всех устройствах и разрешениях, полнота информации о товарах, понятная структура сайта, соответствие дизайна корпоративному стилю.',
+        aboutCompany: 'Sinaradesign LLC specializes in selling handmade craft products.',
+        targets: 'Create a catalog website to attract new customers, ensure responsive website display on all devices and resolutions, provide comprehensive product information, ensure a user-friendly website structure, and maintain consistency with corporate design style.',
 
         tableData: [
-            {name: 'Наименование компании', value: `ООО "Sinaradesign"`},
-            {name: 'Сфера деятельности', value: `Сервис для продажи крафтовых вещей`},
-            {name: 'Страна, на которую рассчитан сайт', value: `Российская Федерация`},
-            {name: 'Основные товары и услуги', value: `Крафтовые вещи`},
-            {name: 'Домен сайта', value: `ООО "https://sinaradesign.com/`},
-            {name: 'Целевая аудитория', value: `Мужчины/женщины от 18 до 40 лет`},
-            {name: 'Задачи сайта', value: `Увеличение конверсии и охватов. Ознакомление клиентов со всем ассортиментом компании. Увеличение числа потенциальных клиентов.`},
-            {name: 'Тип сайта', value: `Сервис`},
-            {name: 'Тариф', value: `-`},
-            {name: 'CMS', value: `-`},
-            {name: 'Языки разработки/Фреймовик', value: `C#, Angular, Wordpress`},
+            {name: 'Company Name', value: ` Sinaradesign LLC`},
+            {name: 'Industry', value: `Craft product sales service`},
+            {name: 'Target Country', value: `Russian Federation`},
+            {name: 'Main Products and Services', value: `Handmade craft products`},
+            {name: 'Website Domain:', value: `LLC "https://sinaradesign.com/`},
+            {name: 'Target Audience', value: `Men/women aged 18 to 40`},
+            {name: 'Website Objectives', value: `Increase conversion rates and reach, familiarize customers with the company's entire product range, and increase the number of potential clients.`},
+            {name: 'Website Type', value: `Service`},
+            // {name: 'Тариф', value: `-`},
+            {name: 'CMS', value: `Not specified`},
+            {name: 'Development Languages/Framework', value: `C#, Angular, Wordpress`},
             {
-                name: 'Пожелания заказчика',
-                value: `Я желаю чтобы наш сайт пробился в первые строчки и чтобы он работал быстро и на всех устройствах.`
+                name: 'Client\'s Preferences',
+                value: ` I want our website to rank high and perform well on all devices.`
             },
         ],
-        appealClient: 'Компания ООО "Sinaradesign" обратилась к нам за разработкой сайта-каталога для привлечения новых клиентов, адаптивное отображение сайта на всех устройствах и разрешениях, полнота информации о товарах, понятная структура сайта, соответствие дизайна корпоративному стилю.',
-        process: 'Перед нами стояла масштабная задача по работе дизайнеров, программистов, копирайтеров и SEO-администратора. \n' +
-            'Из за того что нам была поставлена задача увеличить конверсию продаж, а также продвигать сайты на первые строчки, наша команда занялась с анализом рынка и запросов пользователей. Мы заложили структу SEO на этапе проектирования сайта.\n' +
-            'Заказчик полностью доверился нашему профессионализму, а мы в свою очередь постарались реализовать все его "хотелки". У клиента был свой лого, наша команда дизайнеров занялась его доработкой. \n' +
-            'После доработки логотипа наши дизайнеры приступили к созданию адаптивного макета сайта в соответствии с техническим заданием.\n' +
-            'В ходе сдачи этапа, заказчик положительно оценил дополнительные дизайнерские решения наших специалистов.\n' +
-            'После подписания акта сдачи этапа, дело перешло в руки Front-end разработчиков.\n' +
-            'Благодаря строгой системы контроля таймингов задач, нашим специалистам удалось реализовать весь ёмкий процесс всего за 2 недели! \n' +
-            'После запуска сайта мы приступили к работе над наполнением интернет-каталога.\n' +
-            'В админ панель мы добавили множество функций в том числе и отображения количества пользователей в разное время, а также автоматическую рассылку почты, тем пользователям, что сейчас онлайн.\n' +
-            'Также мы добавили счетчики для Google и Яндекс метрик, настроили метатеги и другие сервисы поисковых систем.\n' +
-            'Также был заложен функционал для превращения сайта в интернет-магазин и добавления других различных элементов для при дальнейшем развитии проекта.',
-        result: 'Тестирование прошли успешно!\n' +
-            'Заказчик остался невероятно доволен проектом, ведь мы сделали быстрее и больше чем он сразу планировал.\n' +
-            'Выбирая нас клиент получил следующее:\n' +
-            '- Максимально быстрая реализация проекта!\n' +
-            '- Увеличил конверсию продаж, сайт выбился в верхнии строчки Google и Яндекс\n' +
-            '- Высокую скорость и адаптивность на всех устройствах\n' +
-            '- Поддержку сайта',
+        appealClient: 'Sinaradesign LLC approached us to develop a catalog website to attract new customers, ensure responsive website display on all devices and resolutions, provide comprehensive product information, ensure a user-friendly website structure, and maintain consistency with corporate design style.',
+        process: 'We faced a significant task involving designers, programmers, copywriters, and an SEO administrator. As the goal was to increase sales conversion and achieve high search engine rankings, our team conducted market analysis and user research. We incorporated SEO structure during the website\'s design phase. The client fully trusted our professionalism, and we made every effort to fulfill their requirements. The client had their own logo, and our team of designers worked on its refinement. After refining the logo, our designers created a responsive website layout according to the technical specifications. During the milestone delivery, the client positively evaluated the additional design solutions provided by our specialists. After signing off on the milestone, the project was handed over to front-end developers. Thanks to a strict task timing control system, our specialists managed to complete the entire complex process in just two weeks! After launching the website, we began populating the online catalog. We added numerous features to the admin panel, including user activity tracking and automated email notifications to online users. We also integrated Google and Yandex metrics, configured meta tags, and other search engine services. Additionally, we implemented functionality to transform the website into an online store and added various elements for future project expansion.',
+        result: 'Testing was successful! The client was incredibly satisfied with the project as we delivered faster and more than initially planned. By choosing us, the client obtained the following:\n' +
+            '\n' +
+            'Maximum project implementation speed!\n' +
+            'Increased sales conversion rates, with the website ranking high on Google and Yandex.\n' +
+            'High speed and responsiveness on all devices.\n' +
+            'Ongoing website support.\n',
         portfolio: [
             {img: Image1, src: ''},
             {img: Image2, src: ''},
@@ -72,40 +61,40 @@ export const caseDataArray: CaseDataType = [
     {
         id: '2',
         type: 'catalogs',
-        title: 'Кейс по разработке интернет каталога',
+        title: 'Case Study: Development of an Online Catalog',
         screenImg: Art,
         logoImg: LogoImg,
-        service: 'Разработка онлайн сервиса',
+        service: 'Online service development',
         client: 'ArtDoc.media',
         projectUrl: 'https://artdoc.media/ru/',
-        aboutCompany: 'Компания ArtDoc.media занимается предоставлением онлайн-сеансов документального кино на русском языке',
-        targets: 'Реализовать личный кабинет пользователя, а также расширить и доработать готовый функционал сайта в соответствии с ТЗ',
+        aboutCompany: 'ArtDoc.media is engaged in providing online screenings of Russian-language documentary films.',
+        targets: 'Implement user personal account and expand and enhance the existing functionality of the website according to the specifications.',
 
         tableData: [
-            {name: 'Наименование компании', value: `ArtDoc.media`},
-            {name: 'Сфера деятельности', value: `развлечения`},
-            {name: 'Страна, на которую рассчитан сайт', value: `Российская Федерация`},
-            {name: 'Основные товары и услуги', value: `сервис по поиску развлечений`},
-            {name: 'Домен сайта', value: `ООО "https://artdoc.media/`},
-            {name: 'Целевая аудитория', value: `мужчины/женщины от 18 до 40 лет`},
-            {name: 'Задачи сайта', value: `реализация бэк энд части (календарь и система бронирования, реализация платежей)`},
-            {name: 'Тип сайта', value: `Сервис`},
-            {name: 'Тариф', value: `-`},
-            {name: 'CMS', value: `-`},
-            {name: 'Языки разработки/Фреймовик', value: `PHP, Laravel`},
+            {name: 'Company Name', value: `ArtDoc.media`},
+            {name: 'Industry', value: `Entertainment`},
+            {name: 'Target Country', value: `Russian Federation`},
+            {name: 'Main Products and Services', value: `Entertainment search service`},
+            {name: 'Website Domain: LLC', value: `https://artdoc.media/`},
+            {name: 'Target Audience', value: `Men and women aged 18 to 40`},
+            {name: 'Website Objectives', value: `Backend implementation (calendar and booking system, payment integration)`},
+            {name: 'Website Type', value: `Service`},
+            // {name: 'Тариф', value: `-`},
+            {name: 'CMS', value: `Not specified`},
+            {name: 'Development Languages/Framework', value: `PHP, Laravel`},
             {
-                name: 'Пожелания заказчика',
-                value: `Реализация сервиса в максимально сжатые сроки.`
+                name: 'Client\'s Preferences',
+                value: `Timely implementation of the service.`
             },
         ],
-        appealClient: 'Компания Art.doc media обратилась к нам за разработкой личного кабинета и расширением возможностей сайта онлайн-сеансов документального кино на русском языке.',
-        process: 'Мы разработали поле для регистрации, личный кабинет, и удобно структурирован сайт. Наша команда уже сталкивалась с такими проектами, поэтому сделать его быстро и качественно не составило проблем. Мы реализовали удобную систему подписки, как на популярных стриминговых платформах. Мы сделали удобную панель администратора с возможностью выгружать информацию о пользователе. Выгруженные файлы хранятся в форматах: csv, xml или json. Добавили возможность администратору блокировать пользователей, что нарушают правила сайта. Благодаря тесному сотрудничеству в процессе разработки, заказчик получил то, что хотел.',
-        result: 'Проект успешно прошёл тестирование, хорошо оптимизирован и выполнен нашими сотрудниками точно в срок!\n' +
-            'Выбирая нас клиент получил следующее:\n' +
-            '- Реализована система регистрации\n' +
-            '- Реализована удобная система подписки\n' +
-            '- Реализована Панель Администратора\n' +
-            '- Также наша команда разработала различные сценарии поведения Пользователя в кабинете сделки.',
+        appealClient: 'ArtDoc.media approached us to develop a user personal account and enhance the capabilities of their website for online screenings of Russian-language documentary films.',
+        process: 'We developed a registration field, user personal account, and restructured the website for improved usability. As our team had prior experience with similar projects, delivering it quickly and with high quality was not a challenge. We implemented a convenient subscription system, similar to popular streaming platforms. Additionally, we created an admin panel with the ability to export user information. The exported files are stored in CSV, XML, or JSON formats. We also added the ability for the administrator to block users who violate the site\'s rules. Through close collaboration during the development process, the client received exactly what they desired.',
+        result: 'The project successfully passed testing, was well-optimized, and delivered by our team on time.\n' +
+            'By choosing us, the client obtained the following:\n' +
+            '- Implemented registration system\n' +
+            '- Implemented a convenient subscription system\n' +
+            '- Created an admin panel\n' +
+            '- Developed various user interaction scenarios within the account interface.',
         portfolio: [
             {img: Image1, src: ''},
             {img: Image2, src: ''},
@@ -117,45 +106,42 @@ export const caseDataArray: CaseDataType = [
     {
         id: '3',
         type: 'sites',
-        title: 'Кейс по разработке сайтов',
+        title: 'Website Development',
         screenImg: Sodox,
         logoImg: sodox,
-        service: 'Создание сайта-каталога',
-        client: 'ООО "Содокс Пром"',
+        service: 'Catalog website creation',
+        client: 'Sodox Prom LLC',
         projectUrl: 'https://sodox.by',
-        aboutCompany: 'Группа компаний SODOX — производитель промышленного оборудования',
-        targets: 'Разработать интернет-каталог для представления компании в интернете с возможностью заказа товара или услуги.',
+        aboutCompany: 'SODOX Group is an industrial equipment manufacturer.',
+        targets: 'To develop an internet catalog to showcase the company online and enable customers to place orders for products or services.',
 
         tableData: [
-            {name: 'Наименование компании', value: `ООО "Содокс Пром"`},
-            {name: 'Сфера деятельности', value: `производство промышленного оборудования, инжиниринговые услугие, реализация станков`},
-            {name: 'Страна, на которую рассчитан сайт', value: `Беларусь, РФ`},
-            {name: 'Основные товары и услуги', value: `промышенное оборудование`},
-            {name: 'Домен сайта', value: `ООО "https://sodox.by`},
-            {name: 'Целевая аудитория', value: `B2B, мужчины 30-60 лет`},
-            {name: 'Задачи сайта', value: `создать лояльность у клиента к продукции компании`},
-            {name: 'Тип сайта', value: `Сайт-каталог`},
-            {name: 'Тариф', value: `-`},
-            {name: 'CMS', value: `-`},
-            {name: 'Языки разработки/Фреймовик', value: `Phyton, Django`},
+            {name: 'Company Name', value: `Sodox Prom LLC`},
+            {name: 'Industry', value: `Industrial equipment manufacturing, engineering services, machinery sales`},
+            {name: 'Target Country', value: `Belarus, Russia`},
+            {name: 'Main Products and Services', value: `Industrial equipment`},
+            {name: 'Website Domain: LLC', value: `https://sodox.by`},
+            {name: 'Target Audience', value: `B2B, men aged 30-60`},
+            {name: 'Website Objectives', value: `Create customer loyalty to the company's products`},
+            {name: 'Website Type', value: `Catalog Website`},
+            // {name: 'Тариф', value: `-`},
+            {name: 'CMS', value: `Not specified`},
+            {name: 'Development Languages/Framework', value: `Python, Django`},
             {
-                name: 'Пожелания заказчика',
-                value: `Создать современный сайт, с которым заказчик выделится на фоне конкурентов. Оптимизировать структуру и интерфейс для комфортной навигации.`
+                name: 'Client\'s Preferences',
+                value: `Create a modern website that distinguishes the client from competitors. Optimize the structure and interface for easy navigation.`
             },
         ],
-        appealClient: 'Клиент обратился к нам с просьбой реализовать интернет-каталог для  повышения узнаваемости бренда. ',
-        process: 'После анализа основных конкурентов компании Sodox и сбора всей необходимой информации от заказчика, мы приступили к разработке интерактивного прототип-проекта. \n' +
-            'После выбора концепции сайта, а также оценки ориентировочной сметы проекта заказчиком, наша команда приступила к реализации дизайна, а так же поэтапной разработке проекта. ',
-        result: 'Выбирая нас клиент получил следующее:\n' +
+        appealClient: 'The client approached us to implement an internet catalog to increase brand recognition.',
+        process: 'After analyzing Sodox\'s main competitors and gathering all the necessary information from the client, we began developing an interactive prototype project. Once the website concept was selected and an estimated budget was provided by the client, our team proceeded with design implementation and step-by-step project development.',
+        result: 'By choosing us, the client obtained the following:\n' +
             '\n' +
-            '- Сайт с огромным количеством форм, обеспечивающие простоту и удобство в заказе необходимого оборудования клиентами нашего заказчика (в т.ч. по брендам), \n' +
-            '- Разработан каталог с достаточно широким функционалом\n' +
-            '- Реализована панель администратора и системой защиты/авторизации.\n' +
-            '- Реализовано подробное описание каждого из категории товаров клиента \n' +
-            '- Фото, общие характеристики группы, краткое описание, а также таблица ассортимента группы. \n' +
+            '- A website with numerous forms to facilitate easy and convenient equipment ordering by our client\'s customers (including by brand), \n' +
+            '- A catalog with a wide range of functionality\n' +
+            '- Implementation of an admin panel and security/authentication system.\n' +
+            '- Detailed descriptions for each product category of the client, including photos, general characteristics, brief descriptions, and a product assortment table' +
             '\n' +
-            'Клиент имеет современный интернет-каталог, который не только представляет продукцию компании Sodox в интернете, но и обеспечивает высокую конверсию продаж ввиду активной посещаемости. \n' +
-            'Сайт стал официальным представителем компании в сети. ',
+            'The client now has a modern internet catalog that not only presents Sodox\'s products online but also ensures high sales conversion rates due to active visitor engagement. The website has become the company\'s official online representation.',
         portfolio: [
             {img: Image1, src: ''},
             {img: Image2, src: ''},
@@ -170,7 +156,7 @@ export const caseDataArray: CaseDataType = [
         title: 'Кейс по разработке маркетплейса для  ООО "Рент клаб"',
         screenImg: Rent,
         logoImg: LogoRent,
-        service: 'Создание сайта-каталога',
+        service: 'Catalog website creation',
         client: 'ООО "Рент клаб" (под НДА)',
         projectUrl: 'https://rentclub.pro',
         aboutCompany: 'ООО "Рент клаб" (под НДА)',

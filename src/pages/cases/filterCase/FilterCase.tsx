@@ -24,19 +24,19 @@ export const FilterCase: React.FC = () => {
     const [selectedIndustry, setSelectedIndustry] = React.useState<string[]>([]);
 
     const handleOptionChange = (option: string, filterName: string) => {
-        if (filterName === 'Категории') {
+        if (filterName === 'Categories') {
             setSelectedCategory((filterStore) =>
                 filterStore.includes(option)
                     ? filterStore.filter((o) => o !== option)
                     : [...filterStore, option]
             );
-        } else if (filterName === 'Страны') {
+        } else if (filterName === 'Countries') {
             setSelectedCountry((filterStore) =>
                 filterStore.includes(option)
                     ? filterStore.filter((o) => o !== option)
                     : [...filterStore, option]
             );
-        } else if (filterName === 'Отрасли') {
+        } else if (filterName === 'Industries') {
             setSelectedIndustry((filterStore) =>
                 filterStore.includes(option)
                     ? filterStore.filter((o) => o !== option)
@@ -57,19 +57,19 @@ export const FilterCase: React.FC = () => {
     const filterData = [
         {
             id: '0',
-            filterName: 'Категории',
+            filterName: 'Categories',
            // type: ['magazines', 'catalogs', 'sites', 'visit'],
-            filterCategories: ['Интернет-магазины', 'Интернет-каталоги', 'Корпоративные сайты', 'Веб-сервисы', ]
+            filterCategories: ['Online stores', 'Online catalogs', 'Corporate websites', 'Web services', ]
         },
         {
             id: '1',
-            filterName: 'Отрасли',
-            filterCategories: ['Медицина', 'Интернет торговля', 'Развлечения', 'Логистика']
+            filterName: 'Industries',
+            filterCategories: ['Medicine', 'Online trading', 'Entertainments', 'Logistics']
         },
         {
             id: '2',
-            filterName: 'Страны',
-            filterCategories: ['Беларусь', 'Россия', 'США', 'Европа']
+            filterName: 'Countries',
+            filterCategories: ['Belarus', 'Russia', 'USA', 'Europe']
         },
     ]
 
@@ -110,7 +110,7 @@ export const FilterCase: React.FC = () => {
                                             </li>))}
                                     </Ul>
                                     <div className="filter__content-btn">
-                                        <Button onClick={handleApplyClick}>Применить</Button>
+                                        <Button onClick={handleApplyClick}>APPLY</Button>
                                     </div>
                                 </div>
                             </div>
@@ -144,7 +144,7 @@ export const FilterCase: React.FC = () => {
                             </div>
                         ))}
                         <div className="filter__content-btn">
-                            <Button onClick={handleApplyClick}>Применить</Button>
+                            <Button onClick={handleApplyClick}>APPLY</Button>
                         </div>
                     </SubMobileMenu>}
                 </FilterFormMobile>

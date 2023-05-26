@@ -47,11 +47,11 @@ export const ConsultantModal = () => {
             const errors: FormikErrorType = {}
 
             if (!values.name) {
-                errors.name = 'Поле не может быть пустым'
+                errors.name = 'The field cannot be empty'
             }
 
             if (!values.phone) {
-                errors.phone = 'укажите ваш телефон'
+                errors.phone = 'Please provide your phone number'
             }
             return errors
         },
@@ -69,13 +69,13 @@ export const ConsultantModal = () => {
     return (
         <ModalWindowWrapper openModal={isConsultantModalOpen}>
             <RegisterWrapper>
-                <Title>Заявка на обратный звонок</Title>
+                <Title>Request a callback</Title>
                 <Clouse onClick={onClickClouseModalHandler}/>
                 <FormWrapper onSubmit={formik.handleSubmit}>
                     <InputBlock>
                         <Label>
                             <CustomInput type='text'
-                                         placeholder='Ваше имя'
+                                         placeholder='Name'
                                          {...formik.getFieldProps('name')}
                                          onChange={formik.handleChange}
                             />

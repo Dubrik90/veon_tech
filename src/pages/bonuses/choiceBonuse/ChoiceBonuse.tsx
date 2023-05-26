@@ -37,9 +37,9 @@ export const ChoiceBonuse = () => {
         <ChoiceBonuseWrapper>
             <Container>
                 <BonuseContent>
-                    <SubTitle >При работе с нами вы получите дополнительные опции для развития Вашего бизнеса. Улучшаем ваш бизнес вместе!</SubTitle>
-                    <Title> Программа лояльности для клиентов компании <span>VEON-TECH</span></Title>
-                    <Text>Выберите <span>свой</span> бонус!</Text>
+                    <SubTitle>When working with us, you will receive additional options for the development of your business. We improve your business together!</SubTitle>
+                    <Title><span>VEON-TECH </span>Customer Loyalty Program </Title>
+                    <Text>Choose <span>your</span> bonus!</Text>
                 </BonuseContent>
             </Container>
         </ChoiceBonuseWrapper>

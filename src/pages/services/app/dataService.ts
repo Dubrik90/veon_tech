@@ -33,7 +33,7 @@ export const dataServices: Array<ServiceType> = [
         id: '3',
         type: 'webPO',
         titleBtn: 'ЗАКАЗАТЬ РАЗРАБОТКУ',
-        title: 'Разработка ПО',
+        title: 'SOFTWARE DEVELOPMENT',
         text: 'Текст по разработке ПО',
         img: ImgWebDev,
     },

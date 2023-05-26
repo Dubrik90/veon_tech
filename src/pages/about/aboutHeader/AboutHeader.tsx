@@ -19,15 +19,15 @@ export const AboutHeader = () => {
             <Container>
                 <HeaderBlock>
                     <HeaderContent>
-                        <Title className={'animate'}> <span>VEON-TECH</span> — надежность и опыт в каждом
-                            проекте</Title>
+                        <Title className={'animate'}> <span>VEON-TECH</span> — reliability and expertise in every project
+                        </Title>
                         {/*<Button>Скачать презентацию</Button>*/}
                         {/*<Text>{text}</Text>*/}
                     </HeaderContent>
                     <HeaderImage className={'animate'}>
                         <Img src={ImgWebDev} alt='image'/>
                         <DownloadButton fileName={'presentation.pdf'} className="about-us__btn" url="/files/presentation.pdf">
-                            <span className="about-us__btn-label">Скачать презентацию PDF
+                            <span className="about-us__btn-label">Download PDF presentation
                                 <img className="about-us__btn-icon" src={FileImg}
                                      loading="lazy"/>
                             </span>

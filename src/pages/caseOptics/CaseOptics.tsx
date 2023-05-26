@@ -12,7 +12,7 @@ import {SimilarCases} from "../case/similarCases";
 export const CaseOptics = () => {
     return (
         <CaseOpticsWrapper>
-            <CaseHeader title={'Кейс по разработке сайта для ООО "Коннектор Оптикс"'}/>
+            <CaseHeader title={'Case Study: Website Development for "Connector Optics" LLC'}/>
             <CaseImageComponent img={Optics}/>
             <OpticsAbout/>
             <OpticsDesk/>

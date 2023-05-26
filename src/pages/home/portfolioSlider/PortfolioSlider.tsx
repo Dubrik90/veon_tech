@@ -21,7 +21,7 @@ export const PortfolioSlider = () => {
         <PortfolioSliderWrapper>
             <Container>
                 {/*<SubTitle className='animate'>МЫ РУЧАЕМСЯ ЗА КАЧЕСТВО</SubTitle>*/}
-                <Title className='animate'>КЕЙСЫ</Title>
+                <Title className='animate'>CASES</Title>
                 <ArrowBlock>
                     <ArrowRight className="prev"/>
                     <ArrowLeft className="next"/>

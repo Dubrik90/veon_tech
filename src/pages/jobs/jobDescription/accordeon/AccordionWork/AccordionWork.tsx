@@ -40,32 +40,32 @@ export const AccordionWork: React.FC<AccordionWorkType> = ({data}) => {
                 <TitleWork>{data.title}</TitleWork>
             </AccordionSummary>
             <AccordionDetails className='AccordionDetails'>
-                <Title> Описание вакансии:</Title>
+                <Title> Job Description:</Title>
                 <List>
                     {data.descVacancy.map((r, index) => <LinkItem key={index}>{r}</LinkItem>)}
                 </List>
-                <Title> Обязанности: </Title>
+                <Title> Responsibilities: </Title>
                 <List>
                     {data.resposibility.map((r, index) => <LinkItem key={index}>{r}</LinkItem>)}
                 </List>
-                <Title> Требования:</Title>
+                <Title> Requirements:</Title>
                 <List>
                     {data.requirements.map((r, index) => <LinkItem key={index}>{r}</LinkItem>)}
                 </List>
-                <Title> Минимальные знания, которые мы ждём от кандидата:</Title>
+                <Title> Minimum knowledge we expect from candidates:</Title>
                 <List>
                     {data.knowledge.map((r, index) => <LinkItem key={index}>{r}</LinkItem>)}
                 </List>
-                <Title> Будет преимуществом:</Title>
+                <Title> Will be an advantage:</Title>
                 <List>
                     {data.advantage.map((r, index) => <LinkItem key={index}>{r}</LinkItem>)}
                 </List>
-                <Title>Условия:</Title>
+                <Title>Conditions:</Title>
                 <List>
                     {data.terms.map((r, index) => <LinkItem key={index}>{r}</LinkItem>)}
                 </List>
             </AccordionDetails>
-            <ButtonJob onClick={onClickOpenModalHandler}>Откликнуться</ButtonJob>
+            <ButtonJob onClick={onClickOpenModalHandler}>APPLY NOW</ButtonJob>
         </Accordion>
     );
 };

@@ -34,11 +34,11 @@ export const  ContactUsServise = () => {
                 <ContactUsBlokTop>
                     <Content>
                         <Title className='animate'>
-                            Чтобы заказать создание сайта под ключ в Минске - свяжитесь с нами, удобным для Вас способом.
+                            To order turnkey website development in Minsk, please contact us using your preferred method.
                         </Title>
                         <LinksBlock>
-                            <LinkUs className='animate' to={ROUTS.CONTACTS}>Связаться с нами</LinkUs>
-                            <Button className='animate' onClick={onClickFormModalHandler}>Оставить заявку</Button>
+                            <LinkUs className='animate' to={ROUTS.CONTACTS}>Contact us</LinkUs>
+                            <Button className='animate' onClick={onClickFormModalHandler}>Submit a request</Button>
                         </LinksBlock>
                     </Content>
                 </ContactUsBlokTop>
@@ -47,10 +47,10 @@ export const  ContactUsServise = () => {
                     <HeardIcon/>
                     <span></span>
                 </LineBlock>
-                <TitleBottom>ВОЗМОЖНО, ВАС ЗАИНТЕРЕСУЮТ</TitleBottom>
+                <TitleBottom>You may also be interested in</TitleBottom>
                 <LinksBottomBlock>
-                    <ButtonBottom className='animate' onClick={onClickFormModalHandler}>ПОДДЕРЖКА САЙТОВ</ButtonBottom>
-                    <ButtonBottom className='animate' onClick={onClickFormModalHandler}>ДИЗАЙН</ButtonBottom>
+                    <ButtonBottom className='animate' onClick={onClickFormModalHandler}>Website maintenance</ButtonBottom>
+                    <ButtonBottom className='animate' onClick={onClickFormModalHandler}>Design</ButtonBottom>
                 </LinksBottomBlock>
             </Container>
         </ContactUsServiseWrapper>

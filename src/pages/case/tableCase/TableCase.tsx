@@ -10,7 +10,7 @@ export const TableCase: FC<TableCaseProps> = ({activeCase}) => {
     return (
         <TableCaseWrapper>
             <TableTitle>
-                КРАТКИЙ БРИФ НА РАЗРАБОТКУ САЙТА
+                BRIEF DESCRIPTION OF WEBSITE DEVELOPMENT
             </TableTitle>
             <Table>
                 <Tbody>

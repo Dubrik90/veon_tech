@@ -25,7 +25,7 @@ export const ContactsAbout: FC = () => {
 
     return (
         <Container>
-            <TitleHead>Контакты</TitleHead>
+            <TitleHead>Contacts</TitleHead>
             <ContactsCardWrapper>
                 <SocialContainer>{renderItems()}</SocialContainer>
             </ContactsCardWrapper>

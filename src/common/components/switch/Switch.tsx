@@ -30,7 +30,7 @@ export const Switch: FC<SwitchProps> = ({theme, onClick}) => {
             <img src={Moon} alt="Moon"/>
             <img src={Sun} alt="Sun"/>
             <span className={'switch'}></span>
-            <ModalSwich isThemeBlock={isThemeBlock}>Светлая или темная сторона? Хм...<br/> Останусь-ка на светлой.</ModalSwich>
+            <ModalSwich isThemeBlock={isThemeBlock}>Light or dark side? Hm...<br/> I'll stick with the light side.</ModalSwich>
         </SwitchWrapper>
     );
 };

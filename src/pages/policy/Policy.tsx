@@ -9,253 +9,136 @@ export const Policy = () => {
         <PolicyWrapper>
             <Container>
                 <Content>
-                    <Title>Политика в отношении обработки персональных данных</Title>
+                    <Title>Data Processing Policy</Title>
                     <Text>
-                        Политика в отношении обработки персональных данных (далее — Политика) разработана во исполнение
-                        требований абз. 3 п. 3 ст. 17 Закона Республики Беларусь от 07.05.2021 № 99-З «О защите
-                        персональных данных» в целях обеспечения защиты персональных данных, прав и свобод физических
-                        лиц (далее — Пользователей) при обработке их персональных данных ООО «Веон-консалт», УНП
-                        193082231, адрес: г. Минск, 220068, ул. Сурганова, 57Б, пом. 187 (далее — Компания), которые
-                        Компания может получить при использовании сайта <Link to={ROUTS.HOME}>veon-tech.by</Link> (далее
-                        — Сайт) и/или данные о
-                        третьем лице по поручению и в интересах которых действует Пользователь во время использования
-                        Сайта, в том числе при заполнении форм, размещенных на Сайте.
-                        Текст настоящей Политики размещается Компанией на своем сайте в сети Интернет по адресу:
-                        <Link to={ROUTS.POLICY}> veon-tech.by/privacy </Link>
-                        в соответствии с п. 4. ст. 17 Закона Республики Беларусь от 07.05.2021 №
-                        99-З «О защите персональных данных».
+                        The Data Processing Policy (hereinafter referred to as the "Policy") is developed in accordance
+                        with paragraph 3, clause 3, article 17 of the Law of the Republic of Belarus dated May 7, 2021,
+                        No. 99-З "On Personal Data Protection" for the purpose of ensuring the protection of personal
+                        data, rights, and freedoms of individuals (hereinafter referred to as "Users") during the
+                        processing of their personal data by LLC "Veon-Consult," Unified State Register of Legal
+                        Entities and Individual Entrepreneurs (UNP) 193082231, located at 57B Surganova Street, Office
+                        187, Minsk, 220068 (hereinafter referred to as the "Company"), which may obtain such data when
+                        using the website <Link to={ROUTS.HOME}>veon-tech.by</Link> (hereinafter referred to as the
+                        "Website"), and/or the data of a third party on behalf of and in the interest of whom the User
+                        acts while using the Website, including when filling out forms posted on the Website.
+                        The text of this Policy is posted by the Company on its website on the Internet at the following
+                        address: <Link to={ROUTS.POLICY}>veon-tech.by/privacy</Link> in accordance with clause 4,
+                        article 17 of the Law of the Republic of Belarus dated May 7, 2021, No. 99-З "On Personal Data
+                        Protection."
                     </Text>
                     <Text>
-                        <span>Наши контакты:</span>
+                        <span>Our contacts:</span>
                     </Text>
                     <Text>
-                        ООО «Веон-консалт», УНП 193082231, адрес: г. Минск, 220068, ул. Сурганова, 57Б, пом. 187
+                        LLC "Veon-Consult," UNP 193082231, located at 57B Surganova Street, Office 187, Minsk, 220068
                         support@veon-tech.by.
                     </Text>
                     <ol>
-                        <li>ОБЩИЕ ПОЛОЖЕНИЯ
+                        <li>GENERAL PROVISIONS
                             <ol>
                                 <li>
-                                    <span>Персональными данными</span> является любая информация, относящаяся к
-                                    идентифицированному
-                                    физическому лицу или физическому лицу, которое может быть идентифицировано, то есть
-                                    физическому лицу, которое может быть прямо или косвенно определено (в частности
-                                    через фамилию, собственное имя, отчество, дату рождения, идентификационный номер
-                                    либо через один или несколько признаков, характерных для его физической,
-                                    психологической, умственной, экономической, культурной или социальной
-                                    идентичности).
+                                    <span>Personal data</span> means any information relating to an identified or identifiable individual, that is, a person who can be directly or indirectly identified (in particular, by surname, first name, patronymic, date of birth, identification number, or by one or several characteristics specific to their physical, psychological, mental, economic, cultural, or social identity).
                                 </li>
                                 <li>
-                                    <span>Обработка персональных данных Компанией</span> включает в себя любое действие
-                                    или
-                                    совокупность действий, совершаемые с персональными данными, включая сбор,
-                                    систематизацию, хранение, изменение, использование, обезличивание, блокирование,
-                                    распространение, предоставление, удаление персональных данных.
+                                    <span>Data processing by the Company</span> includes any action or set of actions performed with personal data, including collection, systematization, storage, modification, use, depersonalization, blocking, dissemination, provision, or deletion of personal data.
                                 </li>
                                 <li>
-                                    Компания обрабатывает персональные данные как с использованием средств
-                                    автоматизации, так и без использования средств автоматизации.
+                                    The Company processes personal data both using automation tools and without using automation tools.
                                 </li>
                                 <li>
-                                    Пользователь может дать согласие на обработку персональных данных при заполнении
-                                    форм на Сайте путем проставления соответствующей отметки и иными способами,
-                                    предусмотренными Политикой.
+                                    The User may give consent to the processing of personal data by filling out forms on the Website by marking the corresponding checkbox and by other means provided by the Policy.
                                 </li>
                                 <li>
-                                    Обработка персональных данных ограничивается достижением конкретных, заранее
-                                    заявленных и законных целей. Компания не осуществляет обработку персональных данных,
-                                    не совместимую с целями их обработки.
+                                    The processing of personal data is limited to achieving specific, previously declared, and lawful purposes. The Company does not process personal data in a manner incompatible with the purposes of their processing.
                                 </li>
                             </ol>
                         </li>
-                        <li>СОСТАВ ПЕРСОНАЛЬНЫХ ДАННЫХ, ЦЕЛИ, ПРАВОВЫЕ ОСНОВАНИЯ И СРОК ХРАНЕНИЯ ДАННЫХ
+                        <li>COMPOSITION OF PERSONAL DATA, PURPOSES, LEGAL BASIS, AND DATA RETENTION PERIOD
                             <ol>
                                 <li>
-                                    Компания является оператором и обрабатывает следующие персональные данные
-                                    Пользователей Сайта:
+                                    The Company is the data controller and processes the following personal data of Website Users:
                                     <ol>
                                         <li>
-                                            Фамилию, имя, отчество, должность, наименование компании, которую
-                                            представляет Пользователь, адрес электронной почты, номер контактного
-                                            телефона в целях обработки заявок, оставленных Пользователем, заключения с
-                                            Пользователем, либо компаниями/физическими лицами, от имени которых
-                                            действует Пользователь, договоров оказания услуг/выполнения работ,
-                                            коммуникации по проектам, предоставления доступа к корпоративным системам
-                                            для реализации проектов. Срок хранения персональных данных составляет 6
-                                            месяцев с даты окончания или расторжения договора, либо в иные сроки,
-                                            установленные законодательством Республики Беларусь.
+                                            Surname, first name, patronymic, position, company name represented by the User, email address, contact phone number for the purpose of processing User's requests, concluding agreements with the User or companies/individuals on behalf of whom the User acts, providing services/performance of work, communication regarding projects, and providing access to corporate systems for project implementation. The retention period for personal data is 6 months from the date of termination or termination of the agreement, or other periods established by the legislation of the Republic of Belarus.
                                         </li>
                                         <li>
-                                            Фамилию, имя, отчество, должность, наименование компании, которую
-                                            представляет Пользователь, адрес электронной почты, номер контактного
-                                            телефона в целях направления коммерческих предложений, сообщений
-                                            рекламно-информационного характера на основании согласия Пользователя при
-                                            заполнении формы. Срок хранения персональных данных, предоставленных для
-                                            рассылки, ограничивается завершением маркетинговых кампаний или
-                                            <span> отказом
-                                            Пользователя от рассылки в любое время с помощью нажатия на ссылку
-                                            «Отписаться» в электронном письме или направления уведомления на почту
-                                            support@veon-tech.by.
-                                            </span>
+                                            Surname, first name, patronymic, position, company name represented by the User, email address, contact phone number for the purpose of sending commercial offers, advertising and informational messages based on the User's consent when filling out the form. The storage period for personal data provided for mailing is limited to the completion of marketing campaigns or the User's unsubscribe at any time by clicking the "Unsubscribe" link in the email or by sending a notification to support@veon-tech.by.
                                         </li>
                                         <li>
-                                            Фамилию, имя, отчество, номер телефона, адрес электронной почты, любую
-                                            информацию, предоставленную Пользователем в резюме в целях рассмотрения
-                                            кандидатуры на соответствующую вакансию Компании. Основанием для обработки
-                                            персональных данных является согласие на обработку данных, выраженное при
-                                            заполнении формы «Отправить резюме». Срок хранения данных, предоставленных
-                                            для трудоустройства, составляет 12 месяцев с момента принятия решения о
-                                            приеме на работу или об отказе в трудоустройстве.
+                                            Surname, first name, patronymic, phone number, email address, any information provided by the User in a resume for the purpose of considering the candidacy for the respective Company's vacancy. The legal basis for processing personal data is the consent to data processing expressed when filling out the "Send resume" form. The storage period for data provided for employment is 12 months from the date of the decision to hire or refuse employment.
                                         </li>
                                         <li>
-                                            Фамилию, имя, отчество, номер телефона, адрес электронной почты, содержание
-                                            (текст) обращения при заполнении формы обратной связи, обращении по е-mail
-                                            либо по телефону в целях ответа на обращение Пользователя. Основанием
-                                            обработки таких данных является легитимный интерес. Срок хранения
-                                            персональных данных не превышает время, необходимое для ответа на обращение,
-                                            также может быть увеличен до истечения предусмотренного законом срока
-                                            исковой давности.
+                                            Surname, first name, patronymic, phone number, email address, content (text) of the inquiry when filling out the feedback form, sending an email, or contacting by phone for the purpose of responding to the User's inquiry. The legal basis for processing such data is legitimate interest. The storage period for personal data does not exceed the time necessary to respond to the inquiry and may also be extended until the expiration of the statutory limitation period.
                                         </li>
                                         <li>
-                                            Обезличенные технические данные с устройств Пользователя (информация о
-                                            пользовательских действиях на Сайте, IP-адреса, данные о местоположении,
-                                            cookie-файлы), собираемая в том числе с помощью сервисов аналитики Yandex
-                                            Metrika, <a target={'_blank'}
-                                                        href="https://support.google.com/analytics/answer/7667196?hl=ru&roistat_visit=311498">Google
-                                            Analytics </a> в целях обеспечения эффективной работы Сайта на
-                                            основании легитимного интереса и согласия Пользователя, которое выражается в
-                                            продолжении использования Сайта после предупреждения об использовании
-                                            данных. Срок хранения данных, автоматически собранных при посещении
-                                            Пользователем Сайта, не превышает 14 месяцев. Пользователь проинформирован,
-                                            что более подробную информацию о cookie-файлах и принципах их работы можно
-                                            найти на ресурсе <a target={'_blank'}
-                                                                href="https://www.aboutcookies.org/?roistat_visit=311498"> aboutcookies.org</a> .
+                                            De-identified technical data from User devices (information about user actions on the Website, IP addresses, location data, cookie files) collected, including through Yandex Metrika analytics services, <a target={'_blank'} href="https://support.google.com/analytics/answer/7667196?hl=en&roistat_visit=311498">Google Analytics</a>, for the purpose of ensuring the effective operation of the Website based on legitimate interest and User consent, expressed by continuing to use the Website after being notified of data usage. The storage period for automatically collected data during User's visit to the Website does not exceed 14 months. The User is informed that more detailed information about cookie files and their principles of operation can be found on the resource <a target={'_blank'} href="https://www.aboutcookies.org/?roistat_visit=311498">aboutcookies.org</a>.
                                         </li>
                                     </ol>
                                 </li>
                             </ol>
                         </li>
-                        <li>ПРАВА ПОЛЬЗОВАТЕЛЯ КАК СУБЪЕКТА ПЕРСОНАЛЬНЫХ ДАННЫХ
+                        <li>USER RIGHTS AS A PERSONAL DATA SUBJECT
                             <ol>
-                                <li>Пользователь имеет право:
+                                <li>The user has the right to:
                                     <ol>
                                         <li>
-                                            на отзыв согласия на обработку персональных данных;
+                                            withdraw consent to the processing of personal data;
                                         </li>
-                                        <li>на получение информации, касающейся обработки своих персональных данных;
+                                        <li>receive information about the processing of their personal data;
                                         </li>
-                                        <li>на изменение персональных данных;</li>
-                                        <li>на получение информации о предоставлении персональных данных третьим
-                                            лицам;
+                                        <li>modify personal data;</li>
+                                        <li>receive information about the provision of personal data to third parties;
                                         </li>
-                                        <li>требовать прекращения обработки персональных данных и (или) их удаления;
+                                        <li>request the cessation of processing of personal data and/or their deletion;
                                         </li>
-                                        <li>на обжалование действий (бездействия) и решений Компании, связанных с
-                                            обработкой персональных данных.
+                                        <li>challenge actions (inactions) and decisions of the Company related to the processing of personal data.
                                         </li>
                                     </ol>
                                 </li>
-                                <li>Для реализации своих прав, указанных в п. 3.1. Политики, Пользователю необходимо
-                                    направить Компании соответствующее заявление одним из способов:
+                                <li>To exercise their rights specified in clause 3.1. of the Policy, the User must submit a respective request to the Company using one of the following methods:
                                     <ol>
-                                        <li>в письменной форме по адресу: Республика Беларусь,г. Минск, 220068, ул.
-                                            Сурганова, 57Б, пом. 187
+                                        <li>in writing to the address: Republic of Belarus, Minsk, 220068, Surganova Street, 57B, office 187;
                                         </li>
-                                        <li>в форме, посредством которой получено согласие.</li>
+                                        <li>in the form through which consent was obtained.</li>
                                     </ol>
                                 </li>
                                 <Text>
-                                    Заявление субъекта персональных данных должно содержать фамилию, собственное имя,
-                                    отчество (если таковое имеется) Пользователя, адрес, дату рождения,
-                                    идентификационный номер или номер документа, удостоверяющего личность (при
-                                    отсутствии идентификационного номера), в случаях, если эта информация указывалась
-                                    при даче своего согласия или обработка персональных данных осуществляется без
-                                    согласия субъекта персональных данных; изложение сути требований, личную подпись
-                                    либо электронную цифровую подпись.
+                                    The personal data subject's request must include their surname, given name, patronymic (if applicable), address, date of birth, identification number or document number verifying their identity (if no identification number is available), in cases where this information was provided when giving consent or when personal data processing is carried out without the consent of the personal data subject; a statement of the requirements, personal signature, or electronic digital signature.
                                 </Text>
                                 <Text>
-                                    При отзыве согласия на обработку персональных данных Пользователь также отказывается
-                                    от получения рекламно-информационных рассылок.
+                                    When withdrawing consent to the processing of personal data, the User also declines to receive advertising and informational newsletters.
                                 </Text>
                                 <li>
-                                    Компания обязуется ответить на заявление Пользователя в сроки, установленные
-                                    белорусским законодательством.
+                                    The Company undertakes to respond to the User's request within the timeframes established by Belarusian legislation.
                                 </li>
                             </ol>
                         </li>
-                        <li>УСЛОВИЯ ОБРАБОТКИ ПЕРСОНАЛЬНЫХ ДАННЫХ И ПЕРЕДАЧИ ИХ ТРЕТЬИМ ЛИЦАМ
+                        <li>CONDITIONS FOR PROCESSING PERSONAL DATA AND THEIR TRANSFER TO THIRD PARTIES
                             <ol>
-                                <li>В отношении персональных данных сохраняется конфиденциальность, кроме случаев
-                                    добровольного предоставления Пользователем информации о себе в общем доступе
-                                    неограниченному кругу лиц. В данном случае Пользователь соглашается с тем, что
-                                    определенная часть его персональных данных становится общедоступной.
+                                <li>Personal data is kept confidential unless the User voluntarily provides information about themselves for public access by an unlimited number of persons. In this case, the User agrees that a certain portion of their personal data becomes publicly available.
                                 </li>
-                                <li>Компания вправе передать персональную информацию Пользователя третьим лицам в
-                                    следующих случаях:
+                                <li>The Company may transfer the User's personal information to third parties in the following cases:
                                     <ol>
-                                        <li>Пользователь выразил согласие на такие действия.
-                                        </li>
-                                        <li>Передача необходима для исполнения определенного соглашения или договора
-                                            между Компанией и Пользователем.
-                                        </li>
-                                        <li>Передача предусмотрена белорусским или иным применимым законодательством в
-                                            рамках установленной законодательством процедуры.
-                                        </li>
+                                        <li>The User has given consent to such actions.</li>
+                                        <li>The transfer is necessary for the performance of a specific agreement or contract between the Company and the User.</li>
+                                        <li>The transfer is required by Belarusian or other applicable legislation within the framework of the procedures established by law.</li>
                                     </ol>
                                 </li>
-                                <li>Компания может передавать персональные данные Пользователя третьим лицам,
-                                    перечисленным ниже, в целях, указанных в п. 2.1. Политики.
-                                    <Text>Яндекс Метрика — сервис веб-аналитики, предоставляемый ООО «Яндекс». Адрес: г.
-                                        Москва, ул. Льва Толстого, д. 16, 119021. <a target={'_blank'}
-                                                                                     href="https://yandex.ru/legal/confidential/?roistat_visit=311498">Политика
-                                            конфиденциальности Яндекс</a> .
-                                    </Text>
-                                    <Text>Google Analytics — сервис веб-аналитики, предоставляемый компанией Google,
-                                        Inc. Адрес: Google, Google Data Protection Office, 1600 Amphitheatre Pkwy,
-                                        Mountain View, CA 94043, USA. <a target={'_blank'}
-                                                                         href="https://policies.google.com/privacy?hl=ru&roistat_visit=311498#infocollect">Политика
-                                            конфиденциальности Google</a> .
-                                    </Text>
-                                    <Text>Хантфлоу — сервис по ведению базы кандидатов, предоставляемый ООО «Хантфлоу».
-                                        Адрес: 127015, г. Москва, внутригородская территория города муниципальный округ
-                                        Бутырский, ул. Новодмитровская, д. 2, корп. 2, помещение 27А. <a
-                                            target={'_blank'}
-                                            href="https://huntflow.ru/docs/privacy-policy?roistat_visit=311498">Политика
-                                            конфиденциальности Хантфлоу.</a>
-                                    </Text>
-                                    <Text>Pipedrive — сервис по управления взаимоотношениями с клиентами,
-                                        предоставляемый Pipedrive Florida. Адрес: 490 1st Ave South, Suite 800 St.
-                                        Petersburg, FL 33701, USA. <a target={'_blank'}
-                                                                      href="https://www.pipedrive.com/en/privacy?roistat_visit=311498">Политика
-                                            конфиденциальности Pipedrive</a> .
-                                    </Text>
+                                <li>The Company may transfer the User's personal data to the following third parties for the purposes specified in section 2.1 of the Policy:
+                                    <Text>Yandex.Metrica - a web analytics service provided by Yandex LLC. Address: 16, Leo Tolstoy Street, Moscow, 119021, Russia. <a target="_blank" href="https://yandex.com/legal/privacy/">Yandex Privacy Policy</a>.</Text>
+                                    <Text>Google Analytics - a web analytics service provided by Google LLC. Address: Google, Google Data Protection Office, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. <a target="_blank" href="https://policies.google.com/privacy">Google Privacy Policy</a>.</Text>
+                                    <Text>Huntflow - a candidate database management service provided by Huntflow LLC. Address: 2, Building 2, Room 27A, Novodmitrovskaya Street, Butyrsky District, Moscow, 127015, Russia. <a target="_blank" href="https://huntflow.ru/docs/privacy-policy">Huntflow Privacy Policy</a>.</Text>
+                                    <Text>Pipedrive - a customer relationship management service provided by Pipedrive Florida. Address: 490 1st Ave South, Suite 800, St. Petersburg, FL 33701, USA. <a target="_blank" href="https://www.pipedrive.com/en/privacy">Pipedrive Privacy Policy</a>.</Text>
                                 </li>
-                                <li>Компания при обработке персональных данных принимает необходимые и достаточные
-                                    организационные и технические меры для защиты персональных данных от неправомерного
-                                    доступа к ним, а также от иных неправомерных действий в отношении персональных
-                                    данных.
-                                </li>
+                                <li>The Company takes necessary and sufficient organizational and technical measures to protect personal data from unauthorized access and other unlawful actions regarding personal data during their processing.</li>
                             </ol>
                         </li>
-                        <li>ЗАКЛЮЧИТЕЛЬНЫЕ ПОЛОЖЕНИЯ
+                        <li>FINAL PROVISIONS
                             <ol>
-                                <li>Пользователь может получить любые разъяснения по интересующим вопросам, касающимся
-                                    обработки его персональных данных, обратившись к Компании по электронной почте
-                                    support@veon-tech.by.
-                                </li>
-                                <li>Все предложения или вопросы по настоящей Политике конфиденциальности следует
-                                    направлять на адрес электронной почты support@veon-tech.by.
-                                </li>
-                                <li>Актуальная версия Политики в свободном доступе расположена в сети Интернет по адресу
-                                    <Link to={ROUTS.POLICY}> veon-tech.by/privacy/</Link>.
-                                </li>
-                                <li>Используя Сайт, отправляя данные, запросы, резюме, заполняя анкету, форму, заявку
-                                    Пользователь ПОДТВЕРЖДАЕТ, ЧТО ПРОЧЁЛ ПОЛИТИКУ И ВЫРАЖАЕТ СВОЁ СВОБОДНОЕ,
-                                    ИНФОРМИРОВАННОЕ И ОДНОЗНАЧНОЕ СОГЛАСИЕ на сбор, обработку, распространение,
-                                    предоставление и хранение указанных в ней персональных данных, осуществляемые без
-                                    использования средств автоматизации, а также с использованием средств автоматизации,
-                                    в течение указанного для этого срока.
-                                </li>
+                                <li>The User can obtain any clarifications regarding the processing of their personal data by contacting the Company via email at support@veon-tech.by.</li>
+                                <li>All suggestions or questions regarding this Privacy Policy should be directed to the email address support@veon-tech.by.</li>
+                                <li>The current version of the Policy is freely available on the Internet at the address <a href="veon-tech.by/privacy/">veon-tech.by/privacy/</a>.</li>
+                                <li>By using the Website, submitting data, requests, resumes, filling out forms, or applications, the User CONFIRMS THAT THEY HAVE READ THE POLICY AND EXPRESS THEIR VOLUNTARY, INFORMED, AND UNAMBIGUOUS CONSENT to the collection, processing, distribution, provision, and storage of the personal data specified therein, carried out both without the use of automation tools and with the use of automation tools, within the specified period.</li>
                             </ol>
                         </li>
                     </ol>

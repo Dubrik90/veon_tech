@@ -8,14 +8,12 @@ export const Commitment = () => {
     return (
         <CommitmentWrapper>
             <Container>
-                <TitleHead  className='animate'>НДА (Соглашение о неразглашении)</TitleHead>
+                <TitleHead  className='animate'>Non-Disclosure Agreement (NDA)</TitleHead>
                 <CommitmentBlock>
                     <Content>
                         {/*<Title>НДА (Соглашение о неразглашении)</Title>*/}
-                        <Text  className='animate'>
-                            НДА — контракт, через который стороны соглашаются не раскрыть информацию, закрытую
-                            соглашением. NDA создает конфиденциальные отношения между сторонами, чтобы защитить любой
-                            тип конфиденциальной информации.
+                        <Text className='animate'>
+                            An NDA is a contract through which parties agree not to disclose information covered by the agreement. The NDA establishes confidential relationships between the parties to protect any type of confidential information.
                         </Text>
                     </Content>
                     <ImageBlock>

@@ -15,25 +15,24 @@ export const HeaderCase: FC<HeaderCaseProps> = ({activeCase}) => {
                 </ImageBlock>
                 <CaseHeaderBlock>
                     <ServiceTitle>
-                        Услуга проекта: {activeCase.service}
+                        Service: {activeCase.service}
                     </ServiceTitle>
                     <ServiceTitle>
-                        Клиент: {activeCase.client}
+                        Client: {activeCase.client}
                     </ServiceTitle>
                     <ServiceTitle>
-                        Проект url: <a href={activeCase.projectUrl}>{activeCase.projectUrl}</a>
+                        Project URL: <a href={activeCase.projectUrl}>{activeCase.projectUrl}</a>
                     </ServiceTitle>
                 </CaseHeaderBlock>
             </CaseHeaderBlockColumn>
             <CaseHeaderBlockColumn>
                 <ServiceTitle>
-                    О компании: {activeCase.aboutCompany}
+                    Company Overview: {activeCase.aboutCompany}
                 </ServiceTitle>
                 <ServiceTitle>
-                    Основные цели: {activeCase.targets}
+                    Primary Goals: {activeCase.targets}
                 </ServiceTitle>
             </CaseHeaderBlockColumn>
-
         </HeaderCaseWrapper>
     );
 };

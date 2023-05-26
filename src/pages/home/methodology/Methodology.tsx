@@ -33,25 +33,25 @@ export const Methodology = () => {
         <MethodologyWrapper>
             <Container>
                 <MethodologyContent>
-                    <Title className='animate'>Работаем по подходящей для Вас методологии</Title>
+                    <Title className='animate'>We work according to the methodology that suits you</Title>
                     <MethodologyBlock>
                         <BlockColumn>
                             <TitleMethodology>WATERFALL</TitleMethodology>
                             <Ul>
-                                <Li><img loading= "lazy" src={Star} alt=""/> <span>полное ТЗ</span> </Li>
-                                <Li><img loading= "lazy" src={Star} alt=""/> <span>запуск от 3 мес</span> </Li>
-                                <Li><img loading= "lazy" src={Star} alt=""/> <span>фиксированная цена</span> </Li>
+                                <Li><img loading= "lazy" src={Star} alt=""/> <span>full specification</span> </Li>
+                                <Li><img loading= "lazy" src={Star} alt=""/> <span>launch within 3 months</span> </Li>
+                                <Li><img loading= "lazy" src={Star} alt=""/> <span>fixed price</span> </Li>
                             </Ul>
-                            <Button onClick={onClickWaterfallModalHandler}>Подробнее</Button>
+                            <Button onClick={onClickWaterfallModalHandler}>LEARN MORE</Button>
                         </BlockColumn>
                         <BlockColumn>
                             <TitleMethodology>Scrum</TitleMethodology>
                             <Ul>
-                                <Li><img src={Star} alt=""/> <span>дорожная карта</span> </Li>
-                                <Li><img src={Star} alt=""/> <span>ежемесячные тз и запуск</span> </Li>
-                                <Li><img src={Star} alt=""/> <span>гибкая цена +/-</span> </Li>
+                                <Li><img src={Star} alt=""/> <span>roadmap</span> </Li>
+                                <Li><img src={Star} alt=""/> <span>monthly specifications and launches</span> </Li>
+                                <Li><img src={Star} alt=""/> <span>flexible price +/-</span> </Li>
                             </Ul>
-                            <Button onClick={onClickScrumModalHandler}>Подробнее</Button>
+                            <Button onClick={onClickScrumModalHandler}>LEARN MORE</Button>
                         </BlockColumn>
                     </MethodologyBlock>
                 </MethodologyContent>

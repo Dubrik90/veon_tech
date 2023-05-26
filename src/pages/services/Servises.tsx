@@ -40,14 +40,14 @@ export const Services = () => {
 
     useEffect(() => {
         if (service === 'webDev') {
-            document.title = 'Разработка сайтов — VEON-TECH'
+            document.title = 'Website development — VEON-TECH'
         } else if (service === 'support') {
-            document.title = 'Поддержка сайтов — VEON-TECH'
+            document.title = 'Website support — VEON-TECH'
         }
         else if (service === 'ux') {
-            document.title = 'UX/UI Дизайн — VEON-TECH'
+            document.title = 'UX/UI design — VEON-TECH'
         }else if (service === 'webPO') {
-            document.title = 'Разработка ПО — VEON-TECH'
+            document.title = 'Software development — VEON-TECH'
         }
 
       //  document.title = 'Кейсы — VEON-TECH'
@@ -107,65 +107,31 @@ export const Services = () => {
                 <>
                     <WebPOWrapper>
                         <div className="entry-content">
-                            <Title>Поддержка сайтов</Title>
+                            <Title>WEBSITE SUPPORT</Title>
                             <Text>
-                                После того, как сайт был создан, необходимо позаботиться о его дальнейшей работе –
-                                технической поддержке сайта.
+                                After the site has been created, it is necessary to take care of its further work – technical support of the site.
                             </Text>
                             <LinkBlock>
-                                <div>Системное тестирование</div>
-                                <div>Обнавление контента сайта</div>
-                                <div>Редактирование страниц, модулей и блоков</div>
-                                <div>Обеспечение бесперебойной работы сайта</div>
+                                <div>System testing</div>
+                                <div>Website content updates</div>
+                                <div>Editing pages, modules, and blocks</div>
+                                <div>Ensuring uninterrupted website operation</div>
                             </LinkBlock>
                             <Text>
-                                Сопровождение сайта – это не только его обновление, но также внедрение графических
-                                изменений, создание новых разделов, блоков, формирование устойчивого интереса
-                                пользователей к ресурсу.
-                                <br/> Таким образом, поддержка сайтов – это комплекс услуг, за которым скрывается
-                                решение разных задач (в зависимости от целей, для которых ресурс был создан). <br/> От
-                                этого и будет рассчитываться объем проводимых работ: постоянная поддержка сайта – оплата
-                                исходя из среднего объема работы в месяц, периодическая техническая поддержка сайтов –
-                                исходя из примерного количества потраченного времени на обслуживание сайта, например,
-                                100 часов в год.
+                                Website maintenance includes not only updates but also implementing graphic changes, creating new sections and blocks, and generating sustained user interest in the resource.
+                                <br/> Thus, website support is a complex set of services aimed at solving various tasks depending on the goals for which the resource was created. <br/> The scope of work will be calculated based on this: continuous website support is paid based on the average monthly workload, periodic technical website support is based on the approximate amount of time spent on website maintenance, for example, 100 hours per year.
                             </Text>
-                            {/*<ColumnBlockWrap>*/}
-                            {/*    <div className="wp-block-column is-layout-flow">*/}
-                            {/*        <p><strong>18 дизайнеров в штате. </strong>Подбираем на проект дизайнера с сильными*/}
-                            {/*            скиллами*/}
-                            {/*            в нужной области и усиливаем другими специалистами: 2D- и 3D-иллюстраторами.</p>*/}
-                            {/*    </div>*/}
-                            {/*    <div className="wp-block-column is-layout-flow">*/}
-                            {/*        <p><strong>Старт проекта через 2 недели, если успеют ваши юристы.</strong> Отвечаем*/}
-                            {/*            в*/}
-                            {/*            течение*/}
-                            {/*            дня, простые проекты оцениваем за два, подписываем документы и начинаем работу.*/}
-                            {/*        </p>*/}
-                            {/*    </div>*/}
-                            {/*    <div className="wp-block-column is-layout-flow">*/}
-                            {/*        <p><strong>Эксперты в финтехе, маркетплейсах и телекоме.</strong> Быстро вникаем в*/}
-                            {/*            проект*/}
-                            {/*            и не тратим деньги клиентов на прототипы для простых сервисов и в отраслях, где*/}
-                            {/*            собаку*/}
-                            {/*            съели.</p>*/}
-                            {/*    </div>*/}
-                            {/*</ColumnBlockWrap>*/}
                             <ContentBlock>
-                                <Title>Что входит в комплекс услуг по поддержке сайта?
+                                <Title>What is included in the complex of website support services?
                                 </Title>
                                 <Text>
-                                    В большинстве случаев, сопровождение сайтов рассматривается как долгосрочное
-                                    сотрудничество владельца ресурса с компанией, предоставляющей эти услуги.
+                                    In most cases, website maintenance is considered a long-term collaboration between the site owner and the company providing these services.
                                 </Text>
                                 <Text>
-                                    В этом случае, заключается договор, в котором прописываются все необходимые
-                                    мероприятии, которые будут проводиться в целях обеспечения стабильной работы
-                                    веб-сайта, и поддержки интереса пользователей к нему.
+                                    In this case, a contract is concluded that specifies all the necessary measures that will be taken to ensure the stable operation of the website and maintain user interest in it.
                                 </Text>
                                 <Text>
-                                    Свои услуги мы предлагаем для того, чтобы Вам не нужно было создавать новые рабочие
-                                    места в своей компании для специалистов, которые бы занимались обслуживанием
-                                    веб-проекта.
+                                    We offer our services so that you do not have to create new positions in your company for specialists dedicated to servicing the web project.
                                 </Text>
                             </ContentBlock>
                         </div>
@@ -177,183 +143,97 @@ export const Services = () => {
                 <>
                     <WebPOWrapper>
                         <div className="entry-content">
-                            <Title>Дизайн интерфейсов любой сложности</Title>
+                            <Title>Design of Interfaces of Any Complexity</Title>
                             <Text>
-                                Наш дизайн интерфейсов не ограничивается только эстетикой. Мы обеспечиваем простотой
-                                для достижения цели, учитывая пользовательские привычки Ваших клиентов не только внутри
-                                сайта, приложения и других сервисов, а также офлайн.
+                                Our interface design goes beyond aesthetics. We ensure simplicity to achieve goals, taking into account the user habits of your clients not only within websites, applications, and other services but also offline.
                             </Text>
-                            <Text>Мы построим правильную логику взаимодействия пользователя с сайтом или приложением,
-                                которая приведёт к увеличению конверсии, продвижению товаров и улучшением обслуживания
-                                клиентов.</Text>
+                            <Text>We will establish the right logic of user interaction with the website or application, leading to increased conversion, product promotion, and improved customer service.</Text>
                             <LinkBlock>
-                                <div>Веб-приложения</div>
-                                <div>Мобильные приложения</div>
-                                <div>Банкоматы и терминалы</div>
-                                <div>Интерфейсы индустриальных и промышленных систем</div>
+                                <div>Web applications</div>
+                                <div>Mobile applications</div>
+                                <div>ATMs and terminals</div>
+                                <div>Interfaces for industrial and industrial systems</div>
                             </LinkBlock>
                             <ColumnBlockWrap>
                                 <div className="wp-block-column is-layout-flow">
-                                    <p>Подбираем на проект дизайнера с сильными
-                                        скиллами
-                                        в нужной области и усиливаем другими специалистами: 2D- и 3D-иллюстраторами.</p>
+                                    <p>We select a designer with strong skills in the required field for the project and complement them with other specialists such as 2D and 3D illustrators.</p>
                                 </div>
                                 <div className="wp-block-column is-layout-flow">
-                                    <p>Отвечаем в течение дня, простые проекты оцениваем за два, подписываем документы и
-                                        начинаем работу.
-                                    </p>
+                                    <p>We respond within a day, estimate simple projects in two days, sign documents, and start working.</p>
                                 </div>
                                 <div className="wp-block-column is-layout-flow">
-                                    <p>
-                                        Быстро вникаем в проект и не тратим деньги клиентов на прототипы для простых
-                                        сервисов и в отраслях, где собаку съели.
-                                    </p>
+                                    <p>We quickly grasp the project and don't waste clients' money on prototypes for simple services and industries where the subject matter is well known.</p>
                                 </div>
                             </ColumnBlockWrap>
                             <ContentBlock>
-                                <Title>Делаем сложные вещи простыми:</Title>
+                                <Title>We make complex things simple by:</Title>
                                 <Ul>
-                                    <Li><img src={Star} alt=""/> <span>Упорядочиваем большие объемы информации;</span> </Li>
-                                    <Li><img src={Star} alt=""/> <span>Выстраиваем навигацию;</span> </Li>
-                                    <Li><img src={Star} alt=""/> <span>Помогаем пользователю совершить целевое действие без нервов и обращений в службу
-                                        поддержки;</span> </Li>
+                                    <Li><img src={Star} alt="Star"/> <span>Organizing large volumes of information;</span> </Li>
+                                    <Li><img src={Star} alt="Star"/> <span>Structuring navigation;</span> </Li>
+                                    <Li><img src={Star} alt="Star"/> <span>Assisting users in accomplishing their goals without stress or support requests;</span> </Li>
                                 </Ul>
-
-                                {/*<ul className="has-large-font-size">*/}
-                                {/*    <li>Упорядочиваем большие объемы информации;</li>*/}
-                                {/*    <li>Выстраиваем навигацию;</li>*/}
-                                {/*    <li>*/}
-                                {/*        Помогаем пользователю совершить целевое действие без нервов и обращений в службу*/}
-                                {/*        поддержки;*/}
-                                {/*    </li>*/}
-                                {/*</ul>*/}
                                 <Text>
-                                    Если бизнес сложный, то больше времени уделяем глубокому исследованию, анализу
-                                    аудитории
-                                    и ее потребностей. Если выявляем много подводных камней, то делаем прототипы. Но
-                                    чаще всего
-                                    готовы предложить решение, не тратя десятки часов на изучение сферы и онбординг.
+                                    If the business is complex, we dedicate more time to in-depth research, audience analysis, and their needs. If we encounter many pitfalls, we create prototypes. However, most of the time, we are ready to propose a solution without spending dozens of hours studying the industry and onboarding.
                                 </Text>
                             </ContentBlock>
                             <ContentBlock>
-                                <Title>Дизайн, на который
-                                    можно опереться в будущем</Title>
+                                <Title>Design that can be relied upon in the future</Title>
                                 <Text>
-                                    Делаем продуманный качественный дизайн, который позволит решать новые бизнес-задачи
-                                    быстро
-                                    и с минимальными затратами. Для этого собираем UI-киты, чтобы упорядочить и
-                                    унифицировать
-                                    сотни элементов: кнопки, иконки, чекбоксы, поля, заголовки, меню, списки, селекты,
-                                    уведомления, модальные окна. Разработчики будут счастливы.
+                                    We create thoughtful and high-quality designs that allow for quick and cost-effective resolution of new business tasks. To achieve this, we gather UI kits to organize and standardize hundreds of elements, such as buttons, icons, checkboxes, fields, headers, menus, lists, selects, notifications, and modal windows. Developers will be delighted.
                                 </Text>
-                                <Text>
-                                    Дизайн-система — это
-                                    язык,
-                                    благодаря которому дизайнеры и разработчики живут в гармонии
-                                </Text>
+                                <Text>Design system is the language that enables designers and developers to live in harmony.</Text>
                             </ContentBlock>
                             <ContentBlock>
-                                <Title>Прозрачность процесса
-                                    и синхронизация с бизнесом</Title>
+                                <Title>Process transparency and synchronization with the business</Title>
                                 <Text>
-                                    Сверяемся с клиентом на каждом этапе, а не молчим несколько месяцев, пока не сделаем
-                                    идеально. После
-                                    обратной связи обсуждаем варианты решения и двигаемся дальше. Спустя одну-две-три
-                                    итерации
-                                    макет
-                                    превращается в финальный дизайн.
+                                    We align with the client at every stage instead of staying silent for several months until achieving perfection. After receiving feedback, we discuss solution options and move forward. After one, two, or three iterations, the layout transforms into the final design.
                                 </Text>
                                 <Ul>
-                                    <Li><img src={Star} alt=""/> <span>Все видно в Фигме</span> </Li>
-                                    <Li><img src={Star} alt=""/> <span>Арт-директинг</span> </Li>
-                                    <Li><img src={Star} alt=""/> <span>Scrum, Lean, Agile</span> </Li>
-                                    <Li><img src={Star} alt=""/> <span>Дейли, еженедельные отчеты</span> </Li>
+                                    <Li><img src={Star} alt="Star"/> <span>Everything is visible in Figma</span> </Li>
+                                    <Li><img src={Star} alt="Star"/> <span>Art direction</span> </Li>
+                                    <Li><img src={Star} alt="Star"/> <span>Scrum, Lean, Agile</span> </Li>
+                                    <Li><img src={Star} alt="Star"/> <span>Dailies, weekly reports</span> </Li>
                                 </Ul>
-                                {/*<ul className="has-large-font-size">*/}
-                                {/*    <li></li>*/}
-                                {/*    <li></li>*/}
-                                {/*    <li></li>*/}
-                                {/*    <li></li>*/}
-                                {/*</ul>*/}
                             </ContentBlock>
                         </div>
                     </WebPOWrapper>
                     <PortfolioSlider/>
                 </>
-
             }
             {service === 'webPO' &&
                 <>
                     <WebPOWrapper>
                         <div className="entry-content">
-                            <Title>Разработка програмного обеспечения</Title>
-                            {/*<Text>Вы считаете, что бизнес-процессы на вашей фирме необходимо оптимизировать?</Text>*/}
-                            {/*<Text>Работа с клиентской базой и документацией занимает слишком много времени?</Text>*/}
-                            <Text>Все-таки трудно автомотизировать бизнес :(</Text>
-                            <TextCursive>VEON-TECH поможет вам решить рутинные бизнес-задачи!</TextCursive>
+                            <Title>Software Development</Title>
+                            <Text>It can still be challenging to automate business processes :(</Text>
+                            <TextCursive>VEON-TECH will help you solve routine business tasks!</TextCursive>
                             <LinkBlock>
-                                <div>Автоматизация бизнес-задач</div>
-                                <div>Уменьшение нагрузки на персонал</div>
-                                <div>Оптимизация методов работы с клиентами</div>
-                                <div>Упрощение работы с документооборотом</div>
-                                <div>Увеличение доверия клиентов к бренду</div>
+                                <div>Business Task Automation</div>
+                                <div>Reduced workload on staff</div>
+                                <div>Optimization of customer interaction methods</div>
+                                <div>Streamlined document management</div>
+                                <div>Increased customer trust in the brand</div>
                             </LinkBlock>
-                            {/*<ColumnBlockWrap>*/}
-                            {/*    <div className="wp-block-column is-layout-flow">*/}
-                            {/*        <p><strong>18 дизайнеров в штате. </strong>Подбираем на проект дизайнера с сильными*/}
-                            {/*            скиллами*/}
-                            {/*            в нужной области и усиливаем другими специалистами: 2D- и 3D-иллюстраторами.</p>*/}
-                            {/*    </div>*/}
-                            {/*    <div className="wp-block-column is-layout-flow">*/}
-                            {/*        <p><strong>Старт проекта через 2 недели, если успеют ваши юристы.</strong> Отвечаем*/}
-                            {/*            в*/}
-                            {/*            течение*/}
-                            {/*            дня, простые проекты оцениваем за два, подписываем документы и начинаем работу.*/}
-                            {/*        </p>*/}
-                            {/*    </div>*/}
-                            {/*    <div className="wp-block-column is-layout-flow">*/}
-                            {/*        <p><strong>Эксперты в финтехе, маркетплейсах и телекоме.</strong> Быстро вникаем в*/}
-                            {/*            проект*/}
-                            {/*            и не тратим деньги клиентов на прототипы для простых сервисов и в отраслях, где*/}
-                            {/*            собаку*/}
-                            {/*            съели.</p>*/}
-                            {/*    </div>*/}
-                            {/*</ColumnBlockWrap>*/}
                             <ContentBlock>
-                                <Title><span>Собственно</span> , что мы сможем сделать:</Title>
+                                <Title><span>Here's</span> , what we can do:</Title>
                                 <Ul>
-                                    <Li><img src={Star} alt=""/> <span>Промышленные приложения</span> </Li>
-                                    <Li><img src={Star} alt=""/> <span>Чат-боты</span> </Li>
-                                    <Li><img src={Star} alt=""/> <span>Мобильные приложения</span> </Li>
-                                    <Li><img src={Star} alt=""/> <span>И многое-многое другое...</span> </Li>
+                                    <Li><img src={Star} alt="star"/> <span>Industrial applications</span> </Li>
+                                    <Li><img src={Star} alt="star"/> <span>Chatbots</span> </Li>
+                                    <Li><img src={Star} alt="star"/> <span>Mobile applications</span> </Li>
+                                    <Li><img src={Star} alt="star"/> <span>And much, much more...</span> </Li>
                                 </Ul>
-                                {/*<ul className="has-large-font-size">*/}
-                                {/*    <li>Промышленные приложения</li>*/}
-                                {/*    <li>Чат-боты</li>*/}
-                                {/*    <li>Мобильные приложения</li>*/}
-                                {/*    <li>И многое-многое другое...</li>*/}
-                                {/*</ul>*/}
                             </ContentBlock>
                             <ContentBlock>
-                                <Title>Успешно автоматизируем бизнес-процессы различной направленности:</Title>
+                                <Title>We successfully automate business processes in various industries:</Title>
                                 <Ul>
-                                    <Li><img src={Star} alt=""/> <span>Медицина</span> </Li>
-                                    <Li><img src={Star} alt=""/> <span>Ресторанный бизнес</span> </Li>
-                                    <Li><img src={Star} alt=""/> <span>Логистика</span> </Li>
-                                    <Li><img src={Star} alt=""/> <span>Развлечения</span> </Li>
-                                    <Li><img src={Star} alt=""/> <span>Аренда</span> </Li>
-                                    <Li><img src={Star} alt=""/> <span>Интернет торговля</span> </Li>
-                                    <Li><img src={Star} alt=""/> <span>И многое-многое другое...</span> </Li>
+                                    <Li><img src={Star} alt="star"/> <span>Healthcare</span> </Li>
+                                    <Li><img src={Star} alt="star"/> <span>Restaurant business</span> </Li>
+                                    <Li><img src={Star} alt="star"/> <span>Logistics</span> </Li>
+                                    <Li><img src={Star} alt="star"/> <span>Entertainment</span> </Li>
+                                    <Li><img src={Star} alt="star"/> <span>Rental services</span> </Li>
+                                    <Li><img src={Star} alt="star"/> <span>E-commerce</span> </Li>
+                                    <Li><img src={Star} alt="star"/> <span>And much, much more...</span> </Li>
                                 </Ul>
-                                {/*<ul className="has-large-font-size">*/}
-                                {/*    <li>Медицина</li>*/}
-                                {/*    <li>Ресторанный бизнес</li>*/}
-                                {/*    <li>Логистика</li>*/}
-                                {/*    <li>Развлечения</li>*/}
-                                {/*    <li>Аренда</li>*/}
-                                {/*    <li>Интернет торговля</li>*/}
-                                {/*    <li>И многое-многое другое...</li>*/}
-                                {/*</ul>*/}
                             </ContentBlock>
                         </div>
                     </WebPOWrapper>

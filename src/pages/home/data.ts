@@ -15,26 +15,26 @@ export type DevDataType = {
 
 export const devData: DevDataType[] = [
     {
-        header: 'Разработка сайтов',
-        desc: 'Мы создаем уникальные сайты, которые поднимают конверсию продаж...',
+        header: 'Website development',
+        desc: 'We create unique websites that increase sales conversion...',
         img: Img01,
         link: 'services/webDev'
     },
     {
-        header: 'Поддержка сайтов',
-        desc: 'После того, как сайт был создан, необходимо позаботиться о его дальнейшей работе..',
+        header: 'Website maintenance',
+        desc: 'After the website has been created, it is necessary to take care of its ongoing operation...',
         img: Img02,
         link: 'services/support'
     },
     {
-        header: 'Разработка ПО',
-        desc: 'VEON-TECH поможет вам оптимизировать рутинные бизнес-задачи..',
+        header: 'Software development',
+        desc: 'VEON-TECH will help you optimize routine business tasks...',
         img: Img03,
         link: 'services/webPO'
     },
     {
-        header: 'UX/UI дизайн',
-        desc: 'Мы построим правильную логику взаимодействия пользователя с сайтом..',
+        header: 'UX/UI design',
+        desc: 'We will build the right logic of user interaction with the website...',
         img: Img04,
         link: 'services/ux'
     },

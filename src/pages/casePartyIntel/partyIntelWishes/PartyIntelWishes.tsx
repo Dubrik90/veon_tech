@@ -7,16 +7,16 @@ export const PartyIntelWishes = () => {
         <PartyIntelWishesWrapper>
             <Container>
                 <WishesContent>
-                    <Title>Пожелания заказчика</Title>
-                    <Text>Реализация админки, реализация мессенджера в рамках контактов между Исполнителем и Заказчиком, раздел Leads - для платных объявлений, раздел объявлений Заказчика</Text>
-                    <Title>Выбирая нас клиент получил следующее: </Title>
+                    <Title>Results:</Title>
+                    <Text>The client's requirements included the implementation of an admin panel, a messenger for communication between Service Providers and Customers, a Leads section for paid advertisements, and a section for customer advertisements.</Text>
+                    <Title>By choosing our services, the client received the following benefits: </Title>
                     <Ul>
-                        <li>- Оперативное обслуживание и разработка.</li>
-                        <li>- Удобный мессенджер.</li>
-                        <li>- Формат платных объявлений, рассчитанный на конечного пользователя.</li>
-                        <li>- Свежий дизайн в соответствии со всеми требованиями заказчика.</li>
-                        <li>- Скидки в соответствии с системой бонусов.</li>
-                        <li>На текущий момент сервис работает быстро и функционально.</li>
+                        <li>- Prompt service and development.</li>
+                        <li>- Convenient messenger functionality.</li>
+                        <li>- Paid advertisement format designed for end-users.</li>
+                        <li>- Fresh design meeting all client requirements.</li>
+                        <li>- Discounts based on a bonus system.</li>
+                        <li>Currently, the service is functioning efficiently and offers various features.</li>
                     </Ul>
                 </WishesContent>
             </Container>

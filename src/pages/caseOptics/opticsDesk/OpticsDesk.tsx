@@ -8,21 +8,19 @@ export const OpticsDesk = () => {
         <OpticsDeskWrapper>
             <Container>
                 <OpticsDeskContent>
-                    <Text>Процесс разработки: Мы перенесли карты с сайта, <br/>Перенесли новости со старого шаблона на
-                        новый;<br/>Адаптировали сайт под все платформы.</Text>
+                    <Text>Development Process: <br/>- We transferred the maps from the existing website, <br/>- We migrated the news from the old template to the new one<br/>- We ensured website responsiveness across all platforms</Text>
                     <ImageBlock>
                         <Img src={MobileImg} alt={'mobile image'}/>
                     </ImageBlock>
                     <Block>
-                        <Text>Составили инструкцию для «пользователя офисных программ», как проводить наполнение сайта
-                            новостями и другими материалами.
+                        <Text>We created a user guide for office software, detailing how to update the website with news and other materials.
                         </Text>
                         <Ul>
-                            <li>Инструкция содержит:</li>
-                            <li>• Добавление новостей;</li>
-                            <li>• Изменение состава меню;</li>
-                            <li>• Добавление материалов сайта в виде файлов (презентаций) и ссылок на них;</li>
-                            <li>• Добавление ссылок на сторонние ресурсы в виде баннеров.</li>
+                            <li>The guide includes instructions for:</li>
+                            <li>• Adding news articles;</li>
+                            <li>• Modifying the menu structure;</li>
+                            <li>• Uploading site materials such as presentation files and linking to them;</li>
+                            <li>• Adding banners with links to external resources.</li>
                         </Ul>
                     </Block>
                 </OpticsDeskContent>

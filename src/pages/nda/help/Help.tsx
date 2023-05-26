@@ -24,18 +24,17 @@ export const Help = () => {
                 <HelpContent>
                     <TitleBlock>
                         <Title className='animate'>
-                            Нужна консультация?
+                            Need consultation?
                         </Title>
                         <Text>
-                            Готовы предоставить полную консультацию по условиям и
-                            всем интересующим вопросам работы с нашей компанией!
+                            We are ready to provide comprehensive consultation on the terms and any questions regarding working with our company!
                         </Text>
                     </TitleBlock>
                     <ButtonBlock>
                         <ImageWrapper>
                             <Img src={theme === 'light' ? LogoLight : Logo}/>
                         </ImageWrapper>
-                            <Button className='animate' onClick={onClickOpenModalHandler}>Получить консультацию</Button>
+                            <Button className='animate' onClick={onClickOpenModalHandler}>GET CONSULTATION</Button>
                     </ButtonBlock>
                     <ContactBlock>
                         <PhoneLink href="tel:+375333028790">+375 (33) 302-87-90</PhoneLink>
@@ -43,7 +42,6 @@ export const Help = () => {
                     </ContactBlock>
                 </HelpContent>
             </Container>
-
         </HelpWrapper>
     );
 };

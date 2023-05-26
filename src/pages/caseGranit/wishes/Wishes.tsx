@@ -9,13 +9,9 @@ export const Wishes = () => {
             <Container>
                 <ContentBlock>
                     <div className="parent">
-                        <div className="div1">Заказчика очень беспокоил дизайн сайта. Задача состояла сделать сайт
-                            «круче». Для Заказчика важно визуальное восприятие, чтоб глазу было приятно смотреть и
-                            удобный интерфейс.
+                        <div className="div1">he client was particularly concerned about the website design. The task was to make the website "cooler." Visual perception was important to the client, aiming for a visually appealing and user-friendly interface.
                         </div>
-                        <div className="div2">У Заказчика было общее понимание по наполнению, дизайну и цветовой гамме.
-                            Заказчику было намного удобней просто на бумаге нарисовать расположение всех блоков,
-                            расписать чертеж, а мы уже на основании чертежа составили ТЗ.
+                        <div className="div2">The client had a general understanding of the content, design, and color scheme. It was more convenient for the client to sketch the layout of all the blocks on paper, providing a blueprint. Based on the blueprint, we created a detailed specification.
                         </div>
                     </div>
                 </ContentBlock>

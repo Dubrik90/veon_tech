@@ -21,26 +21,25 @@ export const WaterfallModal = () => {
                 <GridContainer>
                     <HeaderBlock>
                         <Title>WATERFALL</Title>
-                        <Text>Традиционный способ ведения проектов. Он подойдет вам, если есть конкретный бюджет и сроки
-                            на реализацию проекта. Мы с вами сразу планируем этапы, распределяем работы, фиксируем сроки
-                            и результаты.</Text>
+                        <Text>The traditional project management approach. It is suitable if you have a specific budget and deadlines for project implementation. We plan the stages, distribute the work, set deadlines, and document the results from the start.
+                        </Text>
                     </HeaderBlock>
                     <span onClick={onClickCloseModal} className="cross">&#10005;</span>
                     <div className="parent">
                         <div className="div1"></div>
-                        <div className="div2">Старт</div>
-                        <div className="div3">Анализ</div>
-                        <div className="div4">Дизайн</div>
-                        <div className="div5">Разработка</div>
-                        <div className="div6">Тестирование</div>
-                        <div className="div7">Запуск</div>
+                        <div className="div2">Start</div>
+                        <div className="div3">Analysis</div>
+                        <div className="div4">Design</div>
+                        <div className="div5">Development</div>
+                        <div className="div6">Testing</div>
+                        <div className="div7">Launch</div>
                         <div className="div8"></div>
                         <div className="div9"></div>
-                        <div className="div10">Входящие требования</div>
-                        <div className="div11">Разработка ТЗ</div>
-                        <div className="div12">Прототипирование и визуальный дизайн</div>
-                        <div className="div13">Верстка и бэкенд</div>
-                        <div className="div14">Верстка и бэкенд</div>
+                        <div className="div10">Incoming requirements</div>
+                        <div className="div11">Requirements development</div>
+                        <div className="div12">Prototyping and visual design</div>
+                        <div className="div13">Front-end and <br/> back-end development</div>
+                        <div className="div14">Front-end and <br/> back-end development</div>
                         <div className="div15"></div>
                     </div>
                 </GridContainer>

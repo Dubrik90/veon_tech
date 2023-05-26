@@ -97,10 +97,10 @@ export const FormUsers: React.FC = () => {
     ]
 
     const servicesArray = [
-        {service: 'Разработка сайтов'},
-        {service: 'Разработка ПО'},
+        {service: 'WEBSITE DEVELOPMENT'},
+        {service: 'SOFTWARE DEVELOPMENT'},
         {service: 'Поддержка проектов'},
-        {service: 'UX/UI дизайн'},
+        {service: 'UX/UI DESIGN'},
     ]
     const helpFizUserArray = [
         {val: 'Я знаю чего хочу'},

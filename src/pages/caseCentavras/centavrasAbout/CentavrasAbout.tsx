@@ -22,8 +22,7 @@ export const CentavrasAbout = () => {
                         </BlockAbout>
                         <ColumnBlock>
                             <Text>
-                                Основная область деятельность закупка и поставка товаров по запросам наших партнеров.
-                                Основные рынки: ЕС, Таможенный союз, страны СНГ, страны Азии.
+                                Primary area of activity: Procurement and supply of goods based on our partners' requests. Main markets: EU, Customs Union, CIS countries, Asian countries.
                             </Text>
                         </ColumnBlock>
                     </CentavrasAboutContent>
@@ -33,8 +32,7 @@ export const CentavrasAbout = () => {
                 <Container>
                     <TitleMob>Centavras Kft</TitleMob>
                     <TextMob>
-                        Основная область деятельность закупка и поставка товаров по запросам наших партнеров.
-                        Основные рынки: ЕС, Таможенный союз, страны СНГ, страны Азии.
+                        Primary area of activity: Procurement and supply of goods based on our partners' requests. Main markets: EU, Customs Union, CIS countries, Asian countries.
                     </TextMob>
                 </Container>
                 <Img src={CentavrasAboutImg}/>

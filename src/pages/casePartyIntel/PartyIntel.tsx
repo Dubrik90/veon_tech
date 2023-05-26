@@ -12,7 +12,7 @@ import {SimilarCases} from "../case/similarCases";
 export const CasePartyIntel = () => {
     return (
         <PartyIntelWrapper>
-            <CaseHeader title={'Кейс по разработке сайта для LLC "PartyIntel"'}/>
+            <CaseHeader title={'Case Study: Website Development for LLC "PartyIntel"'}/>
             <CaseImageComponent img={Party}/>
             <PartyIntelAbout/>
             <PartyIntelResult/>

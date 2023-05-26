@@ -12,7 +12,7 @@ import {SimilarCases} from "../case/similarCases";
 export const CaseSwiss = () => {
     return (
         <CaseSwissWrapper>
-            <CaseHeader title={'Кейс по разработке сайта для B.Well Swiss'}/>
+            <CaseHeader title={'Case Study: Website Development for B.Well Swiss'}/>
             <CaseImageComponent img={Swiss}/>
             <CaseSwissAbout/>
             <CaseSwissResult/>

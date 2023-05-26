@@ -18,26 +18,26 @@ export const Progress = () => {
         <ProgressWrapper>
             <Container>
                 <Title className={'animate'}>
-                    Создаем цифровые решения для развития вашего бизнеса
+                    Creating digital solutions for your business growth
                 </Title>
                 <ProgressContentTop>
                     <Ul>
                         <Li className={'animate'}>
                             <SubTitle>+20</SubTitle>
-                            <Text>сфер покорили бок о бок<br/> с нашими клиентами</Text>
+                            <Text>industries conquered<br/> side by side with our clients</Text>
                         </Li>
                         <Li className={'animate'}>
                             <SubTitle>+5</SubTitle>
-                            <Text>лет успешно развиваемся на просторах web-a
+                            <Text>years of successful development in the web space
                             </Text>
                         </Li>
                         <Li className={'animate'}>
                             <SubTitle>+80</SubTitle>
-                            <Text>блестательно реализованных проектов</Text>
+                            <Text>brilliantly executed projects</Text>
                         </Li>
                         <Li className={'animate'}>
                             <SubTitle>+50</SubTitle>
-                            <Text>клиентов достигли успеха доверяя нам</Text>
+                            <Text>clients achieved success by trusting us</Text>
                         </Li>
                     </Ul>
                 </ProgressContentTop>
@@ -51,7 +51,7 @@ export const Progress = () => {
                         {/*<img src={BrasRight} alt=""/>*/}
                     </ImgBlock>
                     <ContentText className={'animate'}>
-                        <span className="violet-text">Наша миссия </span>обеспечить клиентам конкурентное преимущество на рынке.
+                        <span className="violet-text">Our mission </span> is to provide clients with a competitive advantage in the market.
                     </ContentText>
                     <ImgBlock>
                         <svg width="98" height="319" fill="none" xmlns="http://www.w3.org/2000/svg">

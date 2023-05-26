@@ -12,20 +12,15 @@ import {SimilarCases} from "../case/similarCases";
 export const CaseGranit = () => {
     return (
         <CaseGranitWrapper>
-            <CaseHeader title={'Кейс по разработке сайта для Уральской гранитной компании'}/>
+            <CaseHeader title={'Case Study: Website Development for Ural Granite Company'}/>
             <CaseImageComponent img={GranitCompany}/>
             <Container>
                 <GranitTextContent>
                     <Text>
-                        <span>Уральская гранитная компания</span> — успешная и динамичная команда профессионалов,
-                        специализирующиеся на
-                        производстве изделий из камня, мемориальных комплексов, изделий сложных архитектурных форм,
-                        камня в
-                        ландшафте и интерьере.
+                        <span>Ural Granite Company</span> is a successful and dynamic team of professionals specializing in the production of stone products, memorial complexes, complex architectural forms, and stone in landscaping and interior design.
                     </Text>
                     <Text>
-                        Создать сайт-каталог с современным индивидуальным дизайном, который создаст преимущество перед
-                        конкурентами. Обеспечить его корректное отображение на всех девайсах и браузерах.
+                        Objective: Create a customized website catalog with a modern design that would provide a competitive advantage. Ensure its proper display on all devices and browsers.
                     </Text>
                 </GranitTextContent>
             </Container>

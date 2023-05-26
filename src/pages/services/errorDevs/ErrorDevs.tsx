@@ -27,7 +27,7 @@ export const ErrorDevs = () => {
     return (
         <ErrorDevsWrapper>
             <Container>
-                <Title className='animate'>4 основные ошибки при разработке сайта</Title>
+                <Title className='animate'>4 common mistakes in website development</Title>
                 <ErrorDevsContent>
                     <Ul>
                         {mistakeData.map((el: any, index: any) => (

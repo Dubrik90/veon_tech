@@ -5,21 +5,20 @@ import LocationIcon from "@mui/icons-material/LocationOnOutlined";
 export const SOCIAL_LINKS = [
     {
         icon: PhoneIcon,
-        title: 'Телефон',
-        text: 'Наши специалисты готовы принимать Ваши звонки в рабочее время офиса с 9:00 до 17:00 с понедельника по пятницу.',
+        title: 'Phone',
+        text: 'Our specialists are ready to take your calls during office hours from 9:00 AM to 5:00 PM, Monday to Friday.',
         link: '+375 (33) 302-87-90',
     },
     {
         icon: MailIcon,
-        title: 'Электронная почта',
-        text: 'Заявки на электронную почту мы принимаем ежедневно в режиме 24/7. Будьте уверены, мы обязательно с вами свяжемся!',
+        title: 'Email',
+        text: 'We accept email inquiries 24/7. Rest assured, we will get back to you!',
         link: 'clients@veon-tech.ru',
     },
     {
         icon: LocationIcon,
-        title: 'Местоположение офиса',
-        text: 'Приглашаем Вас в наш офис. Также, есть возможность встреч с партнерами и заказчиками в удобном для Вас месте.',
-        link: 'Минск, Сурганова, 57б, офис 187',
+        title: 'Office Location',
+        text: 'We invite you to visit our office. Additionally, we offer the possibility of meetings with partners and clients at a location convenient for you.',
+        link: 'Minsk, Surganova 57b, Office 187',
     },
-
 ];

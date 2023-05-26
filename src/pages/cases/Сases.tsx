@@ -33,7 +33,7 @@ export const Сases = () => {
 
 
     useEffect(() => {
-        document.title = 'Кейсы — VEON-TECH'
+        document.title = 'Cases — VEON-TECH'
         animateText()
     }, [])
 
@@ -43,7 +43,7 @@ export const Сases = () => {
             {/*           breadcrumbsTitle={'КЕЙСЫ'}*/}
             {/*/>*/}
             <Container>
-                <TitleHead className='animate'>Кейсы</TitleHead>
+                <TitleHead className='animate'>CASES</TitleHead>
             </Container>
             <FilterCase/>
             {/*<FilterBlock filter={filter}*/}

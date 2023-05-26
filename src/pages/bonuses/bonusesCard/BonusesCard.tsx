@@ -28,7 +28,7 @@ export const BonusesCard: FC<BonusesCardProps> = ({card}) => {
             <SubTitle>{card.subtitle}</SubTitle>
             <Text>{card.text}</Text>
             <SubText>{card.subText}</SubText>
-            <Button onClick={onClickOpenBonuseFormHandler}>Выбрать</Button>
+            <Button onClick={onClickOpenBonuseFormHandler}>SELECT</Button>
         </BonusesCardWrapper>
     );
 };

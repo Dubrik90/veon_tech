@@ -13,7 +13,7 @@ export const Application = () => {
     return (
         <ApplicationWrapper onClick={onClickOpenModalHandler}>
             <PlusIcon/>
-            <Text>Здесь может быть Ваш  проект</Text>
+            <Text>Your project may be here</Text>
         </ApplicationWrapper>
     );
 };

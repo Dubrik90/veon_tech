@@ -10,9 +10,7 @@ export const JointWork = () => {
             <Container>
                 <Content>
                     <Text>
-                        Совместно с заказчиком проработали структуру главной страницы и расположение элементов на сайте,
-                        создали уникальный дизайн, обработали изображения для каталога и наполнили сайт. Проработали
-                        мобильную версию сайта и настроили корректное отображение элементов на всех устройствах.
+                        In collaboration with the client, we worked on the structure of the homepage, the arrangement of elements on the site, and created a unique design. We processed images for the catalog and filled the website with content. We also developed a mobile version of the site and ensured the correct display of elements on all devices.
                     </Text>
                     <img loading= "lazy" src={bak2} alt=""/>
                 </Content>

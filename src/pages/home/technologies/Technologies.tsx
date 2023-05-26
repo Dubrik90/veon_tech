@@ -71,7 +71,7 @@ export const Technologies = () => {
                     <ButtomTab className={active === 'frontend' ? 'active' : ''} id={'frontend'}
                                onClick={activeCorrectFilter}>Front-end разработка</ButtomTab>
                     <ButtomTab className={active === 'developmentSoftware' ? 'active' : ''} id={'developmentSoftware'}
-                               onClick={activeCorrectFilter}>Разработка По</ButtomTab>
+                               onClick={activeCorrectFilter}>SOFTWARE DEVELOPMENT</ButtomTab>
                     <ButtomTab className={active === 'dataBase' ? 'active' : ''} id={'dataBase'}
                                onClick={activeCorrectFilter}>База данных</ButtomTab>
                     <ButtomTab className={active === 'CMS' ? 'active' : ''} id={'CMS'}
