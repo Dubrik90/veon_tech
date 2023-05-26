@@ -3,7 +3,7 @@ import {flexColumn} from "../../style/mixin";
 
 
 export const FooterWrapper = styled.footer`
-  background-color: var(--color-dg-footer);
+  background-color: var(--colors-text-green);
   padding-top: calc(20px + (50 - 20) * ((100vw - 320px) / (1920 - 320)));
 `
 export const FooterContent = styled.div`

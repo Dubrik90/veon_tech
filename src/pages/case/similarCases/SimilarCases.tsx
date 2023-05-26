@@ -1,7 +1,7 @@
 import React from 'react';
 import Img1 from './assets/img1.png'
-import Img2 from './assets/img3.png'
-import Img3 from './assets/img3.png'
+import Img2 from './assets/mediaCorporat.png'
+import Img3 from './assets/rentMarket.png'
 import {ROUTS} from "../../../common/constans/routs";
 import {Img, ImgBlock, SimilarCasesBlock, SimilarCasesDesktop, SimilarCasesWrapper, Title} from "./style";
 import {Link} from "react-router-dom";
@@ -16,9 +16,9 @@ export type SimilarCasesArrayType = {
 export const SimilarCases = () => {
 
     const similarCasesArray: SimilarCasesArrayType[] = [
-        {img: Img1, to: ROUTS.CASES},
-        {img: Img2, to: ROUTS.CASES},
-        {img: Img3, to: ROUTS.CASES},
+        {img: Img1, to: ROUTS.CASE_GRANIT},
+        {img: Img2, to: ROUTS.CASE_ART_MEDIA},
+        {img: Img3, to: ROUTS.CASE_RENT_CLUB},
     ]
     return (
         <SimilarCasesWrapper>

@@ -33,7 +33,7 @@ const initialState: InitialStateStateType = {
         {
             id: '1',
             type: 'visit',
-            title: 'Интеренет-каталоги',
+            title: 'Интернет-каталоги',
             name: 'Счастливый слон',
             about: 'Разработка календаря бронирования',
             country: 'Россия',
@@ -59,7 +59,7 @@ const initialState: InitialStateStateType = {
         {
             id: '3',
             type: 'visit',
-            title: 'Интеренет-каталоги',
+            title: 'Интернет-каталоги',
             name: ' B.Well Swiss',
             about: 'Редизайн интернет-каталога',
             desk: 'Простое и понятное решение, которое помогает!',
@@ -86,12 +86,12 @@ const initialState: InitialStateStateType = {
         {
             id: '5',
             type: 'magazines',
-            title: 'Интеренет-каталоги',
+            title: 'Интернет-каталоги',
             name: 'Уральская гранитная компания',
             about: 'Создание сайта-каталога',
             desk: 'Тот самый дизайн, который отличает от других!',
             country: 'Россия',
-            industry: 'Интеренет торговля',
+            industry: 'Интернет торговля',
             route: ROUTS.CASE_GRANIT,
             color: 'wight',
             img: ural
@@ -125,12 +125,12 @@ const initialState: InitialStateStateType = {
         {
             id: '8',
             type: 'magazines',
-            title: 'Интеренет-каталоги',
+            title: 'Интернет-каталоги',
             name: 'ООО "Содокс Пром"',
             about: 'Создание сайта-каталога',
             desk: 'Создание современного сайта, с которым можно выделиться!',
             country: 'Беларусь',
-            industry: 'Интеренет торговля',
+            industry: 'Интернет торговля',
             route: ROUTS.CASE_SODOX,
             color: '',
             img: sodox
@@ -138,12 +138,12 @@ const initialState: InitialStateStateType = {
         {
             id: '9',
             type: 'catalogs',
-            title: 'Интеренет-каталоги',
+            title: 'Интернет-каталоги',
             name: 'ООО "Рент клаб"',
             about: 'Создание маркетплейса',
             desk: '',
             country: 'Россия',
-            industry: 'Интеренет торговля',
+            industry: 'Интернет торговля',
             route: ROUTS.CASE_RENT_CLUB,
             color: '',
             img: rent
@@ -151,12 +151,12 @@ const initialState: InitialStateStateType = {
         {
             id: '10',
             type: 'catalogs',
-            title: 'Интеренет-каталоги',
+            title: 'Интернет-каталоги',
             name: 'ООО "Sinaradesign"',
             about: 'Разработка сайта каталога',
             desk: 'Уникальный дизайн удовлетворяющий современные тенденции!',
             country: 'Россия',
-            industry: 'Интеренет торговля',
+            industry: 'Интернет торговля',
             route: ROUTS.CASE_SINARADESING,
             color: '',
             img: sinaradesign

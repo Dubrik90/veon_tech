@@ -43,7 +43,7 @@ export const OfficeHours = () => {
         },
         {
             id: 0,
-            day: 'Воскресение',
+            day: 'Воскресенье',
             hours: 'выходной'
         },
     ]

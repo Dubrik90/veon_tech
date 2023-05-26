@@ -21,7 +21,7 @@ export const GetInTorch = () => {
             <GetInTorchWrapper view={view} className='torch' ref={circleRef}>
                 <MassageIcon/>
                 <Button onClick={openModal}>
-                    <Title>Отправте нам сообщение</Title>
+                    <Title>Отправьте нам сообщение</Title>
                 </Button>
                 <IconsBlock>
                     <div>
