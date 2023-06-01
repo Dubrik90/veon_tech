@@ -21,7 +21,7 @@ export const ContactUs = () => {
         <ContactUsWrapper>
             <Container>
                 <DiscussProject onClick={onClickOpenFormHandler} className={'animate'}>
-                    <Title>ОБСУДИТЬ ПРОЕКТ</Title>
+                    <Title>DISCUSS THE PROJECT</Title>
                     <Button>
                         <span></span>
                         <span></span>
@@ -32,7 +32,7 @@ export const ContactUs = () => {
             <Container>
                 <DiscussProject className={'animate'}>
                     <Link to={ROUTS.JOBS}>
-                        <Title>РАБОТА У НАС</Title>
+                        <Title>WORK WITH US</Title>
                         <svg width="113" height="114" viewBox="0 0 113 114" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
                             <path fillRule="evenodd" clipRule="evenodd"

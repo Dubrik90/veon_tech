@@ -85,26 +85,26 @@ export const FormUsers: React.FC = () => {
     }
 
     const helpCompanyArray = [
-        {val: 'У нас есть готовая идея'},
-        {val: 'Доверимся вашей компании'},
+        {val: 'We have a ready idea'},
+        {val: 'We will trust your company'},
     ]
 
     const budgetValuesArray = [
-        {val: 'Индивидуальный расчет'},
+        {val: 'Individual calculation'},
         {val: '5K - 10K'},
         {val: '10K - 50K'},
-        {val: 'Больше 50 K'},
+        {val: 'More than 50K'},
     ]
 
     const servicesArray = [
         {service: 'WEBSITE DEVELOPMENT'},
         {service: 'SOFTWARE DEVELOPMENT'},
-        {service: 'Поддержка проектов'},
+        {service: 'Project support'},
         {service: 'UX/UI DESIGN'},
     ]
     const helpFizUserArray = [
-        {val: 'Я знаю чего хочу'},
-        {val: 'Доверюсь вашей компании'},
+        {val: 'I know what I want'},
+        {val: 'I will trust your company'},
     ]
 
     const handleFocus = (fieldName: string) => {
@@ -123,7 +123,6 @@ export const FormUsers: React.FC = () => {
         closeFormModal();
         emailjs.send('service_jwks1lh', 'template_m2zj1z6', values, 'iy68w7qmdmjCwvP5W')
             .then((result: any) => {
-                console.log(result)
             }, (error: any) => {
                 console.log(error.text);
             });
@@ -159,7 +158,7 @@ export const FormUsers: React.FC = () => {
                 <BonuseFormWrapper>
                     <ContainerForm>
                         <DynamicContactHead>
-                            <ModalTitle>{currentPath === '/about' ? 'ОБСУДИТЬ ПРОЕКТ' : 'Свяжитесь с нами'} </ModalTitle>
+                            <ModalTitle>{currentPath === '/about' ? 'DISCUSS THE PROJECT' : 'Contact us'} </ModalTitle>
                             <CloseModal onClick={closeFormModal}>
                                 <div></div>
                                 <div></div>
@@ -167,13 +166,13 @@ export const FormUsers: React.FC = () => {
                         </DynamicContactHead>
                         <Form onSubmit={handleSubmit}>
                             <StyledRadioContainer>
-                                <StyledRadioLabel checked={values.personType === "Физическое"}>
-                                    <Radio type="radio" name="personType" value="Физическое"/>
-                                    Физическое лицо
+                                <StyledRadioLabel checked={values.personType === "Physical"}>
+                                    <Radio type="radio" name="personType" value="Physical"/>
+                                    Individual
                                 </StyledRadioLabel>
-                                <StyledRadioLabel checked={values.personType === "Юридическое"}>
-                                    <Radio type="radio" name="personType" value="Юридическое"/>
-                                    Юридическое лицо
+                                <StyledRadioLabel checked={values.personType === "Legal"}>
+                                    <Radio type="radio" name="personType" value="Legal"/>
+                                    Legal entity
                                 </StyledRadioLabel>
                             </StyledRadioContainer>
                             {/*firstName*/}
@@ -228,7 +227,7 @@ export const FormUsers: React.FC = () => {
                                     Почта
                                 </Label>
                             </InputContainer>
-                            {values.personType === 'Юридическое' &&
+                            {values.personType === 'Legal' &&
                                 <>
                                     {/*companyName*/}
                                     <InputContainer>
@@ -240,7 +239,7 @@ export const FormUsers: React.FC = () => {
                                             onBlur={handleBlur}
                                         />
                                         <Label htmlFor="companyName" isActive={activeField === "companyName"}>
-                                            Название компании
+                                            Company name
                                         </Label>
                                     </InputContainer>
                                     {/*aboutCompany*/}
@@ -253,12 +252,12 @@ export const FormUsers: React.FC = () => {
                                             onBlur={handleBlur}
                                         />
                                         <Label htmlFor="aboutCompany" isActive={activeField === "aboutCompany"}>
-                                            Чем занимается ваша компания?
+                                            What does your company do?
                                         </Label>
                                     </InputContainer>
                                 </>}
                             <TitleBonuse>
-                                Бюджет в USD
+                                Budget in USD
                             </TitleBonuse>
                             {/*Budget*/}
                             <CheckboxContainer>
@@ -278,10 +277,10 @@ export const FormUsers: React.FC = () => {
                                 }
                             </CheckboxContainer>
                             {
-                                values.personType === 'Физическое' &&
+                                values.personType === 'Physical' &&
                                 <>
                                     <TitleBonuse>
-                                        Услуги
+                                        Services
                                     </TitleBonuse>
                                     <CheckboxContainer>
                                         {servicesArray.map((ser, index) => {
@@ -324,7 +323,7 @@ export const FormUsers: React.FC = () => {
                                 </>
                             }
                             {
-                                values.personType === 'Юридическое' &&
+                                values.personType === 'Legal' &&
                                 <>
                                     <CheckboxContainer>
                                         {
@@ -345,7 +344,7 @@ export const FormUsers: React.FC = () => {
                                 </>
                             }
                             <TitleBonuse>
-                                Выберите бонус
+                                Select a bonus
                             </TitleBonuse>
                             {/*select bonuses*/}
                             <CheckboxContainerGlobalForm>
@@ -357,7 +356,7 @@ export const FormUsers: React.FC = () => {
                                         onChange={handleChange}
 
                                     />
-                                    Скидка 100 BYN
+                                    100 BYN discount
                                 </CheckboxLabelGlobalForm>
                                 <CheckboxLabelGlobalForm checked={values.bonus2}>
                                     <CheckboxGlobalForm
@@ -366,7 +365,8 @@ export const FormUsers: React.FC = () => {
                                         checked={values.bonus2}
                                         onChange={handleChange}
                                     />
-                                    Бесплатный логотип
+                                    Free
+                                    logo
                                 </CheckboxLabelGlobalForm>
                                 <CheckboxLabelGlobalForm checked={values.bonus3}>
                                     <CheckboxGlobalForm
@@ -384,7 +384,7 @@ export const FormUsers: React.FC = () => {
                                         checked={values.bonus4}
                                         onChange={handleChange}
                                     />
-                                    5% скидка на все услуги
+                                    5% discount
                                 </CheckboxLabelGlobalForm>
                             </CheckboxContainerGlobalForm>
 
@@ -393,7 +393,7 @@ export const FormUsers: React.FC = () => {
                                 <TextareaWrapper>
                                     <TextareaItem name="comment" onChange={handleChange}/>
                                     <TextareaLabel>
-                                        Расскажите о проекте
+                                        Tell us about the project
                                     </TextareaLabel>
                                 </TextareaWrapper>
                             </FormDataItemComment>
@@ -416,7 +416,7 @@ export const FormUsers: React.FC = () => {
                                             {values.myFile?.name}
                                         </UploadItemResult>
                                         <UploadItemLabel htmlFor="myFile">
-                                            Загрузить файл
+                                            Add file
                                         </UploadItemLabel>
                                         <InputUploadItem
                                             name="myFile"
@@ -453,13 +453,10 @@ export const FormUsers: React.FC = () => {
                                 </UploadWrapper>
                             </FormDataItemUpload>
                             {/*BUTTON*/}
-                            <SubmitButton type="submit"><span><span>Отправить</span></span></SubmitButton>
+                            <SubmitButton type="submit"><span><span>Send</span></span></SubmitButton>
                             <PrivacyPolicy>
                                 <TextPolicy>
-                                    Отправляя форму, Вы даете согласие на обработку своих
-                                    персональных данных в соответствии с <Link onClick={closeFormModal}
-                                                                               to={ROUTS.POLICY}>политикой
-                                    конфиденциальности</Link>
+                                    By clicking "Submit," you give your consent to the processing of personal data in accordance with the purposes specified in the  <Link to={ROUTS.POLICY}>Privacy Policy.</Link>
                                 </TextPolicy>
                             </PrivacyPolicy>
                         </Form>

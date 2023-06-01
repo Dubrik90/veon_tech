@@ -45,18 +45,16 @@ export const ConsultantModal = () => {
 
         validate: (values) => {
             const errors: FormikErrorType = {}
-
             if (!values.name) {
                 errors.name = 'The field cannot be empty'
             }
-
             if (!values.phone) {
                 errors.phone = 'Please provide your phone number'
             }
             return errors
         },
         onSubmit: values => {
-
+            onClickClouseModalHandler()
             emailjs.send('service_jwks1lh', 'template_h0lfcm6', values, 'iy68w7qmdmjCwvP5W')
                 .then((result: any) => {
                     console.log(result)

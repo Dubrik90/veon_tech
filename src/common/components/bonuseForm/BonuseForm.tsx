@@ -91,11 +91,9 @@ export const BonuseForm: React.FC = () => {
         closeFormModal();
         emailjs.send('service_jwks1lh', 'template_m2zj1z6', values, 'iy68w7qmdmjCwvP5W')
             .then((result: any) => {
-                console.log(result)
             }, (error: any) => {
                 console.log(error.text);
             });
-
     };
 
     return (
@@ -126,7 +124,7 @@ export const BonuseForm: React.FC = () => {
                 <BonuseFormWrapper>
                     <ContainerForm>
                         <DynamicContactHead>
-                            <ModalTitle>Свяжитесь с нами</ModalTitle>
+                            <ModalTitle>Contact us</ModalTitle>
                             <CloseModal onClick={closeFormModal}>
                                 <div></div>
                                 <div></div>
@@ -134,13 +132,13 @@ export const BonuseForm: React.FC = () => {
                         </DynamicContactHead>
                         <Form onSubmit={handleSubmit}>
                             <StyledRadioContainer>
-                                <StyledRadioLabel checked={values.personType === "Физическое"}>
-                                    <Radio type="radio" name="personType" value="Физическое"/>
-                                    Физическое лицо
+                                <StyledRadioLabel checked={values.personType === "Physical"}>
+                                    <Radio type="radio" name="personType" value="Physical"/>
+                                    Individual
                                 </StyledRadioLabel>
-                                <StyledRadioLabel checked={values.personType === "Юридическое"}>
-                                    <Radio type="radio" name="personType" value="Юридическое"/>
-                                    Юридическое лицо
+                                <StyledRadioLabel checked={values.personType === "Legal"}>
+                                    <Radio type="radio" name="personType" value="Legal"/>
+                                    Legal entity
                                 </StyledRadioLabel>
                             </StyledRadioContainer>
                             {/*firstName*/}
@@ -195,7 +193,7 @@ export const BonuseForm: React.FC = () => {
                                     Почта
                                 </Label>
                             </InputContainer>
-                            {values.personType === 'Юридическое' &&
+                            {values.personType === 'Legal' &&
                                 <>
                                     {/*companyName*/}
                                     <InputContainer>
@@ -236,10 +234,9 @@ export const BonuseForm: React.FC = () => {
                                         checked={values.bonus1}
                                         onChange={handleChange}
                                     />
-                                    Скидка 100 BYN
+                                    100 BYN discount
                                 </CheckboxLabel>
-                                <p>При подписании договора в течение 3 дней после получения коммерческого
-                                    предложения</p>
+                                <p>When signing the contract within 3 days after receiving the commercial offer</p>
                                 <CheckboxLabel checked={values.bonus2}>
                                     <Checkbox
                                         type="checkbox"
@@ -247,10 +244,10 @@ export const BonuseForm: React.FC = () => {
                                         checked={values.bonus2}
                                         onChange={handleChange}
                                     />
-                                    Бесплатный логотип
+                                    Free
+                                    logo
                                 </CheckboxLabel>
-                                <p>При подписании договора в течение 3 дней после получения коммерческого
-                                    предложения</p>
+                                <p>When signing the contract within 3 days after receiving the commercial offer</p>
                                 <CheckboxLabel checked={values.bonus3}>
                                     <Checkbox
                                         type="checkbox"
@@ -260,7 +257,7 @@ export const BonuseForm: React.FC = () => {
                                     />
                                     Hostfly.by
                                 </CheckboxLabel>
-                                <p>На любой тариф хостинга</p>
+                                <p>On any hosting tariff</p>
                                 <CheckboxLabel checked={values.bonus4}>
                                     <Checkbox
                                         type="checkbox"
@@ -268,10 +265,9 @@ export const BonuseForm: React.FC = () => {
                                         checked={values.bonus4}
                                         onChange={handleChange}
                                     />
-                                    5% скидка на все услуги
+                                    5% discount
                                 </CheckboxLabel>
-                                <p>При единовременном платеже всей суммы услуги. Для новых клиентов. Исключение
-                                    оплата лицензий.</p>
+                                <p>For one-time payment of the entire service amount. For new customers. License fees are excluded.</p>
                             </CheckboxContainerBonuses>
 
                             {/*textarea*/}
@@ -279,7 +275,7 @@ export const BonuseForm: React.FC = () => {
                                 <TextareaWrapper>
                                     <TextareaItem name="comment" onChange={handleChange}/>
                                     <TextareaLabel>
-                                        Расскажите о проекте
+                                        Tell us about the project
                                     </TextareaLabel>
                                 </TextareaWrapper>
                             </FormDataItemComment>
@@ -302,7 +298,7 @@ export const BonuseForm: React.FC = () => {
                                             {values.myFile?.name}
                                         </UploadItemResult>
                                         <UploadItemLabel htmlFor="myFile">
-                                            Загрузить файл
+                                            add file
                                         </UploadItemLabel>
                                         <InputUploadItem
                                             name="myFile"
@@ -339,12 +335,10 @@ export const BonuseForm: React.FC = () => {
                                 </UploadWrapper>
                             </FormDataItemUpload>
                             {/*BUTTON*/}
-                            <SubmitButton type="submit"><span><span>Отправить</span></span></SubmitButton>
+                            <SubmitButton type="submit"><span><span>Send</span></span></SubmitButton>
                             <PrivacyPolicy>
                                 <TextPolicy>
-                                    Отправляя форму, Вы даете согласие на обработку своих
-                                    персональных данных в соответствии с <Link to={ROUTS.POLICY}>политикой
-                                    конфиденциальности</Link>
+                                    By clicking "Submit," you give your consent to the processing of personal data in accordance with the purposes specified in the  <Link to={ROUTS.POLICY}>Privacy Policy.</Link>
                                 </TextPolicy>
                             </PrivacyPolicy>
                         </Form>

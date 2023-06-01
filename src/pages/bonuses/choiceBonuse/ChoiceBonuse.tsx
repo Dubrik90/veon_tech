@@ -8,30 +8,6 @@ import {TypingText} from "../../../common/animate/TypingText";
 
 
 export const ChoiceBonuse = () => {
-    const tl = gsap.timeline()
-  
-    const textAnimate = useRef(null)
-
-    useEffect(() => {
-
-        tl.fromTo(".type-me", 2, {
-            width: "0",
-        }, {
-            width: "100%",
-            delay: 0.5,
-            ease: SteppedEase.config(83),
-        }, 0);
-
-        tl.fromTo(".type-me2", 2, {
-            width: "0",
-        }, {
-            width: "100%",
-            delay: 0,
-            ease: SteppedEase.config(83)
-        }, 2);
-
-    }, [])
-
 
     return (
         <ChoiceBonuseWrapper>

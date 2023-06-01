@@ -10,17 +10,17 @@ import {TableCase} from "./tableCase";
 import {ContentCase} from "./contentCase";
 import {SliderPortfolio} from "./sliderPortfolio";
 import {CaseHelp} from './caseHelp';
-import { SimilarCases } from './similarCases';
+import {SimilarCases} from './similarCases';
 
 type UseParamsType = {
     category: FilterCaseType;
 };
 type CasePropsType = {
-    caseData : CaseType
+    caseData: CaseType
 }
 
 
-export const Case:FC<CasePropsType> = ({caseData}) => {
+export const Case: FC<CasePropsType> = ({caseData}) => {
 
     return (
         <CaseWrapper>
@@ -35,15 +35,13 @@ export const Case:FC<CasePropsType> = ({caseData}) => {
                     <ContentCase activeCase={caseData}/>
                 </CaseBlock>
                 <PortfolioBlock>
-                    {
-                        caseData.portfolio.map((el, index) => {
-                            return (
-                                <ImageBlock key={index}>
-                                    <Img src={el.img} alt="picture"/>
-                                </ImageBlock>
-                            )
-                        })
-                    }
+                    {caseData.portfolio.map((el, index) => {
+                        return (
+                            <ImageBlock key={index}>
+                                <Img src={el.img} alt="picture"/>
+                            </ImageBlock>
+                        )
+                    })}
                 </PortfolioBlock>
                 <PortfolioBlockSlider>
                     <SliderPortfolio activeCaseImg={caseData.portfolio}/>

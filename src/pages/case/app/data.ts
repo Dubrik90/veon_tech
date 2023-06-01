@@ -153,41 +153,35 @@ export const caseDataArray: CaseDataType = [
     {
         id: '4',
         type: 'sites',
-        title: 'Кейс по разработке маркетплейса для  ООО "Рент клаб"',
+        title: 'Case Study: Development of a Marketplace for Rent Club LLC',
         screenImg: Rent,
         logoImg: LogoRent,
         service: 'Catalog website creation',
-        client: 'ООО "Рент клаб" (под НДА)',
+        client: 'Rent Club LLC (under NDA)',
         projectUrl: 'https://rentclub.pro',
-        aboutCompany: 'ООО "Рент клаб" (под НДА)',
-        targets: 'Реализация кабинета сделки, смены статусов и возможное поведение пользователей',
+        aboutCompany: 'Rent Club LLC (under NDA)',
+        targets: 'Implementation of a transaction dashboard, status changes, and user behavior',
 
         tableData: [
-            {name: 'Наименование компании', value: `ООО "Рент клаб" (под НДА)`},
-            {name: 'Сфера деятельности', value: `стартап по созданию сервиса по аренде вещей`},
-            {name: 'Страна, на которую рассчитан сайт', value: `РФ`},
-            {name: 'Основные товары и услуги', value: `аренда вещей`},
-            {name: 'Домен сайта', value: `ООО "https://rentclub.pro`},
-            {name: 'Целевая аудитория', value: `мужчины/женщины от 18 до 40 лет`},
-            {name: 'Задачи сайта', value: `реализация бэк энд части (кабинет сделки, поведение пользователей)`},
-            {name: 'Тип сайта', value: `Маркетплейс`},
-            {name: 'Тариф', value: `-`},
+            {name: 'Company Name', value: `Rent Club LLC (under NDA)`},
+            {name: 'Industry', value: `Startup for rental services`},
+            {name: 'Target Country', value: `Russia`},
+            {name: 'Main Products and Services', value: `Rental of various items`},
+            {name: 'Website Domain', value: `ООО "https://rentclub.pro`},
+            {name: 'Target Audience', value: `Men and women aged 18 to 40`},
+            {name: 'Website Objectives', value: `Backend implementation (transaction dashboard, user behavior)`},
+            {name: 'Website Type', value: `Marketplace`},
+            // {name: 'Тариф', value: `-`},
             {name: 'CMS', value: `-`},
-            {name: 'Языки разработки/Фреймовик', value: `PHP, Laravel, Vue.js`},
+            {name: 'Development Languages/Frameworks', value: `PHP, Laravel, Vue.js`},
             {
-                name: 'Пожелания заказчика',
-                value: `Реализация кабинет сделки, а также различные сценарии поведения арендодателя и арендатора в кабинете сделки `
+                name: 'Client\'s Preferences',
+                value: `Implementation of a transaction dashboard and various scenarios for lessor and lessee behavior within the dashboard`
             },
         ],
-        appealClient: 'Заказчика очень беспокоил дизайн сайта, предыдущий сайт заказчик разрабатывал лично. Каждый шрифт, кнопку и тд. И задача сделать еще "круче". Для заказчика важно визуальное восприятие, чтобы глазу было приятно смотреть и удобный интерфейс.',
-        process: 'Нашей команде не впервой пришлось столкнуться с доработкой проекта, соответственно каждый момент сотрудничества строго соответствовал регламенту.\n' +
-            'С заказчиком были подробно обсуждены детали проекта, также была проработана структура кабинета.\n' +
-            'Далее наши специалисты принялись за реализацию смены различных статусов пользователей.                                                                                                                         \n' +
-            'Следующим этапом разработки было моделирование случайного поведения пользователей в рамках посещения сервиса и смена директории в соответствии с запросами пользователя ',
-        result: 'Благодаря тесному сотруднечеству и отличной обратной связи с заказчиком получился отличный сайт-каталог, который повышает лояльность клиентов и отличается от конкурентных сайтов своим индивидуальным дизайном.\n' +
-            'Выбирая нас клиент получил следующее: \n' +
-            'Оперативное обслуживание и реализация проекта в соответствии с согласованными этапами. \n' +
-            'Скидку на разработку в соответствии с бонусной системой нашей компании!',
+        appealClient: 'The client was very concerned about the website design, as they had developed the previous website personally. They wanted every font, button, etc., to be "cooler" and visually appealing. The client emphasized the importance of visual perception and a user-friendly interface.',
+        process: 'Our team had previous experience with project enhancements, so each stage of the collaboration followed a strict protocol. We discussed project details with the client in-depth and worked on the structure of the transaction dashboard. Our specialists then proceeded to implement the functionality for changing user statuses. The next development stage involved simulating random user behavior within the service and adapting the directory based on user requests.',
+        result: 'Thanks to close collaboration and excellent feedback from the client, we delivered an outstanding catalog website that enhances customer loyalty and stands out from competitors with its unique design. By choosing us, the client received the following benefits: prompt service and project realization in accordance with the agreed-upon stages. They also enjoyed a discount on development costs through our company\'s bonus system.',
         portfolio: [
             {img: Image1, src: ''},
             {img: Image2, src: ''},

@@ -23,7 +23,7 @@ import {Link} from "react-router-dom";
 
 
 interface MyFormValues {
-    firstName: string;
+    name: string;
     phone: string;
     myFile: File | null;
 }
@@ -47,7 +47,6 @@ export const ModalWindoww = () => {
         onClickClouseModalHandler()
         emailjs.send('service_jwks1lh', 'template_h0lfcm6', values, 'iy68w7qmdmjCwvP5W')
             .then((result: any) => {
-                console.log(result)
             }, (error: any) => {
                 console.log(error.text);
             });
@@ -57,7 +56,7 @@ export const ModalWindoww = () => {
     return (
         <Formik<MyFormValues>
             initialValues={{
-                firstName: "",
+                name: "",
                 phone: "",
                 myFile: null,
             }}
@@ -74,9 +73,9 @@ export const ModalWindoww = () => {
                                     <Label>
                                         <CustomInput
                                             type="text"
-                                            name="firstName"
+                                            name="name"
                                             placeholder="Name"
-                                            value={values.firstName}
+                                            value={values.name}
                                             onChange={handleChange}
                                         />
                                     </Label>

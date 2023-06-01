@@ -57,7 +57,7 @@ export const ModalReview: React.FC<ModalProps> = ({isOpen, onRequestClose, revie
                             </div>
                         </div>
                         <Link onClick={onClickAddScroll} to={reviewData?.link ? reviewData?.link : ''}>
-                            Посмотреть кейс
+                            View case
                         </Link>
                     </Content>
                 </Container>
