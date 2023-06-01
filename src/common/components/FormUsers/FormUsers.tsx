@@ -127,9 +127,6 @@ export const FormUsers: React.FC = () => {
             }, (error: any) => {
                 console.log(error.text);
             });
-
-        //   e.currentTarget.reset()
-
     };
 
     return (

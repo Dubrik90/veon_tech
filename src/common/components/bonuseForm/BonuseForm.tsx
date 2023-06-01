@@ -91,11 +91,9 @@ export const BonuseForm: React.FC = () => {
         closeFormModal();
         emailjs.send('service_jwks1lh', 'template_m2zj1z6', values, 'iy68w7qmdmjCwvP5W')
             .then((result: any) => {
-                console.log(result)
             }, (error: any) => {
                 console.log(error.text);
             });
-
     };
 
     return (

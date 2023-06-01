@@ -45,7 +45,6 @@ export const ModalWindoww = () => {
         onClickClouseModalHandler()
         emailjs.send('service_jwks1lh', 'template_h0lfcm6', values, 'iy68w7qmdmjCwvP5W')
             .then((result: any) => {
-                console.log(result)
             }, (error: any) => {
                 console.log(error.text);
             });
