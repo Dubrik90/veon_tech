@@ -24,7 +24,7 @@ export const Contacts = () => {
             {/*<SocialIcons/>*/}
             <OfficeHours/>
             <MapComponent/>
-            <Requisites/>
+            {/*<Requisites/>*/}
         </ContactsWrapper>
     );
 };

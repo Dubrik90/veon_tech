@@ -44,9 +44,9 @@ export const Footer = () => {
                             <p>Unified State Register of Legal Entities 193082231</p>
                         </About>
                         <AboutContact>
-                            <a href="tel:+375333028790">+375 (33) 302-87-90</a>
+                            <a href="tel:+48223728901">+48 22 372 89 01</a>
                             <p>clients@veon-tech.ru</p>
-                            <p>220068, Minsk, Surganova St., 57b, office 187</p>
+                            <p>ul. Chmielna 71, 00-801 Warszawa</p>
                             <p>Monday to Friday</p>
                         </AboutContact>
                         <Corporation>
