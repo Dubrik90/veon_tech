@@ -5,7 +5,6 @@ export const HeaderWrapper = styled.header`
   opacity: 0;
   transform: translateY(-100px);
   padding: 5px 0;
-  
   margin-bottom: 50px;
   box-shadow: 0 10px 10px rgba(10, 91, 8, 0.31);
   position: fixed;
@@ -57,7 +56,7 @@ export const HeaderContent = styled.div`
   min-height: 70px;
   
   @media (max-width: 400px) {
-    min-height: 60px;
+    max-height: 60px;
   }
   
   a {

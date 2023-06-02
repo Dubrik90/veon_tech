@@ -11,7 +11,7 @@ import {
 } from "./style";
 import {Container} from "../../style/Container";
 
-import logo from '../../../common/components/header/assets/apdateLogo.png'
+import logo from '../../../common/components/header/assets/logoEng.webp'
 import instagram from './assets/insta.svg'
 import facebook from './assets/facebook.svg'
 import linkedin from './assets/linkedin.svg'

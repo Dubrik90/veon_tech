@@ -1,8 +1,7 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {CasesType, CaseType, FilterCaseType} from "../common/types/types";
+import {CaseType} from "../common/types/types";
 import {ROUTS} from "../common/constans/routs";
 import rent from "../pages/cases/assets/rent.webp";
-import couchingVisit from "../pages/cases/assets/couchingVisit.png";
 import optics from "../pages/cases/assets/optics.webp";
 import swiss from "../pages/cases/assets/wiss.webp";
 import elephantVizit from "../pages/cases/assets/elephantVizit.webp";

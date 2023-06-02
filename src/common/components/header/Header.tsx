@@ -9,7 +9,7 @@ import {ROUTS} from "../../constans/routs";
 import gsap from "gsap";
 import {setIsOpenBurgerAC, setIsSelectThemBlockedAC, setThemeAC} from "../../../app/app-reduser";
 import {useScrollBlock} from "../../hook/use-scroll-block";
-import ApdateLogo from './assets/apdateLogo.png'
+import ApdateLogo from './assets/logoEng.webp'
 
 
 export const Header = () => {
