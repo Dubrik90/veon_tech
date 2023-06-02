@@ -11,6 +11,7 @@ export const SwitchWrapper = styled.div<SwitchWrapperProps>`
   border-radius: 15px;
   position: relative;
   display: flex;
+  cursor: pointer;
   column-gap: 10px;
   z-index: 9999;
 

@@ -92,7 +92,7 @@ export const GetInTorchWrapper = styled.div<GetInTorchWrapperProps>`
   justify-content: flex-start;
   column-gap: 12px;
   position: fixed;
-  right: -115px;
+  right: -120px;
   bottom: 115px;
   z-index: 40;
   font-weight: var(--fw-bold);
