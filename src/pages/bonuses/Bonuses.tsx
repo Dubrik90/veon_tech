@@ -32,7 +32,7 @@ export const Bonuses = () => {
         {
             id: '1',
             img: Clock,
-            title: '100 BYN discount',
+            title: '100 USD discount',
             subtitle: 'for speed',
             text: 'When signing the contract within 3 days after receiving the commercial offer',
             subText: '*For orders over 1500 BYN'

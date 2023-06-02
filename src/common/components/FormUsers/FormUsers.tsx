@@ -185,7 +185,7 @@ export const FormUsers: React.FC = () => {
                                     onBlur={handleBlur}
                                 />
                                 <Label htmlFor="firstName" isActive={activeField === "firstName"}>
-                                    Имя
+                                    Name
                                 </Label>
                             </InputContainer>
                             {/*lastName*/}
@@ -198,7 +198,7 @@ export const FormUsers: React.FC = () => {
                                     onBlur={handleBlur}
                                 />
                                 <Label htmlFor="lastName" isActive={activeField === "lastName"}>
-                                    Фамилия
+                                    Surname
                                 </Label>
                             </InputContainer>
                             {/*phone*/}
@@ -211,7 +211,7 @@ export const FormUsers: React.FC = () => {
                                     onBlur={handleBlur}
                                 />
                                 <Label htmlFor="phone" isActive={activeField === "phone"}>
-                                    Телефон
+                                    Phone
                                 </Label>
                             </InputContainer>
                             {/*email*/}
@@ -224,7 +224,7 @@ export const FormUsers: React.FC = () => {
                                     onBlur={handleBlur}
                                 />
                                 <Label htmlFor="email" isActive={activeField === "email"}>
-                                    Почта
+                                    Email
                                 </Label>
                             </InputContainer>
                             {values.personType === 'Legal' &&
@@ -356,7 +356,7 @@ export const FormUsers: React.FC = () => {
                                         onChange={handleChange}
 
                                     />
-                                    100 BYN discount
+                                    100 USD discount
                                 </CheckboxLabelGlobalForm>
                                 <CheckboxLabelGlobalForm checked={values.bonus2}>
                                     <CheckboxGlobalForm

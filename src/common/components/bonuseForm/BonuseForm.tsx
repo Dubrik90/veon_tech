@@ -151,7 +151,7 @@ export const BonuseForm: React.FC = () => {
                                     onBlur={handleBlur}
                                 />
                                 <Label htmlFor="firstName" isActive={activeField === "firstName"}>
-                                    Имя
+                                    Name
                                 </Label>
                             </InputContainer>
                             {/*lastName*/}
@@ -164,7 +164,7 @@ export const BonuseForm: React.FC = () => {
                                     onBlur={handleBlur}
                                 />
                                 <Label htmlFor="lastName" isActive={activeField === "lastName"}>
-                                    Фамилия
+                                    Surname
                                 </Label>
                             </InputContainer>
                             {/*phone*/}
@@ -177,7 +177,7 @@ export const BonuseForm: React.FC = () => {
                                     onBlur={handleBlur}
                                 />
                                 <Label htmlFor="phone" isActive={activeField === "phone"}>
-                                    Телефон
+                                    Phone
                                 </Label>
                             </InputContainer>
                             {/*email*/}
@@ -190,7 +190,7 @@ export const BonuseForm: React.FC = () => {
                                     onBlur={handleBlur}
                                 />
                                 <Label htmlFor="email" isActive={activeField === "email"}>
-                                    Почта
+                                    Email
                                 </Label>
                             </InputContainer>
                             {values.personType === 'Legal' &&
@@ -234,7 +234,7 @@ export const BonuseForm: React.FC = () => {
                                         checked={values.bonus1}
                                         onChange={handleChange}
                                     />
-                                    100 BYN discount
+                                    100 USD discount
                                 </CheckboxLabel>
                                 <p>When signing the contract within 3 days after receiving the commercial offer</p>
                                 <CheckboxLabel checked={values.bonus2}>
