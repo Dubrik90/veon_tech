@@ -58,25 +58,24 @@ export const Services = () => {
     const cardArray1: CardWorkUsType[] = [
         {
             img: Pencil1,
-            title: 'ПРОЕКТИРОВАНИЕ ИНТЕРФЕЙСОВ',
-            text: 'Делаем страницы удобными и понятными, подавая информацию о ваших товарах и услугах в максимально эффективном виде. Простота и удобство взаимодействия пользователя с сайтом – залог того, что он не закроет вкладку, отчаявшись найти нужную ему информацию в “простыне” плохо отформатированного текста и не обозначенных элементов навигации.'
+            title: 'INTERFACE DESIGN',
+            text: 'We make web pages user-friendly and understandable by presenting information about your products and services in the most effective way. Simplicity and ease of interaction between users and the website are crucial to ensure that they don\'t close the tab out of frustration while trying to find the information they need in a poorly formatted text or unclear navigation elements.'
         },
         {
             img: Creative2,
-            title: 'АДАПТИВНАЯ ВЁРСТКА',
-            text: 'Посетителям вашего сайта не придётся “подсовывать” мобильную версию сайта, опасаясь громоздкости полноэкранных страниц. Работа с медиазапросами позволяет одинаково хорошо отображаются всему тексту, изображениям и элементам интерфейса как на компьютере или ноутбуке, так и на планшете или телефоне, независимо от разрешения и диагонали экрана устройства.'
+            title: 'RESPONSIVE WEB DESIGN',
+            text: 'Visitors to your website won\'t have to "squeeze in" a mobile version of the site, fearing the clumsiness of full-screen pages. Working with media queries allows text, images, and interface elements to be displayed equally well on computers, laptops, tablets, and phones, regardless of the device\'s screen resolution and size.'
         },
         {
             img: Proto3,
-            title: 'ПРОГРАММИРОВАНИЕ И ИНТЕГРАЦИЯ',
-            text: 'Калькуляторы стоимости и фильтры по множественным параметрам дают посетителям сайта именно то, чего они ожидают – моментальное решение задач выбора. А интеграция платёжных систем, API сервисов и сайта несут за собой удобство расчётов и логистическую разгрузку. Программные решения позволяют делегировать “роботам” множество задач, тем самым разгрузить ваш персонал, позволяя сконцентрироваться на рабочем процессе.'
+            title: 'PROGRAMMING AND INTEGRATION',
+            text: 'Cost calculators and filters with multiple parameters provide website visitors with exactly what they expect - instant decision-making solutions. Integrating payment systems, service APIs, and the website itself brings convenience in terms of calculations and logistical ease. Software solutions enable the delegation of numerous tasks to "robots," thereby relieving your staff and allowing them to focus on the work process.'
         },
         {
             img: Proto3,
-            title: 'Поисковая оптимизация',
-            text: 'Для достижения лидирующих позиций Вашего сайта в органической выдаче таких поисковых систем как Яндекс и Google уже давно недостаточно закупить тонну ссылок и радоваться топовым позициям. Сейчас очень важно качество самого сайта, его правильная оптимизация под требования и условия поисковиков, а так же качество и тематика ссылающихся на него сайтов.'
+            title: 'SEARCH ENGINE OPTIMIZATION',
+            text: 'To achieve leading positions for your website in the organic search results of search engines like Yandex and Google, it\'s no longer enough to buy a ton of links and rejoice in top positions. Nowadays, the quality of the website itself, its proper optimization to meet the requirements and conditions of search engines, as well as the quality and relevance of the sites linking to it, are essential factors for success.'
         },
-
     ]
 
     return (
@@ -90,7 +89,7 @@ export const Services = () => {
                     />
                     <ErrorDevs/>
                     <WorkUs cardArray={cardArray1}
-                            title={'Почему работать с нами удобно и выгодно?'}
+                            title={'Why is it convenient and beneficial to work with us?'}
                     />
                     <Benefit/>
                     <ContactUsServise/>
