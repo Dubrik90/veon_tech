@@ -58,7 +58,7 @@ export const DiscussProject =styled.div`
 `
 export const Title =styled.h3`
   //font-size: calc(33px + (110 - 33) * ((100vw - 320px) / (1920 - 320)));
-  font-size: 100px;
+  font-size: 70px;
   letter-spacing: -.01em;
   line-height: 1.4;
   transition: color 0.5s ease;
@@ -66,20 +66,8 @@ export const Title =styled.h3`
   font-family: 'Inter';
   font-weight: 800;
 
-  @media (max-width: 1240px) {
-    font-size: 95px;
-  }
-  @media (max-width: 1190px) {
-    font-size: 80px;
-  }
-  @media (max-width: 1008px) {
-    font-size: 70px;
-  }
-  @media (max-width: 896px) {
-    font-size: 50px;
-  }
-  @media (max-width: 622px) {
-    font-size: 30px;
+  @media (max-width: 1920px) {
+    font-size: calc(30px + (70 - 30) * ((100vw - 320px) / (1920 - 320)));
   }
 `
 export const Button =styled.div`
@@ -92,12 +80,7 @@ export const Button =styled.div`
   z-index: 2;
   transition: all .5s ease;
   color: var(--colors-text-dark);
-  //transform: rotate(-45deg);
-
-  :hover {
-   // transform: rotate(0);
-  }
-
+  
   span:nth-child(1) {
     display: inline-block;
     position: absolute;

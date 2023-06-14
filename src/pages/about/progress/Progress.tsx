@@ -33,7 +33,7 @@ export const Progress = () => {
                         </Li>
                         <Li className={'animate'}>
                             <SubTitle>+80</SubTitle>
-                            <Text>блестательно реализованных проектов</Text>
+                            <Text>блистательно реализованных проектов</Text>
                         </Li>
                         <Li className={'animate'}>
                             <SubTitle>+50</SubTitle>

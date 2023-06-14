@@ -48,7 +48,7 @@ export const Methodology = () => {
                             <TitleMethodology>Scrum</TitleMethodology>
                             <Ul>
                                 <Li><img src={Star} alt=""/> <span>дорожная карта</span> </Li>
-                                <Li><img src={Star} alt=""/> <span>ежемесячные тз и запуск</span> </Li>
+                                <Li><img src={Star} alt=""/> <span>оплата по факту затраченных часов</span> </Li>
                                 <Li><img src={Star} alt=""/> <span>гибкая цена +/-</span> </Li>
                             </Ul>
                             <Button onClick={onClickScrumModalHandler}>Подробнее</Button>
