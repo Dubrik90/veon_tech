@@ -39,7 +39,7 @@ export const Help = () => {
                     </ButtonBlock>
                     <ContactBlock>
                         <PhoneLink href="tel:+79955775163">+7(995)577-51-63</PhoneLink>
-                        <Email>sales@veon-tech.ru</Email>
+                        <Email>clients@veon-tech.ru</Email>
                     </ContactBlock>
                 </HelpContent>
             </Container>
