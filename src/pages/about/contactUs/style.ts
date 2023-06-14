@@ -57,7 +57,6 @@ export const DiscussProject =styled.div`
   
 `
 export const Title =styled.h3`
-  //font-size: calc(33px + (110 - 33) * ((100vw - 320px) / (1920 - 320)));
   font-size: 70px;
   letter-spacing: -.01em;
   line-height: 1.4;
