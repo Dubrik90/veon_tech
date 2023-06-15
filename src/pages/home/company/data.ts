@@ -9,6 +9,8 @@ import sodox2 from "./assets/sodox2.png";
 import sodoxWite from "./assets/sodoxWite.png";
 import sodoxWite2 from "./assets/sodoxWite.png";
 import noomblistingWite from "./assets/noomblistingWite.png";
+import kargo from "./assets/kargo.jpg";
+import nuahule from "./assets/nuahule.png";
 
 export type ClientsType = {
     img: string,
@@ -16,6 +18,14 @@ export type ClientsType = {
 }
 
 export const clients: ClientsType[] = [
+    // {
+    //     img: kargo,
+    //     imgWhite: kargo
+    // },
+    // {
+    //     img: nuahule,
+    //     imgWhite: nuahule
+    // },
     {
         img: rent,
         imgWhite: rentWite

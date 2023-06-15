@@ -23,7 +23,8 @@ import {useScrollBlock} from "../../hook/use-scroll-block";
 import emailjs from "emailjs-com";
 
 type FormikErrorType = {
-    name?: string,
+    formName?: string,
+    firstName?: string,
     phone?: string
 }
 
@@ -39,15 +40,16 @@ export const ConsultantModal = () => {
 
     const formik = useFormik({
         initialValues: {
-            name: '',
+            formName: "Форма для консульнации",
+            firstName: '',
             phone: '',
         },
 
         validate: (values) => {
             const errors: FormikErrorType = {}
 
-            if (!values.name) {
-                errors.name = 'Поле не может быть пустым'
+            if (!values.firstName) {
+                errors.firstName = 'Поле не может быть пустым'
             }
 
             if (!values.phone) {
@@ -75,11 +77,11 @@ export const ConsultantModal = () => {
                         <Label>
                             <CustomInput type='text'
                                          placeholder='Ваше имя'
-                                         {...formik.getFieldProps('name')}
+                                         {...formik.getFieldProps('firstName')}
                                          onChange={formik.handleChange}
                             />
-                            {formik.touched.name && formik.errors.name &&
-                                <Errors>{formik.errors.name}</Errors>}
+                            {formik.touched.firstName && formik.errors.firstName &&
+                                <Errors>{formik.errors.firstName}</Errors>}
                         </Label>
                         <Label>
                             <PhoneInput

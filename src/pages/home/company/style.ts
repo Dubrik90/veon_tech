@@ -64,7 +64,7 @@ type ImgWrapProps = {
 
 export const ImgWrap = styled.div<ImgWrapProps>`
   background-image: url(${props => props.img});
-  background-position: 0 0;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: contain;
   min-width: 100px;

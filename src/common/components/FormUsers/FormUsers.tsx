@@ -43,6 +43,7 @@ import emailjs from 'emailjs-com';
 
 
 interface MyFormValues {
+    formName: string
     firstName: string;
     lastName: string;
     phone: string;
@@ -132,6 +133,7 @@ export const FormUsers: React.FC = () => {
     return (
         <Formik<MyFormValues>
             initialValues={{
+                formName: "Форма с главной страницы",
                 firstName: "",
                 lastName: "",
                 phone: "",

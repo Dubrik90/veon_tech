@@ -41,6 +41,7 @@ import {useScrollBlock} from "../../hook/use-scroll-block";
 import emailjs from "emailjs-com";
 
 interface MyFormValues {
+    formName: string,
     firstName: string;
     lastName: string;
     phone: string;
@@ -99,6 +100,7 @@ export const BonuseForm: React.FC = () => {
     return (
         <Formik<MyFormValues>
             initialValues={{
+                formName: "Форма бонусов",
                 firstName: "",
                 lastName: "",
                 phone: "",

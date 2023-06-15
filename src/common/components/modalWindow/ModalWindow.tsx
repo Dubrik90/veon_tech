@@ -21,6 +21,7 @@ import emailjs from "emailjs-com";
 
 
 interface MyFormValues {
+    formName?: string,
     firstName: string;
     phone: string;
     myFile: File | null;
@@ -54,6 +55,7 @@ export const ModalWindoww = () => {
     return (
         <Formik<MyFormValues>
             initialValues={{
+                formName: "Форма для вакансии",
                 firstName: "",
                 phone: "",
                 myFile: null,
