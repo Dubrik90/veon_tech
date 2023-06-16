@@ -90,12 +90,42 @@ export const BonuseForm: React.FC = () => {
     ) => {
         setSubmitting(true);
         closeFormModal();
-        emailjs.send('service_jwks1lh', 'template_m2zj1z6', values, 'iy68w7qmdmjCwvP5W')
-            .then((result: any) => {
-            }, (error: any) => {
-                console.log(error.text);
-            });
+        const formElement = document.querySelector("form")
+        if (formElement instanceof HTMLFormElement) {
+            fetch("../back/mail.php", {
+                method: "POST",
+                body: new FormData(formElement),
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    // Обработка ответа от сервера
+                    console.log(data)
+                })
+                .catch((error) => {
+                    // Обработка ошибки
+                    console.error(error)
+                })
+        }
     };
+
+    // onSubmit: (values) => {
+    //     const formElement = document.querySelector("form")
+    //     if (formElement instanceof HTMLFormElement) {
+    //         fetch("/jetOpticVite/back/mail.php", {
+    //             method: "POST",
+    //             body: new FormData(formElement),
+    //         })
+    //             .then((response) => response.json())
+    //             .then((data) => {
+    //                 // Обработка ответа от сервера
+    //                 console.log(data)
+    //             })
+    //             .catch((error) => {
+    //                 // Обработка ошибки
+    //                 console.error(error)
+    //             })
+    //     }
+    // },
 
     return (
         <Formik<MyFormValues>

@@ -122,12 +122,22 @@ export const FormUsers: React.FC = () => {
         setSubmitting(true);
         // e.preventDefault();
         closeFormModal();
-        emailjs.send('service_jwks1lh', 'template_m2zj1z6', values, 'iy68w7qmdmjCwvP5W')
-            .then((result: any) => {
-                console.log(result)
-            }, (error: any) => {
-                console.log(error.text);
-            });
+        const formElement = document.querySelector("form")
+        if (formElement instanceof HTMLFormElement) {
+            fetch("../back/mail.php", {
+                method: "POST",
+                body: new FormData(formElement),
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    // Обработка ответа от сервера
+                    console.log(data)
+                })
+                .catch((error) => {
+                    // Обработка ошибки
+                    console.error(error)
+                })
+        }
     };
 
     return (
