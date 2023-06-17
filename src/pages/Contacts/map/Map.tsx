@@ -26,9 +26,10 @@ import {ROUTS} from "../../../common/constans/routs";
 import {Link} from "react-router-dom";
 
 type FormikErrorType = {
-    name?: string,
+    formName?: string,
+    firstName?: string,
     phone?: string,
-    text?: string
+    comment?: string
 }
 
 export const MapComponent = () => {
@@ -38,16 +39,17 @@ export const MapComponent = () => {
 
     const formik = useFormik({
         initialValues: {
-            name: '',
+            formName: 'Форма со страницы контактов',
+            firstName: '',
             phone: '',
-            text: ''
+            comment: ''
         },
 
         validate: (values) => {
             const errors: FormikErrorType = {}
 
-            if (!values.name) {
-                errors.name = 'Поле не может быть пустым'
+            if (!values.firstName) {
+                errors.firstName = 'Поле не может быть пустым'
             }
 
             if (!values.phone) {
@@ -57,6 +59,28 @@ export const MapComponent = () => {
             return errors
         },
         onSubmit: values => {
+            const formElement = document.querySelector("#contactForm");
+            if (formElement instanceof HTMLFormElement) {
+                const formData = new FormData(formElement);
+
+                // Добавление значения budget в FormData
+                formData.append("formName", values.formName);
+
+                fetch("../back/mailContact.php", {
+                    method: "POST",
+                    body: formData,
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        // Обработка ответа от сервера
+                        console.log(data);
+                    })
+                    .catch((error) => {
+                        // Обработка ошибки
+                        console.error(error);
+                    });
+            }
+
         }
     })
 
@@ -79,16 +103,16 @@ export const MapComponent = () => {
                         <SubTitle>
                             Пожалуйста оставьте Ваши имя и телефон, мы будем счастливы помочь Вам.
                         </SubTitle>
-                        <FormWrapper onSubmit={formik.handleSubmit}>
+                        <FormWrapper id="contactForm" onSubmit={formik.handleSubmit} method={"POST"} encType="multipart/form-data">
                             <InputBlock>
                                 <Label>
                                     <CustomInput type='text'
                                                  placeholder='Ваше имя'
-                                                 {...formik.getFieldProps('name')}
+                                                 {...formik.getFieldProps('firstName')}
                                                  onChange={formik.handleChange}
                                     />
-                                    {formik.touched.name && formik.errors.name &&
-                                        <Errors>{formik.errors.name}</Errors>}
+                                    {formik.touched.firstName && formik.errors.firstName &&
+                                        <Errors>{formik.errors.firstName}</Errors>}
                                 </Label>
                                 <Label>
                                     <PhoneInput
@@ -105,7 +129,7 @@ export const MapComponent = () => {
                                 <Label>
                                     <CustomTextArea
                                         placeholder='Сообщение'
-                                        {...formik.getFieldProps('text')}
+                                        {...formik.getFieldProps('comment')}
                                         onChange={formik.handleChange}
                                     />
                                     {/*{formik.touched.name && formik.errors.name &&*/}
