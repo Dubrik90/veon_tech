@@ -21,7 +21,7 @@ import emailjs from "emailjs-com";
 
 
 interface MyFormValues {
-    formName?: string,
+    formName: string,
     firstName: string;
     phone: string;
     myFile: File | null;
@@ -44,21 +44,27 @@ export const ModalWindoww = () => {
     ) => {
         setSubmitting(true);
         onClickClouseModalHandler()
-        const formElement = document.querySelector("form")
+
+        const formElement = document.querySelector("#jobForm");
         if (formElement instanceof HTMLFormElement) {
-            fetch("../back/mail.php", {
+            const formData = new FormData(formElement);
+
+            // Добавление значения budget в FormData
+            formData.append("formName", values.formName);
+
+            fetch("../back/mailJob.php", {
                 method: "POST",
-                body: new FormData(formElement),
+                body: formData,
             })
                 .then((response) => response.json())
                 .then((data) => {
                     // Обработка ответа от сервера
-                    console.log(data)
+                    console.log(data);
                 })
                 .catch((error) => {
                     // Обработка ошибки
-                    console.error(error)
-                })
+                    console.error(error);
+                });
         }
     };
 
@@ -78,7 +84,7 @@ export const ModalWindoww = () => {
                     <RegisterWrapper>
                         <Title>Заявка на обратный звонок</Title>
                         <Clouse onClick={onClickClouseModalHandler}/>
-                        <Form onSubmit={handleSubmit}>
+                        <Form id={"jobForm"} onSubmit={handleSubmit} method={"POST"} encType="multipart/form-data">
                             <InputBlock>
                                 <Label>
                                     <CustomInput type="text"

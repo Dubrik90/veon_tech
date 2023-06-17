@@ -59,21 +59,26 @@ export const ConsultantModal = () => {
         },
         onSubmit: values => {
             onClickClouseModalHandler()
-            const formElement = document.querySelector("form")
+            const formElement = document.querySelector("#consultantForm")
             if (formElement instanceof HTMLFormElement) {
-                fetch("../back/mail.php", {
+                const formData = new FormData(formElement);
+
+                // Добавление значения budget в FormData
+                formData.append("formName", values.formName);
+
+                fetch("../back/mailConsultant.php", {
                     method: "POST",
-                    body: new FormData(formElement),
+                    body: formData,
                 })
                     .then((response) => response.json())
                     .then((data) => {
                         // Обработка ответа от сервера
-                        console.log(data)
+                        console.log(data);
                     })
                     .catch((error) => {
                         // Обработка ошибки
-                        console.error(error)
-                    })
+                        console.error(error);
+                    });
             }
         }
     })
@@ -83,7 +88,7 @@ export const ConsultantModal = () => {
             <RegisterWrapper>
                 <Title>Заявка на обратный звонок</Title>
                 <Clouse onClick={onClickClouseModalHandler}/>
-                <FormWrapper onSubmit={formik.handleSubmit}>
+                <FormWrapper id={"consultantForm"} onSubmit={formik.handleSubmit} method={"POST"} encType="multipart/form-data">
                     <InputBlock>
                         <Label>
                             <CustomInput type='text'

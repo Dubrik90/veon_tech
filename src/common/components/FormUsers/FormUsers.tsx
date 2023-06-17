@@ -116,27 +116,35 @@ export const FormUsers: React.FC = () => {
     };
 
     const handleSubmit = (
-        values: any,
-        {setSubmitting}: FormikHelpers<MyFormValues>
+        values: MyFormValues,
+        { setSubmitting }: FormikHelpers<MyFormValues>
     ) => {
         setSubmitting(true);
-        // e.preventDefault();
         closeFormModal();
-        const formElement = document.querySelector("form")
+        console.log(values);
+
+        const formElement = document.querySelector("form");
         if (formElement instanceof HTMLFormElement) {
+            const formData = new FormData(formElement);
+
+            // Добавление значения budget в FormData
+            formData.append("budget", values.budget);
+            formData.append("service", values.service);
+            formData.append("formName", values.formName);
+
             fetch("../back/mail.php", {
                 method: "POST",
-                body: new FormData(formElement),
+                body: formData,
             })
                 .then((response) => response.json())
                 .then((data) => {
                     // Обработка ответа от сервера
-                    console.log(data)
+                    console.log(data);
                 })
                 .catch((error) => {
                     // Обработка ошибки
-                    console.error(error)
-                })
+                    console.error(error);
+                });
         }
     };
 
@@ -174,7 +182,7 @@ export const FormUsers: React.FC = () => {
                                 <div></div>
                             </CloseModal>
                         </DynamicContactHead>
-                        <Form onSubmit={handleSubmit}>
+                        <Form onSubmit={handleSubmit} method={"POST"}>
                             <StyledRadioContainer>
                                 <StyledRadioLabel checked={values.personType === "Физическое"}>
                                     <Radio type="radio" name="personType" value="Физическое"/>

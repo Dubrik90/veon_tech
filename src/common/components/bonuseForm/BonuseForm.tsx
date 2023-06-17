@@ -85,26 +85,33 @@ export const BonuseForm: React.FC = () => {
     };
 
     const handleSubmit = (
-        values: any,
-        {setSubmitting}: FormikHelpers<MyFormValues>
+        values: MyFormValues,
+        { setSubmitting }: FormikHelpers<MyFormValues>
     ) => {
         setSubmitting(true);
         closeFormModal();
-        const formElement = document.querySelector("form")
+        console.log(values);
+
+        const formElement = document.querySelector("#bonusForm");
         if (formElement instanceof HTMLFormElement) {
-            fetch("../back/mail.php", {
+            const formData = new FormData(formElement);
+
+            // Добавление значения budget в FormData
+            formData.append("formName", values.formName);
+
+            fetch("../back/mailBonus.php", {
                 method: "POST",
-                body: new FormData(formElement),
+                body: formData,
             })
                 .then((response) => response.json())
                 .then((data) => {
                     // Обработка ответа от сервера
-                    console.log(data)
+                    console.log(data);
                 })
                 .catch((error) => {
                     // Обработка ошибки
-                    console.error(error)
-                })
+                    console.error(error);
+                });
         }
     };
 
@@ -162,7 +169,7 @@ export const BonuseForm: React.FC = () => {
                                 <div></div>
                             </CloseModal>
                         </DynamicContactHead>
-                        <Form onSubmit={handleSubmit}>
+                        <Form id={'bonusForm'} onSubmit={handleSubmit} method={"POST"} encType="multipart/form-data">
                             <StyledRadioContainer>
                                 <StyledRadioLabel checked={values.personType === "Физическое"}>
                                     <Radio type="radio" name="personType" value="Физическое"/>
