@@ -117,7 +117,7 @@ export const FormUsers: React.FC = () => {
 
     const handleSubmit = (
         values: MyFormValues,
-        { setSubmitting }: FormikHelpers<MyFormValues>
+        {setSubmitting}: FormikHelpers<MyFormValues>
     ) => {
         setSubmitting(true);
         closeFormModal();
@@ -135,9 +135,6 @@ export const FormUsers: React.FC = () => {
             fetch("../back/mail.php", {
                 method: "POST",
                 body: formData,
-                headers: {
-                    "Content-type": "multipart/form-data",
-                },
             })
                 .then((response) => response.json())
                 .then((data) => {
@@ -442,7 +439,7 @@ export const FormUsers: React.FC = () => {
                                             name="myFile"
                                             type="file"
                                             onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-                                                setFieldValue("myFile", event.target.files?.[0] || null);
+                                                setFieldValue("myFile", event.currentTarget.files?.[0] || null);
                                             }}
                                             value={undefined}/>
                                     </UploadItem>
