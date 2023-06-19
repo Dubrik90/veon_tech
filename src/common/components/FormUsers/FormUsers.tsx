@@ -39,7 +39,6 @@ import {useAppDispatch, useAppSelector} from "../../hook";
 import {ROUTS} from "../../constans/routs";
 import {Link, useLocation} from "react-router-dom";
 import {useScrollBlock} from "../../hook/use-scroll-block";
-import emailjs from 'emailjs-com';
 
 
 interface MyFormValues {
@@ -123,7 +122,7 @@ export const FormUsers: React.FC = () => {
         closeFormModal();
         console.log(values);
 
-        const formElement = document.querySelector("form");
+        const formElement = document.querySelector("#globalForm");
         if (formElement instanceof HTMLFormElement) {
             const formData = new FormData(formElement);
 
@@ -182,7 +181,7 @@ export const FormUsers: React.FC = () => {
                                 <div></div>
                             </CloseModal>
                         </DynamicContactHead>
-                        <Form onSubmit={handleSubmit} method={"POST"}>
+                        <Form onSubmit={handleSubmit} method={"POST"} id={"globalForm"} encType="multipart/form-data">
                             <StyledRadioContainer>
                                 <StyledRadioLabel checked={values.personType === "Физическое"}>
                                     <Radio type="radio" name="personType" value="Физическое"/>
