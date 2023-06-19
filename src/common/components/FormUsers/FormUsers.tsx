@@ -67,7 +67,6 @@ export const FormUsers: React.FC = () => {
     const dispatch = useAppDispatch()
     const location = useLocation();
     const currentPath = location.pathname
-    const form = useRef<FormEvent<HTMLFormElement> | ''>('');
 
     const [budget, setBudget] = useState('')
     const [helpFizUser, setHelpFizUser] = useState('')
