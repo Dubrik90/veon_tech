@@ -4,10 +4,11 @@ export const CompanyWrapper = styled.div`
   background-color: var(--colors-bg-green-dark);
   padding-top: calc(50px + (120 - 50) * ((100vw - 320px) / (1920 - 320)));
   padding-bottom: calc(20px + (180 - 20) * ((100vw - 320px) / (1920 - 320)));
-  
+
   @media (max-width: 768px) {
-   // padding: 25px 0;
+    // padding: 25px 0;
   }
+
   .overlay {
     :before, :after {
       opacity: var(--opacity);
@@ -27,12 +28,12 @@ export const Title = styled.h3`
   border-bottom: 2px solid #6EEC4E;
   padding-bottom: 40px;
   margin: 0 0 25px;
-  
+
   @media (max-width: 768px) {
     padding-bottom: 25px;
     margin: 0 -15px 35px -15px;
   }
-  
+
   //@media (max-width: 768px) {
   //  text-align: center;
   //  font-size: 28px;
@@ -52,10 +53,21 @@ export const CompanyBlock = styled.div`
   align-items: center;
   justify-content: center;
   padding: 60px 0;
+ 
   //margin-bottom: 10px;
   @media (max-width: 768px) {
     padding: 30px 0 20px 0 ;
-    
+
+  }
+  .img_block {
+    margin-right: 100px;
+  }
+
+  .img_block img {
+    max-width: 285px;
+    height: 150px;
+    object-fit: contain;
+
   }
 `
 type ImgWrapProps = {
@@ -64,21 +76,21 @@ type ImgWrapProps = {
 
 export const ImgWrap = styled.div<ImgWrapProps>`
   background-image: url(${props => props.img});
-  background-position: 0 0;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: contain;
   min-width: 100px;
-  width: 300px;
-  max-width: 300px;
-  height: 70px;
-  margin: 0 50px;
+  width: 200px;
+  // max-width: 300px;
+  height: 90px;
+  //margin: 0 50px;
   @media (max-width: 768px) {
     height: 60px;
     margin: 0 25px;
   }
-  
-  
- `
+
+
+`
 export const Laer = styled.div`
   // background-color: var(--colors-bg-green-dark);
   height: 20px;

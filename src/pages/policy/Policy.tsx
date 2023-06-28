@@ -1,5 +1,5 @@
 import React from 'react';
-import {Content, PolicyWrapper, Title, Text, Ol, Li} from "./style";
+import {Content, PolicyWrapper, Text, Title} from "./style";
 import {Container} from "../../common/style/Container";
 import {Link} from 'react-router-dom';
 import {ROUTS} from "../../common/constans/routs";

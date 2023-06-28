@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {HeaderBlock, HeaderContent, HeaderText, ServiceHeaderWrapper, Title, Text, Button, HeaderImage, Img} from './style';
+import {HeaderBlock, HeaderContent, ServiceHeaderWrapper, Text, Title} from './style';
 import {Container} from "../../../common/style/Container";
 import {useAppDispatch, useAppSelector} from "../../../common/hook";
 import {setIsOpenFormAC} from "../../../app/app-reduser";
