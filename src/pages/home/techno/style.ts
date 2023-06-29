@@ -30,20 +30,8 @@ export const TechnoBlock = styled.div`
     fill: var(--colors-text-dark);
   }
 
-  //max-width: 464px svg {
-  //
-  //  fill: #20101e;
-  //
-  //  transition: fill var(--transition) line {
-  //    stroke: #20101e;
-  //    transition: stroke var(--transition)
-  //  }
-  //
-  //} 
-
   figure {
     position: absolute;
-    //  transition: filter var(--transition);
     z-index: 2;
     background: var(--colors-bg);
     border: 3px solid #f6f0ed;
@@ -99,7 +87,7 @@ export const TechnoBlock = styled.div`
     top: 45.311827957%;
     width: 32.4655172414%;
     height: 40%;
-    z-index: 2;
+    z-index: 5;
     display: flex;
     align-items: center;
     justify-content: center;
