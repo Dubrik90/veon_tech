@@ -19,8 +19,6 @@ export const SimilarSlider: FC<SliderPortfolioProps> = ({similarCasesArray}) => 
             <Swiper
                 effect={'coverflow'}
                 grabCursor={true}
-                // centeredSlides={true}
-                // loop={true}
                 slidesPerView={'auto'}
                 coverflowEffect={{
                     rotate: 0,

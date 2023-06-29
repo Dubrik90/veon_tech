@@ -20,7 +20,6 @@ import '../../style/PhoneInput.css';
 import {Link} from "react-router-dom";
 import {ROUTS} from "../../constans/routs";
 import {useScrollBlock} from "../../hook/use-scroll-block";
-import emailjs from "emailjs-com";
 
 type FormikErrorType = {
     formName?: string,
@@ -88,7 +87,8 @@ export const ConsultantModal = () => {
             <RegisterWrapper>
                 <Title>Заявка на обратный звонок</Title>
                 <Clouse onClick={onClickClouseModalHandler}/>
-                <FormWrapper id={"consultantForm"} onSubmit={formik.handleSubmit} method={"POST"} encType="multipart/form-data">
+                <FormWrapper id={"consultantForm"} onSubmit={formik.handleSubmit} method={"POST"}
+                             encType="multipart/form-data">
                     <InputBlock>
                         <Label>
                             <CustomInput type='text'
@@ -114,7 +114,8 @@ export const ConsultantModal = () => {
                     </InputBlock>
                     <SubText>
                         Нажимая на кнопку «Отправить», вы даете свое согласие на обработку персональных данных в
-                        соответствии с целями указанными в <Link onClick={onClickClouseModalHandler} to={ROUTS.POLICY}>Политике обработки персональных данных</Link>
+                        соответствии с целями указанными в <Link onClick={onClickClouseModalHandler} to={ROUTS.POLICY}>Политике
+                        обработки персональных данных</Link>
                     </SubText>
                     <Button type='submit'>Отправить</Button>
                 </FormWrapper>

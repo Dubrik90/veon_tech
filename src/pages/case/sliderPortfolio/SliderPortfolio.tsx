@@ -17,7 +17,6 @@ export const SliderPortfolio: FC<SliderPortfolioProps> = ({activeCaseImg}) => {
             <Swiper
                 effect={'coverflow'}
                 grabCursor={true}
-                // centeredSlides={true}
                 slidesPerView={'auto'}
                 coverflowEffect={{
                     rotate: 0,

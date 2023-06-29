@@ -36,7 +36,6 @@ export const HeaderCaseWrapper = styled.div`
 export const CaseHeaderBlockColumn = styled.div`
   ${flexColumn()};
   row-gap: 10px;
- // flex-wrap: wrap;
   @media (max-width: 640px) {
     flex-direction: row;
     column-gap: 30px;

@@ -45,32 +45,16 @@ export const TitleBlock = styled.div`
 `
 export const Title = styled(TitleH2)`
   color: var(--colors-text-dark);
-  font-size: calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320)));
-  
-
-  //@media (max-width: 1210px) {
-  //  font-size: 30px;
-  //}
-  //@media (max-width: 834px) {
-  //  font-size: 18px;
-  //}
-  //@media (max-width: 425px) {
-  //  font-size: 14px;
-  //}
+  font-size: 50px;
+  @media (max-width: 1210px) {
+    font-size: calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320)));
+  }
 `
 export const Text = styled(TextRegular)`
-  font-size: calc(18px + (28 - 18) * ((100vw - 320px) / (1920 - 320)));
-  
-  
-  //@media (max-width: 1210px) {
-  //  font-size: 16px;
-  //}
-  //@media (max-width: 834px) {
-  //  font-size: 14px;
-  //}
-  //@media (max-width: 425px) {
-  //  font-size: 12px;
-  //}
+  font-size: 28px;
+  @media (max-width: 1210px) {
+    font-size: calc(18px + (28 - 18) * ((100vw - 320px) / (1920 - 320)));
+  }
 `
 export const ButtonBlock = styled.div`
   ${flexColumn()};
@@ -78,16 +62,9 @@ export const ButtonBlock = styled.div`
   row-gap: 10px;
 `
 export const ImageWrapper = styled.div`
-//  max-width: 260px;
-  @media (max-width: 425px) {
-  //  max-width: 130px;
-  }
-
 `
 export const Img = styled.img`
-  //width: 200px;
   object-fit: cover;
-
 `
 export const Button = styled.button`
   position: relative;
@@ -126,8 +103,6 @@ export const Button = styled.button`
   }
   @media (max-width: 425px) {
     width: 100%;
-   // font-size: 11px;
-   // padding: 5px;
   }
 
   :hover {
@@ -168,7 +143,7 @@ export const PhoneLink = styled.a`
   :after{
     content: '';
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     left: 0;
     width: 100%;
     height: 2px;
@@ -179,7 +154,6 @@ export const PhoneLink = styled.a`
     transform: translateX(-175%);
   }
   
-  
   &:hover {
     :after{
       left: 0;
@@ -187,13 +161,11 @@ export const PhoneLink = styled.a`
       visibility: visible;
       transform: translateX(0);
     }
-   
   }
   
   @media (max-width: 768px) {
     font-size: 16px;
   }
-
 `
 export const Email = styled.p`
   font-weight: var(--fw-medium);

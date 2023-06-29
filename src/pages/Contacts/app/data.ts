@@ -13,7 +13,7 @@ export const SOCIAL_LINKS = [
         icon: MailIcon,
         title: 'Электронная почта',
         text: 'Заявки на электронную почту мы принимаем ежедневно в режиме 24/7. Будьте уверены, мы обязательно с вами свяжемся!',
-        link: 'clients@veon-tech.ru',
+        link: 'sales@veon-tech.ru',
     },
     {
         icon: LocationIcon,

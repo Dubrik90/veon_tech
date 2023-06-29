@@ -1,6 +1,3 @@
-import ImgWebDev from "../assets/wedDevImages/logo.png";
-
-
 
 export const mistakeData: any = [
     {

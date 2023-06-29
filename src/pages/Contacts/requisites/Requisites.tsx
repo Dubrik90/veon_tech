@@ -1,5 +1,5 @@
 import React from 'react';
-import {DocBlock, Img, ImgBlock, P, RequisitesBlock, Button, RequisitesContent, RequisitesWrapper, Title} from './style';
+import {DocBlock, Img, ImgBlock, P, RequisitesBlock, RequisitesContent, RequisitesWrapper, Title} from './style';
 import {Container} from "../../../common/style/Container";
 import PdfIcon from './assets/pdfIcon.png'
 import {DownloadButton} from "../../../common/components/downloadButton/DownloadButton";
@@ -21,16 +21,15 @@ export const Requisites = () => {
                         <P>BY05ALFA30122354480010270000 в RUB</P>
                         <P>в ЗАО 'Альфа-Банк'</P>
                         <P>БИК: ALFABY2X</P>
-                        <P>clients@veon-tech.ru</P>
+                        <P>sales@veon-tech.ru</P>
                     </RequisitesContent>
                     <DocBlock>
                         <ImgBlock>
-                            <Img loading= "lazy" src={PdfIcon} alt={'pdf files'}/>
+                            <Img loading="lazy" src={PdfIcon} alt={'pdf files'}/>
                         </ImgBlock>
                         <DownloadButton fileName={'details.pdf'} url="/files/details.pdf">
                             Скачаь
                         </DownloadButton>
-                        {/*<Button>Скачать</Button>*/}
                     </DocBlock>
                 </RequisitesBlock>
             </Container>

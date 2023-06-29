@@ -1,4 +1,4 @@
-import React, {FormEvent, useRef, useState} from "react";
+import React, {useState} from "react";
 import {Form, Formik, FormikHelpers} from "formik";
 import {
     BonuseFormWrapper,
@@ -35,7 +35,7 @@ import {
     UploadWrapper
 } from "../bonuseForm/style";
 import {setIsOpenFormAC} from "../../../app/app-reduser";
-import {useAppDispatch, useAppSelector} from "../../hook";
+import {useAppDispatch} from "../../hook";
 import {ROUTS} from "../../constans/routs";
 import {Link, useLocation} from "react-router-dom";
 import {useScrollBlock} from "../../hook/use-scroll-block";
@@ -73,10 +73,7 @@ export const FormUsers: React.FC = () => {
     const [activeField, setActiveField] = useState("");
     const [service, setService] = useState(true)
     const [helpCompany, setHelpCompany] = useState('')
-    const [bonuse, setBonuse] = useState('')
     const [blockScroll, allowScroll] = useScrollBlock();
-
-    const isOpenForm = useAppSelector(state => state.app.isOpenForm)
 
     const closeFormModal = () => {
         allowScroll()
@@ -119,7 +116,6 @@ export const FormUsers: React.FC = () => {
     ) => {
         setSubmitting(true);
         closeFormModal();
-        console.log(values);
 
         const formElement = document.querySelector("#globalForm");
         if (formElement instanceof HTMLFormElement) {

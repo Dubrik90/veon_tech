@@ -38,7 +38,6 @@ import {useAppDispatch} from "../../hook";
 import {ROUTS} from "../../constans/routs";
 import {Link} from "react-router-dom";
 import {useScrollBlock} from "../../hook/use-scroll-block";
-import emailjs from "emailjs-com";
 
 interface MyFormValues {
     formName: string,
@@ -65,12 +64,8 @@ interface MyFormValues {
 export const BonuseForm: React.FC = () => {
     const dispatch = useAppDispatch()
 
-    const [budget, setBudget] = useState('')
-    const [helpFizUser, setHelpFizUser] = useState('')
     const [activeField, setActiveField] = useState("");
     const [service, setService] = useState(true)
-    const [helpCompany, setHelpCompany] = useState('')
-    const [bonuse, setBonuse] = useState('')
     const [blockScroll, allowScroll] = useScrollBlock();
 
     const closeFormModal = () => {
@@ -114,25 +109,6 @@ export const BonuseForm: React.FC = () => {
                 });
         }
     };
-
-    // onSubmit: (values) => {
-    //     const formElement = document.querySelector("form")
-    //     if (formElement instanceof HTMLFormElement) {
-    //         fetch("/jetOpticVite/back/mail.php", {
-    //             method: "POST",
-    //             body: new FormData(formElement),
-    //         })
-    //             .then((response) => response.json())
-    //             .then((data) => {
-    //                 // Обработка ответа от сервера
-    //                 console.log(data)
-    //             })
-    //             .catch((error) => {
-    //                 // Обработка ошибки
-    //                 console.error(error)
-    //             })
-    //     }
-    // },
 
     return (
         <Formik<MyFormValues>

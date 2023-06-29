@@ -17,7 +17,6 @@ import {
 } from "../consultantModal/style";
 import {CustomInputFile, InputFileText} from "./style";
 import {useScrollBlock} from "../../hook/use-scroll-block";
-import emailjs from "emailjs-com";
 
 
 interface MyFormValues {

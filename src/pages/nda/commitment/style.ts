@@ -16,7 +16,6 @@ export const CommitmentBlock = styled.div`
   justify-content: space-between;
 
   @media (max-width: 768px) {
-   // border-bottom: 2px solid var(--colors-bg-green);
     padding-bottom: 20px;
     column-gap: 10px;
   }
@@ -43,20 +42,6 @@ export const Text = styled(TextRegular)`
   position: relative;
   padding-left: 30px;
   font-size: calc(20px + (28 - 20) * ((100vw - 320px) / (1920 - 320)));
-  //font-size: 21px;
-  //
-  //
-  //@media (max-width: 916px) {
-  //  font-size: 18px;
-  //  padding-left: 20px;
-  //}
-  //@media (max-width: 807px) {
-  // // padding-left: 0;
-  //  font-size: 18px;
-  //}
-  //@media (max-width: 560px) {
-  //  font-size: 14px;
-  //}
 
   :before {
     content: '';

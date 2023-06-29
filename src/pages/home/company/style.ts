@@ -5,9 +5,6 @@ export const CompanyWrapper = styled.div`
   padding-top: calc(50px + (120 - 50) * ((100vw - 320px) / (1920 - 320)));
   padding-bottom: calc(20px + (180 - 20) * ((100vw - 320px) / (1920 - 320)));
   
-  @media (max-width: 768px) {
-   // padding: 25px 0;
-  }
   .overlay {
     :before, :after {
       opacity: var(--opacity);
@@ -32,19 +29,6 @@ export const Title = styled.h3`
     padding-bottom: 25px;
     margin: 0 -15px 35px -15px;
   }
-  
-  //@media (max-width: 768px) {
-  //  text-align: center;
-  //  font-size: 28px;
-  //  line-height: 31px;
-  //  margin: -108px -15px 60px -15px;
-  //  color: #FFFFFF;
-  //  border-top: none;
-  //  border-bottom: 2px solid #6EEC4E;
-  //  padding-top: 0;
-  //  padding-bottom: 21px;
-  //}
-
 `
 export const CompanyBlock = styled.div`
   display: flex;
@@ -105,11 +89,8 @@ export const ImgWrap = styled.div<ImgWrapProps>`
     height: 60px;
     margin: 0 25px;
   }
-  
-  
  `
 export const Laer = styled.div`
-  // background-color: var(--colors-bg-green-dark);
   height: 20px;
   position: relative;
   padding-top: 10px;

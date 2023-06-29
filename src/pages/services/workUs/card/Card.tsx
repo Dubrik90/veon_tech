@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import {CardWrapper, Img, ImgBlock, Title, Text} from './style';
-import {CardWorkUsType} from "../../Servises";
+import {CardWorkUsType} from "../../../../common/types/types";
 
 type CardProps = {
     el: CardWorkUsType

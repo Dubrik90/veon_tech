@@ -1,5 +1,5 @@
 import React from 'react';
-import {Content, PolicyWrapper, Title, Text, Ol, Li} from "./style";
+import {Content, PolicyWrapper, Text, Title} from "./style";
 import {Container} from "../../common/style/Container";
 import {Link} from 'react-router-dom';
 import {ROUTS} from "../../common/constans/routs";
@@ -120,15 +120,16 @@ export const Policy = () => {
                                             Обезличенные технические данные с устройств Пользователя (информация о
                                             пользовательских действиях на Сайте, IP-адреса, данные о местоположении,
                                             cookie-файлы), собираемая в том числе с помощью сервисов аналитики Yandex
-                                            Metrika, <a target={'_blank'}
-                                                        href="https://support.google.com/analytics/answer/7667196?hl=ru&roistat_visit=311498">Google
-                                            Analytics </a> в целях обеспечения эффективной работы Сайта на
+                                            Metrika,
+                                            <a target={'_blank'} rel="noreferrer"
+                                               href="https://support.google.com/analytics/answer/7667196?hl=ru&roistat_visit=311498">
+                                                Google Analytics </a> в целях обеспечения эффективной работы Сайта на
                                             основании легитимного интереса и согласия Пользователя, которое выражается в
                                             продолжении использования Сайта после предупреждения об использовании
                                             данных. Срок хранения данных, автоматически собранных при посещении
                                             Пользователем Сайта, не превышает 14 месяцев. Пользователь проинформирован,
                                             что более подробную информацию о cookie-файлах и принципах их работы можно
-                                            найти на ресурсе <a target={'_blank'}
+                                            найти на ресурсе <a target={'_blank'} rel="noreferrer"
                                                                 href="https://www.aboutcookies.org/?roistat_visit=311498"> aboutcookies.org</a> .
                                         </li>
                                     </ol>
@@ -206,26 +207,26 @@ export const Policy = () => {
                                 <li>Компания может передавать персональные данные Пользователя третьим лицам,
                                     перечисленным ниже, в целях, указанных в п. 2.1. Политики.
                                     <Text>Яндекс Метрика — сервис веб-аналитики, предоставляемый ООО «Яндекс». Адрес: г.
-                                        Москва, ул. Льва Толстого, д. 16, 119021. <a target={'_blank'}
+                                        Москва, ул. Льва Толстого, д. 16, 119021. <a target={'_blank'} rel="noreferrer"
                                                                                      href="https://yandex.ru/legal/confidential/?roistat_visit=311498">Политика
                                             конфиденциальности Яндекс</a> .
                                     </Text>
                                     <Text>Google Analytics — сервис веб-аналитики, предоставляемый компанией Google,
                                         Inc. Адрес: Google, Google Data Protection Office, 1600 Amphitheatre Pkwy,
-                                        Mountain View, CA 94043, USA. <a target={'_blank'}
+                                        Mountain View, CA 94043, USA. <a target={'_blank'} rel="noreferrer"
                                                                          href="https://policies.google.com/privacy?hl=ru&roistat_visit=311498#infocollect">Политика
                                             конфиденциальности Google</a> .
                                     </Text>
                                     <Text>Хантфлоу — сервис по ведению базы кандидатов, предоставляемый ООО «Хантфлоу».
                                         Адрес: 127015, г. Москва, внутригородская территория города муниципальный округ
                                         Бутырский, ул. Новодмитровская, д. 2, корп. 2, помещение 27А. <a
-                                            target={'_blank'}
+                                            target={'_blank'} rel="noreferrer"
                                             href="https://huntflow.ru/docs/privacy-policy?roistat_visit=311498">Политика
                                             конфиденциальности Хантфлоу.</a>
                                     </Text>
                                     <Text>Pipedrive — сервис по управления взаимоотношениями с клиентами,
                                         предоставляемый Pipedrive Florida. Адрес: 490 1st Ave South, Suite 800 St.
-                                        Petersburg, FL 33701, USA. <a target={'_blank'}
+                                        Petersburg, FL 33701, USA. <a target={'_blank'} rel="noreferrer"
                                                                       href="https://www.pipedrive.com/en/privacy?roistat_visit=311498">Политика
                                             конфиденциальности Pipedrive</a> .
                                     </Text>

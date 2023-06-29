@@ -20,24 +20,4 @@ export const clients: ClientsType[] = [
     {img: noomb},
     {img: sodoxN},
     {img: viskantN},
-
-    // {img: prosN},
-    // {img: partyN},
-    // {img: cdN},
-    // {img: opticsN},
-    // {img: nuahuleN},
-    // {img: noomb},
-    // {img: sodoxN},
-    // {img: viskantN},
-    // {img: prosN},
-    //
-    // {img: partyN},
-    // {img: cdN},
-    // {img: opticsN},
-    // {img: nuahuleN},
-    // {img: noomb},
-    // {img: sodoxN},
-    // {img: viskantN},
-
-
 ]

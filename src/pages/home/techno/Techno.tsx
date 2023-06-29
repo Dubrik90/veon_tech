@@ -1,8 +1,6 @@
 import React from 'react';
 import {TechnoBlock, TechnoContent, TechnoText, TechnoWrapper} from './style';
 import {Container} from "../../../common/style/Container";
-// import C from './assets/c.svg'
-//import ReactIcon from './assets/react.svg'
 import {Title} from "../methodology/style";
 import {C, LaravelIcon, ReactIcon} from "./assets";
 
@@ -27,7 +25,8 @@ export const Techno = () => {
                             {/*<img src={C} alt='image' loading="lazy"/>*/}
                         </figure>
                         <figure>
-                            <ReactIcon/>
+                            <C/>
+                            {/*<ReactIcon/>*/}
                             {/*<img src={ReactIcon} alt='image' loading="lazy"/>*/}
                         </figure>
                     </TechnoBlock>

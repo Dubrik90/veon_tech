@@ -11,15 +11,8 @@ import {
 } from './style';
 import {ServiceHeader} from "./serviceHeader";
 import {useParams} from "react-router-dom";
-import {dataServices} from "./app/dataService";
 import {ErrorDevs} from "./errorDevs";
 import {WorkUs} from "./workUs";
-import Pencil1 from "./assets/stateDev/pencil1.svg";
-import Creative2 from "./assets/stateDev/creativity2.svg";
-import Proto3 from "./assets/stateDev/prototype3.svg";
-import Comp4 from "./assets/stateDev/computer4.svg";
-import Check5 from "./assets/stateDev/quality-check5.svg";
-import Up6 from "./assets/stateDev/start-up6.svg";
 import {Benefit} from "./benefit";
 import {ContactUsServise} from "./contactUs";
 import {animateText} from "../../common/animate/animateText";
@@ -28,79 +21,35 @@ import {Li, Ul} from "../home/methodology/style";
 import Star from "../home/methodology/assets/star.svg";
 
 
-export type CardWorkUsType = {
-    img: string,
-    title: string,
-    text: string,
-}
-
 export const Services = () => {
     const {service} = useParams()
-    const activeDataService = dataServices.filter(el => el.type === service)[0]
 
     useEffect(() => {
         if (service === 'webDev') {
             document.title = 'Разработка сайтов — VEON-TECH'
         } else if (service === 'support') {
             document.title = 'Поддержка сайтов — VEON-TECH'
-        }
-        else if (service === 'ux') {
+        } else if (service === 'ux') {
             document.title = 'UX/UI Дизайн — VEON-TECH'
-        }else if (service === 'webPO') {
+        } else if (service === 'webPO') {
             document.title = 'Разработка ПО — VEON-TECH'
         }
 
-      //  document.title = 'Кейсы — VEON-TECH'
+        //  document.title = 'Кейсы — VEON-TECH'
         animateText()
     }, [service])
 
-
-    const cardArray1: CardWorkUsType[] = [
-        {
-            img: Pencil1,
-            title: 'ПРОЕКТИРОВАНИЕ ИНТЕРФЕЙСОВ',
-            text: 'Делаем страницы удобными и понятными, подавая информацию о ваших товарах и услугах в максимально эффективном виде. Простота и удобство взаимодействия пользователя с сайтом – залог того, что он не закроет вкладку, отчаявшись найти нужную ему информацию в “простыне” плохо отформатированного текста и не обозначенных элементов навигации.'
-        },
-        {
-            img: Creative2,
-            title: 'АДАПТИВНАЯ ВЁРСТКА',
-            text: 'Посетителям вашего сайта не придётся “подсовывать” мобильную версию сайта, опасаясь громоздкости полноэкранных страниц. Работа с медиазапросами позволяет одинаково хорошо отображаются всему тексту, изображениям и элементам интерфейса как на компьютере или ноутбуке, так и на планшете или телефоне, независимо от разрешения и диагонали экрана устройства.'
-        },
-        {
-            img: Proto3,
-            title: 'ПРОГРАММИРОВАНИЕ И ИНТЕГРАЦИЯ',
-            text: 'Калькуляторы стоимости и фильтры по множественным параметрам дают посетителям сайта именно то, чего они ожидают – моментальное решение задач выбора. А интеграция платёжных систем, API сервисов и сайта несут за собой удобство расчётов и логистическую разгрузку. Программные решения позволяют делегировать “роботам” множество задач, тем самым разгрузить ваш персонал, позволяя сконцентрироваться на рабочем процессе.'
-        },
-        {
-            img: Proto3,
-            title: 'Поисковая оптимизация',
-            text: 'Для достижения лидирующих позиций Вашего сайта в органической выдаче таких поисковых систем как Яндекс и Google уже давно недостаточно закупить тонну ссылок и радоваться топовым позициям. Сейчас очень важно качество самого сайта, его правильная оптимизация под требования и условия поисковиков, а так же качество и тематика ссылающихся на него сайтов.'
-        },
-
-    ]
 
     return (
         <ServicesWrapper>
             {service === 'webDev' &&
                 <>
-                    <ServiceHeader img={activeDataService.img}
-                                   text={activeDataService.text}
-                                   title={activeDataService.title}
-                                   titleBtn={activeDataService.titleBtn}
-                    />
+                    <ServiceHeader/>
                     <ErrorDevs/>
-                    <WorkUs cardArray={cardArray1}
-                            title={'Почему работать с нами удобно и выгодно?'}
-                    />
+                    <WorkUs/>
                     <Benefit/>
                     <ContactUsServise/>
                     <PortfolioSlider/>
-                    {/*<DeveloperWork/>*/}
-                    {/*<WorkUs cardArray={cardArray2}*/}
-                    {/*        title={'Этапы разработки и создания сайта'}*/}
-                    {/*/>*/}
-                    {/*<Portfolio/>*/}
-                    {/*<CaseHelp/>*/}
                 </>
             }
             {service === 'support' &&
@@ -129,27 +78,6 @@ export const Services = () => {
                                 исходя из примерного количества потраченного времени на обслуживание сайта, например,
                                 100 часов в год.
                             </Text>
-                            {/*<ColumnBlockWrap>*/}
-                            {/*    <div className="wp-block-column is-layout-flow">*/}
-                            {/*        <p><strong>18 дизайнеров в штате. </strong>Подбираем на проект дизайнера с сильными*/}
-                            {/*            скиллами*/}
-                            {/*            в нужной области и усиливаем другими специалистами: 2D- и 3D-иллюстраторами.</p>*/}
-                            {/*    </div>*/}
-                            {/*    <div className="wp-block-column is-layout-flow">*/}
-                            {/*        <p><strong>Старт проекта через 2 недели, если успеют ваши юристы.</strong> Отвечаем*/}
-                            {/*            в*/}
-                            {/*            течение*/}
-                            {/*            дня, простые проекты оцениваем за два, подписываем документы и начинаем работу.*/}
-                            {/*        </p>*/}
-                            {/*    </div>*/}
-                            {/*    <div className="wp-block-column is-layout-flow">*/}
-                            {/*        <p><strong>Эксперты в финтехе, маркетплейсах и телекоме.</strong> Быстро вникаем в*/}
-                            {/*            проект*/}
-                            {/*            и не тратим деньги клиентов на прототипы для простых сервисов и в отраслях, где*/}
-                            {/*            собаку*/}
-                            {/*            съели.</p>*/}
-                            {/*    </div>*/}
-                            {/*</ColumnBlockWrap>*/}
                             <ContentBlock>
                                 <Title>Что входит в комплекс услуг по поддержке сайта?
                                 </Title>
@@ -213,20 +141,12 @@ export const Services = () => {
                             <ContentBlock>
                                 <Title>Делаем сложные вещи простыми:</Title>
                                 <Ul>
-                                    <Li><img src={Star} alt=""/> <span>Упорядочиваем большие объемы информации;</span> </Li>
+                                    <Li><img src={Star} alt=""/> <span>Упорядочиваем большие объемы информации;</span>
+                                    </Li>
                                     <Li><img src={Star} alt=""/> <span>Выстраиваем навигацию;</span> </Li>
                                     <Li><img src={Star} alt=""/> <span>Помогаем пользователю совершить целевое действие без нервов и обращений в службу
                                         поддержки;</span> </Li>
                                 </Ul>
-
-                                {/*<ul className="has-large-font-size">*/}
-                                {/*    <li>Упорядочиваем большие объемы информации;</li>*/}
-                                {/*    <li>Выстраиваем навигацию;</li>*/}
-                                {/*    <li>*/}
-                                {/*        Помогаем пользователю совершить целевое действие без нервов и обращений в службу*/}
-                                {/*        поддержки;*/}
-                                {/*    </li>*/}
-                                {/*</ul>*/}
                                 <Text>
                                     Если бизнес сложный, то больше времени уделяем глубокому исследованию, анализу
                                     аудитории
@@ -269,26 +189,17 @@ export const Services = () => {
                                     <Li><img src={Star} alt=""/> <span>Scrum, Lean, Agile</span> </Li>
                                     <Li><img src={Star} alt=""/> <span>Дейли, еженедельные отчеты</span> </Li>
                                 </Ul>
-                                {/*<ul className="has-large-font-size">*/}
-                                {/*    <li></li>*/}
-                                {/*    <li></li>*/}
-                                {/*    <li></li>*/}
-                                {/*    <li></li>*/}
-                                {/*</ul>*/}
                             </ContentBlock>
                         </div>
                     </WebPOWrapper>
                     <PortfolioSlider/>
                 </>
-
             }
             {service === 'webPO' &&
                 <>
                     <WebPOWrapper>
                         <div className="entry-content">
                             <Title>Разработка програмного обеспечения</Title>
-                            {/*<Text>Вы считаете, что бизнес-процессы на вашей фирме необходимо оптимизировать?</Text>*/}
-                            {/*<Text>Работа с клиентской базой и документацией занимает слишком много времени?</Text>*/}
                             <Text>Все-таки трудно автомотизировать бизнес :(</Text>
                             <TextCursive>VEON-TECH поможет вам решить рутинные бизнес-задачи!</TextCursive>
                             <LinkBlock>
@@ -298,27 +209,6 @@ export const Services = () => {
                                 <div>Упрощение работы с документооборотом</div>
                                 <div>Увеличение доверия клиентов к бренду</div>
                             </LinkBlock>
-                            {/*<ColumnBlockWrap>*/}
-                            {/*    <div className="wp-block-column is-layout-flow">*/}
-                            {/*        <p><strong>18 дизайнеров в штате. </strong>Подбираем на проект дизайнера с сильными*/}
-                            {/*            скиллами*/}
-                            {/*            в нужной области и усиливаем другими специалистами: 2D- и 3D-иллюстраторами.</p>*/}
-                            {/*    </div>*/}
-                            {/*    <div className="wp-block-column is-layout-flow">*/}
-                            {/*        <p><strong>Старт проекта через 2 недели, если успеют ваши юристы.</strong> Отвечаем*/}
-                            {/*            в*/}
-                            {/*            течение*/}
-                            {/*            дня, простые проекты оцениваем за два, подписываем документы и начинаем работу.*/}
-                            {/*        </p>*/}
-                            {/*    </div>*/}
-                            {/*    <div className="wp-block-column is-layout-flow">*/}
-                            {/*        <p><strong>Эксперты в финтехе, маркетплейсах и телекоме.</strong> Быстро вникаем в*/}
-                            {/*            проект*/}
-                            {/*            и не тратим деньги клиентов на прототипы для простых сервисов и в отраслях, где*/}
-                            {/*            собаку*/}
-                            {/*            съели.</p>*/}
-                            {/*    </div>*/}
-                            {/*</ColumnBlockWrap>*/}
                             <ContentBlock>
                                 <Title><span>Собственно</span> , что мы сможем сделать:</Title>
                                 <Ul>
@@ -327,12 +217,6 @@ export const Services = () => {
                                     <Li><img src={Star} alt=""/> <span>Мобильные приложения</span> </Li>
                                     <Li><img src={Star} alt=""/> <span>И многое-многое другое...</span> </Li>
                                 </Ul>
-                                {/*<ul className="has-large-font-size">*/}
-                                {/*    <li>Промышленные приложения</li>*/}
-                                {/*    <li>Чат-боты</li>*/}
-                                {/*    <li>Мобильные приложения</li>*/}
-                                {/*    <li>И многое-многое другое...</li>*/}
-                                {/*</ul>*/}
                             </ContentBlock>
                             <ContentBlock>
                                 <Title>Успешно автоматизируем бизнес-процессы различной направленности:</Title>
@@ -345,15 +229,6 @@ export const Services = () => {
                                     <Li><img src={Star} alt=""/> <span>Интернет торговля</span> </Li>
                                     <Li><img src={Star} alt=""/> <span>И многое-многое другое...</span> </Li>
                                 </Ul>
-                                {/*<ul className="has-large-font-size">*/}
-                                {/*    <li>Медицина</li>*/}
-                                {/*    <li>Ресторанный бизнес</li>*/}
-                                {/*    <li>Логистика</li>*/}
-                                {/*    <li>Развлечения</li>*/}
-                                {/*    <li>Аренда</li>*/}
-                                {/*    <li>Интернет торговля</li>*/}
-                                {/*    <li>И многое-многое другое...</li>*/}
-                                {/*</ul>*/}
                             </ContentBlock>
                         </div>
                     </WebPOWrapper>
