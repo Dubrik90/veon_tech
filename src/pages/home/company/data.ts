@@ -12,6 +12,7 @@ export type ClientsType = {
 export const clients: ClientsType[] = [
     {
         img: prosN,
+
     },
     {
         img: partyN,
