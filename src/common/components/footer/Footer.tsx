@@ -44,7 +44,7 @@ export const Footer = () => {
                             <p>УНП 193082231</p>
                         </About>
                         <AboutContact>
-                            <a href="tel:+79955775163">+7 (995) 577-51-63</a>
+                            <a href="tel:+375293028790">+375 (29) 302-87-90</a>
                             <a rel="noreferrer" target={"_blank"} href={`mailto:sales@veon-tech.ru`}>sales@veon-tech.ru</a>
                             <p>220068, г. Минск, ул. Сурганова, 57б, офис 187</p>
                             <p>С понедельника по пятницу</p>

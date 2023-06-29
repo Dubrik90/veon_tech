@@ -50,7 +50,7 @@ export const Help = () => {
                         <Button className='animate' onClick={onClickOpenModalHandler}>Получить консультацию</Button>
                     </ButtonBlock>
                     <ContactBlock>
-                        <PhoneLink href="tel:+79955775163">+7(995)577-51-63</PhoneLink>
+                        <PhoneLink href="tel:+37529302-87-90">+375(29)302-87-90</PhoneLink>
                         <Email>sales@veon-tech.ru</Email>
                     </ContactBlock>
                 </HelpContent>
