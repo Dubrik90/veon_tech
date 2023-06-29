@@ -52,10 +52,39 @@ export const CompanyBlock = styled.div`
   align-items: center;
   justify-content: center;
   padding: 60px 0;
+
   //margin-bottom: 10px;
   @media (max-width: 768px) {
     padding: 30px 0 20px 0 ;
+
+  }
+  .img_block {
+    margin-right: 100px;
+    @media (max-width: 768px) {
+      margin-right: 70px;
+    }
+  }
+
+  .img_block img {
+    max-width: 285px;
+    height: 150px;
+    object-fit: contain;
+    @media (max-width: 768px) {
+      max-width: 200px;
+      height: 70px;
+    }
     
+  }
+
+  .img_block:nth-child(3) {
+    img {
+      height: 55px;
+      @media (max-width: 768px) {
+        height: 45px;
+      }
+      
+    }
+   
   }
 `
 type ImgWrapProps = {
