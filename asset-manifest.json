@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/veon_tech/static/css/main.fab97689.css",
-    "main.js": "/veon_tech/static/js/main.94ed8c47.js",
+    "main.js": "/veon_tech/static/js/main.83cf67ef.js",
     "static/js/787.5fb054ca.chunk.js": "/veon_tech/static/js/787.5fb054ca.chunk.js",
     "static/media/swissImg1.png": "/veon_tech/static/media/swissImg1.79598e747c9fdf1546f4.png",
     "static/media/Montserrat-SemiBold.svg": "/veon_tech/static/media/Montserrat-SemiBold.adb7739b9957f2b51531.svg",
@@ -46,7 +46,6 @@
     "static/media/sodoxN.png": "/veon_tech/static/media/sodoxN.9386af8d33e7f34d9f4e.png",
     "static/media/swiss.webp": "/veon_tech/static/media/swiss.25b572f31f2822744da0.webp",
     "static/media/bak1.webp": "/veon_tech/static/media/bak1.1520e9cb14514ba0ac09.webp",
-    "static/media/hr-girl.jpg": "/veon_tech/static/media/hr-girl.a928a8a876445dbfc3d5.jpg",
     "static/media/CentavrasResult.webp": "/veon_tech/static/media/CentavrasResult.67eb809584d2b57b50e2.webp",
     "static/media/wiss.webp": "/veon_tech/static/media/wiss.ad14a7beaac03a5c41bc.webp",
     "static/media/optics.webp": "/veon_tech/static/media/optics.88e03332572b5fac3170.webp",
@@ -129,11 +128,11 @@
     "static/media/chevron_left.svg": "/veon_tech/static/media/chevron_left.96204af78932cc392255743e83f93f1f.svg",
     "static/media/chevron_right.svg": "/veon_tech/static/media/chevron_right.8827aabaed10ab77bfd1a575f02be46a.svg",
     "main.fab97689.css.map": "/veon_tech/static/css/main.fab97689.css.map",
-    "main.94ed8c47.js.map": "/veon_tech/static/js/main.94ed8c47.js.map",
+    "main.83cf67ef.js.map": "/veon_tech/static/js/main.83cf67ef.js.map",
     "787.5fb054ca.chunk.js.map": "/veon_tech/static/js/787.5fb054ca.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fab97689.css",
-    "static/js/main.94ed8c47.js"
+    "static/js/main.83cf67ef.js"
   ]
 }
