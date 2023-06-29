@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/veon_tech/static/css/main.fab97689.css",
-    "main.js": "/veon_tech/static/js/main.83cf67ef.js",
+    "main.js": "/veon_tech/static/js/main.8490490b.js",
     "static/js/787.5fb054ca.chunk.js": "/veon_tech/static/js/787.5fb054ca.chunk.js",
     "static/media/swissImg1.png": "/veon_tech/static/media/swissImg1.79598e747c9fdf1546f4.png",
     "static/media/Montserrat-SemiBold.svg": "/veon_tech/static/media/Montserrat-SemiBold.adb7739b9957f2b51531.svg",
@@ -103,6 +103,7 @@
     "static/media/prototype3.svg": "/veon_tech/static/media/prototype3.617e1af757b7bc037462417ea25a0d18.svg",
     "static/media/quots.svg": "/veon_tech/static/media/quots.b937b1413d529375ad09011fc0eda522.svg",
     "static/media/watsapp.svg": "/veon_tech/static/media/watsapp.20a398bb3d02f35610b65b511236f95f.svg",
+    "static/media/react.svg": "/veon_tech/static/media/react.9da6950fcd6036a0d76896cb1a156868.svg",
     "static/media/sun.svg": "/veon_tech/static/media/sun.ea1d1176f92a43a4e4447a54c697e92e.svg",
     "static/media/c.svg": "/veon_tech/static/media/c.04d9d2bb18b9781567f7340691dcc686.svg",
     "static/media/linkedin.svg": "/veon_tech/static/media/linkedin.e2baf34d92a69def9b68804d4f3bc476.svg",
@@ -121,18 +122,17 @@
     "static/media/Line2.svg": "/veon_tech/static/media/Line2.b6822d21a84acb1669b63013de2a0a58.svg",
     "static/media/arrow.svg": "/veon_tech/static/media/arrow.84ff5053c25a444768436d640d385673.svg",
     "static/media/clouse.svg": "/veon_tech/static/media/clouse.2fe83a8d3af17f2efa7659f8f8b4b44c.svg",
-    "static/media/react.svg": "/veon_tech/static/media/react.3a03708e42481565259f85329d20b695.svg",
     "static/media/star.svg": "/veon_tech/static/media/star.3f4daccb5adce8a2cbc4dd418bf916cd.svg",
     "static/media/tail-yellow.svg": "/veon_tech/static/media/tail-yellow.afa370d74aa61aa42e13b3aa1fa71ffc.svg",
     "static/media/plusIcon.svg": "/veon_tech/static/media/plusIcon.c8787ac0806e6fa29298eb16e971d351.svg",
     "static/media/chevron_left.svg": "/veon_tech/static/media/chevron_left.96204af78932cc392255743e83f93f1f.svg",
     "static/media/chevron_right.svg": "/veon_tech/static/media/chevron_right.8827aabaed10ab77bfd1a575f02be46a.svg",
     "main.fab97689.css.map": "/veon_tech/static/css/main.fab97689.css.map",
-    "main.83cf67ef.js.map": "/veon_tech/static/js/main.83cf67ef.js.map",
+    "main.8490490b.js.map": "/veon_tech/static/js/main.8490490b.js.map",
     "787.5fb054ca.chunk.js.map": "/veon_tech/static/js/787.5fb054ca.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fab97689.css",
-    "static/js/main.83cf67ef.js"
+    "static/js/main.8490490b.js"
   ]
 }
