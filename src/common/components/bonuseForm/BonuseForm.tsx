@@ -38,9 +38,9 @@ import {useAppDispatch} from "../../hook";
 import {ROUTS} from "../../constans/routs";
 import {Link} from "react-router-dom";
 import {useScrollBlock} from "../../hook/use-scroll-block";
-import emailjs from "emailjs-com";
 
 interface MyFormValues {
+    formName: string,
     firstName: string;
     lastName: string;
     phone: string;
@@ -64,12 +64,8 @@ interface MyFormValues {
 export const BonuseForm: React.FC = () => {
     const dispatch = useAppDispatch()
 
-    const [budget, setBudget] = useState('')
-    const [helpFizUser, setHelpFizUser] = useState('')
     const [activeField, setActiveField] = useState("");
     const [service, setService] = useState(true)
-    const [helpCompany, setHelpCompany] = useState('')
-    const [bonuse, setBonuse] = useState('')
     const [blockScroll, allowScroll] = useScrollBlock();
 
     const closeFormModal = () => {
@@ -84,22 +80,40 @@ export const BonuseForm: React.FC = () => {
     };
 
     const handleSubmit = (
-        values: any,
-        {setSubmitting}: FormikHelpers<MyFormValues>
+        values: MyFormValues,
+        { setSubmitting }: FormikHelpers<MyFormValues>
     ) => {
         setSubmitting(true);
         closeFormModal();
-        emailjs.send('service_jwks1lh', 'template_m2zj1z6', values, 'iy68w7qmdmjCwvP5W')
-            .then((result: any) => {
-            }, (error: any) => {
-                console.log(error.text);
-            });
+        console.log(values);
 
+        const formElement = document.querySelector("#bonusForm");
+        if (formElement instanceof HTMLFormElement) {
+            const formData = new FormData(formElement);
+
+            // Добавление значения budget в FormData
+            formData.append("formName", values.formName);
+
+            fetch("../back/mailBonus.php", {
+                method: "POST",
+                body: formData,
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    // Обработка ответа от сервера
+                    console.log(data);
+                })
+                .catch((error) => {
+                    // Обработка ошибки
+                    console.error(error);
+                });
+        }
     };
 
     return (
         <Formik<MyFormValues>
             initialValues={{
+                formName: "Форма бонусов",
                 firstName: "",
                 lastName: "",
                 phone: "",
@@ -131,7 +145,7 @@ export const BonuseForm: React.FC = () => {
                                 <div></div>
                             </CloseModal>
                         </DynamicContactHead>
-                        <Form onSubmit={handleSubmit}>
+                        <Form id={'bonusForm'} onSubmit={handleSubmit} method={"POST"} encType="multipart/form-data">
                             <StyledRadioContainer>
                                 <StyledRadioLabel checked={values.personType === "Физическое"}>
                                     <Radio type="radio" name="personType" value="Физическое"/>

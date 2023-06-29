@@ -2,10 +2,6 @@ import styled from 'styled-components';
 
 
 export const ReviewsWrapper = styled.div`
- // background: var(--color-bg-green-light);
- // padding-top: calc(50px + (120 - 50) * ((100vw - 320px) / (1920 - 320)));
-//  padding-bottom: calc(30px + (40 - 30) * ((100vw - 320px) / (1920 - 320)));
-
 `
 export const Title = styled.h3`
   text-align: center;
@@ -14,17 +10,8 @@ export const Title = styled.h3`
   line-height: 1.4;
   color: var(--colors-text-dark);
   margin-bottom: calc(30px + (40 - 30) * ((100vw - 320px) / (1920 - 320)));
-  
-  @media (max-width: 768px) {
-    //margin: 0 -15px 30px -15px;
-    //padding-top: 25px;
-    //border-top: none;
-  }
-
-
 `
 export const Line = styled.div`
   border-bottom: 2px solid #6EEC4E;
-  
 `
 

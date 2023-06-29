@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {DevDataType} from '../../data';
 import {ButtonArrow, CardImage, CurrentDevWrapper, SubTitle, Title} from './style';
 
@@ -7,10 +7,8 @@ import {Link} from "react-router-dom";
 
 type CurrentDevType = {
     card: DevDataType,
-   // myRef: React.RefObject<HTMLInputElement>;
 }
 export const CurrentDev: React.FC<CurrentDevType> = ({card}) => {
-
 
     return (
         <CurrentDevWrapper className='animate'>

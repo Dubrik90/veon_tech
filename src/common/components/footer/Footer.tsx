@@ -34,8 +34,8 @@ export const Footer = () => {
                     <FooterTop>
                         <img loading="lazy" src={logo} alt="logo"/>
                         <FooterIcons>
-                            {dataSocial.map((el, index) => <a target='_blank' href={el.to} key={index}>
-                                <img loading="lazy" src={el.img}/></a>)}
+                            {dataSocial.map((el, index) => <a rel="noreferrer" target='_blank' href={el.to} key={index}>
+                                <img loading="lazy" src={el.img} alt={"иконка"}/></a>)}
                         </FooterIcons>
                     </FooterTop>
                     <FooterBottom>
@@ -44,8 +44,8 @@ export const Footer = () => {
                             <p>УНП 193082231</p>
                         </About>
                         <AboutContact>
-                            <a href="tel:+375333028790">+375 (33) 302-87-90</a>
-                            <p>clients@veon-tech.ru</p>
+                            <a href="tel:+79955775163">+7 (995) 577-51-63</a>
+                            <a rel="noreferrer" target={"_blank"} href={`mailto:sales@veon-tech.ru`}>sales@veon-tech.ru</a>
                             <p>220068, г. Минск, ул. Сурганова, 57б, офис 187</p>
                             <p>С понедельника по пятницу</p>
                         </AboutContact>

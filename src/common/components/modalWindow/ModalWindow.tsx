@@ -17,11 +17,11 @@ import {
 } from "../consultantModal/style";
 import {CustomInputFile, InputFileText} from "./style";
 import {useScrollBlock} from "../../hook/use-scroll-block";
-import emailjs from "emailjs-com";
 
 
 interface MyFormValues {
-    name: string;
+    formName: string,
+    firstName: string;
     phone: string;
     myFile: File | null;
 }
@@ -43,18 +43,36 @@ export const ModalWindoww = () => {
     ) => {
         setSubmitting(true);
         onClickClouseModalHandler()
-        emailjs.send('service_jwks1lh', 'template_h0lfcm6', values, 'iy68w7qmdmjCwvP5W')
-            .then((result: any) => {
-            }, (error: any) => {
-                console.log(error.text);
-            });
+
+        const formElement = document.querySelector("#jobForm");
+        if (formElement instanceof HTMLFormElement) {
+            const formData = new FormData(formElement);
+
+            // Добавление значения budget в FormData
+            formData.append("formName", values.formName);
+
+            fetch("../back/mailJob.php", {
+                method: "POST",
+                body: formData,
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    // Обработка ответа от сервера
+                    console.log(data);
+                })
+                .catch((error) => {
+                    // Обработка ошибки
+                    console.error(error);
+                });
+        }
     };
 
 
     return (
         <Formik<MyFormValues>
             initialValues={{
-                name: "",
+                formName: "Форма для вакансии",
+                firstName: "",
                 phone: "",
                 myFile: null,
             }}
@@ -65,13 +83,13 @@ export const ModalWindoww = () => {
                     <RegisterWrapper>
                         <Title>Заявка на обратный звонок</Title>
                         <Clouse onClick={onClickClouseModalHandler}/>
-                        <Form onSubmit={handleSubmit}>
+                        <Form id={"jobForm"} onSubmit={handleSubmit} method={"POST"} encType="multipart/form-data">
                             <InputBlock>
                                 <Label>
                                     <CustomInput type="text"
-                                                 name="name"
+                                                 name="firstName"
                                                  placeholder='Ваше имя'
-                                                 value={values.name}
+                                                 value={values.firstName}
                                                  onChange={handleChange}
                                     />
                                 </Label>

@@ -27,16 +27,6 @@ export const reviewData: reviewDataType[] = [
         header: 'LLC "SinaraDesign" (USA, Florida)',
         link: ROUTS.CASE_SINARADESING,
     },
-    // {
-    //     review: 'Команда Veon-Tech отлично выполнила поставленные задачи. В короткие сроки разработали сайт. Для поддержки используют самое современное программное обеспечение. Мы довольны креативным дизайном, достигнутым с помощью нашего нового бренда и веб-дизайна.',
-    //     logoComp: '',
-    //     logoUser: User2,
-    //     userName: 'F. Coleman',
-    //     position: 'Co-founder',
-    //     background: '#3a3937',
-    //     header: 'Pros NOW',
-    //     link: '',
-    // },
     {
         review: 'Initially, we chose from a variety of companies, but during the proposal discussion phase, we realized that not all of them had the necessary competencies to implement our project. The work was always carried out in strict accordance with the technical specification at a high professional level. At the moment, the project has been developed and we are very satisfied with it.',
         entireReview: 'Изначально выбирали из множества компании, но на этапе обсуждения предложений видели, что не у всех хватает компетенций в реализации нашего проекта.\n' +

@@ -1,4 +1,4 @@
-import React, {FormEvent, useRef, useState} from "react";
+import React, {useState} from "react";
 import {Form, Formik, FormikHelpers} from "formik";
 import {
     BonuseFormWrapper,
@@ -35,14 +35,14 @@ import {
     UploadWrapper
 } from "../bonuseForm/style";
 import {setIsOpenFormAC} from "../../../app/app-reduser";
-import {useAppDispatch, useAppSelector} from "../../hook";
+import {useAppDispatch} from "../../hook";
 import {ROUTS} from "../../constans/routs";
 import {Link, useLocation} from "react-router-dom";
 import {useScrollBlock} from "../../hook/use-scroll-block";
-import emailjs from 'emailjs-com';
 
 
 interface MyFormValues {
+    formName: string
     firstName: string;
     lastName: string;
     phone: string;
@@ -67,17 +67,13 @@ export const FormUsers: React.FC = () => {
     const dispatch = useAppDispatch()
     const location = useLocation();
     const currentPath = location.pathname
-    const form = useRef<FormEvent<HTMLFormElement> | ''>('');
 
     const [budget, setBudget] = useState('')
     const [helpFizUser, setHelpFizUser] = useState('')
     const [activeField, setActiveField] = useState("");
     const [service, setService] = useState(true)
     const [helpCompany, setHelpCompany] = useState('')
-    const [bonuse, setBonuse] = useState('')
     const [blockScroll, allowScroll] = useScrollBlock();
-
-    const isOpenForm = useAppSelector(state => state.app.isOpenForm)
 
     const closeFormModal = () => {
         allowScroll()
@@ -115,26 +111,41 @@ export const FormUsers: React.FC = () => {
     };
 
     const handleSubmit = (
-        values: any,
+        values: MyFormValues,
         {setSubmitting}: FormikHelpers<MyFormValues>
     ) => {
         setSubmitting(true);
-        // e.preventDefault();
         closeFormModal();
-        emailjs.send('service_jwks1lh', 'template_m2zj1z6', values, 'iy68w7qmdmjCwvP5W')
-            .then((result: any) => {
-                console.log(result)
-            }, (error: any) => {
-                console.log(error.text);
-            });
 
-        //   e.currentTarget.reset()
+        const formElement = document.querySelector("#globalForm");
+        if (formElement instanceof HTMLFormElement) {
+            const formData = new FormData(formElement);
 
+            // Добавление значения budget в FormData
+            formData.append("budget", values.budget);
+            formData.append("service", values.service);
+            formData.append("formName", values.formName);
+
+            fetch("../back/mail.php", {
+                method: "POST",
+                body: formData,
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    // Обработка ответа от сервера
+                    console.log(data);
+                })
+                .catch((error) => {
+                    // Обработка ошибки
+                    console.error(error);
+                });
+        }
     };
 
     return (
         <Formik<MyFormValues>
             initialValues={{
+                formName: "Форма с главной страницы",
                 firstName: "",
                 lastName: "",
                 phone: "",
@@ -165,7 +176,7 @@ export const FormUsers: React.FC = () => {
                                 <div></div>
                             </CloseModal>
                         </DynamicContactHead>
-                        <Form onSubmit={handleSubmit}>
+                        <Form onSubmit={handleSubmit} method={"POST"} id={"globalForm"} encType="multipart/form-data">
                             <StyledRadioContainer>
                                 <StyledRadioLabel checked={values.personType === "Физическое"}>
                                     <Radio type="radio" name="personType" value="Физическое"/>

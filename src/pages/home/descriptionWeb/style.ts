@@ -90,7 +90,6 @@ export const Cards = styled.div`
     justify-content: center;
   }
   
-  
   @media (max-width: 1256px) {
     justify-content: space-evenly;
   }
@@ -107,9 +106,6 @@ export const CardsMobile = styled.div`
     align-self: center;
    
   }
-`
-export const CurrentDevMobile = styled.div`
-
 `
 export const CardImageMobile = styled.div`
   display: flex;
@@ -144,7 +140,7 @@ export const TitleMobile = styled.h3`
   font-weight: var(--fw-extra-bold);
   font-size: 25px;
   line-height: 129.5%;
-  color: #000;
+  color: var(--color-dark);
   @media (max-width: 406px) {
     font-size: 22px;
   }

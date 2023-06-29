@@ -1,7 +1,4 @@
 import {gsap} from "gsap";
-import {matchMedia} from 'match-media';
-import {useEffect, useState} from "react";
-import {CSSPlugin} from 'gsap/CSSPlugin';
 
 export const animateText = () => {
 

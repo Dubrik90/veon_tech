@@ -8,9 +8,7 @@ export const SimilarCasesWrapper = styled.div`
 export const SimilarCasesDesktop = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  //display: flex;
   column-gap: 20px;
-  
   
   @media (max-width: 940px) {
     column-gap: 15px;

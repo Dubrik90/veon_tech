@@ -26,3 +26,9 @@ export type CasesType = {
     ['visit']: CaseType[],
     ['all']: CaseType[],
 }
+
+export type CardWorkUsType = {
+    img: string,
+    title: string,
+    text: string,
+}

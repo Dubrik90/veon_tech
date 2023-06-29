@@ -53,7 +53,7 @@ export const Li = styled.li`
   flex-direction: column;
   align-items: flex-start;
   letter-spacing: -.02em;
-  color: #000;
+  color: var(--color-dark);
   position: relative;
 
   @media (max-width: 1199px) {

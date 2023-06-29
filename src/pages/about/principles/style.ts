@@ -25,7 +25,7 @@ export const AccordionItem = styled.div`
   justify-content: space-between;
   flex-direction: column;
   padding: 25px 0;
-  color: #000;
+  color: var(--color-dark);
   border-top: 2px solid var(--colors-text-dark);
   transition: color .3s;
 

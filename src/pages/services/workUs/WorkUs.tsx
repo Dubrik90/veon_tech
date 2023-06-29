@@ -1,23 +1,46 @@
-import React, {FC} from 'react';
+import React from 'react';
 import {ArrowIcon, CardBlock, Title, WorkUsContent, WorkUsWrapper} from './style';
 import {Container} from "../../../common/style/Container";
 import {Card} from "./card";
-import {CardWorkUsType} from "../Servises";
+import Pencil1 from "../assets/stateDev/pencil1.svg";
+import Creative2 from "../assets/stateDev/creativity2.svg";
+import Proto3 from "../assets/stateDev/prototype3.svg";
+import {CardWorkUsType} from "../../../common/types/types";
 
-type WorkUsProps = {
-    cardArray: CardWorkUsType[],
-    title: string
-}
-export const WorkUs:FC<WorkUsProps> = ({title,cardArray}) => {
+export const WorkUs = () => {
+
+    const tabsData: CardWorkUsType[] = [
+        {
+            img: Pencil1,
+            title: 'ПРОЕКТИРОВАНИЕ ИНТЕРФЕЙСОВ',
+            text: 'Делаем страницы удобными и понятными, подавая информацию о ваших товарах и услугах в максимально эффективном виде. Простота и удобство взаимодействия пользователя с сайтом – залог того, что он не закроет вкладку, отчаявшись найти нужную ему информацию в “простыне” плохо отформатированного текста и не обозначенных элементов навигации.'
+        },
+        {
+            img: Creative2,
+            title: 'АДАПТИВНАЯ ВЁРСТКА',
+            text: 'Посетителям вашего сайта не придётся “подсовывать” мобильную версию сайта, опасаясь громоздкости полноэкранных страниц. Работа с медиазапросами позволяет одинаково хорошо отображаются всему тексту, изображениям и элементам интерфейса как на компьютере или ноутбуке, так и на планшете или телефоне, независимо от разрешения и диагонали экрана устройства.'
+        },
+        {
+            img: Proto3,
+            title: 'ПРОГРАММИРОВАНИЕ И ИНТЕГРАЦИЯ',
+            text: 'Калькуляторы стоимости и фильтры по множественным параметрам дают посетителям сайта именно то, чего они ожидают – моментальное решение задач выбора. А интеграция платёжных систем, API сервисов и сайта несут за собой удобство расчётов и логистическую разгрузку. Программные решения позволяют делегировать “роботам” множество задач, тем самым разгрузить ваш персонал, позволяя сконцентрироваться на рабочем процессе.'
+        },
+        {
+            img: Proto3,
+            title: 'Поисковая оптимизация',
+            text: 'Для достижения лидирующих позиций Вашего сайта в органической выдаче таких поисковых систем как Яндекс и Google уже давно недостаточно закупить тонну ссылок и радоваться топовым позициям. Сейчас очень важно качество самого сайта, его правильная оптимизация под требования и условия поисковиков, а так же качество и тематика ссылающихся на него сайтов.'
+        },
+
+    ]
 
     return (
         <WorkUsWrapper>
             <Container>
                 <WorkUsContent>
-                    <Title className='animate'>{title}</Title>
+                    <Title className='animate'>Почему работать с нами удобно и выгодно?</Title>
                     <CardBlock>
-                        {cardArray.map((el, index) => (
-                            <Card  el={el} key={index}/>
+                        {tabsData.map((el, index) => (
+                            <Card el={el} key={index}/>
                         ))}
                         <ArrowIcon/>
                         <span></span>

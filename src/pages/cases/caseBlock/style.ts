@@ -153,7 +153,7 @@ export const Title = styled(TitleH4)`
   font-size: 24px;
   line-height: 1.2;
   font-weight: var(--fw-regular);
-  color: #000000;
+  color: var(--color-dark);
 
   .wight & {
     color: #fff;
@@ -170,7 +170,7 @@ export const TextDesk = styled.p`
 export const Text = styled.p`
   font-weight: 700;
   font-size: 32px;
-  color: #000000;
+  color: var(--color-dark);
   line-height: 1.1;
 
   .wight & {

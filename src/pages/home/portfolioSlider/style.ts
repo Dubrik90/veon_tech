@@ -64,15 +64,10 @@ export const Title = styled.h3`
 `
 export const ArrowBlock = styled.div`
   display: flex;
-  // width: 100%;
   justify-content: flex-end;
   margin-bottom: 20px;
   column-gap: 15px;
-  @media (max-width: 768px) {
-    //  display: none;
-  }
-
-
+      
   svg {
     width: 40px;
     height: 35px;
@@ -105,13 +100,5 @@ export const TitleCase = styled.span`
   text-align: start;
   transition: color 0.5s ease;
   padding-top: 10px;
-
 `
-export const SubTitleCase = styled.p`
-  font-weight: var(--fw-medium);
-  font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1920 - 320)));
-  line-height: 1.1;
-  color: var(--colors-text-green);
 
-
-`

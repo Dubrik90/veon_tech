@@ -4,8 +4,6 @@ import {appReducer} from "./app-reduser";
 
 const rootReducer = combineReducers({
     app: appReducer,
-   // card: cardReducer,
-   // user: userReducer
 })
 
 export const store = configureStore({

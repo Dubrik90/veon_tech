@@ -14,6 +14,7 @@ export const SwitchWrapper = styled.div<SwitchWrapperProps>`
   cursor: pointer;
   column-gap: 10px;
   z-index: 9999;
+  cursor: pointer;
 
   img {
     max-width: 20px;
@@ -42,7 +43,7 @@ export const ModalSwich = styled.div<ModalSwichProps>`
   bottom: -100px;
   left: -180px;
   opacity: ${({isThemeBlock}) => isThemeBlock ? '1' : '0'};
-  overflow: ${({isThemeBlock}) => isThemeBlock ? 'visible' : 'hidden'};
+  visibility: ${({isThemeBlock}) => isThemeBlock ? 'visible' : 'hidden'};
   transition: all 0.3s ease;
   width: 260px;
   background-color: #5db447;

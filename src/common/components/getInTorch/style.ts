@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {flexColumn, fontSize} from "../../style/mixin";
+import {flexColumn} from "../../style/mixin";
 
 type GetInTorchWrapperProps = {
     view: boolean
@@ -10,7 +10,7 @@ export const IconsBlock = styled.div`
   transform: rotate(90deg);
   opacity: 0;
   visibility: hidden;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 4px 4px;
   border-radius: 15px;
   z-index: 5;
   position: absolute;
@@ -31,7 +31,7 @@ export const IconsBlock = styled.div`
     min-height: 40px;
     display: flex;
     align-items: center;
-    
+
 
     a, p {
       display: flex;
@@ -46,7 +46,7 @@ export const IconsBlock = styled.div`
       background-color: rgba(110, 236, 78, 0.15);
 
       a span {
-        color: #000;
+        color: var(--color-dark);
       }
     }
 
@@ -54,7 +54,6 @@ export const IconsBlock = styled.div`
       width: 30px;
       height: 30px;
       cursor: pointer;
-      //   transition: all 0.3s;
 
       path {
         fill: #233428;

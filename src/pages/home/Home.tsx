@@ -9,6 +9,7 @@ import {gsap} from "gsap";
 import {Methodology} from "./methodology";
 import {Techno} from './techno';
 import {PortfolioSlider} from './portfolioSlider/PortfolioSlider';
+import {SliderReviews} from "../../common/components/sliderReviews";
 
 
 export const Home = () => {
@@ -40,6 +41,7 @@ export const Home = () => {
             {/*<Portfolio/>*/}
             <Company/>
             <Layer/>
+            <SliderReviews/>
             <Reviews/>
             <Contacts/>
         </>

@@ -2,7 +2,6 @@ import styled from "styled-components";
 import {flexColumn} from "../../common/style/mixin";
 
 export const CaseWrapper = styled.div`
- // overflow: hidden;
 `
 export const Title = styled.h3`
   font-weight: var(--fw-bold);
@@ -27,7 +26,6 @@ export const Title = styled.h3`
 export const CaseBlock = styled.div`
   padding: 150px 0;
   ${flexColumn()};
- // padding: 55px 0;
   align-items: center;
 
   @media (max-width: 425px) {

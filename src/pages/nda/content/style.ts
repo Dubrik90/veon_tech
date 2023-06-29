@@ -6,25 +6,6 @@ export const ContentWrapper = styled.div`
   background-color: var(--color-bg-green-light);
   padding-top: calc(40px + (80 - 40) * ((100vw - 320px) / (1920 - 320)));
   padding-bottom: calc(40px + (60 - 40) * ((100vw - 320px) / (1920 - 320)));
-
-
-  //.LockIcon {
-  //  font-size: 170px;
-  //  fill: var(--colors-text-dark);
-  //  z-index: 10;
-  //  @media (max-width: 1760px) {
-  //    font-size: 120px;
-  //  }
-  //  @media (max-width: 1715px) {
-  //    font-size: 100px;
-  //  }
-  //  @media (max-width: 1439px) {
-  //    font-size: 75px;
-  //  }
-  //  @media (max-width: 1260px) {
-  //    display: none;
-  //  }
-  //}
 `
 export const TitleHeader = styled(TitleH2)`
   font-weight: var(--fw-bold);
@@ -183,23 +164,12 @@ export const Title = styled(TitleH4)`
   @media (max-width: 767px) {
     font-size: 20px;
   }
-  //@media (max-width: 424px) {
-  //  font-size: 16px;
-  //}
-
 `
 export const Text = styled.div`
   font-size: 18px;
   line-height: 1.2;
   color: var(--colors-text-dark);
   z-index: 10;
-  //@media (max-width: 767px) {
-  //  font-size: 16px;
-  //  text-align: center;
-  //}
-  //@media (max-width: 424px) {
-  //  font-size: 13px;
-  //}
 `
 export const Block = styled.div`
   ${flexColumn()};

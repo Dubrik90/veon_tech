@@ -11,12 +11,8 @@ export const CurrentDevWrapper = styled.div`
   flex: 0 0 349px;
   padding: 35px 38px 11px 28px;
   min-height: 215px;
- // transition: all 0.3s;
   
   a {
-    //transition: all 0.3s;
-  //  opacity: 0;
-  //  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     display: flex;
     flex-direction: column;
     row-gap: 15px;
@@ -52,15 +48,13 @@ export const Title = styled.h3`
   font-weight: var(--fw-medium);
   font-size: 25px;
   line-height: 129.5%;
- // color: var(--colors-text-dark);
-  color: #000;
+  color: var(--color-dark);
 
 `
 export const SubTitle = styled.p`
   font-size: 15px;
   line-height: 129.5%;
-  //color: var(--colors-text-dark);
-  color: #000000;
+  color: var(--color-dark);
   flex: 1 1 auto;
 `
 
@@ -70,18 +64,15 @@ export const ButtonArrow = styled.button`
   align-self: flex-start;
   font-weight: var(--fw-extra-bold);
   font-size: 13px;
-  line-height: 129.5%;
- // color: var(--colors-text-dark);
-  color: #000000;
-  transition: all 0.3s;
+  color: var(--color-dark);
+  
+  a {
+    transition: color 0.3s;
+  }
 
   svg {
     transition: all 0.3s;
     margin-left: 5px;
-    
-    path {
-     // fill: var(--colors-text-dark);
-    }
   }
   
   :hover {

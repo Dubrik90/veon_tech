@@ -20,10 +20,10 @@ import '../../style/PhoneInput.css';
 import {Link} from "react-router-dom";
 import {ROUTS} from "../../constans/routs";
 import {useScrollBlock} from "../../hook/use-scroll-block";
-import emailjs from "emailjs-com";
 
 type FormikErrorType = {
-    name?: string,
+    formName?: string,
+    firstName?: string,
     phone?: string
 }
 
@@ -39,15 +39,16 @@ export const ConsultantModal = () => {
 
     const formik = useFormik({
         initialValues: {
-            name: '',
+            formName: "Форма для консульнации",
+            firstName: '',
             phone: '',
         },
 
         validate: (values) => {
             const errors: FormikErrorType = {}
 
-            if (!values.name) {
-                errors.name = 'Поле не может быть пустым'
+            if (!values.firstName) {
+                errors.firstName = 'Поле не может быть пустым'
             }
 
             if (!values.phone) {
@@ -57,12 +58,27 @@ export const ConsultantModal = () => {
         },
         onSubmit: values => {
             onClickClouseModalHandler()
-            emailjs.send('service_jwks1lh', 'template_h0lfcm6', values, 'iy68w7qmdmjCwvP5W')
-                .then((result: any) => {
-                    console.log(result)
-                }, (error: any) => {
-                    console.log(error.text);
-                });
+            const formElement = document.querySelector("#consultantForm")
+            if (formElement instanceof HTMLFormElement) {
+                const formData = new FormData(formElement);
+
+                // Добавление значения budget в FormData
+                formData.append("formName", values.formName);
+
+                fetch("../back/mailConsultant.php", {
+                    method: "POST",
+                    body: formData,
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        // Обработка ответа от сервера
+                        console.log(data);
+                    })
+                    .catch((error) => {
+                        // Обработка ошибки
+                        console.error(error);
+                    });
+            }
         }
     })
 
@@ -71,16 +87,17 @@ export const ConsultantModal = () => {
             <RegisterWrapper>
                 <Title>Заявка на обратный звонок</Title>
                 <Clouse onClick={onClickClouseModalHandler}/>
-                <FormWrapper onSubmit={formik.handleSubmit}>
+                <FormWrapper id={"consultantForm"} onSubmit={formik.handleSubmit} method={"POST"}
+                             encType="multipart/form-data">
                     <InputBlock>
                         <Label>
                             <CustomInput type='text'
                                          placeholder='Ваше имя'
-                                         {...formik.getFieldProps('name')}
+                                         {...formik.getFieldProps('firstName')}
                                          onChange={formik.handleChange}
                             />
-                            {formik.touched.name && formik.errors.name &&
-                                <Errors>{formik.errors.name}</Errors>}
+                            {formik.touched.firstName && formik.errors.firstName &&
+                                <Errors>{formik.errors.firstName}</Errors>}
                         </Label>
                         <Label>
                             <PhoneInput
@@ -97,7 +114,8 @@ export const ConsultantModal = () => {
                     </InputBlock>
                     <SubText>
                         Нажимая на кнопку «Отправить», вы даете свое согласие на обработку персональных данных в
-                        соответствии с целями указанными в <Link onClick={onClickClouseModalHandler} to={ROUTS.POLICY}>Политике обработки персональных данных</Link>
+                        соответствии с целями указанными в <Link onClick={onClickClouseModalHandler} to={ROUTS.POLICY}>Политике
+                        обработки персональных данных</Link>
                     </SubText>
                     <Button type='submit'>Отправить</Button>
                 </FormWrapper>

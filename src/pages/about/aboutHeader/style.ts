@@ -115,12 +115,12 @@ export const HeaderImage = styled.div`
   }
 
   .about-us__btn:active {
-    color: #000
+    color: var(--color-dark)
   }
 
   @media (any-hover: hover) {
     .about-us__btn:hover {
-      color: #000
+      color: var(--color-dark)
     }
   }
 
