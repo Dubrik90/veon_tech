@@ -46,7 +46,7 @@ export const IconsBlock = styled.div`
       background-color: rgba(110, 236, 78, 0.15);
 
       a span {
-        color: #000;
+        color: var(--color-dark);
       }
     }
 

@@ -118,9 +118,7 @@ export const SubTitle = styled.p`
   @media (max-width: 1932px) {
     line-height: 1.3;
   }
-  @media (max-width: 1848px) {
-   // font-size: 14px;
-  }
+ 
   @media (max-width: 1050px) {
     display: none;
     margin-bottom: 40px;
@@ -139,7 +137,6 @@ export const SubTitleSmall = styled(SubTitle)`
 `
 export const Button = styled.button`
   opacity: 0;
- // clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
   grid-area: button;
   position: relative;
   font-size: 18px;

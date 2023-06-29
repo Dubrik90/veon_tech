@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import {fontSize} from "../../../../common/style/mixin";
-
 export const TechnologiesItemWrapper = styled.div`
 
   width: 140px;
@@ -26,7 +24,7 @@ export const TechnologiesItemWrapper = styled.div`
     text-align: center;
     color: #606060;
     @media (max-width: 430px) {
-      ${fontSize(16)};
+      font-size: 16px;
     }
   }
 

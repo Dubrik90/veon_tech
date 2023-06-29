@@ -25,8 +25,7 @@ export const Techno = () => {
                             {/*<img src={C} alt='image' loading="lazy"/>*/}
                         </figure>
                         <figure>
-                            <C/>
-                            {/*<ReactIcon/>*/}
+                            <ReactIcon/>
                             {/*<img src={ReactIcon} alt='image' loading="lazy"/>*/}
                         </figure>
                     </TechnoBlock>

@@ -156,8 +156,6 @@ export const caseDataArray: CaseDataType = [
             {img: Image1, src: ''},
             {img: Image2, src: ''},
             {img: Image3, src: ''},
-            // {img: Image2, src: ''},
-            // {img: Image1, src: ''},
         ]
     },
     {

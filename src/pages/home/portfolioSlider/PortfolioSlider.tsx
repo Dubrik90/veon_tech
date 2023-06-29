@@ -1,5 +1,5 @@
 import React from 'react';
-import {PortfolioSliderWrapper, Title, SubTitleCase, SubTitle, ArrowBlock, AboutBlock, TitleCase} from "./style";
+import {AboutBlock, ArrowBlock, PortfolioSliderWrapper, Title, TitleCase} from "./style";
 import {Swiper, SwiperSlide} from "swiper/react";
 
 // Import Swiper styles
@@ -7,7 +7,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import ArrowRight from '@mui/icons-material/EastOutlined';
 import ArrowLeft from '@mui/icons-material/EastOutlined';
-
 
 // import required modules
 import {Navigation} from "swiper";
@@ -20,7 +19,6 @@ export const PortfolioSlider = () => {
     return (
         <PortfolioSliderWrapper>
             <Container>
-                {/*<SubTitle className='animate'>МЫ РУЧАЕМСЯ ЗА КАЧЕСТВО</SubTitle>*/}
                 <Title className='animate'>КЕЙСЫ</Title>
                 <ArrowBlock>
                     <ArrowRight className="prev"/>
@@ -59,7 +57,6 @@ export const PortfolioSlider = () => {
                                 <img loading="lazy" src={el.img} alt='img'/>
                                 <AboutBlock>
                                     <TitleCase>{el.header}</TitleCase>
-                                    {/*<SubTitleCase>{el.desc}</SubTitleCase>*/}
                                 </AboutBlock>
                             </Link>
                         </SwiperSlide>

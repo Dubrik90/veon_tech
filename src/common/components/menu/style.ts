@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import {flexColumn, fontSize} from "../../style/mixin";
 
 export const NavigateMenu = styled.nav`
   display: flex;

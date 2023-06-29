@@ -12,8 +12,9 @@ export const Company = () => {
             </Container>
             <Marquee speed={70}>
                 <CompanyBlock>
-                    {clients.map((el, index) => <div className={'img_block'} key={index}><img src={el.img}
-                                                                                              alt={"логотип компании"}/></div>)}
+                    {clients.map((el, index) => (
+                        <div className={'img_block'} key={index}>
+                            <img src={el.img} alt={"логотип компании"}/></div>))}
                 </CompanyBlock>
             </Marquee>
             <Container>

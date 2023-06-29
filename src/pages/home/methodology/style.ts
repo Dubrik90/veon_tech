@@ -18,12 +18,7 @@ export const Title = styled.h2`
   color: var(--colors-text-dark);
   
   @media (max-width: 768px) {
-  //  font-size: 38px;
     margin-bottom: 30px;
-  }
-  @media (max-width: 500px) {
-   // font-size: 28px;
-   // line-height: 37px;
   }
 `
 export const MethodologyBlock = styled.div`
@@ -34,7 +29,6 @@ export const MethodologyBlock = styled.div`
   @media (max-width: 600px) {
     flex-direction: column;
     row-gap: 40px;
-   // align-items: center;
   }
 `
 export const BlockColumn = styled.div`
@@ -52,10 +46,6 @@ export const BlockColumn = styled.div`
 
       @media (max-width: 600px) {
         display: none;
-        //width: 100%;
-        //height: 1px;
-        //bottom: calc(-25px + (-100 - -25) * ((100vw - 768px) / (1920 - 768)));
-        //right: 0;
       }
     }
   }
@@ -110,11 +100,6 @@ export const Button = styled.button`
   @media(max-width: 480px) {
     width: 100%;
   }
-
-
-  //@media (max-width: 980px) {
-  //  align-self: stretch;
-  //}
 
   :before {
     background-color: var(--colors-bg-green);

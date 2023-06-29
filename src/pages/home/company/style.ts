@@ -13,13 +13,11 @@ export const CompanyWrapper = styled.div`
 
 `
 export const Title = styled.h3`
-  //text-align: center;
   text-transform: uppercase;
   text-indent: 15px;
   font-weight: var(--fw-bold);
   font-size: calc(30px + (76 - 30) * ((100vw - 320px) / (1920 - 320)));
   line-height: 1.4;
-  //margin-bottom:calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
   color: var(--colors-text-dark);
   border-bottom: 2px solid #6EEC4E;
   padding-bottom: 40px;
@@ -37,7 +35,6 @@ export const CompanyBlock = styled.div`
   justify-content: center;
   padding: 60px 0;
 
-  //margin-bottom: 10px;
   @media (max-width: 768px) {
     padding: 30px 0 20px 0 ;
 
