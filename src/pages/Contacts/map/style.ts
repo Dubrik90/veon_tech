@@ -184,7 +184,6 @@ export const Errors = styled.div`
   position: absolute;
   color: red;
   bottom: -14px;
-  z-index: 90000;
   font-size: 14px;
 `
 export const SubText = styled.p`

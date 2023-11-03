@@ -13,6 +13,11 @@ import {SliderReviews} from "../../common/components/sliderReviews";
 
 
 export const Home = () => {
+
+    useEffect(() => {
+        document.title = 'Главная — RIZOFT'
+    }, [])
+
     const headerAnimate = useRef(null)
     const button = useRef(null)
     const descriptionWeb = useRef(null)
@@ -40,9 +45,9 @@ export const Home = () => {
             {/*<Technologies/>*/}
             {/*<Portfolio/>*/}
             <Company/>
-            <Layer/>
+            {/*<Layer/>*/}
             <SliderReviews/>
-            <Reviews/>
+            {/*<Reviews/>*/}
             <Contacts/>
         </>
     )

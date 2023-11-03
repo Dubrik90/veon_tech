@@ -49,7 +49,7 @@ export const MapComponent = () => {
             const errors: FormikErrorType = {}
 
             if (!values.firstName) {
-                errors.firstName = 'Поле не может быть пустым'
+                errors.firstName = 'Для отправки введите имя и телефон'
             }
 
             if (!values.phone) {
@@ -72,8 +72,6 @@ export const MapComponent = () => {
                 })
                     .then((response) => response.json())
                     .then((data) => {
-                        // Обработка ответа от сервера
-                        console.log(data);
                     })
                     .catch((error) => {
                         // Обработка ошибки

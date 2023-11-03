@@ -12,7 +12,7 @@ import {animateText} from "../../common/animate/animateText";
 export const Nda = () => {
 
     useEffect(() => {
-        document.title = 'NDA — VEON-TECH'
+        document.title = 'NDA — RIZOFT'
         animateText()
     }, [])
 

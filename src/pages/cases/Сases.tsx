@@ -33,7 +33,7 @@ export const Сases = () => {
 
 
     useEffect(() => {
-        document.title = 'Кейсы — VEON-TECH'
+        document.title = 'Кейсы — RIZOFT'
         animateText()
     }, [])
 

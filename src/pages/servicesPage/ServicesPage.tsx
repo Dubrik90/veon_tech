@@ -7,7 +7,7 @@ import {animateText} from "../../common/animate/animateText";
 export const ServicesPage = () => {
 
     useEffect(() => {
-        document.title = 'Сервисы — VEON-TECH'
+        document.title = 'Сервисы — RIZOFT'
         animateText()
     }, []);
 

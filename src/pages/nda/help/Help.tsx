@@ -15,10 +15,10 @@ import {
 } from './style';
 import {Container} from '../../../common/style/Container';
 import {useAppDispatch, useAppSelector} from "../../../common/hook";
-import Logo from '../assets/logo.png'
 import LogoLight from '../assets/logoLight.png'
 import {setIsConsultantModalOpenAC} from "../../../app/app-reduser";
 import {useScrollBlock} from "../../../common/hook/use-scroll-block";
+import {Logo} from "../../../common/components/logo/Logo";
 
 export const Help = () => {
     const theme = useAppSelector(state => state.app.theme)
@@ -45,7 +45,7 @@ export const Help = () => {
                     </TitleBlock>
                     <ButtonBlock>
                         <ImageWrapper>
-                            <Img src={theme === 'light' ? LogoLight : Logo}/>
+                            <Logo color={theme === 'light' ? '#000' : '#fff'}/>
                         </ImageWrapper>
                         <Button className='animate' onClick={onClickOpenModalHandler}>Получить консультацию</Button>
                     </ButtonBlock>

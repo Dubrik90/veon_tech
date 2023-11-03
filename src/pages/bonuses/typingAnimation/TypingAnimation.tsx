@@ -17,5 +17,5 @@ export const TypingAnimation: React.FC = () => {
         }
     }, []);
 
-    return <h1 ref={textRef}>Бонусы и скидки на разработку. Программа лояльности для клиентов компании VEON-TECH</h1>;
+    return <h1 ref={textRef}>Бонусы и скидки на разработку. Программа лояльности для клиентов компании RIZOFT</h1>;
 };

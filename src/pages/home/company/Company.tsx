@@ -5,6 +5,7 @@ import Marquee from "react-fast-marquee";
 import {clients} from "./data";
 
 export const Company = () => {
+    // @ts-ignore
     return (
         <CompanyWrapper>
             <Container>

@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Form, Formik, FormikHelpers} from "formik";
+import {ErrorMessage, Form, Formik, FormikHelpers} from "formik";
 import {
     BonuseFormWrapper,
     CheckboxContainer,
@@ -39,7 +39,8 @@ import {useAppDispatch} from "../../hook";
 import {ROUTS} from "../../constans/routs";
 import {Link, useLocation} from "react-router-dom";
 import {useScrollBlock} from "../../hook/use-scroll-block";
-
+import * as Yup from 'yup';
+import {Error} from "./style";
 
 interface MyFormValues {
     formName: string
@@ -61,6 +62,22 @@ interface MyFormValues {
     helpCompany: string,
     comment: string
 }
+
+const phoneRegExp = /^[0-9+]+$/;
+const emailRegExp = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+export const validationSchema = Yup.object().shape({
+    firstName: Yup.string().required('Имя обязательно'),
+    lastName: Yup.string().required('Фамилия обязательна'),
+    phone: Yup.string()
+        .required('Телефон обязателен')
+        .matches(phoneRegExp, 'Телефон должен содержать только цифры'),
+    email: Yup.string()
+        .email('Неверный формат почты')
+        .required('Почта обязательна')
+        .matches(emailRegExp, 'Неверный формат email адреса'),
+});
+
+export default validationSchema;
 
 
 export const FormUsers: React.FC = () => {
@@ -106,7 +123,7 @@ export const FormUsers: React.FC = () => {
     const handleFocus = (fieldName: string) => {
         setActiveField(fieldName);
     };
-    const handleBlur = () => {
+    const handleBlur = (e: any) => {
         setActiveField("");
     };
 
@@ -120,8 +137,6 @@ export const FormUsers: React.FC = () => {
         const formElement = document.querySelector("#globalForm");
         if (formElement instanceof HTMLFormElement) {
             const formData = new FormData(formElement);
-
-            // Добавление значения budget в FormData
             formData.append("budget", values.budget);
             formData.append("service", values.service);
             formData.append("formName", values.formName);
@@ -132,11 +147,9 @@ export const FormUsers: React.FC = () => {
             })
                 .then((response) => response.json())
                 .then((data) => {
-                    // Обработка ответа от сервера
-                    console.log(data);
+
                 })
                 .catch((error) => {
-                    // Обработка ошибки
                     console.error(error);
                 });
         }
@@ -164,9 +177,11 @@ export const FormUsers: React.FC = () => {
                 helpCompany: '',
                 comment: ''
             }}
+            validationSchema={validationSchema}
+            validateOnBlur={true}
             onSubmit={handleSubmit}
         >
-            {({values, handleSubmit, handleChange, setFieldValue}) => (
+            {({values, touched, getFieldProps, handleSubmit, handleChange, setFieldValue, errors}) => (
                 <BonuseFormWrapper>
                     <ContainerForm>
                         <DynamicContactHead>
@@ -194,11 +209,15 @@ export const FormUsers: React.FC = () => {
                                     name="firstName"
                                     value={values.firstName}
                                     onFocus={() => handleFocus("firstName")}
-                                    onBlur={handleBlur}
+                                    // onBlur={handleBlur}
                                 />
                                 <Label htmlFor="firstName" isActive={activeField === "firstName"}>
                                     Имя
                                 </Label>
+                                {touched.firstName && errors.firstName && (
+                                    <Error>{errors.firstName}</Error>
+                                )}
+
                             </InputContainer>
                             {/*lastName*/}
                             <InputContainer>
@@ -207,24 +226,30 @@ export const FormUsers: React.FC = () => {
                                     name="lastName"
                                     value={values.lastName}
                                     onFocus={() => handleFocus("lastName")}
-                                    onBlur={handleBlur}
+                                    //  onBlur={handleBlur}
                                 />
                                 <Label htmlFor="lastName" isActive={activeField === "lastName"}>
                                     Фамилия
                                 </Label>
+                                {touched.lastName && errors.lastName && (
+                                    <Error>{errors.lastName}</Error>
+                                )}
                             </InputContainer>
                             {/*phone*/}
                             <InputContainer>
                                 <Input
-                                    type="text"
+                                    type="phone"
                                     name="phone"
                                     value={values.phone}
                                     onFocus={() => handleFocus("phone")}
-                                    onBlur={handleBlur}
+                                    //onBlur={handleBlur}
                                 />
                                 <Label htmlFor="phone" isActive={activeField === "phone"}>
                                     Телефон
                                 </Label>
+                                {touched.phone && errors.phone && (
+                                    <Error>{errors.phone}</Error>
+                                )}
                             </InputContainer>
                             {/*email*/}
                             <InputContainer>
@@ -233,11 +258,14 @@ export const FormUsers: React.FC = () => {
                                     name="email"
                                     value={values.email}
                                     onFocus={() => handleFocus("email")}
-                                    onBlur={handleBlur}
+                                    //  onBlur={handleBlur}
                                 />
                                 <Label htmlFor="email" isActive={activeField === "email"}>
                                     Почта
                                 </Label>
+                                {touched.email && errors.email && (
+                                    <Error>{errors.email}</Error>
+                                )}
                             </InputContainer>
                             {values.personType === 'Юридическое' &&
                                 <>

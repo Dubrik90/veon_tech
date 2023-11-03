@@ -11,7 +11,7 @@ import {
 } from "./style";
 import {Container} from "../../style/Container";
 
-import logo from '../../../common/components/header/assets/apdateLogo.png'
+import logo from '../../../assets/logo.svg'
 import instagram from './assets/insta.svg'
 import facebook from './assets/facebook.svg'
 import linkedin from './assets/linkedin.svg'
@@ -40,7 +40,7 @@ export const Footer = () => {
                     </FooterTop>
                     <FooterBottom>
                         <About>
-                            <p>ООО "Веон-консалт"</p>
+                            <p>ООО "Ризофт"</p>
                             <p>УНП 193082231</p>
                         </About>
                         <AboutContact>
@@ -50,7 +50,7 @@ export const Footer = () => {
                             <p>С понедельника по пятницу</p>
                         </AboutContact>
                         <Corporation>
-                            <p>Copyright © 2023 VEON-TECH Ltd</p>
+                            <p>Copyright © 2023 RIZOFT Ltd</p>
                             <p>All Rights Reserved.</p>
                         </Corporation>
                     </FooterBottom>

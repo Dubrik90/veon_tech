@@ -38,6 +38,8 @@ import {useAppDispatch} from "../../hook";
 import {ROUTS} from "../../constans/routs";
 import {Link} from "react-router-dom";
 import {useScrollBlock} from "../../hook/use-scroll-block";
+import validationSchema from "../FormUsers/FormUsers";
+import {Error} from "../FormUsers/style";
 
 interface MyFormValues {
     formName: string,
@@ -81,11 +83,10 @@ export const BonuseForm: React.FC = () => {
 
     const handleSubmit = (
         values: MyFormValues,
-        { setSubmitting }: FormikHelpers<MyFormValues>
+        {setSubmitting}: FormikHelpers<MyFormValues>
     ) => {
         setSubmitting(true);
         closeFormModal();
-        console.log(values);
 
         const formElement = document.querySelector("#bonusForm");
         if (formElement instanceof HTMLFormElement) {
@@ -100,11 +101,9 @@ export const BonuseForm: React.FC = () => {
             })
                 .then((response) => response.json())
                 .then((data) => {
-                    // Обработка ответа от сервера
-                    console.log(data);
+
                 })
                 .catch((error) => {
-                    // Обработка ошибки
                     console.error(error);
                 });
         }
@@ -133,9 +132,14 @@ export const BonuseForm: React.FC = () => {
                 comment: ''
 
             }}
+            validationSchema={validationSchema}
+            validateOnBlur={true}
             onSubmit={handleSubmit}
         >
-            {({values, handleSubmit, handleChange, setFieldValue}) => (
+            {({
+                  values, touched, errors,
+                  handleSubmit, handleChange, setFieldValue
+              }) => (
                 <BonuseFormWrapper>
                     <ContainerForm>
                         <DynamicContactHead>
@@ -163,11 +167,14 @@ export const BonuseForm: React.FC = () => {
                                     name="firstName"
                                     value={values.firstName}
                                     onFocus={() => handleFocus("firstName")}
-                                    onBlur={handleBlur}
+                                    //onBlur={handleBlur}
                                 />
                                 <Label htmlFor="firstName" isActive={activeField === "firstName"}>
                                     Имя
                                 </Label>
+                                {touched.firstName && errors.firstName && (
+                                    <Error>{errors.firstName}</Error>
+                                )}
                             </InputContainer>
                             {/*lastName*/}
                             <InputContainer>
@@ -176,24 +183,30 @@ export const BonuseForm: React.FC = () => {
                                     name="lastName"
                                     value={values.lastName}
                                     onFocus={() => handleFocus("lastName")}
-                                    onBlur={handleBlur}
+                                   // onBlur={handleBlur}
                                 />
                                 <Label htmlFor="lastName" isActive={activeField === "lastName"}>
                                     Фамилия
                                 </Label>
+                                {touched.lastName && errors.lastName && (
+                                    <Error>{errors.lastName}</Error>
+                                )}
                             </InputContainer>
                             {/*phone*/}
                             <InputContainer>
                                 <Input
-                                    type="text"
+                                    type="tel"
                                     name="phone"
                                     value={values.phone}
                                     onFocus={() => handleFocus("phone")}
-                                    onBlur={handleBlur}
+                                  //  onBlur={handleBlur}
                                 />
                                 <Label htmlFor="phone" isActive={activeField === "phone"}>
                                     Телефон
                                 </Label>
+                                {touched.phone && errors.phone && (
+                                    <Error>{errors.phone}</Error>
+                                )}
                             </InputContainer>
                             {/*email*/}
                             <InputContainer>
@@ -202,11 +215,14 @@ export const BonuseForm: React.FC = () => {
                                     name="email"
                                     value={values.email}
                                     onFocus={() => handleFocus("email")}
-                                    onBlur={handleBlur}
+                                 //   onBlur={handleBlur}
                                 />
                                 <Label htmlFor="email" isActive={activeField === "email"}>
                                     Почта
                                 </Label>
+                                {touched.email && errors.email && (
+                                    <Error>{errors.email}</Error>
+                                )}
                             </InputContainer>
                             {values.personType === 'Юридическое' &&
                                 <>

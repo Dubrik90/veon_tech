@@ -63,7 +63,7 @@ export const DescriptionWeb: FC<DescriptionWebProps> = ({descriptionWeb}) => {
                 <DescriptionWebContent>
                     <DescriptionWebBlock>
                         <AboutText className={'animate'}>
-                            <span>VEON-TECH</span> — это профессиональный разработчик, веб-сервисов, интернет-порталов и
+                            <span>RIZOFT</span> — это профессиональный разработчик, веб-сервисов, интернет-порталов и
                             сайтов любой направленности. Также компания, которая оказывает услуги по поисковому
                             продвижению и управлению репутацией в интернете.
                         </AboutText>

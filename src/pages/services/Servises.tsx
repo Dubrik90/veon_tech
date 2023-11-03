@@ -26,13 +26,13 @@ export const Services = () => {
 
     useEffect(() => {
         if (service === 'webDev') {
-            document.title = 'Разработка сайтов — VEON-TECH'
+            document.title = 'Разработка сайтов — RIZOFT'
         } else if (service === 'support') {
-            document.title = 'Поддержка сайтов — VEON-TECH'
+            document.title = 'Поддержка сайтов — RIZOFT'
         } else if (service === 'ux') {
-            document.title = 'UX/UI Дизайн — VEON-TECH'
+            document.title = 'UX/UI Дизайн — RIZOFT'
         } else if (service === 'webPO') {
-            document.title = 'Разработка ПО — VEON-TECH'
+            document.title = 'Разработка ПО — RIZOFT'
         }
 
         //  document.title = 'Кейсы — VEON-TECH'
@@ -201,7 +201,7 @@ export const Services = () => {
                         <div className="entry-content">
                             <Title>Разработка програмного обеспечения</Title>
                             <Text>Все-таки трудно автомотизировать бизнес :(</Text>
-                            <TextCursive>VEON-TECH поможет вам решить рутинные бизнес-задачи!</TextCursive>
+                            <TextCursive>RIZOFT поможет вам решить рутинные бизнес-задачи!</TextCursive>
                             <LinkBlock>
                                 <div>Автоматизация бизнес-задач</div>
                                 <div>Уменьшение нагрузки на персонал</div>

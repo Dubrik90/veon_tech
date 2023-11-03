@@ -24,7 +24,7 @@ export type SaleCardsType = {
 export const Bonuses = () => {
 
     useEffect(() => {
-        document.title = 'Бонусы — VEON-TECH'
+        document.title = 'Бонусы — RIZOFT'
         animateText()
     }, [])
 
@@ -86,7 +86,7 @@ export const Bonuses = () => {
             <BonusesContent>
                 <Container>
                     <TextBlock>
-                        <Text className='animate'>Для команды VEON-TECH клиенты – на первом месте. Нам нравится
+                        <Text className='animate'>Для команды RIZOFT клиенты – на первом месте. Нам нравится
                             заботиться о своих клиентах,
                             поэтому мы рекомендуем подходить к разработке комплексно, использовать максимальное
                             количество

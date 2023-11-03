@@ -19,7 +19,7 @@ export const AboutHeader = () => {
             <Container>
                 <HeaderBlock>
                     <HeaderContent>
-                        <Title className={'animate'}> <span>VEON-TECH</span> — надежность и опыт в каждом
+                        <Title className={'animate'}> <span>RIZOFT</span> — надежность и опыт в каждом
                             проекте</Title>
                         {/*<Button>Скачать презентацию</Button>*/}
                         {/*<Text>{text}</Text>*/}
