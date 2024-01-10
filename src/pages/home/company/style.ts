@@ -48,7 +48,7 @@ export const CompanyBlock = styled.div`
 
   .img_block img {
     max-width: 285px;
-    height: 150px;
+    height: 70px;
     object-fit: contain;
     @media (max-width: 768px) {
       max-width: 200px;

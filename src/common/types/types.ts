@@ -11,7 +11,7 @@ export type CaseType = {
     type: FilterCaseType,
     route: string,
     img: string,
-    title: string,
+    title: string[],
     industry: string,
     country: string,
     about: string,

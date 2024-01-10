@@ -22,9 +22,10 @@ export const Menu: FC<MenuProps> = ({isOpenBurger, onClick, onClickCloseBurger})
         {title: 'ВАКАНСИИ', to: ROUTS.JOBS},
     ]
     const submenuLinksServices = [
-        {title: 'Разработка сайтов', to: `/services/webDev`},
-        {title: 'Поддержка сайтов', to: `/services/support`},
+        {title: 'Разработка сайта', to: `/services/webDev`},
+        {title: 'Разработка мобильного приложения', to: `/services/mobileDevelopment`},
         {title: 'Разработка ПО', to: `/services/webPO`},
+        {title: 'Поддержка проекта', to: `/services/support`},
         {title: 'UX/UI дизайн', to: `/services/ux`},
     ]
 

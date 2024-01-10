@@ -66,7 +66,7 @@ export const Title = styled.h2`
   row-gap: 10px;
   
   p:nth-child(3) {
-    font-size: 18px;
+  //  font-size: 18px;
   }
 
   p span {

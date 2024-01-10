@@ -13,6 +13,34 @@ import {Container} from '../../../common/style/Container';
 import {setFilterCategoryAC, setFilterCountryAC, setFilterIndustryAC} from "../../../app/app-reduser";
 import {useAppDispatch} from "../../../common/hook";
 
+export enum CategoryFilterType {
+    INTERNET_MAGAZINE = "Интернет-магазин",
+    MARKETPLACE = "Маркетплейс",
+    WEB_SERVICE = "Веб-сервис",
+    INTERNET_CATALOG = "Интернет-каталог",
+    CORPORATE_SITE = "Корпоративный сайт",
+    LANDING_PAGE = "Лендинг",
+    MOBILE_APP = "Мобильное приложение",
+    SOFTWARE = "Программное обеспечение",
+}
+
+export enum IndustryFilterType {
+    MEDICINE = "Медицина",
+    TRADE = "Торговля",
+    ENTERTAINMENT = "Развлечение",
+    LOGISTICS = "Логистика",
+    PRODUCTION = "Производство",
+    AUTO = "Авто",
+    RENTAL = "Аренда",
+    FOOD = "Питание",
+}
+
+export enum CountryFilterType {
+    RUSSIA = "РФ",
+    BELARUS = "РБ",
+    USA = "США",
+    EUROPE = "Европа",
+}
 
 
 export const FilterCase: React.FC = () => {
@@ -58,18 +86,41 @@ export const FilterCase: React.FC = () => {
         {
             id: '0',
             filterName: 'Категории',
-           // type: ['magazines', 'catalogs', 'sites', 'visit'],
-            filterCategories: ['Интернет-магазины', 'Интернет-каталоги', 'Корпоративные сайты', 'Веб-сервисы', 'Мобильные приложения', 'ПО' ]
+            // type: ['magazines', 'catalogs', 'sites', 'visit'],
+            filterCategories: [
+                CategoryFilterType.INTERNET_MAGAZINE,
+                CategoryFilterType.MARKETPLACE,
+                CategoryFilterType.WEB_SERVICE,
+                CategoryFilterType.INTERNET_CATALOG,
+                CategoryFilterType.CORPORATE_SITE,
+                CategoryFilterType.LANDING_PAGE,
+                CategoryFilterType.MOBILE_APP,
+                CategoryFilterType.SOFTWARE,
+            ]
         },
         {
             id: '1',
             filterName: 'Отрасли',
-            filterCategories: ['Медицина', 'Интернет торговля', 'Развлечения', 'Логистика']
+            filterCategories: [
+                IndustryFilterType.MEDICINE,
+                IndustryFilterType.TRADE,
+                IndustryFilterType.ENTERTAINMENT,
+                IndustryFilterType.LOGISTICS,
+                IndustryFilterType.PRODUCTION,
+                IndustryFilterType.AUTO,
+                IndustryFilterType.RENTAL,
+                IndustryFilterType.FOOD,
+            ]
         },
         {
             id: '2',
             filterName: 'Страны',
-            filterCategories: ['Беларусь', 'Россия', 'США', 'Европа']
+            filterCategories: [
+                CountryFilterType.RUSSIA,
+                CountryFilterType.BELARUS,
+                CountryFilterType.USA,
+                CountryFilterType.EUROPE,
+            ]
         },
     ]
 

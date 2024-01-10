@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {flexColumn} from "../../../../common/style/mixin";
-import {TextRegular, TitleH3} from "../../../../common/style/global";
+import {TextRegular} from "../../../../common/style/global";
 
 export const CardWrapper = styled.div`
   ${flexColumn()};

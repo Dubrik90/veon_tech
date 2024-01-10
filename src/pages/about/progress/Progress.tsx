@@ -23,8 +23,8 @@ export const Progress = () => {
                 <ProgressContentTop>
                     <Ul>
                         <Li className={'animate'}>
-                            <SubTitle>+20</SubTitle>
-                            <Text>сфер покорили бок о бок<br/> с нашими клиентами</Text>
+                            <SubTitle>+6</SubTitle>
+                            <Text>сфер покорили вместе<br/> с нашими клиентами</Text>
                         </Li>
                         <Li className={'animate'}>
                             <SubTitle>+5</SubTitle>
@@ -32,12 +32,12 @@ export const Progress = () => {
                             </Text>
                         </Li>
                         <Li className={'animate'}>
-                            <SubTitle>+80</SubTitle>
+                            <SubTitle>+35</SubTitle>
                             <Text>блистательно реализованных проектов</Text>
                         </Li>
                         <Li className={'animate'}>
-                            <SubTitle>+50</SubTitle>
-                            <Text>клиентов достигли успеха доверяя нам</Text>
+                            <SubTitle>+15</SubTitle>
+                            <Text>клиентов достигли успеха бок о бок с нами</Text>
                         </Li>
                     </Ul>
                 </ProgressContentTop>

@@ -72,17 +72,17 @@ export const SubMenu = styled.ul`
   visibility: hidden;
   transition: all 0.3s;
   transform: translate(15px, 24px);
-  min-width: 220px;
+  min-width: 275px;
   position: absolute;
   left: -16px;
-  top: 95%;
+  top: 100%;
   z-index: 10;
   background: var(--colors-bg);
   box-shadow: 0 7px 10px rgba(0, 0, 0, 0.25);
   padding: 10px 15px;
   display: flex;
   flex-direction: column;
-  row-gap: 8px;
+  row-gap: 4px;
   border-radius: 5px;
 
   @media (max-width: 1320px) {
@@ -100,7 +100,7 @@ export const SubMenu = styled.ul`
 
   a {
     font-size: 13px;
-    line-height: 11px;
+    line-height: 1.3;
     color: var(--colors-text-dark);
     position: relative;
     display: flex;

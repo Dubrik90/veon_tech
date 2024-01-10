@@ -103,10 +103,10 @@ export const FormUsers: React.FC = () => {
     ]
 
     const budgetValuesArray = [
-        {val: 'Индивидуальный расчет'},
-        {val: '5K - 10K'},
-        {val: '10K - 50K'},
-        {val: 'Больше 50 K'},
+        // {val: 'Индивидуальный расчет'},
+        {val: '1K - 2K'},
+        {val: '3K - 9K'},
+        {val: 'Больше 10K'},
     ]
 
     const servicesArray = [

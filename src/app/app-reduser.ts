@@ -11,6 +11,7 @@ import kentavr from "../pages/cases/assets/kentavr.webp";
 import artMedia from "../pages/cases/assets/artMedia.webp";
 import sodox from "../pages/cases/assets/sodox.webp";
 import sinaradesign from "../pages/cases/assets/sinaradesign.webp";
+import {CategoryFilterType, CountryFilterType, IndustryFilterType} from "../pages/cases/filterCase/FilterCase";
 
 const initialState: InitialStateStateType = {
     theme: 'light',
@@ -32,11 +33,11 @@ const initialState: InitialStateStateType = {
         {
             id: '1',
             type: 'visit',
-            title: 'Интернет-каталоги',
+            title: [CategoryFilterType.WEB_SERVICE, CategoryFilterType.MARKETPLACE],
             name: 'Счастливый слон',
             about: 'Разработка календаря бронирования',
-            country: 'Россия',
-            industry: 'Развлечения',
+            country: CountryFilterType.RUSSIA,
+            industry: IndustryFilterType.ENTERTAINMENT,
             color: '',
             desk: 'Сайт для корректного отображения на всех устройствах!',
             route: ROUTS.CASE_PAPPY_ELEPHANT,
@@ -45,12 +46,12 @@ const initialState: InitialStateStateType = {
         {
             id: '2',
             type: 'sites',
-            title: 'Корпоративные сайты',
+            title: [CategoryFilterType.CORPORATE_SITE],
             name: 'Коннектор Оптикс',
             about: 'Разработка корпоративного сайта',
             desk: '',
-            country: 'Россия',
-            industry: 'Медицина',
+            country: CountryFilterType.RUSSIA,
+            industry: IndustryFilterType.TRADE,
             color: 'wight',
             route: ROUTS.CASE_OPTICS,
             img: optics
@@ -58,12 +59,12 @@ const initialState: InitialStateStateType = {
         {
             id: '3',
             type: 'visit',
-            title: 'Интернет-каталоги',
+            title: [CategoryFilterType.INTERNET_CATALOG],
             name: ' B.Well Swiss',
             about: 'Редизайн интернет-каталога',
             desk: 'Простое и понятное решение, которое помогает!',
-            country: 'Россия',
-            industry: '',
+            country: CountryFilterType.EUROPE,
+            industry: IndustryFilterType.MEDICINE,
             route: ROUTS.CASE_SWISS,
             color: '',
             img: swiss
@@ -72,12 +73,12 @@ const initialState: InitialStateStateType = {
         {
             id: '4',
             type: 'visit',
-            title: 'Веб-сервисы',
+            title: [CategoryFilterType.WEB_SERVICE],
             name: 'LLC "PartyIntel"',
             about: 'Cервис поиска услуг',
             desk: '',
-            country: 'США',
-            industry: 'Развлечения',
+            country: CountryFilterType.USA,
+            industry: IndustryFilterType.ENTERTAINMENT,
             route: ROUTS.CASE_PARTY_INTEL,
             color: 'wight',
             img: party
@@ -85,12 +86,12 @@ const initialState: InitialStateStateType = {
         {
             id: '5',
             type: 'magazines',
-            title: 'Интернет-каталоги',
+            title: [CategoryFilterType.INTERNET_CATALOG],
             name: 'Уральская гранитная компания',
             about: 'Создание сайта-каталога',
             desk: 'Тот самый дизайн, который отличает от других!',
-            country: 'Россия',
-            industry: 'Интернет торговля',
+            country: CountryFilterType.RUSSIA,
+            industry: IndustryFilterType.TRADE,
             route: ROUTS.CASE_GRANIT,
             color: 'wight',
             img: ural
@@ -98,12 +99,12 @@ const initialState: InitialStateStateType = {
         {
             id: '6',
             type: 'catalogs',
-            title: 'Корпоративные сайты',
+            title: [CategoryFilterType.INTERNET_CATALOG],
             name: 'Centavras Kft',
             about: 'Разработка корпоративного сайта',
             desk: 'Делаем в кротчайшие срок и учитываем желания!',
-            country: 'Европа',
-            industry: 'Логистика',
+            country: CountryFilterType.EUROPE,
+            industry: IndustryFilterType.TRADE,
             route: ROUTS.CASE_CENTAVRAS,
             color: '',
             img: kentavr
@@ -111,12 +112,12 @@ const initialState: InitialStateStateType = {
         {
             id: '7',
             type: 'sites',
-            title: 'Веб-сервисы',
+            title: [CategoryFilterType.WEB_SERVICE, CategoryFilterType.MARKETPLACE],
             name: 'ArtDoc.media',
             about: 'Разработка онлайн сервиса',
             desk: '',
-            country: 'Россия',
-            industry: 'Развлечения',
+            country: CountryFilterType.EUROPE,
+            industry: IndustryFilterType.ENTERTAINMENT,
             route: ROUTS.CASE_ART_MEDIA,
             color: '',
             img: artMedia
@@ -124,12 +125,12 @@ const initialState: InitialStateStateType = {
         {
             id: '8',
             type: 'magazines',
-            title: 'Интернет-каталоги',
+            title: [CategoryFilterType.INTERNET_CATALOG],
             name: 'ООО "Содокс Пром"',
             about: 'Создание сайта-каталога',
             desk: 'Создание современного сайта, с которым можно выделиться!',
-            country: 'Беларусь',
-            industry: 'Интернет торговля',
+            country: CountryFilterType.BELARUS,
+            industry: IndustryFilterType.PRODUCTION,
             route: ROUTS.CASE_SODOX,
             color: '',
             img: sodox
@@ -137,12 +138,12 @@ const initialState: InitialStateStateType = {
         {
             id: '9',
             type: 'catalogs',
-            title: 'Интернет-каталоги',
+            title: [CategoryFilterType.WEB_SERVICE],
             name: 'ООО "Рент клаб"',
             about: 'Создание маркетплейса',
             desk: '',
-            country: 'Россия',
-            industry: 'Интернет торговля',
+            country: CountryFilterType.RUSSIA,
+            industry: IndustryFilterType.RENTAL,
             route: ROUTS.CASE_RENT_CLUB,
             color: '',
             img: rent
@@ -150,12 +151,12 @@ const initialState: InitialStateStateType = {
         {
             id: '10',
             type: 'catalogs',
-            title: 'Интернет-каталоги',
+            title: [CategoryFilterType.INTERNET_CATALOG],
             name: 'ООО "Sinaradesign"',
             about: 'Разработка сайта каталога',
             desk: 'Уникальный дизайн удовлетворяющий современные тенденции!',
-            country: 'Россия',
-            industry: 'Интернет торговля',
+            country: CountryFilterType.RUSSIA,
+            industry: IndustryFilterType.TRADE,
             route: ROUTS.CASE_SINARADESING,
             color: '',
             img: sinaradesign

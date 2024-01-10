@@ -46,7 +46,7 @@ export const Home = () => {
             {/*<Portfolio/>*/}
             <Company/>
             {/*<Layer/>*/}
-            <SliderReviews/>
+            {/*<SliderReviews/>*/}
             {/*<Reviews/>*/}
             <Contacts/>
         </>

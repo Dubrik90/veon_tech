@@ -12,8 +12,7 @@ export const Сases = () => {
 
     const casesArray = useAppSelector(state => state.app.cases)
     const [resultFilterArray, setResultFilterArray] = useState<CaseType[]>(casesArray)
-    const {filterCountry, filterCategory, filterIndustry} = useAppSelector(state => state.app)
-
+    const { filterCountry, filterCategory, filterIndustry } = useAppSelector(state => state.app)
 
     useEffect(() => {
 
@@ -25,12 +24,11 @@ export const Сases = () => {
         setResultFilterArray(casesArray.filter(el => {
             return filterCountry.length ? filterCountry.includes(el.country) : resultFilterArray
         }).filter(el => {
-            return filterCategory.length ? filterCategory.includes(el.title) : resultFilterArray
+            return filterCategory.length ? filterCategory.some(category => el.title.includes(category)) : resultFilterArray
         }).filter(el => {
             return filterIndustry.length ? filterIndustry.includes(el.industry) : resultFilterArray
         }))
     }, [filterCountry, filterCategory, filterIndustry])
-
 
     useEffect(() => {
         document.title = 'Кейсы — RIZOFT'
