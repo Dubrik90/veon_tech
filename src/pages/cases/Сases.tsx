@@ -26,7 +26,7 @@ export const Сases = () => {
         }).filter(el => {
             return filterCategory.length ? filterCategory.some(category => el.title.includes(category)) : resultFilterArray
         }).filter(el => {
-            return filterIndustry.length ? filterIndustry.includes(el.industry) : resultFilterArray
+            return filterIndustry.length ? filterIndustry.some(industry => el.industry.includes(industry))  : resultFilterArray
         }))
     }, [filterCountry, filterCategory, filterIndustry])
 

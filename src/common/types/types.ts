@@ -12,7 +12,7 @@ export type CaseType = {
     route: string,
     img: string,
     title: string[],
-    industry: string,
+    industry: string[],
     country: string,
     about: string,
     name: string,
