@@ -2,14 +2,11 @@ import React, {useEffect, useRef} from 'react';
 import {DescriptionWeb} from './descriptionWeb/DescriptionWeb';
 import {HeadrMain} from './headrMain/HeadrMain';
 import {Company} from './company/Company';
-import {Reviews} from './reviews/Reviews';
 import {Contacts} from "./contacts";
-import {Layer} from "./layer";
 import {gsap} from "gsap";
 import {Methodology} from "./methodology";
 import {Techno} from './techno';
 import {PortfolioSlider} from './portfolioSlider/PortfolioSlider';
-import {SliderReviews} from "../../common/components/sliderReviews";
 
 
 export const Home = () => {

@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {ErrorMessage, Form, Formik, FormikHelpers} from "formik";
+import {Form, Formik, FormikHelpers} from "formik";
 import {
     BonuseFormWrapper,
     CheckboxContainer,
