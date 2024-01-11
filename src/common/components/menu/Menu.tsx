@@ -51,8 +51,8 @@ export const Menu: FC<MenuProps> = ({isOpenBurger, onClick, onClickCloseBurger})
                 <MenuItem>
                     <NavLink onClick={onClickCloseBurger} to={ROUTS.CASES}>
                          <span className='link__wrap'>
-                            <span className='link__title'>КЕЙСЫ
-                            <span className="link__title--duplicate">КЕЙСЫ</span>
+                        <span className='link__title'>КЕЙСЫ
+                        <span className="link__title--duplicate">КЕЙСЫ</span>
                         </span>
                     </span>
                     </NavLink>
@@ -89,10 +89,10 @@ export const Menu: FC<MenuProps> = ({isOpenBurger, onClick, onClickCloseBurger})
                     </NavLink>
                 </MenuItem>
                 <MenuItem onClick={onClickCloseBurger}>
-                    <a href="https://blog.rizoft.by/" >
-                        <span className='link__wrap'>
-                            <span className='link__title'>БЛОГ
-                            <span className="link__title--duplicate">БЛОГ</span>
+                    <a href="https://blog.rizoft.by/">
+                       <span className='link__wrap'>
+                        <span className='link__title'>БЛОГ
+                        <span className="link__title--duplicate">БЛОГ</span>
                         </span>
                     </span>
                     </a>
