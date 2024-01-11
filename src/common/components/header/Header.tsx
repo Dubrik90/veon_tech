@@ -9,7 +9,7 @@ import {ROUTS} from "../../constans/routs";
 import gsap from "gsap";
 import {setIsOpenBurgerAC, setIsSelectThemBlockedAC, setThemeAC} from "../../../app/app-reduser";
 import {useScrollBlock} from "../../hook/use-scroll-block";
-import ApdateLogo from '../../../assets/logo.svg'
+import ApdateLogo from './assets/apdateLogo.png'
 import {Logo} from "../logo/Logo";
 
 
@@ -108,7 +108,7 @@ export const Header = () => {
                 <Container>
                     <HeaderContent>
                         <Link to={ROUTS.HOME} onClick={onClickUpHandler}>
-                            <Logo color={theme === 'light' ? '#000' : '#fff'}/>
+                            <img loading="lazy" src={ApdateLogo} alt="logo company"/>
                         </Link>
                         <Menu isOpenBurger={isOpenBurger}
                               onClick={toggleTheme}
