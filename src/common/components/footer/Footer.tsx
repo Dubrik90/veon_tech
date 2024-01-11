@@ -45,7 +45,7 @@ export const Footer = () => {
                         </About>
                         <AboutContact>
                             <a href="tel:+375293028790">+375 (29) 302-87-90</a>
-                            <a rel="noreferrer" target={"_blank"} href={`mailto:sales@veon-tech.ru`}>sales@veon-tech.ru</a>
+                            <a rel="noreferrer" target={"_blank"} href={`mailto:clients@veon-tech.ru`}>clients@veon-tech.ru</a>
                             <p>220068, г. Минск, ул. Сурганова, 57б, офис 187</p>
                             <p>С понедельника по пятницу</p>
                         </AboutContact>

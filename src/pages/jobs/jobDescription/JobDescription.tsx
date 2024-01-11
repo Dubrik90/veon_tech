@@ -53,7 +53,7 @@ export const JobDescription = () => {
                                 Амбициозная и целеустремленная команда экспертов, с большим стремлением оказывать
                                 высококачественные услуги по интернет-маркетингу и веб-разработке. <br/> Если Вы желаете стать
                                 частью нашей команды, тогда отправляйте нам Ваше резюме на электронную почту:
-                                sales@veon-tech.ru
+                                clients@veon-tech.ru
                             </About>
                             <About className='animate'>
                                 Если Вы ищете душевное место работы с классной атмосферой, приятными людьми и хорошей
@@ -80,7 +80,7 @@ export const JobDescription = () => {
                             <EchoText>
                                 Пожалуйста вышлите Ваше резюме на контактный e-mail указанный ниже. Мы рассмотрим Вашу
                                 кандидатуру и дадим ответ в течение 3-5 рабочих дней.
-                                <a rel="noreferrer" target={"_blank"} href={`mailto:sales@veon-tech.ru`}>sales@veon-tech.ru</a>
+                                <a rel="noreferrer" target={"_blank"} href={`mailto:clients@veon-tech.ru`}>clients@veon-tech.ru</a>
                             </EchoText>
                         </EchoBlock>
                         <EchoBlock>

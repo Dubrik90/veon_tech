@@ -21,7 +21,7 @@ export const Requisites = () => {
                         <P>BY05ALFA30122354480010270000 в RUB</P>
                         <P>в ЗАО 'Альфа-Банк'</P>
                         <P>БИК: ALFABY2X</P>
-                        <P>sales@veon-tech.ru</P>
+                        <P>clients@veon-tech.ru</P>
                     </RequisitesContent>
                     <DocBlock>
                         <ImgBlock>
