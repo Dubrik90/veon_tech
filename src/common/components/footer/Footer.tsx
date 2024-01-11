@@ -50,7 +50,7 @@ export const Footer = () => {
                             <p>С понедельника по пятницу</p>
                         </AboutContact>
                         <Corporation>
-                            <p>Copyright © 2023 RIZOFT Ltd</p>
+                            <p>Copyright © 2023 VEON-TECH Ltd</p>
                             <p>All Rights Reserved.</p>
                         </Corporation>
                     </FooterBottom>

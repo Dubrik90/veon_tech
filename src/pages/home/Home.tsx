@@ -15,7 +15,7 @@ import {SliderReviews} from "../../common/components/sliderReviews";
 export const Home = () => {
 
     useEffect(() => {
-        document.title = 'Главная — RIZOFT'
+        document.title = 'Главная — VEON-TECH'
     }, [])
 
     const headerAnimate = useRef(null)

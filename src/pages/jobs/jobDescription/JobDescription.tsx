@@ -33,7 +33,7 @@ export const JobDescription = () => {
     ]
     const linksArrayData = [
         {title: 'О нашей компании', to: ROUTS.ABOUT},
-        {title: 'Работа в RIZOFT', to: ROUTS.JOBS},
+        {title: 'Работа в VEON-TECH', to: ROUTS.JOBS},
         {title: 'Отзывы клиентов', to: ''},
         {title: 'Бонусы', to: ROUTS.BONUSES},
     ]
@@ -42,7 +42,7 @@ export const JobDescription = () => {
         <JobDescriptionWrapper>
             <ContainerJob>
                 <TitleHead className='animate'>
-                    Работа в RIZOFT</TitleHead>
+                    Работа в VEON-TECH</TitleHead>
                 <DescriptionBlock>
                     <DescriptionContent>
                         <BarLinksMobile>
@@ -62,7 +62,7 @@ export const JobDescription = () => {
                         </AboutBlock>
                         <AboutQuality>
                             <SubTitle className='animate'>Мы работаем эффективно, поэтому у нас 7-часовой рабочий день!</SubTitle>
-                            <Title>Почему нужно работать именно в RIZOFT?</Title>
+                            <Title>Почему нужно работать именно в VEON-TECH?</Title>
                             <CardsBlock>
                                 {cardArrayData.map((el, index) => <Card className='animate' key={index}>{el.title}</Card>)}
                             </CardsBlock>

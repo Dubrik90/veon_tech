@@ -6,7 +6,7 @@ import {animateText} from "../../common/animate/animateText";
 export const Jobs = () => {
 
     useEffect(() => {
-        document.title = 'Вакансии — RIZOFT'
+        document.title = 'Вакансии — VEON-TECH'
         animateText()
     }, [])
 
