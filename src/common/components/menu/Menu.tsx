@@ -79,13 +79,24 @@ export const Menu: FC<MenuProps> = ({isOpenBurger, onClick, onClickCloseBurger})
                         </span>
                     </span>
                 </NavLink></MenuItem>
-                <MenuItem onClick={onClickCloseBurger}><NavLink to={ROUTS.CONTACTS}>
+                <MenuItem onClick={onClickCloseBurger}>
+                    <NavLink to={ROUTS.CONTACTS}>
                     <span className='link__wrap'>
                         <span className='link__title'>КОНТАКТЫ
                         <span className="link__title--duplicate">КОНТАКТЫ</span>
                         </span>
                     </span>
-                </NavLink></MenuItem>
+                    </NavLink>
+                </MenuItem>
+                <MenuItem onClick={onClickCloseBurger}>
+                    <a href="https://blog.rizoft.by/">
+                       <span className='link__wrap'>
+                        <span className='link__title'>БЛОГ
+                        <span className="link__title--duplicate">БЛОГ</span>
+                        </span>
+                    </span>
+                    </a>
+                </MenuItem>
                 <Switch theme={theme} onClick={onClick}/>
             </MenuList>
         </NavigateMenu>
