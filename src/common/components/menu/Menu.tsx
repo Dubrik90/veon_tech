@@ -89,7 +89,7 @@ export const Menu: FC<MenuProps> = ({isOpenBurger, onClick, onClickCloseBurger})
                     </NavLink>
                 </MenuItem>
                 <MenuItem onClick={onClickCloseBurger}>
-                    <a href="https://blog.rizoft.by/">
+                    <a href="https://blog.veon-tech.by/">
                        <span className='link__wrap'>
                         <span className='link__title'>БЛОГ
                         <span className="link__title--duplicate">БЛОГ</span>
