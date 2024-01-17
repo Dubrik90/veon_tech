@@ -17,8 +17,8 @@ export type reviewDataType = {
 }
 export const reviewData: reviewDataType[] = [
     {
-        review: 'It was very comfortable to work with the RIZOFT team! All deadlines and agreements were met, communication was easy and efficient. The team members proved themselves to be true professionals! Before starting work, the team studied the products, market and consumers. This helped us find solutions that, in combination, produced excellent results and made the website convenient and unique.',
-        entireReview: 'С командой RIZOFT было очень комфортно работать! Соблюдались все сроки, договоренности, связь была легкой и оперативной. Члены команды показали себя настоящими профессионалами! Перед стартом работы команда изучила продукты, рынок и потребителя. Это помогло нам найти решения, которые в совокупности дали отличный результат и позволили сделать сайт удобным и неповторимым.',
+        review: 'It was very comfortable to work with the VEON-TECH team! All deadlines and agreements were met, communication was easy and efficient. The team members proved themselves to be true professionals! Before starting work, the team studied the products, market and consumers. This helped us find solutions that, in combination, produced excellent results and made the website convenient and unique.',
+        entireReview: 'С командой VEON-TECH было очень комфортно работать! Соблюдались все сроки, договоренности, связь была легкой и оперативной. Члены команды показали себя настоящими профессионалами! Перед стартом работы команда изучила продукты, рынок и потребителя. Это помогло нам найти решения, которые в совокупности дали отличный результат и позволили сделать сайт удобным и неповторимым.',
         logoComp: '',
         logoUser: User1,
         userName: 'A. Brown',

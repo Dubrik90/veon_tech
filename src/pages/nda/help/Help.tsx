@@ -19,6 +19,7 @@ import LogoLight from '../assets/logoLight.png'
 import {setIsConsultantModalOpenAC} from "../../../app/app-reduser";
 import {useScrollBlock} from "../../../common/hook/use-scroll-block";
 import {Logo} from "../../../common/components/logo/Logo";
+import ApdateLogo from "../../../common/components/header/assets/apdateLogo.png";
 
 export const Help = () => {
     const theme = useAppSelector(state => state.app.theme)
@@ -45,13 +46,13 @@ export const Help = () => {
                     </TitleBlock>
                     <ButtonBlock>
                         <ImageWrapper>
-                            <Logo color={theme === 'light' ? '#000' : '#fff'}/>
+                            <img loading="lazy" src={ApdateLogo} alt="logo company"/>
                         </ImageWrapper>
                         <Button className='animate' onClick={onClickOpenModalHandler}>Получить консультацию</Button>
                     </ButtonBlock>
                     <ContactBlock>
-                        <PhoneLink href="tel:+37529302-87-90">+375(29)302-87-90</PhoneLink>
-                        <Email>sales@veon-tech.ru</Email>
+                        <PhoneLink href="tel:+79955775163">+7 (995) 577-51-63</PhoneLink>
+                        <Email>clients@veon-tech.ru</Email>
                     </ContactBlock>
                 </HelpContent>
             </Container>

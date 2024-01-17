@@ -62,6 +62,12 @@ export const ButtonBlock = styled.div`
   row-gap: 10px;
 `
 export const ImageWrapper = styled.div`
+  max-width: 300px;
+  
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
 `
 export const Img = styled.img`
   object-fit: cover;

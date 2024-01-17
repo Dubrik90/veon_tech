@@ -24,7 +24,7 @@ import {ServicesPage} from './pages/servicesPage';
 
 function App() {
     useEffect(() => {
-        document.title = 'Главная — RIZOFT'
+        document.title = 'Главная — VEON-TECH'
     }, [])
 
 

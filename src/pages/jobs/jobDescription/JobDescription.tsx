@@ -33,7 +33,7 @@ export const JobDescription = () => {
     ]
     const linksArrayData = [
         {title: 'О нашей компании', to: ROUTS.ABOUT},
-        {title: 'Работа в RIZOFT', to: ROUTS.JOBS},
+        {title: 'Работа в VEON-TECH', to: ROUTS.JOBS},
         {title: 'Отзывы клиентов', to: ''},
         {title: 'Бонусы', to: ROUTS.BONUSES},
     ]
@@ -42,7 +42,7 @@ export const JobDescription = () => {
         <JobDescriptionWrapper>
             <ContainerJob>
                 <TitleHead className='animate'>
-                    Работа в RIZOFT</TitleHead>
+                    Работа в VEON-TECH</TitleHead>
                 <DescriptionBlock>
                     <DescriptionContent>
                         <BarLinksMobile>
@@ -53,7 +53,7 @@ export const JobDescription = () => {
                                 Амбициозная и целеустремленная команда экспертов, с большим стремлением оказывать
                                 высококачественные услуги по интернет-маркетингу и веб-разработке. <br/> Если Вы желаете стать
                                 частью нашей команды, тогда отправляйте нам Ваше резюме на электронную почту:
-                                sales@veon-tech.ru
+                                clients@veon-tech.ru
                             </About>
                             <About className='animate'>
                                 Если Вы ищете душевное место работы с классной атмосферой, приятными людьми и хорошей
@@ -62,7 +62,7 @@ export const JobDescription = () => {
                         </AboutBlock>
                         <AboutQuality>
                             <SubTitle className='animate'>Мы работаем эффективно, поэтому у нас 7-часовой рабочий день!</SubTitle>
-                            <Title>Почему нужно работать именно в RIZOFT?</Title>
+                            <Title>Почему нужно работать именно в VEON-TECH?</Title>
                             <CardsBlock>
                                 {cardArrayData.map((el, index) => <Card className='animate' key={index}>{el.title}</Card>)}
                             </CardsBlock>
@@ -80,7 +80,7 @@ export const JobDescription = () => {
                             <EchoText>
                                 Пожалуйста вышлите Ваше резюме на контактный e-mail указанный ниже. Мы рассмотрим Вашу
                                 кандидатуру и дадим ответ в течение 3-5 рабочих дней.
-                                <a rel="noreferrer" target={"_blank"} href={`mailto:sales@veon-tech.ru`}>sales@veon-tech.ru</a>
+                                <a rel="noreferrer" target={"_blank"} href={`mailto:clients@veon-tech.ru`}>clients@veon-tech.ru</a>
                             </EchoText>
                         </EchoBlock>
                         <EchoBlock>

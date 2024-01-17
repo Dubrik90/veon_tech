@@ -26,15 +26,15 @@ export const Services = () => {
 
     useEffect(() => {
         if (service === 'webDev') {
-            document.title = 'Разработка сайта— RIZOFT'
+            document.title = 'Разработка сайта— VEON-TECH'
         } else if (service === 'support') {
-            document.title = 'Поддержка проекта — RIZOFT'
+            document.title = 'Поддержка проекта — VEON-TECH'
         } else if (service === 'ux') {
-            document.title = 'UX/UI Дизайн — RIZOFT'
+            document.title = 'UX/UI Дизайн — VEON-TECH'
         } else if (service === 'webPO') {
-            document.title = 'Разработка ПО — RIZOFT'
+            document.title = 'Разработка ПО — VEON-TECH'
         } else if (service === 'mobileDevelopment') {
-            document.title = 'Разработка мобильного приложения — RIZOFT'
+            document.title = 'Разработка мобильного приложения — VEON-TECH'
         }
         //  document.title = 'Кейсы — VEON-TECH'
         animateText()
@@ -251,7 +251,7 @@ export const Services = () => {
                         <div className="entry-content">
                             <Title>Разработка програмного обеспечения</Title>
                             <Text>Все-таки трудно автомотизировать бизнес :(</Text>
-                            <TextCursive>RIZOFT поможет вам решить рутинные бизнес-задачи!</TextCursive>
+                            <TextCursive>VEON-TECH поможет вам решить рутинные бизнес-задачи!</TextCursive>
                             <LinkBlock>
                                 <div>Автоматизация бизнес-задач</div>
                                 <div>Уменьшение нагрузки на персонал</div>
