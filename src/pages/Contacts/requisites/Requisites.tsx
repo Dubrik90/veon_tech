@@ -11,7 +11,7 @@ export const Requisites = () => {
                 <RequisitesBlock>
                     <RequisitesContent>
                         <Title>Реквизиты</Title>
-                        <P>Общество с ограниченной ответственностью «Ризофт»</P>
+                        <P>Общество с ограниченной ответственностью «Веон-консалт»</P>
                         <P>Адрес: РБ, 220053, Г. МИНСК, УЛ. ОРЛОВСКАЯ, Д. 40А, ОФИС 40-1</P>
                         <P>УНП: 193082231</P>
                         <P>Банковские реквизиты:</P>
@@ -21,7 +21,7 @@ export const Requisites = () => {
                         <P>BY05ALFA30122354480010270000 в RUB</P>
                         <P>в ЗАО 'Альфа-Банк'</P>
                         <P>БИК: ALFABY2X</P>
-                        <P>sales@veon-tech.ru</P>
+                        <P>clients@veon-tech.ru</P>
                     </RequisitesContent>
                     <DocBlock>
                         <ImgBlock>

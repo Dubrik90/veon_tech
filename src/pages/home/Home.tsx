@@ -12,7 +12,7 @@ import {PortfolioSlider} from './portfolioSlider/PortfolioSlider';
 export const Home = () => {
 
     useEffect(() => {
-        document.title = 'Главная — RIZOFT'
+        document.title = 'Главная — VEON-TECH'
     }, [])
 
     const headerAnimate = useRef(null)

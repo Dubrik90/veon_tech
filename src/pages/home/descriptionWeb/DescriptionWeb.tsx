@@ -63,7 +63,7 @@ export const DescriptionWeb: FC<DescriptionWebProps> = ({descriptionWeb}) => {
                 <DescriptionWebContent>
                     <DescriptionWebBlock>
                         <AboutText className={'animate'}>
-                            <span>RIZOFT</span> — это профессиональный разработчик веб-сервисов, интернет-порталов и мобильных приложений.
+                            <span>VEON-TECH</span> — это профессиональный разработчик веб-сервисов, интернет-порталов и мобильных приложений.
                         </AboutText>
                         <AboutText className={'animate'}>
                             Создание многофункциональных проектов по методологии Time & Materials является основным продуктом компании. Мы реализуем проекты действительно хорошо: <br/>

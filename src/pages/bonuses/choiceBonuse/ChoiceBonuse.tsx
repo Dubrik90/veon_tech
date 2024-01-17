@@ -10,7 +10,7 @@ export const ChoiceBonuse = () => {
             <Container>
                 <BonuseContent>
                     <SubTitle >При работе с нами вы получите дополнительные опции для развития Вашего бизнеса. Улучшаем ваш бизнес вместе!</SubTitle>
-                    <Title> Программа лояльности для клиентов компании <span>RIZOFT</span></Title>
+                    <Title> Программа лояльности для клиентов компании <span>VEON-TECH</span></Title>
                     <Text>Выберите <span>свой</span> бонус!</Text>
                 </BonuseContent>
             </Container>

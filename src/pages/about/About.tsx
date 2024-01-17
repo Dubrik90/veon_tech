@@ -22,7 +22,7 @@ export const About = () => {
             <Progress/>
             <Methodology/>
             <Principles/>
-            <Reviews/>
+            {/*<Reviews/>*/}
             <ContactUs/>
         </AboutWrapper>
     );
