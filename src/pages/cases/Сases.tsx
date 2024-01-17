@@ -31,7 +31,7 @@ export const Сases = () => {
     }, [filterCountry, filterCategory, filterIndustry])
 
     useEffect(() => {
-        document.title = 'Кейсы — RIZOFT'
+        document.title = 'Кейсы — VEON-TECH'
         animateText()
     }, [])
 

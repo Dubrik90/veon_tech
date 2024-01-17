@@ -28,7 +28,7 @@ export const devData: DevDataType[] = [
     },
     {
         header: 'Разработка ПО',
-        desc: 'RIZOFT поможет вам оптимизировать рутинные бизнес-задачи..',
+        desc: 'VEON-TECH поможет вам оптимизировать рутинные бизнес-задачи..',
         img: Img03,
         link: 'services/webPO'
     },
