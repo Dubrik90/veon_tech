@@ -24,37 +24,60 @@ import {ServicesPage} from './pages/servicesPage';
 
 function App() {
     useEffect(() => {
+        // Общий код Google Tag Manager для всего приложения
+        (function (w: any, d: any, s: any, l: any, i: any) {
+            w[l] = w[l] || [];
+            w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l !== 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NMCLJT48');
+
+        // Заголовок страницы
         document.title = 'Главная — VEON-TECH'
     }, [])
 
 
     return (
-        <Routes>
-            <Route path={ROUTS.HOME} element={<Layout/>}>
-                <Route path={ROUTS.HOME} element={<Home/>}/>
-                <Route path={ROUTS.ABOUT} element={<About/>}/>
-                <Route path={ROUTS.JOBS} element={<Jobs/>}/>
-                <Route path={ROUTS.NDA} element={<Nda/>}/>
-                <Route path={ROUTS.CASES} element={<Сases/>}/>
-                <Route path={ROUTS.SERVICES} element={<Services/>}/>
-                <Route path={ROUTS.SERVICE_PAGE} element={<ServicesPage/>}/>
-                <Route path={ROUTS.BONUSES} element={<Bonuses/>}/>
-                <Route path={ROUTS.CONTACTS} element={<Contacts/>}/>
-                <Route path={ROUTS.POLICY} element={<Policy/>}/>
+        <div>
+            {/* Google Tag Manager (noscript) */}
+            <noscript>
+                <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMCLJT48"
+                        height="0" width="0" style={{display: 'none', visibility: 'hidden'}}>
+                </iframe>
+            </noscript>
+            {/* End Google Tag Manager (noscript) */}
+            <Routes>
+                <Route path={ROUTS.HOME} element={<Layout/>}>
+                    <Route path={ROUTS.HOME} element={<Home/>}/>
+                    <Route path={ROUTS.ABOUT} element={<About/>}/>
+                    <Route path={ROUTS.JOBS} element={<Jobs/>}/>
+                    <Route path={ROUTS.NDA} element={<Nda/>}/>
+                    <Route path={ROUTS.CASES} element={<Сases/>}/>
+                    <Route path={ROUTS.SERVICES} element={<Services/>}/>
+                    <Route path={ROUTS.SERVICE_PAGE} element={<ServicesPage/>}/>
+                    <Route path={ROUTS.BONUSES} element={<Bonuses/>}/>
+                    <Route path={ROUTS.CONTACTS} element={<Contacts/>}/>
+                    <Route path={ROUTS.POLICY} element={<Policy/>}/>
 
-                <Route path={ROUTS.CASE_GRANIT} element={<CaseGranit/>}/>
-                <Route path={ROUTS.CASE_SWISS} element={<CaseSwiss/>}/>
-                <Route path={ROUTS.CASE_PARTY_INTEL} element={<CasePartyIntel/>}/>
-                <Route path={ROUTS.CASE_PAPPY_ELEPHANT} element={<CaseHappyElephant/>}/>
-                <Route path={ROUTS.CASE_OPTICS} element={<CaseOptics/>}/>
-                <Route path={ROUTS.CASE_CENTAVRAS} element={<CaseCentavras/>}/>
-                <Route path={ROUTS.CASE_RENT_CLUB} element={<Case caseData={caseDataArray[3]}/>}/>
-                <Route path={ROUTS.CASE_SODOX} element={<Case caseData={caseDataArray[2]}/>}/>
-                <Route path={ROUTS.CASE_ART_MEDIA} element={<Case caseData={caseDataArray[1]}/>}/>
-                <Route path={ROUTS.CASE_SINARADESING} element={<Case caseData={caseDataArray[0]}/>}/>
-                {/*<Route path={ROUTS.CASE_RENT_CLUB} element={<CaseRentClub/>}/>*/}
-            </Route>
-        </Routes>
+                    <Route path={ROUTS.CASE_GRANIT} element={<CaseGranit/>}/>
+                    <Route path={ROUTS.CASE_SWISS} element={<CaseSwiss/>}/>
+                    <Route path={ROUTS.CASE_PARTY_INTEL} element={<CasePartyIntel/>}/>
+                    <Route path={ROUTS.CASE_PAPPY_ELEPHANT} element={<CaseHappyElephant/>}/>
+                    <Route path={ROUTS.CASE_OPTICS} element={<CaseOptics/>}/>
+                    <Route path={ROUTS.CASE_CENTAVRAS} element={<CaseCentavras/>}/>
+                    <Route path={ROUTS.CASE_RENT_CLUB} element={<Case caseData={caseDataArray[3]}/>}/>
+                    <Route path={ROUTS.CASE_SODOX} element={<Case caseData={caseDataArray[2]}/>}/>
+                    <Route path={ROUTS.CASE_ART_MEDIA} element={<Case caseData={caseDataArray[1]}/>}/>
+                    <Route path={ROUTS.CASE_SINARADESING} element={<Case caseData={caseDataArray[0]}/>}/>
+                    {/*<Route path={ROUTS.CASE_RENT_CLUB} element={<CaseRentClub/>}/>*/}
+                </Route>
+            </Routes>
+        </div>
+
     );
 }
 
