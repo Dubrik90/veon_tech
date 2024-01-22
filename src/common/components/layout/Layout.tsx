@@ -16,6 +16,7 @@ import {gsap} from "gsap";
 import {WaterfallModal} from "../waterfallModal";
 import {ScramModal} from "../scrumModal";
 import {animateText} from "../../animate/animateText";
+import {ToastContainer} from "react-toastify";
 
 
 export const Layout = () => {
@@ -34,6 +35,7 @@ export const Layout = () => {
     return (
         <>
             <ScrollToTop/>
+            <ToastContainer />
             <Header/>
             <MainWrapper>
                 <Outlet/>

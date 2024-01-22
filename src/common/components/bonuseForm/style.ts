@@ -93,10 +93,12 @@ export const BonuseFormWrapper = styled.div`
   overflow-y: auto;
 
   form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  //  display: grid;
+   // grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 15px 30px;
-    grid-auto-flow: dense;
+    
     justify-content: center;
     padding-top: 30px;
 
@@ -109,9 +111,38 @@ export const BonuseFormWrapper = styled.div`
   }
 `;
 
+export const InputWrap = styled.div`
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  justify-content: space-around;
+  //column-gap: 20px;
+
+  @media (max-width: 767px) {
+    gap: 5px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+  }
+`
+export const LegalInputWrap = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px 30px;
+
+  @media (max-width: 580px) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding-top: 15px;
+  }
+`
+
+
 export const InputContainer = styled.div`
   position: relative;
   margin-bottom: 20px;
+  flex: 0 1 30%;
 `;
 
 export const Label = styled.label<{ isActive?: boolean }>`
@@ -170,6 +201,7 @@ export const Input = styled(Field)`
           `}
 `;
 export const SubmitButton = styled.button`
+  flex: 1 1 50%;
   pointer-events: auto;
   cursor: pointer;
   border: 1px solid var(--colors-text-dark);
@@ -193,6 +225,11 @@ export const SubmitButton = styled.button`
   z-index: 5;
   background: var(--colors-text-green);
   background: var(--colors-text-green);
+  
+  @media (max-width: 767px) {
+    align-self: stretch;
+  }
+  
   @media (max-width: 580px) {
     align-self: stretch;
   }
@@ -440,8 +477,9 @@ export const InputFileContainer = styled.div`
 
 
 export const FormDataItemUpload = styled.div`
-  -ms-grid-column: 2;
-  grid-column: 2;
+  width: 100%;
+  //-ms-grid-column: 2;
+  //grid-column: 2;
   padding: 10px 0;
 
   @media (max-width: 768px) {
@@ -562,10 +600,11 @@ export const UploadCancelInner = styled.div`
   }
 `
 export const FormDataItemComment = styled.div`
-  grid-column: 1 / auto;
+ // grid-column: 1 / auto;
+  width: 100%;
 
   @media (max-width: 768px) {
-    grid-column: 1 / span 2;
+ //   grid-column: 1 / span 2;
   }
 
 `
@@ -636,7 +675,9 @@ export const TextareaLabel = styled.label`
   pointer-events: none;
   transition: all 0.2s ease 0s;
 `
-export const PrivacyPolicy = styled.div``
+export const PrivacyPolicy = styled.div`
+  flex: 1 1 50%;
+`
 
 export const TextPolicy = styled.p`
   font-weight: var(--fw-medium);

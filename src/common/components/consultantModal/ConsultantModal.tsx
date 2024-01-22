@@ -20,6 +20,7 @@ import '../../style/PhoneInput.css';
 import {Link} from "react-router-dom";
 import {ROUTS} from "../../constans/routs";
 import {useScrollBlock} from "../../hook/use-scroll-block";
+import {Slide, toast} from "react-toastify";
 
 type FormikErrorType = {
     formName?: string,
@@ -70,11 +71,21 @@ export const ConsultantModal = () => {
                 })
                     .then((response) => response.json())
                     .then((data) => {
+                        toast.success('Заявка попала в нужные руки. Мы свяжемся с вами в ближайшее время!', {
+                            position: "top-right",
+                            autoClose: 4000,
+                            theme: "colored",
+                            transition: Slide
+                        });
 
                     })
                     .catch((error) => {
-                        // Обработка ошибки
-                        console.error(error);
+                        toast.error('Что-то пошло не так. Повтоите попытку!', {
+                            position: "top-right",
+                            autoClose: 4000,
+                            theme: "colored",
+                            transition: Slide
+                        });
                     });
             }
         }
