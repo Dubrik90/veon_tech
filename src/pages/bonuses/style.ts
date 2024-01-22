@@ -11,7 +11,7 @@ export const BonusesWrapper = styled.div`
 export const BonusesCardsBlock = styled.ol`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+ // grid-template-rows: repeat(2, 1fr);
 
   // grid-template-columns: repeat(auto-fit, minmax(250px, 458px));
   // display: flex;

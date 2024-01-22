@@ -19,6 +19,7 @@ import { CustomInputFile, InputFileText } from "./style";
 import { useScrollBlock } from "../../hook/use-scroll-block";
 import validationSchema from "../FormUsers/FormUsers";
 import { Error } from "../FormUsers/style";
+import {Slide, toast} from "react-toastify";
 
 interface MyFormValues {
     formName: string;
@@ -55,10 +56,23 @@ export const ModalWindoww = () => {
                 body: formData,
             })
                 .then((response) => response.json())
-                .then((data) => {})
+                .then((data) => {
+                    toast.success('Заявка попала в нужные руки. Мы свяжемся с вами в ближайшее время!', {
+                        position: "top-right",
+                        autoClose: 4000,
+                        theme: "colored",
+                        transition: Slide
+                    });
+                })
                 .catch((error) => {
                     // Обработка ошибки
                     console.error(error);
+                    toast.error('Что-то пошло не так. Повтоите попытку!', {
+                        position: "top-right",
+                        autoClose: 4000,
+                        theme: "colored",
+                        transition: Slide
+                    });
                 });
         }
     };

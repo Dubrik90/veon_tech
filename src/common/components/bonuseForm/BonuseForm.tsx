@@ -40,6 +40,7 @@ import {Link} from "react-router-dom";
 import {useScrollBlock} from "../../hook/use-scroll-block";
 import validationSchema from "../FormUsers/FormUsers";
 import {Error} from "../FormUsers/style";
+import {Slide, toast} from "react-toastify";
 
 interface MyFormValues {
     formName: string,
@@ -101,10 +102,21 @@ export const BonuseForm: React.FC = () => {
             })
                 .then((response) => response.json())
                 .then((data) => {
-
+                    toast.success('Заявка попала в нужные руки. Мы свяжемся с вами в ближайшее время!', {
+                        position: "top-right",
+                        autoClose: 4000,
+                        theme: "colored",
+                        transition: Slide
+                    });
                 })
                 .catch((error) => {
                     console.error(error);
+                    toast.error('Что-то пошло не так. Повтоите попытку!', {
+                        position: "top-right",
+                        autoClose: 4000,
+                        theme: "colored",
+                        transition: Slide
+                    });
                 });
         }
     };
@@ -183,7 +195,7 @@ export const BonuseForm: React.FC = () => {
                                     name="lastName"
                                     value={values.lastName}
                                     onFocus={() => handleFocus("lastName")}
-                                   // onBlur={handleBlur}
+                                    // onBlur={handleBlur}
                                 />
                                 <Label htmlFor="lastName" isActive={activeField === "lastName"}>
                                     Фамилия
@@ -199,7 +211,7 @@ export const BonuseForm: React.FC = () => {
                                     name="phone"
                                     value={values.phone}
                                     onFocus={() => handleFocus("phone")}
-                                  //  onBlur={handleBlur}
+                                    //  onBlur={handleBlur}
                                 />
                                 <Label htmlFor="phone" isActive={activeField === "phone"}>
                                     Телефон
@@ -215,7 +227,7 @@ export const BonuseForm: React.FC = () => {
                                     name="email"
                                     value={values.email}
                                     onFocus={() => handleFocus("email")}
-                                 //   onBlur={handleBlur}
+                                    //   onBlur={handleBlur}
                                 />
                                 <Label htmlFor="email" isActive={activeField === "email"}>
                                     Почта
@@ -265,21 +277,21 @@ export const BonuseForm: React.FC = () => {
                                         checked={values.bonus1}
                                         onChange={handleChange}
                                     />
-                                    Скидка 100 BYN
-                                </CheckboxLabel>
-                                <p>При подписании договора в течение 3 дней после получения коммерческого
-                                    предложения</p>
-                                <CheckboxLabel checked={values.bonus2}>
-                                    <Checkbox
-                                        type="checkbox"
-                                        name="bonus2"
-                                        checked={values.bonus2}
-                                        onChange={handleChange}
-                                    />
                                     Бесплатный логотип
                                 </CheckboxLabel>
                                 <p>При подписании договора в течение 3 дней после получения коммерческого
                                     предложения</p>
+                                {/*<CheckboxLabel checked={values.bonus2}>*/}
+                                {/*    <Checkbox*/}
+                                {/*        type="checkbox"*/}
+                                {/*        name="bonus2"*/}
+                                {/*        checked={values.bonus2}*/}
+                                {/*        onChange={handleChange}*/}
+                                {/*    />*/}
+                                {/*    timeweb.cloud*/}
+                                {/*</CheckboxLabel>*/}
+                                {/*<p>При подписании договора в течение 3 дней после получения коммерческого*/}
+                                {/*    предложения</p>*/}
                                 <CheckboxLabel checked={values.bonus3}>
                                     <Checkbox
                                         type="checkbox"
@@ -287,7 +299,7 @@ export const BonuseForm: React.FC = () => {
                                         checked={values.bonus3}
                                         onChange={handleChange}
                                     />
-                                    Hostfly.by
+                                    timeweb.cloud
                                 </CheckboxLabel>
                                 <p>На любой тариф хостинга</p>
                                 <CheckboxLabel checked={values.bonus4}>
@@ -297,7 +309,7 @@ export const BonuseForm: React.FC = () => {
                                         checked={values.bonus4}
                                         onChange={handleChange}
                                     />
-                                    5% скидка на все услуги
+                                    Скидка 5%
                                 </CheckboxLabel>
                                 <p>При единовременном платеже всей суммы услуги. Для новых клиентов. Исключение
                                     оплата лицензий.</p>

@@ -113,7 +113,7 @@ export const Text = styled.p`
     margin-bottom: 0;
   }
 `
-export const ContactLink = styled.p`
+export const ContactLinkPhone = styled.a`
   grid-area: 3 / 1 / 4 / 4;
   font-weight: var(--fw-bold);
   font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
@@ -125,5 +125,18 @@ export const ContactLink = styled.p`
     justify-self: flex-end;
   }
 `
+export const ContactLink = styled.p`
+  grid-area: 3 / 1 / 4 / 4;
+  font-weight: var(--fw-bold);
+  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+  line-height: 1.4;
+  text-align: center;
+  color: var(--colors-text-green);
+
+  @media (max-width: 768px) {
+    justify-self: flex-end;
+  }
+`
+
 
 

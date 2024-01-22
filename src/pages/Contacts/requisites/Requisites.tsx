@@ -28,7 +28,7 @@ export const Requisites = () => {
                             <Img loading="lazy" src={PdfIcon} alt={'pdf files'}/>
                         </ImgBlock>
                         <DownloadButton fileName={'details.pdf'} url="/files/details.pdf">
-                            Скачаь
+                            Скачать
                         </DownloadButton>
                     </DocBlock>
                 </RequisitesBlock>

@@ -138,8 +138,8 @@ export const FooterBottom = styled.div`
 `
 export const About = styled.div`
   ${flexColumn()}
-  row-gap: 40px;
-  align-self: flex-end;
+  row-gap: 15px;
+  align-self: center;
   
   @media (max-width: 1227px) {
     align-self: center;

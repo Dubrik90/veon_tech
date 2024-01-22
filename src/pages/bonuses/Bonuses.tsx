@@ -29,14 +29,14 @@ export const Bonuses = () => {
     }, [])
 
     const saleCards: SaleCardsType[] = [
-        {
-            id: '1',
-            img: Clock,
-            title: 'Скидка 100 BYN',
-            subtitle: 'за скорость',
-            text: 'При подписании договора в течение 3 дней после получения коммерческого предложения',
-            subText: '*При заказе от 1500 BYN'
-        },
+        // {
+        //     id: '1',
+        //     img: Clock,
+        //     title: 'Скидка 100 BYN',
+        //     subtitle: 'за скорость',
+        //     text: 'При подписании договора в течение 3 дней после получения коммерческого предложения',
+        //     subText: '*При заказе от 1500 BYN'
+        // },
         {
             id: '2',
             img: Palit,
@@ -48,7 +48,7 @@ export const Bonuses = () => {
         {
             id: '3',
             img: Hosting,
-            title: 'Hostfly.by',
+            title: 'timeweb.cloud',
             subtitle: '14 дней бесплатно',
             text: '*На любой тариф хостинга',
             subText: ''
@@ -56,7 +56,7 @@ export const Bonuses = () => {
         {
             id: '4',
             img: Sale,
-            title: '5% скидка',
+            title: 'Скидка 5%',
             subtitle: 'на все услуги',
             text: '*При единовременном платеже всей суммы услуги. Для новых клиентов. Исключение оплата лицензий.',
             subText: ''

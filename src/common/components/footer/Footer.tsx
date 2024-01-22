@@ -19,7 +19,7 @@ import watsap from './assets/watsapp.svg'
 import telega from './assets/teleg.svg'
 
 const dataSocial = [
-    {img: instagram, to: 'https://www.instagram.com/veontech.agency/?igshid=YmMyMTA2M2Y%3D'},
+    {img: instagram, to: 'https://www.instagram.com/veontech.ru?igsh=Z21lMmc5aXJsdnhu'},
     {img: facebook, to: 'https://www.facebook.com/veontech.ru'},
     {img: linkedin, to: 'https://www.linkedin.com/company/veon-tech/'},
     {img: watsap, to: 'https://wa.me/'},
@@ -45,6 +45,7 @@ export const Footer = () => {
                         </About>
                         <AboutContact>
                             <a href="tel:+79955775163">+7 (995) 577-51-63</a>
+                            <a href="tel:+375333028790">+375 (33) 302-87-90</a>
                             <a rel="noreferrer" target={"_blank"} href={`mailto:clients@veon-tech.ru`}>clients@veon-tech.ru</a>
                             <p>220068, г. Минск, ул. Сурганова, 57б, офис 187</p>
                             <p>С понедельника по пятницу</p>
