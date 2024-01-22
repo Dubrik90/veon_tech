@@ -10,8 +10,8 @@ export const ModalWindowWrapper = styled.div<ModalWindowWrapperProps>`
   
   ${flexColumn()}
   position: fixed;
- // top: 0;
- // left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100vh;
   align-items: center;
