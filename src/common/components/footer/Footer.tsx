@@ -22,7 +22,7 @@ const dataSocial = [
     {img: instagram, to: 'https://www.instagram.com/veontech.ru?igsh=Z21lMmc5aXJsdnhu'},
     {img: facebook, to: 'https://www.facebook.com/veontech.ru'},
     {img: linkedin, to: 'https://www.linkedin.com/company/veon-tech/'},
-    {img: watsap, to: 'https://wa.me/'},
+    {img: watsap, to: 'https://wa.me/375333539222'},
     {img: telega, to: 'https://t.me/veon_tech'},
 ]
 

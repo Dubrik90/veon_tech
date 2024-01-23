@@ -117,9 +117,10 @@ export const ModalWindoww = () => {
                                     <PhoneInput
                                         value={"+ 375"}
                                         inputProps={{ name: "phone" }}
-                                        onlyCountries={["by", "ru"]}
+                                       // onlyCountries={["by", "ru"]}
                                         countryCodeEditable={false}
                                         onChange={(phoneNumber, country, e) => {
+                                            e.target.name = "phone";
                                             handleChange(e);
                                         }}
                                     />

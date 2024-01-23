@@ -25,9 +25,9 @@ export const GetInTorch = () => {
                 </Button>
                 <IconsBlock>
                     <div>
-                        <a href="https://www.linkedin.com/company/veon-tech/" target={'_blank'}>
+                        <a href="https://wa.me/375333539222" target={'_blank'}>
                             <Linkedin/>
-                            <span>Сообщение в Linkedin</span>
+                            <span>Сообщение в WhatsApp</span>
                         </a>
                     </div>
                     <div>
@@ -38,7 +38,7 @@ export const GetInTorch = () => {
                     </div>
                     <div>
                         <p onClick={openModal}>
-                            <img loading="lazy" src={MassageIc}/>
+                            <img alt={'image'} loading="lazy" src={MassageIc}/>
                             <span>Оставить сообщение</span>
                         </p>
                     </div>

@@ -44,6 +44,8 @@ import * as Yup from 'yup';
 import {Error} from "./style";
 import {ToastContainer, toast, Slide} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import PhoneInput from "react-phone-input-2";
+// import "./phone-input-castom.scss";
 
 interface MyFormValues {
     formName: string
@@ -73,7 +75,7 @@ export const validationSchema = Yup.object().shape({
     // lastName: Yup.string().required('Фамилия обязательна'),
     phone: Yup.string()
         .required('Телефон обязателен')
-        .matches(phoneRegExp, 'Телефон должен содержать только цифры'),
+    //     .matches(phoneRegExp, 'Телефон должен содержать только цифры'),
     // email: Yup.string()
     //     .email('Неверный формат почты')
     //     .required('Почта обязательна')
@@ -197,9 +199,7 @@ export const FormUsers: React.FC = () => {
             onSubmit={handleSubmit}
         >
             {({values, touched, getFieldProps, handleSubmit, handleChange, setFieldValue, errors}) => (
-
                 <BonuseFormWrapper>
-
                     <ContainerForm>
                         <DynamicContactHead>
                             <ModalTitle>{currentPath === '/about' ? 'ОБСУДИТЬ ПРОЕКТ' : 'Свяжитесь с нами'} </ModalTitle>
@@ -241,16 +241,27 @@ export const FormUsers: React.FC = () => {
                                     </InputContainer>
                                     {/*phone*/}
                                     <InputContainer>
-                                        <Input
-                                            type="phone"
-                                            name="phone"
-                                            value={values.phone}
-                                            onFocus={() => handleFocus("phone")}
-                                            //onBlur={handleBlur}
+                                        <PhoneInput
+                                            value={"+ 375"}
+                                            inputProps={{ name: "phone" }}
+                                            //onlyCountries={["by", "ru"]}
+
+                                            countryCodeEditable={false}
+                                            onChange={(phoneNumber, country, e) => {
+                                                e.target.name = "phone";
+                                                handleChange(e);
+                                            }}
                                         />
-                                        <Label htmlFor="phone" isActive={activeField === "phone"}>
-                                            Телефон
-                                        </Label>
+                                        {/*<Input*/}
+                                        {/*    type="phone"*/}
+                                        {/*    name="phone"*/}
+                                        {/*    value={values.phone}*/}
+                                        {/*    onFocus={() => handleFocus("phone")}*/}
+                                        {/*    //onBlur={handleBlur}*/}
+                                        {/*/>*/}
+                                        {/*<Label htmlFor="phone" isActive={activeField === "phone"}>*/}
+                                        {/*    Телефон*/}
+                                        {/*</Label>*/}
                                         {touched.phone && errors.phone && (
                                             <Error>{errors.phone}</Error>
                                         )}
@@ -296,16 +307,17 @@ export const FormUsers: React.FC = () => {
                                     </InputContainer>
                                     {/*phone*/}
                                     <InputContainer>
-                                        <Input
-                                            type="phone"
-                                            name="phone"
-                                            value={values.phone}
-                                            onFocus={() => handleFocus("phone")}
-                                            //onBlur={handleBlur}
+                                        <PhoneInput
+                                            value={"+ 375"}
+                                            inputProps={{ name: "phone" }}
+                                            //onlyCountries={["by", "ru"]}
+
+                                            countryCodeEditable={false}
+                                            onChange={(phoneNumber, country, e) => {
+                                                e.target.name = "phone";
+                                                handleChange(e);
+                                            }}
                                         />
-                                        <Label htmlFor="phone" isActive={activeField === "phone"}>
-                                            Телефон
-                                        </Label>
                                         {touched.phone && errors.phone && (
                                             <Error>{errors.phone}</Error>
                                         )}
@@ -567,6 +579,7 @@ export const FormUsers: React.FC = () => {
                                     </UploadWrapper>
                                 </FormDataItemUpload>
                             </InputWrap>
+
                             <InputWrap>
                                 {/*BUTTON*/}
                                 <SubmitButton type="submit"><span><span>Отправить</span></span></SubmitButton>
@@ -579,10 +592,7 @@ export const FormUsers: React.FC = () => {
                                     </Link>
                                     </TextPolicy>
                                 </PrivacyPolicy>
-
                             </InputWrap>
-
-
                         </Form>
                     </ContainerForm>
                 </BonuseFormWrapper>

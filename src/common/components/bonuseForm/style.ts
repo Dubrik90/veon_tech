@@ -143,6 +143,39 @@ export const InputContainer = styled.div`
   position: relative;
   margin-bottom: 20px;
   flex: 0 1 30%;
+
+  .react-tel-input .form-control {
+    background-color: var(--color-bg-green-light);
+    border: 1px solid var(--colors-text-dark);
+    line-height: 0;
+    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    height: calc(38px + (60 - 38) * ((100vw - 320px) / (1920 - 320)));
+    // padding-top: calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320)));
+    // padding-bottom: calc(10px + (20 - 10) * ((100vw - 320px) / (1920 - 320)));
+    // padding-right: calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320)));
+    //   padding-left: calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320)));
+    border-radius: 16px;
+    color: var(--colors-text-dark);
+    font-weight: 100;
+    position: relative;
+    transition: all 0.2s ease 0s;
+    caret-color: var(--colors-text-dark);
+  }
+
+  .flag-dropdown {
+    background: var(--color-bg-green-light);
+    border: 1px solid var(--colors-text-dark);
+    border-radius: 16px 0 0 16px;
+  }
+
+  .selected-flag {
+    :hover {
+      border-radius: 16px 0 0 16px;
+    }
+  }
 `;
 
 export const Label = styled.label<{ isActive?: boolean }>`
