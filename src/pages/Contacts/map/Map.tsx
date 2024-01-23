@@ -119,7 +119,8 @@ export const MapComponent = () => {
                                         onlyCountries={['by', 'ru']}
                                         countryCodeEditable={false}
                                         onChange={(phoneNumber, country, e) => {
-                                            formik.handleChange(e)
+                                            e.target.name = "phone";
+                                            formik.handleChange(e);
                                         }}
                                         onBlur={formik.handleBlur}
                                     />
