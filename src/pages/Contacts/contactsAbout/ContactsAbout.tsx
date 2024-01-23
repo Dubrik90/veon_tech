@@ -35,7 +35,9 @@
 
 import React, {FC} from "react";
 import {
+    BlockLinks,
     ContactLink,
+    ContactLinkMail,
     ContactLinkPhone,
     ContactsCardContent,
     ContactsCardWrapper,
@@ -62,14 +64,17 @@ export const ContactsAbout: FC = () => {
                         <PhoneIcon/>
                         <Title>Телефон</Title>
                         <Text>Наши специалисты готовы принимать Ваши звонки в рабочее время офиса с 9:00 до 17:00 с понедельника по пятницу.</Text>
-                        <ContactLinkPhone href="tel: +79955775163">+7 (995) 577-51-63</ContactLinkPhone>
-                        <ContactLinkPhone href="tel: +375333028790">+375 (33) 302-87-90</ContactLinkPhone>
+                        <BlockLinks>
+                            <ContactLinkPhone href="tel: +79955775163">+7 (995) 577-51-63</ContactLinkPhone>
+                            <ContactLinkPhone href="tel: +375333028790">+375 (33) 302-87-90</ContactLinkPhone>
+                        </BlockLinks>
+
                     </ContactsCardContent>
                     <ContactsCardContent>
                         <MailIcon/>
                         <Title>Электронная почта</Title>
                         <Text>Заявки на электронную почту мы принимаем ежедневно в режиме 24/7. Будьте уверены, мы обязательно с вами свяжемся!</Text>
-                        <ContactLinkPhone href='mailto: clients@veon-tech.ru'>clients@veon-tech.ru</ContactLinkPhone>
+                        <ContactLinkMail href='mailto: clients@veon-tech.ru'>clients@veon-tech.ru</ContactLinkMail>
                     </ContactsCardContent>
                     <ContactsCardContent>
                         <LocationIcon/>

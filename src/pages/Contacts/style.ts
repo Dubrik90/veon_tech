@@ -43,6 +43,8 @@ export const ContactsCardContent = styled.div`
   ${flexColumn()};
   align-items: center;
   position: relative;
+  
+  
 
   @media (max-width: 768px) {
     display: grid;
@@ -113,7 +115,42 @@ export const Text = styled.p`
     margin-bottom: 0;
   }
 `
+
+export const BlockLinks = styled.div` 
+  grid-area: 3 / 1 / 4 / 4;
+  font-weight: var(--fw-bold);
+  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+  line-height: 1.4;
+  text-align: center;
+  color: var(--colors-text-green);
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  @media (max-width: 768px) {
+    justify-self: flex-end;
+  }
+  a :not(:last-child) {
+    margin-bottom: 20px;
+  }
+`
+
+
 export const ContactLinkPhone = styled.a`
+  //grid-area: 3 / 1 / 4 / 4;
+  display: flex;
+  font-weight: var(--fw-bold);
+  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
+  line-height: 1.4;
+  text-align: center;
+  color: var(--colors-text-green);
+  align-self: end;
+  
+  @media (max-width: 768px) {
+    justify-self: flex-end;
+  }
+`
+export const ContactLinkMail = styled.a` 
   grid-area: 3 / 1 / 4 / 4;
   font-weight: var(--fw-bold);
   font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1920 - 320)));
@@ -122,9 +159,10 @@ export const ContactLinkPhone = styled.a`
   color: var(--colors-text-green);
   
   @media (max-width: 768px) {
+    
     justify-self: flex-end;
-  }
-`
+  }`
+
 export const ContactLink = styled.p`
   grid-area: 3 / 1 / 4 / 4;
   font-weight: var(--fw-bold);
