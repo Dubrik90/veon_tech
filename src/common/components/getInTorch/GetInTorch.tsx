@@ -1,7 +1,7 @@
 import React, {useRef} from 'react';
 import {Chat} from "./chat/Chat";
 import {Button, GetInTorchWrapper, IconsBlock, Title} from "./style";
-import {Linkedin, MassageIcon, Telegram} from "./assets";
+import {Watsap, MassageIcon, Telegram} from "./assets";
 import MassageIc from "./assets/massage.png";
 
 
@@ -20,13 +20,13 @@ export const GetInTorch = () => {
         <>
             <GetInTorchWrapper view={view} className='torch' ref={circleRef}>
                 <MassageIcon/>
-                <Button onClick={openModal}>
-                    <Title>Отправьте нам сообщение</Title>
-                </Button>
+                {/*<Button onClick={openModal}>*/}
+                {/*    <Title>Отправьте нам сообщение</Title>*/}
+                {/*</Button>*/}
                 <IconsBlock>
                     <div>
                         <a href="https://wa.me/375333539222" target={'_blank'}>
-                            <Linkedin/>
+                            <Watsap/>
                             <span>Сообщение в WhatsApp</span>
                         </a>
                     </div>
@@ -36,12 +36,12 @@ export const GetInTorch = () => {
                             <span>Сообщение в Telegram</span>
                         </a>
                     </div>
-                    <div>
-                        <p onClick={openModal}>
-                            <img alt={'image'} loading="lazy" src={MassageIc}/>
-                            <span>Оставить сообщение</span>
-                        </p>
-                    </div>
+                    {/*<div>*/}
+                    {/*    <p onClick={openModal}>*/}
+                    {/*        <img alt={'image'} loading="lazy" src={MassageIc}/>*/}
+                    {/*        <span>Оставить сообщение</span>*/}
+                    {/*    </p>*/}
+                    {/*</div>*/}
                 </IconsBlock>
             </GetInTorchWrapper>
             <Chat view={view} closeModal={closeModal}/>

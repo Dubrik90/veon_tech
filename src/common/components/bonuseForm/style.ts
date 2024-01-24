@@ -125,6 +125,15 @@ export const InputWrap = styled.div`
     
   }
 `
+export const CirculWrap = styled.div`
+  display: flex;
+  justify-content: center;
+  flex: 1 1 50%;
+  
+   .load {
+     position: static;
+   } 
+`
 export const LegalInputWrap = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);

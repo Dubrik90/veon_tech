@@ -80,7 +80,7 @@ export const ContactsAbout: FC = () => {
                         <LocationIcon/>
                         <Title>Местоположение офиса</Title>
                         <Text>Приглашаем Вас в наш офис. Также, есть возможность встреч с партнерами и заказчиками в удобном для Вас месте.</Text>
-                        <ContactLink>Минск, Сурганова, 57б, офис 187</ContactLink>
+                        <ContactLink>Минск, Орловская, д.40А, оф. 40-1</ContactLink>
                     </ContactsCardContent>
 
                 </SocialContainer>

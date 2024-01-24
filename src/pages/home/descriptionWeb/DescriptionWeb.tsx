@@ -60,6 +60,7 @@ export const DescriptionWeb: FC<DescriptionWebProps> = ({descriptionWeb}) => {
                     <p><span>различной нагруженности</span></p>
                     <p>по scrum методологии</p>
                 </Title>
+
                 <DescriptionWebContent>
                     <DescriptionWebBlock>
                         <AboutText className={'animate'}>

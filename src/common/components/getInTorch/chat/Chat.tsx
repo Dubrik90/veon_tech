@@ -16,7 +16,7 @@ export const Chat: React.FC<ChatType> = ({closeModal, view,}) => {
             <ChatHeader>
                 {/*<Avatar/>*/}
                 <Button>
-                    <Title>Отправьте нам сообщение</Title>
+                    {/*<Title>Отправьте нам сообщение</Title>*/}
                     {/*<SubTitle>Customer support</SubTitle>*/}
                 </Button>
             </ChatHeader>

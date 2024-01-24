@@ -163,6 +163,9 @@ export const AboutContact = styled.div`
     align-self: center;
     row-gap: 5px;
   }
+  a:hover {
+    color: #000;
+  }
 `
 export const Corporation = styled.div`
   ${flexColumn()}

@@ -43,7 +43,7 @@ export const Сases = () => {
             <Container>
                 <TitleHead className='animate'>Кейсы</TitleHead>
             </Container>
-            <FilterCase/>
+            {/*<FilterCase/>*/}
             {/*<FilterBlock filter={filter}*/}
             {/*/>*/}
             <CaseBlock filter={resultFilterArray}/>

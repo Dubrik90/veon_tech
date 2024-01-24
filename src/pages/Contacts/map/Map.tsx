@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
     Button,
     CardWrapper,
@@ -9,6 +9,7 @@ import {
     FormWrapper,
     InputBlock,
     Label,
+    LoaderWrap,
     MapComponentWrapper,
     MapWrapper,
     MapWrapperBlock,
@@ -24,6 +25,8 @@ import {useFormik} from "formik";
 import PhoneInput from "react-phone-input-2";
 import {ROUTS} from "../../../common/constans/routs";
 import {Link} from "react-router-dom";
+import {Loader} from "../../../common/components/consultantModal/assets";
+import {Slide, toast} from "react-toastify";
 
 type FormikErrorType = {
     formName?: string,
@@ -36,6 +39,7 @@ export const MapComponent = () => {
 
     const mapState = {center: [53.92859307064951, 27.58288749999989], zoom: 16};
     const coordinates = [53.92859307064951, 27.58288749999989];
+    const [loading, setLoading] = useState(false)
 
     const formik = useFormik({
         initialValues: {
@@ -59,6 +63,7 @@ export const MapComponent = () => {
             return errors
         },
         onSubmit: values => {
+            setLoading(true)
             const formElement = document.querySelector("#contactForm");
             if (formElement instanceof HTMLFormElement) {
                 const formData = new FormData(formElement);
@@ -72,10 +77,24 @@ export const MapComponent = () => {
                 })
                     .then((response) => response.json())
                     .then((data) => {
+                        setLoading(false)
+                        toast.success('Заявка попала в нужные руки. Мы свяжемся с вами в ближайшее время!', {
+                            position: "top-right",
+                            autoClose: 4000,
+                            theme: "colored",
+                            transition: Slide
+                        });
                     })
                     .catch((error) => {
+                        setLoading(false)
                         // Обработка ошибки
                         console.error(error);
+                        toast.error('Что-то пошло не так. Повтоите попытку!', {
+                            position: "top-right",
+                            autoClose: 4000,
+                            theme: "colored",
+                            transition: Slide
+                        });
                     });
             }
 
@@ -101,7 +120,8 @@ export const MapComponent = () => {
                         <SubTitle>
                             Пожалуйста оставьте Ваши имя и телефон, мы будем счастливы помочь Вам.
                         </SubTitle>
-                        <FormWrapper id="contactForm" onSubmit={formik.handleSubmit} method={"POST"} encType="multipart/form-data">
+                        <FormWrapper id="contactForm" onSubmit={formik.handleSubmit} method={"POST"}
+                                     encType="multipart/form-data">
                             <InputBlock>
                                 <Label>
                                     <CustomInput type='text'
@@ -116,7 +136,7 @@ export const MapComponent = () => {
                                     <PhoneInput
                                         value={'+ 375'}
                                         inputProps={{name: "phone"}}
-                                       // onlyCountries={['by', 'ru']}
+                                        // onlyCountries={['by', 'ru']}
                                         countryCodeEditable={false}
                                         onChange={(phoneNumber, country, e) => {
                                             e.target.name = "phone";
@@ -137,10 +157,15 @@ export const MapComponent = () => {
                             </InputBlock>
                             <SubText>
                                 Нажимая на кнопку «Отправить», вы даете свое согласие на обработку персональных данных в
-                                соответствии с целями указанными в <Link to={ROUTS.POLICY}>Политике обработки персональных
+                                соответствии с целями указанными в <Link to={ROUTS.POLICY}>Политике обработки
+                                персональных
                                 данных</Link>
                             </SubText>
-                            <Button type='submit'>Отправить</Button>
+                            {
+                                loading
+                                    ? <LoaderWrap><Loader/> </LoaderWrap>
+                                    : <Button type='submit'>Отправить</Button>
+                            }
                         </FormWrapper>
                     </FormBlock>
 

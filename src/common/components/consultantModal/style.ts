@@ -29,6 +29,7 @@ export const ModalWindowWrapper = styled.div<ModalWindowWrapperProps>`
 `
 export const RegisterWrapper = styled.div`
   width: 420px;
+  min-height: 300px;
   padding: 32px 40px;
   border-radius: 5px;
   background-color: var(--colors-bg);
@@ -161,7 +162,7 @@ export const Button = styled.button`
   font-size: var(--fs-18);
   line-height: 129.5%;
   color: var(--colors-text-wight);
-  padding: 13px 15px;
+  padding: 9px 15px;
   width: 100%;
   transition: all 0.3s;
   

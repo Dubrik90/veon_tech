@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
     Button,
     CustomInput,
@@ -12,7 +12,7 @@ import {
     Title
 } from "./style";
 import {useFormik} from "formik";
-import {Clouse} from "./assets";
+import {Clouse, Loader} from "./assets";
 import {useAppDispatch, useAppSelector} from "../../hook";
 import {setIsConsultantModalOpenAC} from "../../../app/app-reduser";
 import PhoneInput from "react-phone-input-2";
@@ -21,6 +21,9 @@ import {Link} from "react-router-dom";
 import {ROUTS} from "../../constans/routs";
 import {useScrollBlock} from "../../hook/use-scroll-block";
 import {Slide, toast} from "react-toastify";
+import {CirculWrap} from "../bonuseForm/style";
+import {CircularProgress} from "@mui/material";
+// import Loader from './assets/Rolling.gif'
 
 type FormikErrorType = {
     formName?: string,
@@ -32,6 +35,7 @@ export const ConsultantModal = () => {
     const dispatch = useAppDispatch()
     const isConsultantModalOpen = useAppSelector(state => state.app.isConsultantModalOpen)
     const [blockScroll, allowScroll] = useScrollBlock();
+    const [loading, setLoading] = useState(false)
 
     const onClickClouseModalHandler = () => {
         allowScroll()
@@ -58,7 +62,7 @@ export const ConsultantModal = () => {
             return errors
         },
         onSubmit: values => {
-            onClickClouseModalHandler()
+            setLoading(true)
             const formElement = document.querySelector("#consultantForm")
             if (formElement instanceof HTMLFormElement) {
                 const formData = new FormData(formElement);
@@ -71,6 +75,8 @@ export const ConsultantModal = () => {
                 })
                     .then((response) => response.json())
                     .then((data) => {
+                        setLoading(false)
+                        onClickClouseModalHandler()
                         toast.success('Заявка попала в нужные руки. Мы свяжемся с вами в ближайшее время!', {
                             position: "top-right",
                             autoClose: 4000,
@@ -80,6 +86,8 @@ export const ConsultantModal = () => {
 
                     })
                     .catch((error) => {
+                        setLoading(false)
+                        onClickClouseModalHandler()
                         toast.error('Что-то пошло не так. Повтоите попытку!', {
                             position: "top-right",
                             autoClose: 4000,
@@ -112,7 +120,7 @@ export const ConsultantModal = () => {
                             <PhoneInput
                                 value={'+ 375'}
                                 inputProps={{name: "phone"}}
-                              //  onlyCountries={['by', 'ru']}
+                                //  onlyCountries={['by', 'ru']}
                                 countryCodeEditable={false}
                                 onChange={(phoneNumber, country, e) => {
                                     e.target.name = "phone";
@@ -127,7 +135,11 @@ export const ConsultantModal = () => {
                         соответствии с целями указанными в <Link onClick={onClickClouseModalHandler} to={ROUTS.POLICY}>Политике
                         обработки персональных данных</Link>
                     </SubText>
-                    <Button type='submit'>Отправить</Button>
+                    {
+                        loading
+                            ? <CirculWrap><Loader/></CirculWrap>
+                            : <Button type='submit'>Отправить</Button>
+                    }
                 </FormWrapper>
             </RegisterWrapper>
         </ModalWindowWrapper>

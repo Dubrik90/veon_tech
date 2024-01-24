@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Form, Formik, FormikHelpers } from "formik";
 import { Clouse } from "./assets";
 import { useAppDispatch, useAppSelector } from "../../hook";
@@ -20,6 +20,8 @@ import { useScrollBlock } from "../../hook/use-scroll-block";
 import validationSchema from "../FormUsers/FormUsers";
 import { Error } from "../FormUsers/style";
 import {Slide, toast} from "react-toastify";
+import {CirculWrap} from "../bonuseForm/style";
+import {Loader} from "../consultantModal/assets";
 
 interface MyFormValues {
     formName: string;
@@ -32,6 +34,7 @@ export const ModalWindoww = () => {
     const dispatch = useAppDispatch();
     const isModalWindowOpen = useAppSelector((state) => state.app.isModalWindowOpen);
     const [blockScroll, allowScroll] = useScrollBlock();
+    const [loading, setLoading] = useState(false)
 
     const onClickClouseModalHandler = () => {
         allowScroll();
@@ -43,7 +46,8 @@ export const ModalWindoww = () => {
         { setSubmitting }: FormikHelpers<MyFormValues>
     ) => {
         setSubmitting(true);
-        onClickClouseModalHandler();
+        setLoading(true)
+
 
         const formElement = document.querySelector("#jobForm");
         if (formElement instanceof HTMLFormElement) {
@@ -57,6 +61,8 @@ export const ModalWindoww = () => {
             })
                 .then((response) => response.json())
                 .then((data) => {
+                    setLoading(false)
+                    onClickClouseModalHandler();
                     toast.success('Заявка попала в нужные руки. Мы свяжемся с вами в ближайшее время!', {
                         position: "top-right",
                         autoClose: 4000,
@@ -65,6 +71,8 @@ export const ModalWindoww = () => {
                     });
                 })
                 .catch((error) => {
+                    setLoading(false)
+                    onClickClouseModalHandler();
                     // Обработка ошибки
                     console.error(error);
                     toast.error('Что-то пошло не так. Повтоите попытку!', {
@@ -145,7 +153,11 @@ export const ModalWindoww = () => {
                                 персональных данных в соответствии с целями указанными в Политике
                                 обработки персональных данных
                             </SubText>
-                            <Button type="submit">Отправить</Button>
+                            {
+                                loading
+                                    ? <CirculWrap><Loader/></CirculWrap>
+                                    : <Button type='submit'>Отправить</Button>
+                            }
                         </Form>
                     </RegisterWrapper>
                 </ModalWindowWrapper>

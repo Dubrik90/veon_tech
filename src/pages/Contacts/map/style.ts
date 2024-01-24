@@ -85,8 +85,8 @@ export const FormWrapper = styled.form`
   box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.25);
   border-radius: 17px;
   
-  padding-top: calc(20px + (42 - 20) * ((100vw - 320px) / (1920 - 320)));
-  padding-bottom: calc(20px + (42 - 20) * ((100vw - 320px) / (1920 - 320)));
+  padding-top: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
+  padding-bottom: calc(20px + (38 - 20) * ((100vw - 320px) / (1920 - 320)));
   padding-right: calc(15px + (37 - 15) * ((100vw - 320px) / (1920 - 320)));
   padding-left: calc(15px + (37 - 15) * ((100vw - 320px) / (1920 - 320)));
 
@@ -202,7 +202,18 @@ export const SubText = styled.p`
     }
   }
 `
-
+export const LoaderWrap = styled.div`
+  padding: 4px 0;
+  margin-left: 80px;
+  
+  @media(max-width: 480px) {
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+`
 export const Button = styled.button`
   position: relative;
   align-self: center;

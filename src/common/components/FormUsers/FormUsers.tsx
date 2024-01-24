@@ -5,7 +5,7 @@ import {
     CheckboxContainer,
     CheckboxContainerGlobalForm,
     CheckboxGlobalForm,
-    CheckboxLabelGlobalForm,
+    CheckboxLabelGlobalForm, CirculWrap,
     CloseModal,
     ContainerForm,
     DynamicContactHead,
@@ -45,6 +45,7 @@ import {Error} from "./style";
 import {ToastContainer, toast, Slide} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import PhoneInput from "react-phone-input-2";
+import {CircularProgress} from "@mui/material";
 // import "./phone-input-castom.scss";
 
 interface MyFormValues {
@@ -96,6 +97,7 @@ export const FormUsers: React.FC = () => {
     const [service, setService] = useState(true)
     const [helpCompany, setHelpCompany] = useState('')
     const [blockScroll, allowScroll] = useScrollBlock();
+    const [loading, setLoading] = useState(false)
 
     const closeFormModal = () => {
         allowScroll()
@@ -137,7 +139,8 @@ export const FormUsers: React.FC = () => {
         {setSubmitting}: FormikHelpers<MyFormValues>
     ) => {
         setSubmitting(true);
-        closeFormModal();
+        setLoading(true)
+
 
         const formElement = document.querySelector("#globalForm");
         if (formElement instanceof HTMLFormElement) {
@@ -152,6 +155,8 @@ export const FormUsers: React.FC = () => {
             })
                 .then((response) => response.json())
                 .then((data) => {
+                    setLoading(false)
+                    closeFormModal();
                     toast.success('Заявка попала в нужные руки. Мы свяжемся с вами в ближайшее время!', {
                         position: "top-right",
                         autoClose: 4000,
@@ -162,6 +167,8 @@ export const FormUsers: React.FC = () => {
                 })
                 .catch((error) => {
                     console.error(error);
+                    setLoading(false)
+                    closeFormModal();
                     toast.error('Что-то пошло не так. Повтоите попытку!', {
                         position: "top-right",
                         autoClose: 4000,
@@ -579,10 +586,13 @@ export const FormUsers: React.FC = () => {
                                     </UploadWrapper>
                                 </FormDataItemUpload>
                             </InputWrap>
-
                             <InputWrap>
                                 {/*BUTTON*/}
-                                <SubmitButton type="submit"><span><span>Отправить</span></span></SubmitButton>
+                                {
+                                    loading
+                                        ? <CirculWrap><CircularProgress  color='success'/></CirculWrap>
+                                        : <SubmitButton type="submit"><span><span>Отправить</span></span></SubmitButton>
+                                }
                                 <PrivacyPolicy>
                                     <TextPolicy>
                                         Отправляя форму, Вы даете согласие на обработку своих
