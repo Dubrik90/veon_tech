@@ -163,6 +163,13 @@ export const AboutContact = styled.div`
     align-self: center;
     row-gap: 5px;
   }
+  a {
+    align-self: flex-start;
+    
+    @media (max-width: 1227px) {
+      align-self: center;
+    }
+  }
   a:hover {
     color: #000;
   }
