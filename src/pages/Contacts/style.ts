@@ -149,6 +149,10 @@ export const ContactLinkPhone = styled.a`
   @media (max-width: 768px) {
     justify-self: flex-end;
   }
+  
+  :hover {
+    color: var(--colors-text-dark);
+  }
 `
 export const ContactLinkMail = styled.a` 
   grid-area: 3 / 1 / 4 / 4;
@@ -161,7 +165,11 @@ export const ContactLinkMail = styled.a`
   @media (max-width: 768px) {
     
     justify-self: flex-end;
-  }`
+  }
+  :hover {
+    color: var(--colors-text-dark);
+  }
+`
 
 export const ContactLink = styled.p`
   grid-area: 3 / 1 / 4 / 4;
